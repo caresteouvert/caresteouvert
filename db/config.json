@@ -1,0 +1,12 @@
+{
+	"WORK_DIR": "/home/adrien/tmp/covid19_map",
+	"PBF_URL": "http://download.openstreetmap.fr/extracts/europe/france/bretagne/ille_et_vilaine-latest.osm.pbf",
+	"PARALLEL_JOBS": "6",
+
+	"PG_HOST": "localhost",
+	"PG_USER": "postgres",
+	"PG_PORT": "5432",
+	"PG_DB": "covid19map",
+	"CACHE_MEM": 10000,
+	"FLAT_NODES": false
+}
