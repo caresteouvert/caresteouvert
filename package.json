@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "parcel serve parcel --hmr-port 1235 index.html",
     "build": "parcel build index.html",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "start": "node app.js"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -51,6 +52,7 @@
     "vue-template-compiler": "^2.6.9"
   },
   "dependencies": {
+    "expressjs": "^1.0.1",
     "i18next-client": "^1.11.4",
     "mapbox-gl": "^1.0.0",
     "opening_hours": "^3.5.0",

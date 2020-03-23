@@ -3016,6 +3016,11 @@ expect@^25.1.0:
     jest-message-util "^25.1.0"
     jest-regex-util "^25.1.0"
 
+expressjs@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/expressjs/-/expressjs-1.0.1.tgz#220328469a18df5ad615e2b7a0ce995f17fbaeef"
+  integrity sha1-IgMoRpoY31rWFeK3oM6ZXxf7ru8=
+
 extend-shallow@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/extend-shallow/-/extend-shallow-2.0.1.tgz#51af7d614ad9a9f610ea1bafbb989d6b1c56890f"
