@@ -59,7 +59,7 @@
             </v-alert>
           </template>
           <detail-opening-hours
-            v-else
+            v-else-if="point.properties.opening_hours"
             :value="point.properties.opening_hours"
           />
 
