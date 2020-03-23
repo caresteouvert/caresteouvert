@@ -14,7 +14,7 @@
           tile
           dark
         >
-          <v-icon>{{ icon }}</v-icon>
+          <v-icon>{{ `osm-${point.properties.cat}` }}</v-icon>
           <v-toolbar-title
             :title="title"
             class="ml-3"
@@ -161,9 +161,6 @@ export default {
   data() {
     return {
       isMobile: true,
-      color: null,
-      icon: null,
-      feature: null,
       point: null
     };
   },
@@ -175,6 +172,10 @@ export default {
 
     type() {
       return this.$t(`details.feature.${this.point.properties.cat}`);
+    },
+
+    color() {
+      return ['ouvert', 'ouvert_partiel'].includes(this.point.properties.status) ? 'green' : 'gray';
     }
   },
 
