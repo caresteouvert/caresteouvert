@@ -153,7 +153,7 @@ export default {
     },
 
     clickPoi(e) {
-      console.log(e.mapboxEvent.features[0]);
+      this.openDetail(e.mapboxEvent.features[0].properties.fid);
     }
   }
 }

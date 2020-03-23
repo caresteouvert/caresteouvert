@@ -29,9 +29,6 @@
         </v-toolbar>
 
         <v-list>
-          <detail-entry icon="osm-mail">
-            {{ address }}
-          </detail-entry>
           <v-list-item
             v-if="point.properties.phone"
             :href="`tel:${point.properties.phone}`"
@@ -132,6 +129,7 @@
 </template>
 
 <script>
+import { poiFeature } from '../config.json';
 import DetailTag from './detail_tag';
 import DetailEntry from './detail_entry';
 import DetailOpeningHours from './detail_opening_hours';
@@ -144,14 +142,6 @@ export default {
   },
 
   props: {
-    idCategory: {
-      type: String,
-      required: true
-    },
-    idFeature: {
-      type: String,
-      required: true
-    },
     id: {
       type: String,
       required: true
@@ -197,17 +187,10 @@ export default {
     },
 
     updatePoint() {
-      const category = config.taxonomy[this.idCategory];
-      const feature = category.features[this.idFeature];
-
-      this.color = feature.color || category.color;
-      this.icon = feature.icon || category.icon;
-      this.feature = feature;
-
-      fetch(geojsondata[this.idFeature])
+      fetch(`${poiFeature}/${this.id}.json`)
         .then(data => data.json())
-        .then(({ features }) => {
-          this.point = features.find(f => f.id === this.id);
+        .then((feature) => {
+          this.point = feature;
         });
     },
 

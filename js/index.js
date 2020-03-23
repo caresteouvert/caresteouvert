@@ -106,13 +106,11 @@ const routes = [
     children: [
       {
         name: 'place',
-        path: 'place/:idCategory/:idFeature/:id',
+        path: 'place/:id',
         component: () => import('./detail'),
         props: (route) => {
           return {
             featuresAndLocation: route.params.featuresAndLocation,
-            idCategory: route.params.idCategory,
-            idFeature: route.params.idFeature,
             id: route.params.id
           };
         }
