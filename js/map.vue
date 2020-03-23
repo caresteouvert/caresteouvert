@@ -50,6 +50,7 @@
           :zoom.sync="mapZoom"
           :map-style="mapStyle"
           hash="map"
+          @load="load"
         >
           <MglNavigationControl :show-compass="false" />
           <MglVectorLayer
@@ -68,11 +69,18 @@
       </v-content>
     </div>
     <router-view />
+    <img
+      v-for="(icon, key) in icons"
+      v-show="false"
+      :ref="key"
+      :src="icon"
+   />
   </div>
 </template>
 
 <script>
 import * as config from '../config.json';
+import icons from '../icons/*.svg';
 import { MglMap, MglNavigationControl, MglVectorLayer } from 'vue-mapbox/dist/vue-mapbox.umd';
 import OsmSidebar from './sidebar';
 
@@ -117,7 +125,11 @@ const layers = [
       ]
     ],
     "layout": {
-      "icon-image": "{cat}_11",
+      "icon-image": [
+        "coalesce",
+        ['image', ['concat', ['get', 'cat'], '_11']],
+        ['image', 'shop_11']
+      ],
       "text-anchor": "top",
       "text-field": ["get", "name"],
       "text-font": [
@@ -179,7 +191,11 @@ const layers = [
       ]
     ],
     "layout": {
-      "icon-image": "{cat}_11",
+      "icon-image": [
+        "coalesce",
+        ['image', ['concat', ['get', 'cat'], '_11']],
+        ['image', 'shop_11']
+      ],
       "text-anchor": "top",
       "text-field": ["get", "name"],
       "text-font": [
@@ -221,6 +237,7 @@ export default {
 
   data() {
     return {
+      icons,
       isMobile: false,
       sidebar: false,
       mapCenter: { lng: config.mapCenter[0], lat: config.mapCenter[1] },
@@ -246,6 +263,21 @@ export default {
   },
 
   methods: {
+    load({ map }) {
+      this.registerIcons(map);
+    },
+
+    registerIcons(map) {
+      for (let icon in this.icons) {
+        const name = `${icon}_11`;
+        if (map.hasImage(name)) {
+          map.updateImage(name, this.$refs[icon][0]);
+        } else {
+          map.addImage(name, this.$refs[icon][0]);
+        }
+      }
+    },
+
     computeIsMobile() {
       this.isMobile = window.innerWidth < 800;
     },
