@@ -30,25 +30,18 @@
 
         <v-list>
           <v-list-item
-            v-if="point.properties.phone"
-            :href="`tel:${point.properties.phone}`"
+            v-if="point.properties.tags.phone"
+            :href="`tel:${point.properties.tags.phone}`"
           >
             <v-list-item-icon><v-icon>osm-phone</v-icon></v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
-                {{ point.properties.phone }}
+                {{ point.properties.tags.phone }}
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
 
-          <detail-entry
-            v-if="point.properties['kindergarten:FR']"
-            icon="osm-info"
-          >
-            {{ $t(`details.kindergarten_fr.${point.properties['kindergarten:FR']}`) }}
-          </detail-entry>
-
-          <template v-if="!point.properties.opening_hours_covid_19 && point.properties.opening_hours">
+          <template v-if="!point.properties.opening_hours && point.properties.tags.opening_hours">
             <v-alert
               dense
               tile
@@ -60,65 +53,65 @@
             >
               <div class="ml-3">{{ $t('details.containment_opening_hours') }}</div>
               <detail-opening-hours
-                v-if="point.properties.opening_hours"
-                :value="point.properties.opening_hours"
+                v-if="point.properties.tags.opening_hours"
+                :value="point.properties.tags.opening_hours"
               />
             </v-alert>
           </template>
           <detail-opening-hours
             v-else
-            :value="point.properties.opening_hours_covid_19"
+            :value="point.properties.opening_hours"
           />
 
           <detail-opening-hours
-            v-if="point.properties.collection_times"
+            v-if="point.properties.tags.collection_times"
             :mode="1"
-            :value="point.properties.collection_times"
+            :value="point.properties.tags.collection_times"
             namespace="details.collection_times"
           />
 
           <detail-tag
-            :value="point.properties.capacity"
+            :value="point.properties.tags.capacity"
             icon="osm-info"
             name="Nombre de places :"
           />
 
           <detail-entry
-            v-if="point.properties.dog === 'no'"
+            v-if="point.properties.tags.dog === 'no'"
             icon="osm-no_dogs"
           >
             {{ $t('details.dog_no') }}
           </detail-entry>
 
           <v-list-item
-            v-if="point.properties.website"
-            :href="point.properties.website"
+            v-if="point.properties.tags.website"
+            :href="point.properties.tags.website"
           >
             <v-list-item-icon><v-icon>osm-link</v-icon></v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
-                {{ point.properties.website }}
+                {{ point.properties.tags.website }}
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
 
           <detail-entry
-            v-if="point.properties.operator"
+            v-if="point.properties.tags.operator"
             icon="osm-info"
           >
-            <template v-if="point.properties['operator:type']">
+            <template v-if="point.properties.tags['operator:type']">
               {{ $t('details.operator_with_type', {
-                name: point.properties.operator,
-                type: $t(`details.operator_type.${point.properties['operator:type']}`)
+                name: point.properties.tags.operator,
+                type: $t(`details.operator_type.${point.properties.tags['operator:type']}`)
               }) }}
             </template>
             <template v-else>
-              {{ $t('details.operator', { name: point.properties.operator }) }}
+              {{ $t('details.operator', { name: point.properties.tags.operator }) }}
             </template>
           </detail-entry>
           <detail-tag
-            v-else-if="point.properties['operator:type']"
-            :value="$t(`details.operator_type.${point.properties['operator:type']}`)"
+            v-else-if="point.properties.tags['operator:type']"
+            :value="$t(`details.operator_type.${point.properties.tags['operator:type']}`)"
             icon="osm-info"
             name="Type de l'opérateur :"
           />
