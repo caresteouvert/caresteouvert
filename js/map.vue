@@ -78,11 +78,38 @@ import OsmSidebar from './sidebar';
 
 const layers = [
   {
-    id: "poi-simple",
+    id: "poi-open",
     type: "circle",
     "source-layer": "public.poi_osm",
+    filter: [
+      "all",
+      [
+        "in",
+        "status",
+        "ouvert",
+        "ouvert_adapté",
+      ]
+    ],
     paint: {
-      'circle-color': 'blue',
+      'circle-color': 'green',
+      'circle-radius': 4
+    }
+  },
+  {
+    id: "poi-unknow",
+    type: "circle",
+    "source-layer": "public.poi_osm",
+    filter: [
+      "all",
+      [
+        "in",
+        "status",
+        "inconnu",
+        "partiel",
+      ]
+    ],
+    paint: {
+      'circle-color': 'gray',
       'circle-radius': 4
     }
   }
