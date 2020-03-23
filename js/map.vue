@@ -271,10 +271,9 @@ export default {
       for (let icon in this.icons) {
         const name = `${icon}_11`;
         if (map.hasImage(name)) {
-          map.updateImage(name, this.$refs[icon][0]);
-        } else {
-          map.addImage(name, this.$refs[icon][0]);
+          map.removeImage(name);
         }
+        map.addImage(name, this.$refs[icon][0], {sdf: true});
       }
     },
 
