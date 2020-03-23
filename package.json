@@ -53,7 +53,7 @@
     "vue-template-compiler": "^2.6.9"
   },
   "dependencies": {
-    "expressjs": "^1.0.1",
+    "express": "^4.17.1",
     "i18next-client": "^1.11.4",
     "mapbox-gl": "^1.0.0",
     "opening_hours": "^3.5.0",
