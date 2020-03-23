@@ -242,7 +242,7 @@ export default {
       sidebar: false,
       mapCenter: { lng: config.mapCenter[0], lat: config.mapCenter[1] },
       mapZoom: config.mapZoom,
-      mapStyle: config.mapStyle,
+      mapStyle: `${config.mapStyle}${config.apiKey}`,
       layers
     };
   },

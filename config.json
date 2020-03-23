@@ -1,5 +1,6 @@
 {
-  "mapStyle": "https://api.maptiler.com/maps/basic/style.json?key=g4dFyegDp3zEYbv8nawB",
+  "apiKey": "g4dFyegDp3zEYbv8nawB",
+  "mapStyle": "https://api.maptiler.com/maps/basic/style.json?key=",
   "mapZoom": 6,
   "mapCenter": [2.3508, 46.4],
   "mapMaxBounds": [],
