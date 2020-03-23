@@ -1,0 +1,205 @@
+<template>
+  <div
+    v-resize="computeIsMobile"
+    :class="{ 'place-opened': $route.name === 'place' && !isMobile }"
+  >
+    <div>
+      <v-navigation-drawer
+        v-model="sidebar"
+        :temporary="isMobile"
+        :stateless="!isMobile"
+        :hide-overlay="!isMobile || !sidebar"
+        width="300"
+        fixed
+      >
+        <osm-sidebar>
+        </osm-sidebar>
+      </v-navigation-drawer>
+      <v-container
+        v-show="!isMobile"
+        :class="{ 'handle--closed': !sidebar }"
+        fill-height
+        tag="a"
+        class="handle"
+        @click.prevent="sidebar = !sidebar"
+      >
+        <v-icon
+          v-if="sidebar"
+          v-text="'$vuetify.icons.prev'"
+        ></v-icon>
+        <v-icon
+          v-else
+          v-text="'$vuetify.icons.next'"
+        ></v-icon>
+      </v-container>
+      <v-content>
+        <v-btn
+          v-show="isMobile"
+          fixed
+          fab
+          dark
+          top
+          left
+          color="pink"
+          @click="sidebar = !sidebar"
+        >
+          <v-icon>osm-filter_list</v-icon>
+        </v-btn>
+        <MglMap
+          :center.sync="mapCenter"
+          :zoom.sync="mapZoom"
+          :map-style="mapStyle"
+          hash="map"
+        >
+          <MglNavigationControl :show-compass="false" />
+          <MglVectorLayer
+            v-for="layer in layers"
+            :key="layer.id"
+            :clear-source="false"
+            :layer-id="layer.id"
+            :layer="layer"
+            :source="poiSource"
+            source-id="poi"
+            @mouseenter="mouseenter"
+            @click="clickPoi"
+            @mouseleave="mouseleave"
+          />
+        </MglMap>
+      </v-content>
+    </div>
+    <router-view />
+  </div>
+</template>
+
+<script>
+import * as config from '../config.json';
+import { MglMap, MglNavigationControl, MglVectorLayer } from 'vue-mapbox/dist/vue-mapbox.umd';
+import OsmSidebar from './sidebar';
+
+const layers = [
+  {
+    id: "poi-simple",
+    type: "circle",
+    "source-layer": "public.poi_osm",
+    paint: {
+      'circle-color': 'blue',
+      'circle-radius': 4
+    }
+  }
+];
+
+export default {
+  components: {
+    MglMap,
+    MglNavigationControl,
+    MglVectorLayer,
+    OsmSidebar
+  },
+
+  props: {
+    featuresAndLocation: {
+      type: String,
+      required: false,
+      default: ''
+    }
+  },
+
+  data() {
+    return {
+      isMobile: false,
+      sidebar: false,
+      mapCenter: { lng: config.mapCenter[0], lat: config.mapCenter[1] },
+      mapZoom: config.mapZoom,
+      mapStyle: config.mapStyle,
+      layers
+    };
+  },
+
+  mounted() {
+    this.computeIsMobile();
+    this.sidebar = !this.isMobile;
+  },
+
+  computed: {
+    poiSource() {
+      return {
+        minzoom: 5,
+        maxzoom: 20,
+        tiles: ["https://covid-back.osmontrouge.fr/public.poi_osm/{z}/{x}/{y}.pbf"]
+      };
+    }
+  },
+
+  methods: {
+    computeIsMobile() {
+      this.isMobile = window.innerWidth < 800;
+    },
+
+    openDetail(id) {
+      this.$router.push({
+        name: 'place',
+        params: {
+          id: id
+        }
+      });
+    },
+
+    mouseenter(e) {
+      e.map.getCanvas().style.cursor = 'pointer';
+    },
+
+    mouseleave(e) {
+      e.map.getCanvas().style.cursor = '';
+    },
+
+    clickPoi(e) {
+      console.log(e.mapboxEvent.features[0]);
+    }
+  }
+}
+</script>
+
+<style>
+.handle {
+  position: absolute;
+  top: 170px;
+  transform: translateX(300px);
+  padding: 24px 0 !important;
+  height: 70px;
+  width: 25px;
+  background-color: white;
+  z-index: 5;
+  box-shadow: 0 3px 1px -2px #0003,0 2px 2px 0 #00000024,0 1px 5px 0 #0000001f;
+}
+
+.handle--closed {
+  transform: translateX(0);
+}
+
+.mgl-map-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.mgl-map-wrapper .mapboxgl-map {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+}
+
+.place-opened  .mapboxgl-ctrl-bottom-right, .place-opened .mapboxgl-ctrl-top-right {
+  transform: translateX(-400px);
+}
+</style>

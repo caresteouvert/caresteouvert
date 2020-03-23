@@ -1,0 +1,7 @@
+{
+    "mapStyle": "https://api.maptiler.com/maps/bright/style.json?key=g4dFyegDp3zEYbv8nawB",
+    "mapZoom": 6,
+    "mapCenter": [2.3508, 46.4],
+    "mapMaxBounds": [],
+    "poiUrl": "https://covid-back.osmontrouge.fr/public.poi_osm.json"
+}
