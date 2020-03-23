@@ -78,7 +78,7 @@ import OsmSidebar from './sidebar';
 
 const layers = [
   {
-    id: "poi-open",
+    id: "poi-open-background",
     type: "circle",
     "source-layer": "public.poi_osm",
     filter: [
@@ -92,11 +92,55 @@ const layers = [
     ],
     paint: {
       'circle-color': 'green',
-      'circle-radius': 4
+      'circle-radius': [
+        'interpolate',
+        ['linear'],
+        ['zoom'],
+        14,
+        6,
+        19,
+        17
+      ]
     }
   },
   {
-    id: "poi-unknow",
+    id: "poi-open",
+    type: "symbol",
+    "source-layer": "public.poi_osm",
+    filter: [
+      "all",
+      [
+        "in",
+        "status",
+        "ouvert",
+        "ouvert_adapté",
+      ]
+    ],
+    "layout": {
+      "icon-image": "{cat}_11",
+      "text-anchor": "top",
+      "text-field": ["get", "name"],
+      "text-font": [
+        "Noto Sans Regular"
+      ],
+      "text-max-width": 9,
+      "text-offset": [
+        0,
+        0.6
+      ],
+      "text-padding": 2,
+      "text-size": 12
+    },
+    paint: {
+      "icon-color": "white",
+      "text-color": "gray",
+      "text-halo-blur": 0.5,
+      "text-halo-color": "#ffffff",
+      "text-halo-width": 1
+    }
+  },
+  {
+    id: "poi-unknow-background",
     type: "circle",
     "source-layer": "public.poi_osm",
     filter: [
@@ -110,7 +154,51 @@ const layers = [
     ],
     paint: {
       'circle-color': 'gray',
-      'circle-radius': 4
+      'circle-radius': [
+        'interpolate',
+        ['linear'],
+        ['zoom'],
+        14,
+        6,
+        19,
+        17
+      ]
+    }
+  },
+  {
+    id: "poi-unknow",
+    type: "symbol",
+    "source-layer": "public.poi_osm",
+    filter: [
+      "all",
+      [
+        "in",
+        "status",
+        "inconnu",
+        "partiel",
+      ]
+    ],
+    "layout": {
+      "icon-image": "{cat}_11",
+      "text-anchor": "top",
+      "text-field": ["get", "name"],
+      "text-font": [
+        "Noto Sans Regular"
+      ],
+      "text-max-width": 9,
+      "text-offset": [
+        0,
+        0.6
+      ],
+      "text-padding": 2,
+      "text-size": 12
+    },
+    paint: {
+      "icon-color": "white",
+      "text-color": "gray",
+      "text-halo-blur": 0.5,
+      "text-halo-color": "#ffffff",
+      "text-halo-width": 1
     }
   }
 ];
