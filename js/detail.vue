@@ -18,7 +18,7 @@
           <v-toolbar-title
             :title="title"
             class="ml-3"
-            >{{ title }}</v-toolbar-title>
+            >{{ title || type }}</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-btn
             icon
@@ -29,6 +29,13 @@
         </v-toolbar>
 
         <v-list>
+          <v-list-item v-if="title">
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ type }}
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
           <v-list-item
             v-if="point.properties.tags.phone"
             :href="`tel:${point.properties.tags.phone}`"
@@ -163,7 +170,11 @@ export default {
 
   computed: {
     title() {
-      return this.point.properties.name || this.feature.name;
+      return this.point.properties.name;
+    },
+
+    type() {
+      return this.$t(`details.feature.${this.point.properties.cat}`);
     }
   },
 

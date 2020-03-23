@@ -22,14 +22,25 @@
         }
       },
       "dog_no": "Interdit aux chiens",
-      "kindergarten_fr": {
-        "crèche_collective": "Crèche collective",
-        "multiaccueil": "Multiaccueil",
-        "crèche_parentale": "Crèche parentale",
-        "crèche_familiale": "Crèche familiale",
-        "microcrèche":	"Microcrèche",
-        "halte_garderie": "Halte-garderie",
-        "jardin_enfants": "Jardin d'enfants"
+      "feature": {
+        "association": "Association",
+        "bakery": "Boulangerie",
+        "bank": "Banque",
+        "bicycle": "Vente et réparation de vélos",
+        "butcher": "Boucher",
+        "convenience": "Supérette",
+        "e-cigarette": "Cigarette électronique",
+        "frozen_food": "Aliments surgelés",
+        "fuel": "Station service",
+        "funeral_directors": "Services funéraires",
+        "gas": "Gaz",
+        "insurance": "Assurance",
+        "laundry": "Laverie",
+        "mobile_phone": "Téléphonie mobile",
+        "optician": "Opticien",
+        "pharmacy": "Pharmacie",
+        "seafood": "Poissonnier",
+        "supermarket": "Supermarché"
       },
       "opening_hours": {
         "state_until_date": "{state} jusqu'à {date}",
