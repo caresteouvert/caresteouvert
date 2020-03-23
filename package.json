@@ -1,9 +1,10 @@
 {
+  "engines": {
+    "node": "12"
+  },
   "scripts": {
     "dev": "parcel serve parcel --hmr-port 1235 index.html",
     "build": "parcel build index.html",
-    "icons": "icon-font-generator icons/*.svg --out font --normalize --html --prefix='osm' --name osm",
-    "download-data": "./script/download-data",
     "test": "jest --watch"
   },
   "jest": {
