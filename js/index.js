@@ -1,4 +1,5 @@
 import 'mapbox-gl/dist/mapbox-gl.css';
+import '../font/osm.css';
 
 import Vue from 'vue';
 import Vuetify, {
@@ -86,7 +87,17 @@ Vue.use(Vuetify, {
 Vue.use(VueRouter);
 Vue.use(VueI18n);
 
-const vuetify = new Vuetify({});
+const vuetify = new Vuetify({
+  icons: {
+    values: {
+      prev: 'osm-chevron_left',
+      next: 'osm-chevron_right',
+      expand: 'osm-arrow_down',
+      checkboxOn: 'osm-check_box',
+      checkboxOff: 'osm-check_box_outline_blank'
+    }
+  }
+});
 
 const i18n = new VueI18n({
   locale: 'fr',

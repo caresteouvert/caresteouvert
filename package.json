@@ -4,7 +4,8 @@
   },
   "scripts": {
     "dev": "parcel serve parcel --hmr-port 1235 index.html",
-    "build": "parcel build index.html",
+    "icons": "icon-font-generator icons/*.svg --out font --normalize --html --prefix='osm' --name osm",
+    "build": "yarn run icons && parcel build index.html",
     "test": "jest --watch",
     "start": "node app.js"
   },
@@ -45,6 +46,7 @@
     "@vue/component-compiler-utils": "^2.6.0",
     "@vue/test-utils": "^1.0.0-beta.32",
     "babel-jest": "^25.1.0",
+    "icon-font-generator": "^2.1.10",
     "jest-cli": "^25.1.0",
     "parcel": "^1.11.0",
     "sass": "^1.26.3",
