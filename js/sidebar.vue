@@ -1,20 +1,9 @@
 <template>
   <div>
     <v-card>
-      <v-img
-        height="200px"
-      >
-        <v-layout
-          column
-          fill-height
-        >
-          <v-spacer></v-spacer>
-  
-          <v-card-title class="pl-1 pt-5">
-            <div class="display-1 px-1">Covid 19</div>
-          </v-card-title>
-        </v-layout>
-      </v-img>
+      <v-card-title class="pl-1 pt-5">
+        <div class="display-1 px-1">Covid 19</div>
+      </v-card-title>
     </v-card>
 
     <v-alert
@@ -26,6 +15,8 @@
     />
 
     <slot />
+
+    <p>Hébergé gracieusement par <a href="https://scalingo.com/">Scalingo</a>.</p>
   </div>
 </template>
 
