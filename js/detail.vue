@@ -73,26 +73,6 @@
             :value="point.properties.opening_hours"
           />
 
-          <detail-opening-hours
-            v-if="point.properties.tags.collection_times"
-            :mode="1"
-            :value="point.properties.tags.collection_times"
-            namespace="details.collection_times"
-          />
-
-          <detail-tag
-            :value="point.properties.tags.capacity"
-            icon="osm-info"
-            name="Nombre de places :"
-          />
-
-          <detail-entry
-            v-if="point.properties.tags.dog === 'no'"
-            icon="osm-no_dogs"
-          >
-            {{ $t('details.dog_no') }}
-          </detail-entry>
-
           <v-list-item
             v-if="point.properties.tags.website"
             :href="point.properties.tags.website"
@@ -104,27 +84,6 @@
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-
-          <detail-entry
-            v-if="point.properties.tags.operator"
-            icon="osm-info"
-          >
-            <template v-if="point.properties.tags['operator:type']">
-              {{ $t('details.operator_with_type', {
-                name: point.properties.tags.operator,
-                type: $t(`details.operator_type.${point.properties.tags['operator:type']}`)
-              }) }}
-            </template>
-            <template v-else>
-              {{ $t('details.operator', { name: point.properties.tags.operator }) }}
-            </template>
-          </detail-entry>
-          <detail-tag
-            v-else-if="point.properties.tags['operator:type']"
-            :value="$t(`details.operator_type.${point.properties.tags['operator:type']}`)"
-            icon="osm-info"
-            name="Type de l'opérateur :"
-          />
         </v-list>
       </v-card>
     </v-slide-x-reverse-transition>

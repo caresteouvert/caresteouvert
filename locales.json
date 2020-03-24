@@ -28,13 +28,6 @@
       "containment_closed_subject": "Le lieu {name} est fermé",
       "containment_closed_message":"Bonjour OSMontrouge,%0D%0A%0D%0ALe lieu {name} est fermé pendant le confinement.%0D%0A%0D%0AInformation technique pour OSMontrouge, ne pas supprimer: {id}%0D%0A%0D%0AMerci",
       "containment_opening_hours": "Horaires susceptibles de changer pendant le confinement",
-      "collection_times": {
-        "state_until_date": "prochaine levée à {date}",
-        "state": {
-          "closed": "aucune levée"
-        }
-      },
-      "dog_no": "Interdit aux chiens",
       "feature": {
         "association": "Association",
         "bakery": "Boulangerie",
@@ -85,18 +78,6 @@
           "open": "ouvert",
           "closed": "fermé"
         }
-      },
-      "operator": "Géré par {name}",
-      "operator_with_type": "Géré par {name} ({type})",
-      "operator_type": {
-        "community": "communauté",
-        "consortium": "consortium",
-        "cooperative": "coopérative",
-        "government": "administration",
-        "ngo": "organisation non gouvernementale",
-        "private": "privé",
-        "public": "public",
-        "religious": "religieux"
       }
     }
   }
