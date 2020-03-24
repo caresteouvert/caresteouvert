@@ -18,8 +18,9 @@
       "food": "Magasins d'alimentation",
       "fuel": "Stations services",
       "funeral_directors": "Services funéraires",
-      "police": "Police",
       "pharmacy": "Pharmacies",
+      "police": "Police",
+      "post_office": "Bureaux de postes",
       "shop": "Boutiques"
     },
     "details": {
@@ -72,6 +73,7 @@
         "pet": "Animalerie",
         "pharmacy": "Pharmacie",
         "police": "Police",
+        "post_office": "Bureaux de poste",
         "seafood": "Poissonnier",
         "stationery": "Papeterie",
         "supermarket": "Supermarché",
