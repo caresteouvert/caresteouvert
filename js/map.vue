@@ -47,6 +47,7 @@
           <v-icon>osm-filter_list</v-icon>
         </v-btn>
         <MglMap
+          v-if="loadMap"
           :center.sync="mapCenter"
           :zoom.sync="mapZoom"
           :map-style="mapStyle"
@@ -273,16 +274,13 @@ export default {
   },
 
   data() {
-    const { features, location } = decode(this.featuresAndLocation);
-    const { lat, lng, zoom } = decodePosition(location, config);
-    const params = new URLSearchParams(features);
-    decodeFeatures(features, config.filters);
     return {
       icons,
+      loadMap: false,
       isMobile: false,
       sidebar: false,
-      mapCenter: { lat, lng },
-      mapZoom: zoom,
+      mapCenter: null,
+      mapZoom: null,
       mapStyle: `${config.mapStyle}${config.apiKey}`,
       filters: config.filters
     };
@@ -291,6 +289,20 @@ export default {
   mounted() {
     this.computeIsMobile();
     this.sidebar = !this.isMobile;
+
+    const { features, location } = decode(this.featuresAndLocation);
+    if (!location) {
+      this.centerMapViaGeoIP()
+        .finally(() => {
+          this.loadMap = true;
+        });
+    } else {
+      const { lat, lng, zoom } = decodePosition(location, config);
+      this.mapCenter = { lat, lng };
+      this.mapZoom = zoom;
+      this.loadMap = true;
+    }
+    decodeFeatures(features, config.filters);
   },
 
   computed: {
@@ -339,6 +351,15 @@ export default {
   },
 
   methods: {
+    centerMapViaGeoIP() {
+      return fetch(config.geoIpUrl)
+        .then(res => res.json())
+        .then(json => {
+          this.mapCenter = { lat: json.ll[0], lng: json.ll[1] };
+          this.mapZoom = 13;
+        });
+    },
+
     updateRoute() {
       this.$router.replace({
         name: this.$route.name,
