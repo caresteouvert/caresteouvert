@@ -138,7 +138,7 @@ export default {
     },
 
     color() {
-      return ['ouvert', 'ouvert_partiel'].includes(this.point.properties.status) ? 'green' : 'gray';
+      return ['ouvert', 'ouvert_adapté'].includes(this.point.properties.status) ? 'green' : 'gray';
     }
   },
 
