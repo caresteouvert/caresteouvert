@@ -14,10 +14,11 @@
     "filter": {
       "title": "Lieux ouverts durant le confinement",
       "bakery": "Boulangeries",
-      "pharmacy": "Pharmacies",
+      "bank": "Banques & assurances",
       "food": "Magasins d'alimentation",
-      "shop": "Boutiques",
-      "bank": "Banques & assurances"
+      "funeral_directors": "Services funéraires",
+      "pharmacy": "Pharmacies",
+      "shop": "Boutiques"
     },
     "details": {
       "containment_closed": "Ce lieu est fermé ? Signalez le",
