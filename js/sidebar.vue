@@ -2,8 +2,11 @@
   <div>
     <v-card>
       <v-card-title class="pl-1 pt-5">
-        <div class="display-1 px-1">{{ $t('title') }}</div>
+        <h1 class="display-1">{{ $t('title') }}</h1>
       </v-card-title>
+      <v-card-subtitle class="pl-2">
+        {{ $t('subtitle') }}
+      </v-card-subtitle>
     </v-card>
 
     <v-alert

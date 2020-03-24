@@ -2,6 +2,7 @@
   "fr": {
     "covid19-alert": "Respectez les restrictions gouvernementales. Il en va de VOTRE responsabilité.",
     "title": "Ça reste ouvert",
+    "subtitle": "Les lieux ouverts durant le confinement",
     "days": {
       "monday": "Lundi",
       "tuesday": "Mardi",
@@ -12,7 +13,6 @@
       "sunday": "Dimanche"
     },
     "filter": {
-      "title": "Lieux ouverts durant le confinement",
       "bakery": "Boulangeries",
       "bank": "Banques & assurances",
       "food": "Magasins d'alimentation",

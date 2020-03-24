@@ -1,10 +1,6 @@
 <template>
   <div>
-    <v-list
-      class="pt-1"
-      subheader
-    >
-      <v-subheader class="subtitle-1 pt-2">{{ $t('filter.title') }}</v-subheader>
+    <v-list class="pt-1">
       <v-list-item
         v-for="(filter, key) in filters"
         :key="key"
