@@ -28,6 +28,15 @@
         </v-toolbar>
 
         <detail-state :status="point.properties.status" />
+        <v-alert
+          v-if="point.properties.brand_infos"
+          type="info"
+          :icon="false"
+          tile
+          class="mb-0"
+        >
+          {{ point.properties.brand_infos }}
+        </v-alert>
 
         <v-list>
           <v-list-item v-if="title">
