@@ -1,0 +1,80 @@
+{
+  "fr": {
+    "covid19-alert": "Limitez vos déplacements un maximum",
+    "title": "Ça reste ouvert",
+    "days": {
+      "monday": "Lundi",
+      "tuesday": "Mardi",
+      "wednesday": "Mercredi",
+      "thursday": "Jeudi",
+      "friday": "Vendredi",
+      "saturday": "Samedi",
+      "sunday": "Dimanche"
+    },
+    "filter": {
+      "title": "Lieux ouverts durant le confinement",
+      "bakery": "Boulangeries",
+      "bank": "Banques & assurances",
+      "food": "Magasins d'alimentation",
+      "funeral_directors": "Services funéraires",
+      "pharmacy": "Pharmacies",
+      "shop": "Boutiques"
+    },
+    "details": {
+      "containment_closed": "Ce lieu est fermé ? Signalez le",
+      "containment_closed_subject": "Le lieu {name} est fermé",
+      "containment_closed_message":"Bonjour OSMontrouge,%0D%0A%0D%0ALe lieu {name} est fermé pendant le confinement.%0D%0A%0D%0AInformation technique pour OSMontrouge, ne pas supprimer: {id}%0D%0A%0D%0AMerci",
+      "containment_opening_hours": "Horaires susceptibles de changer pendant le confinement",
+      "collection_times": {
+        "state_until_date": "prochaine levée à {date}",
+        "state": {
+          "closed": "aucune levée"
+        }
+      },
+      "dog_no": "Interdit aux chiens",
+      "feature": {
+        "association": "Association",
+        "bakery": "Boulangerie",
+        "bank": "Banque",
+        "beverages": "Alcool",
+        "bicycle": "Vente et réparation de vélos",
+        "butcher": "Boucher",
+        "cheese": "Fromager",
+        "convenience": "Supérette",
+        "e-cigarette": "Cigarette électronique",
+        "employment_agency": "Recherche d'emploi",
+        "frozen_food": "Aliments surgelés",
+        "fuel": "Station service",
+        "funeral_directors": "Services funéraires",
+        "gas": "Gaz",
+        "greengrocer": "Fruits et légumes",
+        "insurance": "Assurance",
+        "laundry": "Laverie",
+        "mobile_phone": "Téléphonie mobile",
+        "optician": "Opticien",
+        "pharmacy": "Pharmacie",
+        "seafood": "Poissonnier",
+        "supermarket": "Supermarché"
+      },
+      "opening_hours": {
+        "state_until_date": "{state} jusqu'à {date}",
+        "state": {
+          "open": "ouvert",
+          "closed": "fermé"
+        }
+      },
+      "operator": "Géré par {name}",
+      "operator_with_type": "Géré par {name} ({type})",
+      "operator_type": {
+        "community": "communauté",
+        "consortium": "consortium",
+        "cooperative": "coopérative",
+        "government": "administration",
+        "ngo": "organisation non gouvernementale",
+        "private": "privé",
+        "public": "public",
+        "religious": "religieux"
+      }
+    }
+  }
+}

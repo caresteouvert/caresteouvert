@@ -1,0 +1,68 @@
+{
+  "engines": {
+    "node": "12"
+  },
+  "scripts": {
+    "dev": "parcel serve parcel --hmr-port 1235 index.html",
+    "icons": "icon-font-generator icons/*.svg --out font --normalize --html --prefix='osm' --name osm",
+    "build": "yarn run icons && parcel build index.html",
+    "test": "jest --watch",
+    "start": "node app.js"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.vue$": "vue-jest"
+    }
+  },
+  "htmlnano": {
+    "minifySvg": false
+  },
+  "browserslist": [
+    "last 2 Firefox versions",
+    "last 2 Chrome versions",
+    "last 2 Edge versions",
+    "last 2 Safari versions"
+  ],
+  "posthtml": {
+    "recognizeSelfClosing": true
+  },
+  "prerender": {
+    "routes": [
+      "/",
+      "/about",
+      "/reuses",
+      "/premiere-plateforme-opendata-citoyenne"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@vue/component-compiler-utils": "^2.6.0",
+    "@vue/test-utils": "^1.0.0-beta.32",
+    "babel-jest": "^25.1.0",
+    "icon-font-generator": "^2.1.10",
+    "jest-cli": "^25.1.0",
+    "parcel": "^1.11.0",
+    "sass": "^1.26.3",
+    "vue-hot-reload-api": "^2.3.3",
+    "vue-jest": "^4.0.0-beta.2",
+    "vue-template-compiler": "^2.6.9"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "i18next-client": "^1.11.4",
+    "mapbox-gl": "^1.0.0",
+    "opening_hours": "^3.5.0",
+    "vue": "^2.6.9",
+    "vue-i18n": "^8.12.0",
+    "vue-mapbox": "osmontrouge/vue-mapbox#update",
+    "vue-router": "^3.0.3",
+    "vuetify": "^2.0.0"
+  }
+}
