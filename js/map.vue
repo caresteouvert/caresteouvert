@@ -9,6 +9,7 @@
       @update:zoom="updateMapZoom"
     >
       <MglNavigationControl :show-compass="false" />
+      <MglGeolocateControl />
       <MglVectorLayer
         v-for="layer in layers"
         :key="layer.id"
@@ -34,7 +35,7 @@
 <script>
 import * as config from '../config.json';
 import icons from '../icons/*.svg';
-import { MglMap, MglNavigationControl, MglVectorLayer } from 'vue-mapbox/dist/vue-mapbox.umd';
+import { MglMap, MglNavigationControl, MglGeolocateControl, MglVectorLayer } from 'vue-mapbox/dist/vue-mapbox.umd';
 
 const layers = [
   {
@@ -207,9 +208,10 @@ const layers = [
 
 export default {
   components: {
+    MglGeolocateControl,
     MglMap,
     MglNavigationControl,
-    MglVectorLayer
+    MglVectorLayer,
   },
 
   props: {
