@@ -40,6 +40,7 @@
     "babel-jest": "^25.1.0",
     "icon-font-generator": "^2.1.10",
     "jest-cli": "^25.1.0",
+    "marked": "^0.8.2",
     "parcel": "^1.11.0",
     "sass": "^1.26.3",
     "vue-hot-reload-api": "^2.3.3",
