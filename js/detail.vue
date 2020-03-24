@@ -16,8 +16,15 @@
           <v-icon>{{ `osm-${point.properties.cat}` }}</v-icon>
           <v-toolbar-title
             :title="title"
-            class="ml-3"
-            >{{ title || type }}</v-toolbar-title>
+            class="ml-3 toolbar-title"
+          >
+            {{ title || type }}
+            <template v-if="title">
+              <br>
+              <span class="subtitle-1">{{ type }}</span>
+            </template>
+          </v-list-item>
+          </v-toolbar-title>
           <v-spacer></v-spacer>
           <v-btn
             icon
@@ -39,13 +46,6 @@
         </v-alert>
 
         <v-list>
-          <v-list-item v-if="title">
-            <v-list-item-content>
-              <v-list-item-title>
-                {{ type }}
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
           <v-list-item
             v-if="point.properties.tags.phone"
             :href="`tel:${point.properties.tags.phone}`"
@@ -187,6 +187,9 @@ export default {
 </script>
 
 <style scoped>
+.toolbar-title {
+  line-height: 1;
+}
 .right-sidebar {
   width: 400px;
   height: 100vh;
