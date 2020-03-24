@@ -104,10 +104,58 @@ const layers = [
         'interpolate',
         ['linear'],
         ['zoom'],
-        14,
-        6,
-        19,
-        17
+        14, 6,
+        19, 17
+      ]
+    }
+  },
+  {
+    id: "poi-unknow-background",
+    type: "circle",
+    "source-layer": "public.poi_osm",
+    filter: [
+      "all",
+      [
+        "in",
+        "status",
+        "inconnu",
+        "partiel",
+      ]
+    ],
+    paint: {
+      'circle-color': 'gray',
+      'circle-radius': [
+        'interpolate',
+        ['linear'],
+        ['zoom'],
+        14, 6,
+        19, 17
+      ]
+    }
+  },
+  {
+    id: "poi-white-bg",
+    type: "circle",
+    "source-layer": "public.poi_osm",
+    filter: [
+      "all",
+      [
+        "in",
+        "status",
+        "ouvert",
+        "ouvert_adapté",
+        "inconnu",
+        "partiel",
+      ]
+    ],
+    paint: {
+      'circle-color': 'white',
+      'circle-radius': [
+        'interpolate',
+        ['linear'],
+        ['zoom'],
+        14, 3,
+        19, 14
       ]
     }
   },
@@ -130,6 +178,13 @@ const layers = [
         ['image', ['concat', ['get', 'cat'], '_11']],
         ['image', 'shop_11']
       ],
+      "icon-size": [
+        'interpolate',
+        ['linear'],
+        ['zoom'],
+        14, 0.4,
+        19, 0.9
+      ],
       "text-anchor": "top",
       "text-field": ["get", "name"],
       "text-font": [
@@ -138,43 +193,16 @@ const layers = [
       "text-max-width": 9,
       "text-offset": [
         0,
-        0.6
+        1
       ],
       "text-padding": 2,
       "text-size": 12
     },
     paint: {
-      "icon-color": "white",
-      "text-color": "gray",
+      "text-color": "#666",
       "text-halo-blur": 0.5,
       "text-halo-color": "#ffffff",
       "text-halo-width": 1
-    }
-  },
-  {
-    id: "poi-unknow-background",
-    type: "circle",
-    "source-layer": "public.poi_osm",
-    filter: [
-      "all",
-      [
-        "in",
-        "status",
-        "inconnu",
-        "partiel",
-      ]
-    ],
-    paint: {
-      'circle-color': 'gray',
-      'circle-radius': [
-        'interpolate',
-        ['linear'],
-        ['zoom'],
-        14,
-        6,
-        19,
-        17
-      ]
     }
   },
   {
@@ -196,6 +224,13 @@ const layers = [
         ['image', ['concat', ['get', 'cat'], '_11']],
         ['image', 'shop_11']
       ],
+      "icon-size": [
+        'interpolate',
+        ['linear'],
+        ['zoom'],
+        14, 0.4,
+        19, 0.9
+      ],
       "text-anchor": "top",
       "text-field": ["get", "name"],
       "text-font": [
@@ -204,14 +239,13 @@ const layers = [
       "text-max-width": 9,
       "text-offset": [
         0,
-        0.6
+        1
       ],
       "text-padding": 2,
       "text-size": 12
     },
     paint: {
-      "icon-color": "white",
-      "text-color": "gray",
+      "text-color": "#666",
       "text-halo-blur": 0.5,
       "text-halo-color": "#ffffff",
       "text-halo-width": 1
@@ -255,7 +289,7 @@ export default {
   computed: {
     poiSource() {
       return {
-        minzoom: 5,
+        minzoom: 10,
         maxzoom: 20,
         tiles: ["https://covid-back.osmontrouge.fr/public.poi_osm/{z}/{x}/{y}.pbf"]
       };
@@ -273,7 +307,7 @@ export default {
         if (map.hasImage(name)) {
           map.removeImage(name);
         }
-        map.addImage(name, this.$refs[icon][0], {sdf: true});
+        map.addImage(name, this.$refs[icon][0]);
       }
     },
 
