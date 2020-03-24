@@ -61,7 +61,24 @@
             </v-list-item-content>
           </v-list-item>
 
-          <template v-if="!point.properties.opening_hours && point.properties.tags.opening_hours">
+          <detail-opening-hours
+            v-if="point.properties.opening_hours"
+            :value="point.properties.opening_hours"
+          />
+          <v-list-item
+            v-else-if="point.properties.brand_hours"
+            :href="point.properties.brand_hours"
+          >
+            <v-list-item-icon><v-icon>osm-time</v-icon></v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ $t('details.containment_brand_hours') }}
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <template
+            v-else-if="point.properties.tags.opening_hours"
+          >
             <v-alert
               dense
               tile
@@ -78,10 +95,6 @@
               />
             </v-alert>
           </template>
-          <detail-opening-hours
-            v-else-if="point.properties.opening_hours"
-            :value="point.properties.opening_hours"
-          />
 
           <v-list-item
             v-if="point.properties.tags.website"

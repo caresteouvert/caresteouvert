@@ -28,6 +28,7 @@
       "containment_closed_subject": "Le lieu {name} est fermé",
       "containment_closed_message":"Bonjour OSMontrouge,%0D%0A%0D%0ALe lieu {name} est fermé pendant le confinement.%0D%0A%0D%0AInformation technique pour OSMontrouge, ne pas supprimer: {id}%0D%0A%0D%0AMerci",
       "containment_opening_hours": "Horaires susceptibles de changer pendant le confinement",
+      "containment_brand_hours": "Horaires sur le site web de l'enseigne",
       "feature": {
         "association": "Association",
         "bakery": "Boulangerie",
