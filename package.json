@@ -32,14 +32,6 @@
   "posthtml": {
     "recognizeSelfClosing": true
   },
-  "prerender": {
-    "routes": [
-      "/",
-      "/about",
-      "/reuses",
-      "/premiere-plateforme-opendata-citoyenne"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
