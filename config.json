@@ -5,5 +5,12 @@
   "mapCenter": [2.3508, 46.4],
   "mapMaxBounds": [],
   "poiUrl": "https://covid-back.osmontrouge.fr/public.poi_osm.json",
-  "poiFeature": "https://covid19-fr-pgfeatureserv.osc-fr1.scalingo.io/collections/public.poi_osm/items"
+  "poiFeature": "https://covid19-fr-pgfeatureserv.osc-fr1.scalingo.io/collections/public.poi_osm/items",
+  "filters": {
+    "pharmacy": { selected: true, cats: ["pharmacy"] },
+    "food": { selected: true, cats: ["butcher", "cheese", "seafood", "convenience", "supermarket", "chocolate", "greengrocer"] },
+    "bakery": { selected: true, cats: ["bakery"] },
+    "shop": { selected: true, cats: ["mobile_phone", "optician", "car_rental", "tobacco", "e-cigarette"] },
+    "bank": { selected: true, cats: ["bank", "insurance"] }
+  }
 }

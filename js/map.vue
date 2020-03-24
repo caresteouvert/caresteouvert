@@ -13,6 +13,7 @@
         fixed
       >
         <osm-sidebar>
+          <osm-filter-features :filters="filters" />
         </osm-sidebar>
       </v-navigation-drawer>
       <v-container
@@ -49,7 +50,6 @@
           :center.sync="mapCenter"
           :zoom.sync="mapZoom"
           :map-style="mapStyle"
-          hash="map"
           @load="load"
         >
           <MglNavigationControl :show-compass="false" />
@@ -82,7 +82,9 @@
 import * as config from '../config.json';
 import icons from '../icons/*.svg';
 import { MglMap, MglNavigationControl, MglVectorLayer } from 'vue-mapbox/dist/vue-mapbox.umd';
+import { encode, decode, encodePosition, decodePosition, encodeFeatures, decodeFeatures } from './url';
 import OsmSidebar from './sidebar';
+import OsmFilterFeatures from './filter_features';
 
 const layers = [
   {
@@ -258,6 +260,7 @@ export default {
     MglMap,
     MglNavigationControl,
     MglVectorLayer,
+    OsmFilterFeatures,
     OsmSidebar
   },
 
@@ -270,13 +273,18 @@ export default {
   },
 
   data() {
+    const { features, location } = decode(this.featuresAndLocation);
+    const { lat, lng, zoom } = decodePosition(location, config);
+    const params = new URLSearchParams(features);
+    decodeFeatures(features, config.filters);
     return {
       icons,
       isMobile: false,
       sidebar: false,
-      mapCenter: { lng: config.mapCenter[0], lat: config.mapCenter[1] },
-      mapZoom: config.mapZoom,
+      mapCenter: { lat, lng },
+      mapZoom: zoom,
       mapStyle: `${config.mapStyle}${config.apiKey}`,
+      filters: config.filters,
       layers
     };
   },
@@ -296,7 +304,37 @@ export default {
     }
   },
 
+  watch: {
+    mapCenter() {
+      this.updateRoute();
+    },
+
+    mapZoom() {
+      this.updateRoute();
+    },
+
+    filters: {
+      deep: true,
+      handler() {
+        this.updateRoute();
+      }
+    }
+  },
+
   methods: {
+    updateRoute() {
+      this.$router.replace({
+        name: this.$route.name,
+        params: {
+          ...this.$route.params,
+          featuresAndLocation: encode(
+            encodeFeatures(this.filters),
+            encodePosition(this.mapCenter.lat, this.mapCenter.lng, this.mapZoom)
+          )
+        }
+      });
+    },
+
     load({ map }) {
       this.registerIcons(map);
     },
@@ -319,7 +357,8 @@ export default {
       this.$router.push({
         name: 'place',
         params: {
-          id: id
+          id: id,
+          featuresAndLocation: this.featuresAndLocation
         }
       });
     },

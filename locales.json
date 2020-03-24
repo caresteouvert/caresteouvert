@@ -1,6 +1,7 @@
 {
   "fr": {
     "covid19-alert": "Limitez vos déplacements un maximum",
+    "title": "Covid 19",
     "days": {
       "monday": "Lundi",
       "tuesday": "Mardi",
@@ -9,6 +10,14 @@
       "friday": "Vendredi",
       "saturday": "Samedi",
       "sunday": "Dimanche"
+    },
+    "filter": {
+      "title": "Lieux ouverts durant le confinement",
+      "bakery": "Boulangeries",
+      "pharmacy": "Pharmacies",
+      "food": "Magasins d'alimentation",
+      "shop": "Boutiques",
+      "bank": "Banques & assurances"
     },
     "details": {
       "containment_closed": "Ce lieu est fermé ? Signalez le",

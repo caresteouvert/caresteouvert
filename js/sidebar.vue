@@ -2,7 +2,7 @@
   <div>
     <v-card>
       <v-card-title class="pl-1 pt-5">
-        <div class="display-1 px-1">Covid 19</div>
+        <div class="display-1 px-1">{{ $t('title') }}</div>
       </v-card-title>
     </v-card>
 
