@@ -284,8 +284,7 @@ export default {
       mapCenter: { lat, lng },
       mapZoom: zoom,
       mapStyle: `${config.mapStyle}${config.apiKey}`,
-      filters: config.filters,
-      layers
+      filters: config.filters
     };
   },
 
@@ -301,6 +300,24 @@ export default {
         maxzoom: 20,
         tiles: ["https://covid-back.osmontrouge.fr/public.poi_osm/{z}/{x}/{y}.pbf"]
       };
+    },
+
+    layers() {
+      const unselectedCategories = Object.keys(this.filters).reduce((memo, filter) => {
+        if (!this.filters[filter].selected) {
+          memo.push(...this.filters[filter].cats);
+        }
+        return memo;
+      }, []);
+      return layers.map((layer) => {
+        const newLayer = { ...layer, filter: [...layer.filter] };
+        newLayer.filter.push([
+          "!in",
+          "cat",
+          ...unselectedCategories
+        ]);
+        return newLayer;
+      });
     }
   },
 
