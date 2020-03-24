@@ -105,8 +105,6 @@ const i18n = new VueI18n({
   messages,
 });
 
-console.log(markdownPages);
-
 const staticPagesMarkdown = Object.keys(markdownPages).map((page) => {
   return {
     name: page,
