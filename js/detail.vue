@@ -46,9 +46,6 @@
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <detail-entry icon="osm-mail">
-            {{ address }}
-          </detail-entry>
           <v-list-item
             v-if="point.properties.tags.phone"
             :href="`tel:${point.properties.tags.phone}`"
@@ -148,8 +145,7 @@ export default {
   data() {
     return {
       isMobile: true,
-      point: null,
-      address: null
+      point: null
     };
   },
 
@@ -180,21 +176,7 @@ export default {
         .then(data => data.json())
         .then((feature) => {
           this.point = feature;
-          this.fetchAddress();
         });
-    },
-
-    fetchAddress() {
-      const coordinates = this.point.geometry.coordinates;
-      fetch(`https://api.maptiler.com/geocoding/${coordinates}.json?key=${apiKey}`)
-        .then(r => r.json())
-        .then((data) => {
-        if (data.features.length > 0) {
-          const features = data.features;
-          const number = features[0].address || '';
-          this.address = `${number} ${features[0].text}, ${features[1].text}`.trim();
-        }
-      });
     },
 
     close() {
