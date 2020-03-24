@@ -86,3 +86,4 @@ node,way   shop              text         polygon
 node,way   craft             text         polygon
 node,way   office            text         polygon
 node,way   emergency         text         polygon
+node,way   tobacco           text         polygon

@@ -13,58 +13,78 @@ CREATE INDEX planet_osm_polygon_centroid_idx ON planet_osm_polygon USING GIST(ce
 -- Nouvelle table de référence
 DROP TABLE IF EXISTS poi_osm_next;
 CREATE TABLE poi_osm_next(
-	osmid VARCHAR PRIMARY KEY,
+	fid VARCHAR PRIMARY KEY,
 	geom GEOMETRY(Point, 3857),
 	name VARCHAR,
 	cat VARCHAR,
 	brand VARCHAR,
 	brand_wikidata VARCHAR,
+	brand_hours VARCHAR,
+	brand_infos VARCHAR,
 	status VARCHAR DEFAULT 'inconnu',
 	opening_hours VARCHAR,
-	tags HSTORE
+	tags JSONB
 );
 
 -- Ajout selon les tags pertinents
-INSERT INTO poi_osm_next(osmid, geom, name, cat, brand, brand_wikidata, tags)
+INSERT INTO poi_osm_next(fid, geom, name, cat, brand, brand_wikidata, status, opening_hours, tags)
 SELECT
-	concat('node/', osm_id),
+	concat('n', osm_id),
 	way,
 	tags->'name',
-	COALESCE(office, shop, amenity, 'unknown'),
+	COALESCE(office, craft, shop, amenity, 'unknown'),
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
-	tags
+	CASE
+		WHEN tags->'opening_hours:covid19' = 'off' THEN 'fermé'
+		WHEN tags->'opening_hours:covid19' IS NOT NULL THEN 'ouvert_adapté'
+		WHEN tags->'self_service' = 'yes' THEN 'ouvert'
+		ELSE 'inconnu'
+	END,
+	tags->'opening_hours:covid19',
+	hstore_to_jsonb(tags)
 FROM planet_osm_point
 WHERE
-	amenity IN ('pharmacy', 'car_rental', 'bank', 'fuel')
-	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'diy', 'craft', 'optician', 'beverages', 'laundry', 'tobacco', 'e-cigarette', 'funeral_directors')
-	OR office IN ('insurance', 'employment_agency');
+	amenity IN ('pharmacy', 'car_rental', 'bank', 'fuel', 'police', 'marketplace')
+	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'doityourself', 'craft', 'optician', 'beverages', 'wine', 'alcohol', 'electronics', 'hardware', 'stationery', 'medical_supply', 'laundry', 'tobacco', 'e-cigarette', 'funeral_directors', 'tobacco', 'kiosk', 'pet', 'car_repair', 'car_parts', 'agrarian')
+	OR office IN ('insurance', 'employment_agency')
+	OR craft IN ('optician', 'electronics_repair')
+	OR tobacco = 'yes'; --tags->'tobacco' = 'yes';
 
-INSERT INTO poi_osm_next(osmid, geom, name, cat, brand, brand_wikidata, tags)
+INSERT INTO poi_osm_next(fid, geom, name, cat, brand, brand_wikidata, status, opening_hours, tags)
 SELECT
-	CASE WHEN osm_id < 0 THEN concat('relation/', osm_id) ELSE concat('way/', osm_id) END,
+	CASE WHEN osm_id < 0 THEN concat('r', osm_id) ELSE concat('w', osm_id) END,
 	centroid,
 	tags->'name',
-	COALESCE(office, shop, amenity, 'unknown'),
+	COALESCE(office, craft, shop, amenity, 'unknown'),
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
-	tags
+	CASE
+		WHEN tags->'opening_hours:covid19' = 'off' THEN 'fermé'
+		WHEN tags->'opening_hours:covid19' IS NOT NULL THEN 'ouvert_adapté'
+		WHEN tags->'self_service' = 'yes' THEN 'ouvert'
+		ELSE 'inconnu'
+	END,
+	tags->'opening_hours:covid19',
+	hstore_to_jsonb(tags)
 FROM planet_osm_polygon
 WHERE
-	amenity IN ('pharmacy', 'car_rental', 'bank', 'fuel')
-	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'diy', 'craft', 'optician', 'beverages', 'laundry', 'tobacco', 'e-cigarette', 'funeral_directors')
-	OR office IN ('insurance', 'employment_agency');
+	amenity IN ('pharmacy', 'car_rental', 'bank', 'fuel', 'police', 'marketplace')
+	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'doityourself', 'craft', 'optician', 'beverages', 'wine', 'alcohol', 'electronics', 'hardware', 'stationery', 'medical_supply', 'laundry', 'tobacco', 'e-cigarette', 'funeral_directors', 'tobacco', 'kiosk', 'pet', 'car_repair', 'car_parts', 'agrarian')
+	OR office IN ('insurance', 'employment_agency')
+	OR craft IN ('optician', 'electronics_repair')
+	OR tobacco = 'yes'; --tags->'tobacco' = 'yes';
 
 -- Ajout des informations par marques
 UPDATE poi_osm_next
-SET status = b.rule, opening_hours = b.opening_hours
+SET status = b.rule, opening_hours = b.opening_hours, brand_hours = b.url_hours, brand_infos = b.infos
 FROM brand_rules b
-WHERE brand_wikidata = b.wikidata;
+WHERE status = 'inconnu' AND brand_wikidata = b.wikidata;
 
 UPDATE poi_osm_next
-SET status = b.rule, opening_hours = b.opening_hours
+SET status = b.rule, opening_hours = b.opening_hours, brand_hours = b.url_hours, brand_infos = b.infos
 FROM brand_rules b
-WHERE status = 'inconnu' AND lower(unaccent(brand)) = lower(unaccent(b.nom));
+WHERE status = 'inconnu' AND lower(trim(unaccent(brand))) = lower(trim(unaccent(b.nom)));
 
 -- Création des index
 REINDEX TABLE poi_osm_next;
@@ -76,3 +96,8 @@ ALTER TABLE poi_osm_next RENAME TO poi_osm;
 ALTER INDEX poi_osm_next_pkey RENAME TO poi_osm_pkey;
 ALTER INDEX poi_osm_next_geom_idx RENAME TO poi_osm_geom_idx;
 ALTER INDEX poi_osm_next_status_idx RENAME TO poi_osm_status_idx;
+
+-- Requêtes d'analyse
+-- SELECT status, COUNT(*) FROM poi_osm GROUP BY status ORDER BY COUNT(*) DESC;
+-- SELECT brand, COUNT(*) FROM poi_osm WHERE status = 'inconnu' GROUP BY brand HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;
+-- SELECT cat, COUNT(*) FROM poi_osm WHERE status = 'inconnu' GROUP BY cat HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;
