@@ -78,6 +78,12 @@
           "open": "ouvert",
           "closed": "fermé"
         }
+      },
+      "state": {
+        "ouvert": "Cette enseigne a été déclaré ouverte",
+        "ouvert_adapté": "Cette enseigne a été déclaré ouverte avec des horaires adapté",
+        "partiel": "Cette enseigne a été déclaré ouverte partiellement",
+        "inconnu": "Nous ne savons pas si cette enseigne est ouverte ou non"
       }
     }
   }

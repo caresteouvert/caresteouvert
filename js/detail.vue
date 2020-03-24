@@ -10,7 +10,6 @@
         min-height="100%"
       >
         <v-toolbar
-          :color="color"
           tile
           dark
         >
@@ -27,6 +26,8 @@
             <v-icon>osm-close</v-icon>
           </v-btn>
         </v-toolbar>
+
+        <detail-state :status="point.properties.status" />
 
         <v-list>
           <v-list-item v-if="title">
@@ -95,12 +96,14 @@ import { poiFeature, apiKey } from '../config.json';
 import DetailTag from './detail_tag';
 import DetailEntry from './detail_entry';
 import DetailOpeningHours from './detail_opening_hours';
+import DetailState from './detail_state';
 
 export default {
   components: {
     DetailEntry,
     DetailTag,
-    DetailOpeningHours
+    DetailOpeningHours,
+    DetailState
   },
 
   props: {
@@ -135,10 +138,6 @@ export default {
 
     type() {
       return this.$t(`details.feature.${this.point.properties.cat}`);
-    },
-
-    color() {
-      return ['ouvert', 'ouvert_adapté'].includes(this.point.properties.status) ? 'green' : 'gray';
     }
   },
 
