@@ -31,6 +31,7 @@
       "containment_brand_hours": "Horaires sur le site web de l'enseigne",
       "feature": {
         "association": "Association",
+        "alcohol": "Vente d'alcool",
         "bakery": "Boulangerie",
         "bank": "Banque",
         "beverages": "Vente d'alcool",
@@ -67,7 +68,7 @@
         "pet": "Animalerie",
         "pharmacy": "Pharmacie",
         "police": "Police",
-        "post_office": "Bureaux de poste",
+        "post_office": "Bureau de poste",
         "seafood": "Poissonnier",
         "stationery": "Papeterie",
         "supermarket": "Supermarché",
