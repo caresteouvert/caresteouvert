@@ -41,7 +41,7 @@ import VueRouter from 'vue-router';
 import VueI18n from 'vue-i18n';
 
 import App from './app.vue';
-import OsmMap from './map.vue';
+import OsmMain from './main.vue';
 
 import messages from '../locales.json';
 
@@ -108,7 +108,7 @@ const routes = [
   {
     name: 'index',
     path: '/:featuresAndLocation?',
-    component: OsmMap,
+    component: OsmMain,
     props: (route) => {
       return {
         featuresAndLocation: route.params.featuresAndLocation
