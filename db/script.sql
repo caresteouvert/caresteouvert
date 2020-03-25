@@ -27,7 +27,7 @@ CREATE TABLE poi_osm_next(
 );
 
 -- Ajout selon les tags pertinents
-INSERT INTO poi_osm_next(fid, geom, name, cat, brand, brand_wikidata, status, opening_hours, tags)
+INSERT INTO poi_osm_next(fid, geom, name, cat, brand, brand_wikidata, brand_infos, status, opening_hours, tags)
 SELECT
 	concat('n', osm_id),
 	way,
@@ -35,6 +35,7 @@ SELECT
 	COALESCE(office, craft, shop, amenity, 'unknown'),
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
+	tags->'note:covid19',
 	CASE
 		WHEN tags->'opening_hours:covid19' = 'off' THEN 'fermé'
 		WHEN tags->'opening_hours:covid19' = 'same' THEN 'ouvert'
@@ -48,12 +49,12 @@ SELECT
 FROM planet_osm_point
 WHERE
 	amenity IN ('pharmacy', 'car_rental', 'bank', 'fuel', 'police', 'marketplace', 'post_office')
-	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'doityourself', 'craft', 'optician', 'beverages', 'wine', 'alcohol', 'electronics', 'hardware', 'stationery', 'medical_supply', 'laundry', 'tobacco', 'e-cigarette', 'funeral_directors', 'tobacco', 'kiosk', 'pet', 'car_repair', 'car_parts', 'agrarian')
+	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'doityourself', 'craft', 'optician', 'beverages', 'wine', 'alcohol', 'electronics', 'hardware', 'stationery', 'medical_supply', 'laundry', 'dry_cleaning', 'tobacco', 'e-cigarette', 'funeral_directors', 'tobacco', 'kiosk', 'pet', 'car_repair', 'car_parts', 'agrarian')
 	OR office IN ('insurance', 'employment_agency')
 	OR craft IN ('optician', 'electronics_repair')
 	OR tobacco = 'yes';
 
-INSERT INTO poi_osm_next(fid, geom, name, cat, brand, brand_wikidata, status, opening_hours, tags)
+INSERT INTO poi_osm_next(fid, geom, name, cat, brand, brand_wikidata, brand_infos, status, opening_hours, tags)
 SELECT
 	CASE WHEN osm_id < 0 THEN concat('r', osm_id) ELSE concat('w', osm_id) END,
 	centroid,
@@ -61,6 +62,7 @@ SELECT
 	COALESCE(office, craft, shop, amenity, 'unknown'),
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
+	tags->'note:covid19',
 	CASE
 		WHEN tags->'opening_hours:covid19' = 'off' THEN 'fermé'
 		WHEN tags->'opening_hours:covid19' = 'same' THEN 'ouvert'
@@ -74,7 +76,7 @@ SELECT
 FROM planet_osm_polygon
 WHERE
 	amenity IN ('pharmacy', 'car_rental', 'bank', 'fuel', 'police', 'marketplace', 'post_office')
-	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'doityourself', 'craft', 'optician', 'beverages', 'wine', 'alcohol', 'electronics', 'hardware', 'stationery', 'medical_supply', 'laundry', 'tobacco', 'e-cigarette', 'funeral_directors', 'tobacco', 'kiosk', 'pet', 'car_repair', 'car_parts', 'agrarian')
+	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'doityourself', 'craft', 'optician', 'beverages', 'wine', 'alcohol', 'electronics', 'hardware', 'stationery', 'medical_supply', 'laundry', 'dry_cleaning', 'tobacco', 'e-cigarette', 'funeral_directors', 'tobacco', 'kiosk', 'pet', 'car_repair', 'car_parts', 'agrarian')
 	OR office IN ('insurance', 'employment_agency')
 	OR craft IN ('optician', 'electronics_repair')
 	OR tobacco = 'yes';
