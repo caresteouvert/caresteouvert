@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { apiKey } from '../config.json';
+import { jawgApiKey } from '../config.json';
 
 export default {
   data() {
@@ -32,13 +32,13 @@ export default {
       this.error = null;
       this.isLoading = true;
 
-      fetch(`https://api.maptiler.com/geocoding/${this.search}.json?key=${apiKey}`)
+      fetch(`https://api.jawg.io/places/v1/search?text=${encodeURIComponent(this.search)}&access-token=${jawgApiKey}`)
         .then(res => res.json())
         .then(body => {
           this.items = body.features.map((feature) => {
             return {
-              text: feature.place_name,
-              value: feature.bbox
+              text: feature.properties.label,
+              value: feature.bbox ? feature.bbox : feature.geometry.coordinates.concat(feature.geometry.coordinates)
             };
           });
         })

@@ -58,3 +58,5 @@ Contributeurs OpenStreetMap : aidez-nous ! <a href="https://wiki.openstreetmap
 ## Hébergement
 
 Ce site est hébergé gracieusement par <a href="https://scalingo.com/" target="_blank">Scalingo</a>. Si ça marche c'est grâce a eux (et sinon c'est de notre faute).
+
+La recherche d'adresse est fournie gracieusement par <a href="https://www.jawg.io/fr/" target="_blank">Jawg Maps</a>.
