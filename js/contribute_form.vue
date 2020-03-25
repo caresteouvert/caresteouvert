@@ -70,8 +70,10 @@ export default {
 name: ${this.point.properties.name}
 id: ${this.id}
 
-Etat: ${this.open ? 'ouvert' : 'fermé'}
-Details: ${this.details}
+État: ${this.open ? 'ouvert' : 'fermé'}
+Détails: ${this.details}
+
+Pour corriger cette note, utilisez le tag opening_hours:covid19 : https://wiki.openstreetmap.org/wiki/FR:Key:opening_hours:covid19
 `;
     }
   },
