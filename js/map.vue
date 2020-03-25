@@ -244,6 +244,12 @@ export default {
     };
   },
 
+  mounted() {
+    this.$on('updateMapBounds', (bbox) => {
+      this.map.fitBounds(bbox, { duration: 0 });
+    });
+  },
+
   computed: {
     poiSource() {
       return {
@@ -274,6 +280,7 @@ export default {
 
   methods: {
     load({ map }) {
+      this.map = map;
       this.registerIcons(map);
     },
 

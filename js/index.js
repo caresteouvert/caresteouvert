@@ -5,6 +5,7 @@ import Vue from 'vue';
 import Vuetify, {
   VAlert,
   VApp,
+  VAutocomplete,
   VBtn,
   VCard,
   VCardSubtitle,
@@ -50,6 +51,7 @@ Vue.use(Vuetify, {
   components: {
     VAlert,
     VApp,
+    VAutocomplete,
     VBtn,
     VCard,
     VCardSubtitle,

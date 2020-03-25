@@ -13,6 +13,7 @@
         fixed
       >
         <osm-sidebar>
+          <geocoder @select="updateMapBounds" />
           <osm-filter-features :filters="filters" />
         </osm-sidebar>
       </v-navigation-drawer>
@@ -48,6 +49,7 @@
         </v-btn>
         <osm-map
           v-if="loadMap"
+          ref="map"
           :map-center.sync="mapCenter"
           :map-zoom.sync="mapZoom"
           :filters="filters"
@@ -62,12 +64,14 @@
 <script>
 import * as config from '../config.json';
 import { encode, decode, encodePosition, decodePosition, encodeFeatures, decodeFeatures } from './url';
+import Geocoder from './geocoder';
 import OsmSidebar from './sidebar';
 import OsmFilterFeatures from './filter_features';
 import OsmMap from './map';
 
 export default {
   components: {
+    Geocoder,
     OsmFilterFeatures,
     OsmSidebar,
     OsmMap
@@ -150,6 +154,10 @@ export default {
           )
         }
       });
+    },
+
+    updateMapBounds(bbox) {
+      this.$refs.map.$emit('updateMapBounds', bbox);
     },
 
     computeIsMobile() {
