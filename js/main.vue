@@ -164,6 +164,9 @@ export default {
         .then(json => {
           this.mapCenter = { lat: json.ll[0], lng: json.ll[1] };
           this.mapZoom = 13;
+        }).catch(() => {
+          this.mapCenter = { lat: config.mapCenter[1], lng: config.mapCenter[0] };
+          this.mapZoom = config.mapZoom;
         });
     },
 
