@@ -34,7 +34,11 @@
           </v-btn>
         </v-toolbar>
 
-        <detail-state :status="point.properties.status" />
+        <detail-state
+          :point="point"
+          :status="point.properties.status"
+        />
+
         <v-alert
           v-if="point.properties.brand_infos"
           type="info"

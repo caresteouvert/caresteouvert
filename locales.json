@@ -15,6 +15,16 @@
       "saturday": "Samedi",
       "sunday": "Dimanche"
     },
+    "contribute_form": {
+      "title": "Ce lieu est-il ouvert ?",
+      "open": {
+        "yes": "oui",
+        "no": "non"
+      },
+      "details": "Ajouter des précisions comme des horaires d'ouvertures spécifique",
+      "submit": "Signaler",
+      "cancel": "Annuler"
+    },
     "filter": {
       "bakery": "Boulangeries",
       "bank": "Banques & assurances",
@@ -27,6 +37,8 @@
       "shop": "Boutiques"
     },
     "details": {
+      "signal": "Signaler un changement",
+      "signal_done": "Votre signalement a été enregistré. Merci !",
       "containment_opening_hours": "Horaires susceptibles de changer pendant le confinement",
       "containment_brand_hours": "Horaires sur le site web de l'enseigne",
       "feature": {
