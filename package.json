@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "parcel serve parcel --hmr-port 1235 index.html",
     "icons": "icon-font-generator icons/*.svg --out font --normalize --html --prefix='osm' --name osm",
-    "build": "yarn run icons && parcel build index.html",
+    "sprites": "spritezero ./static/sprite/caresteouvert ./mapicons && spritezero --retina ./static/sprite/caresteouvert@2x ./mapicons",
+    "build": "yarn run icons && yarn run sprites && parcel build index.html",
     "test": "jest --watch",
     "start": "node app.js"
   },
@@ -32,9 +33,14 @@
   "posthtml": {
     "recognizeSelfClosing": true
   },
+  "staticFiles": {
+    "staticPath": "static",
+    "watcherGlob": "**/**"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
+    "@mapbox/spritezero-cli": "https://github.com/francois2metz/spritezero-cli",
     "@vue/component-compiler-utils": "^2.6.0",
     "@vue/test-utils": "^1.0.0-beta.32",
     "babel-jest": "^25.1.0",
@@ -42,6 +48,7 @@
     "jest-cli": "^25.1.0",
     "marked": "^0.8.2",
     "parcel": "^1.11.0",
+    "parcel-plugin-static-files-copy": "^2.3.1",
     "sass": "^1.26.3",
     "vue-hot-reload-api": "^2.3.3",
     "vue-jest": "^4.0.0-beta.2",

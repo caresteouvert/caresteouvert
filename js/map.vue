@@ -1,40 +1,31 @@
 <template>
-  <div>
-    <MglMap
-      :center="mapCenter"
-      :zoom="mapZoom"
-      :map-style="mapStyle"
-      @load="load"
-      @update:center="updateMapCenter"
-      @update:zoom="updateMapZoom"
-    >
-      <MglNavigationControl :show-compass="false" />
-      <MglGeolocateControl />
-      <MglVectorLayer
-        v-for="layer in layers"
-        :key="layer.id"
-        :clear-source="false"
-        :layer-id="layer.id"
-        :layer="layer"
-        :source="poiSource"
-        source-id="poi"
-        @mouseenter="mouseenter"
-        @click="clickPoi"
-        @mouseleave="mouseleave"
-      />
-    </MglMap>
-    <img
-      v-for="(icon, key) in icons"
-      v-show="false"
-      :ref="key"
-      :src="icon"
-   />
-  </div>
+  <MglMap
+    :center="mapCenter"
+    :zoom="mapZoom"
+    :map-style="mapStyle"
+    @load="load"
+    @update:center="updateMapCenter"
+    @update:zoom="updateMapZoom"
+  >
+    <MglNavigationControl :show-compass="false" />
+    <MglGeolocateControl />
+    <MglVectorLayer
+      v-for="layer in layers"
+      :key="layer.id"
+      :clear-source="false"
+      :layer-id="layer.id"
+      :layer="layer"
+      :source="poiSource"
+      source-id="poi"
+      @mouseenter="mouseenter"
+      @click="clickPoi"
+      @mouseleave="mouseleave"
+    />
+  </MglMap>
 </template>
 
 <script>
 import * as config from '../config.json';
-import icons from '../icons/*.svg';
 import { MglMap, MglNavigationControl, MglGeolocateControl, MglVectorLayer } from 'vue-mapbox/dist/vue-mapbox.umd';
 
 const layers = [
@@ -221,6 +212,11 @@ export default {
       default: ''
     },
 
+    mapStyle: {
+      type: Object,
+      required: true
+    },
+
     mapCenter: {
       type: Object,
       required: true
@@ -235,13 +231,6 @@ export default {
       type: Object,
       required: true
     }
-  },
-
-  data() {
-    return {
-      icons,
-      mapStyle: `${config.mapStyle}${config.apiKey}`
-    };
   },
 
   mounted() {
@@ -281,17 +270,6 @@ export default {
   methods: {
     load({ map }) {
       this.map = map;
-      this.registerIcons(map);
-    },
-
-    registerIcons(map) {
-      for (let icon in this.icons) {
-        const name = `${icon}_11`;
-        if (map.hasImage(name)) {
-          map.removeImage(name);
-        }
-        map.addImage(name, this.$refs[icon][0]);
-      }
     },
 
     updateMapCenter(mapCenter) {

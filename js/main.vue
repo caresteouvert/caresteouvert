@@ -50,6 +50,7 @@
         <osm-map
           v-if="loadMap"
           ref="map"
+          :map-style="mapStyle"
           :map-center.sync="mapCenter"
           :map-zoom.sync="mapZoom"
           :filters="filters"
@@ -90,6 +91,7 @@ export default {
       loadMap: false,
       isMobile: false,
       sidebar: false,
+      mapStyle: null,
       mapCenter: null,
       mapZoom: null,
       mapStyle: `${config.mapStyle}${config.apiKey}`,
@@ -102,18 +104,12 @@ export default {
     this.sidebar = !this.isMobile;
 
     const { features, location } = decode(this.featuresAndLocation);
-    if (!location) {
-      this.centerMapViaGeoIP()
-        .finally(() => {
-          this.loadMap = true;
-        });
-    } else {
-      const { lat, lng, zoom } = decodePosition(location, config);
-      this.mapCenter = { lat, lng };
-      this.mapZoom = zoom;
-      this.loadMap = true;
-    }
     decodeFeatures(features, config.filters);
+
+    Promise.all([
+      this.loadInitialLocation(location),
+      this.loadAndOverrideMapStyle()
+    ]).then(() => { this.loadMap = true; });
   },
 
   watch: {
@@ -134,6 +130,34 @@ export default {
   },
 
   methods: {
+    loadAndOverrideMapStyle() {
+      function createWebUrl(url) {
+        const a = document.createElement("a")
+        a.href = url
+        // Fix populating Location properties in IE. Otherwise, protocol will be blank.
+        a.href = a.href
+        return a.href
+      }
+      return fetch(`${config.mapStyle}${config.apiKey}`)
+        .then(res => res.json())
+        .then((data) => {
+          data.sprite = createWebUrl('/sprite/caresteouvert');
+          this.mapStyle = data;
+        });
+    },
+
+    loadInitialLocation(location) {
+      const promise = Promise.resolve();
+      if (!location) {
+        promise.then(this.centerMapViaGeoIP());
+      } else {
+        const { lat, lng, zoom } = decodePosition(location, config);
+        this.mapCenter = { lat, lng };
+        this.mapZoom = zoom;
+      }
+      return promise;
+    },
+
     centerMapViaGeoIP() {
       return fetch(config.geoIpUrl)
         .then(res => res.json())
