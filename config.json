@@ -4,8 +4,8 @@
   "mapZoom": 6,
   "mapCenter": [2.3508, 46.4],
   "mapMaxBounds": [],
-  "poiUrl": "https://covid-back.osmontrouge.fr/public.poi_osm.json",
-  "poiFeature": "https://covid19-fr-pgfeatureserv.osc-fr1.scalingo.io/collections/public.poi_osm/items",
+  "poiUrl": "https://tiles.caresteouvert.fr/public.poi_osm.json",
+  "poiFeature": "https://features.caresteouvert.fr/collections/public.poi_osm/items",
   "geoIpUrl": "https://geo.indoorequal.org/me",
   "filters": {
     "police": { selected: true, cats: ["police"] },
