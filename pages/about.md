@@ -44,7 +44,7 @@ La carte affichée vient d’OpenStreetMap, et nous en sommes particulièrement 
 
 Toutes les données sont téléchargeables depuis OpenStreetMap directement en open data, librement utilisables sous les conditions de la licence OdbL. <a href="https://www.openstreetmap.org/copyright" target="_blank">En savoir plus sur la licence OdbL</a>.
 
-Les logiciels utilisés pour ce service sont tous des Logiciels Libres. <a href="https://github.com/osmontrouge/" target="_blank">Voir le code source des logiciels</a>.
+Les logiciels utilisés pour ce service sont tous des Logiciels Libres. <a href="https://github.com/osmontrouge/covid19_map" target="_blank">Voir le code source des logiciels</a>.
 
 Contributeurs OpenStreetMap : aidez-nous ! <a href="https://wiki.openstreetmap.org/wiki/France/Covid-19" target="_blank">Voir la page de coordination du projet</a>.
 
