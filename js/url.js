@@ -14,7 +14,7 @@ export function decodePosition(position, config) {
   let lng = config.mapCenter[0];
   let lat = config.mapCenter[1];
   let zoom = config.mapZoom;
-  const result = position.match(/@([.0-9]+),([.0-9]+),([.0-9]+)/);
+  const result = position.match(/@(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?),(\d+(?:\.\d+)?)/);
   if (result) {
     lat = parseFloat(result[1]);
     lng = parseFloat(result[2]);
