@@ -116,6 +116,11 @@ ALTER INDEX poi_osm_next_pkey RENAME TO poi_osm_pkey;
 ALTER INDEX poi_osm_next_geom_idx RENAME TO poi_osm_geom_idx;
 ALTER INDEX poi_osm_next_status_idx RENAME TO poi_osm_status_idx;
 
+CREATE OR REPLACE VIEW poi_osm_light AS
+SELECT fid, geom, name, cat, status
+FROM poi_osm
+WHERE status != 'fermé';
+
 -- Requêtes d'analyse
 -- SELECT SUM((status != 'inconnu')::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm;
 -- SELECT status, COUNT(*) FROM poi_osm GROUP BY status ORDER BY COUNT(*) DESC;
