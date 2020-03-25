@@ -22,3 +22,9 @@ yarn install
 yarn run build
 yarn run dev
 ```
+
+## Licence
+
+Copyright (c) "Ça reste ouvert" 2020
+
+Mis à disposition sous licence AGPL, voir [LICENSE](LICENSE.txt) pour le texte complet de la licence.
