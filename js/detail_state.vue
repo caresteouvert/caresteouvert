@@ -6,11 +6,14 @@
       tile
       class="mb-0"
     >
-      <p>{{ $t(`details.state.${status}`) }}</p>
-      <v-btn
-        v-if="!success"
-        :disabled="contribute"
-        @click="contribute = true">{{ $t('details.signal') }}</v-btn>
+      {{ $t(`details.state.${status}`) }}
+      <template v-if="!success">
+        <br>
+        <br>
+        <v-btn
+          :disabled="contribute"
+          @click="contribute = true">{{ $t('details.signal') }}</v-btn>
+      </template>
     </v-alert>
     <v-alert
       v-if="success"
