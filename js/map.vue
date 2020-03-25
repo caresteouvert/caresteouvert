@@ -244,7 +244,7 @@ export default {
       return {
         minzoom: 10,
         maxzoom: 20,
-        tiles: ["https://covid-back.osmontrouge.fr/public.poi_osm/{z}/{x}/{y}.pbf"]
+        tiles: [config.tilesUrl]
       };
     },
 
