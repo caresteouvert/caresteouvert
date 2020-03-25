@@ -28,7 +28,9 @@ __Florian Lainez__, CEO de Jungle Bus, permet aux entreprises de transport de co
 
 <hr />
 
-__François de Metz__, a plus de 7 ans d’entrepreneuriat et de développement avec Stormz. Il a appris à développer et peaufiner des logiciels mais également à être au contact des utilisateurs et des clients pour comprendre leurs problèmes et trouver des solutions.
+__François de Metz__, développeur freelance
+* Site web : <a href="https://2metz.fr/" target="_blank">2metz.fr</a>
+* Twitter : <a href="https://twitter.com/francois2metz" target="_blank">twitter.com/francois2metz</a>
 
 <hr />
 
@@ -47,7 +49,6 @@ Toutes les données sont téléchargeables depuis OpenStreetMap directement en o
 Les logiciels utilisés pour ce service sont tous des Logiciels Libres. <a href="https://github.com/osmontrouge/covid19_map" target="_blank">Voir le code source des logiciels</a>.
 
 Contributeurs OpenStreetMap : aidez-nous ! <a href="https://wiki.openstreetmap.org/wiki/France/Covid-19" target="_blank">Voir la page de coordination du projet</a>.
-
 
 ## Hébergement
 
