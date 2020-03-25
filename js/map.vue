@@ -28,11 +28,13 @@
 import * as config from '../config.json';
 import { MglMap, MglNavigationControl, MglGeolocateControl, MglVectorLayer } from 'vue-mapbox/dist/vue-mapbox.umd';
 
+const source = "public.poi_osm_light";
+
 const layers = [
   {
     id: "poi-open-background",
     type: "circle",
-    "source-layer": "public.poi_osm",
+    "source-layer": source,
     filter: [
       "all",
       [
@@ -56,7 +58,7 @@ const layers = [
   {
     id: "poi-unknow-background",
     type: "circle",
-    "source-layer": "public.poi_osm",
+    "source-layer": source,
     filter: [
       "all",
       [
@@ -80,7 +82,7 @@ const layers = [
   {
     id: "poi-white-bg",
     type: "circle",
-    "source-layer": "public.poi_osm",
+    "source-layer": source,
     filter: [
       "all",
       [
@@ -106,7 +108,7 @@ const layers = [
   {
     id: "poi-open",
     type: "symbol",
-    "source-layer": "public.poi_osm",
+    "source-layer": source,
     filter: [
       "all",
       [
@@ -152,7 +154,7 @@ const layers = [
   {
     id: "poi-unknow",
     type: "symbol",
-    "source-layer": "public.poi_osm",
+    "source-layer": source,
     filter: [
       "all",
       [
