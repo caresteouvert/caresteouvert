@@ -68,7 +68,7 @@ export default {
       return `Signalement #covid19 #caresteouvert
 
 name: ${this.point.properties.name}
-id: ${this.id}
+id: https://www.openstreetmap.org/${this.id}
 
 État: ${this.open ? 'ouvert' : 'fermé'}
 Détails: ${this.details}

@@ -66,7 +66,7 @@ describe('ContributeForm', () => {
     expect(form.vm.message).toEqual(`Signalement #covid19 #caresteouvert
 
 name: Test
-id: node/12345
+id: https://www.openstreetmap.org/node/12345
 
 État: ouvert
 Détails: Hello World
@@ -77,7 +77,7 @@ Pour corriger cette note, utilisez le tag opening_hours:covid19 : https://wiki.o
     expect(form.vm.message).toEqual(`Signalement #covid19 #caresteouvert
 
 name: Test
-id: node/12345
+id: https://www.openstreetmap.org/node/12345
 
 État: fermé
 Détails: Hello World
