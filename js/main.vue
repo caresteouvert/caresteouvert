@@ -151,13 +151,14 @@ export default {
     },
 
     loadInitialLocation(location) {
-      const promise = Promise.resolve();
+      let promise;
       if (!location) {
-        promise.then(this.centerMapViaGeoIP());
+        promise = this.centerMapViaGeoIP();
       } else {
         const { lat, lng, zoom } = decodePosition(location, config);
         this.mapCenter = { lat, lng };
         this.mapZoom = zoom;
+        promise = Promise.resolve();
       }
       return promise;
     },
