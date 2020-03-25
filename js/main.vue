@@ -19,36 +19,24 @@
           <osm-filter-features :filters="filters" />
         </osm-sidebar>
       </v-navigation-drawer>
-      <v-container
-        v-show="!isMobile"
-        :class="{ 'handle--closed': !sidebar }"
-        fill-height
-        tag="a"
-        class="handle"
-        @click.prevent="sidebar = !sidebar"
-      >
-        <v-icon
-          v-if="sidebar"
-          v-text="'$vuetify.icons.prev'"
-        ></v-icon>
-        <v-icon
-          v-else
-          v-text="'$vuetify.icons.next'"
-        ></v-icon>
-      </v-container>
       <v-content>
         <v-toolbar
           dense
           floating
           class="search"
         >
-          <v-btn
-            v-show="isMobile"
-            icon
-            @click="sidebar = !sidebar"
-          >
-            <v-icon>osm-filter_list</v-icon>
-          </v-btn>
+          <v-tooltip bottom>
+            <template v-slot:activator="{ on }">
+                <v-btn
+                  icon
+                  @click="sidebar = !sidebar"
+                v-on="on"
+                >
+                  <v-icon>osm-filter_list</v-icon>
+                </v-btn>
+            </template>
+            <span>{{ $t('menu') }}</span>
+          </v-tooltip>
           <geocoder @select="updateMapBounds" />
         </v-toolbar>
         <osm-map
@@ -105,7 +93,6 @@ export default {
 
   mounted() {
     this.computeIsMobile();
-    this.sidebar = !this.isMobile;
 
     const { features, location } = decode(this.featuresAndLocation);
     decodeFeatures(features, config.filters);
@@ -200,22 +187,6 @@ export default {
 </script>
 
 <style>
-.handle {
-  position: absolute;
-  top: 170px;
-  transform: translateX(300px);
-  padding: 24px 0 !important;
-  height: 70px;
-  width: 25px;
-  background-color: white;
-  z-index: 5;
-  box-shadow: 0 3px 1px -2px #0003,0 2px 2px 0 #00000024,0 1px 5px 0 #0000001f;
-}
-
-.handle--closed {
-  transform: translateX(0);
-}
-
 .place-opened  .mapboxgl-ctrl-bottom-right, .place-opened .mapboxgl-ctrl-top-right {
   transform: translateX(-400px);
 }
