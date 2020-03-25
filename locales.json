@@ -23,13 +23,13 @@
       "funeral_directors": "Services funéraires",
       "pharmacy": "Pharmacies",
       "police": "Police",
-      "post_office": "Bureaux de postes",
+      "post_office": "Bureaux de poste",
       "shop": "Boutiques"
     },
     "details": {
-      "containment_closed": "Ce lieu est fermé ? Signalez le",
+      "containment_closed": "Ce lieu est fermé ? Signalez-le",
       "containment_closed_subject": "Le lieu {name} est fermé",
-      "containment_closed_message":"Bonjour OSMontrouge,%0D%0A%0D%0ALe lieu {name} est fermé pendant le confinement.%0D%0A%0D%0AInformation technique pour OSMontrouge, ne pas supprimer: {id}%0D%0A%0D%0AMerci",
+      "containment_closed_message":"Bonjour Ça reste ouvert,%0D%0A%0D%0ALe lieu {name} est fermé pendant le confinement.%0D%0A%0D%0AInformation technique pour Ça reste ouvert, ne pas supprimer: {id}%0D%0A%0D%0AMerci",
       "containment_opening_hours": "Horaires susceptibles de changer pendant le confinement",
       "containment_brand_hours": "Horaires sur le site web de l'enseigne",
       "feature": {
@@ -39,15 +39,15 @@
         "bank": "Banque",
         "beverages": "Vente d'alcool",
         "bicycle": "Vente et réparation de vélos",
-        "butcher": "Boucher",
-        "car_parts": "Vente de pièces de voitures",
+        "butcher": "Boucherie",
+        "car_parts": "Vente de pièces pour voitures",
         "car_repair": "Réparations de voitures",
         "car_rental": "Location de voitures",
-        "cheese": "Fromager",
-        "chemist": "Drogerie et parapharmacie",
+        "cheese": "Fromagerie",
+        "chemist": "Droguerie et parapharmacie",
         "confectionery": "Confiserie",
         "convenience": "Supérette",
-        "convenience;gas": "Station service",
+        "convenience;gas": "Station-service",
         "craft": "Vente de matériel créatif",
         "doityourself": "Magasin de bricolage",
         "e-cigarette": "Cigarette électronique",
@@ -55,7 +55,7 @@
         "electronics_repair": "Réparations de matériel électronique",
         "employment_agency": "Recherche d'emploi",
         "frozen_food": "Aliments surgelés",
-        "fuel": "Station service",
+        "fuel": "Station-service",
         "funeral_directors": "Services funéraires",
         "gas": "Gaz",
         "greengrocer": "Fruits et légumes",
@@ -73,7 +73,7 @@
         "pharmacy": "Pharmacie",
         "police": "Police",
         "post_office": "Bureau de poste",
-        "seafood": "Poissonnier",
+        "seafood": "Poissonnerie",
         "stationery": "Papeterie",
         "supermarket": "Supermarché",
         "wine": "Vente de vins"
@@ -87,9 +87,9 @@
       },
       "state": {
         "ouvert": "Cette enseigne a été déclaré ouverte",
-        "ouvert_adapté": "Cette enseigne a été déclaré ouverte avec des horaires adapté",
+        "ouvert_adapté": "Cette enseigne a été déclaré ouverte avec des horaires adaptées",
         "partiel": "Cette enseigne a été déclaré ouverte partiellement",
-        "inconnu": "Nous ne savons pas si cette enseigne est ouverte ou non"
+        "inconnu": "Nous ne savons pas si ce lieu est ouvert ou non"
       }
     }
   }
