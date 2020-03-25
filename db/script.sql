@@ -96,8 +96,12 @@ FROM brand_rules b
 WHERE status = 'inconnu' AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.nom)));
 
 UPDATE poi_osm_next
-SET status = 'ouvert'
-WHERE status = 'inconnu' AND cat = 'fuel' AND tags->>'opening_hours' = '24/7';
+SET status = 'ouvert', opening_hours = '24/7'
+WHERE status IN ('inconnu', 'ouvert_adapté') AND cat = 'fuel' AND tags->>'opening_hours' = '24/7';
+
+UPDATE poi_osm_next
+SET opening_hours = tags->>'opening_hours'
+WHERE status = 'ouvert' AND opening_hours IS NULL;
 
 -- Création des index
 REINDEX TABLE poi_osm_next;
