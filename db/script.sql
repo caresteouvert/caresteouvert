@@ -37,6 +37,8 @@ SELECT
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	CASE
 		WHEN tags->'opening_hours:covid19' = 'off' THEN 'fermé'
+		WHEN tags->'opening_hours:covid19' = 'same' THEN 'ouvert'
+		WHEN tags->'opening_hours:covid19' IS NOT NULL AND tags->'opening_hours:covid19' = tags->'opening_hours' THEN 'ouvert'
 		WHEN tags->'opening_hours:covid19' IS NOT NULL THEN 'ouvert_adapté'
 		WHEN tags->'self_service' = 'yes' THEN 'ouvert'
 		ELSE 'inconnu'
@@ -45,11 +47,11 @@ SELECT
 	hstore_to_jsonb(tags)
 FROM planet_osm_point
 WHERE
-	amenity IN ('pharmacy', 'car_rental', 'bank', 'fuel', 'police', 'marketplace')
+	amenity IN ('pharmacy', 'car_rental', 'bank', 'fuel', 'police', 'marketplace', 'post_office')
 	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'doityourself', 'craft', 'optician', 'beverages', 'wine', 'alcohol', 'electronics', 'hardware', 'stationery', 'medical_supply', 'laundry', 'tobacco', 'e-cigarette', 'funeral_directors', 'tobacco', 'kiosk', 'pet', 'car_repair', 'car_parts', 'agrarian')
 	OR office IN ('insurance', 'employment_agency')
 	OR craft IN ('optician', 'electronics_repair')
-	OR tobacco = 'yes'; --tags->'tobacco' = 'yes';
+	OR tobacco = 'yes';
 
 INSERT INTO poi_osm_next(fid, geom, name, cat, brand, brand_wikidata, status, opening_hours, tags)
 SELECT
@@ -61,6 +63,8 @@ SELECT
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	CASE
 		WHEN tags->'opening_hours:covid19' = 'off' THEN 'fermé'
+		WHEN tags->'opening_hours:covid19' = 'same' THEN 'ouvert'
+		WHEN tags->'opening_hours:covid19' IS NOT NULL AND tags->'opening_hours:covid19' = tags->'opening_hours' THEN 'ouvert'
 		WHEN tags->'opening_hours:covid19' IS NOT NULL THEN 'ouvert_adapté'
 		WHEN tags->'self_service' = 'yes' THEN 'ouvert'
 		ELSE 'inconnu'
@@ -69,11 +73,11 @@ SELECT
 	hstore_to_jsonb(tags)
 FROM planet_osm_polygon
 WHERE
-	amenity IN ('pharmacy', 'car_rental', 'bank', 'fuel', 'police', 'marketplace')
+	amenity IN ('pharmacy', 'car_rental', 'bank', 'fuel', 'police', 'marketplace', 'post_office')
 	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'doityourself', 'craft', 'optician', 'beverages', 'wine', 'alcohol', 'electronics', 'hardware', 'stationery', 'medical_supply', 'laundry', 'tobacco', 'e-cigarette', 'funeral_directors', 'tobacco', 'kiosk', 'pet', 'car_repair', 'car_parts', 'agrarian')
 	OR office IN ('insurance', 'employment_agency')
 	OR craft IN ('optician', 'electronics_repair')
-	OR tobacco = 'yes'; --tags->'tobacco' = 'yes';
+	OR tobacco = 'yes';
 
 -- Ajout des informations par marques
 UPDATE poi_osm_next
@@ -85,6 +89,15 @@ UPDATE poi_osm_next
 SET status = b.rule, opening_hours = b.opening_hours, brand_hours = b.url_hours, brand_infos = b.infos
 FROM brand_rules b
 WHERE status = 'inconnu' AND lower(trim(unaccent(brand))) = lower(trim(unaccent(b.nom)));
+
+UPDATE poi_osm_next
+SET status = b.rule, opening_hours = b.opening_hours, brand_hours = b.url_hours, brand_infos = b.infos
+FROM brand_rules b
+WHERE status = 'inconnu' AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.nom)));
+
+UPDATE poi_osm_next
+SET status = 'ouvert'
+WHERE status = 'inconnu' AND cat = 'fuel' AND tags->>'opening_hours' = '24/7';
 
 -- Création des index
 REINDEX TABLE poi_osm_next;
@@ -98,6 +111,7 @@ ALTER INDEX poi_osm_next_geom_idx RENAME TO poi_osm_geom_idx;
 ALTER INDEX poi_osm_next_status_idx RENAME TO poi_osm_status_idx;
 
 -- Requêtes d'analyse
+-- SELECT SUM((status != 'inconnu')::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm;
 -- SELECT status, COUNT(*) FROM poi_osm GROUP BY status ORDER BY COUNT(*) DESC;
 -- SELECT brand, COUNT(*) FROM poi_osm WHERE status = 'inconnu' GROUP BY brand HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;
 -- SELECT cat, COUNT(*) FROM poi_osm WHERE status = 'inconnu' GROUP BY cat HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;
