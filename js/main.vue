@@ -1,8 +1,11 @@
 <template>
   <div
     v-resize="computeIsMobile"
-    :class="{ 'place-opened': $route.name === 'place' && !isMobile }"
-  >
+    :class="{
+      'place-opened': $route.name === 'place' && !isMobile,
+      'sidebar-opened': sidebar && !isMobile
+     }"
+    >
     <div>
       <v-navigation-drawer
         v-model="sidebar"
@@ -13,7 +16,6 @@
         fixed
       >
         <osm-sidebar>
-          <geocoder @select="updateMapBounds" />
           <osm-filter-features :filters="filters" />
         </osm-sidebar>
       </v-navigation-drawer>
@@ -35,18 +37,20 @@
         ></v-icon>
       </v-container>
       <v-content>
-        <v-btn
-          v-show="isMobile"
-          fixed
-          fab
-          dark
-          top
-          left
-          color="pink"
-          @click="sidebar = !sidebar"
+        <v-toolbar
+          dense
+          floating
+          class="search"
         >
-          <v-icon>osm-filter_list</v-icon>
-        </v-btn>
+          <v-btn
+            v-show="isMobile"
+            icon
+            @click="sidebar = !sidebar"
+          >
+            <v-icon>osm-filter_list</v-icon>
+          </v-btn>
+          <geocoder @select="updateMapBounds" />
+        </v-toolbar>
         <osm-map
           v-if="loadMap"
           ref="map"
@@ -213,5 +217,14 @@ export default {
 
 .place-opened  .mapboxgl-ctrl-bottom-right, .place-opened .mapboxgl-ctrl-top-right {
   transform: translateX(-400px);
+}
+.sidebar-opened .search {
+  transform: translateX(300px);
+}
+.search {
+  position: absolute;
+  z-index: 4;
+  top: 20px;
+  left: 20px;
 }
 </style>
