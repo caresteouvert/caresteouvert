@@ -1,6 +1,10 @@
 # Ça reste ouvert
 
-Documentation en cours d'écriture.
+![Logo de Ça reste ouvert](static/logo.png)
+
+[Ça reste ouvert](https://caresteouvert.fr), la carte collaborative des lieux ouverts durant le confinement #Covid19.
+
+Toutes les informations sur le projet sont ici : https://www.caresteouvert.fr/about
 
 
 ## Développement
