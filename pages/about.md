@@ -14,13 +14,13 @@ L’outil est développé en urgence et évolue chaque jour. Il affichera très 
 * Twitter : <a href="https://twitter.com/caresteouvert" target="_blank">twitter.com/caresteouvert</a>
 * Facebook : <a href="https://www.facebook.com/%C3%87a-reste-ouvert-102510298066358" target="_blank">facebook.com/%C3%87a-reste-ouvert-102510298066358</a>
 
-__Contact presse et partenariats__ : contact@caresteouvert.fr
 
 ## Presse
 
 * Communiqué de presse – 25/03/2020 : <a href="communique_presse.pdf" target="_blank">« Ça reste ouvert » : la carte collaborative des lieux ouverts durant le confinement #Covid19 »</a>
 * Article de presse – 25/03/2020 - la Voix du Nord : <a href="https://www.lavoixdunord.fr/731250/article/2020-03-25/decouvrez-la-carte-collaborative-des-commerces-ouverts-durant-le-confinement" target="_blank">« Découvrez la carte collaborative des commerces ouverts durant le confinement »</a>
 
+__Contact presse et partenariats__ : contact@caresteouvert.fr
 
 ## L'équipe de « Ça reste ouvert »
 
