@@ -8,7 +8,6 @@
     @update:zoom="updateMapZoom"
   >
     <MglNavigationControl :show-compass="false" />
-    <MglGeolocateControl />
     <MglVectorLayer
       v-for="layer in layers"
       :key="layer.id"
@@ -26,7 +25,7 @@
 
 <script>
 import * as config from '../config.json';
-import { MglMap, MglNavigationControl, MglGeolocateControl, MglVectorLayer } from 'vue-mapbox/dist/vue-mapbox.umd';
+import { MglMap, MglNavigationControl, MglVectorLayer } from 'vue-mapbox/dist/vue-mapbox.umd';
 
 const source = "public.poi_osm_light";
 
@@ -201,7 +200,6 @@ const layers = [
 
 export default {
   components: {
-    MglGeolocateControl,
     MglMap,
     MglNavigationControl,
     MglVectorLayer,
@@ -238,6 +236,9 @@ export default {
   mounted() {
     this.$on('updateMapBounds', (bbox) => {
       this.map.fitBounds(bbox, { duration: 0 });
+    });
+    this.$on('updateMapCenter', ({ latitude, longitude }) => {
+      this.map.jumpTo({ center: { lat: latitude, lng: longitude }, zoom: 13});
     });
   },
 

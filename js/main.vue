@@ -27,17 +27,18 @@
         >
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
-                <v-btn
-                  icon
-                  @click="sidebar = !sidebar"
+              <v-btn
+                icon
+                @click="sidebar = !sidebar"
                 v-on="on"
-                >
-                  <v-icon>osm-filter_list</v-icon>
-                </v-btn>
+              >
+                <v-icon>osm-filter_list</v-icon>
+              </v-btn>
             </template>
             <span>{{ $t('menu') }}</span>
           </v-tooltip>
           <geocoder @select="updateMapBounds" />
+          <geolocate @input="updateMapCenter" />
         </v-toolbar>
         <osm-map
           v-if="loadMap"
@@ -58,6 +59,7 @@
 import * as config from '../config.json';
 import { encode, decode, encodePosition, decodePosition, encodeFeatures, decodeFeatures } from './url';
 import Geocoder from './geocoder';
+import Geolocate from './geolocate';
 import OsmSidebar from './sidebar';
 import OsmFilterFeatures from './filter_features';
 import OsmMap from './map';
@@ -65,6 +67,7 @@ import OsmMap from './map';
 export default {
   components: {
     Geocoder,
+    Geolocate,
     OsmFilterFeatures,
     OsmSidebar,
     OsmMap
@@ -177,6 +180,10 @@ export default {
 
     updateMapBounds(bbox) {
       this.$refs.map.$emit('updateMapBounds', bbox);
+    },
+
+    updateMapCenter(coords) {
+      this.$refs.map.$emit('updateMapCenter', coords);
     },
 
     computeIsMobile() {
