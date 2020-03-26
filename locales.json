@@ -23,24 +23,24 @@
         "no": "non"
       },
       "details": "Ajouter des précisions comme des horaires d'ouvertures spécifique",
-      "submit": "Signaler",
+      "submit": "Publier",
       "cancel": "Annuler"
     },
     "filter": {
       "bakery": "Boulangeries",
       "bank": "Banques & assurances",
-      "food": "Magasins d'alimentation",
+      "food": "Alimentation",
       "fuel": "Stations services",
       "funeral_directors": "Services funéraires",
       "pharmacy": "Pharmacies",
       "police": "Police",
       "post_office": "Bureaux de poste",
-      "shop": "Boutiques"
+      "shop": "Commerces"
     },
     "details": {
       "signal": "Signaler un changement",
       "signal_done": "Votre signalement a été enregistré. Merci !",
-      "containment_opening_hours": "Horaires susceptibles de changer pendant le confinement",
+      "containment_opening_hours": "Horaires d'ouverture hors-confinement",
       "containment_brand_hours": "Horaires sur le site web de l'enseigne",
       "feature": {
         "alcohol": "Vente d'alcool",
@@ -101,10 +101,10 @@
         }
       },
       "state": {
-        "ouvert": "Cette enseigne a été déclaré ouverte",
-        "ouvert_adapté": "Cette enseigne a été déclaré ouverte avec des horaires adaptées",
-        "partiel": "Cette enseigne a été déclaré ouverte partiellement",
-        "inconnu": "Nous ne savons pas si ce lieu est ouvert ou non"
+        "ouvert": "Lieu ouvert durant le confinement",
+        "ouvert_adapté": "Lieu ouvert durant le confinement avec des horaires adaptées",
+        "partiel": "Lieu potentiellement ouvert durant le confinement (à vérifier)",
+        "inconnu": "Lieu dont l'état d'ouverture n'est pas connu"
       }
     }
   }
