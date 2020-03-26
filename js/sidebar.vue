@@ -1,10 +1,10 @@
 <template>
   <div>
     <v-card>
-      <v-card-title class="pl-1 pt-5">
-        <h1 class="display-1">{{ $t('title') }}</h1>
+      <v-card-title class="pl-1 pt-5 pb-5 justify-center">
+        <img class="logo" src="../images/logo2.png" :alt="$t('title')" />
       </v-card-title>
-      <v-card-subtitle class="pl-2">
+      <v-card-subtitle class="pl-2 text-center">
         {{ $t('subtitle') }}
       </v-card-subtitle>
     </v-card>
@@ -39,7 +39,8 @@ export default {
   .no-min-width {
     min-width: auto;
   }
-  .display-1 {
-    background-color: #ffffffa6;
+  .logo {
+    width: 150px;
+    max-width: 100%;
   }
 </style>
