@@ -13,11 +13,13 @@
     >
       {{ $t('contribute_form.open.no') }}
     </v-btn>
-    <v-textarea
-      v-model="details"
-      :label="$t('contribute_form.details')"
-      name="details"
-    ></v-textarea>
+    <label class="d-block pt-2">
+      {{ $t('contribute_form.details') }}
+      <v-textarea
+        v-model="details"
+        name="details"
+      ></v-textarea>
+    </label>
     <v-btn
       :disabled="submitDisabled"
       :loading="loading"
@@ -68,10 +70,12 @@ export default {
       return `Signalement #covid19 #caresteouvert
 
 name: ${this.point.properties.name}
-id: ${this.id}
+id: https://www.openstreetmap.org/${this.id}
 
-Etat: ${this.open ? 'ouvert' : 'fermé'}
-Details: ${this.details}
+État: ${this.open ? 'ouvert' : 'fermé'}
+Détails: ${this.details}
+
+Pour corriger cette note, utilisez le tag opening_hours:covid19 : https://wiki.openstreetmap.org/wiki/FR:Key:opening_hours:covid19
 `;
     }
   },

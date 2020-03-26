@@ -2,6 +2,7 @@
   <div
     v-resize="computeIsMobile"
     :class="{
+       xs: $vuetify.breakpoint.xsOnly,
       'place-opened': $route.name === 'place' && !isMobile,
       'sidebar-opened': sidebar && !isMobile
      }"
@@ -22,8 +23,7 @@
       <v-content>
         <v-toolbar
           dense
-          floating
-          class="search"
+          class="search ml-sm-5 mt-sm-5"
         >
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
@@ -187,7 +187,10 @@ export default {
 </script>
 
 <style>
-.place-opened  .mapboxgl-ctrl-bottom-right, .place-opened .mapboxgl-ctrl-top-right {
+.xs .mapboxgl-ctrl-top-right {
+  top: 50px;
+}
+.place-opened .mapboxgl-ctrl-top-right {
   transform: translateX(-400px);
 }
 .sidebar-opened .search {
@@ -196,7 +199,8 @@ export default {
 .search {
   position: absolute;
   z-index: 4;
-  top: 20px;
-  left: 20px;
+}
+.xs .search {
+  width: 100%;
 }
 </style>

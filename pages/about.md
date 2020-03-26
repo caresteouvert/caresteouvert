@@ -28,7 +28,7 @@ L’équipe bénévole est constituée de professionnels de la cartographie num�
 
 <hr />
 
-__Florian Lainez__, CEO de Jungle Bus, permet aux entreprises de transport de collaborer avec la communauté OpenSTreetMap pour créer des données de transport. Cartographie Montrouge sur son temps libre.
+__Florian Lainez__, CEO de Jungle Bus, permet aux entreprises de transport de collaborer avec la communauté OpenStreetMap pour créer des données de transport. Cartographie Montrouge sur son temps libre.
 * Twitter : <a href="https://twitter.com/overflorian" target="_blank">twitter.com/overflorian</a>
 
 <hr />
@@ -57,6 +57,6 @@ Contributeurs OpenStreetMap : aidez-nous ! <a href="https://wiki.openstreetmap
 
 ## Hébergement
 
-Ce site est hébergé gracieusement par <a href="https://scalingo.com/" target="_blank">Scalingo</a>. Si ça marche c'est grâce a eux (et sinon c'est de notre faute).
+Ce site est hébergé gracieusement par <a href="https://scalingo.com/" target="_blank">Scalingo</a>. Si ça marche c'est grâce à eux (et sinon c'est de notre faute).
 
 La recherche d'adresse est fournie gracieusement par <a href="https://www.jawg.io/fr/" target="_blank">Jawg Maps</a>.

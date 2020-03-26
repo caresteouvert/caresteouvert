@@ -66,19 +66,23 @@ describe('ContributeForm', () => {
     expect(form.vm.message).toEqual(`Signalement #covid19 #caresteouvert
 
 name: Test
-id: node/12345
+id: https://www.openstreetmap.org/node/12345
 
-Etat: ouvert
-Details: Hello World
+État: ouvert
+Détails: Hello World
+
+Pour corriger cette note, utilisez le tag opening_hours:covid19 : https://wiki.openstreetmap.org/wiki/FR:Key:opening_hours:covid19
 `);
     form.vm.clickClose();
     expect(form.vm.message).toEqual(`Signalement #covid19 #caresteouvert
 
 name: Test
-id: node/12345
+id: https://www.openstreetmap.org/node/12345
 
-Etat: fermé
-Details: Hello World
+État: fermé
+Détails: Hello World
+
+Pour corriger cette note, utilisez le tag opening_hours:covid19 : https://wiki.openstreetmap.org/wiki/FR:Key:opening_hours:covid19
 `);
   });
 });

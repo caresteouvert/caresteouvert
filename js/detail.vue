@@ -62,6 +62,18 @@
             </v-list-item-content>
           </v-list-item>
 
+          <v-list-item
+            v-if="email"
+            :href="`mailto:${email}`"
+          >
+            <v-list-item-icon><v-icon>osm-mail</v-icon></v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ email }}
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
           <detail-opening-hours
             v-if="point.properties.opening_hours"
             :value="point.properties.opening_hours"
@@ -160,6 +172,10 @@ export default {
 
     type() {
       return this.$t(`details.feature.${this.point.properties.cat}`);
+    },
+
+    email() {
+      return this.point.properties.tags.email || this.point.properties.tags['contact:email'];
     }
   },
 
@@ -208,7 +224,7 @@ export default {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   z-index: 10;
   overflow-y: auto;
