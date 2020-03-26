@@ -190,7 +190,7 @@ export default {
 .xs .mapboxgl-ctrl-top-right {
   top: 50px;
 }
-.place-opened .mapboxgl-ctrl-top-right {
+.place-opened .mapboxgl-ctrl-top-right, .place-opened .mapboxgl-ctrl-bottom-right {
   transform: translateX(-400px);
 }
 .sidebar-opened .search {
