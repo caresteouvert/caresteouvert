@@ -5,6 +5,7 @@ set -e
 DATASET=${1}
 CONNEXION=${2}
 
+mkdir -p /data/download
 cd /data/download
 wget -NS http://download.openstreetmap.fr/extracts/merge/${DATASET}.osm.pbf
 wget -NS http://download.openstreetmap.fr/extracts/merge/${DATASET}.state.txt
