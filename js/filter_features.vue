@@ -9,6 +9,7 @@
       >
         <v-list-item-icon class="mr-0 my-3">
           <v-icon
+            :color="filter.selected ? 'primary' : null"
             small
           >{{ `osm-${key}` }}</v-icon>
         </v-list-item-icon>
