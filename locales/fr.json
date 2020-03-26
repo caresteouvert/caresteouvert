@@ -127,5 +127,15 @@
       "inconnu": "Lieu dont l'état d'ouverture n'est pas connu",
       "fermé": "Lieu fermé durant le confinement"
     }
+  },
+  "opening_hours_editor": {
+    "select_days": "Sélectionnez les jours",
+    "next": "Sélectionnez les horaires",
+    "select_time": {
+      "start": "Entrer l'horaire d'ouverture",
+      "end": "Entrer l'horaire de fermeture"
+    },
+    "add_interval": "Ajouter une durée",
+    "add_new_days": "Ajouter des jours d'ouverture"
   }
 }

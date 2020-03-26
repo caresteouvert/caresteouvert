@@ -13,6 +13,7 @@
     >
       {{ $t('contribute_form.open.no') }}
     </v-btn>
+    <opening-hours-editor v-model="openingHours"  />
     <label class="d-block pt-2">
       {{ $t('contribute_form.details') }}
       <v-textarea
@@ -39,8 +40,11 @@
 
 <script>
 import { apiUrl } from '../config.json';
+import OpeningHoursEditor from './opening_hours_editor';
 
 export default {
+  components: { OpeningHoursEditor },
+
   props: {
     point: {
       type: Object,
@@ -51,7 +55,8 @@ export default {
     return {
       details: '',
       loading: false,
-      open: null
+      open: null,
+      openingHours: {}
     };
   },
 
