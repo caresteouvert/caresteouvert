@@ -49,7 +49,7 @@ __Adrien Pavie__, entrepreneur indépendant en géomatique, propose des services
 * Twitter : <a href="https://twitter.com/PanierAvide" target="_blank">twitter.com/PanierAvide</a>
 
 __Vincent de Château-Thierry__, géomaticien, contributeur OpenStreetMap et bénévole.
-* Twitter : <a href="https://twitter.com/_vdct" target="_blank">twitter.com/PanierAvide</a>
+* Twitter : <a href="https://twitter.com/_vdct" target="_blank">twitter.com/_vdct</a>
 
 Des dizaines de contributeurs OpenStreetMap interviennent également de manière ponctuelle sur le projet.
 
