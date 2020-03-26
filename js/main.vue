@@ -97,6 +97,10 @@ export default {
   mounted() {
     this.computeIsMobile();
 
+    if(!this.isMobile) {
+      this.sidebar = true;
+    }
+
     const { features, location } = decode(this.featuresAndLocation);
     decodeFeatures(features, config.filters);
 
