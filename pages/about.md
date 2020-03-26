@@ -20,6 +20,7 @@ L’outil est développé en urgence et évolue chaque jour. Il affichera très 
 * Communiqué de presse – 25/03/2020 : <a href="communique_presse.pdf" target="_blank">« Ça reste ouvert » : la carte collaborative des lieux ouverts durant le confinement #Covid19 »</a>
 * la Voix du Nord – 25/03/2020 : <a href="https://www.lavoixdunord.fr/731250/article/2020-03-25/decouvrez-la-carte-collaborative-des-commerces-ouverts-durant-le-confinement" target="_blank">« Découvrez la carte collaborative des commerces ouverts durant le confinement »</a>
 * Ouest France – 26/03/2020 [CARTE. À Redon, quels sont les commerces encore ouverts ?](https://www.ouest-france.fr/sante/virus/coronavirus/carte-redon-quels-sont-les-commerces-encore-ouverts-6792270)
+* BFM – 26/03/2020 [Coronavirus: comment savoir quels commerces restent ouverts?](https://www.bfmtv.com/tech/coronavirus-comment-savoir-quels-commerces-restent-ouverts-1882596.html)
 
 __Contact presse et partenariats__ : contact@caresteouvert.fr
 
