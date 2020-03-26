@@ -13,11 +13,13 @@
     >
       {{ $t('contribute_form.open.no') }}
     </v-btn>
-    <v-textarea
-      v-model="details"
-      :label="$t('contribute_form.details')"
-      name="details"
-    ></v-textarea>
+    <label class="d-block pt-2">
+      {{ $t('contribute_form.details') }}
+      <v-textarea
+        v-model="details"
+        name="details"
+      ></v-textarea>
+    </label>
     <v-btn
       :disabled="submitDisabled"
       :loading="loading"
