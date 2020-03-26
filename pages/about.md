@@ -17,12 +17,15 @@ L’outil est développé en urgence et évolue chaque jour. Il affichera très 
 
 ## Presse
 
-* Communiqué de presse – 25/03/2020 : <a href="communique_presse.pdf" target="_blank">« Ça reste ouvert » : la carte collaborative des lieux ouverts durant le confinement #Covid19 »</a>
+* __Communiqué de presse – 25/03/2020__ : <a href="communique_presse.pdf" target="_blank">« Ça reste ouvert » : la carte collaborative des lieux ouverts durant le confinement #Covid19 »</a>
+* BFMTV - 26/03/2020 : <a href="https://www.bfmtv.com/tech/coronavirus-comment-savoir-quels-commerces-restent-ouverts-1882596.html" target="_blank">« Coronavirus: comment savoir quels commerces restent ouverts? »</a>
 * la Voix du Nord – 25/03/2020 : <a href="https://www.lavoixdunord.fr/731250/article/2020-03-25/decouvrez-la-carte-collaborative-des-commerces-ouverts-durant-le-confinement" target="_blank">« Découvrez la carte collaborative des commerces ouverts durant le confinement »</a>
 * Ouest France – 26/03/2020 [CARTE. À Redon, quels sont les commerces encore ouverts ?](https://www.ouest-france.fr/sante/virus/coronavirus/carte-redon-quels-sont-les-commerces-encore-ouverts-6792270)
 * BFM – 26/03/2020 [Coronavirus: comment savoir quels commerces restent ouverts?](https://www.bfmtv.com/tech/coronavirus-comment-savoir-quels-commerces-restent-ouverts-1882596.html)
 
 __Contact presse et partenariats__ : contact@caresteouvert.fr
+
+<center><img src="/images/logo.png" alt="" style="max-width: 300px" /></center>
 
 ## L'équipe de « Ça reste ouvert »
 
@@ -45,11 +48,18 @@ __Adrien Pavie__, entrepreneur indépendant en géomatique, propose des services
 * Site web : <a href="https://pavie.info/" target="_blank">pavie.info</a>
 * Twitter : <a href="https://twitter.com/PanierAvide" target="_blank">twitter.com/PanierAvide</a>
 
+__Vincent de Château-Thierry__, géomaticien, contributeur OpenStreetMap et bénévole.
+* Twitter : <a href="https://twitter.com/_vdct" target="_blank">twitter.com/PanierAvide</a>
+
+Des dizaines de contributeurs OpenStreetMap interviennent également de manière ponctuelle sur le projet.
+
 ## OpenStreetMap
 
 La carte affichée vient d’OpenStreetMap, et nous en sommes particulièrement fiers !
 
 <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> est « le Wikipédia de la cartographie », une communauté mondiale coordonnée, auto-organisée, créant des données librement exploitables. OpenStreetMap est aujourd’hui considérée comme la base de données cartographique ouverte la plus exhaustive au Monde.
+
+<center><img src="/images/logo_osm.png" alt="" style="max-width: 150px"></center>
 
 Toutes les données sont téléchargeables depuis OpenStreetMap directement en open data, librement utilisables sous les conditions de la licence OdbL. <a href="https://www.openstreetmap.org/copyright" target="_blank">En savoir plus sur la licence OdbL</a>.
 
