@@ -87,3 +87,4 @@ node,way   craft             text         polygon
 node,way   office            text         polygon
 node,way   emergency         text         polygon
 node,way   tobacco           text         polygon
+node,way   healthcare        text         polygon
