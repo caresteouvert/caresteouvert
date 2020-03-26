@@ -74,6 +74,18 @@
             </v-list-item-content>
           </v-list-item>
 
+          <v-list-item
+            v-if="facebook"
+            :href="facebook"
+          >
+            <v-list-item-icon><v-icon>osm-fcbk</v-icon></v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>
+                {{ $t('details.facebook') }}
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
           <detail-opening-hours
             v-if="point.properties.opening_hours"
             :value="point.properties.opening_hours"
@@ -176,6 +188,10 @@ export default {
 
     email() {
       return this.point.properties.tags.email || this.point.properties.tags['contact:email'];
+    },
+
+    facebook() {
+      return this.point.properties.tags.facebook || this.point.properties.tags['contact:facebook'];
     }
   },
 
