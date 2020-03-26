@@ -8,16 +8,16 @@ Toutes les informations sur le projet sont ici : https://www.caresteouvert.fr/ab
 
 ## Architecture
 
-Pour déployer une instance complête de Ça reste ouvert, vous aurez besoin de :
+Pour déployer une instance complète de Ça reste ouvert, vous aurez besoin de :
 
 - la carte
-- [Une base de donées postgres avec des données](db/)
+- [Une base de données PostgreSQL avec des données](db/)
 - [pg_tileserv](https://access.crunchydata.com/documentation/pg_tileserv/latest/)
 - [pg_featureserv](https://access.crunchydata.com/documentation/pg_featureserv/latest/)
 
 ## Développement
 
-La façon la plus simple de contribuer à la carte est d'utiliser docker:
+La façon la plus simple de contribuer à la carte est d'utiliser docker :
 
 ```bash
 ./script/server
