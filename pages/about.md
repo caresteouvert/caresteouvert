@@ -25,9 +25,7 @@ L’outil est développé en urgence et évolue chaque jour. Il affichera très 
 
 __Contact presse et partenariats__ : contact@caresteouvert.fr
 
-<center>
-<img src="/images/images/logo.png?raw=true" alt="logo.png" width=60%>
-</center>
+<center><img src="/images/logo.png" alt="" style="max-width: 300px" /></center>
 
 ## L'équipe de « Ça reste ouvert »
 
@@ -61,9 +59,7 @@ La carte affichée vient d’OpenStreetMap, et nous en sommes particulièrement 
 
 <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> est « le Wikipédia de la cartographie », une communauté mondiale coordonnée, auto-organisée, créant des données librement exploitables. OpenStreetMap est aujourd’hui considérée comme la base de données cartographique ouverte la plus exhaustive au Monde.
 
-<center>
-<img src="/images/logo OpenStreetMap.png?raw=true" alt="logo.png" width=20%>
-</center>
+<center><img src="/images/logo_osm.png" alt="" style="max-width: 150px"></center>
 
 Toutes les données sont téléchargeables depuis OpenStreetMap directement en open data, librement utilisables sous les conditions de la licence OdbL. <a href="https://www.openstreetmap.org/copyright" target="_blank">En savoir plus sur la licence OdbL</a>.
 
