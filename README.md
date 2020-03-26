@@ -6,22 +6,23 @@
 
 Toutes les informations sur le projet sont ici : https://www.caresteouvert.fr/about
 
+## Architecture
+
+Pour déployer une instance complête de Ça reste ouvert, vous aurez besoin de :
+
+- la carte
+- [Une base de donées postgres avec des données](db/)
+- [pg_tileserv](https://access.crunchydata.com/documentation/pg_tileserv/latest/)
+- [pg_featureserv](https://access.crunchydata.com/documentation/pg_featureserv/latest/)
 
 ## Développement
 
-Les dépendances sont les suivantes :
-
-* Yarn
-* NodeJS version 12
-
-Pour travailler sur le projet, merci de suivre ces étapes :
+La façon la plus simple de contribuer à la carte est d'utiliser docker:
 
 ```bash
-cd covid19_map
-yarn install
-yarn run build
-yarn run dev
+./script/server
 ```
+Et vous pouvez vous rendre sur http://localhost:1234/.
 
 ## Licence
 
