@@ -14,7 +14,7 @@ mv ${DATASET}.state.txt /data/download/diffs/state.txt
 
 
 imposm import -mapping /git/covid19_map/db/import.yml -read /data/download/${DATASET}.osm.pbf -overwritecache -cachedir /data/imposm_cache
-imposm import -write -connection ${CONNEXION}?prefix=NONE -mapping /git/covid19_map/db/import.yml -cachedir /data/imposm_cache -dbschema-import public -diff
+imposm import -write -connection ${CONNEXION} -mapping /git/covid19_map/db/import.yml -cachedir /data/imposm_cache -dbschema-import public -diff
 
 
 echo baseUrl=http://download.openstreetmap.fr/replication/merge/${DATASET}/minute/ > /data/download/diffs/configuration.txt

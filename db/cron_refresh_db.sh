@@ -1,10 +1,12 @@
 #!/bin/bash
 
-# Appel Docker avec update_imposm.sh
-# = ligne de commande à adapter selon le contexte de prod
+CONNEXION=${1}
+
+# MàJ avec imposm
+./update_imposm.sh ${CONNEXION}
 
 # MàJ des enseignes
-./import_brand_rules.sh
+./import_brand_rules.sh ${CONNEXION}
 
 # Regénération de la table des POIs
-psql -h "${PG_HOST}" -U "${PG_USER}" -p "${PG_PORT}" -d "${PG_DB}" -f update_poi.sql
+psql  ${CONNEXION} -f update_poi.sql

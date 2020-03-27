@@ -6,4 +6,4 @@ CONNEXION=${1}
 
 osmosis --rri /data/download/diffs --simplify-change --write-xml-change /data/download/diffs/changes.osc.gz
 
-imposm diff -mapping //git/covid19_map/db/import.yml -cachedir /data/imposm_cache -dbschema-production public -connection ${CONNEXION}?prefix=NONE /data/download/diffs/changes.osc.gz
+imposm diff -mapping //git/covid19_map/db/import.yml -cachedir /data/imposm_cache -dbschema-production public -connection ${CONNEXION} /data/download/diffs/changes.osc.gz
