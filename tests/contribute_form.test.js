@@ -52,37 +52,4 @@ describe('ContributeForm', () => {
     form.setProps({ point: { id: "r12345" } });
     expect(form.vm.id).toEqual('relation/12345');
   });
-
-  it('format the note', () => {
-    const form = createWrapper({
-      point: {
-        id: "n12345",
-        geometry: {},
-        properties: { name: 'Test'}
-      }
-    });
-    form.vm.clickOpen();
-    form.vm.details = "Hello World";
-    expect(form.vm.message).toEqual(`Signalement #covid19 #caresteouvert
-
-name: Test
-id: https://www.openstreetmap.org/node/12345
-
-État: ouvert
-Détails: Hello World
-
-Pour corriger cette note, utilisez le tag opening_hours:covid19 : https://wiki.openstreetmap.org/wiki/FR:Key:opening_hours:covid19
-`);
-    form.vm.clickClose();
-    expect(form.vm.message).toEqual(`Signalement #covid19 #caresteouvert
-
-name: Test
-id: https://www.openstreetmap.org/node/12345
-
-État: fermé
-Détails: Hello World
-
-Pour corriger cette note, utilisez le tag opening_hours:covid19 : https://wiki.openstreetmap.org/wiki/FR:Key:opening_hours:covid19
-`);
-  });
 });
