@@ -2,7 +2,7 @@
 
 set -e 
 
-CONNEXION=${1}
+CONNEXION="${1}&prefix=NONE"
 
 osmosis --rri /data/download/diffs --simplify-change --write-xml-change /data/download/diffs/changes.osc.gz
 
