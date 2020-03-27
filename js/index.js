@@ -45,7 +45,7 @@ import VueI18n from 'vue-i18n';
 import App from './app.vue';
 import OsmMain from './main.vue';
 
-import messages from '../locales.json';
+import messages from '../locales/*.json';
 import markdownPages from '../pages/*.md';
 
 Vue.use(Vuetify, {
@@ -105,8 +105,10 @@ const vuetify = new Vuetify({
 });
 
 const i18n = new VueI18n({
-  locale: 'fr',
-  messages,
+  locale: navigator.language.split('-')[0],
+  fallbackLocale: 'fr',
+  availableLocales: Object.keys(messages),
+  messages
 });
 
 const staticPagesMarkdown = Object.keys(markdownPages).map((page) => {
