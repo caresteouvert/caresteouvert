@@ -224,7 +224,7 @@
         "supermarket": "Supermarket",
         "telecommunication": "Telecomunication company office",
         "tobacco": "Tobacco shop",
-        "wine": "Wine shop"
+        "wine": "Wine shop",
         "winery": "Winery"
       },
       "opening_hours": {
@@ -238,7 +238,7 @@
         "ouvert": "Place open during containment",
         "ouvert_adapté": "Place open during containment with adapted hours",
         "partiel": "Place potentially open during containment (to be checked)",
-        "inconnu": "Place whose open status is not known"
+        "inconnu": "Place whose open status is not known",
 	"fermé": "Place closed during containment"
       }
     }
