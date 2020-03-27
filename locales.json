@@ -220,12 +220,12 @@
         "restaurant": "Restaurant",
         "seafood": "Seafood shop",
 	"social_facility": "Social facility",
-        "stationery": "Office supply shops ",
+        "stationery": "Office supply shop",
         "supermarket": "Supermarket",
         "telecommunication": "Telecomunication company office",
         "tobacco": "Tobacco shop",
         "wine": "Wine shop"
-	"winery": "Winery"
+        "winery": "Winery"
       },
       "opening_hours": {
         "state_until_date": "from {state} until {date}",
