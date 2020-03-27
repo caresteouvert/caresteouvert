@@ -1,0 +1,56 @@
+tables:
+  imposm_osm_point:
+    type: point
+    mapping:
+      area: [__any__]
+      amenity: [__any__]
+      shop: [__any__]
+      craft: [__any__]
+      office: [__any__]
+      emergency: [__any__]
+      tobacco: [__any__]
+      healthcare: [__any__]
+    columns:
+      - {name: 'osm_id', type: id}
+      - {name: 'way', type: geometry}
+      - {name: 'tags', type: hstore_tags}
+      - {key: 'name', name: 'name', type: string}
+      - {key: 'area', name: 'area', type: string}
+      - {key: 'amenity', name: 'amenity', type: string}
+      - {key: 'shop', name: 'shop', type: string}
+      - {key: 'craft', name: 'craft', type: string}
+      - {key: 'office', name: 'office', type: string}
+      - {key: 'emergency', name: 'emergency', type: string}
+      - {key: 'tobacco', name: 'tobacco', type: string}
+      - {key: 'healthcare', name: 'healthcare', type: string}
+      - {key: 'opening_hours', name: 'opening_hours', type: string}
+      - {key: 'opening_hours:covid19', name: 'opening_hours:covid19', type: string}
+  imposm_osm_polygon:
+    type: polygon
+    mapping:
+      area: [__any__]
+      amenity: [__any__]
+      shop: [__any__]
+      craft: [__any__]
+      office: [__any__]
+      emergency: [__any__]
+      tobacco: [__any__]
+      healthcare: [__any__]
+    columns:
+      - {name: 'osm_id', type: id}
+      - {name: 'way', type: geometry}
+      - {name: 'tags', type: hstore_tags}
+      - {key: 'name', name: 'name', type: string}
+      - {key: 'area', name: 'area', type: string}
+      - {key: 'amenity', name: 'amenity', type: string}
+      - {key: 'shop', name: 'shop', type: string}
+      - {key: 'craft', name: 'craft', type: string}
+      - {key: 'office', name: 'office', type: string}
+      - {key: 'emergency', name: 'emergency', type: string}
+      - {key: 'tobacco', name: 'tobacco', type: string}
+      - {key: 'healthcare', name: 'healthcare', type: string}
+      - {key: 'opening_hours', name: 'opening_hours', type: string}
+      - {key: 'opening_hours:covid19', name: 'opening_hours:covid19', type: string}
+tags:
+  load_all: true
+  exclude: [created_by, source, "tiger:*"]

@@ -1,0 +1,14 @@
+CREATE INDEX IF NOT EXISTS idx_point_amenity      ON imposm_osm_point(amenity);
+CREATE INDEX IF NOT EXISTS idx_point_shop         ON imposm_osm_point(shop);
+CREATE INDEX IF NOT EXISTS idx_point_craft        ON imposm_osm_point(craft);
+CREATE INDEX IF NOT EXISTS idx_point_office       ON imposm_osm_point(office);
+CREATE INDEX IF NOT EXISTS idx_point_emergency    ON imposm_osm_point(emergency);
+CREATE INDEX IF NOT EXISTS idx_point_tobacco      ON imposm_osm_point(tobacco);
+CREATE INDEX IF NOT EXISTS idx_point_healthcare   ON imposm_osm_point(healthcare);
+CREATE INDEX IF NOT EXISTS idx_polygon_amenity    ON imposm_osm_polygon(amenity);
+CREATE INDEX IF NOT EXISTS idx_polygon_shop       ON imposm_osm_polygon(shop);
+CREATE INDEX IF NOT EXISTS idx_polygon_craft      ON imposm_osm_polygon(craft);
+CREATE INDEX IF NOT EXISTS idx_polygon_office     ON imposm_osm_polygon(office);
+CREATE INDEX IF NOT EXISTS idx_polygon_emergency  ON imposm_osm_polygon(emergency);
+CREATE INDEX IF NOT EXISTS idx_polygon_tobacco    ON imposm_osm_polygon(tobacco);
+CREATE INDEX IF NOT EXISTS idx_polygon_healthcare ON imposm_osm_polygon(healthcare);
