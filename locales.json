@@ -45,6 +45,7 @@
       "containment_brand_hours": "Horaires sur le site web de l'enseigne",
       "facebook": "Page Facebook",
       "feature": {
+        "agrarian": "Matériel agricole",
         "alcohol": "Vente d'alcool",
         "association": "Association",
         "bakery": "Boulangerie",
@@ -52,12 +53,14 @@
         "bar": "Bar",
         "beverages": "Vente d'alcool",
         "bicycle": "Vente et réparation de vélos",
+        "brewery": "Brasserie",
         "butcher": "Boucherie",
         "cafe": "Café",
         "car": "Vente et réparation de voitures",
         "car_parts": "Vente de pièces pour voitures",
         "car_rental": "Location de voitures",
         "car_repair": "Réparations de voitures",
+        "caterer": "Traiteur",
         "cheese": "Fromagerie",
         "chemist": "Droguerie et parapharmacie",
         "chocolate": "Chocolaterie",
@@ -73,6 +76,7 @@
         "electronics": "Magasin d'électroménager",
         "electronics_repair": "Réparations de matériel électronique",
         "employment_agency": "Recherche d'emploi",
+        "farm": "Magasin à la ferme",
         "frozen_food": "Aliments surgelés",
         "fuel": "Station-service",
         "funeral_directors": "Services funéraires",
@@ -99,7 +103,8 @@
         "supermarket": "Supermarché",
         "telecommunication": "Bureaux d'une société de télécommunication",
         "tobacco": "Tabac",
-        "wine": "Vente de vins"
+        "wine": "Vente de vins",
+        "winery": "Chai"
       },
       "opening_hours": {
         "state_until_date": "{state} jusqu'à {date}",
@@ -112,7 +117,8 @@
         "ouvert": "Lieu ouvert durant le confinement",
         "ouvert_adapté": "Lieu ouvert durant le confinement avec des horaires adaptées",
         "partiel": "Lieu potentiellement ouvert durant le confinement (à vérifier)",
-        "inconnu": "Lieu dont l'état d'ouverture n'est pas connu"
+        "inconnu": "Lieu dont l'état d'ouverture n'est pas connu",
+        "fermé": "Lieu fermé durant le confinement"
       }
     }
   }

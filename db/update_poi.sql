@@ -50,7 +50,7 @@ SELECT
 FROM imposm_osm_point
 WHERE
 	amenity IN ('pharmacy', 'car_rental', 'bank', 'fuel', 'police', 'marketplace', 'post_office')
-	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'doityourself', 'craft', 'optician', 'beverages', 'wine', 'alcohol', 'electronics', 'hardware', 'stationery', 'medical_supply', 'laundry', 'dry_cleaning', 'tobacco', 'e-cigarette', 'funeral_directors', 'tobacco', 'kiosk', 'pet', 'car_repair', 'car_parts', 'agrarian', 'newsagent', 'farm')
+	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'doityourself', 'craft', 'optician', 'beverages', 'wine', 'alcohol', 'electronics', 'hardware', 'stationery', 'medical_supply', 'laundry', 'dry_cleaning', 'tobacco', 'e-cigarette', 'funeral_directors', 'tobacco', 'kiosk', 'pet', 'car_repair', 'car_parts', 'agrarian', 'newsagent', 'farm', 'deli')
 	OR office IN ('insurance', 'employment_agency')
 	OR craft IN ('optician', 'electronics_repair')
 	OR tobacco = 'yes'
@@ -77,7 +77,7 @@ SELECT
 FROM imposm_osm_polygon
 WHERE
 	amenity IN ('pharmacy', 'car_rental', 'bank', 'fuel', 'police', 'marketplace', 'post_office')
-	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'doityourself', 'craft', 'optician', 'beverages', 'wine', 'alcohol', 'electronics', 'hardware', 'stationery', 'medical_supply', 'laundry', 'dry_cleaning', 'tobacco', 'e-cigarette', 'funeral_directors', 'tobacco', 'kiosk', 'pet', 'car_repair', 'car_parts', 'agrarian', 'newsagent', 'farm')
+	OR shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'bicycle', 'mobile_phone', 'doityourself', 'craft', 'optician', 'beverages', 'wine', 'alcohol', 'electronics', 'hardware', 'stationery', 'medical_supply', 'laundry', 'dry_cleaning', 'tobacco', 'e-cigarette', 'funeral_directors', 'tobacco', 'kiosk', 'pet', 'car_repair', 'car_parts', 'agrarian', 'newsagent', 'farm', 'deli')
 	OR office IN ('insurance', 'employment_agency')
 	OR craft IN ('optician', 'electronics_repair')
 	OR tobacco = 'yes'
@@ -85,17 +85,29 @@ WHERE
 
 -- Ajout des informations par marques
 UPDATE poi_osm_next
-SET status = b.rule, opening_hours = b.opening_hours, brand_hours = b.url_hours, brand_infos = b.infos
+SET
+	status = b.rule,
+	opening_hours = COALESCE(poi_osm_next.opening_hours, b.opening_hours),
+	brand_hours = COALESCE(poi_osm_next.brand_hours, b.url_hours),
+	brand_infos = COALESCE(poi_osm_next.brand_infos, b.infos)
 FROM brand_rules b
 WHERE status = 'inconnu' AND b.rule IS NOT NULL AND brand_wikidata = b.wikidata;
 
 UPDATE poi_osm_next
-SET status = b.rule, opening_hours = b.opening_hours, brand_hours = b.url_hours, brand_infos = b.infos
+SET
+	status = b.rule,
+	opening_hours = COALESCE(poi_osm_next.opening_hours, b.opening_hours),
+	brand_hours = COALESCE(poi_osm_next.brand_hours, b.url_hours),
+	brand_infos = COALESCE(poi_osm_next.brand_infos, b.infos)
 FROM brand_rules b
 WHERE status = 'inconnu' AND b.rule IS NOT NULL AND lower(trim(unaccent(brand))) = lower(trim(unaccent(b.nom)));
 
 UPDATE poi_osm_next
-SET status = b.rule, opening_hours = b.opening_hours, brand_hours = b.url_hours, brand_infos = b.infos
+SET
+	status = b.rule,
+	opening_hours = COALESCE(poi_osm_next.opening_hours, b.opening_hours),
+	brand_hours = COALESCE(poi_osm_next.brand_hours, b.url_hours),
+	brand_infos = COALESCE(poi_osm_next.brand_infos, b.infos)
 FROM brand_rules b
 WHERE status = 'inconnu' AND b.rule IS NOT NULL AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.nom)));
 
@@ -121,8 +133,7 @@ ALTER INDEX poi_osm_next_status_idx RENAME TO poi_osm_status_idx;
 
 CREATE OR REPLACE VIEW poi_osm_light AS
 SELECT fid, geom, name, cat, status
-FROM poi_osm
-WHERE status != 'fermé';
+FROM poi_osm;
 
 -- Requêtes d'analyse
 -- SELECT SUM((status != 'inconnu')::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm;

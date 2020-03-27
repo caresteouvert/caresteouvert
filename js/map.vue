@@ -40,7 +40,7 @@ const layers = [
         "in",
         "status",
         "ouvert",
-        "ouvert_adapté",
+        "ouvert_adapté"
       ]
     ],
     paint: {
@@ -79,6 +79,29 @@ const layers = [
     }
   },
   {
+    id: "poi-closed-background",
+    type: "circle",
+    "source-layer": source,
+    filter: [
+      "all",
+      [
+        "in",
+        "status",
+        "fermé"
+      ]
+    ],
+    paint: {
+      'circle-color': '#96281b',
+      'circle-radius': [
+        'interpolate',
+        ['linear'],
+        ['zoom'],
+        14, 6,
+        19, 17
+      ]
+    }
+  },
+  {
     id: "poi-white-bg",
     type: "circle",
     "source-layer": source,
@@ -91,6 +114,7 @@ const layers = [
         "ouvert_adapté",
         "inconnu",
         "partiel",
+        "fermé"
       ]
     ],
     paint: {
@@ -105,7 +129,7 @@ const layers = [
     }
   },
   {
-    id: "poi-open",
+    id: "poi-icon",
     type: "symbol",
     "source-layer": source,
     filter: [
@@ -115,52 +139,9 @@ const layers = [
         "status",
         "ouvert",
         "ouvert_adapté",
-      ]
-    ],
-    "layout": {
-      "icon-image": [
-        "coalesce",
-        ['image', ['concat', ['get', 'cat'], '_11']],
-        ['image', 'shop_11']
-      ],
-      "icon-size": [
-        'interpolate',
-        ['linear'],
-        ['zoom'],
-        14, 0.4,
-        19, 0.9
-      ],
-      "text-anchor": "top",
-      "text-field": ["get", "name"],
-      "text-font": [
-        "Noto Sans Regular"
-      ],
-      "text-max-width": 9,
-      "text-offset": [
-        0,
-        1
-      ],
-      "text-padding": 2,
-      "text-size": 12
-    },
-    paint: {
-      "text-color": "#666",
-      "text-halo-blur": 0.5,
-      "text-halo-color": "#ffffff",
-      "text-halo-width": 1
-    }
-  },
-  {
-    id: "poi-unknow",
-    type: "symbol",
-    "source-layer": source,
-    filter: [
-      "all",
-      [
-        "in",
-        "status",
         "inconnu",
         "partiel",
+        "fermé"
       ]
     ],
     "layout": {
