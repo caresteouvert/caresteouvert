@@ -36,7 +36,7 @@ SELECT
 	COALESCE(NULLIF(office,''), NULLIF(craft,''), NULLIF(shop,''), NULLIF(amenity,''), 'unknown'),
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
-	tags->'note:covid19',
+	COALESCE(tags->'description:covid19', tags->'note:covid19'),
 	CASE
 		WHEN "opening_hours:covid19" = 'off' THEN 'fermé'
 		WHEN "opening_hours:covid19" = 'same' THEN 'ouvert'
@@ -63,7 +63,7 @@ SELECT
 	COALESCE(NULLIF(office,''), NULLIF(craft,''), NULLIF(shop,''), NULLIF(amenity,''), 'unknown'),
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
-	tags->'note:covid19',
+	COALESCE(tags->'description:covid19', tags->'note:covid19'),
 	CASE
 		WHEN "opening_hours:covid19" = 'off' THEN 'fermé'
 		WHEN "opening_hours:covid19" = 'same' THEN 'ouvert'
