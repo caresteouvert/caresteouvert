@@ -18,6 +18,7 @@
       <v-textarea
         v-model="details"
         name="details"
+        class="textarea-details"
       ></v-textarea>
     </label>
     <v-btn
@@ -109,3 +110,9 @@ Pour corriger cette note, utilisez le tag opening_hours:covid19 : https://wiki.o
   }
 };
 </script>
+
+<style>
+  .textarea-details textarea {
+    background-color: #f2f2f2;
+  }
+</style>
