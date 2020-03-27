@@ -12,9 +12,9 @@
     "police": { selected: true, cats: ["police"] },
     "pharmacy": { selected: true, cats: ["pharmacy"] },
     "post_office": { selected: true, cats: ["post_office"] },
-    "food": { selected: true, cats: ["butcher", "cheese", "seafood", "convenience", "supermarket", "chocolate", "greengrocer", "frozen_food", "alcohol", "marketplace", "beverages", "wine", "confectionery"] },
+    "food": { selected: true, cats: ["butcher", "cheese", "seafood", "convenience", "supermarket", "chocolate", "greengrocer", "frozen_food", "alcohol", "marketplace", "beverages", "wine", "confectionery", "deli"] },
     "bakery": { selected: true, cats: ["bakery"] },
-    "shop": { selected: true, cats: ["mobile_phone", "optician", "car_rental", "tobacco", "e-cigarette", "laundry", "bicycle", "car_repair", "car_parts", "hardware", "doityourself", "stationery", "kiosk", "medical_supply", "convenience;gas", "electronics", "pet", "newsagent", "electronics_repair", "craft", "chemist", "car_rental", "dry_cleaning", "bar", "pub", "cafe", "restaurant", "employment_agency", "telecomunication", "mall", "car", "company", "deli"] },
+    "shop": { selected: true, cats: ["mobile_phone", "optician", "car_rental", "tobacco", "e-cigarette", "laundry", "bicycle", "car_repair", "car_parts", "hardware", "doityourself", "stationery", "kiosk", "medical_supply", "convenience;gas", "electronics", "pet", "newsagent", "electronics_repair", "craft", "chemist", "car_rental", "dry_cleaning", "bar", "pub", "cafe", "restaurant", "employment_agency", "telecomunication", "mall", "car", "company"] },
     "bank": { selected: true, cats: ["bank", "insurance"] },
     "fuel": { selected: true, cats: ["fuel"] },
     "funeral_directors": { selected: true, cats: ["funeral_directors"] }
