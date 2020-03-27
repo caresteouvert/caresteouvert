@@ -64,7 +64,8 @@ export default {
         ouvert: 'success',
         ouvert_adapté: 'success',
         partiel: 'warning',
-        inconnu: 'warning'
+        inconnu: 'warning',
+        fermé: 'error'
       };
       return statuses[this.status];
     }
