@@ -8,6 +8,7 @@
   "menu": "Menu",
   "geolocate": "Se géolocaliser sur la carte",
   "press": "Presse",
+  "missing_shop": "Indiquer un commerce manquant",
   "days": {
     "monday": "Lundi",
     "tuesday": "Mardi",
