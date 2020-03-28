@@ -7,6 +7,7 @@
   "mapMaxBounds": [],
   "tilesUrl": "https://tiles.caresteouvert.fr/public.poi_osm_light/{z}/{x}/{y}.pbf",
   "poiFeature": "https://features.caresteouvert.fr/collections/public.poi_osm/items",
+  "apiUrl": "https://api.caresteouvert.fr",
   "geoIpUrl": "https://geo.caresteouvert.fr/me",
   "filters": {
     "police": { selected: true, cats: ["police"] },

@@ -38,6 +38,8 @@
 </template>
 
 <script>
+import { apiUrl } from '../config.json';
+
 export default {
   props: {
     point: {
@@ -65,19 +67,6 @@ export default {
         r: 'relation'
       };
       return `${types[this.point.id[0]]}/${this.point.id.substring(1)}`;
-    },
-
-    message() {
-      return `Signalement #covid19 #caresteouvert
-
-name: ${this.point.properties.name}
-id: https://www.openstreetmap.org/${this.id}
-
-État: ${this.open ? 'ouvert' : 'fermé'}
-Détails: ${this.details}
-
-Pour corriger cette note, utilisez le tag opening_hours:covid19 : https://wiki.openstreetmap.org/wiki/FR:Key:opening_hours:covid19
-`;
     }
   },
 
@@ -93,10 +82,24 @@ Pour corriger cette note, utilisez le tag opening_hours:covid19 : https://wiki.o
     submit() {
       const lat = this.point.geometry.coordinates[1];
       const lon = this.point.geometry.coordinates[0];
+      const [ type, id ] = this.id.split('/');
+      const body = {
+        name: this.point.properties.name,
+        state: this.open ? 'open' : 'closed',
+        details: this.details,
+        lat,
+        lon
+      };
       this.loading = true;
       fetch(
-       `https://www.openstreetmap.org/api/0.6/notes?lat=${lat}&lon=${lon}&text=${encodeURIComponent(this.message)}`,
-       { method: 'POST' }
+       `${apiUrl}/contribute/${type}/${id}`,
+       {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(body)
+       }
      ).then(() => {
        this.$emit('success');
      }).finally(() => {
