@@ -51,32 +51,32 @@
 
         <v-list>
           <v-list-item
-            v-if="point.properties.tags.phone"
-            :href="`tel:${point.properties.tags.phone}`"
+            v-if="contact('phone')"
+            :href="`tel:${contact('phone')}`"
           >
             <v-list-item-icon><v-icon>osm-phone</v-icon></v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
-                {{ point.properties.tags.phone }}
+                {{ contact('phone') }}
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
 
           <v-list-item
-            v-if="email"
-            :href="`mailto:${email}`"
+            v-if="contact('email')"
+            :href="`mailto:${contact('email')}`"
           >
             <v-list-item-icon><v-icon>osm-mail</v-icon></v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
-                {{ email }}
+                {{ contact('email') }}
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
 
           <v-list-item
-            v-if="facebook"
-            :href="facebook"
+            v-if="contact('facebook')"
+            :href="contact('facebook')"
           >
             <v-list-item-icon><v-icon>osm-fcbk</v-icon></v-list-item-icon>
             <v-list-item-content>
@@ -122,13 +122,13 @@
           </template>
 
           <v-list-item
-            v-if="point.properties.tags.website"
-            :href="point.properties.tags.website"
+            v-if="contact('website')"
+            :href="contact('website')"
           >
             <v-list-item-icon><v-icon>osm-link</v-icon></v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title>
-                {{ point.properties.tags.website }}
+                {{ contact('website') }}
               </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
@@ -186,12 +186,11 @@ export default {
       return this.$t(`details.feature.${this.point.properties.cat}`);
     },
 
-    email() {
-      return this.point.properties.tags.email || this.point.properties.tags['contact:email'];
-    },
-
-    facebook() {
-      return this.point.properties.tags.facebook || this.point.properties.tags['contact:facebook'];
+    contact() {
+      const tags = this.point.properties.tags;
+      return (name) => {
+        return tags[name] || tags[`contact:${name}`];
+      };
     }
   },
 
