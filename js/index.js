@@ -46,7 +46,6 @@ import App from './app.vue';
 import OsmMain from './main.vue';
 
 import messages from '../locales/*.json';
-import markdownPages from '../pages/*.md';
 
 Vue.use(Vuetify, {
   components: {
@@ -111,17 +110,7 @@ const i18n = new VueI18n({
   messages
 });
 
-const staticPagesMarkdown = Object.keys(markdownPages).map((page) => {
-  return {
-    name: page,
-    path: `/${page}`,
-    component: () => import('./page'),
-    props: { html: markdownPages[page] }
-  };
-});
-
 const routes = [
-  ...staticPagesMarkdown,
   {
     name: 'index',
     path: '/:featuresAndLocation?',
@@ -150,21 +139,6 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   routes
-});
-
-const mapName = i18n.t('title');
-router.afterEach((route) => {
-  const title = () => {
-    const markdownPage = markdownPages[route.name];
-    if (markdownPage) {
-      const doc2 = new DOMParser().parseFromString(markdownPages[route.name], 'text/html');
-      const title = doc2.querySelector('h1').textContent;
-      return `${title} - ${mapName}`;
-    } else {
-      return mapName;
-    }
-  };
-  document.title = title();
 });
 
 new Vue({
