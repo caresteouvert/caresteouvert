@@ -160,6 +160,7 @@ FROM poi_osm;
 
 -- Requêtes d'analyse
 -- SELECT SUM((status != 'inconnu')::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm;
+-- SELECT SUM((status NOT IN ('inconnu', 'partiel'))::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm;
 -- SELECT status, COUNT(*) FROM poi_osm GROUP BY status ORDER BY COUNT(*) DESC;
 -- SELECT brand, COUNT(*) FROM poi_osm WHERE status = 'inconnu' GROUP BY brand HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;
 -- SELECT cat, COUNT(*) FROM poi_osm WHERE status = 'inconnu' GROUP BY cat HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;
