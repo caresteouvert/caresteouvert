@@ -132,6 +132,7 @@ const layers = [
     id: "poi-icon",
     type: "symbol",
     "source-layer": source,
+    minzoom: 14.5,
     filter: [
       "all",
       [
@@ -154,7 +155,7 @@ const layers = [
         'interpolate',
         ['linear'],
         ['zoom'],
-        14, 0.4,
+        14, 0.3,
         19, 0.9
       ],
       "text-anchor": "top",
