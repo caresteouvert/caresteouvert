@@ -2,13 +2,50 @@
 -- Requêtes après mise à jour des données
 --
 
--- Colonne de géométrie centroïde
--- ALTER TABLE imposm_osm_line ADD COLUMN centroid GEOMETRY(Point, 3857);
--- ALTER TABLE imposm_osm_polygon ADD COLUMN centroid GEOMETRY(Point, 3857);
--- UPDATE imposm_osm_line SET centroid = ST_Centroid(way);
--- UPDATE imposm_osm_polygon SET centroid = ST_Centroid(way);
--- CREATE INDEX imposm_osm_line_centroid_idx ON imposm_osm_line USING GIST(centroid);
--- CREATE INDEX imposm_osm_polygon_centroid_idx ON imposm_osm_polygon USING GIST(centroid);
+-- Fonction pour lire l'état d'ouverture selon les tags
+CREATE OR REPLACE FUNCTION opening_state(tags HSTORE) RETURNS VARCHAR AS $$
+DECLARE
+	status VARCHAR := 'inconnu';
+	oh_c19 VARCHAR;
+	oh VARCHAR;
+BEGIN
+	oh_c19 := tags->'opening_hours:covid19';
+	oh := tags->'opening_hours';
+
+	-- opening_hours:covid19 renseigné
+	IF oh_c19 != '' THEN
+		-- opening_hours:covid19 = ouvert
+		IF oh_c19 IN ('open', 'same', 'yes') THEN
+			-- opening_hours fermé + opening_hours:covid19 identique
+			IF oh ILIKE 'off%' AND oh_c19 = 'same' THEN
+				status := 'fermé';
+
+			-- opening_hours ouvert
+			ELSE
+				status := 'ouvert';
+			END IF;
+
+		-- opening_hours:covid19 = fermé
+		ELSIF oh_c19 ILIKE 'off%' THEN
+			status := 'fermé';
+
+		-- opening_hours:covid19 = opening_hours
+		ELSIF oh_c19 = oh THEN
+			status := 'ouvert';
+
+		-- opening_hours:covid19 = syntaxe OH
+		ELSE
+			status := 'ouvert_adapté';
+		END IF;
+
+	-- Self-service
+	ELSIF tags->'self_service' = 'yes' THEN
+		status := 'ouvert';
+	END IF;
+
+	RETURN status;
+END;
+$$ LANGUAGE plpgsql;
 
 -- Table à venir
 CREATE TABLE IF NOT EXISTS poi_osm_next(
@@ -37,15 +74,8 @@ SELECT
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
-	CASE
-		WHEN "opening_hours:covid19" = 'off' THEN 'fermé'
-		WHEN "opening_hours:covid19" = 'same' THEN 'ouvert'
-		WHEN "opening_hours:covid19" != '' AND "opening_hours:covid19" = tags->'opening_hours' THEN 'ouvert'
-		WHEN "opening_hours:covid19" != '' THEN 'ouvert_adapté'
-		WHEN tags->'self_service' = 'yes' THEN 'ouvert'
-		ELSE 'inconnu'
-	END,
-	CASE WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') THEN "opening_hours:covid19" ELSE NULL END,
+	opening_state(tags),
+	CASE WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') AND NOT "opening_hours:covid19" ILIKE 'off%' THEN "opening_hours:covid19" ELSE NULL END,
 	hstore_to_jsonb(tags)
 FROM imposm_osm_point
 WHERE
@@ -64,15 +94,8 @@ SELECT
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
-	CASE
-		WHEN "opening_hours:covid19" = 'off' THEN 'fermé'
-		WHEN "opening_hours:covid19" = 'same' THEN 'ouvert'
-		WHEN "opening_hours:covid19" != '' AND "opening_hours:covid19" = tags->'opening_hours' THEN 'ouvert'
-		WHEN "opening_hours:covid19" != '' THEN 'ouvert_adapté'
-		WHEN tags->'self_service' = 'yes' THEN 'ouvert'
-		ELSE 'inconnu'
-	END,
-	CASE WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') THEN "opening_hours:covid19" ELSE NULL END,
+	opening_state(tags),
+	CASE WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') AND NOT "opening_hours:covid19" ILIKE 'off%' THEN "opening_hours:covid19" ELSE NULL END,
 	hstore_to_jsonb(tags)
 FROM imposm_osm_polygon
 WHERE
