@@ -27,7 +27,7 @@
         </v-list-item-content>
       </v-list-item>
       <v-divider></v-divider>
-      <v-list-item :to="{ name: 'about' }">
+      <v-list-item href="https://blog.caresteouvert.fr/about/">
         <v-list-item-content class="ml-2">
           <v-list-item-title class="body-1">{{ $t('about') }}</v-list-item-title>
         </v-list-item-content>
