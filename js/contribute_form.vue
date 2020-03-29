@@ -1,40 +1,85 @@
 <template>
   <div>
-    <h2 class="title">{{ $t('contribute_form.title') }}</h2>
-    <v-btn
-      :color="open ? 'success' : ''"
-      @click="clickOpen"
+    <div class="d-flex align-center">
+      <h1 class="title flex-grow-1">{{ $t('contribute_form.title') }}</h1>
+      <a
+        @click="close"
+      >
+        {{ $t('contribute_form.cancel') }}
+      </a>
+    </div>
+    <v-stepper
+      v-model="step"
+      vertical
     >
-      {{ $t('contribute_form.open.yes') }}
-    </v-btn>
-    <v-btn
-      :color="open === false ? 'warning' : ''"
-      @click="clickClose"
-    >
-      {{ $t('contribute_form.open.no') }}
-    </v-btn>
-    <opening-hours-editor v-model="openingHours"  />
-    <label class="d-block pt-2">
-      {{ $t('contribute_form.details') }}
-      <v-textarea
-        v-model="details"
-        name="details"
-        class="textarea-details"
-      ></v-textarea>
-    </label>
-    <v-btn
-      :disabled="submitDisabled"
-      :loading="loading"
-      color="primary"
-      @click="submit"
-    >
-      {{ $t('contribute_form.submit') }}
-    </v-btn>
-    <a
-      @click="close"
-    >
-      {{ $t('contribute_form.cancel') }}
-    </a>
+      <v-stepper-step
+        :complete="step > 1"
+        complete-icon="osm-check"
+        editable
+        edit-icon="osm-check"
+        step="1"
+      >
+        {{ $t('contribute_form.step1.title') }}
+      </v-stepper-step>
+
+      <v-stepper-content step="1">
+        <v-btn @click="clickOpen">
+          {{ $t('contribute_form.step1.open.yes') }}
+        </v-btn>
+        <v-btn @click="clickClose">
+          {{ $t('contribute_form.step1.open.no') }}
+        </v-btn>
+        <br/>
+        <br/>
+      </v-stepper-content>
+
+      <v-stepper-step
+        :complete="this.open && step > 2"
+        :editable="this.open"
+        complete-icon="osm-check"
+        edit-icon="osm-check"
+        step="2"
+      >
+        {{ $t('contribute_form.step2.title') }}
+      </v-stepper-step>
+
+      <v-stepper-content step="2">
+        <opening-hours-editor v-model="openingHours"  />
+        <br/>
+        <v-btn
+          :disabled="openingHours.length === 0"
+          color="primary"
+          @click="step = 3"
+        >Continuer</v-btn>
+        <v-btn
+          text
+          @click="step = 3"
+        >Passer</v-btn>
+        <br/>
+      </v-stepper-content>
+
+      <v-stepper-step
+        step="3"
+      >
+        {{ $t('contribute_form.step3.title') }}
+      </v-stepper-step>
+
+      <v-stepper-content step="3">
+        <v-textarea
+          v-model="details"
+          name="details"
+          class="textarea-details"
+        ></v-textarea>
+        <v-btn
+          :disabled="submitDisabled"
+          :loading="loading"
+          color="primary"
+          @click="submit"
+        >
+          {{ $t('contribute_form.submit') }}
+        </v-btn>
+      </v-stepper-content>
+    </v-stepper>
   </div>
 </template>
 
@@ -53,10 +98,11 @@ export default {
   },
   data() {
     return {
+      step: 1,
       details: '',
       loading: false,
       open: null,
-      openingHours: {}
+      openingHours: []
     };
   },
 
@@ -78,10 +124,12 @@ export default {
   methods: {
     clickOpen() {
       this.open = true;
+      this.step = 2;
     },
 
     clickClose() {
       this.open = false;
+      this.step = 3;
     },
 
     submit() {
@@ -92,6 +140,7 @@ export default {
         name: this.point.properties.name,
         state: this.open ? 'open' : 'closed',
         details: this.details,
+        opening_hours: this.openingHours,
         lat,
         lon
       };

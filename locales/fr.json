@@ -21,12 +21,21 @@
     "sunday": "Dimanche"
   },
   "contribute_form": {
-    "title": "Ce lieu est-il ouvert pendant le confinement ?",
-    "open": {
-      "yes": "oui",
-      "no": "non"
+    "title": "Contribuer",
+    "step1": {
+      "title": "Ce lieu reste-il ouvert pendant le confinement ?",
+      "open": {
+        "yes": "oui",
+        "no": "non"
+      }
     },
-    "details": "Ajouter des précisions comme les jours et les horaires d'ouvertures spécifique",
+    "step2": {
+      "title": "Spécifier les horaires d'ouverture"
+    },
+    "step3": {
+      "title": "Ajouter une précision"
+    },
+    "details": "Ajouter des précision",
     "submit": "Publier",
     "cancel": "Annuler"
   },

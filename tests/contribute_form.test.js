@@ -4,6 +4,9 @@ import ContributeForm from '../js/contribute_form';
 describe('ContributeForm', () => {
   let localVue;
   const stubs = {
+    'v-stepper': '<div><slot /></div>',
+    'v-stepper-step': '<div><slot /></div>',
+    'v-stepper-content': '<div><slot /></div>',
     'v-btn': '<div class="btn" />',
     'v-textarea': '<div />'
   };
