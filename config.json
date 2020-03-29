@@ -38,7 +38,7 @@
       "cats": ["mobile_phone", "optician", "car_rental", "tobacco",
                "e-cigarette", "laundry", "bicycle", "car_repair", "car_parts",
                "hardware", "doityourself", "stationery", "kiosk",
-               "medical_supply", "convenience;gas", "electronics", "pet",
+               "medical_supply", "convenience;gas", "gas;convenience", "electronics", "pet",
                "newsagent", "electronics_repair", "craft", "chemist",
                "car_rental", "dry_cleaning", "bar", "pub", "cafe", "restaurant",
                "employment_agency", "telecommunication", "mall", "car", "company"]
