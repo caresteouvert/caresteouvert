@@ -38,7 +38,9 @@
     "pharmacy": "Pharmacies",
     "police": "Police",
     "post_office": "Bureaux de poste",
-    "shop": "Commerces"
+    "shop": "Commerces",
+    "tobacco": "Tabac",
+    "other": "Autres établissements"
   },
   "details": {
     "signal": "Signaler un changement",

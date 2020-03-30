@@ -149,7 +149,7 @@ const layers = [
       "icon-image": [
         "coalesce",
         ['image', ['concat', ['get', 'cat'], '_11']],
-        ['image', 'shop_11']
+        ['image', 'other_11']
       ],
       "icon-size": [
         'interpolate',
@@ -234,17 +234,12 @@ export default {
     },
 
     layers() {
-      const unselectedCategories = Object.keys(this.filters).reduce((memo, filter) => {
-        if (!this.filters[filter].selected) {
-          memo.push(...this.filters[filter].cats);
-        }
-        return memo;
-      }, []);
+      const unselectedCategories = Object.keys(this.filters).filter(filter => !this.filters[filter].selected);
       return layers.map((layer) => {
         const newLayer = { ...layer, filter: [...layer.filter] };
         newLayer.filter.push([
           "!in",
-          "cat",
+          "normalized_cat",
           ...unselectedCategories
         ]);
         return newLayer;

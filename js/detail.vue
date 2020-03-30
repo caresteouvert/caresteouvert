@@ -183,7 +183,8 @@ export default {
     },
 
     type() {
-      return this.$t(`details.feature.${this.point.properties.cat}`);
+      const trad = this.$t(`details.feature.${this.point.properties.cat}`);
+      return trad.startsWith('details.') ? null : trad;
     },
 
     contact() {
