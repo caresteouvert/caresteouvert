@@ -8,6 +8,7 @@
     :placeholder="$t('search')"
     hide-no-data
     hide-details
+    cache-items
     background-color="white"
     prepend-inner-icon="osm-magnify"
   />
@@ -28,11 +29,11 @@ export default {
   },
   watch: {
     search(val) {
-      if (!val) return;
+      if (!val || val.trim().length < 3 || this.isLoading) return;
       this.error = null;
       this.isLoading = true;
 
-      fetch(`https://api.jawg.io/places/v1/search?text=${encodeURIComponent(this.search)}&access-token=${jawgApiKey}`)
+      fetch(`https://api.jawg.io/places/v1/search?boundary.country=FRA&text=${encodeURIComponent(this.search)}&access-token=${jawgApiKey}`)
         .then(res => res.json())
         .then(body => {
           this.items = body.features.map((feature) => {
