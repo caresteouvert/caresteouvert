@@ -19,7 +19,8 @@
     "thursday": "Thursday",
     "friday": "Friday",
     "saturday": "Saturday",
-    "sunday": "Sunday"
+    "sunday": "Sunday",
+    "ph": "Public holidays"
   },
   "contribute_form": {
     "title": "Contribute",
@@ -33,6 +34,7 @@
     "step2": {
       "title": "Opening hours during lockdown",
       "same_hours": "This is the same hours",
+      "same_hours_without_lockdown": "This is the same hours outside lockdown",
       "dont_know": "I don't know",
       "continue": "Continue"
     },
