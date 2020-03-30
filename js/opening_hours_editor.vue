@@ -61,6 +61,13 @@ import OpeningHoursEditorInterval from './opening_hours_editor_interval';
 export default {
   components: { OpeningHoursEditorInterval },
 
+  props: {
+    value: {
+      type: Array,
+      default: () => []
+    }
+  },
+
   data() {
     return {
       weekDays: ['mo', 'tu', 'we', 'th', 'fr', 'sa', 'su'],
@@ -76,7 +83,7 @@ export default {
       selectTime: false,
       interval: '',
       selectedWeekDays: [],
-      openingHours: [],
+      openingHours: this.value,
       indexSubInterval: -1,
       dialog: false
     };
@@ -85,6 +92,13 @@ export default {
   computed: {
     disabledWeekDays() {
       return this.openingHours.flatMap(interval => interval.days);
+    }
+  },
+
+  watch: {
+    value(value) {
+      this.openingHours = value;
+      this.resetValues();
     }
   },
 

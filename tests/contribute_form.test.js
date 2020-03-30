@@ -27,8 +27,10 @@ describe('ContributeForm', () => {
   it('allow to set the open state', () => {
     const form = createWrapper({ point: {} });
     expect(form.vm.open).toBe(null);
+    expect(form.vm.step).toEqual(1);
     form.vm.clickOpen();
     expect(form.vm.open).toBe(true);
+    expect(form.vm.step).toEqual(2);
   });
 
   it('allow to set the close state', () => {
@@ -36,13 +38,16 @@ describe('ContributeForm', () => {
     expect(form.vm.open).toBe(null);
     form.vm.clickClose();
     expect(form.vm.open).toBe(false);
+    expect(form.vm.step).toEqual(3);
   });
 
-  it('the submit button is disabled if open state is not set', () => {
+  it('reset the opening hours when the user change is mind', () => {
     const form = createWrapper({ point: {} });
-    expect(form.vm.submitDisabled).toBe(true);
+    expect(form.vm.open).toBe(null);
+    form.vm.clickOpen();
+    form.vm.openingHours = [{}];
     form.vm.clickClose();
-    expect(form.vm.submitDisabled).toBe(false);
+    expect(form.vm.openingHours).toEqual([]);
   });
 
   it('reformat the id', () => {

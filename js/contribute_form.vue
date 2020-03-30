@@ -71,7 +71,6 @@
           class="textarea-details"
         ></v-textarea>
         <v-btn
-          :disabled="submitDisabled"
           :loading="loading"
           color="primary"
           @click="submit"
@@ -107,10 +106,6 @@ export default {
   },
 
   computed: {
-    submitDisabled() {
-      return this.open === null;
-    },
-
     id() {
       const types = {
         n: 'node',
@@ -129,6 +124,7 @@ export default {
 
     clickClose() {
       this.open = false;
+      this.openingHours = [];
       this.step = 3;
     },
 
