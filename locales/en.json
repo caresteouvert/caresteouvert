@@ -20,7 +20,7 @@
     "sunday": "Sunday"
   },
   "contribute_form": {
-    "title": "Is this place open?",
+    "title": "Is this place open during lockdown?",
     "open": {
       "yes": "yes",
       "no": "no"

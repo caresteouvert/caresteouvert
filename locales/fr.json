@@ -20,7 +20,7 @@
     "sunday": "Dimanche"
   },
   "contribute_form": {
-    "title": "Ce lieu est-il ouvert ?",
+    "title": "Ce lieu est-il ouvert pendant le confinement ?",
     "open": {
       "yes": "oui",
       "no": "non"
