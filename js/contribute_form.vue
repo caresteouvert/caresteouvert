@@ -50,20 +50,32 @@
           v-if="hasOpeningHours && openingHours.length === 0"
           @click="sameOpeningHours"
         >{{ $t('contribute_form.step2.same_hours') }}</v-btn>
+
         <opening-hours-editor
           v-model="openingHours"
         />
+
         <v-btn
           v-if="openingHours.length === 0"
           class="my-2"
           @click="step = 3"
         >{{ $t('contribute_form.step2.dont_know') }}</v-btn>
+
+        <v-checkbox
+          v-if="showOpeningHoursWithoutLockDown"
+          v-model="openingHoursWithoutLockDown"
+          :label="$t('contribute_form.step2.same_hours_without_lockdown')"
+          dense
+          hide-details
+        ></v-checkbox>
+
         <v-btn
           v-if="openingHours.length > 0"
           class="mt-4 my-2"
           color="primary"
           @click="step = 3"
         >{{ $t('contribute_form.step2.continue') }}</v-btn>
+
       </v-stepper-content>
 
       <v-stepper-step
@@ -110,13 +122,17 @@ export default {
       details: '',
       loading: false,
       open: null,
-      openingHours: []
+      openingHours: [],
+      openingHoursWithoutLockDown: false
     };
   },
 
   computed: {
     hasOpeningHours() {
       return !!this.point.properties.tags.opening_hours;
+    },
+    showOpeningHoursWithoutLockDown() {
+      return !this.hasOpeningHours && this.openingHours.length !== 0;
     },
     id() {
       const types = {
@@ -125,6 +141,22 @@ export default {
         r: 'relation'
       };
       return `${types[this.point.id[0]]}/${this.point.id.substring(1)}`;
+    },
+
+    payload() {
+      const lat = this.point.geometry.coordinates[1];
+      const lon = this.point.geometry.coordinates[0];
+      return {
+        name: this.point.properties.name,
+        state: this.open ? 'open' : 'closed',
+        details: this.details,
+        opening_hours: this.openingHours,
+        lat,
+        lon,
+        tags: {
+          opening_hours: this.openingHoursWithoutLockDown ? 'same': undefined
+        }
+      };
     }
   },
 
@@ -148,17 +180,7 @@ export default {
     },
 
     submit() {
-      const lat = this.point.geometry.coordinates[1];
-      const lon = this.point.geometry.coordinates[0];
       const [ type, id ] = this.id.split('/');
-      const body = {
-        name: this.point.properties.name,
-        state: this.open ? 'open' : 'closed',
-        details: this.details,
-        opening_hours: this.openingHours,
-        lat,
-        lon
-      };
       this.loading = true;
       fetch(
        `${apiUrl}/contribute/${type}/${id}`,
@@ -167,7 +189,7 @@ export default {
          headers: {
            'Content-Type': 'application/json'
          },
-         body: JSON.stringify(body)
+         body: JSON.stringify(this.payload)
        }
      ).then(() => {
        this.$emit('success');

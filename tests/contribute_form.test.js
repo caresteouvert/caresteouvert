@@ -8,7 +8,8 @@ describe('ContributeForm', () => {
     'v-stepper-step': '<div><slot /></div>',
     'v-stepper-content': '<div><slot /></div>',
     'v-btn': '<div class="btn" />',
-    'v-textarea': '<div />'
+    'v-textarea': '<div />',
+    'v-checkbox': '<div />'
   };
 
   beforeEach(() => {
@@ -73,6 +74,20 @@ describe('ContributeForm', () => {
     expect(form.vm.hasOpeningHours).toBe(false);
   });
 
+  it('showOpeningHoursWithoutLockDown: true', () => {
+    const form = createWrapper({ point: { properties: { tags: { } } } });
+    expect(form.vm.showOpeningHoursWithoutLockDown).toBe(false);
+    form.vm.openingHours.push({ days: 'mo', hours: ['08:00-12:00']});
+    expect(form.vm.showOpeningHoursWithoutLockDown).toBe(true);
+  });
+
+  it('showOpeningHoursWithoutLockDown: false when there is opening_hours', () => {
+    const form = createWrapper({ point: { properties: { tags: { opening_hours: 'Mo-Fr 08:00-09:00' } } } });
+    expect(form.vm.showOpeningHoursWithoutLockDown).toBe(false);
+    form.vm.openingHours.push({ days: 'mo', hours: ['08:00-12:00']});
+    expect(form.vm.showOpeningHoursWithoutLockDown).toBe(false);
+  });
+
   it('reformat the id', () => {
     const form = createWrapper({ point: { id: "n12345", properties: { tags: { } } } });
     expect(form.vm.id).toEqual('node/12345');
@@ -82,5 +97,33 @@ describe('ContributeForm', () => {
 
     form.setProps({ point: { id: "r12345", properties: { tags: { } } } });
     expect(form.vm.id).toEqual('relation/12345');
+  });
+
+  it('format the payload', () => {
+    const form = createWrapper({ point: { id: "n12345", geometry: { coordinates: [1, 2] }, properties: { name: 'Test', tags: { } } } });
+    form.vm.clickOpen();
+    form.vm.openingHours = [{ days: ['mo'], hours: ['08:00-18:00'] }];
+    form.vm.openingHoursWithoutLockDown = true;
+    expect(form.vm.payload).toEqual({
+      name: 'Test',
+      state: 'open',
+      details: '',
+      opening_hours: [{ days: ['mo'], hours: ['08:00-18:00'] }],
+      lat: 2,
+      lon: 1,
+      tags: {
+        opening_hours: 'same'
+      }
+    });
+    form.vm.openingHoursWithoutLockDown = false;
+    expect(form.vm.payload).toEqual({
+      name: 'Test',
+      state: 'open',
+      details: '',
+      opening_hours: [{ days: ['mo'], hours: ['08:00-18:00'] }],
+      lat: 2,
+      lon: 1,
+      tags: {}
+    });
   });
 });

@@ -33,13 +33,13 @@
     "step2": {
       "title": "Horaires d'ouverture",
       "same_hours": "Ce sont les même horaires",
+      "same_hours_without_lockdown": "Ce sont les même horaires hors confinement",
       "dont_know": "Je ne sais pas",
       "continue": "Continue"
     },
     "step3": {
       "title": "Ajouter une précision (optionnel)"
     },
-    "details": "Ajouter des précision",
     "submit": "Publier",
     "cancel": "Annuler"
   },

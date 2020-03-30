@@ -21,12 +21,23 @@
     "sunday": "Sunday"
   },
   "contribute_form": {
-    "title": "Is this place open during lockdown?",
-    "open": {
-      "yes": "yes",
-      "no": "no"
+    "title": "Contribute",
+    "step1": {
+      "title": "Is this place open during lockdown?",
+      "open": {
+        "yes": "yes",
+        "no": "no"
+      }
     },
-    "details": "Add details such as specific days or hours of opening",
+    "step2": {
+      "title": "Opening hours",
+      "same_hours": "This is the same hours",
+      "dont_know": "I don't know",
+      "continue": "Continue"
+    },
+    "step3": {
+      "title": "Add details (optionnal)"
+    },
     "submit": "Publish",
     "cancel": "Cancel"
   },
