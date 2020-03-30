@@ -40,13 +40,13 @@
         />
 
         <v-alert
-          v-if="point.properties.brand_infos"
+          v-if="infos"
           type="info"
           :icon="false"
           tile
           class="mb-0"
         >
-          {{ point.properties.brand_infos }}
+          {{ infos }}
         </v-alert>
 
         <v-list>
@@ -192,6 +192,33 @@ export default {
       return (name) => {
         return tags[name] || tags[`contact:${name}`];
       };
+    },
+
+    infos() {
+      const infos = [];
+
+      // Takeaway
+      if(this.point.properties.tags['takeaway:covid19'] && !this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`).startsWith('details.')) {
+        infos.push(this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`));
+      }
+      else if(this.point.properties.tags.takeaway && !this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`).startsWith('details.')) {
+        infos.push(this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`));
+      }
+
+      // Delivery
+      if(this.point.properties.tags['delivery:covid19'] && !this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`).startsWith('details.')) {
+        infos.push(this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`));
+      }
+      else if(this.point.properties.tags.delivery && !this.$t(`details.delivery.${this.point.properties.tags.delivery}`).startsWith('details.')) {
+        infos.push(this.$t(`details.delivery.${this.point.properties.tags.delivery}`));
+      }
+
+      // POI information
+      if(this.point.properties.brand_infos) {
+        infos.push(this.point.properties.brand_infos);
+      }
+
+      return infos.join(" | ");
     }
   },
 

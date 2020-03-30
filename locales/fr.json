@@ -140,6 +140,15 @@
       "partiel": "Lieu potentiellement ouvert durant le confinement (à vérifier)",
       "inconnu": "Lieu dont l'état d'ouverture n'est pas connu",
       "fermé": "Lieu fermé durant le confinement"
+    },
+    "delivery": {
+      "yes": "Service de livraison proposé",
+      "only": "Livraison uniquement"
+    },
+    "takeaway": {
+      "yes": "Vente à emporter proposée",
+      "modified": "Vente à emporter adaptée",
+      "only": "Vente à emporter uniquement"
     }
   },
   "opening_hours_editor": {

@@ -139,6 +139,25 @@
       "partiel": "Place potentially open during lockdown (to be checked)",
       "inconnu": "Place whose open status is not known",
       "fermé": "Place closed during lockdown"
+    },
+    "delivery": {
+      "yes": "Delivery service available",
+      "only": "Only by delivery"
+    },
+    "takeaway": {
+      "yes": "Take-away sale available",
+      "modified": "Modified take-away sale",
+      "only": "Take-away sale only"
     }
+  },
+  "opening_hours_editor": {
+    "select_days": "Select days",
+    "next": "Select hours",
+    "select_time": {
+      "start": "Choose opening hour",
+      "end": "Choose closing hour"
+    },
+    "add_interval": "Add hours",
+    "add_new_days": "Add opening days"
   }
 }
