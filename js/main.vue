@@ -37,7 +37,32 @@
             </template>
             <span>{{ $t('menu') }}</span>
           </v-tooltip>
-          <geocoder @select="updateMapBounds" />
+
+          <h2
+            v-if="!geocoder"
+            class="subtitle-1 title-mobile"
+          >{{ $t('subtitle-dense') }}</h2>
+          <v-spacer v-if="!geocoder"></v-spacer>
+          <v-tooltip
+            v-if="!geocoder"
+            bottom
+          >
+            <template v-slot:activator="{ on }">
+              <v-btn
+                icon
+                @click="geocoder = !geocoder"
+                v-on="on"
+              >
+                <v-icon>osm-magnify</v-icon>
+              </v-btn>
+            </template>
+            <span>{{ $t('search') }}</span>
+          </v-tooltip>
+
+          <geocoder
+            v-if="geocoder"
+            @select="updateMapBounds"
+          />
           <geolocate @input="updateMapCenter" />
         </v-toolbar>
         <osm-map
@@ -49,6 +74,17 @@
           :filters="filters"
           :featuresAndLocation="featuresAndLocation"
         />
+        <a
+          href="https://blog.caresteouvert.fr/about/"
+          target="_blank"
+        >
+          <img
+            v-if="isMobile"
+            :alt="$t('title')"
+            class="logo-map"
+            src="../images/logo.png"
+            />
+        </a>
       </v-content>
     </div>
     <router-view />
@@ -86,6 +122,7 @@ export default {
       loadMap: false,
       isMobile: false,
       sidebar: false,
+      geocoder: false,
       mapStyle: null,
       mapCenter: null,
       mapZoom: null,
@@ -98,6 +135,7 @@ export default {
     this.computeIsMobile();
 
     this.sidebar = !this.isMobile;
+    this.geocoder = !this.isMobile;
 
     const { features, location } = decode(this.featuresAndLocation);
     decodeFeatures(features, config.filters);
@@ -196,6 +234,9 @@ export default {
 </script>
 
 <style>
+.title-mobile {
+  line-height: 1.2 !important;
+}
 .xs .mapboxgl-ctrl-top-right {
   top: 50px;
 }
@@ -211,5 +252,15 @@ export default {
 }
 .xs .search {
   width: 100%;
+}
+.logo-map {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  max-width: 30%;
+  max-height: 50px;
+  background: #ffffffe8;
+  border-radius: 10px;
+  padding: 5px;
 }
 </style>
