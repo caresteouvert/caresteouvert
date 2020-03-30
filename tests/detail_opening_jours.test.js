@@ -15,6 +15,9 @@ describe('OpeningHours', () => {
   beforeEach(() => {
     fakeDate = '2019-10-28T11:01:58.135Z';
     localVue = createLocalVue();
+    localVue.prototype.$i18n = {
+      locale: 'en'
+    };
     localVue.prototype.$t = () => {};
     global.Date = class extends Date {
       constructor(...date) {
@@ -87,5 +90,23 @@ describe('OpeningHours', () => {
                                         "friday": "09:00 AM-06:00 PM",
                                         "saturday": "09:00 AM-06:00 PM",
                                         "sunday": undefined});
+  });
+
+  it('format the next change', () => {
+    const detail = shallowMount(DetailOpeningHours, {
+      localVue,
+      stubs,
+      propsData: {
+        value: 'Mo-Sa 09:00-18:00'
+      }
+    });
+    localVue.prototype.$t = (name) => name;
+    expect(detail.vm.formatNextDate).toEqual('06:00 PM');
+
+    detail.setProps({ value: 'Tu-Sa 09:00-18:00' });
+    expect(detail.vm.formatNextDate).toEqual('details.opening_hours.tomorrow 09:00 AM');
+
+    detail.setProps({ value: 'We-Sa 09:00-18:00' });
+    expect(detail.vm.formatNextDate).toEqual('Wednesday 09:00 AM');
   });
 });

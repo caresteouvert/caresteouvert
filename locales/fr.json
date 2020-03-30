@@ -133,7 +133,8 @@
       "state": {
         "open": "ouvert",
         "closed": "fermé"
-      }
+      },
+      "tomorrow": "demain"
     },
     "state": {
       "ouvert": "Lieu ouvert durant le confinement",

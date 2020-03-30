@@ -76,7 +76,12 @@ export default {
       const format = {
         weekday: this.isToday(this.nextChange) || this.isTomorrow(this.nextChange) ? undefined : 'long'
       };
-      return this.formatDate(this.nextChange, format);
+      const next = this.formatDate(this.nextChange, format);
+      if (this.isTomorrow(this.nextChange)) {
+        const tomorrow = this.$t(`${this.namespace}.tomorrow`);
+        return `${tomorrow} ${next}`;
+      }
+      return next;
     }
   },
 
@@ -101,7 +106,7 @@ export default {
     },
 
     formatDate(date, format={}) {
-      return date.toLocaleString('fr', { hour: '2-digit', minute: '2-digit', ...format });
+      return date.toLocaleString(this.$i18n.locale, { hour: '2-digit', minute: '2-digit', ...format });
     },
 
     isToday(date) {

@@ -129,11 +129,12 @@
       "winery": "Winery"
     },
     "opening_hours": {
-      "state_until_date": "from {state} until {date}",
+      "state_until_date": "{state} until {date}",
       "state": {
         "open": "open",
         "closed": "closed"
-      }
+      },
+      "tomorrow": "tomorrow"
     },
     "state": {
       "ouvert": "Place open during lockdown",
