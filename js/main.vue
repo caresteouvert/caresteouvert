@@ -38,9 +38,15 @@
             <span>{{ $t('menu') }}</span>
           </v-tooltip>
 
-          <v-toolbar-subtitle v-if="!geocoder">{{ $t('subtitle-dense') }}</v-toolbar-subtitle>
+          <h2
+            v-if="!geocoder"
+            class="subtitle-1 title-mobile"
+          >{{ $t('subtitle-dense') }}</h2>
           <v-spacer v-if="!geocoder"></v-spacer>
-          <v-tooltip bottom v-if="!geocoder">
+          <v-tooltip
+            v-if="!geocoder"
+            bottom
+          >
             <template v-slot:activator="{ on }">
               <v-btn
                 icon
@@ -53,7 +59,10 @@
             <span>{{ $t('search') }}</span>
           </v-tooltip>
 
-          <geocoder v-if="geocoder" @select="updateMapBounds" />
+          <geocoder
+            v-if="geocoder"
+            @select="updateMapBounds"
+          />
           <geolocate @input="updateMapCenter" />
         </v-toolbar>
         <osm-map
@@ -65,7 +74,17 @@
           :filters="filters"
           :featuresAndLocation="featuresAndLocation"
         />
-        <a href="https://blog.caresteouvert.fr/about/" target="_blank"><img v-if="isMobile" class="logo-map" src="../images/logo.png" :alt="$t('title')" /></a>
+        <a
+          href="https://blog.caresteouvert.fr/about/"
+          target="_blank"
+        >
+          <img
+            v-if="isMobile"
+            :alt="$t('title')"
+            class="logo-map"
+            src="../images/logo.png"
+            />
+        </a>
       </v-content>
     </div>
     <router-view />
@@ -215,6 +234,9 @@ export default {
 </script>
 
 <style>
+.title-mobile {
+  line-height: 1.2 !important;
+}
 .xs .mapboxgl-ctrl-top-right {
   top: 50px;
 }
