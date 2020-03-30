@@ -19,6 +19,7 @@
       </div>
     </div>
     <v-btn
+      width="100%"
       class="mt-3"
       @click="openDialog"
     >{{ $t('opening_hours_editor.add_new_days') }}</v-btn>

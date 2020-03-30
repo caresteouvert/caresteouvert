@@ -48,6 +48,7 @@
       >
         <v-btn
           v-if="hasOpeningHours && openingHours.length === 0"
+          width="100%"
           @click="sameOpeningHours"
         >{{ $t('contribute_form.step2.same_hours') }}</v-btn>
 
@@ -57,6 +58,7 @@
 
         <v-btn
           v-if="openingHours.length === 0"
+          width="100%"
           class="my-2"
           @click="step = 3"
         >{{ $t('contribute_form.step2.dont_know') }}</v-btn>
