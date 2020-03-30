@@ -61,8 +61,8 @@ export default {
     weekDays() {
       return ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].reduce((memo, day, index) => {
         memo[day] = this.formatIntervals(this.openingHours.getOpenIntervals(...this.getDayOfWeek(index + 1)));
-        var comment = this.openingHours.getComment();
-        if (comment !== undefined) memo[day] += ' '+comment;
+        const comment = this.openingHours.getComment();
+        if (comment) memo[day] = `${memo[day]} ${comment}`;
         return memo;
       }, {});
     },
