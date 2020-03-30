@@ -19,8 +19,7 @@
     "thursday": "Jeudi",
     "friday": "Vendredi",
     "saturday": "Samedi",
-    "sunday": "Dimanche",
-    "ph": "Jours fériés"
+    "sunday": "Dimanche"
   },
   "contribute_form": {
     "title": "Contribuer",
@@ -34,7 +33,6 @@
     "step2": {
       "title": "Horaires d'ouverture pendant le confinement",
       "same_hours": "Ce sont les mêmes horaires",
-      "same_hours_without_lockdown": "Ce sont les mêmes horaires hors confinement",
       "dont_know": "Je ne sais pas",
       "continue": "Continuer"
     },
@@ -73,6 +71,7 @@
       "beverages": "Vente d'alcool",
       "bicycle": "Vente et réparation de vélos",
       "books": "Librairie",
+      "brewery": "Brasserie artisanale",
       "butcher": "Boucherie",
       "cafe": "Café",
       "car": "Vente et réparation de voitures",
