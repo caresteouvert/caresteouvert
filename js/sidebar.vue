@@ -55,9 +55,6 @@ export default {
 </script>
 
 <style scoped>
-  .no-min-width {
-    min-width: auto;
-  }
   .logo {
     width: 150px;
     max-width: 100%;
