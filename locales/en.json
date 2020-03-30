@@ -1,7 +1,7 @@
 {
   "covid19-alert": "Follow government restrictions. The responsibility is YOURS.",
   "title": "It remains open",
-  "subtitle": "Places that remain open during containment",
+  "subtitle": "Places that remain open during lockdown",
   "about": "About",
   "map": "Map",
   "search": "Search",
@@ -45,7 +45,7 @@
   "details": {
     "signal": "Report a change",
     "signal_done": "Your report has been registered. Thank you!",
-    "containment_opening_hours": "Opening hours outside the containment period",
+    "containment_opening_hours": "Opening hours outside the lockdown period",
     "containment_brand_hours": "Opening hours on the brand web page",
     "facebook": "Facebook page",
     "feature": {
@@ -121,11 +121,11 @@
       }
     },
     "state": {
-      "ouvert": "Place open during containment",
-      "ouvert_adapté": "Place open during containment with adapted hours",
-      "partiel": "Place potentially open during containment (to be checked)",
+      "ouvert": "Place open during lockdown",
+      "ouvert_adapté": "Place open during lockdown, with adapted hours",
+      "partiel": "Place potentially open during lockdown (to be checked)",
       "inconnu": "Place whose open status is not known",
-      "fermé": "Place closed during containment"
+      "fermé": "Place closed during lockdown"
     }
   }
 }
