@@ -31,7 +31,7 @@
       }
     },
     "step2": {
-      "title": "Opening hours",
+      "title": "Opening hours during lockdown",
       "same_hours": "This is the same hours",
       "dont_know": "I don't know",
       "continue": "Continue"
