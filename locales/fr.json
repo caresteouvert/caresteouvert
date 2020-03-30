@@ -18,15 +18,28 @@
     "thursday": "Jeudi",
     "friday": "Vendredi",
     "saturday": "Samedi",
-    "sunday": "Dimanche"
+    "sunday": "Dimanche",
+    "ph": "Jours fériés"
   },
   "contribute_form": {
-    "title": "Ce lieu est-il ouvert pendant le confinement ?",
-    "open": {
-      "yes": "oui",
-      "no": "non"
+    "title": "Contribuer",
+    "step1": {
+      "title": "Ce lieu reste-il ouvert pendant le confinement ?",
+      "open": {
+        "yes": "oui",
+        "no": "non"
+      }
     },
-    "details": "Ajouter des précisions comme les jours et les horaires d'ouvertures spécifique",
+    "step2": {
+      "title": "Horaires d'ouverture",
+      "same_hours": "Ce sont les mêmes horaires",
+      "same_hours_without_lockdown": "Ce sont les mêmes horaires hors confinement",
+      "dont_know": "Je ne sais pas",
+      "continue": "Continuer"
+    },
+    "step3": {
+      "title": "Ajouter une précision (optionnel)"
+    },
     "submit": "Publier",
     "cancel": "Annuler"
   },
@@ -127,5 +140,15 @@
       "inconnu": "Lieu dont l'état d'ouverture n'est pas connu",
       "fermé": "Lieu fermé durant le confinement"
     }
+  },
+  "opening_hours_editor": {
+    "select_days": "Sélectionnez les jours",
+    "next": "Sélectionnez les horaires",
+    "select_time": {
+      "start": "Entrer l'horaire d'ouverture",
+      "end": "Entrer l'horaire de fermeture"
+    },
+    "add_interval": "Ajouter un horaire",
+    "add_new_days": "Ajouter des jours d'ouverture"
   }
 }
