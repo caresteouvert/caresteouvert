@@ -24,7 +24,7 @@ describe('OpeningHoursEditor', () => {
     });
     editor.vm.dialog = true;
     await Vue.nextTick();
-    expect(editor.findAll('.v-checkbox').length).toBe(7);
+    expect(editor.findAll('.v-checkbox').length).toBe(8);
     expect(editor.findAll('.v-btn').length).toBe(2);
   });
 

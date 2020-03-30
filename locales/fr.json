@@ -18,7 +18,8 @@
     "thursday": "Jeudi",
     "friday": "Vendredi",
     "saturday": "Samedi",
-    "sunday": "Dimanche"
+    "sunday": "Dimanche",
+    "ph": "Jours fériés"
   },
   "contribute_form": {
     "title": "Contribuer",
@@ -30,7 +31,10 @@
       }
     },
     "step2": {
-      "title": "Horaires d'ouverture"
+      "title": "Horaires d'ouverture",
+      "same_hours": "Ce sont les même horaires",
+      "dont_know": "Je ne sais pas",
+      "continue": "Continue"
     },
     "step3": {
       "title": "Ajouter une précision (optionnel)"

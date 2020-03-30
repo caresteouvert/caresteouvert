@@ -43,19 +43,27 @@
         {{ $t('contribute_form.step2.title') }}
       </v-stepper-step>
 
-      <v-stepper-content step="2">
-        <opening-hours-editor v-model="openingHours"  />
-        <br/>
+      <v-stepper-content
+        step="2"
+      >
         <v-btn
-          :disabled="openingHours.length === 0"
+          v-if="hasOpeningHours && openingHours.length === 0"
+          @click="sameOpeningHours"
+        >{{ $t('contribute_form.step2.same_hours') }}</v-btn>
+        <opening-hours-editor
+          v-model="openingHours"
+        />
+        <v-btn
+          v-if="openingHours.length === 0"
+          class="my-2"
+          @click="step = 3"
+        >{{ $t('contribute_form.step2.dont_know') }}</v-btn>
+        <v-btn
+          v-if="openingHours.length > 0"
+          class="mt-4 my-2"
           color="primary"
           @click="step = 3"
-        >Continuer</v-btn>
-        <v-btn
-          text
-          @click="step = 3"
-        >Passer</v-btn>
-        <br/>
+        >{{ $t('contribute_form.step2.continue') }}</v-btn>
       </v-stepper-content>
 
       <v-stepper-step
@@ -83,6 +91,7 @@
 </template>
 
 <script>
+import OpeningHoursParser from 'transport-hours/src/OpeningHoursParser';
 import { apiUrl } from '../config.json';
 import OpeningHoursEditor from './opening_hours_editor';
 
@@ -106,6 +115,9 @@ export default {
   },
 
   computed: {
+    hasOpeningHours() {
+      return !!this.point.properties.tags.opening_hours;
+    },
     id() {
       const types = {
         n: 'node',
@@ -126,6 +138,13 @@ export default {
       this.open = false;
       this.openingHours = [];
       this.step = 3;
+    },
+
+    sameOpeningHours() {
+      const table = new OpeningHoursParser(this.point.properties.tags.opening_hours).getTable();
+      this.openingHours = Object.keys(table).map((day) => {
+        return { days: [day], hours: [...table[day]] };
+      }).filter(interval => interval.hours.length > 0);
     },
 
     submit() {

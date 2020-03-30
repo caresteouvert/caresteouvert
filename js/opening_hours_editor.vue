@@ -70,7 +70,7 @@ export default {
 
   data() {
     return {
-      weekDays: ['mo', 'tu', 'we', 'th', 'fr', 'sa', 'su'],
+      weekDays: ['mo', 'tu', 'we', 'th', 'fr', 'sa', 'su', 'ph'],
       weekDaysName: {
         'mo': 'monday',
         'tu': 'tuesday',
@@ -78,7 +78,8 @@ export default {
         'th': 'thursday',
         'fr': 'friday',
         'sa': 'saturday',
-        'su': 'sunday'
+        'su': 'sunday',
+        'ph': 'ph'
       },
       selectTime: false,
       interval: '',
