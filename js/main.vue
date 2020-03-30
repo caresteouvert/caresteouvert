@@ -37,7 +37,23 @@
             </template>
             <span>{{ $t('menu') }}</span>
           </v-tooltip>
-          <geocoder @select="updateMapBounds" />
+
+          <v-toolbar-subtitle v-if="!geocoder">{{ $t('subtitle-dense') }}</v-toolbar-subtitle>
+          <v-spacer v-if="!geocoder"></v-spacer>
+          <v-tooltip bottom v-if="!geocoder">
+            <template v-slot:activator="{ on }">
+              <v-btn
+                icon
+                @click="geocoder = !geocoder"
+                v-on="on"
+              >
+                <v-icon>osm-magnify</v-icon>
+              </v-btn>
+            </template>
+            <span>{{ $t('search') }}</span>
+          </v-tooltip>
+
+          <geocoder v-if="geocoder" @select="updateMapBounds" />
           <geolocate @input="updateMapCenter" />
         </v-toolbar>
         <osm-map
@@ -49,6 +65,7 @@
           :filters="filters"
           :featuresAndLocation="featuresAndLocation"
         />
+        <a href="https://blog.caresteouvert.fr/about/" target="_blank"><img v-if="isMobile" class="logo-map" src="../images/logo.png" :alt="$t('title')" /></a>
       </v-content>
     </div>
     <router-view />
@@ -86,6 +103,7 @@ export default {
       loadMap: false,
       isMobile: false,
       sidebar: false,
+      geocoder: false,
       mapStyle: null,
       mapCenter: null,
       mapZoom: null,
@@ -98,6 +116,7 @@ export default {
     this.computeIsMobile();
 
     this.sidebar = !this.isMobile;
+    this.geocoder = !this.isMobile;
 
     const { features, location } = decode(this.featuresAndLocation);
     decodeFeatures(features, config.filters);
@@ -211,5 +230,15 @@ export default {
 }
 .xs .search {
   width: 100%;
+}
+.logo-map {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  max-width: 30%;
+  max-height: 50px;
+  background: #ffffffe8;
+  border-radius: 10px;
+  padding: 5px;
 }
 </style>
