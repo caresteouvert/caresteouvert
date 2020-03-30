@@ -21,38 +21,36 @@
     <v-list>
       <slot name="list-top"></slot>
       <v-divider></v-divider>
-      <v-list-item href="https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/">
-        <v-list-item-content class="ml-2">
-          <v-list-item-title class="body-1">{{ $t('missing_shop') }}</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
+      <sidebar-list-item
+        :title="$t('missing_shop')"
+        href="https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/"
+      />
       <v-divider></v-divider>
-      <v-list-item href="https://blog.caresteouvert.fr/">
-        <v-list-item-content class="ml-2">
-          <v-list-item-title class="body-1">{{ $t('blog') }}</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item href="https://blog.caresteouvert.fr/about/">
-        <v-list-item-content class="ml-2">
-          <v-list-item-title class="body-1">{{ $t('about') }}</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item href="https://blog.caresteouvert.fr/presse/">
-        <v-list-item-content class="ml-2">
-          <v-list-item-title class="body-1">{{ $t('press') }}</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-      <v-list-item href="https://blog.caresteouvert.fr/mentions-legales/">
-        <v-list-item-content class="ml-2">
-          <v-list-item-title class="body-1">{{ $t('disclaimer') }}</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
+      <sidebar-list-item
+        :title="$t('blog')"
+        href="https://blog.caresteouvert.fr/"
+      />
+      <sidebar-list-item
+        :title="$t('about')"
+        href="https://blog.caresteouvert.fr/about/"
+      />
+      <sidebar-list-item
+        :title="$t('press')"
+        href="https://blog.caresteouvert.fr/presse/"
+      />
+      <sidebar-list-item
+        :title="$t('disclaimer')"
+        href="https://blog.caresteouvert.fr/mentions-legales/"
+      />
     </v-list>
   </div>
 </template>
 
 <script>
+import SidebarListItem from './sidebar_list_item';
+
 export default {
+  components: { SidebarListItem }
 }
 </script>
 
