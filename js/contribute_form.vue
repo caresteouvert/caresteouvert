@@ -193,8 +193,10 @@ export default {
          },
          body: JSON.stringify(this.payload)
        }
-     ).then(() => {
-       this.$emit('success');
+     ).then((response) => {
+       if (response.status === 200) {
+         this.$emit('success');
+       }
      }).finally(() => {
        this.loading = false
      });
