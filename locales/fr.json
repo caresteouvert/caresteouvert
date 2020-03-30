@@ -1,4 +1,5 @@
 {
+  "lang": "Français",
   "covid19-alert": "Respectez les restrictions gouvernementales. Il en va de VOTRE responsabilité.",
   "title": "Ça reste ouvert",
   "subtitle": "Les lieux ouverts durant le confinement",
@@ -12,6 +13,7 @@
   "disclaimer": "Mentions légales",
   "missing_shop": "Indiquer un commerce manquant",
   "blog": "Blog",
+  "change_lang": "Changer la langue",
   "days": {
     "monday": "Lundi",
     "tuesday": "Mardi",

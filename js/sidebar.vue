@@ -26,6 +26,7 @@
         href="https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/"
       />
       <v-divider></v-divider>
+      <change-language />
       <sidebar-list-item
         :title="$t('blog')"
         href="https://blog.caresteouvert.fr/"
@@ -48,9 +49,10 @@
 
 <script>
 import SidebarListItem from './sidebar_list_item';
+import ChangeLanguage from './change_language';
 
 export default {
-  components: { SidebarListItem }
+  components: { ChangeLanguage, SidebarListItem }
 }
 </script>
 
