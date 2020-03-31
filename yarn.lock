@@ -5114,6 +5114,11 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+linkifyjs@^2.1.3:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/linkifyjs/-/linkifyjs-2.1.9.tgz#af06e45a2866ff06c4766582590d098a4d584702"
+  integrity sha512-74ivurkK6WHvHFozVaGtQWV38FzBwSTGNmJolEgFp7QgR2bl6ArUWlvT4GcHKbPe1z3nWYi+VUdDZk16zDOVug==
+
 locate-path@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-3.0.0.tgz#dbec3b3ab759758071b58fe59fc41871af21400e"
@@ -8452,6 +8457,14 @@ vue-jest@^4.0.0-beta.2:
     source-map "^0.5.6"
     ts-jest "^23.10.5"
 
+vue-linkify@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vue-linkify/-/vue-linkify-1.0.1.tgz#2c62181978ef1c65d874d9b156479531d6630cb3"
+  integrity sha1-LGIYGXjvHGXYdNmxVkeVMdZjDLM=
+  dependencies:
+    linkifyjs "^2.1.3"
+    vue "^2.1.6"
+
 vue-mapbox@osmontrouge/vue-mapbox#update:
   version "0.4.1"
   resolved "https://codeload.github.com/osmontrouge/vue-mapbox/tar.gz/2dd3784d1336cd09bad68629812cf3ef3b45a07f"
@@ -8476,7 +8489,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.6.9:
+vue@^2.1.6, vue@^2.6.9:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
