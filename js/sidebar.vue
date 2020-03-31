@@ -24,29 +24,35 @@
       <sidebar-list-item
         :title="$t('missing_shop')"
         href="https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/"
+        icon="plus"
       />
       <change-language />
       <v-divider></v-divider>
       <sidebar-list-item
         :title="$t('blog')"
         href="https://blog.caresteouvert.fr/"
+        icon="blog"
       />
       <sidebar-list-item
         :title="$t('townhalls')"
         href="https://blog.caresteouvert.fr/un-outil-de-communication-des-mairies/"
+        icon="town_hall"
       />
       <v-divider></v-divider>
       <sidebar-list-item
         :title="$t('about')"
         href="https://blog.caresteouvert.fr/about/"
+        icon="info"
       />
       <sidebar-list-item
         :title="$t('press')"
         href="https://blog.caresteouvert.fr/presse/"
+        icon="news"
       />
       <sidebar-list-item
         :title="$t('disclaimer')"
         href="https://blog.caresteouvert.fr/mentions-legales/"
+        icon="legal"
       />
     </v-list>
   </div>

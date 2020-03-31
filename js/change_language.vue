@@ -5,6 +5,9 @@
   >
     <template v-slot:activator="{ on }">
       <v-list-item v-on="on">
+        <v-list-item-icon class="mr-0">
+          <v-icon small>{{ `osm-language` }}</v-icon>
+        </v-list-item-icon>
         <v-list-item-content class="ml-2">
           <v-list-item-title class="body-1">{{ $t('change_lang') }}</v-list-item-title>
         </v-list-item-content>

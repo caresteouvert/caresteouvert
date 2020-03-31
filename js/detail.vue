@@ -251,7 +251,7 @@ export default {
   z-index: 10;
   overflow-y: auto;
 }
-.alert-link {
+>>>.alert-link {
   color: white;
 }
 </style>
