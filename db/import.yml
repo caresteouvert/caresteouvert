@@ -25,6 +25,8 @@ tables:
       - {key: 'healthcare', name: 'healthcare', type: string}
       - {key: 'opening_hours', name: 'opening_hours', type: string}
       - {key: 'opening_hours:covid19', name: 'opening_hours:covid19', type: string}
+      - {name: country_iso2, type: geojson_intersects_feature, args: {geojson: '/git/covid19_map/db/countries_subcountries.geojson', property: country_iso2}}
+      - {name: sub_country, type: geojson_intersects_feature, args: {geojson: '/git/covid19_map/db/countries_subcountries.geojson', property: sub_country}}
   imposm_osm_polygon:
     type: polygon
     mapping:
@@ -51,6 +53,8 @@ tables:
       - {key: 'healthcare', name: 'healthcare', type: string}
       - {key: 'opening_hours', name: 'opening_hours', type: string}
       - {key: 'opening_hours:covid19', name: 'opening_hours:covid19', type: string}
+      - {name: country_iso2, type: geojson_intersects_feature, args: {geojson: '/git/covid19_map/db/countries_subcountries.geojson', property: country_iso2}}
+      - {name: sub_country, type: geojson_intersects_feature, args: {geojson: '/git/covid19_map/db/countries_subcountries.geojson', property: sub_country}}
 tags:
   load_all: true
   exclude: [created_by, source, "tiger:*"]
