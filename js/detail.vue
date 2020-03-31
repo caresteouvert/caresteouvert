@@ -87,7 +87,7 @@
           </v-list-item>
 
           <detail-opening-hours
-            v-if="point.properties.opening_hours"
+            v-if="point.properties.opening_hours && point.properties.opening_hours !== 'open'"
             :value="point.properties.opening_hours"
           />
           <v-list-item
