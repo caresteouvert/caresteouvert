@@ -1,0 +1,168 @@
+{
+  "lang": "Anglès",
+  "covid19-alert": "Segueix les recomanacions del govern. La responsabilitat és TEVA.",
+  "title": "Es manté obert",
+  "subtitle": "Llocs que es mantenen oberts durant el confinament",
+  "subtitle-dense": "Llocs oberts durant el confinament",
+  "about": "Sobre",
+  "map": "Mapa",
+  "search": "Cercar",
+  "menu": "Menú",
+  "geolocate": "Mostra la teva ubicació actual",
+  "press": "Premsa",
+  "disclaimer": "Responsabilitat legal",
+  "missing_shop": "Informa d'una botiga que falta",
+  "blog": "Blog",
+  "change_lang": "Canviar idioma",
+  "days": {
+    "monday": "Dilluns",
+    "tuesday": "Dimarts",
+    "wednesday": "Dimecres",
+    "thursday": "Dijous",
+    "friday": "Divendres",
+    "saturday": "Dissabte",
+    "sunday": "Diumenge",
+    "ph": "Vacances"
+  },
+  "contribute_form": {
+    "title": "Contribueix",
+    "step1": {
+      "title": "Aquest lloc està obert durant el confinament?",
+      "open": {
+        "yes": "sí",
+        "no": "no"
+      }
+    },
+    "step2": {
+      "title": "Horari d'obertura durant el confinament",
+      "same_hours": "Mateix horari",
+      "same_hours_without_lockdown": "Manté el mateix horari que abans del confinament",
+      "dont_know": "No ho sé",
+      "continue": "Continuar"
+    },
+    "step3": {
+      "title": "Afegir detalls (opcional)"
+    },
+    "submit": "Publicar",
+    "cancel": "Cancel·lar"
+  },
+  "filter": {
+    "bakery": "Fleques",
+    "bank": "Bancs & companyies d'assegurances",
+    "food": "Botigues de queviures",
+    "fuel": "Estacions de servei",
+    "funeral_directors": "Tanatoris / Funeràries",
+    "pharmacy": "Farmàcies",
+    "police": "Comissaries de policia",
+    "post_office": "Oficines de correus",
+    "shop": "Botigues",
+    "tobacco": "Estancs",
+    "other": "Altres llocs"
+  },
+  "details": {
+    "signal": "Avisar d'un canvi",
+    "signal_done": "El teu avís ha estat registrat. Gràcies.",
+    "containment_opening_hours": "Horari d'obertura durant el confinament",
+    "containment_brand_hours": "Horari d'obertura a la web de la marca",
+    "facebook": "Pàgina de Facebook",
+    "feature": {
+      "agrarian": "Botigues de productes de l'hort",
+      "alcohol": "Celler / Licoreria",
+      "association": "Associació",
+      "bakery": "Fleca",
+      "bank": "Banc",
+      "bar": "Bar",
+      "beverages": "Botiga de begudes",
+      "bicycle": "Venda i reparació de bicicletes",
+      "books": "Llibreria",
+      "brewery": "Cervesa artesana",
+      "butcher": "Carnisseria",
+      "cafe": "Cafè",
+      "car": "Venda i reparació de cotxes",
+      "car_parts": "Venda de part de cotxes",
+      "car_rental": "Lloguer de vehicles",
+      "car_repair": "Taller",
+      "caterer": "Empresa de càtering",
+      "cheese": "Formatgeria",
+      "chemist": "Adroguer",
+      "chocolate": "Bomboneria",
+      "company": "Empresa",
+      "confectionery": "Botiga de caramels",
+      "convenience": "Colmado / Botiga de conveniència",
+      "convenience;gas": "Estacions de servei",
+      "craft": "Ferreteria",
+      "deli": "Botigues gourmet",
+      "doctors": "Consulta de metge",
+      "doityourself": "Bricolatge",
+      "dry_cleaning": "Neteja en sec",
+      "e-cigarette": "botiga de cigarretes electròniques",
+      "electronics": "Botiga d'electrònica",
+      "electronics_repair": "Botiga de reparació d'electrònica",
+      "employment_agency": "Agència de treball",
+      "farm": "Botiga ramadera",
+      "frozen_food": "Ultramarins",
+      "fuel": "Estacions de servei",
+      "funeral_directors": "Funeràries",
+      "gas": "Benzinera",
+      "greengrocer": "Botiga de queviures",
+      "hardware": "Ferreteria",
+      "insurance": "Corredoria d'assegurances",
+      "kiosk": "Quiosc",
+      "laundry": "Bugaderia",
+      "mall": "Centre comercial",
+      "marketplace": "Mercat",
+      "medical_supply": "Botiga d'equipament mèdic",
+      "mobile_phone": "Botiga de mòbils",
+      "newsagent": "Oficina de diari",
+      "optician": "Òptica",
+      "pet": "Botiga d'animals",
+      "pharmacy": "Farmàcia",
+      "police": "Comissaria",
+      "post_office": "Oficina de correus",
+      "pub": "Bar",
+      "restaurant": "Restaurant",
+      "seafood": "Peixeteria",
+      "social_facility": "Instal·lació social",
+      "stationery": "Botiga de subministraments per a oficines",
+      "supermarket": "Supermercat",
+      "telecommunication": "Botiga de telecomunicacions",
+      "tobacco": "Estanc",
+      "wine": "Botiga de vins",
+      "winery": "Celler"
+    },
+    "opening_hours": {
+      "state_until_date": "{state} fins {date}",
+      "state": {
+        "open": "obert",
+        "closed": "tancat"
+      },
+      "tomorrow": "demà"
+    },
+    "state": {
+      "ouvert": "Lloc obert durant el confinament",
+      "ouvert_adapté": "Lloc obert durant el confinament, amb horaris adaptats",
+      "partiel": "Lloc potencialment obert durant el confinament (s'ha de comprovar)",
+      "inconnu": "Llocs que no se sap l'estat d'obertura",
+      "fermé": "Lloc tancat durant el confinament"
+    },
+    "delivery": {
+      "yes": "Venda a domicili disponible",
+      "only": "Només a domicili"
+    },
+    "takeaway": {
+      "yes": "Venda per emportar disponible",
+      "modified": "Venda per emportar modificada",
+      "only": "Només per emportar"
+    }
+  },
+  "opening_hours_editor": {
+    "select_days": "Seleccionar dies",
+    "next": "Seleccionar hores",
+    "select_time": {
+      "start": "Triar horari d'obertura",
+      "end": "Triar horari de tancament"
+    },
+    "add_interval": "Afegir hores",
+    "add_new_days": "Afegir dies d'obertura"
+  }
+}
