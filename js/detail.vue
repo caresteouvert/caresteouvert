@@ -41,8 +41,8 @@
 
         <v-alert
           v-if="infos"
-          type="info"
           :icon="false"
+          type="info"
           tile
           class="mb-0"
         >
@@ -50,57 +50,37 @@
         </v-alert>
 
         <v-list>
-          <v-list-item
+          <detail-link
             v-if="contact('phone')"
             :href="`tel:${contact('phone')}`"
-          >
-            <v-list-item-icon><v-icon>osm-phone</v-icon></v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>
-                {{ contact('phone') }}
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
+            :title="contact('phone')"
+            icon="osm-phone"
+          />
 
-          <v-list-item
+          <detail-link
             v-if="contact('email')"
-            :href="`mailto:${contact('email')}`"
-          >
-            <v-list-item-icon><v-icon>osm-mail</v-icon></v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>
-                {{ contact('email') }}
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
+            :href="contact('email')"
+            :title="contact('email')"
+            icon="osm-mail"
+          />
 
-          <v-list-item
+          <detail-link
             v-if="contact('facebook')"
             :href="contact('facebook')"
-          >
-            <v-list-item-icon><v-icon>osm-fcbk</v-icon></v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>
-                {{ $t('details.facebook') }}
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
+            :title="contact('facebook')"
+            icon="osm-fcbk"
+          />
 
           <detail-opening-hours
             v-if="point.properties.opening_hours && point.properties.opening_hours !== 'open'"
             :value="point.properties.opening_hours"
           />
-          <v-list-item
-            v-else-if="point.properties.brand_hours"
+          <detail-link
+            v-if="point.properties.brand_hours"
             :href="point.properties.brand_hours"
-          >
-            <v-list-item-icon><v-icon>osm-time</v-icon></v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>
-                {{ $t('details.containment_brand_hours') }}
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
+            :title="$t('details.containment_brand_hours')"
+            icon="osm-time"
+          />
           <template
             v-else-if="point.properties.tags.opening_hours"
           >
@@ -121,17 +101,13 @@
             </v-alert>
           </template>
 
-          <v-list-item
+          <detail-link
             v-if="contact('website')"
             :href="contact('website')"
-          >
-            <v-list-item-icon><v-icon>osm-link</v-icon></v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>
-                {{ contact('website') }}
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
+            :title="contact('website')"
+            icon="osm-link"
+          />
+
         </v-list>
       </v-card>
     </v-slide-x-reverse-transition>
@@ -144,13 +120,15 @@ import DetailTag from './detail_tag';
 import DetailEntry from './detail_entry';
 import DetailOpeningHours from './detail_opening_hours';
 import DetailState from './detail_state';
+import DetailLink from './detail_link';
 
 export default {
   components: {
     DetailEntry,
-    DetailTag,
+    DetailLink,
     DetailOpeningHours,
-    DetailState
+    DetailState,
+    DetailTag,
   },
 
   props: {
