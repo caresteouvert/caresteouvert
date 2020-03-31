@@ -72,4 +72,13 @@ describe('Detail', () => {
     await Vue.nextTick();
     expect(detail.find('.v-alert').contains(DetailOpeningHours)).toBe(true);
   });
+
+  it('display only one opening_hours', async () => {
+    point = { properties: { status: 'ouvert', cat: '', opening_hours: 'Mo-Sa 09:00-18:00', tags: { opening_hours: 'Mo-Sa 09:00-18:00' } } };
+    const detail = createWrapper({ id: '' });
+    await global.fetch();
+    await Vue.nextTick();
+    expect(detail.findAll(DetailOpeningHours).length).toEqual(1);
+  });
+
 });

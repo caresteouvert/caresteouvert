@@ -76,7 +76,7 @@
             :value="point.properties.opening_hours"
           />
           <detail-link
-            v-if="point.properties.brand_hours"
+            v-else-if="point.properties.brand_hours"
             :href="point.properties.brand_hours"
             :title="$t('details.containment_brand_hours')"
             icon="osm-time"
