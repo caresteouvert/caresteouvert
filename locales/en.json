@@ -1,4 +1,5 @@
 {
+  "lang": "English",
   "covid19-alert": "Follow government restrictions. The responsibility is YOURS.",
   "title": "It remains open",
   "subtitle": "Places that remain open during lockdown",
@@ -12,6 +13,7 @@
   "disclaimer": "Disclaimer",
   "missing_shop": "Report a missing shop",
   "blog": "Blog",
+  "change_lang": "Change the language",
   "days": {
     "monday": "Monday",
     "tuesday": "Tuesday",

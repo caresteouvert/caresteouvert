@@ -43,6 +43,11 @@ describe('DetailState', () => {
     expect(detail.vm.type).toEqual('warning');
   });
 
+  it('returns the state when fermé', () => {
+    const detail = createWrapper({ status: 'fermé', point: {} });
+    expect(detail.vm.type).toEqual('error');
+  });
+
   it('open the contribute form', async () => {
     const detail = createWrapper({ status: 'inconnu', point: {} });
     expect(detail.contains(ContributeForm)).toBe(false);

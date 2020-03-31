@@ -114,9 +114,8 @@ const vuetify = new Vuetify({
 });
 
 const i18n = new VueI18n({
-  locale: navigator.language.split('-')[0],
+  locale: localStorage.getItem('lang') || navigator.language.split('-')[0],
   fallbackLocale: 'fr',
-  availableLocales: Object.keys(messages),
   messages
 });
 

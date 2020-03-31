@@ -149,10 +149,12 @@ export default {
   watch: {
     mapCenter() {
       this.updateRoute();
+      this.saveCurrentView();
     },
 
     mapZoom() {
       this.updateRoute();
+      this.saveCurrentView();
     },
 
     filters: {
@@ -182,13 +184,19 @@ export default {
 
     loadInitialLocation(location) {
       let promise;
-      if (!location) {
-        promise = this.centerMapViaGeoIP();
-      } else {
+      const savedMapView = this.savedMapView();
+      if (location) {
         const { lat, lng, zoom } = decodePosition(location, config);
         this.mapCenter = { lat, lng };
         this.mapZoom = zoom;
         promise = Promise.resolve();
+      } else if (savedMapView) {
+        const { center, zoom } = JSON.parse(savedMapView);
+        this.mapCenter = center;
+        this.mapZoom = zoom;
+        promise = Promise.resolve();
+      } else {
+        promise = this.centerMapViaGeoIP();
       }
       return promise;
     },
@@ -229,6 +237,14 @@ export default {
     computeIsMobile() {
       this.isMobile = window.innerWidth < 800;
     },
+
+    savedMapView() {
+      return localStorage.getItem('mapView');
+    },
+
+    saveCurrentView() {
+      localStorage.setItem('mapView', JSON.stringify({ center: this.mapCenter, zoom: this.mapZoom }));
+    }
   }
 }
 </script>
