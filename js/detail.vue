@@ -41,12 +41,13 @@
 
         <v-alert
           v-if="infos"
+          v-html="infos"
+          v-linkified:options="{ className: 'alert-link' }"
           :icon="false"
           type="info"
           tile
           class="mb-0"
         >
-          {{ infos }}
         </v-alert>
 
         <v-list>
@@ -249,5 +250,8 @@ export default {
   left: 0;
   z-index: 10;
   overflow-y: auto;
+}
+.alert-link {
+  color: white;
 }
 </style>
