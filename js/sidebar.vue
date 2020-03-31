@@ -25,12 +25,17 @@
         :title="$t('missing_shop')"
         href="https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/"
       />
-      <v-divider></v-divider>
       <change-language />
+      <v-divider></v-divider>
       <sidebar-list-item
         :title="$t('blog')"
         href="https://blog.caresteouvert.fr/"
       />
+      <sidebar-list-item
+        :title="$t('townhalls')"
+        href="https://blog.caresteouvert.fr/un-outil-de-communication-des-mairies/"
+      />
+      <v-divider></v-divider>
       <sidebar-list-item
         :title="$t('about')"
         href="https://blog.caresteouvert.fr/about/"
