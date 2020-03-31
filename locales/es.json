@@ -1,0 +1,169 @@
+{
+  "lang": "Inglés",
+  "covid19-alert": "Sigue las recomendaciones del gobierno. La responsabilidad es TUYA.",
+  "title": "Permanece abierto",
+  "subtitle": "Sitios que permanecen abiertos durante el Estado de Alarma",
+  "subtitle-dense": "Sitios abiertos durante el Estado de Alarma",
+  "about": "Acerca de",
+  "map": "Mapa",
+  "search": "Buscar",
+  "menu": "Menú",
+  "geolocate": "Muestra tu ubicación actual",
+  "press": "Prensa",
+  "disclaimer": "Descarga de responsabilidad",
+  "missing_shop": "Avisar de un sitio por editar",
+  "blog": "Blog",
+  "townhalls": "Ayuntamientos",
+  "change_lang": "Cambiar el idioma",
+  "days": {
+    "monday": "Lunes",
+    "tuesday": "Martes",
+    "wednesday": "Miércoles",
+    "thursday": "Jueves",
+    "friday": "Viernes",
+    "saturday": "Sábado",
+    "sunday": "Domingo",
+    "ph": "Vacaciones"
+  },
+  "contribute_form": {
+    "title": "Contribuir",
+    "step1": {
+      "title": "¿Este sitio está abierto durante el Estado de Alarma?",
+      "open": {
+        "yes": "sí",
+        "no": "no"
+      }
+    },
+    "step2": {
+      "title": "Horario de apertura durante el Estado de Alarma",
+      "same_hours": "Son los mismos horarios",
+      "same_hours_without_lockdown": "Son los mismos horarios que fuera del Estado de Alarma",
+      "dont_know": "No lo sé",
+      "continue": "Continuar"
+    },
+    "step3": {
+      "title": "Añadir detalles (opcional)"
+    },
+    "submit": "Publicar",
+    "cancel": "Cancelar"
+  },
+  "filter": {
+    "bakery": "Panaderías",
+    "bank": "Bancos y aseguradoras",
+    "food": "Tiendas de alimentación",
+    "fuel": "Estaciones de servicio",
+    "funeral_directors": "Funerarias",
+    "pharmacy": "Farmacias",
+    "police": "Comisarías",
+    "post_office": "Oficinas de correos",
+    "shop": "Tiendas",
+    "tobacco": "Estancos",
+    "other": "Otros lugares"
+  },
+  "details": {
+    "signal": "Avisar de un cambio",
+    "signal_done": "Tu aporte ha sido registrado. ¡Gracias!",
+    "containment_opening_hours": "Horario de apertura en periodo normal",
+    "containment_brand_hours": "Horas de apertura en la página web de la marca",
+    "facebook": "Página de Facebook",
+    "feature": {
+      "agrarian": "Suministros agrícolas",
+      "alcohol": "Licorería",
+      "association": "Asociación",
+      "bakery": "Panadería",
+      "bank": "Banco",
+      "bar": "Pub",
+      "beverages": "Tienda de bebidas",
+      "bicycle": "Tienda de venta y reparación de bicicletas",
+      "books": "Librería",
+      "brewery": " Cervecería artesanal",
+      "butcher": "Carnicería",
+      "cafe": "Cafetería",
+      "car": "Tienda de venta y reparación de coches",
+      "car_parts": "Recambios de automóviles",
+      "car_rental": "Alquiler de coches",
+      "car_repair": "Taller de reparación de coches",
+      "caterer": "Catering",
+      "cheese": "Tienda de queso",
+      "chemist": "Droguería y parafarmacia",
+      "chocolate": "Tienda de chocolates",
+      "company": "Compañía",
+      "confectionery": "Tienda de dulces",
+      "convenience": "Tienda de conveniencia",
+      "convenience;gas": "Estaciones de servicio",
+      "craft": "Tienda de suministros para trabajos de artesanía o bellas artes",
+      "deli": "Tienda delicatesen",
+      "doctors": "Consultorio médico",
+      "doityourself": "Tiendas de bricolaje",
+      "dry_cleaning": "Tintorería",
+      "e-cigarette": "Tienda de cigarrillos electrónicos",
+      "electronics": "Tienda de electrónica",
+      "electronics_repair": "Tienda de reparaciones electrónicas",
+      "employment_agency": "Agencia de empleo",
+      "farm": "Venta directa del productor",
+      "frozen_food": "Tienda de congelados",
+      "fuel": "Estaciones de servicio",
+      "funeral_directors": "Funerarias",
+      "gas": "Gasolinera",
+      "greengrocer": "Verdulería",
+      "hardware": "Ferretería",
+      "insurance": "Oficina de compañia de seguros",
+      "kiosk": "Quiosco",
+      "laundry": "Lavandería",
+      "mall": "Centro comercial",
+      "marketplace": "Mercado",
+      "medical_supply": "Tienda de suministros médicos",
+      "mobile_phone": "Tienda de telefonía",
+      "newsagent": "Vendedor de periódicos",
+      "optician": "Óptica",
+      "pet": "Tienda de mascotas",
+      "pharmacy": "Farmacia",
+      "police": "Estación de policía",
+      "post_office": "Oficina de correos",
+      "pub": "Bar",
+      "restaurant": "Restaurante",
+      "seafood": "Pescadería",
+      "social_facility": "Centro social",
+      "stationery": "Tienda de suministros de oficina",
+      "supermarket": "Supermercado",
+      "telecommunication": "Oficina de compañía de telecomunicaciones",
+      "tobacco": "Estanco",
+      "wine": "Tienda de vinos",
+      "winery": "Bodega"
+    },
+    "opening_hours": {
+      "state_until_date": "{estado} hasta {fecha}",
+      "state": {
+        "open": "abierto",
+        "closed": "cerrado"
+      },
+      "tomorrow": "mañana"
+    },
+    "state": {
+      "ouvert": "Sitio abierto durante el Estado de Alarma",
+      "ouvert_adapté": "Sitio abierto durante el Estado de Alarma, con horario adaptado",
+      "partiel": "Sitio potencialmente abierto durante el Estado de Alarma (por verificar)",
+      "inconnu": "Sitio cuyo estado (abierto/cerrado) se desconoce",
+      "fermé": "Sitio cerrado durante el Estado de Alarma"
+    },
+    "delivery": {
+      "yes": "Servicio de entrega disponible",
+      "only": "Solo por entrega"
+    },
+    "takeaway": {
+      "yes": "Venta para llevar disponible",
+      "modified": "Modificado a ventas para llevar",
+      "only": "Solo venta para llevar"
+    }
+  },
+  "opening_hours_editor": {
+    "select_days": "Seleccionar días",
+    "next": "Seleccionar horas",
+    "select_time": {
+      "start": "Elegir hora de apertura",
+      "end": "Elegir hora de cierre"
+    },
+    "add_interval": "Añadir horas",
+    "add_new_days": "Añadir días de apertura"
+  }
+}
