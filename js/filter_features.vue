@@ -26,6 +26,12 @@
         </v-list-item-action>
       </v-list-item>
     </v-list>
+    <v-switch
+      :value="deliveryOnly"
+      :label="$t('filter.delivery')"
+      class="px-4 mt-0"
+      @change="updateDeliveryOnly"
+    ></v-switch>
   </div>
 </template>
 
@@ -35,6 +41,15 @@ export default {
     filters: {
       type: Object,
       required: true
+    },
+    deliveryOnly: {
+      type: Boolean,
+      required: true
+    }
+  },
+  methods: {
+    updateDeliveryOnly(value) {
+      this.$emit('update:deliveryOnly', !!value);
     }
   }
 }

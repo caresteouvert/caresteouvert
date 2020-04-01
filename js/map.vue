@@ -218,6 +218,11 @@ export default {
     filters: {
       type: Object,
       required: true
+    },
+
+    deliveryOnly: {
+      type: Boolean,
+      required: true
     }
   },
 
@@ -248,6 +253,14 @@ export default {
           "normalized_cat",
           ...unselectedCategories
         ]);
+        if (this.deliveryOnly) {
+          newLayer.filter.push([
+            "in",
+            "delivery",
+            "yes",
+            "only"
+          ])
+        }
         return newLayer;
       });
     }

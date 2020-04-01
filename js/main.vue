@@ -17,7 +17,10 @@
         fixed
       >
         <osm-sidebar>
-          <osm-filter-features :filters="filters" />
+          <osm-filter-features
+            :filters="filters"
+            :delivery-only.sync="deliveryOnly"
+          />
         </osm-sidebar>
       </navigation-drawer>
       <v-content>
@@ -71,6 +74,7 @@
           :map-style="mapStyle"
           :map-center.sync="mapCenter"
           :map-zoom.sync="mapZoom"
+          :delivery-only="deliveryOnly"
           :filters="filters"
           :featuresAndLocation="featuresAndLocation"
         />
@@ -132,7 +136,8 @@ export default {
       filters: config.filters.reduce((memo, filter) => {
         memo[filter] = { selected: true };
         return memo;
-      }, {})
+      }, {}),
+      deliveryOnly: false
     };
   },
 
