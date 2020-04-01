@@ -66,13 +66,13 @@ describe('OpeningHours', () => {
         value: 'Mo-Sa 09:00-18:00'
       }
     });
-    expect(detail.vm.weekDays).toEqual({"monday": "09:00 AM-06:00 PM",
-                                        "tuesday": "09:00 AM-06:00 PM",
-                                        "wednesday": "09:00 AM-06:00 PM",
-                                        "thursday": "09:00 AM-06:00 PM",
-                                        "friday": "09:00 AM-06:00 PM",
-                                        "saturday": "09:00 AM-06:00 PM",
-                                        "sunday": undefined});
+    expect(detail.vm.weekDays).toEqual({"monday": { hours: "09:00 AM-06:00 PM" },
+                                        "tuesday": { hours: "09:00 AM-06:00 PM" },
+                                        "wednesday": { hours: "09:00 AM-06:00 PM" },
+                                        "thursday": { hours: "09:00 AM-06:00 PM" },
+                                        "friday": { hours: "09:00 AM-06:00 PM" },
+                                        "saturday": { hours: "09:00 AM-06:00 PM" },
+                                        "sunday": { hours: undefined } });
   });
 
   it('returns the weeks days with overlapping month', () => {
@@ -83,13 +83,31 @@ describe('OpeningHours', () => {
         value: 'Mo-Sa 09:00-18:00'
       }
     });
-    expect(detail.vm.weekDays).toEqual({"monday": "09:00 AM-06:00 PM",
-                                        "tuesday": "09:00 AM-06:00 PM",
-                                        "wednesday": "09:00 AM-06:00 PM",
-                                        "thursday": "09:00 AM-06:00 PM",
-                                        "friday": "09:00 AM-06:00 PM",
-                                        "saturday": "09:00 AM-06:00 PM",
-                                        "sunday": undefined});
+    expect(detail.vm.weekDays).toEqual({"monday": { hours: "09:00 AM-06:00 PM" },
+                                        "tuesday": { hours: "09:00 AM-06:00 PM" },
+                                        "wednesday": { hours: "09:00 AM-06:00 PM" },
+                                        "thursday": { hours: "09:00 AM-06:00 PM" },
+                                        "friday": { hours: "09:00 AM-06:00 PM" },
+                                        "saturday": { hours: "09:00 AM-06:00 PM" },
+                                        "sunday": { hours: undefined } });
+  });
+
+  it('display the comment in the days detail', () => {
+    const detail = shallowMount(DetailOpeningHours, {
+      localVue,
+      stubs,
+      propsData: {
+        value: 'Tu-Sa 09:00-18:00; Mo off "Sonnez en face"'
+      }
+    });
+    expect(detail.vm.weekDays).toEqual({"monday": { hours: undefined,
+                                                    comment: "Sonnez en face" },
+                                        "tuesday": { hours: "09:00 AM-06:00 PM" },
+                                        "wednesday": { hours: "09:00 AM-06:00 PM" },
+                                        "thursday": { hours: "09:00 AM-06:00 PM" },
+                                        "friday": { hours: "09:00 AM-06:00 PM" },
+                                        "saturday": { hours: "09:00 AM-06:00 PM" },
+                                        "sunday": { hours: undefined }});
   });
 
   it('format the next change', () => {

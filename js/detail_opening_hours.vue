@@ -12,7 +12,16 @@
   >
     <template v-slot:activator>
       <v-list-item-content>
-        <v-list-item-title>
+        <template v-if="comment">
+          <v-list-item-title>
+            {{ $t(`details.opening_hours.state.${state}`) }}
+          </v-list-item-title>
+          <v-list-item-subtitle
+            v-text="comment"
+            :title="comment"
+          ></v-list-item-subtitle>
+        </template>
+        <v-list-item-title v-else>
           {{ $t(`${namespace}.state_until_date`, { state: $t(`details.opening_hours.state.${state}`), date: formatNextDate}) }}
         </v-list-item-title>
       </v-list-item-content>
@@ -23,8 +32,12 @@
       <v-list-item-content>
         <v-list-item-title>
           {{ $t(`days.${day}`) }}:
-          {{ interval }}
+          {{ interval.hours }}
         </v-list-item-title>
+        <v-list-item-subtitle
+          v-text="interval.comment"
+          :title="interval.comment"
+        ></v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
   </v-list-group>
@@ -55,14 +68,19 @@ export default {
     openingHours() {
       return new OpeningHours(this.value, null, { mode: this.mode });
     },
+    comment() {
+      return this.openingHours.getComment();
+    },
     state() {
       return this.openingHours.getState() ? 'open' : 'closed';
     },
     weekDays() {
       return ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].reduce((memo, day, index) => {
-        memo[day] = this.formatIntervals(this.openingHours.getOpenIntervals(...this.getDayOfWeek(index + 1)));
-        const comment = this.openingHours.getComment();
-        if (comment) memo[day] = `${memo[day]} ${comment}`;
+        const comment = this.openingHours.getComment(this.getDayOfWeek(index + 1)[0]);
+        memo[day] = {
+          hours: this.formatIntervals(this.openingHours.getOpenIntervals(...this.getDayOfWeek(index + 1))),
+          comment
+        };
         return memo;
       }, {});
     },
