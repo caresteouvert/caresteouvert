@@ -143,7 +143,7 @@
       "ouvert": "Lieu ouvert durant le confinement",
       "ouvert_adapté": "Lieu ouvert durant le confinement avec des horaires adaptées",
       "partiel": "Lieu potentiellement ouvert durant le confinement (à vérifier)",
-      "inconnu": "Lieu autorisé à ouvrir durant le confinement. Ouvert ou fermé ? À vous de le dire",
+      "inconnu": "Endroit autorisé à ouvrir pendant la fermeture. Ouvert ou fermé ? Faites-le nous savoir",
       "fermé": "Lieu fermé durant le confinement"
     },
     "delivery": {
