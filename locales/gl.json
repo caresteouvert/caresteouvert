@@ -1,0 +1,169 @@
+{
+  "lang": "Galego",
+  "covid19-alert": "Segue as recomendacións do goberno. A responsabilidade é TÚA.",
+  "title": "Mantense aberto",
+  "subtitle": "Lugares que se manteñen abertos durante o confinamento",
+  "subtitle-dense": "Lugares abertos durante o confinamento",
+  "about": "Sobre",
+  "map": "Mapa",
+  "search": "Procurar",
+  "menu": "Menú",
+  "geolocate": "Amosar a túa localización actual",
+  "press": "Prensa",
+  "disclaimer": "Responsabilidade legal",
+  "missing_shop": "Informar dunha tenda que falla",
+  "blog": "Blogue",
+  "townhalls": "Concellos",
+  "change_lang": "Mudar lingua",
+  "days": {
+    "monday": "Luns / Segunda feira",
+    "tuesday": "Martes / Terza feira",
+    "wednesday": "Mércores / Corta feira",
+    "thursday": "Xoves / Quinta feira",
+    "friday": "Venres / Sexta feira",
+    "saturday": "Sábado",
+    "sunday": "Domingo",
+    "ph": "Vacacións"
+  },
+  "contribute_form": {
+    "title": "Contribuír",
+    "step1": {
+      "title": "Este lugar está aberto durante o confinamento?",
+      "open": {
+        "yes": "si",
+        "no": "non"
+      }
+    },
+    "step2": {
+      "title": "Horario de apertura durante o confinamento",
+      "same_hours": "Son os mesmos horarios",
+      "same_hours_without_lockdown": "Son os mesmos horarios que fóra do confinamento",
+      "dont_know": "Non o sei",
+      "continue": "Continuar"
+    },
+    "step3": {
+      "title": "Engadir detalles (opcional)"
+    },
+    "submit": "Publicar",
+    "cancel": "Desbotar"
+  },
+  "filter": {
+    "bakery": "Panadarías",
+    "bank": "Bancos e aseguradoras",
+    "food": "Tendas de alimentación",
+    "fuel": "Estacións de servizo",
+    "funeral_directors": "Tanatorios e funerarias",
+    "pharmacy": "Farmacias",
+    "police": "Comisarías",
+    "post_office": "Oficinas de correos",
+    "shop": "Tendas",
+    "tobacco": "Estancos",
+    "other": "Outros lugares"
+  },
+  "details": {
+    "signal": "Informar dun cambio",
+    "signal_done": "O teu informe foi rexistrado. Grazas!",
+    "containment_opening_hours": "Horario de apertura fóra do período de confinamento",
+    "containment_brand_hours": "Horario de apertura na páxina web da marca",
+    "facebook": "Páxina do Facebook",
+    "feature": {
+      "agrarian": "Subministracións agrícolas",
+      "alcohol": "Licoraría",
+      "association": "Asociación",
+      "bakery": "Panadaría",
+      "bank": "Banco",
+      "bar": "Bar de copas",
+      "beverages": "Tenda de bebidas",
+      "bicycle": "Tenda de venda e arranxo de bicicletas",
+      "books": "Libraría",
+      "brewery": " Cervexaría artesá",
+      "butcher": "Carnizaría",
+      "cafe": "Cafetaría",
+      "car": "Tenda de venda e arranxo de coches",
+      "car_parts": "Recambios de automóbiles",
+      "car_rental": "Alugueiro de coches",
+      "car_repair": "Taller de arranxo de coches",
+      "caterer": "Catering",
+      "cheese": "Queixaría",
+      "chemist": "Drogaría e parafarmacia",
+      "chocolate": "Tenda de chocolates",
+      "company": "Empresa",
+      "confectionery": "Tenda de larpeiradas",
+      "convenience": "Ultramarinos",
+      "convenience;gas": "Estación de servizo",
+      "craft": "Tenda de subministracións para traballos manuais",
+      "deli": "Delicatessen",
+      "doctors": "Consultorio médico",
+      "doityourself": "Tenda de bricolaxe",
+      "dry_cleaning": "Tintoraría",
+      "e-cigarette": "Tenda de cigarros electrónicos",
+      "electronics": "Tenda de electrónica",
+      "electronics_repair": "Tenda de arranxo de electrónica",
+      "employment_agency": "Axencia de traballo",
+      "farm": "Tenda de gandaría",
+      "frozen_food": "Tenda de conxelados",
+      "fuel": "Estacións de servizo",
+      "funeral_directors": "Tanatorio ou funeraria",
+      "gas": "Gasolineira",
+      "greengrocer": "Froitaría",
+      "hardware": "Ferraxaría",
+      "insurance": "Compañía de seguros",
+      "kiosk": "Quiosco",
+      "laundry": "Lavandaría",
+      "mall": "Centro comercial",
+      "marketplace": "Mercado",
+      "medical_supply": "Tenda de subministracións médicas",
+      "mobile_phone": "Tenda de móbiles",
+      "newsagent": "Quiosco",
+      "optician": "Óptica",
+      "pet": "Tenda de animais",
+      "pharmacy": "Farmacia",
+      "police": "Comisaría",
+      "post_office": "Oficina de correos",
+      "pub": "Bar",
+      "restaurant": "Restaurante",
+      "seafood": "Peixaría",
+      "social_facility": "Instalación social",
+      "stationery": "Tenda de subministracións de oficina",
+      "supermarket": "Supermercado",
+      "telecommunication": "Oficina de telecomunicacións",
+      "tobacco": "Estanco",
+      "wine": "Tenda de viños",
+      "winery": "Adega"
+    },
+    "opening_hours": {
+      "state_until_date": "{state} até {date}",
+      "state": {
+        "open": "aberto",
+        "closed": "pechado"
+      },
+      "tomorrow": "mañá"
+    },
+    "state": {
+      "ouvert": "Lugar aberto durante o confinamento",
+      "ouvert_adapté": "Lugar aberto durante o confinamento, con horarios adaptados",
+      "partiel": "Lugar potencialment aberto durante o confinamento (ten que comprobarse)",
+      "inconnu": "Permitida a apertura do lugar durante o confinamento. Aberto ou pechado? Infórmanos",
+      "fermé": "Lugar pechado durante o confinamento"
+    },
+    "delivery": {
+      "yes": "Venda a domicilio dispoñíbel",
+      "only": "Só a domicilio"
+    },
+    "takeaway": {
+      "yes": "Venda para levar dispoñíbel",
+      "modified": "Venda para levar modificada",
+      "only": "Só venda para levar"
+    }
+  },
+  "opening_hours_editor": {
+    "select_days": "Escoller días",
+    "next": "Escoller horas",
+    "select_time": {
+      "start": "Escoller horario de apertura",
+      "end": "Escoller hora de peche"
+    },
+    "add_interval": "Engadir horas",
+    "add_new_days": "Engadir días de apertura"
+  }
+}
