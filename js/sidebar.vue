@@ -2,7 +2,11 @@
   <div>
     <v-card>
       <v-card-title class="pl-1 pt-5 pb-5 justify-center">
-        <img class="logo" src="../images/logo2.png" :alt="$t('title')" />
+        <img
+          :alt="$t('title')"
+          class="px-3"
+          src="../images/logo.svg"
+        />
       </v-card-title>
       <v-card-subtitle class="pl-2 text-center">
         {{ $t('subtitle') }}
@@ -30,7 +34,6 @@
 
     <slot />
     <v-list>
-      <slot name="list-top"></slot>
       <v-divider></v-divider>
       <sidebar-list-item
         :title="$t('missing_shop')"
@@ -77,10 +80,3 @@ export default {
   components: { ChangeLanguage, SidebarListItem }
 }
 </script>
-
-<style scoped>
-  .logo {
-    width: 150px;
-    max-width: 100%;
-  }
-</style>
