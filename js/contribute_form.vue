@@ -118,6 +118,7 @@ export default {
       required: true
     }
   },
+
   data() {
     return {
       step: 1,
@@ -127,6 +128,12 @@ export default {
       openingHours: [],
       openingHoursWithoutLockDown: false
     };
+  },
+
+  mounted() {
+    if (this.point.properties.opening_hours) {
+      this.openingHours = this.parseOpeningHours(this.point.properties.opening_hours);
+    }
   },
 
   computed: {
@@ -175,8 +182,12 @@ export default {
     },
 
     sameOpeningHours() {
-      const table = new OpeningHoursParser(this.point.properties.tags.opening_hours).getTable();
-      this.openingHours = Object.keys(table).map((day) => {
+      this.openingHours = this.parseOpeningHours(this.point.properties.tags.opening_hours);
+    },
+
+    parseOpeningHours(openingHours) {
+      const table = new OpeningHoursParser(openingHours).getTable();
+      return Object.keys(table).map((day) => {
         return { days: [day], hours: [...table[day]] };
       }).filter(interval => interval.hours.length > 0);
     },
