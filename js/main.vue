@@ -129,7 +129,10 @@ export default {
       mapCenter: null,
       mapZoom: null,
       mapStyle: `${config.mapStyle}${config.apiKey}`,
-      filters: config.filters
+      filters: config.filters.reduce((memo, filter) => {
+        memo[filter] = { selected: true };
+        return memo;
+      }, {})
     };
   },
 
