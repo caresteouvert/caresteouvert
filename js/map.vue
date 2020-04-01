@@ -3,11 +3,16 @@
     :center="mapCenter"
     :zoom="mapZoom"
     :map-style="mapStyle"
+    :attribution-control="false"
     @load="load"
     @update:center="updateMapCenter"
     @update:zoom="updateMapZoom"
   >
     <MglNavigationControl :show-compass="false" />
+    <MglAttributionControl
+      :compact="false"
+      position="bottom-right"
+    />
     <MglVectorLayer
       v-for="layer in layers"
       :key="layer.id"
@@ -25,7 +30,7 @@
 
 <script>
 import * as config from '../config.json';
-import { MglMap, MglNavigationControl, MglVectorLayer } from 'vue-mapbox/dist/vue-mapbox.umd';
+import { MglMap, MglNavigationControl, MglVectorLayer, MglAttributionControl } from 'vue-mapbox/dist/vue-mapbox.umd';
 
 const source = "public.poi_osm_light";
 
@@ -182,6 +187,7 @@ const layers = [
 
 export default {
   components: {
+    MglAttributionControl,
     MglMap,
     MglNavigationControl,
     MglVectorLayer,
