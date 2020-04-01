@@ -143,7 +143,7 @@
       "ouvert": "Place open during lockdown",
       "ouvert_adapté": "Place open during lockdown, with adapted hours",
       "partiel": "Place potentially open during lockdown (to be checked)",
-      "inconnu": "Place whose open status is not known",
+      "inconnu": "Place allowed to open during lockdown. Open or closed ? Let us know",
       "fermé": "Place closed during lockdown"
     },
     "delivery": {
