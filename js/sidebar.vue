@@ -10,12 +10,23 @@
     </v-card>
 
     <v-alert
-      v-html="$t('covid19-alert')"
       dense
       tile
-      type="warning"
+      color="orange"
+      dark
       class="mb-0"
-    />
+    >
+      {{ $t('covid19-alert') }}
+      <v-btn
+        icon
+        x-small
+        color="secondary"
+        href="https://www.gouvernement.fr/info-coronavirus"
+        target="_blank"
+      >
+        <v-icon>{{ `osm-info` }}</v-icon>
+      </v-btn>
+    </v-alert>
 
     <slot />
     <v-list>
