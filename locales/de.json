@@ -1,0 +1,169 @@
+{
+  "lang": "Deutsch",
+  "covid19-alert": "Folge den behördlichen Einschränkungen. Die Verantwortung liegt bei DIR.",
+  "title": "Bleibt offen",
+  "subtitle": "Orte, die während der Kontaktbeschränkungen geöffnet bleiben",
+  "subtitle-dense": "Orte trotz Beschränkungen geöffnet",
+  "about": "Über",
+  "map": "Karte",
+  "search": "Suche",
+  "menu": "Menü",
+  "geolocate": "Zeige deinen aktuellen Standort",
+  "press": "Presse",
+  "disclaimer": "Haftungsausschluss",
+  "missing_shop": "Ein fehlendes Geschäft melden",
+  "blog": "Blog",
+  "townhalls": "Rathäuser",
+  "change_lang": "Sprache ändern",
+  "days": {
+    "monday": "Montag",
+    "tuesday": "Dienstag",
+    "wednesday": "Mittwoch",
+    "thursday": "Donnerstag",
+    "friday": "Freitag",
+    "saturday": "Samstag",
+    "sunday": "Sonntag",
+    "ph": "Feiertage"
+  },
+  "contribute_form": {
+    "title": "Mitmachen",
+    "step1": {
+      "title": "Ist dieser Ort trotz Kontaktbeschränkungen geöffnet?",
+      "open": {
+        "yes": "Ja",
+        "no": "Nein"
+      }
+    },
+    "step2": {
+      "title": "Öffnungszeiten während der Kontaktbeschränkungen",
+      "same_hours": "Gleiche Zeiten",
+      "same_hours_without_lockdown": "Die Öffnungszeiten sind die gleichen wie außerhalb der Kontaktbeschränkungen",
+      "dont_know": "Weiß ich nicht",
+      "continue": "Weiter"
+    },
+    "step3": {
+      "title": "Details hinzufügen (optional)"
+    },
+    "submit": "Veröffentlichen",
+    "cancel": "Abbrechen"
+  },
+  "filter": {
+    "bakery": "Bäckereien",
+    "bank": "Banken & Versicherungen",
+    "food": "Lebensmittelgeschäfte",
+    "fuel": "Tankstellen",
+    "funeral_directors": "Bestattungsunternehmer",
+    "pharmacy": "Apotheken",
+    "police": "Polizeiwachen",
+    "post_office": "Postfilialen",
+    "shop": "Geschäfte",
+    "tobacco": "Tabakgeschäft",
+    "other": "Andere Orte"
+  },
+  "details": {
+    "signal": "Änderung melden",
+    "signal_done": "Deine Meldung wurde gespeichert. Vielen Dank!",
+    "containment_opening_hours": "Öffnungszeiten außerhalb der Kontaktbeschränkungen",
+    "containment_brand_hours": "Öffnungszeiten auf der Webseite der Kette",
+    "facebook": "Facebook-Seite",
+    "feature": {
+      "agrarian": "Agrarfachgeschäft",
+      "alcohol": "Spirituosengeschäft",
+      "association": "Verband",
+      "bakery": "Bäckerei",
+      "bank": "Bank",
+      "bar": "Bar",
+      "beverages": "Getränkeladen",
+      "bicycle": "Fahrradgeschäft",
+      "books": "Buchhandlung",
+      "brewery": "Brauerei",
+      "butcher": "Metzgerei",
+      "cafe": "Café",
+      "car": "Autogeschäft",
+      "car_parts": "Autoteile-Lager",
+      "car_rental": "Autovermietung",
+      "car_repair": "Autowerkstatt",
+      "caterer": "Caterer",
+      "cheese": "Käseladen",
+      "chemist": "Drogerie",
+      "chocolate": "Schokoladenladen",
+      "company": "Firma",
+      "confectionery": "Süßwarengeschäft",
+      "convenience": "Bedarfsartikelgeschäft",
+      "convenience;gas": "Tankstellen",
+      "craft": "Geschäft für Künstlerbedarf",
+      "deli": "Feinkostgeschäft",
+      "doctors": "Arztpraxis",
+      "doityourself": "Heimwerkergeschäfte",
+      "dry_cleaning": "Chemische Reinigung",
+      "e-cigarette": "E-Zigaretten",
+      "electronics": "Elektrogeschäft",
+      "electronics_repair": "Elektronik-Werkstatt",
+      "employment_agency": "Arbeitsagentur",
+      "farm": "Hofladen",
+      "frozen_food": "Tiefkühlgeschäft",
+      "fuel": "Tankstellen",
+      "funeral_directors": "Bestattungsunternehmen",
+      "gas": "Tankstellen",
+      "greengrocer": "Gemüsehändler",
+      "hardware": "Baumarkt",
+      "insurance": "Versicherung",
+      "kiosk": "Kiosk",
+      "laundry": "Wäscherei",
+      "mall": "Einkaufszentrum",
+      "marketplace": "Marktplatz",
+      "medical_supply": "Sanitätshaus",
+      "mobile_phone": "Mobiltelefon-Laden",
+      "newsagent": "Nachrichtenagentur",
+      "optician": "Optiker",
+      "pet": "Tierhandlung",
+      "pharmacy": "Apotheke",
+      "police": "Polizeiwache",
+      "post_office": "Postfiliale",
+      "pub": "Kneipe",
+      "restaurant": "Restaurant",
+      "seafood": "Meeresfrüchte-Laden",
+      "social_facility": "Soziale Einrichtung",
+      "stationery": "Geschäft für Bürobedarf",
+      "supermarket": "Supermarkt",
+      "telecommunication": "Filiale eines Telekommunikationsanbieters",
+      "tobacco": "Tabakgeschäft",
+      "wine": "Weinhandlung",
+      "winery": "Weingut"
+    },
+    "opening_hours": {
+      "state_until_date": "{state} bis {date}",
+      "state": {
+        "open": "Geöffnet",
+        "closed": "Geschlossen"
+      },
+      "tomorrow": "Morgen"
+    },
+    "state": {
+      "ouvert": "Ort geöffnet trotz Kontaktbeschränkung",
+      "ouvert_adapté": "Ort geöffnet mit abweichenden Öffnungszeiten",
+      "partiel": "Ort möglicherweise geöffnet trotz Kontaktbeschränkung (zu überprüfen)",
+      "inconnu": "Ort darf trotz Kontaktbeschränkung geöffnet sein. Geöffnet oder geschlossen? Sag' es uns",
+      "fermé": "Ort geschlossen während Kontaktbeschränkung"
+    },
+    "delivery": {
+      "yes": "Lieferung möglich",
+      "only": "Nur Lieferung"
+    },
+    "takeaway": {
+      "yes": "Verkauf zum Mitnehmen möglich",
+      "modified": "Abweichender Verkauf zum Mitnehmen",
+      "only": "Nur zum Mitnehmen"
+    }
+  },
+  "opening_hours_editor": {
+    "select_days": "Wochentage auswählen",
+    "next": "Zeiten auswählen",
+    "select_time": {
+      "start": "Wähle den Beginn der Öffnungszeiten",
+      "end": "Wähle das Ende der Öffnungszeiten"
+    },
+    "add_interval": "Zeiten hinzufügen",
+    "add_new_days": "Wochentage hinzufügen"
+  }
+}
