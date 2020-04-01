@@ -91,6 +91,7 @@ CREATE TABLE IF NOT EXISTS poi_osm_next(
 	brand_infos VARCHAR,
 	status VARCHAR DEFAULT 'inconnu',
 	opening_hours VARCHAR,
+	delivery VARCHAR DEFAULT 'unknown',
 	tags JSONB
 );
 
@@ -98,7 +99,7 @@ TRUNCATE TABLE poi_osm_next;
 
 
 -- Only add POI with appropriate tagging
-INSERT INTO poi_osm_next(fid, geom, name, cat, normalized_cat, brand, brand_wikidata, brand_infos, status, opening_hours, tags)
+INSERT INTO poi_osm_next(fid, geom, name, cat, normalized_cat, brand, brand_wikidata, brand_infos, status, opening_hours, delivery, tags)
 SELECT
 	concat('n', osm_id),
 	way,
@@ -110,6 +111,11 @@ SELECT
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
 	opening_state(tags),
 	CASE WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') AND NOT "opening_hours:covid19" ILIKE 'off%' THEN "opening_hours:covid19" ELSE NULL END,
+	CASE
+		WHEN tags->'delivery:covid19' IN ('yes', 'no', 'only') THEN tags->'delivery:covid19'
+		WHEN tags->'delivery' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'delivery'
+		ELSE 'unknown'
+	END,
 	hstore_to_jsonb(tags)
 FROM imposm_osm_point
 WHERE
@@ -127,6 +133,11 @@ SELECT
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
 	opening_state(tags),
 	CASE WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') AND NOT "opening_hours:covid19" ILIKE 'off%' THEN "opening_hours:covid19" ELSE NULL END,
+	CASE
+		WHEN tags->'delivery:covid19' IN ('yes', 'no', 'only') THEN tags->'delivery:covid19'
+		WHEN tags->'delivery' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'delivery'
+		ELSE 'unknown'
+	END,
 	hstore_to_jsonb(tags)
 FROM imposm_osm_polygon
 WHERE
@@ -183,7 +194,7 @@ ALTER INDEX poi_osm_next_geom_idx RENAME TO poi_osm_geom_idx;
 ALTER INDEX poi_osm_next_status_idx RENAME TO poi_osm_status_idx;
 
 CREATE OR REPLACE VIEW poi_osm_light AS
-SELECT fid, geom, name, cat, normalized_cat, status
+SELECT fid, geom, name, cat, normalized_cat, status, delivery
 FROM poi_osm;
 
 
