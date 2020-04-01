@@ -143,7 +143,7 @@ export default {
     this.geocoder = !this.isMobile;
 
     const { features, location } = decode(this.featuresAndLocation);
-    decodeFeatures(features, config.filters);
+    decodeFeatures(features, this.filters);
 
     Promise.all([
       this.loadInitialLocation(location),
