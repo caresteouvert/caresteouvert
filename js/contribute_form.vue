@@ -89,9 +89,10 @@
       <v-stepper-content step="3">
         <v-textarea
           v-model="details"
-          name="details"
-          class="textarea-details"
+          :label="$t('contribute_form.step3.details')"
+          filled
         ></v-textarea>
+
         <v-btn
           :loading="loading"
           color="primary"
@@ -219,9 +220,3 @@ export default {
   }
 };
 </script>
-
-<style>
-  .textarea-details textarea {
-    background-color: #f2f2f2;
-  }
-</style>
