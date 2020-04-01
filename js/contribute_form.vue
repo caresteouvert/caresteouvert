@@ -89,7 +89,6 @@
       <v-stepper-content step="3">
         <v-textarea
           v-model="details"
-          :label="$t('contribute_form.step3.details')"
           filled
         ></v-textarea>
 
