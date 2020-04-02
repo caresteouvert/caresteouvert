@@ -33,13 +33,13 @@ export default {
     search: debounce(function (val) {
       if (this.controller) {
         this.controller.abort();
+        this.controller = null;
       }
-      this.controller = new AbortController();
-      const signal = this.controller.signal;
-
       if (!val || val.trim().length < 3) return;
       this.error = null;
       this.isLoading = true;
+      this.controller = new AbortController();
+      const signal = this.controller.signal;
 
       fetch(`https://api.jawg.io/places/v1/search?boundary.country=FRA&text=${encodeURIComponent(this.search)}&access-token=${jawgApiKey}`, { signal })
         .then(res => res.json())
