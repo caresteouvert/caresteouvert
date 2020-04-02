@@ -58,7 +58,7 @@ export default {
         .finally(() => {
           this.isLoading = false;
         });
-    }, 350),
+    }, 350, { maxWait: 500 }),
     selected(val) {
       this.$emit('select', val);
     }
