@@ -110,7 +110,7 @@
           />
 
         </v-list>
-        <v-footer absolute>
+        <v-footer tile>
           <osm-link :id="id" />
         </v-footer>
       </v-card>
