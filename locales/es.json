@@ -42,7 +42,15 @@
       "continue": "Continuar"
     },
     "step3": {
-      "title": "Añadir detalles (opcional)"
+      "title": "Añadir detalles",
+      "delivery": {
+        "title": "Solo por entrega",
+        "unknown": "No lo sé",
+        "yes": "Sí",
+        "only": "Solo por entrega",
+        "no": "No"
+      },
+      "details": "Añadir detalles solo si necesario"
     },
     "submit": "Publicar",
     "cancel": "Cancelar"
@@ -143,7 +151,7 @@
       "ouvert": "Sitio abierto durante el Estado de Alarma",
       "ouvert_adapté": "Sitio abierto durante el Estado de Alarma, con horario adaptado",
       "partiel": "Sitio potencialmente abierto durante el Estado de Alarma (por verificar)",
-      "inconnu": "Sitio cuyo estado (abierto/cerrado) se desconoce",
+      "inconnu": "Sitio con permiso a abrir durante el Estado de Alarma. ¿Abierto o cerrado? Haznos saber",
       "fermé": "Sitio cerrado durante el Estado de Alarma"
     },
     "delivery": {
