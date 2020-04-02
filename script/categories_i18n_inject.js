@@ -8,7 +8,7 @@ const fs = require('fs');
 const LOCALES_DIR = path.join(__dirname, "..", "locales");
 const CATEGORIES_JSON = path.join(__dirname, "..", "categories.json");
 
-const categories = require(CATEGORIES_JSON);
+const catg = require(CATEGORIES_JSON);
 const JSON_RGX = /^[A-Za-z0-9_\-]+\.json$/;
 
 // Load in-memory all translation files
@@ -32,7 +32,7 @@ Object.entries(locales).forEach(e => {
 	const localeLabels = locale.categories;
 
 	if(localeLabels) {
-		Object.entries(categories).forEach(e => {
+		Object.entries(catg.categories).forEach(e => {
 			const [ key, cat ] = e;
 
 			if(localeLabels[key]) {
@@ -51,7 +51,7 @@ Object.entries(locales).forEach(e => {
 });
 
 // Write updated categories
-const outCategories = JSON.stringify(categories, null, 2);
+const outCategories = JSON.stringify(catg, null, 2);
 fs.writeFile(CATEGORIES_JSON, outCategories, (err) => {
 	if(err) { throw new Error(err); }
 });
