@@ -42,7 +42,15 @@
       "continue": "Continuar"
     },
     "step3": {
-      "title": "Afegir detalls (opcional)"
+      "title": "Afegir detalls",
+      "delivery": {
+        "title": "Aquest lloc distribueix a domicili",
+        "unknown": "No ho sé",
+        "yes": "Sí",
+        "only": "Només a domicili",
+        "no": "No"
+      },
+      "details": "Afegeix detalls només si és necessari"
     },
     "submit": "Publicar",
     "cancel": "Cancel·lar"
@@ -143,7 +151,7 @@
       "ouvert": "Lloc obert durant el confinament",
       "ouvert_adapté": "Lloc obert durant el confinament, amb horaris adaptats",
       "partiel": "Lloc potencialment obert durant el confinament (s'ha de comprovar)",
-      "inconnu": "Llocs que no se sap l'estat d'obertura",
+      "inconnu": "Lloc obert durant el confinament. Obert o tancat? Explica'ns-ho",
       "fermé": "Lloc tancat durant el confinament"
     },
     "delivery": {
