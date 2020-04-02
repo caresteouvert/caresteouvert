@@ -123,6 +123,7 @@
 import OpeningHoursParser from 'transport-hours/src/OpeningHoursParser';
 import { apiUrl } from '../config.json';
 import OpeningHoursEditor from './opening_hours_editor';
+import parseId from './parse_id';
 
 export default {
   components: { OpeningHoursEditor },
@@ -181,12 +182,8 @@ export default {
     },
 
     id() {
-      const types = {
-        n: 'node',
-        w: 'way',
-        r: 'relation'
-      };
-      return `${types[this.point.id[0]]}/${this.point.id.substring(1)}`;
+      const { type, id } = parseId(this.point.id);
+      return `${type}/${id}`;
     },
 
     payload() {

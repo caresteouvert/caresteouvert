@@ -110,6 +110,9 @@
           />
 
         </v-list>
+        <v-footer absolute>
+          <osm-link :id="id" />
+        </v-footer>
       </v-card>
     </v-slide-x-reverse-transition>
   </div>
@@ -122,6 +125,7 @@ import DetailEntry from './detail_entry';
 import DetailOpeningHours from './detail_opening_hours';
 import DetailState from './detail_state';
 import DetailLink from './detail_link';
+import OsmLink from './osm_link';
 
 export default {
   components: {
@@ -130,6 +134,7 @@ export default {
     DetailOpeningHours,
     DetailState,
     DetailTag,
+    OsmLink
   },
 
   props: {

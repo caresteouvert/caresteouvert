@@ -173,5 +173,10 @@
     },
     "add_interval": "Ajouter un horaire",
     "add_new_days": "Ajouter des jours d'ouverture"
+  },
+  "osm_link": {
+    "title": "« Ça reste ouvert » utilise les données d'OpenStreetMap.",
+    "view": "Voir",
+    "edit": "Modifier"
   }
 }

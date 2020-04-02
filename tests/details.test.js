@@ -15,6 +15,7 @@ describe('Detail', () => {
     'v-icon': '<div></div>',
     'v-btn': '<div></div>',
     'v-spacer': '<div></div>',
+    'v-footer': '<div></div>',
     'v-slide-x-reverse-transition': '<div><slot /></div>'
   };
 
