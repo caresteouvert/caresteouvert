@@ -42,7 +42,15 @@
       "continue": "Continuer"
     },
     "step3": {
-      "title": "Ajouter une précision (optionnel)"
+      "title": "Ajouter des précisions",
+      "delivery": {
+        "title": "Ce lieu propose la livraison pendant le confinement",
+        "unknown": "Ne sais pas",
+        "yes": "Oui",
+        "only": "Propose seulement la livraison",
+        "no": "Non"
+      },
+      "details": "Ajouter des détails si nécessaire"
     },
     "submit": "Publier",
     "cancel": "Annuler"
