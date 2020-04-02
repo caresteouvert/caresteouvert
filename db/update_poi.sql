@@ -49,15 +49,15 @@ $$ LANGUAGE plpgsql;
 
 
 -- Function to get normalized category label
-CREATE OR REPLACE FUNCTION normcat(amenity VARCHAR, shop VARCHAR, craft VARCHAR, office VARCHAR, tobacco VARCHAR) RETURNS VARCHAR AS $$
+CREATE OR REPLACE FUNCTION normcat(amenity VARCHAR, shop VARCHAR, craft VARCHAR, office VARCHAR, tobacco VARCHAR, tags HSTORE) RETURNS VARCHAR AS $$
 BEGIN
-	IF shop IN ('bakery', 'pastry') THEN
+	IF shop IN ('bakery', 'pastry') OR (amenity = 'vending_machine' AND tags->'vending' = 'bread') THEN
 		RETURN 'bakery';
 	ELSIF amenity = 'bank' OR shop = 'money_lender' OR office IN ('insurance', 'financial') THEN
 		RETURN 'bank';
 	ELSIF amenity = 'fuel' OR shop ILIKE '%gas%' THEN
 		RETURN 'fuel';
-	ELSIF shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'beverages', 'wine', 'alcohol', 'farm', 'deli') OR amenity = 'marketplace' THEN
+	ELSIF shop IN ('supermarket', 'convenience', 'frozen_food', 'greengrocer', 'butcher', 'seafood', 'cheese', 'bakery', 'beverages', 'wine', 'alcohol', 'farm', 'deli') OR amenity = 'marketplace' OR  (amenity = 'vending_machine' AND tags->'vending' = 'pizza') THEN
 		RETURN 'food';
 	ELSIF shop = 'funeral_directors' THEN
 		RETURN 'funeral_directors';
@@ -71,11 +71,11 @@ BEGIN
 		RETURN 'other';
 	END IF;
 END;
-$$ LANGUAGE plpgsql IMMUTABLE;
+$$ LANGUAGE plpgsql IMMUTABLE;g
 
 -- Indexes on filter for imposm tables
-CREATE INDEX IF NOT EXISTS idx_imposm_osm_point_search ON imposm_osm_point(("opening_hours:covid19" != '' OR normcat(amenity, shop, craft, office, tobacco) != 'other'));
-CREATE INDEX IF NOT EXISTS idx_imposm_osm_polygon_search ON imposm_osm_polygon(("opening_hours:covid19" != '' OR normcat(amenity, shop, craft, office, tobacco) != 'other'));
+CREATE INDEX IF NOT EXISTS idx_imposm_osm_point_search ON imposm_osm_point(("opening_hours:covid19" != '' OR normcat(amenity, shop, craft, office, tobacco, tags) != 'other'));
+CREATE INDEX IF NOT EXISTS idx_imposm_osm_polygon_search ON imposm_osm_polygon(("opening_hours:covid19" != '' OR normcat(amenity, shop, craft, office, tobacco, tags) != 'other'));
 
 
 -- Next poi_osm table
@@ -105,7 +105,7 @@ SELECT
 	way,
 	name,
 	COALESCE(NULLIF(amenity,''), NULLIF(shop,''), NULLIF(craft,''), NULLIF(office,''), 'unknown'),
-	normcat(amenity, shop, craft, office, tobacco),
+	normcat(amenity, shop, craft, office, tobacco, tags),
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
@@ -120,14 +120,14 @@ SELECT
 FROM imposm_osm_point
 WHERE
 	"opening_hours:covid19" != ''
-	OR normcat(amenity, shop, craft, office, tobacco) != 'other'
+	OR normcat(amenity, shop, craft, office, tobacco, tags) != 'other'
 UNION ALL
 SELECT
 	CASE WHEN osm_id < 0 THEN concat('r', -osm_id) ELSE concat('w', osm_id) END,
 	ST_Centroid(way),
 	name,
 	COALESCE(NULLIF(amenity,''), NULLIF(shop,''), NULLIF(craft,''), NULLIF(office,''), 'unknown'),
-	normcat(amenity, shop, craft, office, tobacco),
+	normcat(amenity, shop, craft, office, tobacco, tags),
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
@@ -142,7 +142,7 @@ SELECT
 FROM imposm_osm_polygon
 WHERE
 	"opening_hours:covid19" != ''
-	OR normcat(amenity, shop, craft, office, tobacco) != 'other';
+	OR normcat(amenity, shop, craft, office, tobacco, tags) != 'other';
 
 
 -- Join brand informations
