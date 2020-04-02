@@ -8,10 +8,12 @@
         v-if="point"
         tile
         min-height="100%"
+        class="d-flex flex-column"
       >
         <v-toolbar
           tile
           dark
+          class="flex-grow-0"
         >
           <v-icon>{{ `osm-${point.properties.cat}` }}</v-icon>
           <v-toolbar-title
@@ -110,6 +112,7 @@
           />
 
         </v-list>
+        <v-spacer></v-spacer>
         <v-footer tile>
           <osm-link :id="id" />
         </v-footer>
