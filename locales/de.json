@@ -1,8 +1,8 @@
 {
   "lang": "Deutsch",
-  "covid19-alert": "Folge den behördlichen Einschränkungen. Die Verantwortung liegt bei DIR.",
+  "covid19-alert": "Befolge die Anweisungen der Behörden. Die Verantwortung liegt bei DIR.",
   "title": "Bleibt offen",
-  "subtitle": "Orte, die während der Kontaktbeschränkungen geöffnet bleiben",
+  "subtitle": "Orte, die während der Ausgangsbeschränkungen geöffnet bleiben",
   "subtitle-dense": "Orte trotz Beschränkungen geöffnet",
   "about": "Über",
   "map": "Karte",
@@ -10,8 +10,8 @@
   "menu": "Menü",
   "geolocate": "Zeige deinen aktuellen Standort",
   "press": "Presse",
-  "disclaimer": "Haftungsausschluss",
-  "missing_shop": "Ein fehlendes Geschäft melden",
+  "disclaimer": "Impressum",
+  "missing_shop": "Fehlendes Geschäft melden",
   "blog": "Blog",
   "townhalls": "Rathäuser",
   "change_lang": "Sprache ändern",
@@ -28,21 +28,29 @@
   "contribute_form": {
     "title": "Mitmachen",
     "step1": {
-      "title": "Ist dieser Ort trotz Kontaktbeschränkungen geöffnet?",
+      "title": "Ist dieser Ort trotz Ausgangsbeschränkungen geöffnet?",
       "open": {
         "yes": "Ja",
         "no": "Nein"
       }
     },
     "step2": {
-      "title": "Öffnungszeiten während der Kontaktbeschränkungen",
+      "title": "Öffnungszeiten während der Ausgangsbeschränkungen",
       "same_hours": "Gleiche Zeiten",
-      "same_hours_without_lockdown": "Die Öffnungszeiten sind die gleichen wie außerhalb der Kontaktbeschränkungen",
+      "same_hours_without_lockdown": "Die Öffnungszeiten sind die gleichen wie außerhalb der Ausgangsbeschränkungen",
       "dont_know": "Weiß ich nicht",
       "continue": "Weiter"
     },
     "step3": {
-      "title": "Details hinzufügen (optional)"
+      "title": "Details hinzufügen",
+      "delivery": {
+        "title": "Lieferung möglich",
+        "unknown": "Weiß ich nicht",
+        "yes": "Ja",
+        "only": "Nur Lieferung",
+        "no": "Nein"
+      },
+      "details": "Details nur hinzufügen, falls erforderlich"
     },
     "submit": "Veröffentlichen",
     "cancel": "Abbrechen"
@@ -63,8 +71,8 @@
   "details": {
     "signal": "Änderung melden",
     "signal_done": "Deine Meldung wurde gespeichert. Vielen Dank!",
-    "containment_opening_hours": "Öffnungszeiten außerhalb der Kontaktbeschränkungen",
-    "containment_brand_hours": "Öffnungszeiten auf der Webseite der Kette",
+    "containment_opening_hours": "Öffnungszeiten außerhalb der Ausgangsbeschränkungen",
+    "containment_brand_hours": "Öffnungszeiten auf der Webseite des Betreibers",
     "facebook": "Facebook-Seite",
     "feature": {
       "agrarian": "Agrarfachgeschäft",
@@ -83,7 +91,7 @@
       "car_parts": "Autoteile-Lager",
       "car_rental": "Autovermietung",
       "car_repair": "Autowerkstatt",
-      "caterer": "Caterer",
+      "caterer": "Catering",
       "cheese": "Käseladen",
       "chemist": "Drogerie",
       "chocolate": "Schokoladenladen",
@@ -140,11 +148,11 @@
       "tomorrow": "Morgen"
     },
     "state": {
-      "ouvert": "Ort geöffnet trotz Kontaktbeschränkung",
+      "ouvert": "Ort geöffnet trotz Ausgangsbeschränkung",
       "ouvert_adapté": "Ort geöffnet mit abweichenden Öffnungszeiten",
-      "partiel": "Ort möglicherweise geöffnet trotz Kontaktbeschränkung (zu überprüfen)",
-      "inconnu": "Ort darf trotz Kontaktbeschränkung geöffnet sein. Geöffnet oder geschlossen? Sag' es uns",
-      "fermé": "Ort geschlossen während Kontaktbeschränkung"
+      "partiel": "Ort eventuell geöffnet trotz Ausgangsbeschränkung (Prüfung ausstehend)",
+      "inconnu": "Ort darf trotz Ausgangsbeschränkung geöffnet sein. Geöffnet oder geschlossen? Lass es uns wissen.",
+      "fermé": "Ort geschlossen während Ausgangsbeschränkung"
     },
     "delivery": {
       "yes": "Lieferung möglich",
@@ -165,5 +173,10 @@
     },
     "add_interval": "Zeiten hinzufügen",
     "add_new_days": "Wochentage hinzufügen"
+  },
+  "osm_link": {
+    "title": "« Ça reste ouvert » verwendet OpenStreetMap-Daten.",
+    "view": "Anzeigen",
+    "edit": "Bearbeiten"
   }
 }
