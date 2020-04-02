@@ -192,14 +192,13 @@ export default {
       return {
         name: this.properties.name,
         state: this.open ? 'open' : 'closed',
-        details: this.open ? undefined : this.details,
+        details: this.details,
         opening_hours: this.openingHours,
         lat,
         lon,
         tags: {
           opening_hours: this.openingHoursWithoutLockDown ? 'same': undefined,
-          'delivery:covid19': this.delivery ? this.delivery : undefined,
-          'description:covid19': this.open ? this.details : undefined
+          'delivery:covid19': this.delivery ? this.delivery : undefined
         }
       };
     }

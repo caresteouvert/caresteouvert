@@ -140,83 +140,34 @@ describe('ContributeForm', () => {
     expect(form.vm.id).toEqual('relation/12345');
   });
 
-  describe('format the payload', () => {
-    let form;
-
-    beforeEach(() => {
-      form = createWrapper({
-        point: {
-          id: "n12345",
-          geometry: { coordinates: [1, 2] },
-          properties: { name: 'Test', tags: { } }
-        }
-      });
+  it('format the payload', () => {
+    const form = createWrapper({ point: { id: "n12345", geometry: { coordinates: [1, 2] }, properties: { name: 'Test', tags: { } } } });
+    form.vm.clickOpen();
+    form.vm.openingHours = [{ days: ['mo'], hours: ['08:00-18:00'] }];
+    form.vm.openingHoursWithoutLockDown = true;
+    expect(form.vm.payload).toEqual({
+      name: 'Test',
+      state: 'open',
+      details: '',
+      opening_hours: [{ days: ['mo'], hours: ['08:00-18:00'] }],
+      lat: 2,
+      lon: 1,
+      tags: {
+        opening_hours: 'same'
+      }
     });
-
-
-    it('open, with opening hours and same hours', () => {
-      form.vm.clickOpen();
-      form.vm.openingHours = [{ days: ['mo'], hours: ['08:00-18:00'] }];
-      form.vm.openingHoursWithoutLockDown = true;
-      expect(form.vm.payload).toEqual({
-        name: 'Test',
-        state: 'open',
-        opening_hours: [{ days: ['mo'], hours: ['08:00-18:00'] }],
-        lat: 2,
-        lon: 1,
-        tags: {
-          'description:covid19': '',
-          opening_hours: 'same'
-        }
-      });
+    form.vm.openingHoursWithoutLockDown = false;
+    form.vm.delivery = 'yes';
+    expect(form.vm.payload).toEqual({
+      name: 'Test',
+      state: 'open',
+      details: '',
+      opening_hours: [{ days: ['mo'], hours: ['08:00-18:00'] }],
+      lat: 2,
+      lon: 1,
+      tags: {
+        'delivery:covid19': 'yes'
+      }
     });
-
-    it('open, with opening hours and delivery', () => {
-      form.vm.clickOpen();
-      form.vm.openingHours = [{ days: ['mo'], hours: ['08:00-18:00'] }];
-      form.vm.openingHoursWithoutLockDown = false;
-      form.vm.delivery = 'yes';
-      expect(form.vm.payload).toEqual({
-        name: 'Test',
-        state: 'open',
-        opening_hours: [{ days: ['mo'], hours: ['08:00-18:00'] }],
-        lat: 2,
-        lon: 1,
-        tags: {
-          'description:covid19': '',
-          'delivery:covid19': 'yes'
-        }
-      });
-    });
-
-    it('open, with details', () => {
-      form.vm.clickOpen();
-      form.vm.details = 'test';
-      expect(form.vm.payload).toEqual({
-        name: 'Test',
-        state: 'open',
-        opening_hours: [],
-        lat: 2,
-        lon: 1,
-        tags: {
-          'description:covid19': 'test'
-        }
-      });
-    });
-
-    it('close, with details', () => {
-      form.vm.clickClose();
-      form.vm.details = 'test';
-      expect(form.vm.payload).toEqual({
-        name: 'Test',
-        state: 'closed',
-        details: 'test',
-        opening_hours: [],
-        lat: 2,
-        lon: 1,
-        tags: {}
-      });
-    });
-
   });
 });
