@@ -15,6 +15,7 @@
 
 <script>
 import { jawgApiKey } from '../config.json';
+import debounce from 'lodash.debounce';
 
 export default {
   data() {
@@ -26,15 +27,23 @@ export default {
       error: null
     };
   },
+
   watch: {
-    search(val) {
-      if (!val || val.trim().length < 3 || this.isLoading) return;
+    search: debounce(function (val) {
+      if (this.controller) {
+        this.controller.abort();
+      }
+      this.controller = new AbortController();
+      const signal = this.controller.signal;
+
+      if (!val || val.trim().length < 3) return;
       this.error = null;
       this.isLoading = true;
 
-      fetch(`https://api.jawg.io/places/v1/search?boundary.country=FRA&text=${encodeURIComponent(this.search)}&access-token=${jawgApiKey}`)
+      fetch(`https://api.jawg.io/places/v1/search?boundary.country=FRA&text=${encodeURIComponent(this.search)}&access-token=${jawgApiKey}`, { signal })
         .then(res => res.json())
         .then(body => {
+          this.error = null;
           this.items = body.features.map((feature) => {
             return {
               text: feature.properties.label,
@@ -45,8 +54,10 @@ export default {
         .catch(err => {
           this.error = err;
         })
-        .finally(() => (this.isLoading = false))
-    },
+        .finally(() => {
+          this.isLoading = false;
+        });
+    }, 350),
     selected(val) {
       this.$emit('select', val);
     }
