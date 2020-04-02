@@ -8,7 +8,6 @@
     :placeholder="$t('search')"
     hide-no-data
     hide-details
-    cache-items
     background-color="white"
     prepend-inner-icon="osm-magnify"
   />
