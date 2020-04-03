@@ -6,7 +6,7 @@
     "dev": "parcel serve parcel --hmr-port 1235 index.html",
     "icons": "icon-font-generator icons/*.svg --out font --normalize --html --prefix='osm' --name osm",
     "sprites": "spritezero ./static/sprite/caresteouvert ./mapicons && spritezero --retina ./static/sprite/caresteouvert@2x ./mapicons",
-    "categories": "node ./script/categories_i18n_extract.js && node ./script/categories_i18n_inject.js",
+    "categories": "node ./script/categories_i18n_extract.js && node ./script/categories_i18n_inject.js && node ./script/categories_sql.js",
     "build": "yarn run icons && yarn run sprites && parcel build index.html",
     "test": "jest --watch",
     "start": "node app.js"
