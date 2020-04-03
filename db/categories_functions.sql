@@ -9,7 +9,7 @@ CREATE OR REPLACE FUNCTION get_category(tags HSTORE) RETURNS VARCHAR AS $$
 BEGIN
 	IF (tags->'amenity' IN ('police', 'post_office', 'bank', 'pharmacy')) OR (tags->'shop' IN ('money_lender', 'optician', 'funeral_directors')) OR (tags->'office' IN ('financial', 'insurance', 'employment_agency')) OR (tags->'craft' = 'optician') THEN
 		RETURN 'amenity';
-	ELSIF (tags->'shop' IN ('frozen_food', 'supermarket', 'butcher', 'cheese', 'convenience', 'deli', 'farm', 'greengrocer', 'seafood', 'bakery', 'pastry', 'alcohol', 'beverages', 'wine')) OR (tags->'amenity' = 'marketplace') THEN
+	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'pizza') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bread') OR (tags->'shop' IN ('frozen_food', 'supermarket', 'butcher', 'cheese', 'convenience', 'deli', 'farm', 'greengrocer', 'seafood', 'bakery', 'pastry', 'alcohol', 'beverages', 'wine')) OR (tags->'amenity' = 'marketplace') THEN
 		RETURN 'food';
 	ELSIF (tags->'amenity' IN ('fuel', 'car_rental')) OR (tags->'shop' IN ('gas', 'bicycle', 'car_parts', 'car_repair')) THEN
 		RETURN 'transport';
@@ -43,9 +43,9 @@ BEGIN
 		RETURN 'funeral_directors';
 	ELSIF tags->'shop' IN ('frozen_food', 'supermarket') THEN
 		RETURN 'supermarket';
-	ELSIF tags->'shop' IN ('butcher', 'cheese', 'convenience', 'deli', 'farm', 'greengrocer', 'seafood') THEN
+	ELSIF (tags->'shop' IN ('butcher', 'cheese', 'convenience', 'deli', 'farm', 'greengrocer', 'seafood')) OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'pizza') THEN
 		RETURN 'grocery';
-	ELSIF tags->'shop' IN ('bakery', 'pastry') THEN
+	ELSIF (tags->'shop' IN ('bakery', 'pastry')) OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bread') THEN
 		RETURN 'bakery';
 	ELSIF tags->'shop' IN ('alcohol', 'beverages', 'wine') THEN
 		RETURN 'alcohol';

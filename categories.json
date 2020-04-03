@@ -1,43 +1,31 @@
 {
-  "countries": [
-    "FR"
+  "areas": [
+    "FR", "ES"
   ],
   "categories": {
     "amenity": {
-      "name": {
-        "en": "Amenities",
-        "fr": "Services"
-      },
+      "name": "Amenities",
       "subcategories": {
         "police": {
-          "name": {
-            "en": "Police",
-            "fr": "Police"
-          },
+          "name": "Police",
           "osm_tags": [
             {
               "amenity": "police"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "post_office": {
-          "name": {
-            "en": "Post office",
-            "fr": "Bureau de poste"
-          },
+          "name": "Post office",
           "osm_tags": [
             {
               "amenity": "post_office"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "bank": {
-          "name": {
-            "en": "Bank & insurance",
-            "fr": "Banque & assurances"
-          },
+          "name": "Bank & insurance",
           "osm_tags": [
             {
               "amenity": "bank"
@@ -49,25 +37,19 @@
               "office": "financial|insurance"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "pharmacy": {
-          "name": {
-            "en": "Pharmacy",
-            "fr": "Pharmacie"
-          },
+          "name": "Pharmacy",
           "osm_tags": [
             {
               "amenity": "pharmacy"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "optician": {
-          "name": {
-            "en": "Optician",
-            "fr": "Opticien"
-          },
+          "name": "Optician",
           "osm_tags": [
             {
               "shop": "optician"
@@ -76,117 +58,93 @@
               "craft": "optician"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "employment_agency": {
-          "name": {
-            "en": "Employment agency",
-            "fr": "Agence pour l'emploi"
-          },
+          "name": "Employment agency",
           "osm_tags": [
             {
               "office": "employment_agency"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "funeral_directors": {
-          "name": {
-            "en": "Funeral directors",
-            "fr": "Pompes funèbres"
-          },
+          "name": "Funeral directors",
           "osm_tags": [
             {
               "shop": "funeral_directors"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         }
       }
     },
     "food": {
-      "name": {
-        "en": "Food",
-        "fr": "Alimentation"
-      },
+      "name": "Food",
       "subcategories": {
         "supermarket": {
-          "name": {
-            "en": "Supermarket",
-            "fr": "Supermarché"
-          },
+          "name": "Supermarket",
           "osm_tags": [
             {
               "shop": "frozen_food|supermarket"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "grocery": {
-          "name": {
-            "en": "Grocery",
-            "fr": "Épicerie"
-          },
+          "name": "Grocery",
           "osm_tags": [
             {
               "shop": "butcher|cheese|convenience|deli|farm|greengrocer|seafood"
             },
-            { "amenity": "vending_machine", "vending": "pizza" }
+            {
+              "amenity": "vending_machine",
+              "vending": "pizza"
+            }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "bakery": {
-          "name": {
-            "en": "Bakery",
-            "fr": "Boulangerie"
-          },
+          "name": "Bakery",
           "osm_tags": [
             {
               "shop": "bakery|pastry"
             },
-            { "amenity": "vending_machine", "vending": "bread" }
+            {
+              "amenity": "vending_machine",
+              "vending": "bread"
+            }
           ],
-          "countries": [
+          "areas": [
             "FR"
           ]
         },
         "alcohol": {
-          "name": {
-            "en": "Alcohol store",
-            "fr": "Vente d'alcool"
-          },
+          "name": "Alcohol store",
           "osm_tags": [
             {
               "shop": "alcohol|beverages|wine"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "marketplace": {
-          "name": {
-            "en": "Marketplace",
-            "fr": "Marché"
-          },
+          "name": "Marketplace",
           "osm_tags": [
             {
               "amenity": "marketplace"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         }
       }
     },
     "transport": {
-      "name": {
-        "en": "Transports",
-        "fr": "Transports"
-      },
+      "name": "Transports",
       "subcategories": {
         "fuel": {
-          "name": {
-            "en": "Fuel station",
-            "fr": "Station-service"
-          },
+          "name": "Fuel station",
           "osm_tags": [
             {
               "amenity": "fuel"
@@ -195,57 +153,42 @@
               "shop": "gas"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "car_rental": {
-          "name": {
-            "en": "Car rental",
-            "fr": "Location de voiture"
-          },
+          "name": "Car rental",
           "osm_tags": [
             {
               "amenity": "car_rental"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "bicycle": {
-          "name": {
-            "en": "Bicycle shop",
-            "fr": "Magasin de vélos"
-          },
+          "name": "Bicycle shop",
           "osm_tags": [
             {
               "shop": "bicycle"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "car": {
-          "name": {
-            "en": "Garage",
-            "fr": "Garage"
-          },
+          "name": "Garage",
           "osm_tags": [
             {
               "shop": "car_parts|car_repair"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         }
       }
     },
     "tobacco": {
-      "name": {
-        "en": "Tobacco shops",
-        "fr": "Tabac"
-      },
+      "name": "Tobacco",
       "subcategories": {
         "tobacco": {
-          "name": {
-            "en": "Tobacco",
-            "fr": "Tabac"
-          },
+          "name": "Tobacco",
           "osm_tags": [
             {
               "shop": "tobacco"
@@ -254,45 +197,33 @@
               "tobacco": "yes|only"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "e_cigarette": {
-          "name": {
-            "en": "E-cigarette",
-            "fr": "E-cigarette"
-          },
+          "name": "E-cigarette",
           "osm_tags": [
             {
               "shop": "e-cigarette"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         }
       }
     },
     "shop": {
-      "name": {
-        "en": "Shops",
-        "fr": "Boutiques"
-      },
+      "name": "Shops",
       "subcategories": {
         "hardware": {
-          "name": {
-            "en": "Hardware",
-            "fr": "Bricolage"
-          },
+          "name": "Hardware",
           "osm_tags": [
             {
               "shop": "doityourself|hardware"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "electronics": {
-          "name": {
-            "en": "Electronics",
-            "fr": "Matériel électronique"
-          },
+          "name": "Electronics",
           "osm_tags": [
             {
               "shop": "electronics|mobile_phone"
@@ -301,81 +232,63 @@
               "craft": "electronics_repair"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "laundry": {
-          "name": {
-            "en": "Laundry",
-            "fr": "Laverie"
-          },
+          "name": "Laundry",
           "osm_tags": [
             {
               "shop": "dry_cleaning|laundry"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "stationery": {
-          "name": {
-            "en": "Stationery",
-            "fr": "Fournitures"
-          },
+          "name": "Stationery",
           "osm_tags": [
             {
               "shop": "stationery"
             }
           ],
-          "countries": [
+          "areas": [
             "FR"
           ]
         },
         "medical_supply": {
-          "name": {
-            "en": "Medical supplies",
-            "fr": "Matériel médical"
-          },
+          "name": "Medical supplies",
           "osm_tags": [
             {
               "shop": "medical_supply"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "newsagent": {
-          "name": {
-            "en": "Newsagent",
-            "fr": "Journaux"
-          },
+          "name": "Newsagent",
           "osm_tags": [
             {
               "shop": "kiosk|newsagent"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "pet": {
-          "name": {
-            "en": "Pet store",
-            "fr": "Animalerie"
-          },
+          "name": "Pet store",
           "osm_tags": [
             {
               "shop": "pet"
             }
           ],
-          "countries": "all"
+          "areas": "all"
         },
         "agrarian": {
-          "name": {
-            "en": "Agricultural products",
-            "fr": "Produits pour l'agriculture"
-          },
+          "name": "Agricultural products",
           "osm_tags": [
             {
               "shop": "agrarian"
             }
           ],
-          "countries": [
+          "areas": [
             "FR"
           ]
         }

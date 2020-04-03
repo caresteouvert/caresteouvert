@@ -15,11 +15,11 @@ locales.categories = {};
 
 Object.entries(catg.categories).forEach(e => {
 	const [ key, cat ] = e;
-	locales.categories[key] = cat.name.en;
+	locales.categories[key] = cat.name;
 
 	Object.entries(cat.subcategories).forEach(sce => {
 		const [ sckey, sccat ] = sce;
-		locales.categories[sckey] = sccat.name.en;
+		locales.categories[sckey] = sccat.name;
 	});
 });
 
