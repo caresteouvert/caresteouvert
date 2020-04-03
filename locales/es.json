@@ -44,7 +44,7 @@
     "step3": {
       "title": "Añadir detalles",
       "delivery": {
-        "title": "Solo por entrega",
+        "title": "Este sitio ofrece entregas",
         "unknown": "No lo sé",
         "yes": "Sí",
         "only": "Solo por entrega",
@@ -173,5 +173,10 @@
     },
     "add_interval": "Añadir horas",
     "add_new_days": "Añadir días de apertura"
+  },
+  "osm_link": {
+    "title": "« Ça reste ouvert » utiliza datos de OpenStreetMap.",
+    "view": "Ver",
+    "edit": "Editar"
   }
 }
