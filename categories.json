@@ -1,0 +1,323 @@
+{
+  "areas": [
+    "FR", "ES"
+  ],
+  "categories": {
+    "police": {
+      "name": "Police",
+      "subcategories": {
+        "police": {
+          "name": "Police",
+          "osm_tags": [
+            {
+              "amenity": "police"
+            }
+          ],
+          "areas": "all"
+        }
+      }
+    },
+    "pharmacy": {
+      "name": "Pharmacy",
+      "subcategories": {
+        "pharmacy": {
+          "name": "Pharmacy",
+          "osm_tags": [
+            {
+              "amenity": "pharmacy"
+            }
+          ],
+          "areas": "all"
+        }
+      }
+    },
+    "post_office": {
+      "name": "Post office",
+      "subcategories": {
+        "post_office": {
+          "name": "Post office",
+          "osm_tags": [
+            {
+              "amenity": "post_office"
+            }
+          ],
+          "areas": "all"
+        }
+      }
+    },
+    "food": {
+      "name": "Food",
+      "subcategories": {
+        "supermarket": {
+          "name": "Supermarket",
+          "osm_tags": [
+            {
+              "shop": "frozen_food|supermarket"
+            }
+          ],
+          "areas": "all"
+        },
+        "grocery": {
+          "name": "Grocery",
+          "osm_tags": [
+            {
+              "shop": "butcher|cheese|convenience|deli|farm|greengrocer|seafood"
+            },
+            {
+              "amenity": "vending_machine",
+              "vending": "pizza"
+            }
+          ],
+          "areas": "all"
+        },
+        "alcohol": {
+          "name": "Alcohol store",
+          "osm_tags": [
+            {
+              "shop": "alcohol|beverages|wine"
+            }
+          ],
+          "areas": "all"
+        },
+        "marketplace": {
+          "name": "Marketplace",
+          "osm_tags": [
+            {
+              "amenity": "marketplace"
+            }
+          ],
+          "areas": "all"
+        }
+      }
+    },
+    "bakery": {
+      "name": "Bakery",
+      "subcategories": {
+        "bakery": {
+          "name": "Bakery",
+          "osm_tags": [
+            {
+              "shop": "bakery|pastry"
+            },
+            {
+              "amenity": "vending_machine",
+              "vending": "bread"
+            }
+          ],
+          "areas": [
+            "FR"
+          ]
+        }
+      }
+    },
+    "tobacco": {
+      "name": "Tobacco",
+      "subcategories": {
+        "tobacco": {
+          "name": "Tobacco",
+          "osm_tags": [
+            {
+              "shop": "tobacco"
+            },
+            {
+              "tobacco": "yes|only"
+            }
+          ],
+          "areas": "all"
+        },
+        "e_cigarette": {
+          "name": "E-cigarette",
+          "osm_tags": [
+            {
+              "shop": "e-cigarette"
+            }
+          ],
+          "areas": "all"
+        }
+      }
+    },
+    "shop": {
+      "name": "Shops",
+      "subcategories": {
+        "hardware": {
+          "name": "Hardware",
+          "osm_tags": [
+            {
+              "shop": "doityourself|hardware"
+            }
+          ],
+          "areas": "all"
+        },
+        "electronics": {
+          "name": "Electronics",
+          "osm_tags": [
+            {
+              "shop": "electronics|mobile_phone"
+            },
+            {
+              "craft": "electronics_repair"
+            }
+          ],
+          "areas": "all"
+        },
+        "laundry": {
+          "name": "Laundry",
+          "osm_tags": [
+            {
+              "shop": "dry_cleaning|laundry"
+            }
+          ],
+          "areas": "all"
+        },
+        "stationery": {
+          "name": "Stationery",
+          "osm_tags": [
+            {
+              "shop": "stationery"
+            }
+          ],
+          "areas": [
+            "FR"
+          ]
+        },
+        "medical_supply": {
+          "name": "Medical supplies",
+          "osm_tags": [
+            {
+              "shop": "medical_supply"
+            }
+          ],
+          "areas": "all"
+        },
+        "newsagent": {
+          "name": "Newsagent",
+          "osm_tags": [
+            {
+              "shop": "kiosk|newsagent"
+            }
+          ],
+          "areas": "all"
+        },
+        "pet": {
+          "name": "Pet store",
+          "osm_tags": [
+            {
+              "shop": "pet"
+            }
+          ],
+          "areas": "all"
+        },
+        "agrarian": {
+          "name": "Agricultural products",
+          "osm_tags": [
+            {
+              "shop": "agrarian"
+            }
+          ],
+          "areas": [
+            "FR"
+          ]
+        },
+        "optician": {
+          "name": "Optician",
+          "osm_tags": [
+            {
+              "shop": "optician"
+            },
+            {
+              "craft": "optician"
+            }
+          ],
+          "areas": "all"
+        },
+        "employment_agency": {
+          "name": "Employment agency",
+          "osm_tags": [
+            {
+              "office": "employment_agency"
+            }
+          ],
+          "areas": "all"
+        },
+        "car_rental": {
+          "name": "Car rental",
+          "osm_tags": [
+            {
+              "amenity": "car_rental"
+            }
+          ],
+          "areas": "all"
+        },
+        "bicycle": {
+          "name": "Bicycle shop",
+          "osm_tags": [
+            {
+              "shop": "bicycle"
+            }
+          ],
+          "areas": "all"
+        },
+        "car": {
+          "name": "Garage",
+          "osm_tags": [
+            {
+              "shop": "car_parts|car_repair"
+            }
+          ],
+          "areas": "all"
+        }
+      }
+    },
+    "bank": {
+      "name": "Bank & insurance",
+      "subcategories": {
+        "bank": {
+          "name": "Bank & insurance",
+          "osm_tags": [
+            {
+              "amenity": "bank"
+            },
+            {
+              "shop": "money_lender"
+            },
+            {
+              "office": "financial|insurance"
+            }
+          ],
+          "areas": "all"
+        }
+      }
+    },
+    "fuel": {
+      "name": "Fuel station",
+      "subcategories": {
+        "fuel": {
+          "name": "Fuel station",
+          "osm_tags": [
+            {
+              "amenity": "fuel"
+            },
+            {
+              "shop": "gas"
+            }
+          ],
+          "areas": "all"
+        }
+      }
+    },
+    "funeral_directors": {
+      "name": "Funeral directors",
+      "subcategories": {
+        "funeral_directors": {
+          "name": "Funeral directors",
+          "osm_tags": [
+            {
+              "shop": "funeral_directors"
+            }
+          ],
+          "areas": "all"
+        }
+      }
+    }
+  }
+}
