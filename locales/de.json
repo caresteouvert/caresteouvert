@@ -117,7 +117,7 @@
       "hardware": "Baumarkt",
       "insurance": "Versicherung",
       "kiosk": "Kiosk",
-      "laundry": "Wäscherei",
+      "laundry": "Waschsalon",
       "mall": "Einkaufszentrum",
       "marketplace": "Marktplatz",
       "medical_supply": "Sanitätshaus",
@@ -130,7 +130,7 @@
       "post_office": "Postfiliale",
       "pub": "Kneipe",
       "restaurant": "Restaurant",
-      "seafood": "Meeresfrüchte-Laden",
+      "seafood": "Fischladen",
       "social_facility": "Soziale Einrichtung",
       "stationery": "Geschäft für Bürobedarf",
       "supermarket": "Supermarkt",
@@ -148,11 +148,11 @@
       "tomorrow": "Morgen"
     },
     "state": {
-      "open": "Ort geöffnet trotz Ausgangsbeschränkung",
+      "open": "Ort weiterhin geöffnet",
       "open_adapted": "Ort geöffnet mit abweichenden Öffnungszeiten",
-      "partial": "Ort eventuell geöffnet trotz Ausgangsbeschränkung (Prüfung ausstehend)",
-      "unknown": "Ort darf trotz Ausgangsbeschränkung geöffnet sein. Geöffnet oder geschlossen? Lass es uns wissen.",
-      "closed": "Ort geschlossen während Ausgangsbeschränkung"
+      "partial": "Ort möglicherweise weiterhin geöffnet (Prüfung ausstehend)",
+      "unknown": "Ort darf weiterhin geöffnet sein. Geöffnet oder geschlossen? Lass es uns wissen.",
+      "closed": "Ort geschlossen während der Beschränkungen"
     },
     "delivery": {
       "yes": "Lieferung möglich",
