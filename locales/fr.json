@@ -70,7 +70,7 @@
   },
   "details": {
     "signal": "Signaler un changement",
-    "signal_done": "Votre signalement a été enregistré. Merci !",
+    "signal_done": "Votre signalement a été enregistré. Merci ! Patientez, cela peut prendre un moment avant qu'il soit pris en compte.",
     "containment_opening_hours": "Horaires d'ouverture hors-confinement",
     "containment_brand_hours": "Horaires sur le site web de l'enseigne",
     "facebook": "Page Facebook",

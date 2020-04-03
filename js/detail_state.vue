@@ -17,9 +17,10 @@
     </v-alert>
     <v-alert
       v-if="success"
+      :icon="false"
       type="success"
       tile
-    class="mb-0"
+      class="mb-0"
     >{{ $t('details.signal_done') }}</v-alert>
     <div v-if="contribute">
       <contribute-form
