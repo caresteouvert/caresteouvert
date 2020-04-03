@@ -180,25 +180,15 @@
     "edit": "Edit"
   },
   "categories": {
-    "amenity": "Amenities",
     "police": "Police",
-    "post_office": "Post office",
-    "bank": "Bank & insurance",
     "pharmacy": "Pharmacy",
-    "optician": "Optician",
-    "employment_agency": "Employment agency",
-    "funeral_directors": "Funeral directors",
+    "post_office": "Post office",
     "food": "Food",
     "supermarket": "Supermarket",
     "grocery": "Grocery",
-    "bakery": "Bakery",
     "alcohol": "Alcohol store",
     "marketplace": "Marketplace",
-    "transport": "Transports",
-    "fuel": "Fuel station",
-    "car_rental": "Car rental",
-    "bicycle": "Bicycle shop",
-    "car": "Garage",
+    "bakery": "Bakery",
     "tobacco": "Tobacco",
     "e_cigarette": "E-cigarette",
     "shop": "Shops",
@@ -209,6 +199,14 @@
     "medical_supply": "Medical supplies",
     "newsagent": "Newsagent",
     "pet": "Pet store",
-    "agrarian": "Agricultural products"
+    "agrarian": "Agricultural products",
+    "optician": "Optician",
+    "employment_agency": "Employment agency",
+    "car_rental": "Car rental",
+    "bicycle": "Bicycle shop",
+    "car": "Garage",
+    "bank": "Bank & insurance",
+    "fuel": "Fuel station",
+    "funeral_directors": "Funeral directors"
   }
 }

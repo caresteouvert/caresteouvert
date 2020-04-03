@@ -81,6 +81,7 @@
 
 <script>
 import * as config from '../config.json';
+import * as categories from '../categories.json';
 import { encode, decode, encodePosition, decodePosition } from './url';
 import Geocoder from './geocoder';
 import Geolocate from './geolocate';
@@ -116,7 +117,7 @@ export default {
       mapZoom: null,
       mapStyle: `${config.mapStyle}${config.apiKey}`,
       filter: '',
-      categories: config.categories
+      categories: Object.keys(categories.categories)
     };
   },
 
