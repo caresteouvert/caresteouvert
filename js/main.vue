@@ -60,7 +60,6 @@
             v-if="geocoder"
             @select="updateMapBounds"
           />
-          <geolocate @input="updateMapCenter" />
         </v-toolbar>
         <osm-map
           v-if="loadMap"

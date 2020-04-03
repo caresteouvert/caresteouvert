@@ -9,6 +9,9 @@
     @update:zoom="updateMapZoom"
   >
     <MglNavigationControl :show-compass="false" />
+    <MglGeolocateControl
+      :positionOptions="{ enableHighAccuracy: true }"
+    />
     <MglAttributionControl
       :compact="false"
       position="bottom-right"
@@ -30,7 +33,7 @@
 
 <script>
 import * as config from '../config.json';
-import { MglMap, MglNavigationControl, MglVectorLayer, MglAttributionControl } from 'vue-mapbox/dist/vue-mapbox.umd';
+import { MglMap, MglNavigationControl, MglVectorLayer, MglAttributionControl, MglGeolocateControl } from 'vue-mapbox/dist/vue-mapbox.umd';
 
 const source = "public.poi_osm_light";
 
@@ -191,6 +194,7 @@ export default {
     MglMap,
     MglNavigationControl,
     MglVectorLayer,
+    MglGeolocateControl
   },
 
   props: {
