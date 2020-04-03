@@ -148,11 +148,11 @@
       "tomorrow": "tomorrow"
     },
     "state": {
-      "ouvert": "Place open during lockdown",
-      "ouvert_adapté": "Place open during lockdown, with adapted hours",
-      "partiel": "Place potentially open during lockdown (to be checked)",
-      "inconnu": "Place allowed to open during lockdown. Open or closed ? Let us know",
-      "fermé": "Place closed during lockdown"
+      "open": "Place open during lockdown",
+      "open_adapted": "Place open during lockdown, with adapted hours",
+      "partial": "Place potentially open during lockdown (to be checked)",
+      "unknown": "Place allowed to open during lockdown. Open or closed ? Let us know",
+      "closed": "Place closed during lockdown"
     },
     "delivery": {
       "yes": "Delivery service available",

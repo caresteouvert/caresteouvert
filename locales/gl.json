@@ -140,11 +140,11 @@
       "tomorrow": "mañá"
     },
     "state": {
-      "ouvert": "Lugar aberto durante o confinamento",
-      "ouvert_adapté": "Lugar aberto durante o confinamento, con horarios adaptados",
-      "partiel": "Lugar potencialment aberto durante o confinamento (ten que comprobarse)",
-      "inconnu": "Permitida a apertura do lugar durante o confinamento. Aberto ou pechado? Infórmanos",
-      "fermé": "Lugar pechado durante o confinamento"
+      "open": "Lugar aberto durante o confinamento",
+      "open_adapted": "Lugar aberto durante o confinamento, con horarios adaptados",
+      "partial": "Lugar potencialment aberto durante o confinamento (ten que comprobarse)",
+      "unknown": "Permitida a apertura do lugar durante o confinamento. Aberto ou pechado? Infórmanos",
+      "closed": "Lugar pechado durante o confinamento"
     },
     "delivery": {
       "yes": "Venda a domicilio dispoñíbel",

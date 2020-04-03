@@ -148,11 +148,11 @@
       "tomorrow": "demain"
     },
     "state": {
-      "ouvert": "Lieu ouvert durant le confinement",
-      "ouvert_adapté": "Lieu ouvert durant le confinement avec des horaires adaptées",
-      "partiel": "Lieu potentiellement ouvert durant le confinement (à vérifier)",
-      "inconnu": "Lieu autorisé à ouvrir durant le confinement. Ouvert ou fermé ? À vous de le dire",
-      "fermé": "Lieu fermé durant le confinement"
+      "open": "Lieu ouvert durant le confinement",
+      "open_adapted": "Lieu ouvert durant le confinement avec des horaires adaptées",
+      "partial": "Lieu potentiellement ouvert durant le confinement (à vérifier)",
+      "unknown": "Lieu autorisé à ouvrir durant le confinement. Ouvert ou fermé ? À vous de le dire",
+      "closed": "Lieu fermé durant le confinement"
     },
     "delivery": {
       "yes": "Service de livraison proposé",

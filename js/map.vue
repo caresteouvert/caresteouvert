@@ -48,7 +48,9 @@ const layers = [
         "in",
         "status",
         "ouvert",
-        "ouvert_adapté"
+        "ouvert_adapté",
+        "open",
+        "open_adapted"
       ]
     ],
     paint: {
@@ -73,6 +75,8 @@ const layers = [
         "status",
         "inconnu",
         "partiel",
+        "unknown",
+        "partial"
       ]
     ],
     paint: {
@@ -95,7 +99,8 @@ const layers = [
       [
         "in",
         "status",
-        "fermé"
+        "fermé",
+        "closed"
       ]
     ],
     paint: {
@@ -113,18 +118,6 @@ const layers = [
     id: "poi-white-bg",
     type: "circle",
     "source-layer": source,
-    filter: [
-      "all",
-      [
-        "in",
-        "status",
-        "ouvert",
-        "ouvert_adapté",
-        "inconnu",
-        "partiel",
-        "fermé"
-      ]
-    ],
     paint: {
       'circle-color': 'white',
       'circle-radius': [
@@ -141,18 +134,6 @@ const layers = [
     type: "symbol",
     "source-layer": source,
     minzoom: 14.5,
-    filter: [
-      "all",
-      [
-        "in",
-        "status",
-        "ouvert",
-        "ouvert_adapté",
-        "inconnu",
-        "partiel",
-        "fermé"
-      ]
-    ],
     "layout": {
       "icon-image": [
         "coalesce",
@@ -245,7 +226,8 @@ export default {
 
     layers() {
       return layers.map((layer) => {
-        const newLayer = { ...layer, filter: [...layer.filter] };
+        const newLayer = { ...layer, filter: layer.filter ? [...layer.filter] : [ "all" ] };
+
         if (this.filter !== '') {
           newLayer.filter.push([
             "==",
@@ -253,6 +235,7 @@ export default {
             this.filter
           ]);
         }
+
         return newLayer;
       });
     }

@@ -61,11 +61,11 @@ export default {
   computed: {
     type() {
       const statuses = {
-        ouvert: 'success',
-        ouvert_adapté: 'success',
-        partiel: 'warning',
-        inconnu: 'warning',
-        fermé: 'error'
+        open: 'success',
+        open_adapted: 'success',
+        partial: 'warning',
+        unknown: 'warning',
+        closed: 'error'
       };
       return statuses[this.status];
     }

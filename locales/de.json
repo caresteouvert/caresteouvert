@@ -148,11 +148,11 @@
       "tomorrow": "Morgen"
     },
     "state": {
-      "ouvert": "Ort geöffnet trotz Ausgangsbeschränkung",
-      "ouvert_adapté": "Ort geöffnet mit abweichenden Öffnungszeiten",
-      "partiel": "Ort eventuell geöffnet trotz Ausgangsbeschränkung (Prüfung ausstehend)",
-      "inconnu": "Ort darf trotz Ausgangsbeschränkung geöffnet sein. Geöffnet oder geschlossen? Lass es uns wissen.",
-      "fermé": "Ort geschlossen während Ausgangsbeschränkung"
+      "open": "Ort geöffnet trotz Ausgangsbeschränkung",
+      "open_adapted": "Ort geöffnet mit abweichenden Öffnungszeiten",
+      "partial": "Ort eventuell geöffnet trotz Ausgangsbeschränkung (Prüfung ausstehend)",
+      "unknown": "Ort darf trotz Ausgangsbeschränkung geöffnet sein. Geöffnet oder geschlossen? Lass es uns wissen.",
+      "closed": "Ort geschlossen während Ausgangsbeschränkung"
     },
     "delivery": {
       "yes": "Lieferung möglich",

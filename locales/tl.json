@@ -148,11 +148,11 @@
       "tomorrow": "bukas"
     },
     "state": {
-      "ouvert": "Bukás habang may lockdown",
-      "ouvert_adapté": "Bukás habang may lockdown. Ang puwesto ay nag-iba ng oras",
-      "partiel": "Maaring bukás habang may lockdown (kailangan siyasatin)",
-      "inconnu": "Pinahintulutan ang pagbu-bukás habang may lockdown. Bukás o Sarado ? Ipa-alam sa amin.",
-      "fermé": "Sarado ang puwesto habang may lockdown."
+      "open": "Bukás habang may lockdown",
+      "open_adapted": "Bukás habang may lockdown. Ang puwesto ay nag-iba ng oras",
+      "partial": "Maaring bukás habang may lockdown (kailangan siyasatin)",
+      "unknown": "Pinahintulutan ang pagbu-bukás habang may lockdown. Bukás o Sarado ? Ipa-alam sa amin.",
+      "closed": "Sarado ang puwesto habang may lockdown."
     },
     "delivery": {
       "yes": "Naghahatid din ng oorderin",

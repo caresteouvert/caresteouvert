@@ -5,7 +5,7 @@
 -- Read opening state according to tags
 CREATE OR REPLACE FUNCTION opening_state(tags HSTORE) RETURNS VARCHAR AS $$
 DECLARE
-	status VARCHAR := 'inconnu';
+	status VARCHAR := 'unknown';
 	oh_c19 VARCHAR;
 	oh VARCHAR;
 BEGIN
@@ -18,29 +18,29 @@ BEGIN
 		IF oh_c19 IN ('open', 'same', 'yes') THEN
 			-- opening_hours closed + opening_hours:covid19 same
 			IF oh ILIKE 'off%' AND oh_c19 = 'same' THEN
-				status := 'fermé';
+				status := 'closed';
 
 			-- opening_hours open
 			ELSE
-				status := 'ouvert';
+				status := 'open';
 			END IF;
 
 		-- opening_hours:covid19 = closed
 		ELSIF oh_c19 ILIKE 'off%' THEN
-			status := 'fermé';
+			status := 'closed';
 
 		-- opening_hours:covid19 = opening_hours
 		ELSIF oh_c19 = oh THEN
-			status := 'ouvert';
+			status := 'open';
 
 		-- opening_hours:covid19 = opening_hours syntax
 		ELSE
-			status := 'ouvert_adapté';
+			status := 'open_adapted';
 		END IF;
 
 	-- Self-service
 	ELSIF tags->'self_service' = 'yes' THEN
-		status := 'ouvert';
+		status := 'open';
 	END IF;
 
 	RETURN status;
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS poi_osm_next(
 	brand_wikidata VARCHAR,
 	brand_hours VARCHAR,
 	brand_infos VARCHAR,
-	status VARCHAR DEFAULT 'inconnu',
+	status VARCHAR DEFAULT 'unknown',
 	opening_hours VARCHAR,
 	delivery VARCHAR DEFAULT 'unknown',
 	tags JSONB
@@ -148,38 +148,38 @@ WHERE
 -- Join brand informations
 UPDATE poi_osm_next
 SET
-	status = b.rule,
+	status = b.opening_rule,
 	opening_hours = COALESCE(poi_osm_next.opening_hours, b.opening_hours),
-	brand_hours = COALESCE(poi_osm_next.brand_hours, b.url_hours),
-	brand_infos = COALESCE(poi_osm_next.brand_infos, b.infos)
+	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
+	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
 FROM brand_rules b
-WHERE status = 'inconnu' AND b.rule IS NOT NULL AND brand_wikidata = b.wikidata;
+WHERE status = 'unknown' AND b.rule IS NOT NULL AND brand_wikidata = b.wikidata;
 
 UPDATE poi_osm_next
 SET
-	status = b.rule,
+	status = b.opening_rule,
 	opening_hours = COALESCE(poi_osm_next.opening_hours, b.opening_hours),
-	brand_hours = COALESCE(poi_osm_next.brand_hours, b.url_hours),
-	brand_infos = COALESCE(poi_osm_next.brand_infos, b.infos)
+	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
+	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
 FROM brand_rules b
-WHERE status = 'inconnu' AND b.rule IS NOT NULL AND lower(trim(unaccent(brand))) = lower(trim(unaccent(b.nom)));
+WHERE status = 'unknown' AND b.rule IS NOT NULL AND lower(trim(unaccent(brand))) = lower(trim(unaccent(b.nom)));
 
 UPDATE poi_osm_next
 SET
-	status = b.rule,
+	status = b.opening_rule,
 	opening_hours = COALESCE(poi_osm_next.opening_hours, b.opening_hours),
-	brand_hours = COALESCE(poi_osm_next.brand_hours, b.url_hours),
-	brand_infos = COALESCE(poi_osm_next.brand_infos, b.infos)
+	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
+	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
 FROM brand_rules b
-WHERE status = 'inconnu' AND b.rule IS NOT NULL AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.nom)));
+WHERE status = 'unknown' AND b.rule IS NOT NULL AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.nom)));
 
 UPDATE poi_osm_next
-SET status = 'ouvert', opening_hours = '24/7'
-WHERE status IN ('inconnu', 'ouvert_adapté') AND cat = 'fuel' AND tags->>'opening_hours' = '24/7';
+SET status = 'open', opening_hours = '24/7'
+WHERE status IN ('unknown', 'open_adapted') AND cat = 'fuel' AND tags->>'opening_hours' = '24/7';
 
 UPDATE poi_osm_next
 SET opening_hours = tags->>'opening_hours'
-WHERE status = 'ouvert' AND opening_hours IS NULL;
+WHERE status = 'open' AND opening_hours IS NULL;
 
 
 -- Index creation and table switch
@@ -199,11 +199,11 @@ FROM poi_osm;
 
 
 -- Analysis requests
--- SELECT SUM((status != 'inconnu')::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm;
--- SELECT SUM((status NOT IN ('inconnu', 'partiel'))::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm;
+-- SELECT SUM((status != 'unknown')::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm;
+-- SELECT SUM((status NOT IN ('unknown', 'partial'))::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm;
 
 -- SELECT status, COUNT(*) FROM poi_osm GROUP BY status ORDER BY COUNT(*) DESC;
 -- SELECT normalized_cat, COUNT(*) FROM poi_osm GROUP BY normalized_cat ORDER BY COUNT(*) DESC;
 
--- SELECT brand, COUNT(*) FROM poi_osm WHERE status = 'inconnu' GROUP BY brand HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;
--- SELECT cat, COUNT(*) FROM poi_osm WHERE status = 'inconnu' GROUP BY cat HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;
+-- SELECT brand, COUNT(*) FROM poi_osm WHERE status = 'unknown' GROUP BY brand HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;
+-- SELECT cat, COUNT(*) FROM poi_osm WHERE status = 'unknown' GROUP BY cat HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;

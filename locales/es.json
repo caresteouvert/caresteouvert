@@ -148,11 +148,11 @@
       "tomorrow": "mañana"
     },
     "state": {
-      "ouvert": "Sitio abierto durante el Estado de Alarma",
-      "ouvert_adapté": "Sitio abierto durante el Estado de Alarma, con horario adaptado",
-      "partiel": "Sitio potencialmente abierto durante el Estado de Alarma (por verificar)",
-      "inconnu": "Sitio con permiso a abrir durante el Estado de Alarma. ¿Abierto o cerrado? Haznos saber",
-      "fermé": "Sitio cerrado durante el Estado de Alarma"
+      "open": "Sitio abierto durante el Estado de Alarma",
+      "open_adapted": "Sitio abierto durante el Estado de Alarma, con horario adaptado",
+      "partial": "Sitio potencialmente abierto durante el Estado de Alarma (por verificar)",
+      "unknown": "Sitio con permiso a abrir durante el Estado de Alarma. ¿Abierto o cerrado? Haznos saber",
+      "closed": "Sitio cerrado durante el Estado de Alarma"
     },
     "delivery": {
       "yes": "Servicio de entrega disponible",

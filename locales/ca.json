@@ -148,11 +148,11 @@
       "tomorrow": "demà"
     },
     "state": {
-      "ouvert": "Lloc obert durant el confinament",
-      "ouvert_adapté": "Lloc obert durant el confinament, amb horaris adaptats",
-      "partiel": "Lloc potencialment obert durant el confinament (s'ha de comprovar)",
-      "inconnu": "Lloc obert durant el confinament. Obert o tancat? Explica'ns-ho",
-      "fermé": "Lloc tancat durant el confinament"
+      "open": "Lloc obert durant el confinament",
+      "open_adapted": "Lloc obert durant el confinament, amb horaris adaptats",
+      "partial": "Lloc potencialment obert durant el confinament (s'ha de comprovar)",
+      "unknown": "Lloc obert durant el confinament. Obert o tancat? Explica'ns-ho",
+      "closed": "Lloc tancat durant el confinament"
     },
     "delivery": {
       "yes": "Venda a domicili disponible",
