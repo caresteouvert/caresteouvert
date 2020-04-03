@@ -200,14 +200,19 @@ export default {
     },
 
     updateRoute() {
+      const currentFeaturesAndLocation = this.$route.params.featuresAndLocation;
+      const newFeaturesAndLocation = encode(
+        this.filter,
+        encodePosition(this.mapCenter.lat, this.mapCenter.lng, this.mapZoom)
+      );
+      if (currentFeaturesAndLocation === newFeaturesAndLocation) {
+        return;
+      }
       this.$router.replace({
         name: this.$route.name,
         params: {
           ...this.$route.params,
-          featuresAndLocation: encode(
-            this.filter,
-            encodePosition(this.mapCenter.lat, this.mapCenter.lng, this.mapZoom)
-          )
+          featuresAndLocation: newFeaturesAndLocation
         }
       });
     },
