@@ -9,6 +9,7 @@ describe('ContributeForm', () => {
     'v-stepper-content': '<div><slot /></div>',
     'v-btn': '<div class="btn" />',
     'v-textarea': '<div />',
+    'v-select': '<div />',
     'v-checkbox': '<div />'
   };
 
@@ -51,9 +52,49 @@ describe('ContributeForm', () => {
     expect(form.vm.openingHours).toEqual([]);
   });
 
+  it('dont parse the the delivery:covid19 if it dont exists', () => {
+    const form = createWrapper({ point: { properties: { tags: { } } } });
+    form.vm.clickOpen();
+    expect(form.vm.delivery).toBe(null);
+    expect(form.vm.showDelivery).toBe(true);
+  });
+
+  it('parse the the delivery:covid19 if it exists', () => {
+    const form = createWrapper({ point: { properties: { tags: { 'delivery:covid19': 'yes' } } } });
+    form.vm.clickOpen();
+    expect(form.vm.delivery).toEqual('yes');
+    expect(form.vm.showDelivery).toBe(true);
+  });
+
+  it('if the delivery has an unknow value, hide the field', () => {
+    const form = createWrapper({ point: { properties: { tags: { 'delivery:covid19': 'Mo-Fr 09:00-18:00' } } } });
+    form.vm.clickOpen();
+    expect(form.vm.delivery).toBe(null);
+    expect(form.vm.showDelivery).toBe(false);
+  });
+
+  it('if the place if closed, dont, hide the delivery field', () => {
+    const form = createWrapper({ point: { properties: { tags: { } } } });
+    form.vm.clickClose();
+    expect(form.vm.showDelivery).toBe(false);
+  });
+
+  it('parse and display the opening_hours:covid19 if they are already here', () => {
+    const form = createWrapper({ point: { properties: { opening_hours: 'Mo-Fr 08:00-09:00', tags: { } } } });
+    expect(form.vm.openingHours).toEqual([
+      { days: ['mo'], hours: ['08:00-09:00'] },
+      { days: ['tu'], hours: ['08:00-09:00'] },
+      { days: ['we'], hours: ['08:00-09:00'] },
+      { days: ['th'], hours: ['08:00-09:00'] },
+      { days: ['fr'], hours: ['08:00-09:00'] }
+    ]);
+
+  });
+
   it('if there already opening hours, allow to specify same', () => {
     const form = createWrapper({ point: { properties: { tags: { opening_hours: 'Mo-Fr 08:00-09:00' } } } });
     expect(form.vm.hasOpeningHours).toBe(true);
+    expect(form.vm.openingHours).toEqual([]);
     form.vm.sameOpeningHours();
     expect(form.vm.openingHours).toEqual([
       { days: ['mo'], hours: ['08:00-09:00'] },
@@ -116,6 +157,7 @@ describe('ContributeForm', () => {
       }
     });
     form.vm.openingHoursWithoutLockDown = false;
+    form.vm.delivery = 'yes';
     expect(form.vm.payload).toEqual({
       name: 'Test',
       state: 'open',
@@ -123,7 +165,9 @@ describe('ContributeForm', () => {
       opening_hours: [{ days: ['mo'], hours: ['08:00-18:00'] }],
       lat: 2,
       lon: 1,
-      tags: {}
+      tags: {
+        'delivery:covid19': 'yes'
+      }
     });
   });
 });

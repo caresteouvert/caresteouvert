@@ -9,39 +9,6 @@
   "poiFeature": "https://features.caresteouvert.fr/collections/public.poi_osm/items",
   "apiUrl": "https://api.caresteouvert.fr",
   "geoIpUrl": "https://geo.caresteouvert.fr/me",
-  "filters": {
-    "police": {
-      "selected": true
-    },
-    "pharmacy": {
-      "selected": true
-    },
-    "post_office": {
-      "selected": true
-    },
-    "food": {
-      "selected": true
-    },
-    "bakery": {
-      "selected": true
-    },
-    "tobacco": {
-      "selected": true
-    },
-    "shop": {
-      "selected": true
-    },
-    "bank": {
-      "selected": true
-    },
-    "fuel": {
-      "selected": true
-    },
-    "funeral_directors": {
-      "selected": true
-    },
-    "other": {
-      "selected": true
-    }
-  }
+  "categories": ["police", "pharmacy", "post_office", "food", "bakery", "tobacco",
+                 "shop", "bank", "fuel", "funeral_directors", "other"]
 }

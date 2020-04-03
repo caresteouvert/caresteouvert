@@ -5139,6 +5139,11 @@ lodash.clone@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.clone/-/lodash.clone-4.5.0.tgz#195870450f5a13192478df4bc3d23d2dea1907b6"
   integrity sha1-GVhwRQ9aExkkeN9Lw9I9LeoZB7Y=
 
+lodash.debounce@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
+  integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
+
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
@@ -8495,9 +8500,9 @@ vue@^2.1.6, vue@^2.6.9:
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
 
 vuetify@^2.0.0:
-  version "2.2.19"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.2.19.tgz#826f6899267a0f867aff56aff0cf000d07a421e7"
-  integrity sha512-6o+wdB77FBTkZsFlF8g3W5paG6CsFWtxv6gjkovOQ1P0nggTX8AbIGYIX7xHiOqG+PvBsoIfOEt2E/x6U/d45g==
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.2.20.tgz#8cb042f7274f39130f8d40d85d23d62d1c33cae4"
+  integrity sha512-tiij3ammBiG7QrdwRBJxW917AyDLcMekRtLosdyVshDKHA5CpKrru8Ljn1gAmeUyhYZyUw4gz3XbrrIJ++TP7w==
 
 w3c-hr-time@^1.0.1:
   version "1.0.2"

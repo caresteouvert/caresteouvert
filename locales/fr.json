@@ -42,7 +42,15 @@
       "continue": "Continuer"
     },
     "step3": {
-      "title": "Ajouter une précision (optionnel)"
+      "title": "Ajouter des précisions",
+      "delivery": {
+        "title": "Ce lieu propose la livraison pendant le confinement",
+        "unknown": "Ne sais pas",
+        "yes": "Oui",
+        "only": "seulement la livraison",
+        "no": "Non"
+      },
+      "details": "Ajouter des détails si nécessaire"
     },
     "submit": "Publier",
     "cancel": "Annuler"
@@ -143,7 +151,7 @@
       "ouvert": "Lieu ouvert durant le confinement",
       "ouvert_adapté": "Lieu ouvert durant le confinement avec des horaires adaptées",
       "partiel": "Lieu potentiellement ouvert durant le confinement (à vérifier)",
-      "inconnu": "Lieu dont l'état d'ouverture n'est pas connu",
+      "inconnu": "Lieu autorisé à ouvrir durant le confinement. Ouvert ou fermé ? À vous de le dire",
       "fermé": "Lieu fermé durant le confinement"
     },
     "delivery": {
@@ -197,5 +205,10 @@
     "newsagent": "Journaux",
     "pet": "Animalerie",
     "agrarian": "Produits pour l'agriculture"
+  },
+  "osm_link": {
+    "title": "« Ça reste ouvert » utilise les données d'OpenStreetMap.",
+    "view": "Voir",
+    "edit": "Modifier"
   }
 }

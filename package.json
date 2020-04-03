@@ -58,6 +58,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "i18next-client": "^1.11.4",
+    "lodash.debounce": "^4.0.8",
     "mapbox-gl": "^1.0.0",
     "opening_hours": "^3.5.0",
     "transport-hours": "https://github.com/Jungle-Bus/transport-hours-js",

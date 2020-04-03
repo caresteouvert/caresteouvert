@@ -130,7 +130,8 @@
           "osm_tags": [
             {
               "shop": "butcher|cheese|convenience|deli|farm|greengrocer|seafood"
-            }
+            },
+            { "amenity": "vending_machine", "vending": "pizza" }
           ],
           "countries": "all"
         },
@@ -142,7 +143,8 @@
           "osm_tags": [
             {
               "shop": "bakery|pastry"
-            }
+            },
+            { "amenity": "vending_machine", "vending": "bread" }
           ],
           "countries": [
             "FR"

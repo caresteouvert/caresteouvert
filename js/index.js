@@ -17,6 +17,7 @@ import Vuetify, {
   VContent,
   VDialog,
   VDivider,
+  VFooter,
   VIcon,
   VImg,
   VLayout,
@@ -32,6 +33,7 @@ import Vuetify, {
   VListItemTitle,
   VNavigationDrawer,
   VRow,
+  VSelect,
   VSlideXReverseTransition,
   VSpacer,
   VStepper,
@@ -70,6 +72,7 @@ Vue.use(Vuetify, {
     VContent,
     VDialog,
     VDivider,
+    VFooter,
     VIcon,
     VImg,
     VLayout,
@@ -85,6 +88,7 @@ Vue.use(Vuetify, {
     VListItemTitle,
     VNavigationDrawer,
     VRow,
+    VSelect,
     VSlideXReverseTransition,
     VSpacer,
     VStepper,
@@ -119,7 +123,7 @@ const vuetify = new Vuetify({
 
 const i18n = new VueI18n({
   locale: localStorage.getItem('lang') || navigator.language.split('-')[0],
-  fallbackLocale: 'fr',
+  fallbackLocale: 'en',
   messages
 });
 

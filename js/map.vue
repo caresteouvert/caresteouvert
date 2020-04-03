@@ -9,6 +9,9 @@
     @update:zoom="updateMapZoom"
   >
     <MglNavigationControl :show-compass="false" />
+    <MglGeolocateControl
+      :positionOptions="{ enableHighAccuracy: true }"
+    />
     <MglAttributionControl
       :compact="false"
       position="bottom-right"
@@ -30,7 +33,7 @@
 
 <script>
 import * as config from '../config.json';
-import { MglMap, MglNavigationControl, MglVectorLayer, MglAttributionControl } from 'vue-mapbox/dist/vue-mapbox.umd';
+import { MglMap, MglNavigationControl, MglVectorLayer, MglAttributionControl, MglGeolocateControl } from 'vue-mapbox/dist/vue-mapbox.umd';
 
 const source = "public.poi_osm_light";
 
@@ -191,6 +194,7 @@ export default {
     MglMap,
     MglNavigationControl,
     MglVectorLayer,
+    MglGeolocateControl
   },
 
   props: {
@@ -215,8 +219,8 @@ export default {
       required: true
     },
 
-    filters: {
-      type: Object,
+    filter: {
+      type: String,
       required: true
     }
   },
@@ -240,14 +244,15 @@ export default {
     },
 
     layers() {
-      const unselectedCategories = Object.keys(this.filters).filter(filter => !this.filters[filter].selected);
       return layers.map((layer) => {
         const newLayer = { ...layer, filter: [...layer.filter] };
-        newLayer.filter.push([
-          "!in",
-          "normalized_cat",
-          ...unselectedCategories
-        ]);
+        if (this.filter !== '') {
+          newLayer.filter.push([
+            "==",
+            "normalized_cat",
+            this.filter
+          ]);
+        }
         return newLayer;
       });
     }

@@ -8,7 +8,7 @@
      }"
     >
     <div>
-      <navigation-drawer
+      <v-navigation-drawer
         v-model="sidebar"
         :temporary="isMobile"
         :stateless="!isMobile"
@@ -17,9 +17,12 @@
         fixed
       >
         <osm-sidebar>
-          <osm-filter-features :filters="filters" />
+          <osm-filter-features
+            v-model="filter"
+            :categories="categories"
+          />
         </osm-sidebar>
-      </navigation-drawer>
+      </v-navigation-drawer>
       <v-content>
         <v-toolbar
           dense
@@ -38,10 +41,7 @@
             <span>{{ $t('menu') }}</span>
           </v-tooltip>
 
-          <h2
-            v-if="!geocoder"
-            class="subtitle-1 title-mobile"
-          >{{ $t('subtitle-dense') }}</h2>
+          <img v-if="!geocoder" class="img-header-mobile" src="../images/logo_header.png" :alt="$t('subtitle-dense')" />
           <v-spacer v-if="!geocoder"></v-spacer>
           <v-tooltip
             v-if="!geocoder"
@@ -63,7 +63,6 @@
             v-if="geocoder"
             @select="updateMapBounds"
           />
-          <geolocate @input="updateMapCenter" />
         </v-toolbar>
         <osm-map
           v-if="loadMap"
@@ -71,20 +70,9 @@
           :map-style="mapStyle"
           :map-center.sync="mapCenter"
           :map-zoom.sync="mapZoom"
-          :filters="filters"
+          :filter="filter"
           :featuresAndLocation="featuresAndLocation"
         />
-        <a
-          href="https://blog.caresteouvert.fr/about/"
-          target="_blank"
-        >
-          <img
-            v-if="isMobile"
-            :alt="$t('title')"
-            class="logo-map"
-            src="../images/logo.png"
-            />
-        </a>
       </v-content>
     </div>
     <router-view />
@@ -93,8 +81,7 @@
 
 <script>
 import * as config from '../config.json';
-import { encode, decode, encodePosition, decodePosition, encodeFeatures, decodeFeatures } from './url';
-import NavigationDrawer from './navigation_drawer';
+import { encode, decode, encodePosition, decodePosition } from './url';
 import Geocoder from './geocoder';
 import Geolocate from './geolocate';
 import OsmSidebar from './sidebar';
@@ -105,7 +92,6 @@ export default {
   components: {
     Geocoder,
     Geolocate,
-    NavigationDrawer,
     OsmFilterFeatures,
     OsmSidebar,
     OsmMap
@@ -129,7 +115,8 @@ export default {
       mapCenter: null,
       mapZoom: null,
       mapStyle: `${config.mapStyle}${config.apiKey}`,
-      filters: config.filters
+      filter: '',
+      categories: config.categories
     };
   },
 
@@ -139,8 +126,8 @@ export default {
     this.sidebar = !this.isMobile;
     this.geocoder = !this.isMobile;
 
-    const { features, location } = decode(this.featuresAndLocation);
-    decodeFeatures(features, config.filters);
+    const { filter, location } = decode(this.featuresAndLocation);
+    this.filter = filter;
 
     Promise.all([
       this.loadInitialLocation(location),
@@ -159,11 +146,8 @@ export default {
       this.saveCurrentView();
     },
 
-    filters: {
-      deep: true,
-      handler() {
-        this.updateRoute();
-      }
+    filter() {
+      this.updateRoute();
     }
   },
 
@@ -221,7 +205,7 @@ export default {
         params: {
           ...this.$route.params,
           featuresAndLocation: encode(
-            encodeFeatures(this.filters),
+            this.filter,
             encodePosition(this.mapCenter.lat, this.mapCenter.lng, this.mapZoom)
           )
         }
@@ -229,6 +213,7 @@ export default {
     },
 
     updateMapBounds(bbox) {
+      this.geocoder = !this.isMobile;
       this.$refs.map.$emit('updateMapBounds', bbox);
     },
 
@@ -252,9 +237,6 @@ export default {
 </script>
 
 <style>
-.title-mobile {
-  line-height: 1.2 !important;
-}
 .xs .mapboxgl-ctrl-top-right {
   top: 50px;
 }
@@ -271,14 +253,7 @@ export default {
 .xs .search {
   width: 100%;
 }
-.logo-map {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  max-width: 30%;
-  max-height: 50px;
-  background: #ffffffe8;
-  border-radius: 10px;
-  padding: 5px;
+.img-header-mobile {
+  height: 40px;
 }
 </style>
