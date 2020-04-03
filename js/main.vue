@@ -217,6 +217,7 @@ export default {
     },
 
     updateMapBounds(bbox) {
+      this.geocoder = !this.isMobile;
       this.$refs.map.$emit('updateMapBounds', bbox);
     },
 

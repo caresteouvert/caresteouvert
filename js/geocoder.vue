@@ -6,6 +6,7 @@
     :search-input.sync="search"
     :error="!!error"
     :placeholder="$t('search')"
+    autofocus
     hide-no-data
     hide-details
     no-filter
