@@ -8,7 +8,7 @@
      }"
     >
     <div>
-      <navigation-drawer
+      <v-navigation-drawer
         v-model="sidebar"
         :temporary="isMobile"
         :stateless="!isMobile"
@@ -22,7 +22,7 @@
             :categories="categories"
           />
         </osm-sidebar>
-      </navigation-drawer>
+      </v-navigation-drawer>
       <v-content>
         <v-toolbar
           dense
@@ -82,7 +82,6 @@
 <script>
 import * as config from '../config.json';
 import { encode, decode, encodePosition, decodePosition } from './url';
-import NavigationDrawer from './navigation_drawer';
 import Geocoder from './geocoder';
 import Geolocate from './geolocate';
 import OsmSidebar from './sidebar';
@@ -93,7 +92,6 @@ export default {
   components: {
     Geocoder,
     Geolocate,
-    NavigationDrawer,
     OsmFilterFeatures,
     OsmSidebar,
     OsmMap
