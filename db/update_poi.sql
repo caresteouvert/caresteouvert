@@ -153,7 +153,7 @@ SET
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
 	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
 FROM brand_rules b
-WHERE status = 'unknown' AND b.rule IS NOT NULL AND brand_wikidata = b.wikidata;
+WHERE status = 'unknown' AND b.opening_rule IS NOT NULL AND brand_wikidata = b.wikidata_id;
 
 UPDATE poi_osm_next
 SET
@@ -162,7 +162,7 @@ SET
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
 	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
 FROM brand_rules b
-WHERE status = 'unknown' AND b.rule IS NOT NULL AND lower(trim(unaccent(brand))) = lower(trim(unaccent(b.nom)));
+WHERE status = 'unknown' AND b.opening_rule IS NOT NULL AND lower(trim(unaccent(brand))) = lower(trim(unaccent(b.brand_name)));
 
 UPDATE poi_osm_next
 SET
@@ -171,7 +171,7 @@ SET
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
 	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
 FROM brand_rules b
-WHERE status = 'unknown' AND b.rule IS NOT NULL AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.nom)));
+WHERE status = 'unknown' AND b.opening_rule IS NOT NULL AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.brand_name)));
 
 UPDATE poi_osm_next
 SET status = 'open', opening_hours = '24/7'
