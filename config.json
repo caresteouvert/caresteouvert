@@ -9,6 +9,6 @@
   "poiFeature": "https://features.caresteouvert.fr/collections/public.poi_osm/items",
   "apiUrl": "https://api.caresteouvert.fr",
   "geoIpUrl": "https://geo.caresteouvert.fr/me",
-  "filters": ["police", "pharmacy", "post_office", "food", "bakery", "tobacco",
-              "shop", "bank", "fuel", "funeral_directors", "other"]
+  "categories": ["police", "pharmacy", "post_office", "food", "bakery", "tobacco",
+                 "shop", "bank", "fuel", "funeral_directors", "other"]
 }

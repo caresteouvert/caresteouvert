@@ -17,7 +17,10 @@
         fixed
       >
         <osm-sidebar>
-          <osm-filter-features :filters="filters" />
+          <osm-filter-features
+            v-model="filter"
+            :categories="categories"
+          />
         </osm-sidebar>
       </navigation-drawer>
       <v-content>
@@ -67,7 +70,7 @@
           :map-style="mapStyle"
           :map-center.sync="mapCenter"
           :map-zoom.sync="mapZoom"
-          :filters="filters"
+          :filter="filter"
           :featuresAndLocation="featuresAndLocation"
         />
       </v-content>
@@ -78,7 +81,7 @@
 
 <script>
 import * as config from '../config.json';
-import { encode, decode, encodePosition, decodePosition, encodeFeatures, decodeFeatures } from './url';
+import { encode, decode, encodePosition, decodePosition } from './url';
 import NavigationDrawer from './navigation_drawer';
 import Geocoder from './geocoder';
 import Geolocate from './geolocate';
@@ -114,10 +117,8 @@ export default {
       mapCenter: null,
       mapZoom: null,
       mapStyle: `${config.mapStyle}${config.apiKey}`,
-      filters: config.filters.reduce((memo, filter) => {
-        memo[filter] = { selected: true };
-        return memo;
-      }, {})
+      filter: '',
+      categories: config.categories
     };
   },
 
@@ -127,8 +128,8 @@ export default {
     this.sidebar = !this.isMobile;
     this.geocoder = !this.isMobile;
 
-    const { features, location } = decode(this.featuresAndLocation);
-    decodeFeatures(features, this.filters);
+    const { filter, location } = decode(this.featuresAndLocation);
+    this.filter = filter;
 
     Promise.all([
       this.loadInitialLocation(location),
@@ -147,11 +148,8 @@ export default {
       this.saveCurrentView();
     },
 
-    filters: {
-      deep: true,
-      handler() {
-        this.updateRoute();
-      }
+    filter() {
+      this.updateRoute();
     }
   },
 
@@ -209,7 +207,7 @@ export default {
         params: {
           ...this.$route.params,
           featuresAndLocation: encode(
-            encodeFeatures(this.filters),
+            this.filter,
             encodePosition(this.mapCenter.lat, this.mapCenter.lng, this.mapZoom)
           )
         }

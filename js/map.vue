@@ -219,8 +219,8 @@ export default {
       required: true
     },
 
-    filters: {
-      type: Object,
+    filter: {
+      type: String,
       required: true
     }
   },
@@ -244,14 +244,15 @@ export default {
     },
 
     layers() {
-      const unselectedCategories = Object.keys(this.filters).filter(filter => !this.filters[filter].selected);
       return layers.map((layer) => {
         const newLayer = { ...layer, filter: [...layer.filter] };
-        newLayer.filter.push([
-          "!in",
-          "normalized_cat",
-          ...unselectedCategories
-        ]);
+        if (this.filter !== '') {
+          newLayer.filter.push([
+            "==",
+            "normalized_cat",
+            this.filter
+          ]);
+        }
         return newLayer;
       });
     }
