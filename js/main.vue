@@ -117,7 +117,7 @@ export default {
       mapZoom: null,
       mapStyle: `${config.mapStyle}${config.apiKey}`,
       filter: '',
-      categories: Object.keys(categories.categories)
+      categories: Object.keys(categories.categories).concat([ "other" ])
     };
   },
 
