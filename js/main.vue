@@ -38,10 +38,7 @@
             <span>{{ $t('menu') }}</span>
           </v-tooltip>
 
-          <h2
-            v-if="!geocoder"
-            class="subtitle-1 title-mobile"
-          >{{ $t('subtitle-dense') }}</h2>
+          <img v-if="!geocoder" class="img-header-mobile" src="../images/logo_header.png" :alt="$t('subtitle-dense')" />
           <v-spacer v-if="!geocoder"></v-spacer>
           <v-tooltip
             v-if="!geocoder"
@@ -74,17 +71,6 @@
           :filters="filters"
           :featuresAndLocation="featuresAndLocation"
         />
-        <a
-          href="https://blog.caresteouvert.fr/about/"
-          target="_blank"
-        >
-          <img
-            v-if="isMobile"
-            :alt="$t('title')"
-            class="logo-map"
-            src="../images/logo.png"
-            />
-        </a>
       </v-content>
     </div>
     <router-view />
@@ -255,9 +241,6 @@ export default {
 </script>
 
 <style>
-.title-mobile {
-  line-height: 1.2 !important;
-}
 .xs .mapboxgl-ctrl-top-right {
   top: 50px;
 }
@@ -274,14 +257,7 @@ export default {
 .xs .search {
   width: 100%;
 }
-.logo-map {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  max-width: 30%;
-  max-height: 50px;
-  background: #ffffffe8;
-  border-radius: 10px;
-  padding: 5px;
+.img-header-mobile {
+  height: 40px;
 }
 </style>
