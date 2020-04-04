@@ -24,46 +24,10 @@
         </osm-sidebar>
       </v-navigation-drawer>
       <v-content>
-        <v-toolbar
-          dense
-          class="search ml-sm-5 mt-sm-5"
-        >
-          <v-tooltip bottom>
-            <template v-slot:activator="{ on }">
-              <v-btn
-                icon
-                @click="sidebar = !sidebar"
-                v-on="on"
-              >
-                <v-icon>osm-filter_list</v-icon>
-              </v-btn>
-            </template>
-            <span>{{ $t('menu') }}</span>
-          </v-tooltip>
-
-          <img v-if="!geocoder" class="img-header-mobile" src="../images/logo_header.png" :alt="$t('subtitle-dense')" />
-          <v-spacer v-if="!geocoder"></v-spacer>
-          <v-tooltip
-            v-if="!geocoder"
-            bottom
-          >
-            <template v-slot:activator="{ on }">
-              <v-btn
-                icon
-                @click="geocoder = !geocoder"
-                v-on="on"
-              >
-                <v-icon>osm-magnify</v-icon>
-              </v-btn>
-            </template>
-            <span>{{ $t('search') }}</span>
-          </v-tooltip>
-
-          <geocoder
-            v-if="geocoder"
-            @select="updateMapBounds"
-          />
-        </v-toolbar>
+        <top-toolbar
+          @toggleSidebar="sidebar = !sidebar"
+          @onGeocode="updateMapBounds"
+        />
         <osm-map
           v-if="loadMap"
           ref="map"
@@ -83,19 +47,19 @@
 import * as config from '../config.json';
 import * as categories from '../categories.json';
 import { encode, decode, encodePosition, decodePosition } from './url';
-import Geocoder from './geocoder';
 import Geolocate from './geolocate';
 import OsmSidebar from './sidebar';
 import OsmFilterFeatures from './filter_features';
 import OsmMap from './map';
+import TopToolbar from './top_toolbar';
 
 export default {
   components: {
-    Geocoder,
     Geolocate,
     OsmFilterFeatures,
     OsmSidebar,
-    OsmMap
+    OsmMap,
+    TopToolbar
   },
 
   props: {
@@ -111,7 +75,6 @@ export default {
       loadMap: false,
       isMobile: false,
       sidebar: false,
-      geocoder: false,
       mapStyle: null,
       mapCenter: null,
       mapZoom: null,
@@ -125,7 +88,6 @@ export default {
     this.computeIsMobile();
 
     this.sidebar = !this.isMobile;
-    this.geocoder = !this.isMobile;
 
     const { filter, location } = decode(this.featuresAndLocation);
     this.filter = filter;
@@ -219,7 +181,6 @@ export default {
     },
 
     updateMapBounds(bbox) {
-      this.geocoder = !this.isMobile;
       this.$refs.map.$emit('updateMapBounds', bbox);
     },
 
@@ -251,16 +212,5 @@ export default {
 }
 .sidebar-opened .search {
   transform: translateX(300px);
-}
-.search {
-  position: absolute;
-  z-index: 4;
-}
-.xs .search {
-  width: 100%;
-}
-.img-header-mobile {
-  max-height: 40px;
-  max-width: 80%;
 }
 </style>
