@@ -7,6 +7,7 @@ const fs = require('fs');
 
 const CATEGORIES_JSON = path.join(__dirname, "..", "categories.json");
 const CATEGORIES_SQL = path.join(__dirname, "..", "db", "categories_functions.sql");
+const POI_SQL = path.join(__dirname, "..", "db", "update_poi.sql");
 
 const catg = require(CATEGORIES_JSON);
 
@@ -74,8 +75,10 @@ Object.entries(catg.categories).forEach(e => {
 const catfct = `CREATE OR REPLACE FUNCTION get_category(tags HSTORE) RETURNS VARCHAR AS $$
 BEGIN
 	${tagsPerCategoryToSql(tagsPerCategory)}
-	ELSE
+	ELSIF tags->'opening_hours:covid19' != '' THEN
 		RETURN 'other';
+	ELSE
+		RETURN NULL;
 	END IF;
 END;
 $$ LANGUAGE plpgsql IMMUTABLE;
@@ -117,4 +120,32 @@ ${subcatfct}`;
 
 fs.writeFile(CATEGORIES_SQL, wholeSql, (err) => {
 	if(err) { throw new Error(err); }
+});
+
+
+// Edit categories filter in update_poi.sql
+const tagsForCondition = {};
+
+Object.values(catg.categories).map(cat => Object.values(cat.subcategories).map(subcat => subcat.osm_tags).flat()).flat().forEach(e => {
+	Object.entries(e).forEach(kv => {
+		const [ k, v ] = kv;
+		if(catg.sql_columns.includes(k)) {
+			if(!tagsForCondition[k]) {
+				tagsForCondition[k] = new Set();
+			}
+			v.split("|").map(sv => tagsForCondition[k].add(sv));
+		}
+	});
+});
+
+const sqlCond = `\n\t"opening_hours:covid19" != '' OR `+Object.entries(tagsForCondition).map(e => `"${e[0]}" IN (${[...e[1]].sort().map(v => `'${v}'`).join(', ')})`).join(" OR ")+` --CATEGORIES\n`;
+
+fs.readFile(POI_SQL, 'utf8', (err, txt) => {
+	if(err) { throw new Error(err); }
+
+	const newTxt = txt.replace(/\n.*--CATEGORIES\n/g, sqlCond);
+
+	fs.writeFile(POI_SQL, newTxt, 'utf8', (err) => {
+		if(err) { throw new Error(err); }
+	});
 });

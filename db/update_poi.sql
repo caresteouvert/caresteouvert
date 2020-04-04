@@ -100,8 +100,9 @@ SELECT
 	hstore_to_jsonb(tags)
 FROM imposm_osm_point
 WHERE
-	"opening_hours:covid19" != ''
-	OR get_category(tags) != 'other'
+	-- The line below is automatically edited using categories.json
+	-- Do not edit directly, run "yarn run categories" instead
+	"opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fuel', 'marketplace', 'pharmacy', 'police', 'post_office', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance') --CATEGORIES
 UNION ALL
 SELECT
 	CASE WHEN osm_id < 0 THEN concat('r', -osm_id) ELSE concat('w', osm_id) END,
@@ -122,9 +123,14 @@ SELECT
 	hstore_to_jsonb(tags)
 FROM imposm_osm_polygon
 WHERE
-	"opening_hours:covid19" != ''
-	OR get_category(tags) != 'other';
+	-- The line below is automatically edited using categories.json
+	-- Do not edit directly, run "yarn run categories" instead
+	"opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fuel', 'marketplace', 'pharmacy', 'police', 'post_office', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance') --CATEGORIES
+;
 
+-- Remove edge cases needing advanced filtering like vending machines
+DELETE FROM poi_osm_next
+WHERE normalized_cat IS NULL;
 
 -- Join brand informations
 UPDATE poi_osm_next

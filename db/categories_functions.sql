@@ -27,8 +27,10 @@ BEGIN
 		RETURN 'fuel';
 	ELSIF tags->'shop' = 'funeral_directors' THEN
 		RETURN 'funeral_directors';
-	ELSE
+	ELSIF tags->'opening_hours:covid19' != '' THEN
 		RETURN 'other';
+	ELSE
+		RETURN NULL;
 	END IF;
 END;
 $$ LANGUAGE plpgsql IMMUTABLE;
