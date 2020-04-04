@@ -93,4 +93,12 @@ describe('Detail', () => {
     expect(detail.vm.contact('facebook')).toEqual('https://facebook.com/test2');
   });
 
+  it('returns phone', async () => {
+    point = { properties: { status: 'ouvert', cat: '', tags: { phone: 'test' } } };
+    const detail = createWrapper({ id: '' });
+    await global.fetch();
+    await Vue.nextTick();
+    expect(detail.vm.contact('phone')).toEqual('test');
+  });
+
 });

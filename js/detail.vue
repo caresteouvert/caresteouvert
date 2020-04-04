@@ -190,7 +190,7 @@ export default {
       const tags = this.point.properties.tags;
       return (name) => {
         const value = tags[name] || tags[`contact:${name}`];
-        const transformFunc = transform[name] || (() => {});
+        const transformFunc = transform[name] || (v => v);
         return transformFunc(value);
       };
     },
