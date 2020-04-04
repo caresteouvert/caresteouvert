@@ -58,11 +58,56 @@
           ],
           "areas": "all"
         },
+        "butcher": {
+          "name": "Butcher",
+          "osm_tags": [
+            {
+              "shop": "butcher"
+            }
+          ],
+          "areas": "all"
+        },
+        "cheese": {
+          "name": "Cheese",
+          "osm_tags": [
+            {
+              "shop": "cheese"
+            }
+          ],
+          "areas": "all"
+        },
+        "convenience": {
+          "name": "Convenience",
+          "osm_tags": [
+            {
+              "shop": "convenience"
+            }
+          ],
+          "areas": "all"
+        },
+        "seafood": {
+          "name": "Seafood",
+          "osm_tags": [
+            {
+              "shop": "seafood"
+            }
+          ],
+          "areas": "all"
+        },
+        "greengrocer": {
+          "name": "Greengrocer",
+          "osm_tags": [
+            {
+              "shop": "greengrocer"
+            }
+          ],
+          "areas": "all"
+        },
         "grocery": {
           "name": "Grocery",
           "osm_tags": [
             {
-              "shop": "butcher|cheese|convenience|deli|farm|greengrocer|seafood"
+              "shop": "deli|farm|chocolate"
             },
             {
               "amenity": "vending_machine",
@@ -149,11 +194,20 @@
           ],
           "areas": "all"
         },
+        "mobile_phone": {
+          "name": "Mobile phone",
+          "osm_tags": [
+            {
+              "shop": "mobile_phone"
+            }
+          ],
+          "areas": "all"
+        },
         "electronics": {
           "name": "Electronics",
           "osm_tags": [
             {
-              "shop": "electronics|mobile_phone"
+              "shop": "electronics"
             },
             {
               "craft": "electronics_repair"

@@ -21,6 +21,7 @@ describe('Detail', () => {
 
   beforeEach(() => {
     localVue = createLocalVue();
+    localVue.prototype.$te = () => true;
     localVue.prototype.$t = (key) => key;
     localVue.directive('resize', {});
 

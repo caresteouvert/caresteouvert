@@ -176,8 +176,8 @@ export default {
     },
 
     type() {
-      const trad = this.$t(`details.feature.${this.point.properties.cat}`);
-      return trad.startsWith('details.') ? null : trad;
+      const key = `categories.${this.point.properties.cat}`;
+      return this.$te(key) ? this.$t(key) : null;
     },
 
     contact() {
