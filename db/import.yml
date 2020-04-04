@@ -10,6 +10,10 @@ tables:
       emergency: [__any__]
       tobacco: [__any__]
       healthcare: [__any__]
+    filters:
+      reject:
+        amenity: ['bench']
+        emergency: ['fire_hydrant']
     columns:
       - {name: 'osm_id', type: id}
       - {name: 'way', type: geometry}
@@ -38,6 +42,10 @@ tables:
       emergency: [__any__]
       tobacco: [__any__]
       healthcare: [__any__]
+    filters:
+      reject:
+        amenity: ['bench']
+        emergency: ['fire_hydrant']
     columns:
       - {name: 'osm_id', type: id}
       - {name: 'way', type: geometry}
