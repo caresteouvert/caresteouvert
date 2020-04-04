@@ -181,9 +181,17 @@ export default {
     },
 
     contact() {
+      const transform = {
+        facebook(url) {
+          if (!url) return url;
+          return url.startsWith('http') ? url : `https://facebook.com/${url}`;
+        }
+      };
       const tags = this.point.properties.tags;
       return (name) => {
-        return tags[name] || tags[`contact:${name}`];
+        const value = tags[name] || tags[`contact:${name}`];
+        const transformFunc = transform[name] || (() => {});
+        return transformFunc(value);
       };
     },
 
