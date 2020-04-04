@@ -73,13 +73,6 @@
             icon="osm-mail"
           />
 
-          <detail-link
-            v-if="contact('facebook')"
-            :href="contact('facebook')"
-            :title="contact('facebook')"
-            icon="osm-fcbk"
-          />
-
           <detail-opening-hours
             v-if="point.properties.opening_hours && point.properties.opening_hours !== 'open'"
             :value="point.properties.opening_hours"
@@ -109,6 +102,13 @@
               />
             </v-alert>
           </template>
+
+          <detail-link
+            v-if="contact('facebook')"
+            :href="contact('facebook')"
+            :title="contact('facebook')"
+            icon="osm-fcbk"
+          />
 
           <detail-link
             v-if="contact('website')"
