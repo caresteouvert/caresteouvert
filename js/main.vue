@@ -260,6 +260,7 @@ export default {
   width: 100%;
 }
 .img-header-mobile {
-  height: 40px;
+  max-height: 40px;
+  max-width: 80%;
 }
 </style>
