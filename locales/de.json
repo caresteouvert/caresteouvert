@@ -54,14 +54,14 @@
         "only": "Nur Lieferung",
         "no": "Nein"
       },
-      "details": "Details nur hinzufügen, falls erforderlich"
+      "details": "Erforderliche Angaben während der Beschränkungen"
     },
     "submit": "Veröffentlichen",
     "cancel": "Abbrechen"
   },
   "filter": {
     "bakery": "Bäckereien",
-    "bank": "Banken & Verischerungen",
+    "bank": "Banken & Versicherungen",
     "food": "Lebensmittel",
     "fuel": "Tankstellen",
     "funeral_directors": "Bestatter",
