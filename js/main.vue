@@ -184,10 +184,6 @@ export default {
       this.$refs.map.$emit('updateMapBounds', bbox);
     },
 
-    updateMapCenter(coords) {
-      this.$refs.map.$emit('updateMapCenter', coords);
-    },
-
     computeIsMobile() {
       this.isMobile = window.innerWidth < 800;
     },
