@@ -138,6 +138,7 @@ const layers = [
       "icon-image": [
         "coalesce",
         ['image', ['concat', ['get', 'cat'], '_11']],
+        ['image', ['concat', ['get', 'normalized_cat'], '_11']],
         ['image', 'other_11']
       ],
       "icon-size": [
