@@ -270,19 +270,34 @@
       }
     },
     "bank": {
-      "name": "Bank & insurance",
+      "name": "Financial services",
       "subcategories": {
         "bank": {
-          "name": "Bank & insurance",
+          "name": "Bank",
           "osm_tags": [
             {
               "amenity": "bank"
             },
             {
-              "shop": "money_lender"
-            },
+              "office": "financial"
+            }
+          ],
+          "areas": "all"
+        },
+        "moneylender": {
+          "name": "Moneylender",
+          "osm_tags": [
             {
-              "office": "financial|insurance"
+              "shop": "money_lender"
+            }
+          ],
+          "areas": "all"
+        },
+        "insurance": {
+          "name": "Insurance",
+          "osm_tags": [
+            {
+              "office": "insurance"
             }
           ],
           "areas": "all"
