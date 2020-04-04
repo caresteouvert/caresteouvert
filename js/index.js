@@ -116,7 +116,8 @@ const vuetify = new Vuetify({
       next: 'osm-chevron_right',
       expand: 'osm-arrow_down',
       checkboxOn: 'osm-check_box',
-      checkboxOff: 'osm-check_box_outline_blank'
+      checkboxOff: 'osm-check_box_outline_blank',
+      cancel: 'osm-close'
     }
   }
 });
