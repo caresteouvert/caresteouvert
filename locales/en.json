@@ -61,7 +61,7 @@
   },
   "filter": {
     "bakery": "Bakeries",
-    "bank": "Banks & insurance companies",
+    "bank": "Financial services",
     "food": "Food stores",
     "fuel": "Service stations",
     "funeral_directors": "Funeral directors",
@@ -126,6 +126,7 @@
       "marketplace": "Marketplace",
       "medical_supply": "Medical supply store",
       "mobile_phone": "Mobile phone store",
+      "moneylender": "Moneylender",
       "newsagent": "Newsagent",
       "optician": "Optician",
       "pet": "Pet shop",
