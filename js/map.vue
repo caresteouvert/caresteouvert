@@ -210,9 +210,6 @@ export default {
     this.$on('updateMapBounds', (bbox) => {
       this.map.fitBounds(bbox, { duration: 0 });
     });
-    this.$on('updateMapCenter', ({ latitude, longitude }) => {
-      this.map.jumpTo({ center: { lat: latitude, lng: longitude }, zoom: 13});
-    });
   },
 
   computed: {
