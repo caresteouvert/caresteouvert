@@ -54,7 +54,7 @@
         "only": "Only offers delivery",
         "no": "No"
       },
-      "details": "Add details only if required"
+      "details": "Add details required during the lockdown"
     },
     "submit": "Publish",
     "cancel": "Cancel"
