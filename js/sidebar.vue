@@ -4,7 +4,7 @@
       <v-card-title class="pl-1 pt-5 pb-5 justify-center">
         <img
           :alt="$t('title')"
-          class="pa-3 logo"
+          class="px-3 logo"
           src="../images/logo.svg"
         />
       </v-card-title>
