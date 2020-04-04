@@ -21,7 +21,7 @@ BEGIN
 		RETURN 'tobacco';
 	ELSIF (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'electronics', 'dry_cleaning', 'laundry', 'stationery', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'agrarian', 'optician', 'bicycle', 'car_parts', 'car_repair')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') OR (tags->'amenity' = 'car_rental') THEN
 		RETURN 'shop';
-	ELSIF (tags->'amenity' = 'bank') OR (tags->'shop' = 'money_lender') OR (tags->'office' IN ('financial', 'insurance')) THEN
+	ELSIF (tags->'amenity' = 'bank') OR (tags->'office' IN ('financial', 'insurance')) OR (tags->'shop' = 'money_lender') THEN
 		RETURN 'bank';
 	ELSIF (tags->'amenity' = 'fuel') OR (tags->'shop' = 'gas') THEN
 		RETURN 'fuel';
@@ -97,8 +97,12 @@ BEGIN
 		RETURN 'bicycle';
 	ELSIF tags->'shop' IN ('car_parts', 'car_repair') THEN
 		RETURN 'car';
-	ELSIF (tags->'amenity' = 'bank') OR (tags->'shop' = 'money_lender') OR (tags->'office' IN ('financial', 'insurance')) THEN
+	ELSIF (tags->'amenity' = 'bank') OR (tags->'office' = 'financial') THEN
 		RETURN 'bank';
+	ELSIF tags->'shop' = 'money_lender' THEN
+		RETURN 'moneylender';
+	ELSIF tags->'office' = 'insurance' THEN
+		RETURN 'insurance';
 	ELSIF (tags->'amenity' = 'fuel') OR (tags->'shop' = 'gas') THEN
 		RETURN 'fuel';
 	ELSIF tags->'shop' = 'funeral_directors' THEN

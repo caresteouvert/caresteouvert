@@ -61,7 +61,7 @@
   },
   "filter": {
     "bakery": "Bakeries",
-    "bank": "Banks & insurance companies",
+    "bank": "Financial services",
     "food": "Food stores",
     "fuel": "Service stations",
     "funeral_directors": "Funeral directors",
@@ -150,7 +150,9 @@
     "car_rental": "Car rental",
     "bicycle": "Bicycle shop",
     "car": "Garage",
-    "bank": "Bank & insurance",
+    "bank": "Bank",
+    "moneylender": "Moneylender",
+    "insurance": "Insurance",
     "fuel": "Fuel station",
     "funeral_directors": "Funeral directors"
   }
