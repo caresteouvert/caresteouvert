@@ -38,7 +38,7 @@
 
         <detail-state
           :point="point"
-          :status="point.properties.status"
+          :status="status"
         />
 
         <v-alert
@@ -59,19 +59,18 @@
             :title="contact('phone')"
             icon="osm-phone"
           />
+          <detail-link
+            v-if="contact('mobile')"
+            :href="`tel:${contact('mobile')}`"
+            :title="contact('mobile')"
+            icon="osm-phone"
+          />
 
           <detail-link
             v-if="contact('email')"
             :href="contact('email')"
             :title="contact('email')"
             icon="osm-mail"
-          />
-
-          <detail-link
-            v-if="contact('facebook')"
-            :href="contact('facebook')"
-            :title="contact('facebook')"
-            icon="osm-fcbk"
           />
 
           <detail-opening-hours
@@ -103,6 +102,13 @@
               />
             </v-alert>
           </template>
+
+          <detail-link
+            v-if="contact('facebook')"
+            :href="contact('facebook')"
+            :title="contact('facebook')"
+            icon="osm-fcbk"
+          />
 
           <detail-link
             v-if="contact('website')"
@@ -170,15 +176,27 @@ export default {
     },
 
     type() {
-      const trad = this.$t(`details.feature.${this.point.properties.cat}`);
-      return trad.startsWith('details.') ? null : trad;
+      const key = `categories.${this.point.properties.cat}`;
+      return this.$te(key) ? this.$t(key) : null;
     },
 
     contact() {
+      const transform = {
+        facebook(url) {
+          if (!url) return url;
+          return url.startsWith('http') ? url : `https://facebook.com/${url}`;
+        }
+      };
       const tags = this.point.properties.tags;
       return (name) => {
-        return tags[name] || tags[`contact:${name}`];
+        const value = tags[name] || tags[`contact:${name}`];
+        const transformFunc = transform[name] || (v => v);
+        return transformFunc(value);
       };
+    },
+
+    status() {
+      return this.point.properties.status;
     },
 
     infos() {
@@ -188,7 +206,7 @@ export default {
       if(this.point.properties.tags['takeaway:covid19'] && !this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`).startsWith('details.')) {
         infos.push(this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`));
       }
-      else if(['ouvert', 'ouvert_adapté'].includes(this.point.properties.status) && this.point.properties.tags.takeaway && !this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`).startsWith('details.')) {
+      else if(['open', 'open_adapted'].includes(this.point.properties.status) && this.point.properties.tags.takeaway && !this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`).startsWith('details.')) {
         infos.push(this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`));
       }
 
@@ -196,7 +214,7 @@ export default {
       if(this.point.properties.tags['delivery:covid19'] && !this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`).startsWith('details.')) {
         infos.push(this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`));
       }
-      else if(['ouvert', 'ouvert_adapté'].includes(this.point.properties.status) && this.point.properties.tags.delivery && !this.$t(`details.delivery.${this.point.properties.tags.delivery}`).startsWith('details.')) {
+      else if(['open', 'open_adapted'].includes(this.point.properties.status) && this.point.properties.tags.delivery && !this.$t(`details.delivery.${this.point.properties.tags.delivery}`).startsWith('details.')) {
         infos.push(this.$t(`details.delivery.${this.point.properties.tags.delivery}`));
       }
 

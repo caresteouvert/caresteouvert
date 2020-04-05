@@ -47,8 +47,8 @@ const layers = [
       [
         "in",
         "status",
-        "ouvert",
-        "ouvert_adapté"
+        "open",
+        "open_adapted"
       ]
     ],
     paint: {
@@ -71,8 +71,8 @@ const layers = [
       [
         "in",
         "status",
-        "inconnu",
-        "partiel",
+        "unknown",
+        "partial"
       ]
     ],
     paint: {
@@ -95,7 +95,7 @@ const layers = [
       [
         "in",
         "status",
-        "fermé"
+        "closed"
       ]
     ],
     paint: {
@@ -113,18 +113,6 @@ const layers = [
     id: "poi-white-bg",
     type: "circle",
     "source-layer": source,
-    filter: [
-      "all",
-      [
-        "in",
-        "status",
-        "ouvert",
-        "ouvert_adapté",
-        "inconnu",
-        "partiel",
-        "fermé"
-      ]
-    ],
     paint: {
       'circle-color': 'white',
       'circle-radius': [
@@ -141,22 +129,11 @@ const layers = [
     type: "symbol",
     "source-layer": source,
     minzoom: 14.5,
-    filter: [
-      "all",
-      [
-        "in",
-        "status",
-        "ouvert",
-        "ouvert_adapté",
-        "inconnu",
-        "partiel",
-        "fermé"
-      ]
-    ],
     "layout": {
       "icon-image": [
         "coalesce",
         ['image', ['concat', ['get', 'cat'], '_11']],
+        ['image', ['concat', ['get', 'normalized_cat'], '_11']],
         ['image', 'other_11']
       ],
       "icon-size": [
@@ -229,9 +206,6 @@ export default {
     this.$on('updateMapBounds', (bbox) => {
       this.map.fitBounds(bbox, { duration: 0 });
     });
-    this.$on('updateMapCenter', ({ latitude, longitude }) => {
-      this.map.jumpTo({ center: { lat: latitude, lng: longitude }, zoom: 13});
-    });
   },
 
   computed: {
@@ -245,7 +219,8 @@ export default {
 
     layers() {
       return layers.map((layer) => {
-        const newLayer = { ...layer, filter: [...layer.filter] };
+        const newLayer = { ...layer, filter: layer.filter ? [...layer.filter] : [ "all" ] };
+
         if (this.filter !== '') {
           newLayer.filter.push([
             "==",
@@ -253,6 +228,7 @@ export default {
             this.filter
           ]);
         }
+
         return newLayer;
       });
     }
@@ -280,10 +256,14 @@ export default {
     },
 
     clickPoi(e) {
+      const id = e.mapboxEvent.features[0].properties.fid;
+      if (this.$route.name === 'place' && this.$route.params.id === id) {
+        return;
+      }
       this.$router.push({
         name: 'place',
         params: {
-          id: e.mapboxEvent.features[0].properties.fid,
+          id,
           featuresAndLocation: this.featuresAndLocation
         }
       });

@@ -4,17 +4,18 @@
   "title": "Mantense aberto",
   "subtitle": "Lugares que se manteñen abertos durante o confinamento",
   "subtitle-dense": "Lugares abertos durante o confinamento",
-  "about": "Sobre",
-  "map": "Mapa",
   "search": "Procurar",
   "menu": "Menú",
-  "geolocate": "Amosar a túa localización actual",
-  "press": "Prensa",
-  "disclaimer": "Responsabilidade legal",
   "missing_shop": "Informar dunha tenda que falla",
-  "blog": "Blogue",
-  "townhalls": "Concellos",
   "change_lang": "Mudar lingua",
+  "learnmore": {
+    "disclaimer": "Responsabilidade legal",
+    "townhalls": "Concellos",
+    "missing_shop": "Informar dunha tenda que falla",
+    "press": "Prensa",
+    "about": "Sobre",
+    "blog": "Blogue",
+  },
   "days": {
     "monday": "Luns / Segunda feira",
     "tuesday": "Martes / Terza feira",
@@ -140,11 +141,11 @@
       "tomorrow": "mañá"
     },
     "state": {
-      "ouvert": "Lugar aberto durante o confinamento",
-      "ouvert_adapté": "Lugar aberto durante o confinamento, con horarios adaptados",
-      "partiel": "Lugar potencialment aberto durante o confinamento (ten que comprobarse)",
-      "inconnu": "Permitida a apertura do lugar durante o confinamento. Aberto ou pechado? Infórmanos",
-      "fermé": "Lugar pechado durante o confinamento"
+      "open": "Lugar aberto durante o confinamento",
+      "open_adapted": "Lugar aberto durante o confinamento, con horarios adaptados",
+      "partial": "Lugar potencialment aberto durante o confinamento (ten que comprobarse)",
+      "unknown": "Permitida a apertura do lugar durante o confinamento. Aberto ou pechado? Infórmanos",
+      "closed": "Lugar pechado durante o confinamento"
     },
     "delivery": {
       "yes": "Venda a domicilio dispoñíbel",
