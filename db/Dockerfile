@@ -40,9 +40,3 @@ RUN wget -N http://m.m.i24.cc/osmconvert64 \
     && mv osmconvert64 /usr/bin/osmconvert
 WORKDIR /tmp
 RUN rm -rf /tmp/osmconvert
-
-# Gdal/ogr
-RUN apt-get -y install software-properties-common \
-    && add-apt-repository ppa:ubuntugis/ppa \
-    && apt-get update \
-    && apt-get -y install gdal-bin
