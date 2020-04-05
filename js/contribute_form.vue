@@ -196,6 +196,7 @@ export default {
         opening_hours: this.openingHours,
         lat,
         lon,
+        lang: this.$i18n.locale,
         tags: {
           opening_hours: this.openingHoursWithoutLockDown ? 'same': undefined,
           'delivery:covid19': this.delivery ? this.delivery : undefined
