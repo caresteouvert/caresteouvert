@@ -1,6 +1,9 @@
 <template>
   <div>
-    <v-card>
+    <v-card
+      title
+      flat
+    >
       <v-card-title class="pl-1 pt-5 pb-5 justify-center">
         <img
           :alt="$t('title')"
@@ -16,6 +19,7 @@
     <v-alert
       dense
       tile
+      dismissible
       color="orange"
       dark
       class="mb-0"
@@ -31,7 +35,7 @@
         <v-icon>{{ `osm-info` }}</v-icon>
       </v-btn>
     </v-alert>
-
+    <v-divider></v-divider>
     <slot />
     <v-list>
       <v-divider></v-divider>

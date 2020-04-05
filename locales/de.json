@@ -10,11 +10,14 @@
   "change_lang": "Sprache ändern",
   "learnmore": {
     "about": "Über",
-    "blog": "Blog",
+    "contribute": "Mitmachen",
     "missing_shop": "Fehlendes Geschäft melden",
-    "townhalls": "Rathäuser",
+    "description": "« Ça reste ouvert \" ist ein wirksames Werkzeug, um die gezielte Suche nach einem offenen Geschaft in deiner Nachbarschaft zu erleichtern und somit die Ansteckungsgefahr zu reduzieren.\nDiese Karte wird gemeinschaftlich erstellt. Du kannst offene oder geschlossene Orte in deiner Nachbarschaft ganz einfach selbst melden. Auf diese effektive und einheitliche Weise hilfst du mit, die Menschen in deiner Nachbarschaft und deiner Stadt besser zu informieren.",
+    "title": "Mehr erfahren",
     "press": "Presse",
-    "disclaimer": "Impressum"
+    "disclaimer": "Impressum",
+    "blog": "Blog",
+    "townhalls": "Rathäuser"
   },
   "days": {
     "monday": "Montag",
@@ -51,7 +54,7 @@
         "only": "Nur Lieferung",
         "no": "Nein"
       },
-      "details": "Details nur hinzufügen, falls erforderlich"
+      "details": "Erforderliche Angaben während der Beschränkungen"
     },
     "submit": "Veröffentlichen",
     "cancel": "Abbrechen"
@@ -59,15 +62,15 @@
   "filter": {
     "bakery": "Bäckereien",
     "bank": "Banken & Versicherungen",
-    "food": "Lebensmittelgeschäfte",
+    "food": "Lebensmittel",
     "fuel": "Tankstellen",
-    "funeral_directors": "Bestattungsunternehmer",
+    "funeral_directors": "Bestatter",
     "pharmacy": "Apotheken",
     "police": "Polizeiwachen",
     "post_office": "Postfilialen",
-    "shop": "Geschäfte",
-    "tobacco": "Tabakgeschäft",
-    "other": "Andere Orte"
+    "shop": "Sonstige Geschäfte",
+    "tobacco": "Tabakwaren",
+    "other": "Sonstige Orte"
   },
   "details": {
     "signal": "Änderung melden",
@@ -112,7 +115,7 @@
       "farm": "Hofladen",
       "frozen_food": "Tiefkühlgeschäft",
       "fuel": "Tankstellen",
-      "funeral_directors": "Bestattungsunternehmen",
+      "funeral_directors": "Bestatter",
       "gas": "Tankstellen",
       "greengrocer": "Gemüsehändler",
       "hardware": "Baumarkt",
@@ -184,7 +187,7 @@
     "police": "Polizei",
     "pharmacy": "Apotheke",
     "post_office": "Postfiliale",
-    "food": "Essen",
+    "food": "Lebensmittel",
     "supermarket": "Supermarkt",
     "grocery": "Lebensmittel",
     "alcohol": "Alkoholgeschäft",

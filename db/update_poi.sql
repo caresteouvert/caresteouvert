@@ -102,7 +102,7 @@ FROM imposm_osm_point
 WHERE
 	-- The line below is automatically edited using categories.json
 	-- Do not edit directly, run "yarn run categories" instead
-	"opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fuel', 'marketplace', 'pharmacy', 'police', 'post_office', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance') --CATEGORIES
+	"opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fuel', 'marketplace', 'pharmacy', 'police', 'post_office', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'chocolate', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance') --CATEGORIES
 UNION ALL
 SELECT
 	CASE WHEN osm_id < 0 THEN concat('r', -osm_id) ELSE concat('w', osm_id) END,
@@ -125,7 +125,7 @@ FROM imposm_osm_polygon
 WHERE
 	-- The line below is automatically edited using categories.json
 	-- Do not edit directly, run "yarn run categories" instead
-	"opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fuel', 'marketplace', 'pharmacy', 'police', 'post_office', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance') --CATEGORIES
+	"opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fuel', 'marketplace', 'pharmacy', 'police', 'post_office', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'chocolate', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance') --CATEGORIES
 ;
 
 -- Remove edge cases needing advanced filtering like vending machines
@@ -140,7 +140,7 @@ SET
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
 	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
 FROM brand_rules b
-WHERE status = 'unknown' AND b.opening_rule IS NOT NULL AND brand_wikidata = b.wikidata_id;
+WHERE status = 'unknown' AND b.country = 'FR' AND b.opening_rule IS NOT NULL AND brand_wikidata = b.wikidata_id;
 
 UPDATE poi_osm_next
 SET
@@ -149,7 +149,7 @@ SET
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
 	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
 FROM brand_rules b
-WHERE status = 'unknown' AND b.opening_rule IS NOT NULL AND lower(trim(unaccent(brand))) = lower(trim(unaccent(b.brand_name)));
+WHERE status = 'unknown' AND b.country = 'FR' AND b.opening_rule IS NOT NULL AND lower(trim(unaccent(brand))) = lower(trim(unaccent(b.brand_name)));
 
 UPDATE poi_osm_next
 SET
@@ -158,7 +158,7 @@ SET
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
 	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
 FROM brand_rules b
-WHERE status = 'unknown' AND b.opening_rule IS NOT NULL AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.brand_name)));
+WHERE status = 'unknown' AND b.country = 'FR' AND b.opening_rule IS NOT NULL AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.brand_name)));
 
 UPDATE poi_osm_next
 SET status = 'open', opening_hours = '24/7'

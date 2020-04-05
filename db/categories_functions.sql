@@ -13,13 +13,13 @@ BEGIN
 		RETURN 'pharmacy';
 	ELSIF tags->'amenity' = 'post_office' THEN
 		RETURN 'post_office';
-	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'pizza') OR (tags->'shop' IN ('frozen_food', 'supermarket', 'butcher', 'cheese', 'convenience', 'deli', 'farm', 'greengrocer', 'seafood', 'alcohol', 'beverages', 'wine')) OR (tags->'amenity' = 'marketplace') THEN
+	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'pizza') OR (tags->'shop' IN ('frozen_food', 'supermarket', 'butcher', 'cheese', 'convenience', 'seafood', 'greengrocer', 'deli', 'farm', 'chocolate', 'alcohol', 'beverages', 'wine')) OR (tags->'amenity' = 'marketplace') THEN
 		RETURN 'food';
 	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bread') OR (tags->'shop' IN ('bakery', 'pastry')) THEN
 		RETURN 'bakery';
 	ELSIF (tags->'shop' IN ('tobacco', 'e-cigarette')) OR (tags->'tobacco' IN ('yes', 'only')) THEN
 		RETURN 'tobacco';
-	ELSIF (tags->'shop' IN ('doityourself', 'hardware', 'electronics', 'mobile_phone', 'dry_cleaning', 'laundry', 'stationery', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'agrarian', 'optician', 'bicycle', 'car_parts', 'car_repair')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') OR (tags->'amenity' = 'car_rental') THEN
+	ELSIF (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'electronics', 'dry_cleaning', 'laundry', 'stationery', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'agrarian', 'optician', 'bicycle', 'car_parts', 'car_repair')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') OR (tags->'amenity' = 'car_rental') THEN
 		RETURN 'shop';
 	ELSIF (tags->'amenity' = 'bank') OR (tags->'shop' = 'money_lender') OR (tags->'office' IN ('financial', 'insurance')) THEN
 		RETURN 'bank';
@@ -47,7 +47,17 @@ BEGIN
 		RETURN 'post_office';
 	ELSIF tags->'shop' IN ('frozen_food', 'supermarket') THEN
 		RETURN 'supermarket';
-	ELSIF (tags->'shop' IN ('butcher', 'cheese', 'convenience', 'deli', 'farm', 'greengrocer', 'seafood')) OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'pizza') THEN
+	ELSIF tags->'shop' = 'butcher' THEN
+		RETURN 'butcher';
+	ELSIF tags->'shop' = 'cheese' THEN
+		RETURN 'cheese';
+	ELSIF tags->'shop' = 'convenience' THEN
+		RETURN 'convenience';
+	ELSIF tags->'shop' = 'seafood' THEN
+		RETURN 'seafood';
+	ELSIF tags->'shop' = 'greengrocer' THEN
+		RETURN 'greengrocer';
+	ELSIF (tags->'shop' IN ('deli', 'farm', 'chocolate')) OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'pizza') THEN
 		RETURN 'grocery';
 	ELSIF tags->'shop' IN ('alcohol', 'beverages', 'wine') THEN
 		RETURN 'alcohol';
@@ -61,7 +71,9 @@ BEGIN
 		RETURN 'e_cigarette';
 	ELSIF tags->'shop' IN ('doityourself', 'hardware') THEN
 		RETURN 'hardware';
-	ELSIF (tags->'shop' IN ('electronics', 'mobile_phone')) OR (tags->'craft' = 'electronics_repair') THEN
+	ELSIF tags->'shop' = 'mobile_phone' THEN
+		RETURN 'mobile_phone';
+	ELSIF (tags->'shop' = 'electronics') OR (tags->'craft' = 'electronics_repair') THEN
 		RETURN 'electronics';
 	ELSIF tags->'shop' IN ('dry_cleaning', 'laundry') THEN
 		RETURN 'laundry';
