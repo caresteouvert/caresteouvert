@@ -2,7 +2,6 @@ tables:
   imposm_osm_point:
     type: point
     mapping:
-      area: [__any__]
       amenity: [__any__]
       shop: [__any__]
       craft: [__any__]
@@ -19,7 +18,6 @@ tables:
       - {name: 'way', type: geometry}
       - {name: 'tags', type: hstore_tags}
       - {key: 'name', name: 'name', type: string}
-      - {key: 'area', name: 'area', type: string}
       - {key: 'amenity', name: 'amenity', type: string}
       - {key: 'shop', name: 'shop', type: string}
       - {key: 'craft', name: 'craft', type: string}
@@ -34,7 +32,6 @@ tables:
   imposm_osm_polygon:
     type: polygon
     mapping:
-      area: [__any__]
       amenity: [__any__]
       shop: [__any__]
       craft: [__any__]
@@ -51,7 +48,6 @@ tables:
       - {name: 'way', type: geometry}
       - {name: 'tags', type: hstore_tags}
       - {key: 'name', name: 'name', type: string}
-      - {key: 'area', name: 'area', type: string}
       - {key: 'amenity', name: 'amenity', type: string}
       - {key: 'shop', name: 'shop', type: string}
       - {key: 'craft', name: 'craft', type: string}
