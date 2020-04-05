@@ -11,8 +11,8 @@ tables:
       healthcare: [__any__]
     filters:
       reject:
-        amenity: ['bench']
-        emergency: ['fire_hydrant']
+        amenity: ['bench', 'waste_basket']
+        emergency: ['fire_hydrant', 'yes']
     columns:
       - {name: 'osm_id', type: id}
       - {name: 'way', type: geometry}
@@ -41,8 +41,8 @@ tables:
       healthcare: [__any__]
     filters:
       reject:
-        amenity: ['bench']
-        emergency: ['fire_hydrant']
+        amenity: ['bench', 'waste_basket']
+        emergency: ['fire_hydrant', 'yes']
     columns:
       - {name: 'osm_id', type: id}
       - {name: 'way', type: geometry}
