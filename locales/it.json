@@ -1,5 +1,5 @@
 {
-  "lang": "Inglese",
+  "lang": "Italiano",
   "covid19-alert": "Segui le restrizioni governative. La responsabilità è TUA.",
   "title": "Rimane aperto",
   "subtitle": "Luoghi che rimangono aperti durante il lockdown",
@@ -106,6 +106,7 @@
     "edit": "Modifica"
   },
   "categories": {
+    "other": "Altri luoghi",
     "police": "Polizia",
     "pharmacy": "Farmacia",
     "post_office": "Ufficio postale",
@@ -132,6 +133,7 @@
     "newsagent": "Giornalaio",
     "pet": "Negozio per animali",
     "agrarian": "Prodotti agricoli",
+    "garden_centre": "Garden center",
     "optician": "Ottico",
     "employment_agency": "Agenzia di collocamento",
     "car_rental": "Noleggio auto",
@@ -141,7 +143,6 @@
     "moneylender": "Finanziaria",
     "insurance": "Assicurazione",
     "fuel": "Stazione di rifiorimento carburante",
-    "funeral_directors": "Pompe funebri",
-    "other": "Altri luoghi"
+    "funeral_directors": "Pompe funebri"
   }
 }
