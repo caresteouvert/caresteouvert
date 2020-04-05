@@ -59,19 +59,6 @@
     "submit": "Publier",
     "cancel": "Annuler"
   },
-  "filter": {
-    "bakery": "Boulangeries",
-    "bank": "Services financier",
-    "food": "Alimentation",
-    "fuel": "Stations services",
-    "funeral_directors": "Services funéraires",
-    "pharmacy": "Pharmacies",
-    "police": "Police",
-    "post_office": "Bureaux de poste",
-    "shop": "Commerces",
-    "tobacco": "Tabac",
-    "other": "Autres établissements"
-  },
   "details": {
     "signal": "Signaler un changement",
     "signal_done": "Votre signalement a été enregistré. Merci ! Patientez, cela peut prendre un moment avant qu'il soit pris en compte.",
@@ -154,6 +141,7 @@
     "moneylender": "Prêteur ",
     "insurance": "Assurance",
     "fuel": "Station-service",
-    "funeral_directors": "Pompes funèbres"
+    "funeral_directors": "Pompes funèbres",
+    "other": "Autres établissements"
   }
 }

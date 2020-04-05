@@ -59,19 +59,6 @@
     "submit": "Publish",
     "cancel": "Cancel"
   },
-  "filter": {
-    "bakery": "Bakeries",
-    "bank": "Financial services",
-    "food": "Food stores",
-    "fuel": "Service stations",
-    "funeral_directors": "Funeral directors",
-    "pharmacy": "Pharmacies",
-    "police": "Police stations",
-    "post_office": "Post offices",
-    "shop": "Shops",
-    "tobacco": "Tobacco",
-    "other": "Other places"
-  },
   "details": {
     "signal": "Report a change",
     "signal_done": "Your report has been registered. Thank you! Please be patient, it may take a while to be processed.",
@@ -154,6 +141,7 @@
     "moneylender": "Moneylender",
     "insurance": "Insurance",
     "fuel": "Fuel station",
-    "funeral_directors": "Funeral directors"
+    "funeral_directors": "Funeral directors",
+    "other": "Other places"
   }
 }
