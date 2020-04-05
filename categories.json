@@ -273,6 +273,15 @@
             "FR"
           ]
         },
+        "garden_centre": {
+          "name": "Garden centre",
+          "osm_tags": [
+            {
+              "shop": "garden_centre"
+            }
+          ],
+          "areas": "all"
+        },
         "optician": {
           "name": "Optician",
           "osm_tags": [
