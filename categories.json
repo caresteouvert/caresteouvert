@@ -1,6 +1,6 @@
 {
-  "areas": [
-    "FR"
+  "countries": [
+    "FR", "DE"
   ],
   "sql_columns": ["amenity", "shop", "craft", "office", "emergency", "tobacco", "healthcare", "opening_hours", "opening_hours:covid19"],
   "categories": {
