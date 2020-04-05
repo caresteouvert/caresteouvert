@@ -59,19 +59,6 @@
     "submit": "Veröffentlichen",
     "cancel": "Abbrechen"
   },
-  "filter": {
-    "bakery": "Bäckereien",
-    "bank": "Finanzdienstleistungen",
-    "food": "Lebensmittel",
-    "fuel": "Tankstellen",
-    "funeral_directors": "Bestatter",
-    "pharmacy": "Apotheken",
-    "police": "Polizeiwachen",
-    "post_office": "Postfilialen",
-    "shop": "Sonstige Geschäfte",
-    "tobacco": "Tabakwaren",
-    "other": "Sonstige Orte"
-  },
   "details": {
     "signal": "Änderung melden",
     "signal_done": "Deine Meldung wurde gespeichert. Vielen Dank! Bitte habe etwas Geduld, bis deine Änderung erscheint.",
@@ -154,6 +141,7 @@
     "moneylender": "Geldverleiher",
     "insurance": "Versicherung",
     "fuel": "Tankstelle",
-    "funeral_directors": "Bestattungsunternehmen"
+    "funeral_directors": "Bestattungsunternehmen",
+    "other": "Sonstige Orte"
   }
 }
