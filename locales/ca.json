@@ -59,19 +59,6 @@
     "submit": "Publicar",
     "cancel": "Cancel·lar"
   },
-  "filter": {
-    "bakery": "Fleques",
-    "bank": "Serveis financers",
-    "food": "Botigues de queviures",
-    "fuel": "Estacions de servei",
-    "funeral_directors": "Tanatoris / Funeràries",
-    "pharmacy": "Farmàcies",
-    "police": "Comissaries de policia",
-    "post_office": "Oficines de correus",
-    "shop": "Botigues",
-    "tobacco": "Estancs",
-    "other": "Altres llocs"
-  },
   "details": {
     "signal": "Avisar d'un canvi",
     "signal_done": "El teu avís ha estat registrat. Gràcies. Tingues paciència, trigarà una mica en ser processat",
@@ -154,6 +141,7 @@
     "moneylender": "Prestamista",
     "insurance": "Assegurances",
     "fuel": "Benzinera",
-    "funeral_directors": "Tanatori / Funerària"
+    "funeral_directors": "Tanatori / Funerària",
+    "other": "Altres llocs"
   }
 }
