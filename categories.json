@@ -133,6 +133,15 @@
             }
           ],
           "areas": "all"
+        },
+        "ice_cream": {
+          "name": "Ice cream",
+          "osm_tags": [
+            {
+              "shop": "ice_cream"
+            }
+          ],
+          "areas": "all"
         }
       }
     },
