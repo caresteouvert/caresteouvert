@@ -17,6 +17,7 @@
 
 <script>
 import { jawgApiKey } from '../config.json';
+import { areas } from '../categories.json';
 import debounce from 'lodash.debounce';
 
 export default {
@@ -41,8 +42,9 @@ export default {
       this.isLoading = true;
       this.controller = new AbortController();
       const signal = this.controller.signal;
+      const countries = areas.join(',');
 
-      fetch(`https://api.jawg.io/places/v1/search?boundary.country=FRA&text=${encodeURIComponent(this.search)}&access-token=${jawgApiKey}`, { signal })
+      fetch(`https://api.jawg.io/places/v1/search?boundary.country=${countries}&lang=${this.$i18n.locale}&text=${encodeURIComponent(this.search)}&access-token=${jawgApiKey}`, { signal })
         .then(res => res.json())
         .then(body => {
           this.error = null;
