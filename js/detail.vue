@@ -177,7 +177,7 @@ export default {
 
     type() {
       const key = `categories.${this.point.properties.cat}`;
-      return this.$te(key) ? this.$t(key) : null;
+      return this.$te(key) ? this.$t(key) : this.$t('categories.other');
     },
 
     contact() {
