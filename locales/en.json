@@ -4,17 +4,21 @@
   "title": "It remains open",
   "subtitle": "Places that remain open during lockdown",
   "subtitle-dense": "Places open during lockdown",
-  "about": "About",
-  "map": "Map",
   "search": "Search",
   "menu": "Menu",
-  "geolocate": "Show your current location",
-  "press": "Press",
-  "disclaimer": "Disclaimer",
   "missing_shop": "Report a missing shop",
-  "blog": "Blog",
-  "townhalls": "Townhalls",
   "change_lang": "Change the language",
+  "learnmore": {
+    "about": "About",
+    "contribute": "Contribute",
+    "missing_shop": "Report a missing shop",
+    "description": "« Ça reste ouvert » is the essential tool to avoid unsuccessful movement around your home during lockdown and thus limit the risk of contagion.\nThis collaborative map allows you to easily share open or closed places in your neighborhood. It is the most effective and united way to better inform your neighbors and the inhabitants of your city.",
+    "title": "Learn more",
+    "press": "Press",
+    "disclaimer": "Disclaimer",
+    "blog": "Blog",
+    "townhalls": "Townhalls"
+  },
   "days": {
     "monday": "Monday",
     "tuesday": "Tuesday",
@@ -50,7 +54,7 @@
         "only": "Only offers delivery",
         "no": "No"
       },
-      "details": "Add details only if required"
+      "details": "Add details required during the lockdown"
     },
     "submit": "Publish",
     "cancel": "Cancel"

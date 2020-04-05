@@ -4,17 +4,21 @@
   "title": "Ça reste ouvert",
   "subtitle": "Les lieux ouverts durant le confinement",
   "subtitle-dense": "Lieux ouverts durant le confinement",
-  "about": "À propos",
-  "map": "Carte",
   "search": "Rechercher",
   "menu": "Menu",
-  "geolocate": "Se géolocaliser sur la carte",
-  "press": "Presse",
-  "disclaimer": "Mentions légales",
   "missing_shop": "Commerce manquant ?",
-  "blog": "Blog",
-  "townhalls": "Mairies",
   "change_lang": "Changer la langue",
+  "learnmore": {
+    "about": "À propos",
+    "blog": "Blog",
+    "contribute": "Contribuer",
+    "description": "« Ça reste ouvert » est l’outil indispensable pour éviter les déplacements infructueux autour de chez vous durant le confinement et limiter ainsi le risque de contagion.\n\nCette carte collaborative vous permet de partager simplement les lieux ouverts ou fermés dans votre quartier. C’est la manière la plus efficace et la plus solidaire pour informer au mieux vos voisins et les habitants de votre ville.",
+    "disclaimer": "Mentions légales",
+    "missing_shop": "Un lieu est manquant ? Rajoutez le !",
+    "press": "Presse",
+    "title": "En savoir plus",
+    "townhalls": "Mairies, utilisez « Ça reste ouvert »"
+  },
   "days": {
     "monday": "Lundi",
     "tuesday": "Mardi",
@@ -50,7 +54,7 @@
         "only": "seulement la livraison",
         "no": "Non"
       },
-      "details": "Ajouter des détails si nécessaire"
+      "details": "Ajouter des détails nécessaire au confinement"
     },
     "submit": "Publier",
     "cancel": "Annuler"

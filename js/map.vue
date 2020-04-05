@@ -138,6 +138,7 @@ const layers = [
       "icon-image": [
         "coalesce",
         ['image', ['concat', ['get', 'cat'], '_11']],
+        ['image', ['concat', ['get', 'normalized_cat'], '_11']],
         ['image', 'other_11']
       ],
       "icon-size": [
@@ -260,10 +261,14 @@ export default {
     },
 
     clickPoi(e) {
+      const id = e.mapboxEvent.features[0].properties.fid;
+      if (this.$route.name === 'place' && this.$route.params.id === id) {
+        return;
+      }
       this.$router.push({
         name: 'place',
         params: {
-          id: e.mapboxEvent.features[0].properties.fid,
+          id,
           featuresAndLocation: this.featuresAndLocation
         }
       });

@@ -59,19 +59,18 @@
             :title="contact('phone')"
             icon="osm-phone"
           />
+          <detail-link
+            v-if="contact('mobile')"
+            :href="`tel:${contact('mobile')}`"
+            :title="contact('mobile')"
+            icon="osm-phone"
+          />
 
           <detail-link
             v-if="contact('email')"
             :href="contact('email')"
             :title="contact('email')"
             icon="osm-mail"
-          />
-
-          <detail-link
-            v-if="contact('facebook')"
-            :href="contact('facebook')"
-            :title="contact('facebook')"
-            icon="osm-fcbk"
           />
 
           <detail-opening-hours
@@ -103,6 +102,13 @@
               />
             </v-alert>
           </template>
+
+          <detail-link
+            v-if="contact('facebook')"
+            :href="contact('facebook')"
+            :title="contact('facebook')"
+            icon="osm-fcbk"
+          />
 
           <detail-link
             v-if="contact('website')"
@@ -175,9 +181,17 @@ export default {
     },
 
     contact() {
+      const transform = {
+        facebook(url) {
+          if (!url) return url;
+          return url.startsWith('http') ? url : `https://facebook.com/${url}`;
+        }
+      };
       const tags = this.point.properties.tags;
       return (name) => {
-        return tags[name] || tags[`contact:${name}`];
+        const value = tags[name] || tags[`contact:${name}`];
+        const transformFunc = transform[name] || (v => v);
+        return transformFunc(value);
       };
     },
 

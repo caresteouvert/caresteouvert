@@ -47,7 +47,6 @@
 import * as config from '../config.json';
 import * as categories from '../categories.json';
 import { encode, decode, encodePosition, decodePosition } from './url';
-import Geolocate from './geolocate';
 import OsmSidebar from './sidebar';
 import OsmFilterFeatures from './filter_features';
 import OsmMap from './map';
@@ -55,7 +54,6 @@ import TopToolbar from './top_toolbar';
 
 export default {
   components: {
-    Geolocate,
     OsmFilterFeatures,
     OsmSidebar,
     OsmMap,
