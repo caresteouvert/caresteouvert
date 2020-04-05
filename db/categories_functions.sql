@@ -19,7 +19,7 @@ BEGIN
 		RETURN 'bakery';
 	ELSIF (tags->'shop' IN ('tobacco', 'e-cigarette')) OR (tags->'tobacco' IN ('yes', 'only')) THEN
 		RETURN 'tobacco';
-	ELSIF (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'electronics', 'dry_cleaning', 'laundry', 'stationery', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'agrarian', 'optician', 'bicycle', 'car_parts', 'car_repair')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') OR (tags->'amenity' = 'car_rental') THEN
+	ELSIF (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'electronics', 'dry_cleaning', 'laundry', 'stationery', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'agrarian', 'garden_centre', 'optician', 'bicycle', 'car_parts', 'car_repair')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') OR (tags->'amenity' = 'car_rental') THEN
 		RETURN 'shop';
 	ELSIF (tags->'amenity' = 'bank') OR (tags->'office' IN ('financial', 'insurance')) OR (tags->'shop' = 'money_lender') THEN
 		RETURN 'bank';
@@ -87,6 +87,8 @@ BEGIN
 		RETURN 'pet';
 	ELSIF tags->'shop' = 'agrarian' THEN
 		RETURN 'agrarian';
+	ELSIF tags->'shop' = 'garden_centre' THEN
+		RETURN 'garden_centre';
 	ELSIF (tags->'shop' = 'optician') OR (tags->'craft' = 'optician') THEN
 		RETURN 'optician';
 	ELSIF tags->'office' = 'employment_agency' THEN
