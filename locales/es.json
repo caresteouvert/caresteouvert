@@ -59,19 +59,6 @@
     "submit": "Publicar",
     "cancel": "Cancelar"
   },
-  "filter": {
-    "bakery": "Panaderías",
-    "bank": "Bancos y aseguradoras",
-    "food": "Tiendas de alimentación",
-    "fuel": "Estaciones de servicio",
-    "funeral_directors": "Funerarias",
-    "pharmacy": "Farmacias",
-    "police": "Comisarías",
-    "post_office": "Oficinas de correos",
-    "shop": "Tiendas",
-    "tobacco": "Estancos",
-    "other": "Otros lugares"
-  },
   "details": {
     "signal": "Avisar de un cambio",
     "signal_done": "Su informe ha sido registrado. ¡Gracias! Tenga paciencia, puede llevar un tiempo procesarlo.",
@@ -150,8 +137,11 @@
     "car_rental": "Alquiler de coches",
     "bicycle": "Tienda de bicicletas",
     "car": "Garaje",
-    "bank": "Bancos y aseguradoras",
+    "bank": "Banco",
+    "moneylender": "Prestamista",
+    "insurance": "Aseguradora",
     "fuel": "Gasolinera",
-    "funeral_directors": "Funerarias"
+    "funeral_directors": "Funerarias",
+    "other": "Otros lugares"
   }
 }
