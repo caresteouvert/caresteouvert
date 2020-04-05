@@ -47,8 +47,6 @@ const layers = [
       [
         "in",
         "status",
-        "ouvert",
-        "ouvert_adapté",
         "open",
         "open_adapted"
       ]
@@ -73,8 +71,6 @@ const layers = [
       [
         "in",
         "status",
-        "inconnu",
-        "partiel",
         "unknown",
         "partial"
       ]
@@ -99,7 +95,6 @@ const layers = [
       [
         "in",
         "status",
-        "fermé",
         "closed"
       ]
     ],

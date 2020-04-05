@@ -196,8 +196,7 @@ export default {
     },
 
     status() {
-      const fallback = { "ouvert": "open", "ouvert_adapté": "open_adapted", "partiel": "partial", "fermé": "closed", "inconnu": "unknown" };
-      return fallback[this.point.properties.status] || this.point.properties.status;
+      return this.point.properties.status;
     },
 
     infos() {
@@ -207,7 +206,7 @@ export default {
       if(this.point.properties.tags['takeaway:covid19'] && !this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`).startsWith('details.')) {
         infos.push(this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`));
       }
-      else if(['ouvert', 'ouvert_adapté', 'open', 'open_adapted'].includes(this.point.properties.status) && this.point.properties.tags.takeaway && !this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`).startsWith('details.')) {
+      else if(['open', 'open_adapted'].includes(this.point.properties.status) && this.point.properties.tags.takeaway && !this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`).startsWith('details.')) {
         infos.push(this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`));
       }
 
@@ -215,7 +214,7 @@ export default {
       if(this.point.properties.tags['delivery:covid19'] && !this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`).startsWith('details.')) {
         infos.push(this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`));
       }
-      else if(['ouvert', 'ouvert_adapté', 'open', 'open_adapted'].includes(this.point.properties.status) && this.point.properties.tags.delivery && !this.$t(`details.delivery.${this.point.properties.tags.delivery}`).startsWith('details.')) {
+      else if(['open', 'open_adapted'].includes(this.point.properties.status) && this.point.properties.tags.delivery && !this.$t(`details.delivery.${this.point.properties.tags.delivery}`).startsWith('details.')) {
         infos.push(this.$t(`details.delivery.${this.point.properties.tags.delivery}`));
       }
 
