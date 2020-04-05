@@ -11,7 +11,7 @@ const CATEGORIES_JSON = path.join(__dirname, "..", "categories.json");
 const catg = require(CATEGORIES_JSON);
 const locales = require(LOCALES_JSON);
 
-locales.categories = {};
+locales.categories = { "other": "Other places" };
 
 Object.entries(catg.categories).forEach(e => {
 	const [ key, cat ] = e;
