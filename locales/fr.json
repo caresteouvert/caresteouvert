@@ -10,13 +10,13 @@
   "change_lang": "Changer la langue",
   "learnmore": {
     "about": "À propos",
-    "blog": "Blog",
     "contribute": "Contribuer",
-    "description": "« Ça reste ouvert » est l’outil indispensable pour éviter les déplacements infructueux autour de chez vous durant le confinement et limiter ainsi le risque de contagion.\n\nCette carte collaborative vous permet de partager simplement les lieux ouverts ou fermés dans votre quartier. C’est la manière la plus efficace et la plus solidaire pour informer au mieux vos voisins et les habitants de votre ville.",
-    "disclaimer": "Mentions légales",
     "missing_shop": "Un lieu est manquant ? Rajoutez le !",
-    "press": "Presse",
+    "description": "« Ça reste ouvert » est l’outil indispensable pour éviter les déplacements infructueux autour de chez vous durant le confinement et limiter ainsi le risque de contagion.\n\nCette carte collaborative vous permet de partager simplement les lieux ouverts ou fermés dans votre quartier. C’est la manière la plus efficace et la plus solidaire pour informer au mieux vos voisins et les habitants de votre ville.",
     "title": "En savoir plus",
+    "press": "Presse",
+    "disclaimer": "Mentions légales",
+    "blog": "Blog",
     "townhalls": "Mairies, utilisez « Ça reste ouvert »"
   },
   "days": {
@@ -61,7 +61,7 @@
   },
   "filter": {
     "bakery": "Boulangeries",
-    "bank": "Banques & assurances",
+    "bank": "Services financier",
     "food": "Alimentation",
     "fuel": "Stations services",
     "funeral_directors": "Services funéraires",
@@ -113,15 +113,15 @@
     "add_interval": "Ajouter un horaire",
     "add_new_days": "Ajouter des jours d'ouverture"
   },
+  "osm_link": {
+    "title": "« Ça reste ouvert » utilise les données d'OpenStreetMap.",
+    "view": "Voir",
+    "edit": "Modifier"
+  },
   "categories": {
-    "amenity": "Services",
     "police": "Police",
-    "post_office": "Bureau de poste",
-    "bank": "Banque & assurances",
     "pharmacy": "Pharmacie",
-    "optician": "Opticien",
-    "employment_agency": "Agence pour l'emploi",
-    "funeral_directors": "Pompes funèbres",
+    "post_office": "Bureau de poste",
     "food": "Alimentation",
     "supermarket": "Supermarché",
     "butcher": "Boucherie",
@@ -130,30 +130,30 @@
     "seafood": "Poissonnerie",
     "greengrocer": "Primeur",
     "grocery": "Épicerie",
-    "bakery": "Boulangerie",
     "alcohol": "Vente d'alcool",
     "marketplace": "Marché",
-    "transport": "Transports",
-    "fuel": "Station-service",
-    "car_rental": "Location de voiture",
-    "bicycle": "Magasin de vélos",
-    "car": "Garage",
+    "bakery": "Boulangerie",
     "tobacco": "Tabac",
     "e_cigarette": "E-cigarette",
     "shop": "Boutiques",
     "hardware": "Bricolage",
+    "mobile_phone": "Téléphonie mobile",
     "electronics": "Matériel électronique",
     "laundry": "Laverie",
     "stationery": "Fournitures",
     "medical_supply": "Matériel médical",
-    "mobile_phone": "Téléphonie mobile",
     "newsagent": "Journaux",
     "pet": "Animalerie",
-    "agrarian": "Produits pour l'agriculture"
-  },
-  "osm_link": {
-    "title": "« Ça reste ouvert » utilise les données d'OpenStreetMap.",
-    "view": "Voir",
-    "edit": "Modifier"
+    "agrarian": "Produits pour l'agriculture",
+    "optician": "Opticien",
+    "employment_agency": "Agence pour l'emploi",
+    "car_rental": "Location de voiture",
+    "bicycle": "Magasin de vélos",
+    "car": "Garage",
+    "bank": "Banque & assurances",
+    "moneylender": "Prêteur ",
+    "insurance": "Assurance",
+    "fuel": "Station-service",
+    "funeral_directors": "Pompes funèbres"
   }
 }
