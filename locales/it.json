@@ -1,0 +1,147 @@
+{
+  "lang": "Inglese",
+  "covid19-alert": "Segui le restrizioni governative. La responsabilità è TUA.",
+  "title": "Rimane aperto",
+  "subtitle": "Luoghi che rimangono aperti durante il lockdown",
+  "subtitle-dense": "Luoghi aperti durante il lockdown",
+  "search": "Cerca",
+  "menu": "Menu",
+  "missing_shop": "Riporta un negozio mancate",
+  "change_lang": "Cambia lingua",
+  "learnmore": {
+    "about": "Informazioni",
+    "contribute": "Contribuisci",
+    "missing_shop": "Segnala un negozio mancante",
+    "description": "« Ça reste ouvert » ( \"rimane aperto\") è uno strumento essenziale per evitare inutili spostamenti fuori di casa durante il blocco e quindi limitare il rischio di contagio.\nQuesta mappa collaborativa consente di condividere facilmente luoghi aperti o chiusi nel tuo quartiere. È il modo più efficace e completo per informare meglio i tuoi vicini e gli abitanti della tua città.",
+    "title": "Maggiori informazioni",
+    "press": "Stampa",
+    "disclaimer": "Esclusione di responsabilità",
+    "blog": "Blog",
+    "townhalls": "Municipi"
+  },
+  "days": {
+    "monday": "Lunedì",
+    "tuesday": "Martedì",
+    "wednesday": "Mercoledì",
+    "thursday": "Giovedì",
+    "friday": "Venerdì",
+    "saturday": "Sabato",
+    "sunday": "Domenica",
+    "ph": "Festività"
+  },
+  "contribute_form": {
+    "title": "Contribuisci",
+    "step1": {
+      "title": "Questo luogo è aperto durante il blocco?",
+      "open": {
+        "yes": "sì",
+        "no": "no"
+      }
+    },
+    "step2": {
+      "title": "Orari di apertura durante il blocco",
+      "same_hours": "Negli stessi orari",
+      "same_hours_without_lockdown": "Si tratta dello stesso orario al di fuori del blocco",
+      "dont_know": "Non lo so",
+      "continue": "Continua"
+    },
+    "step3": {
+      "title": "Aggiungi dettagli",
+      "delivery": {
+        "title": "Questo locale offre la consegna a domicilio",
+        "unknown": "Non lo so",
+        "yes": "Sì",
+        "only": "Offre esclusivamente servizio di consegna a domicilio",
+        "no": "No"
+      },
+      "details": "Aggiungi dettagli necessari durante il blocco"
+    },
+    "submit": "Pubblica",
+    "cancel": "Annulla"
+  },
+  "details": {
+    "signal": "Segnala una modifica",
+    "signal_done": "La tua segnalazione è stata registrata. Grazie! Ti chiediamo un po' di pazienza durante il periodo in cui sarà processata.",
+    "containment_opening_hours": "Orari di apertura al di fuori del periodo di blocco",
+    "containment_brand_hours": "Orari di apertura secondo la pagina web ufficiale",
+    "facebook": "Pagina Facebook",
+    "opening_hours": {
+      "state_until_date": "{state} fino a {date}",
+      "state": {
+        "open": "aperto",
+        "closed": "chiuso"
+      },
+      "tomorrow": "domani"
+    },
+    "state": {
+      "open": "Luogo aperto durante il blocco",
+      "open_adapted": "Posiziona l'attività commerciale aperta durante il blocco con l'adeguato orario di apertura",
+      "partial": "Posizione una pontenziale attività commerciale apertura durante il blocco (da verificare)",
+      "unknown": "Posizione attività commerciale apertura durante il blocco. Chiusa o aperta? Facci sapere.",
+      "closed": "Posizione attività commerciale chiusa durante il blocco"
+    },
+    "delivery": {
+      "yes": "Servizio di consegna a domicilio disponibile",
+      "only": "Esclusivamente come consegna a domicilio"
+    },
+    "takeaway": {
+      "yes": "Servizio d'asporto disponibile",
+      "modified": "Vendita d'asporto modificata",
+      "only": "Solo vendita d'asporto"
+    }
+  },
+  "opening_hours_editor": {
+    "select_days": "Seleziona i giorni",
+    "next": "Scegli l'orario",
+    "select_time": {
+      "start": "Seleziona orari di apertura",
+      "end": "Scegli l'orario di chiusura"
+    },
+    "add_interval": "Aggiungi orari",
+    "add_new_days": "Aggiungi orari di apertura"
+  },
+  "osm_link": {
+    "title": "« Ça reste ouvert » usa i dati di OpenStreetMap.",
+    "view": "Vedi",
+    "edit": "Modifica"
+  },
+  "categories": {
+    "police": "Polizia",
+    "pharmacy": "Farmacia",
+    "post_office": "Ufficio postale",
+    "food": "Cibo",
+    "supermarket": "Supermercato",
+    "butcher": "Macellaio",
+    "cheese": "Formaggi",
+    "convenience": "Convenience store",
+    "seafood": "Pescheria",
+    "greengrocer": "Fruttivendolo",
+    "grocery": "Drogheria",
+    "alcohol": "Negozio di alcool",
+    "marketplace": "Mercato",
+    "bakery": "Panificio",
+    "tobacco": "Tabacchi",
+    "e_cigarette": "Sigarette elettroniche",
+    "shop": "Negozi",
+    "hardware": "Ferramenta",
+    "mobile_phone": "Telefonia mobile",
+    "electronics": "Elettronica",
+    "laundry": "Lavanderia",
+    "stationery": "Cartoleria",
+    "medical_supply": "Forniture mediche",
+    "newsagent": "Giornalaio",
+    "pet": "Negozio per animali",
+    "agrarian": "Prodotti agricoli",
+    "optician": "Ottico",
+    "employment_agency": "Agenzia di collocamento",
+    "car_rental": "Noleggio auto",
+    "bicycle": "Negozio di biciclette",
+    "car": "Garage",
+    "bank": "Banca",
+    "moneylender": "Finanziaria",
+    "insurance": "Assicurazione",
+    "fuel": "Stazione di rifiorimento carburante",
+    "funeral_directors": "Pompe funebri",
+    "other": "Altri luoghi"
+  }
+}
