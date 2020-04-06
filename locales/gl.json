@@ -13,11 +13,16 @@
     "contribute": "Contribuír",
     "missing_shop": "Informar dunha tenda que falla",
     "description": "O «Ça reste ouvert» é unha ferramenta esencial para evitar movementos inútis durante o confinamento e, polo tanto, limitar o risco de contaxio. Este mapa colaborativo permite compartir doadamente lugares abertos ou pechados na túa veciñanza. É o xeito máis efectivo de informar ós teus veciños e ós habitantes da túa cidade.",
-    "title": "Aprender máis",
+    "title": "Saber máis",
     "press": "Prensa",
     "disclaimer": "Responsabilidade legal",
     "blog": "Blogue",
     "townhalls": "Concellos"
+  },
+  "rgpd": {
+    "consent": "Nestes tempos de confinamento, aceptarías as cookies no teu computador para recompilar as nosas estatísticas?",
+    "yes": "Si",
+    "no": "Non"
   },
   "days": {
     "monday": "Luns / Segunda feira",
