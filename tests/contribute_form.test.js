@@ -52,31 +52,62 @@ describe('ContributeForm', () => {
     expect(form.vm.openingHours).toEqual([]);
   });
 
-  it('dont parse the the delivery:covid19 if it dont exists', () => {
-    const form = createWrapper({ point: { properties: { tags: { } } } });
-    form.vm.clickOpen();
-    expect(form.vm.delivery).toBe(null);
-    expect(form.vm.showDelivery).toBe(true);
+  describe('delivery', () => {
+    it('dont parse the delivery:covid19 tag if it dont exists', () => {
+      const form = createWrapper({ point: { properties: { tags: { } } } });
+      form.vm.clickOpen();
+      expect(form.vm.delivery).toBe(null);
+      expect(form.vm.showDelivery).toBe(true);
+    });
+
+    it('parse the delivery:covid19 tag if it exists', () => {
+      const form = createWrapper({ point: { properties: { tags: { 'delivery:covid19': 'yes' } } } });
+      form.vm.clickOpen();
+      expect(form.vm.delivery).toEqual('yes');
+      expect(form.vm.showDelivery).toBe(true);
+    });
+
+    it('if the delivery tag has an unknow value, hide the field', () => {
+      const form = createWrapper({ point: { properties: { tags: { 'delivery:covid19': 'Mo-Fr 09:00-18:00' } } } });
+      form.vm.clickOpen();
+      expect(form.vm.delivery).toBe(null);
+      expect(form.vm.showDelivery).toBe(false);
+    });
+
+    it('if the place if closed, dont, hide the delivery field', () => {
+      const form = createWrapper({ point: { properties: { tags: { } } } });
+      form.vm.clickClose();
+      expect(form.vm.showDelivery).toBe(false);
+    });
   });
 
-  it('parse the the delivery:covid19 if it exists', () => {
-    const form = createWrapper({ point: { properties: { tags: { 'delivery:covid19': 'yes' } } } });
-    form.vm.clickOpen();
-    expect(form.vm.delivery).toEqual('yes');
-    expect(form.vm.showDelivery).toBe(true);
-  });
+  describe('takeaway', () => {
+    it('dont parse the takeaway:covid19 tag if it dont exists', () => {
+      const form = createWrapper({ point: { properties: { tags: { } } } });
+      form.vm.clickOpen();
+      expect(form.vm.takeaway).toBe(null);
+      expect(form.vm.showTakeaway).toBe(true);
+    });
 
-  it('if the delivery has an unknow value, hide the field', () => {
-    const form = createWrapper({ point: { properties: { tags: { 'delivery:covid19': 'Mo-Fr 09:00-18:00' } } } });
-    form.vm.clickOpen();
-    expect(form.vm.delivery).toBe(null);
-    expect(form.vm.showDelivery).toBe(false);
-  });
+    it('parse the takeaway:covid19 tag if it exists', () => {
+      const form = createWrapper({ point: { properties: { tags: { 'takeaway:covid19': 'yes' } } } });
+      form.vm.clickOpen();
+      expect(form.vm.takeaway).toEqual('yes');
+      expect(form.vm.showTakeaway).toBe(true);
+    });
 
-  it('if the place if closed, dont, hide the delivery field', () => {
-    const form = createWrapper({ point: { properties: { tags: { } } } });
-    form.vm.clickClose();
-    expect(form.vm.showDelivery).toBe(false);
+    it('if the takeaway tag has an unknow value, hide the field', () => {
+      const form = createWrapper({ point: { properties: { tags: { 'takeaway:covid19': 'Mo-Fr 09:00-18:00' } } } });
+      form.vm.clickOpen();
+      expect(form.vm.takeaway).toBe(null);
+      expect(form.vm.showTakeaway).toBe(false);
+    });
+
+    it('if the place if closed, dont, hide the takeaway field', () => {
+      const form = createWrapper({ point: { properties: { tags: { } } } });
+      form.vm.clickClose();
+      expect(form.vm.showTakeaway).toBe(false);
+    });
   });
 
   it('parse and display the opening_hours:covid19 if they are already here', () => {
@@ -187,6 +218,23 @@ describe('ContributeForm', () => {
         lang: 'fr',
         tags: {
           'delivery:covid19': 'yes'
+        }
+      });
+    });
+
+    it('open, with takeaway', () => {
+      form.vm.clickOpen();
+      form.vm.takeaway = 'yes';
+      expect(form.vm.payload).toEqual({
+        name: 'Test',
+        state: 'open',
+        details: '',
+        opening_hours: [],
+        lat: 2,
+        lon: 1,
+        lang: 'fr',
+        tags: {
+          'takeaway:covid19': 'yes'
         }
       });
     });

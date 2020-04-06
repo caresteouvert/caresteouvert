@@ -98,6 +98,20 @@
           ></v-select>
         </label>
 
+        <label
+          v-if="showTakeaway"
+          class="d-block mt-2"
+        >
+          {{ $t('contribute_form.step3.takeaway.title') }}
+          <v-select
+            v-model="takeaway"
+            :items="takeawayItems"
+            filled
+            dense
+            hide-details
+          ></v-select>
+        </label>
+
         <label class="d-block pt-4">
           {{ $t('contribute_form.step3.details') }}
           <v-textarea
@@ -146,6 +160,13 @@ export default {
         { text: this.$t('contribute_form.step3.delivery.only'), value: 'only' },
         { text: this.$t('contribute_form.step3.delivery.no'), value: 'no' }
       ],
+      takeaway: null,
+      takeawayItems: [
+        { text: this.$t('contribute_form.step3.takeaway.unknown'), value: null },
+        { text: this.$t('contribute_form.step3.takeaway.yes'), value: 'yes' },
+        { text: this.$t('contribute_form.step3.takeaway.only'), value: 'only' },
+        { text: this.$t('contribute_form.step3.takeaway.no'), value: 'no' }
+      ],
       loading: false,
       open: null,
       openingHours: [],
@@ -157,10 +178,8 @@ export default {
     if (this.properties.opening_hours) {
       this.openingHours = this.parseOpeningHours(this.properties.opening_hours);
     }
-    const delivery = this.properties.tags['delivery:covid19']
-    if (delivery && this.deliveryItems.map(i => i.value).includes(delivery)) {
-      this.delivery = delivery;
-    }
+    this.delivery = this.parseTag('delivery:covid19', this.deliveryItems);
+    this.takeaway = this.parseTag('takeaway:covid19', this.takeawayItems);
   },
 
   computed: {
@@ -177,8 +196,11 @@ export default {
     },
 
     showDelivery() {
-      const delivery = this.properties.tags['delivery:covid19'];
-      return !!this.open && (!delivery || (delivery && this.deliveryItems.map(i => i.value).includes(delivery)));
+      return this.showField('delivery:covid19', this.deliveryItems);
+    },
+
+    showTakeaway() {
+      return this.showField('takeaway:covid19', this.takeawayItems);
     },
 
     id() {
@@ -199,7 +221,8 @@ export default {
         lang: this.$i18n.locale,
         tags: {
           opening_hours: this.openingHoursWithoutLockDown ? 'same': undefined,
-          'delivery:covid19': this.delivery ? this.delivery : undefined
+          'delivery:covid19': this.delivery ? this.delivery : undefined,
+          'takeaway:covid19': this.takeaway ? this.takeaway : undefined
         }
       };
     }
@@ -251,6 +274,19 @@ export default {
 
     close() {
       this.$emit('close');
+    },
+
+    showField(tag, items) {
+      return !!this.open && (!this.hasTag(tag) || !!this.parseTag(tag, items));
+    },
+
+    hasTag(tag) {
+      return !!this.properties.tags[tag];
+    },
+
+    parseTag(tag, items) {
+      const value = this.properties.tags[tag];
+      return items.map(e => e.value).includes(value) ? value : null;
     }
   }
 };

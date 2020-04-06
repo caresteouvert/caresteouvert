@@ -54,6 +54,13 @@
         "only": "Only offers delivery",
         "no": "No"
       },
+      "takeaway": {
+        "title": "This place allows to purchase to take-away",
+        "unknown": "I don't know",
+        "yes": "Yes",
+        "only": "Take-away only",
+        "no": "No"
+      },
       "details": "Add details required during the lockdown"
     },
     "submit": "Publish",
