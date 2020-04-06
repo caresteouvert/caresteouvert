@@ -19,6 +19,11 @@
     "blog": "Blog",
     "townhalls": "Rathäuser"
   },
+  "rgpd": {
+    "consent": "In Zeiten von Ausgangssperren: Würdest du einen Cookie auf deinem Computer akzeptieren für unsere Statistiken?",
+    "yes": "Ja",
+    "no": "Nein"
+  },
   "days": {
     "monday": "Montag",
     "tuesday": "Dienstag",
@@ -94,7 +99,7 @@
     "takeaway": {
       "yes": "Verkauf zum Mitnehmen möglich",
       "modified": "Abweichender Verkauf zum Mitnehmen",
-      "only": "Nur zum Mitnehmen"
+      "only": "Nur Außer-Haus-Verkauf"
     }
   },
   "opening_hours_editor": {
