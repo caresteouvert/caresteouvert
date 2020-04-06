@@ -31,7 +31,7 @@
         icon
         x-small
         color="secondary"
-        href="https://www.gouvernement.fr/info-coronavirus"
+        :href="links.government"
         target="_blank"
       >
         <v-icon>{{ `osm-info` }}</v-icon>
@@ -43,7 +43,7 @@
       <v-divider></v-divider>
       <sidebar-list-item
         :title="$t('missing_shop')"
-        href="https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/"
+        :href="links.shopMissing"
         icon="plus"
       />
       <learn-more />
@@ -54,6 +54,7 @@
 </template>
 
 <script>
+import { fr } from '../config.json';
 import SidebarListItem from './sidebar_list_item';
 import ChangeLanguage from './change_language';
 import LearnMore from './learn_more';
@@ -63,6 +64,7 @@ export default {
 
   data() {
     return {
+      links: fr,
       alert: localStorage.getItem('showAlert') === 'false' ? false : true
     };
   },
