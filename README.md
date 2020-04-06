@@ -14,6 +14,7 @@ To deploy a complete instance of "Ça reste ouvert", you needs:
 - [postgres with postgis and data loaded](db/)
 - [pg_tileserv](https://access.crunchydata.com/documentation/pg_tileserv/latest/)
 - [pg_featureserv](https://access.crunchydata.com/documentation/pg_featureserv/latest/)
+- [Ça reste ouvert backend](https://github.com/osmontrouge/caresteouvert_backend) (complementary API)
 
 
 ## Development
