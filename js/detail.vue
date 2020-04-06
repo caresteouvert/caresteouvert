@@ -15,7 +15,7 @@
           dark
           class="flex-grow-0"
         >
-          <v-icon>{{ `osm-${point.properties.cat}` }}</v-icon>
+          <v-icon>{{ `osm-${category}` }}</v-icon>
           <v-toolbar-title
             :title="title"
             class="ml-3 toolbar-title"
@@ -173,6 +173,10 @@ export default {
   computed: {
     title() {
       return this.point.properties.name;
+    },
+
+    category() {
+      return this.point.properties.cat === 'unknown' ? 'other' : this.point.properties.cat;
     },
 
     type() {
