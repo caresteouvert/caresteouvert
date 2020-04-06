@@ -58,7 +58,7 @@
         "title": "Ce lieu propose la vente à emporter",
         "unknown": "Ne sais pas",
         "yes": "Oui",
-        "only": "Seulement à emporter",
+        "only": "Vente à emporter uniquement",
         "no": "Non"
       },
       "details": "Ajouter des détails nécessaire au confinement"
@@ -148,6 +148,7 @@
     "garden_centre": "Jardinerie",
     "optician": "Opticien",
     "employment_agency": "Agence pour l'emploi",
+    "finance": "Services financier",
     "bank": "Banque & assurances",
     "moneylender": "Prêteur ",
     "insurance": "Assurance",
