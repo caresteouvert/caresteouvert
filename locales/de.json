@@ -106,6 +106,7 @@
     "edit": "Bearbeiten"
   },
   "categories": {
+    "other": "Sonstige Orte",
     "police": "Polizei",
     "pharmacy": "Apotheke",
     "post_office": "Postfiliale",
@@ -132,16 +133,17 @@
     "newsagent": "Kiosk",
     "pet": "Tierbedarf",
     "agrarian": "Landhandel",
+    "garden_centre": "Gartenbaumarkt",
     "optician": "Optiker",
     "employment_agency": "Arbeitsagentur",
-    "car_rental": "Autovermietung",
-    "bicycle": "Fahrradladen",
-    "car": "Autowerkstatt",
     "bank": "Bank",
     "moneylender": "Geldverleiher",
     "insurance": "Versicherung",
+    "mobility": "Mobiiltät",
     "fuel": "Tankstelle",
-    "funeral_directors": "Bestattungsunternehmen",
-    "other": "Sonstige Orte"
+    "car_rental": "Autovermietung",
+    "bicycle": "Fahrradladen",
+    "car": "Autowerkstatt",
+    "funeral_directors": "Bestattungsunternehmen"
   }
 }
