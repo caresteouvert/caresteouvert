@@ -12,7 +12,17 @@
     no-filter
     background-color="white"
     prepend-inner-icon="osm-magnify"
-  />
+  >
+    <template v-slot:item="{ item }">
+      <v-list-item-content>
+        <v-list-item-title v-text="item.text"></v-list-item-title>
+        <v-list-item-subtitle v-text="item.region"></v-list-item-subtitle>
+      </v-list-item-content>
+      <v-list-item-action>
+        <v-icon>mdi-coin</v-icon>
+      </v-list-item-action>
+    </template>
+  </v-autocomplete>
 </template>
 
 <script>
@@ -43,14 +53,16 @@ export default {
       this.controller = new AbortController();
       const signal = this.controller.signal;
       const countries = areas.join(',');
+      const url = `https://api.jawg.io/places/v1/search?boundary.country=${countries}&lang=${this.$i18n.locale}&text=${encodeURIComponent(this.search)}&access-token=${jawgApiKey}`;
 
-      fetch(`https://api.jawg.io/places/v1/search?boundary.country=${countries}&lang=${this.$i18n.locale}&text=${encodeURIComponent(this.search)}&access-token=${jawgApiKey}`, { signal })
+      fetch(url, { signal })
         .then(res => res.json())
         .then(body => {
           this.error = null;
           this.items = body.features.map((feature) => {
             return {
               text: feature.properties.label,
+              region: feature.properties.region,
               value: feature.bbox ? feature.bbox : feature.geometry.coordinates.concat(feature.geometry.coordinates)
             };
           });
