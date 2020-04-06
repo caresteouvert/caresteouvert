@@ -63,7 +63,7 @@
             v-if="contact('mobile')"
             :href="`tel:${contact('mobile')}`"
             :title="contact('mobile')"
-            icon="osm-phone"
+            icon="osm-mobile_phone"
           />
 
           <detail-link
