@@ -18,6 +18,7 @@
     </v-card>
 
     <v-alert
+      v-model="alert"
       dense
       tile
       dismissible
@@ -58,7 +59,19 @@ import ChangeLanguage from './change_language';
 import LearnMore from './learn_more';
 
 export default {
-  components: { LearnMore, ChangeLanguage, SidebarListItem }
+  components: { LearnMore, ChangeLanguage, SidebarListItem },
+
+  data() {
+    return {
+      alert: localStorage.getItem('showAlert') === 'false' ? false : true
+    };
+  },
+
+  watch: {
+    alert() {
+      localStorage.setItem('showAlert', false);
+    }
+  }
 }
 </script>
 
