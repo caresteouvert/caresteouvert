@@ -81,14 +81,19 @@
 </template>
 
 <script>
-import { fr } from '../config.json';
+import config from '../config.json';
 
 export default {
   data() {
     return {
-      links: fr,
       dialog: false
     };
+  },
+
+  computed: {
+    links() {
+      return config[this.$i18n.locale] || config.en;
+    }
   }
 };
 </script>

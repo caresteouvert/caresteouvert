@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import { fr } from '../config.json';
+import config from '../config.json';
 import aperta from '../images/aperta.svg';
 import caresteouvert from '../images/caresteouvert.svg';
 import SidebarListItem from './sidebar_list_item';
@@ -66,10 +66,17 @@ export default {
 
   data() {
     return {
-      logo: { aperta: aperta, caresteouvert: caresteouvert }[fr.brand],
-      links: fr,
       alert: localStorage.getItem('showAlert') === 'false' ? false : true
     };
+  },
+
+  computed: {
+    links() {
+      return config[this.$i18n.locale] || config.en;
+    },
+    logo() {
+      return { aperta: aperta, caresteouvert: caresteouvert }[this.links.brand];
+    }
   },
 
   watch: {

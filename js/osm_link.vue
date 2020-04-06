@@ -27,7 +27,7 @@
 
 <script>
 import parseId from './parse_id';
-import { fr } from '../config.json';
+import config from '../config.json';
 
 export default {
   props: {
@@ -41,11 +41,17 @@ export default {
     const { type, id } = parseId(this.id);
 
     return {
-      brand: fr.brand_text,
       osmLink: `https://www.openstreetmap.org/${type}/${id}`,
       idLink: `https://www.openstreetmap.org/edit?editor=id&${type}=${id}`,
     };
+  },
+
+  computed: {
+    brand() {
+      return (config[this.$i18n.locale] || config.en).brand_text;
+    }
   }
+
 };
 </script>
 
