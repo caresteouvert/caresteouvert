@@ -106,6 +106,7 @@
     "edit": "Modifier"
   },
   "categories": {
+    "other": "Autres établissements",
     "police": "Police",
     "pharmacy": "Pharmacie",
     "post_office": "Bureau de poste",
@@ -132,17 +133,17 @@
     "newsagent": "Journaux",
     "pet": "Animalerie",
     "agrarian": "Produits pour l'agriculture",
+    "garden_centre": "Jardinerie",
     "optician": "Opticien",
     "employment_agency": "Agence pour l'emploi",
-    "car_rental": "Location de voiture",
-    "bicycle": "Magasin de vélos",
-    "car": "Garage",
     "bank": "Banque & assurances",
     "moneylender": "Prêteur ",
     "insurance": "Assurance",
     "mobility": "Mobilité",
     "fuel": "Station-service",
-    "funeral_directors": "Pompes funèbres",
-    "other": "Autres établissements"
+    "car_rental": "Location de voiture",
+    "bicycle": "Magasin de vélos",
+    "car": "Garage",
+    "funeral_directors": "Pompes funèbres"
   }
 }
