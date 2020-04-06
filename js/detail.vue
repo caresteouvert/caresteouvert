@@ -68,7 +68,7 @@
 
           <detail-link
             v-if="contact('email')"
-            :href="contact('email')"
+            :href="`mailto:${contact('email')}`"
             :title="contact('email')"
             icon="osm-mail"
           />

@@ -13,16 +13,18 @@ BEGIN
 		RETURN 'pharmacy';
 	ELSIF tags->'amenity' = 'post_office' THEN
 		RETURN 'post_office';
-	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'pizza') OR (tags->'shop' IN ('frozen_food', 'supermarket', 'butcher', 'cheese', 'convenience', 'seafood', 'greengrocer', 'deli', 'farm', 'chocolate', 'alcohol', 'beverages', 'wine')) OR (tags->'amenity' = 'marketplace') THEN
+	ELSIF (tags->'shop' IN ('frozen_food', 'supermarket', 'butcher', 'cheese', 'convenience', 'seafood', 'greengrocer', 'deli', 'farm', 'chocolate', 'alcohol', 'beverages', 'wine')) OR (tags->'amenity' = 'marketplace') THEN
 		RETURN 'food';
 	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bread') OR (tags->'shop' IN ('bakery', 'pastry')) THEN
 		RETURN 'bakery';
+	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'pizza') OR (tags->'amenity' = 'restaurant' AND tags->'delivery' IN ('yes', 'only')) OR (tags->'amenity' = 'restaurant' AND tags->'takeaway' IN ('yes', 'only')) OR (tags->'amenity' = 'restaurant' AND tags->'delivery:covid19' IN ('yes', 'only')) OR (tags->'amenity' = 'restaurant' AND tags->'takeaway:covid19' IN ('yes', 'only')) OR (tags->'amenity' = 'fast_food' AND tags->'delivery' IN ('yes', 'only')) OR (tags->'amenity' = 'fast_food' AND tags->'takeaway' IN ('yes', 'only')) OR (tags->'amenity' = 'fast_food' AND tags->'delivery:covid19' IN ('yes', 'only')) OR (tags->'amenity' = 'fast_food' AND tags->'takeaway:covid19' IN ('yes', 'only')) OR (tags->'amenity' = 'ice_cream' AND tags->'delivery' IN ('yes', 'only')) OR (tags->'amenity' = 'ice_cream' AND tags->'takeaway' IN ('yes', 'only')) OR (tags->'amenity' = 'ice_cream' AND tags->'delivery:covid19' IN ('yes', 'only')) OR (tags->'amenity' = 'ice_cream' AND tags->'takeaway:covid19' IN ('yes', 'only')) THEN
+		RETURN 'eat';
 	ELSIF (tags->'shop' IN ('tobacco', 'e-cigarette')) OR (tags->'tobacco' IN ('yes', 'only')) THEN
 		RETURN 'tobacco';
 	ELSIF (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'electronics', 'dry_cleaning', 'laundry', 'stationery', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'agrarian', 'garden_centre', 'optician')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') THEN
 		RETURN 'shop';
 	ELSIF (tags->'amenity' = 'bank') OR (tags->'office' IN ('financial', 'insurance')) OR (tags->'shop' = 'money_lender') THEN
-		RETURN 'bank';
+		RETURN 'finance';
 	ELSIF (tags->'amenity' IN ('fuel', 'car_rental')) OR (tags->'shop' IN ('gas', 'bicycle', 'car_parts', 'car_repair')) THEN
 		RETURN 'mobility';
 	ELSIF tags->'shop' = 'funeral_directors' THEN
@@ -57,7 +59,7 @@ BEGIN
 		RETURN 'seafood';
 	ELSIF tags->'shop' = 'greengrocer' THEN
 		RETURN 'greengrocer';
-	ELSIF (tags->'shop' IN ('deli', 'farm', 'chocolate')) OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'pizza') THEN
+	ELSIF tags->'shop' IN ('deli', 'farm', 'chocolate') THEN
 		RETURN 'grocery';
 	ELSIF tags->'shop' IN ('alcohol', 'beverages', 'wine') THEN
 		RETURN 'alcohol';
@@ -65,6 +67,14 @@ BEGIN
 		RETURN 'marketplace';
 	ELSIF (tags->'shop' IN ('bakery', 'pastry')) OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bread') THEN
 		RETURN 'bakery';
+	ELSIF tags->'amenity' = 'vending_machine' AND tags->'vending' = 'pizza' THEN
+		RETURN 'vending_machine';
+	ELSIF (tags->'amenity' = 'restaurant' AND tags->'delivery' IN ('yes', 'only')) OR (tags->'amenity' = 'restaurant' AND tags->'takeaway' IN ('yes', 'only')) OR (tags->'amenity' = 'restaurant' AND tags->'delivery:covid19' IN ('yes', 'only')) OR (tags->'amenity' = 'restaurant' AND tags->'takeaway:covid19' IN ('yes', 'only')) THEN
+		RETURN 'restaurant';
+	ELSIF (tags->'amenity' = 'fast_food' AND tags->'delivery' IN ('yes', 'only')) OR (tags->'amenity' = 'fast_food' AND tags->'takeaway' IN ('yes', 'only')) OR (tags->'amenity' = 'fast_food' AND tags->'delivery:covid19' IN ('yes', 'only')) OR (tags->'amenity' = 'fast_food' AND tags->'takeaway:covid19' IN ('yes', 'only')) THEN
+		RETURN 'fast_food';
+	ELSIF (tags->'amenity' = 'ice_cream' AND tags->'delivery' IN ('yes', 'only')) OR (tags->'amenity' = 'ice_cream' AND tags->'takeaway' IN ('yes', 'only')) OR (tags->'amenity' = 'ice_cream' AND tags->'delivery:covid19' IN ('yes', 'only')) OR (tags->'amenity' = 'ice_cream' AND tags->'takeaway:covid19' IN ('yes', 'only')) THEN
+		RETURN 'ice_cream';
 	ELSIF (tags->'shop' = 'tobacco') OR (tags->'tobacco' IN ('yes', 'only')) THEN
 		RETURN 'tobacco';
 	ELSIF tags->'shop' = 'e-cigarette' THEN

@@ -54,6 +54,13 @@
         "only": "seulement la livraison",
         "no": "Non"
       },
+      "takeaway": {
+        "title": "Ce lieu propose la vente à emporter",
+        "unknown": "Ne sais pas",
+        "yes": "Oui",
+        "only": "Vente à emporter uniquement",
+        "no": "Non"
+      },
       "details": "Ajouter des détails nécessaire au confinement"
     },
     "submit": "Publier",
@@ -121,6 +128,11 @@
     "alcohol": "Vente d'alcool",
     "marketplace": "Marché",
     "bakery": "Boulangerie",
+    "eat": "Restauration",
+    "vending_machine": "Distributeur automatique",
+    "restaurant": "Restaurant",
+    "fast_food": "Restauration rapide",
+    "ice_cream": "Glacier",
     "tobacco": "Tabac",
     "e_cigarette": "E-cigarette",
     "shop": "Boutiques",
@@ -136,6 +148,7 @@
     "garden_centre": "Jardinerie",
     "optician": "Opticien",
     "employment_agency": "Agence pour l'emploi",
+    "finance": "Services financier",
     "bank": "Banque & assurances",
     "moneylender": "Prêteur ",
     "insurance": "Assurance",

@@ -54,6 +54,13 @@
         "only": "Only offers delivery",
         "no": "No"
       },
+      "takeaway": {
+        "title": "This place allows to purchase to take-away",
+        "unknown": "I don't know",
+        "yes": "Yes",
+        "only": "Take-away only",
+        "no": "No"
+      },
       "details": "Add details required during the lockdown"
     },
     "submit": "Publish",
@@ -121,6 +128,11 @@
     "alcohol": "Alcohol store",
     "marketplace": "Marketplace",
     "bakery": "Bakery",
+    "eat": "Restaurant & take-away",
+    "vending_machine": "Vending machine",
+    "restaurant": "Restaurant",
+    "fast_food": "Fast food",
+    "ice_cream": "Ice cream",
     "tobacco": "Tobacco",
     "e_cigarette": "E-cigarette",
     "shop": "Shops",
@@ -136,6 +148,7 @@
     "garden_centre": "Garden centre",
     "optician": "Optician",
     "employment_agency": "Employment agency",
+    "finance": "Financial services",
     "bank": "Bank",
     "moneylender": "Moneylender",
     "insurance": "Insurance",
