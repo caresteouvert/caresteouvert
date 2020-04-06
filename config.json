@@ -10,6 +10,8 @@
   "apiUrl": "https://api.caresteouvert.fr",
   "geoIpUrl": "https://geo.caresteouvert.fr/me",
   "fr": {
+    "brand": "caresteouvert",
+    "brand_text": "Ça reste ouvert",
     "government": "https://www.gouvernement.fr/info-coronavirus",
     "blog": "https://blog.caresteouvert.fr/",
     "shopMissing": "https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/",

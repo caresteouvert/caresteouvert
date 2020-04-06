@@ -26,7 +26,7 @@
         </v-btn>
       </v-card-title>
       <v-card-text>
-        <p v-for="p in $t('learnmore.description').split('\n')">{{ p }}</p>
+        <p v-for="p in $t('learnmore.description', { brand: links.brand_text }).split('\n')">{{ p }}</p>
         <v-row>
           <v-col
             cols="12"
@@ -41,7 +41,7 @@
               </li>
               <li>
                 <a :href="links.townhalls">
-                  {{ $t('learnmore.townhalls') }}
+                  {{ $t('learnmore.townhalls', { brand: links.brand_text }) }}
                 </a>
               </li>
             </ul>

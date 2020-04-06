@@ -12,7 +12,7 @@
     "about": "Sobre",
     "contribute": "Contribuir",
     "missing_shop": "Avisar d'una botiga que falta",
-    "description": "« Ça reste ouvert » és l'eina essencial per evitar moviments innecessaris  al voltant de casa teva durant el confinament i pel risc de contagi.\nAquest mapa col·laboratiu et permet compartir llocs oberts o tancats al teu veïnat. És la forma més efectiva i unida per informar millor als teus veïns i habitants de la teva ciutat.",
+    "description": "« {brand} » és l'eina essencial per evitar moviments innecessaris  al voltant de casa teva durant el confinament i pel risc de contagi.\nAquest mapa col·laboratiu et permet compartir llocs oberts o tancats al teu veïnat. És la forma més efectiva i unida per informar millor als teus veïns i habitants de la teva ciutat.",
     "title": "Aprendre'n més",
     "press": "Premsa",
     "disclaimer": "Descàrrega de responsabilitat",
@@ -101,7 +101,7 @@
     "add_new_days": "Afegir dies d'obertura"
   },
   "osm_link": {
-    "title": "« Ça reste ouvert » usa dades d'OpenStreetMap.",
+    "title": "« {brand} » usa dades d'OpenStreetMap.",
     "view": "Veure",
     "edit": "Editar"
   },
