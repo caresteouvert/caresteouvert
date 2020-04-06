@@ -19,6 +19,11 @@
     "blog": "Blog",
     "townhalls": "Townhalls"
   },
+  "rgpd": {
+    "consent": "In these times of lockdown, would you take a cookie on your computer for our statistics?",
+    "yes": "Yes",
+    "no": "No"
+  },
   "days": {
     "monday": "Monday",
     "tuesday": "Tuesday",

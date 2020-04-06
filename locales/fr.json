@@ -19,6 +19,11 @@
     "blog": "Blog",
     "townhalls": "Mairies, utilisez « Ça reste ouvert »"
   },
+  "rgpd": {
+    "consent": "En ces temps de confinement, vous prendriez bien un cookie sur votre ordinateur pour nos statistiques ?",
+    "yes": "Oui",
+    "no": "Non"
+  },
   "days": {
     "monday": "Lundi",
     "tuesday": "Mardi",
