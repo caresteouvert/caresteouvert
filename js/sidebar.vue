@@ -5,11 +5,13 @@
       flat
     >
       <v-card-title class="pl-1 pt-5 pb-5 justify-center">
-        <img
-          :alt="$t('title')"
-          class="px-3 logo"
-          src="../images/logo.svg"
-        />
+        <router-link to="/">
+          <img
+            :alt="$t('title')"
+            class="px-3 logo"
+            src="../images/logo.svg"
+          />
+        </router-link>
       </v-card-title>
       <v-card-subtitle class="pl-2 text-center">
         {{ $t('subtitle') }}
