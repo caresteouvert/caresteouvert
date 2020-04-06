@@ -1,6 +1,7 @@
 <template>
   <div>
     <v-card
+      :to="{ name: 'index' }"
       title
       flat
     >
