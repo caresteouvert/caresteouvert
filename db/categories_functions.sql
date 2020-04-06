@@ -19,12 +19,12 @@ BEGIN
 		RETURN 'bakery';
 	ELSIF (tags->'shop' IN ('tobacco', 'e-cigarette')) OR (tags->'tobacco' IN ('yes', 'only')) THEN
 		RETURN 'tobacco';
-	ELSIF (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'electronics', 'dry_cleaning', 'laundry', 'stationery', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'agrarian', 'garden_centre', 'optician', 'bicycle', 'car_parts', 'car_repair')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') OR (tags->'amenity' = 'car_rental') THEN
+	ELSIF (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'electronics', 'dry_cleaning', 'laundry', 'stationery', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'agrarian', 'garden_centre', 'optician')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') THEN
 		RETURN 'shop';
 	ELSIF (tags->'amenity' = 'bank') OR (tags->'office' IN ('financial', 'insurance')) OR (tags->'shop' = 'money_lender') THEN
 		RETURN 'bank';
-	ELSIF (tags->'amenity' = 'fuel') OR (tags->'shop' = 'gas') THEN
-		RETURN 'fuel';
+	ELSIF (tags->'amenity' IN ('fuel', 'car_rental')) OR (tags->'shop' IN ('gas', 'bicycle', 'car_parts', 'car_repair')) THEN
+		RETURN 'mobility';
 	ELSIF tags->'shop' = 'funeral_directors' THEN
 		RETURN 'funeral_directors';
 	ELSIF tags->'opening_hours:covid19' != '' THEN
@@ -93,12 +93,6 @@ BEGIN
 		RETURN 'optician';
 	ELSIF tags->'office' = 'employment_agency' THEN
 		RETURN 'employment_agency';
-	ELSIF tags->'amenity' = 'car_rental' THEN
-		RETURN 'car_rental';
-	ELSIF tags->'shop' = 'bicycle' THEN
-		RETURN 'bicycle';
-	ELSIF tags->'shop' IN ('car_parts', 'car_repair') THEN
-		RETURN 'car';
 	ELSIF (tags->'amenity' = 'bank') OR (tags->'office' = 'financial') THEN
 		RETURN 'bank';
 	ELSIF tags->'shop' = 'money_lender' THEN
@@ -107,6 +101,12 @@ BEGIN
 		RETURN 'insurance';
 	ELSIF (tags->'amenity' = 'fuel') OR (tags->'shop' = 'gas') THEN
 		RETURN 'fuel';
+	ELSIF tags->'amenity' = 'car_rental' THEN
+		RETURN 'car_rental';
+	ELSIF tags->'shop' = 'bicycle' THEN
+		RETURN 'bicycle';
+	ELSIF tags->'shop' IN ('car_parts', 'car_repair') THEN
+		RETURN 'car';
 	ELSIF tags->'shop' = 'funeral_directors' THEN
 		RETURN 'funeral_directors';
 	ELSE

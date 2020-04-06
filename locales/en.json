@@ -136,13 +136,14 @@
     "garden_centre": "Garden centre",
     "optician": "Optician",
     "employment_agency": "Employment agency",
-    "car_rental": "Car rental",
-    "bicycle": "Bicycle shop",
-    "car": "Garage",
     "bank": "Bank",
     "moneylender": "Moneylender",
     "insurance": "Insurance",
+    "mobility": "Mobility",
     "fuel": "Fuel station",
+    "car_rental": "Car rental",
+    "bicycle": "Bicycle shop",
+    "car": "Garage",
     "funeral_directors": "Funeral directors"
   }
 }

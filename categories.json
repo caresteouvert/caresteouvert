@@ -302,33 +302,6 @@
             }
           ],
           "areas": "all"
-        },
-        "car_rental": {
-          "name": "Car rental",
-          "osm_tags": [
-            {
-              "amenity": "car_rental"
-            }
-          ],
-          "areas": "all"
-        },
-        "bicycle": {
-          "name": "Bicycle shop",
-          "osm_tags": [
-            {
-              "shop": "bicycle"
-            }
-          ],
-          "areas": "all"
-        },
-        "car": {
-          "name": "Garage",
-          "osm_tags": [
-            {
-              "shop": "car_parts|car_repair"
-            }
-          ],
-          "areas": "all"
         }
       }
     },
@@ -367,8 +340,8 @@
         }
       }
     },
-    "fuel": {
-      "name": "Fuel station",
+    "mobility": {
+      "name": "Mobility",
       "subcategories": {
         "fuel": {
           "name": "Fuel station",
@@ -378,6 +351,33 @@
             },
             {
               "shop": "gas"
+            }
+          ],
+          "areas": "all"
+        },
+        "car_rental": {
+          "name": "Car rental",
+          "osm_tags": [
+            {
+              "amenity": "car_rental"
+            }
+          ],
+          "areas": "all"
+        },
+        "bicycle": {
+          "name": "Bicycle shop",
+          "osm_tags": [
+            {
+              "shop": "bicycle"
+            }
+          ],
+          "areas": "all"
+        },
+        "car": {
+          "name": "Garage",
+          "osm_tags": [
+            {
+              "shop": "car_parts|car_repair"
             }
           ],
           "areas": "all"
