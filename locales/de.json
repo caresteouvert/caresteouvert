@@ -54,6 +54,13 @@
         "only": "Nur Lieferung",
         "no": "Nein"
       },
+      "takeaway": {
+        "title": "Dieser Ort bietet einen Außer-Haus-Verkauf.",
+        "unknown": "Weiß ich nicht",
+        "yes": "Ja",
+        "only": "Nur Außer-Haus-Verkauf",
+        "no": "Nein"
+      },
       "details": "Erforderliche Angaben während der Beschränkungen"
     },
     "submit": "Veröffentlichen",
