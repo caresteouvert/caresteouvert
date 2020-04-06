@@ -54,6 +54,13 @@
         "only": "Solo por entrega",
         "no": "No"
       },
+      "takeaway": {
+        "title": "Este sitio permite comprar para llevar",
+        "unknown": "No lo sé",
+        "yes": "Sí",
+        "only": "Solo para llevar",
+        "no": "No"
+      },
       "details": "Agregar detalles necesarios durante el Estado de Alarma"
     },
     "submit": "Publicar",
