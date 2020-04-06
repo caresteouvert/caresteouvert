@@ -91,7 +91,7 @@ export default {
     this.sidebar = !this.isMobile;
 
     const { filter, location } = decode(this.featuresAndLocation);
-    this.filter = filter;
+    this.filter = this.categories.includes(filter) ? filter : '';
 
     Promise.all([
       this.loadInitialLocation(location),
