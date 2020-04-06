@@ -108,10 +108,6 @@
           "osm_tags": [
             {
               "shop": "deli|farm|chocolate"
-            },
-            {
-              "amenity": "vending_machine",
-              "vending": "pizza"
             }
           ],
           "areas": "all"
@@ -152,6 +148,48 @@
           ],
           "areas": [
             "FR"
+          ]
+        }
+      }
+    },
+    "eat": {
+      "name": "Restaurant & take-away",
+      "subcategories": {
+        "vending_machine": {
+          "name": "Vending machine",
+          "osm_tags": [
+            {
+              "amenity": "vending_machine",
+              "vending": "pizza"
+            }
+          ],
+          "areas": "all"
+        },
+        "restaurant": {
+          "name": "Restaurant",
+          "osm_tags": [
+            { "amenity": "restaurant", "delivery": "yes|only" },
+            { "amenity": "restaurant", "takeaway": "yes|only" },
+            { "amenity": "restaurant", "delivery:covid19": "yes|only" },
+            { "amenity": "restaurant", "takeaway:covid19": "yes|only" }
+          ]
+        },
+        "fast_food": {
+          "name": "Fast food",
+          "osm_tags": [
+            { "amenity": "fast_food", "delivery": "yes|only" },
+            { "amenity": "fast_food", "takeaway": "yes|only" },
+            { "amenity": "fast_food", "delivery:covid19": "yes|only" },
+            { "amenity": "fast_food", "takeaway:covid19": "yes|only" }
+          ]
+        },
+        "ice_cream": {
+          "name": "Ice cream",
+          "osm_tags": [
+            { "amenity": "ice_cream", "delivery": "yes|only" },
+            { "amenity": "ice_cream", "takeaway": "yes|only" },
+            { "amenity": "ice_cream", "delivery:covid19": "yes|only" },
+            { "amenity": "ice_cream", "takeaway:covid19": "yes|only" }
           ]
         }
       }
