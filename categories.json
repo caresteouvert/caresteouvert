@@ -172,7 +172,8 @@
             { "amenity": "restaurant", "takeaway": "yes|only" },
             { "amenity": "restaurant", "delivery:covid19": "yes|only" },
             { "amenity": "restaurant", "takeaway:covid19": "yes|only" }
-          ]
+          ],
+          "areas": "all"
         },
         "fast_food": {
           "name": "Fast food",
@@ -181,7 +182,8 @@
             { "amenity": "fast_food", "takeaway": "yes|only" },
             { "amenity": "fast_food", "delivery:covid19": "yes|only" },
             { "amenity": "fast_food", "takeaway:covid19": "yes|only" }
-          ]
+          ],
+          "areas": "all"
         },
         "ice_cream": {
           "name": "Ice cream",
@@ -190,7 +192,8 @@
             { "amenity": "ice_cream", "takeaway": "yes|only" },
             { "amenity": "ice_cream", "delivery:covid19": "yes|only" },
             { "amenity": "ice_cream", "takeaway:covid19": "yes|only" }
-          ]
+          ],
+          "areas": "all"
         }
       }
     },
