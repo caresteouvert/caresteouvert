@@ -4,7 +4,6 @@
   "mapStyle": "https://api.maptiler.com/maps/basic/style.json?key=",
   "mapZoom": 6,
   "mapCenter": [2.3508, 46.4],
-  "mapMaxBounds": [],
   "tilesUrl": "https://tiles.caresteouvert.fr/public.poi_osm_light/{z}/{x}/{y}.pbf",
   "poiFeature": "https://features.caresteouvert.fr/collections/public.poi_osm/items",
   "apiUrl": "https://api.caresteouvert.fr",
