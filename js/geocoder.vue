@@ -12,11 +12,22 @@
     no-filter
     background-color="white"
     prepend-inner-icon="osm-magnify"
-  />
+  >
+    <template v-slot:item="{ item }">
+      <v-list-item-content>
+        <v-list-item-title v-text="item.text"></v-list-item-title>
+        <v-list-item-subtitle v-text="item.region"></v-list-item-subtitle>
+      </v-list-item-content>
+      <v-list-item-action>
+        <v-icon>mdi-coin</v-icon>
+      </v-list-item-action>
+    </template>
+  </v-autocomplete>
 </template>
 
 <script>
 import { jawgApiKey } from '../config.json';
+import { countries } from '../categories.json';
 import debounce from 'lodash.debounce';
 
 export default {
@@ -41,14 +52,17 @@ export default {
       this.isLoading = true;
       this.controller = new AbortController();
       const signal = this.controller.signal;
+      const boundary = countries.join(',');
+      const url = `https://api.jawg.io/places/v1/search?boundary.country=${boundary}&lang=${this.$i18n.locale}&text=${encodeURIComponent(this.search)}&access-token=${jawgApiKey}`;
 
-      fetch(`https://api.jawg.io/places/v1/search?boundary.country=FRA&text=${encodeURIComponent(this.search)}&access-token=${jawgApiKey}`, { signal })
+      fetch(url, { signal })
         .then(res => res.json())
         .then(body => {
           this.error = null;
           this.items = body.features.map((feature) => {
             return {
               text: feature.properties.label,
+              region: feature.properties.region,
               value: feature.bbox ? feature.bbox : feature.geometry.coordinates.concat(feature.geometry.coordinates)
             };
           });

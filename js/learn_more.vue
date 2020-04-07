@@ -35,16 +35,12 @@
             <h2 class="mb-3">{{ $t('learnmore.contribute') }}</h2>
             <ul>
               <li>
-                <a
-                  href="https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/"
-                >
+                <a :href="links.shopMissing">
                   {{ $t('learnmore.missing_shop') }}
                 </a>
               </li>
               <li>
-                <a
-                  href="https://blog.caresteouvert.fr/un-outil-de-communication-des-mairies/"
-                >
+                <a :href="links.townhalls">
                   {{ $t('learnmore.townhalls') }}
                 </a>
               </li>
@@ -57,30 +53,22 @@
             <h2 class="mb-3">{{ $t('learnmore.about') }}</h2>
             <ul>
               <li>
-                <a
-                  href="https://blog.caresteouvert.fr/"
-                >
+                <a :href="links.blog">
                   {{ $t('learnmore.blog') }}
                 </a>
               </li>
               <li>
-                <a
-                  href="https://blog.caresteouvert.fr/about/"
-                >
+                <a :href="links.about">
                   {{ $t('learnmore.about') }}
                 </a>
               </li>
               <li>
-                <a
-                  href="https://blog.caresteouvert.fr/presse/"
-                >
+                <a :href="links.press">
                   {{ $t('learnmore.press') }}
                 </a>
               </li>
               <li>
-                <a
-                  href="https://blog.caresteouvert.fr/mentions-legales/"
-                >
+                <a :href="links.disclaimer">
                   {{ $t('learnmore.disclaimer') }}
                 </a>
               </li>
@@ -93,9 +81,12 @@
 </template>
 
 <script>
+import { fr } from '../config.json';
+
 export default {
   data() {
     return {
+      links: fr,
       dialog: false
     };
   }

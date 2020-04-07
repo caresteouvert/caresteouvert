@@ -47,8 +47,6 @@ const layers = [
       [
         "in",
         "status",
-        "ouvert",
-        "ouvert_adapté",
         "open",
         "open_adapted"
       ]
@@ -73,8 +71,6 @@ const layers = [
       [
         "in",
         "status",
-        "inconnu",
-        "partiel",
         "unknown",
         "partial"
       ]
@@ -99,7 +95,6 @@ const layers = [
       [
         "in",
         "status",
-        "fermé",
         "closed"
       ]
     ],
@@ -133,7 +128,7 @@ const layers = [
     id: "poi-icon",
     type: "symbol",
     "source-layer": source,
-    minzoom: 14.5,
+    minzoom: 15,
     "layout": {
       "icon-image": [
         "coalesce",
@@ -155,8 +150,11 @@ const layers = [
       ],
       "text-max-width": 9,
       "text-offset": [
-        0,
-        1
+        'interpolate',
+        ['linear'],
+        ['zoom'],
+        14, ['literal', [0, 0]],
+        19, ['literal', [0, 1.5]]
       ],
       "text-padding": 2,
       "text-size": 12

@@ -128,6 +128,8 @@ const i18n = new VueI18n({
   messages
 });
 
+document.title = i18n.t('title');
+
 const routes = [
   {
     name: 'index',

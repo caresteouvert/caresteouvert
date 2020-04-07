@@ -23,7 +23,7 @@
           </v-list-item-icon>
 
           <v-list-item-content class="ml-2 py-1">
-            <v-list-item-title>{{ $t(`filter.${category}`) }}</v-list-item-title>
+            <v-list-item-title>{{ $t(`categories.${category}`) }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list-item-group>

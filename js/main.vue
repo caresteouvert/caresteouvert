@@ -37,6 +37,7 @@
           :filter="filter"
           :featuresAndLocation="featuresAndLocation"
         />
+        <rgpd-banner />
       </v-content>
     </div>
     <router-view />
@@ -51,13 +52,15 @@ import OsmSidebar from './sidebar';
 import OsmFilterFeatures from './filter_features';
 import OsmMap from './map';
 import TopToolbar from './top_toolbar';
+import RgpdBanner from './rgpd_banner';
 
 export default {
   components: {
     OsmFilterFeatures,
     OsmSidebar,
     OsmMap,
-    TopToolbar
+    TopToolbar,
+    RgpdBanner
   },
 
   props: {
@@ -88,7 +91,7 @@ export default {
     this.sidebar = !this.isMobile;
 
     const { filter, location } = decode(this.featuresAndLocation);
-    this.filter = filter;
+    this.filter = this.categories.includes(filter) ? filter : '';
 
     Promise.all([
       this.loadInitialLocation(location),
