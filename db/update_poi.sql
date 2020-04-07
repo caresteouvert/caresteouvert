@@ -73,6 +73,8 @@ CREATE TABLE IF NOT EXISTS poi_osm_next(
 	status VARCHAR DEFAULT 'unknown',
 	opening_hours VARCHAR,
 	delivery VARCHAR DEFAULT 'unknown',
+	country VARCHAR,
+	sub_country VARCHAR,
 	tags JSONB
 );
 
@@ -80,7 +82,7 @@ TRUNCATE TABLE poi_osm_next;
 
 
 -- Only add POI with appropriate tagging
-INSERT INTO poi_osm_next(fid, geom, name, cat, normalized_cat, brand, brand_wikidata, brand_infos, status, opening_hours, delivery, tags)
+INSERT INTO poi_osm_next(fid, geom, name, cat, normalized_cat, brand, brand_wikidata, brand_infos, status, opening_hours, delivery, country, sub_country, tags)
 SELECT
 	concat('n', osm_id),
 	way,
@@ -97,12 +99,14 @@ SELECT
 		WHEN tags->'delivery' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'delivery'
 		ELSE 'unknown'
 	END,
+	country_iso2,
+	sub_country,
 	hstore_to_jsonb(tags)
 FROM imposm_osm_point
 WHERE
 	-- The line below is automatically edited using categories.json
 	-- Do not edit directly, run "yarn run categories" instead
-	"opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fast_food', 'fuel', 'ice_cream', 'marketplace', 'pharmacy', 'police', 'post_office', 'restaurant', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'chocolate', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'garden_centre', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance') --CATEGORIES
+	country_iso2 IN ('FR') AND ("opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fast_food', 'fuel', 'ice_cream', 'marketplace', 'pharmacy', 'police', 'post_office', 'restaurant', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'chocolate', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'garden_centre', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance')) --CATEGORIES
 UNION ALL
 SELECT
 	CASE WHEN osm_id < 0 THEN concat('r', -osm_id) ELSE concat('w', osm_id) END,
@@ -120,12 +124,14 @@ SELECT
 		WHEN tags->'delivery' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'delivery'
 		ELSE 'unknown'
 	END,
+	country_iso2,
+	sub_country,
 	hstore_to_jsonb(tags)
 FROM imposm_osm_polygon
 WHERE
 	-- The line below is automatically edited using categories.json
 	-- Do not edit directly, run "yarn run categories" instead
-	"opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fast_food', 'fuel', 'ice_cream', 'marketplace', 'pharmacy', 'police', 'post_office', 'restaurant', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'chocolate', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'garden_centre', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance') --CATEGORIES
+	country_iso2 IN ('FR') AND ("opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fast_food', 'fuel', 'ice_cream', 'marketplace', 'pharmacy', 'police', 'post_office', 'restaurant', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'chocolate', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'garden_centre', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance')) --CATEGORIES
 ;
 
 -- Remove edge cases needing advanced filtering like vending machines
@@ -140,7 +146,11 @@ SET
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
 	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
 FROM brand_rules b
-WHERE status = 'unknown' AND b.country = 'FR' AND b.opening_rule IS NOT NULL AND brand_wikidata = b.wikidata_id;
+WHERE
+	poi_osm_next.status = 'unknown'
+	AND poi_osm_next.country = b.country
+	AND b.opening_rule IS NOT NULL
+	AND poi_osm_next.brand_wikidata = b.wikidata_id;
 
 UPDATE poi_osm_next
 SET
@@ -149,7 +159,11 @@ SET
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
 	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
 FROM brand_rules b
-WHERE status = 'unknown' AND b.country = 'FR' AND b.opening_rule IS NOT NULL AND lower(trim(unaccent(brand))) = lower(trim(unaccent(b.brand_name)));
+WHERE
+	poi_osm_next.status = 'unknown'
+	AND poi_osm_next.country = b.country
+	AND b.opening_rule IS NOT NULL
+	AND lower(trim(unaccent(poi_osm_next.brand))) = lower(trim(unaccent(b.brand_name)));
 
 UPDATE poi_osm_next
 SET
@@ -158,7 +172,11 @@ SET
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
 	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
 FROM brand_rules b
-WHERE status = 'unknown' AND b.country = 'FR' AND b.opening_rule IS NOT NULL AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.brand_name)));
+WHERE
+	poi_osm_next.status = 'unknown'
+	AND poi_osm_next.country = b.country
+	AND b.opening_rule IS NOT NULL
+	AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.brand_name)));
 
 UPDATE poi_osm_next
 SET status = 'open', opening_hours = '24/7'
@@ -181,7 +199,7 @@ ALTER INDEX poi_osm_next_geom_idx RENAME TO poi_osm_geom_idx;
 ALTER INDEX poi_osm_next_status_idx RENAME TO poi_osm_status_idx;
 
 CREATE OR REPLACE VIEW poi_osm_light AS
-SELECT fid, geom, name, cat, normalized_cat, status, delivery
+SELECT fid, geom, name, cat, normalized_cat, status, delivery, country, sub_country
 FROM poi_osm;
 
 

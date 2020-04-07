@@ -138,7 +138,7 @@ Object.values(catg.categories).map(cat => Object.values(cat.subcategories).map(s
 	});
 });
 
-const sqlCond = `\n\t"opening_hours:covid19" != '' OR `+Object.entries(tagsForCondition).map(e => `"${e[0]}" IN (${[...e[1]].sort().map(v => `'${v}'`).join(', ')})`).join(" OR ")+` --CATEGORIES\n`;
+const sqlCond = `\n\tcountry_iso2 IN (${catg.countries.map(c => `'${c}'`).join(", ")}) AND ("opening_hours:covid19" != '' OR `+Object.entries(tagsForCondition).map(e => `"${e[0]}" IN (${[...e[1]].sort().map(v => `'${v}'`).join(', ')})`).join(" OR ")+`) --CATEGORIES\n`;
 
 fs.readFile(POI_SQL, 'utf8', (err, txt) => {
 	if(err) { throw new Error(err); }
