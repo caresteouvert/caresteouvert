@@ -56,6 +56,7 @@
 <script>
 import * as config from '../config.json';
 import * as categories from '../categories.json';
+import categoriesForCountry from './categories';
 import { encode, decode, encodePosition, decodePosition } from './url';
 import OsmSidebar from './sidebar';
 import OsmFilterFeatures from './filter_features';
@@ -90,7 +91,7 @@ export default {
       mapZoom: null,
       mapStyle: `${config.mapStyle}${config.apiKey}`,
       filter: '',
-      categories: Object.keys(categories.categories).concat([ "other" ])
+      categories: []
     };
   },
 
@@ -106,12 +107,15 @@ export default {
       this.loadInitialLocation(location),
       this.loadAndOverrideMapStyle()
     ]).then(() => { this.loadMap = true; });
+
+    this.getCurrentCountry();
   },
 
   watch: {
     mapCenter() {
       this.updateRoute();
       this.saveCurrentView();
+      this.refreshCurrentCountry();
     },
 
     mapZoom() {
@@ -204,6 +208,45 @@ export default {
 
     saveCurrentView() {
       localStorage.setItem('mapView', JSON.stringify({ center: this.mapCenter, zoom: this.mapZoom }));
+    },
+
+    refreshCurrentCountry() {
+      if (!this.lastMapCenter) {
+        this.lastMapCenter = this.mapCenter;
+      }
+      const { lat: lat1, lng: lon1 } = this.mapCenter;
+      const { lat: lat2, lng: lon2 } = this.lastMapCenter;
+      const distance = this.getDistanceBetween2MapCenter(lat1, lon1, lat2, lon2);
+      const tenKm = 10000;
+      if (distance > tenKm) {
+        this.lastMapCenter = this.mapCenter;
+        this.getCurrentCountry();
+      }
+    },
+
+    getCurrentCountry() {
+      const { lat, lng } = this.mapCenter;
+      fetch(`${config.apiUrl}/country?lat=${lat}&lon=${lng}`)
+        .then(res => res.text())
+        .then((country) => {
+          this.categories = Object.keys(categoriesForCountry(categories, country.split('-')[0]));
+        });
+    },
+
+    getDistanceBetween2MapCenter(lat1, lon1, lat2, lon2) {
+      const toRadians = (number) => number * Math.PI / 180;
+      const R = 6371e3; // metres
+      const φ1 = toRadians(lat1);
+      const φ2 = toRadians(lat2);
+      const Δφ = toRadians(lat2-lat1);
+      const Δλ = toRadians(lon2-lon1);
+
+      const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+              Math.cos(φ1) * Math.cos(φ2) *
+              Math.sin(Δλ/2) * Math.sin(Δλ/2);
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+      return R * c;
     }
   }
 }
