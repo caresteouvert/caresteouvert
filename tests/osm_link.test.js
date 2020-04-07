@@ -12,6 +12,7 @@ describe('OSMLink', () => {
   beforeEach(() => {
     localVue = createLocalVue();
     localVue.prototype.$t = () => {};
+    localVue.prototype.$i18n = {};
   });
 
   function createWrapper(props) {

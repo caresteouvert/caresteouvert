@@ -176,7 +176,7 @@
     "add_new_days": "Idagdag ang araw"
   },
   "osm_link": {
-    "title": "« Ça reste ouvert » ay gumagamit ng datos ng OpenStreetMap.",
+    "title": "« {brand} » ay gumagamit ng datos ng OpenStreetMap.",
     "view": "Tignan",
     "edit": "I-edit"
   }

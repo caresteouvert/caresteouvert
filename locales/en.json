@@ -12,12 +12,12 @@
     "about": "About",
     "contribute": "Contribute",
     "missing_shop": "Report a missing shop",
-    "description": "« Ça reste ouvert » is the essential tool to avoid unsuccessful movement around your home during lockdown and thus limit the risk of contagion.\nThis collaborative map allows you to easily share open or closed places in your neighborhood. It is the most effective and united way to better inform your neighbors and the inhabitants of your city.",
+    "description": "« {brand} » is the essential tool to avoid unsuccessful movement around your home during lockdown and thus limit the risk of contagion.\nThis collaborative map allows you to easily share open or closed places in your neighborhood. It is the most effective and united way to better inform your neighbors and the inhabitants of your city.",
     "title": "Learn more",
     "press": "Press",
     "disclaimer": "Disclaimer",
     "blog": "Blog",
-    "townhalls": "Townhalls"
+    "townhalls": "Townhalls, use « {brand} »!"
   },
   "rgpd": {
     "consent": "In these times of lockdown, would you take a cookie on your computer for our statistics?",
@@ -113,7 +113,7 @@
     "add_new_days": "Add opening days"
   },
   "osm_link": {
-    "title": "« Ça reste ouvert » uses OpenStreetMap data.",
+    "title": "« {brand} » uses OpenStreetMap data.",
     "view": "View",
     "edit": "Edit"
   },

@@ -7,9 +7,9 @@
     >
       <v-card-title class="pl-1 pt-5 pb-5 justify-center">
         <img
-          :alt="$t('title')"
+          :alt="links.brand_text"
+          :src="logo"
           class="px-3 logo"
-          src="../images/logo.svg"
         />
       </v-card-title>
       <v-card-subtitle class="pl-2 text-center">
@@ -54,7 +54,9 @@
 </template>
 
 <script>
-import { fr } from '../config.json';
+import config from '../config.json';
+import aperta from '../images/aperta.svg';
+import caresteouvert from '../images/caresteouvert.svg';
 import SidebarListItem from './sidebar_list_item';
 import ChangeLanguage from './change_language';
 import LearnMore from './learn_more';
@@ -64,9 +66,17 @@ export default {
 
   data() {
     return {
-      links: fr,
       alert: localStorage.getItem('showAlert') === 'false' ? false : true
     };
+  },
+
+  computed: {
+    links() {
+      return config[this.$i18n.locale] || config.en;
+    },
+    logo() {
+      return { aperta: aperta, caresteouvert: caresteouvert }[this.links.brand];
+    }
   },
 
   watch: {

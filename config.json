@@ -10,7 +10,20 @@
   "apiUrl": "https://api.caresteouvert.fr",
   "geoIpUrl": "https://geo.caresteouvert.fr/me",
   "fr": {
+    "brand": "caresteouvert",
+    "brand_text": "Ça reste ouvert",
     "government": "https://www.gouvernement.fr/info-coronavirus",
+    "blog": "https://blog.caresteouvert.fr/",
+    "shopMissing": "https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/",
+    "townhalls": "https://blog.caresteouvert.fr/un-outil-de-communication-des-mairies/",
+    "about": "https://blog.caresteouvert.fr/about/",
+    "press": "https://blog.caresteouvert.fr/presse/",
+    "disclaimer": "https://blog.caresteouvert.fr/mentions-legales/"
+  },
+  "en": {
+    "brand": "aperta",
+    "brand_text": "Aperta",
+    "government": "https://www.who.int/health-topics/coronavirus",
     "blog": "https://blog.caresteouvert.fr/",
     "shopMissing": "https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/",
     "townhalls": "https://blog.caresteouvert.fr/un-outil-de-communication-des-mairies/",

@@ -12,7 +12,7 @@
     "about": "Informazioni",
     "contribute": "Contribuisci",
     "missing_shop": "Segnala un negozio mancante",
-    "description": "« Ça reste ouvert » ( \"rimane aperto\") è uno strumento essenziale per evitare inutili spostamenti fuori di casa durante il blocco e quindi limitare il rischio di contagio.\nQuesta mappa collaborativa consente di condividere facilmente luoghi aperti o chiusi nel tuo quartiere. È il modo più efficace e completo per informare meglio i tuoi vicini e gli abitanti della tua città.",
+    "description": "« {brand} » ( \"rimane aperto\") è uno strumento essenziale per evitare inutili spostamenti fuori di casa durante il blocco e quindi limitare il rischio di contagio.\nQuesta mappa collaborativa consente di condividere facilmente luoghi aperti o chiusi nel tuo quartiere. È il modo più efficace e completo per informare meglio i tuoi vicini e gli abitanti della tua città.",
     "title": "Maggiori informazioni",
     "press": "Stampa",
     "disclaimer": "Esclusione di responsabilità",
@@ -101,7 +101,7 @@
     "add_new_days": "Aggiungi orari di apertura"
   },
   "osm_link": {
-    "title": "« Ça reste ouvert » usa i dati di OpenStreetMap.",
+    "title": "« {brand} » usa i dati di OpenStreetMap.",
     "view": "Vedi",
     "edit": "Modifica"
   },

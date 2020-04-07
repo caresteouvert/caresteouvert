@@ -7,7 +7,7 @@
        />
     </v-col>
     <v-col class="col-10 body-2">
-      {{ $t('osm_link.title') }}
+      {{ $t('osm_link.title', { brand }) }}
       <br>
       <v-btn
         :href="osmLink"
@@ -27,6 +27,7 @@
 
 <script>
 import parseId from './parse_id';
+import config from '../config.json';
 
 export default {
   props: {
@@ -43,7 +44,14 @@ export default {
       osmLink: `https://www.openstreetmap.org/${type}/${id}`,
       idLink: `https://www.openstreetmap.org/edit?editor=id&${type}=${id}`,
     };
+  },
+
+  computed: {
+    brand() {
+      return (config[this.$i18n.locale] || config.en).brand_text;
+    }
   }
+
 };
 </script>
 

@@ -12,7 +12,7 @@
     "about": "Über",
     "contribute": "Mitmachen",
     "missing_shop": "Fehlendes Geschäft melden",
-    "description": "« Ça reste ouvert \" ist ein wirksames Werkzeug, um die gezielte Suche nach einem offenen Geschaft in deiner Nachbarschaft zu erleichtern und somit die Ansteckungsgefahr zu reduzieren.\nDiese Karte wird gemeinschaftlich erstellt. Du kannst offene oder geschlossene Orte in deiner Nachbarschaft ganz einfach selbst melden. Auf diese effektive und einheitliche Weise hilfst du mit, die Menschen in deiner Nachbarschaft und deiner Stadt besser zu informieren.",
+    "description": "« {brand} \" ist ein wirksames Werkzeug, um die gezielte Suche nach einem offenen Geschaft in deiner Nachbarschaft zu erleichtern und somit die Ansteckungsgefahr zu reduzieren.\nDiese Karte wird gemeinschaftlich erstellt. Du kannst offene oder geschlossene Orte in deiner Nachbarschaft ganz einfach selbst melden. Auf diese effektive und einheitliche Weise hilfst du mit, die Menschen in deiner Nachbarschaft und deiner Stadt besser zu informieren.",
     "title": "Mehr erfahren",
     "press": "Presse",
     "disclaimer": "Impressum",
@@ -113,7 +113,7 @@
     "add_new_days": "Wochentage hinzufügen"
   },
   "osm_link": {
-    "title": "« Ça reste ouvert » verwendet OpenStreetMap-Daten.",
+    "title": "« {brand} » verwendet OpenStreetMap-Daten.",
     "view": "Anzeigen",
     "edit": "Bearbeiten"
   },
