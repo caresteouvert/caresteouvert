@@ -60,10 +60,10 @@
         "no": "Nein"
       },
       "takeaway": {
-        "title": "Dieser Ort bietet einen Außer-Haus-Verkauf.",
+        "title": "Dieser Ort bietet Abholung an.",
         "unknown": "Weiß ich nicht",
         "yes": "Ja",
-        "only": "Nur Außer-Haus-Verkauf",
+        "only": "Nur Abholung",
         "no": "Nein"
       },
       "details": "Erforderliche Angaben während der Beschränkungen"
@@ -97,9 +97,9 @@
       "only": "Nur Lieferung"
     },
     "takeaway": {
-      "yes": "Verkauf zum Mitnehmen möglich",
-      "modified": "Abweichender Verkauf zum Mitnehmen",
-      "only": "Nur Außer-Haus-Verkauf"
+      "yes": "Abholung möglich",
+      "modified": "Abholung abweichend",
+      "only": "Nur Abholung"
     }
   },
   "opening_hours_editor": {
@@ -133,7 +133,7 @@
     "alcohol": "Alkoholgeschäft",
     "marketplace": "Wochenmarkt",
     "bakery": "Bäckerei",
-    "eat": "Restaurant & Außer-Haus-Verkauf",
+    "eat": "Restaurant & Abholung",
     "vending_machine": "Verkaufsaufomat",
     "restaurant": "Restaurant",
     "fast_food": "Schnellimbiss",
