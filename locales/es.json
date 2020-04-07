@@ -12,12 +12,12 @@
     "about": "Acerca de",
     "contribute": "Contribuir",
     "missing_shop": "Avisar de un sitio por editar",
-    "description": "« {brand} » es una herramienta esencial para evitar movimientos inútiles durante el Estado de Alarma y, por lo tanto, limitar el riesgo de contagio. Este mapa colaborativo permite compartir fácilmente sitios abiertos o cerrados en su vecindario. Es la forma más efectiva de informar a sus vecinos y a los habitantes de su ciudad.",
+    "description": "«{brand}» es una herramienta esencial para evitar movimientos inútiles durante el Estado de Alarma y, por lo tanto, limitar el riesgo de contagio.\nEste mapa colaborativo permite compartir fácilmente lugares abiertos o cerrados en su vecindario. Es la forma más efectiva de informar mejor a sus vecinos y habitantes de su ciudad.",
     "title": "Aprender más",
     "press": "Prensa",
     "disclaimer": "Aviso legal",
     "blog": "Blog",
-    "townhalls": "Ayuntamientos"
+    "townhalls": "Ayuntamientos, ¡utilicen  « {brand} »!"
   },
   "rgpd": {
     "consent": "En estos tiempos de confinamiento, ¿aceptaria las cookies en su ordenador para nuestras estadísticas?",
@@ -113,7 +113,7 @@
     "add_new_days": "Añadir días de apertura"
   },
   "osm_link": {
-    "title": "« {brand} » utiliza datos de OpenStreetMap.",
+    "title": "« {brand} » utiliza datos deOpenStreetMap.",
     "view": "Ver",
     "edit": "Editar"
   },
