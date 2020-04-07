@@ -55,7 +55,6 @@
 
 <script>
 import config from '../config.json';
-import aperta from '../images/aperta.svg';
 import caresteouvert from '../images/caresteouvert.svg';
 import SidebarListItem from './sidebar_list_item';
 import ChangeLanguage from './change_language';
@@ -75,7 +74,7 @@ export default {
       return config[this.$i18n.locale] || config.en;
     },
     logo() {
-      return { aperta: aperta, caresteouvert: caresteouvert }[this.links.brand];
+      return { caresteouvert: caresteouvert }[this.links.brand];
     }
   },
 
