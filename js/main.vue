@@ -37,6 +37,15 @@
           :filter="filter"
           :featuresAndLocation="featuresAndLocation"
         />
+        <v-slide-y-reverse-transition>
+          <v-chip
+            v-if="mapZoom < 13"
+            color="primary"
+            class="zoom-chip mb-3"
+          >
+            {{ $t('zoomtosee') }}
+          </v-chip>
+        </v-slide-y-reverse-transition>
         <rgpd-banner />
       </v-content>
     </div>
@@ -201,6 +210,12 @@ export default {
 </script>
 
 <style>
+.zoom-chip {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .xs .mapboxgl-ctrl-top-right {
   top: 50px;
 }
