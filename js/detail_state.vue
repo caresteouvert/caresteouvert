@@ -17,9 +17,10 @@
     </v-alert>
     <v-alert
       v-if="success"
+      :icon="false"
       type="success"
       tile
-    class="mb-0"
+      class="mb-0"
     >{{ $t('details.signal_done') }}</v-alert>
     <div v-if="contribute">
       <contribute-form
@@ -61,11 +62,11 @@ export default {
   computed: {
     type() {
       const statuses = {
-        ouvert: 'success',
-        ouvert_adapté: 'success',
-        partiel: 'warning',
-        inconnu: 'warning',
-        fermé: 'error'
+        open: 'success',
+        open_adapted: 'success',
+        partial: 'warning',
+        unknown: 'warning',
+        closed: 'error'
       };
       return statuses[this.status];
     }

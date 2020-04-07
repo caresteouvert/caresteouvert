@@ -1,13 +1,13 @@
 export function decode(url) {
   const locationPart = url.indexOf('@');
   return {
-    features: url.substring(0, locationPart === -1 ? undefined : locationPart),
+    filter: url.substring(0, locationPart === -1 ? undefined : locationPart),
     location: locationPart === -1 ? '' : url.substring(locationPart)
   };
 }
 
-export function encode(features, position) {
-  return `${features}${position}`;
+export function encode(filter, position) {
+  return `${filter}${position}`;
 }
 
 export function decodePosition(position, config) {
@@ -26,24 +26,4 @@ export function decodePosition(position, config) {
 export function encodePosition(lat, lng, zoom) {
   const position = [lat.toFixed(6), lng.toFixed(6), zoom.toFixed(2)];
   return `@${position.join(',')}`;
-}
-
-export function encodeFeatures(filters) {
-  const params = new URLSearchParams();
-  Object.keys(filters).forEach((filter) => {
-    if (!filters[filter].selected) {
-      params.append(filter, false);
-    }
-  });
-  return params.toString();
-}
-
-export function decodeFeatures(url, filters) {
-  const params = new URLSearchParams(url);
-  Object.keys(filters).forEach((filter) => {
-    const selected = params.get(filter);
-    if (selected) {
-      filters[filter].selected = false;
-    }
-  });
 }

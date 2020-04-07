@@ -87,11 +87,40 @@
       </v-stepper-step>
 
       <v-stepper-content step="3">
-        <v-textarea
-          v-model="details"
-          name="details"
-          class="textarea-details"
-        ></v-textarea>
+        <label v-if="showDelivery">
+          {{ $t('contribute_form.step3.delivery.title') }}
+          <v-select
+            v-model="delivery"
+            :items="deliveryItems"
+            filled
+            dense
+            hide-details
+          ></v-select>
+        </label>
+
+        <label
+          v-if="showTakeaway"
+          class="d-block mt-2"
+        >
+          {{ $t('contribute_form.step3.takeaway.title') }}
+          <v-select
+            v-model="takeaway"
+            :items="takeawayItems"
+            filled
+            dense
+            hide-details
+          ></v-select>
+        </label>
+
+        <label class="d-block pt-4">
+          {{ $t('contribute_form.step3.details') }}
+          <v-textarea
+            v-model="details"
+            class="mt-2"
+            filled
+          ></v-textarea>
+        </label>
+
         <v-btn
           :loading="loading"
           color="primary"
@@ -108,6 +137,7 @@
 import OpeningHoursParser from 'transport-hours/src/OpeningHoursParser';
 import { apiUrl } from '../config.json';
 import OpeningHoursEditor from './opening_hours_editor';
+import parseId from './parse_id';
 
 export default {
   components: { OpeningHoursEditor },
@@ -118,10 +148,25 @@ export default {
       required: true
     }
   },
+
   data() {
     return {
       step: 1,
       details: '',
+      delivery: null,
+      deliveryItems: [
+        { text: this.$t('contribute_form.step3.delivery.unknown'), value: null },
+        { text: this.$t('contribute_form.step3.delivery.yes'), value: 'yes' },
+        { text: this.$t('contribute_form.step3.delivery.only'), value: 'only' },
+        { text: this.$t('contribute_form.step3.delivery.no'), value: 'no' }
+      ],
+      takeaway: null,
+      takeawayItems: [
+        { text: this.$t('contribute_form.step3.takeaway.unknown'), value: null },
+        { text: this.$t('contribute_form.step3.takeaway.yes'), value: 'yes' },
+        { text: this.$t('contribute_form.step3.takeaway.only'), value: 'only' },
+        { text: this.$t('contribute_form.step3.takeaway.no'), value: 'no' }
+      ],
       loading: false,
       open: null,
       openingHours: [],
@@ -129,34 +174,55 @@ export default {
     };
   },
 
+  mounted() {
+    if (this.properties.opening_hours) {
+      this.openingHours = this.parseOpeningHours(this.properties.opening_hours);
+    }
+    this.delivery = this.parseTag('delivery:covid19', this.deliveryItems);
+    this.takeaway = this.parseTag('takeaway:covid19', this.takeawayItems);
+  },
+
   computed: {
-    hasOpeningHours() {
-      return !!this.point.properties.tags.opening_hours;
+    properties() {
+      return this.point.properties;
     },
+
+    hasOpeningHours() {
+      return !!this.properties.tags.opening_hours;
+    },
+
     showOpeningHoursWithoutLockDown() {
       return !this.hasOpeningHours && this.openingHours.length !== 0;
     },
+
+    showDelivery() {
+      return this.showField('delivery:covid19', this.deliveryItems);
+    },
+
+    showTakeaway() {
+      return this.showField('takeaway:covid19', this.takeawayItems);
+    },
+
     id() {
-      const types = {
-        n: 'node',
-        w: 'way',
-        r: 'relation'
-      };
-      return `${types[this.point.id[0]]}/${this.point.id.substring(1)}`;
+      const { type, id } = parseId(this.point.id);
+      return `${type}/${id}`;
     },
 
     payload() {
       const lat = this.point.geometry.coordinates[1];
       const lon = this.point.geometry.coordinates[0];
       return {
-        name: this.point.properties.name,
+        name: this.properties.name,
         state: this.open ? 'open' : 'closed',
         details: this.details,
         opening_hours: this.openingHours,
         lat,
         lon,
+        lang: this.$i18n.locale,
         tags: {
-          opening_hours: this.openingHoursWithoutLockDown ? 'same': undefined
+          opening_hours: this.openingHoursWithoutLockDown ? 'same': undefined,
+          'delivery:covid19': this.delivery ? this.delivery : undefined,
+          'takeaway:covid19': this.takeaway ? this.takeaway : undefined
         }
       };
     }
@@ -175,8 +241,12 @@ export default {
     },
 
     sameOpeningHours() {
-      const table = new OpeningHoursParser(this.point.properties.tags.opening_hours).getTable();
-      this.openingHours = Object.keys(table).map((day) => {
+      this.openingHours = this.parseOpeningHours(this.properties.tags.opening_hours);
+    },
+
+    parseOpeningHours(openingHours) {
+      const table = new OpeningHoursParser(openingHours).getTable();
+      return Object.keys(table).map((day) => {
         return { days: [day], hours: [...table[day]] };
       }).filter(interval => interval.hours.length > 0);
     },
@@ -204,13 +274,20 @@ export default {
 
     close() {
       this.$emit('close');
+    },
+
+    showField(tag, items) {
+      return !!this.open && (!this.hasTag(tag) || !!this.parseTag(tag, items));
+    },
+
+    hasTag(tag) {
+      return !!this.properties.tags[tag];
+    },
+
+    parseTag(tag, items) {
+      const value = this.properties.tags[tag];
+      return items.map(e => e.value).includes(value) ? value : null;
     }
   }
 };
 </script>
-
-<style>
-  .textarea-details textarea {
-    background-color: #f2f2f2;
-  }
-</style>

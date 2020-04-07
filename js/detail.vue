@@ -8,12 +8,14 @@
         v-if="point"
         tile
         min-height="100%"
+        class="d-flex flex-column"
       >
         <v-toolbar
           tile
           dark
+          class="flex-grow-0"
         >
-          <v-icon>{{ `osm-${point.properties.cat}` }}</v-icon>
+          <v-icon>{{ `osm-${category}` }}</v-icon>
           <v-toolbar-title
             :title="title"
             class="ml-3 toolbar-title"
@@ -36,7 +38,7 @@
 
         <detail-state
           :point="point"
-          :status="point.properties.status"
+          :status="status"
         />
 
         <v-alert
@@ -57,19 +59,18 @@
             :title="contact('phone')"
             icon="osm-phone"
           />
-
           <detail-link
-            v-if="contact('email')"
-            :href="contact('email')"
-            :title="contact('email')"
-            icon="osm-mail"
+            v-if="contact('mobile')"
+            :href="`tel:${contact('mobile')}`"
+            :title="contact('mobile')"
+            icon="osm-mobile_phone"
           />
 
           <detail-link
-            v-if="contact('facebook')"
-            :href="contact('facebook')"
-            :title="contact('facebook')"
-            icon="osm-fcbk"
+            v-if="contact('email')"
+            :href="`mailto:${contact('email')}`"
+            :title="contact('email')"
+            icon="osm-mail"
           />
 
           <detail-opening-hours
@@ -103,6 +104,13 @@
           </template>
 
           <detail-link
+            v-if="contact('facebook')"
+            :href="contact('facebook')"
+            :title="contact('facebook')"
+            icon="osm-fcbk"
+          />
+
+          <detail-link
             v-if="contact('website')"
             :href="contact('website')"
             :title="contact('website')"
@@ -110,6 +118,10 @@
           />
 
         </v-list>
+        <v-spacer></v-spacer>
+        <v-footer tile>
+          <osm-link :id="id" />
+        </v-footer>
       </v-card>
     </v-slide-x-reverse-transition>
   </div>
@@ -122,6 +134,7 @@ import DetailEntry from './detail_entry';
 import DetailOpeningHours from './detail_opening_hours';
 import DetailState from './detail_state';
 import DetailLink from './detail_link';
+import OsmLink from './osm_link';
 
 export default {
   components: {
@@ -130,6 +143,7 @@ export default {
     DetailOpeningHours,
     DetailState,
     DetailTag,
+    OsmLink
   },
 
   props: {
@@ -161,16 +175,32 @@ export default {
       return this.point.properties.name;
     },
 
+    category() {
+      return this.point.properties.cat === 'unknown' ? 'other' : this.point.properties.cat;
+    },
+
     type() {
-      const trad = this.$t(`details.feature.${this.point.properties.cat}`);
-      return trad.startsWith('details.') ? null : trad;
+      const key = `categories.${this.point.properties.cat}`;
+      return this.$te(key) ? this.$t(key) : this.$t('categories.other');
     },
 
     contact() {
+      const transform = {
+        facebook(url) {
+          if (!url) return url;
+          return url.startsWith('http') ? url : `https://facebook.com/${url}`;
+        }
+      };
       const tags = this.point.properties.tags;
       return (name) => {
-        return tags[name] || tags[`contact:${name}`];
+        const value = tags[name] || tags[`contact:${name}`];
+        const transformFunc = transform[name] || (v => v);
+        return transformFunc(value);
       };
+    },
+
+    status() {
+      return this.point.properties.status;
     },
 
     infos() {
@@ -180,7 +210,7 @@ export default {
       if(this.point.properties.tags['takeaway:covid19'] && !this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`).startsWith('details.')) {
         infos.push(this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`));
       }
-      else if(['ouvert', 'ouvert_adapté'].includes(this.point.properties.status) && this.point.properties.tags.takeaway && !this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`).startsWith('details.')) {
+      else if(['open', 'open_adapted'].includes(this.point.properties.status) && this.point.properties.tags.takeaway && !this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`).startsWith('details.')) {
         infos.push(this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`));
       }
 
@@ -188,7 +218,7 @@ export default {
       if(this.point.properties.tags['delivery:covid19'] && !this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`).startsWith('details.')) {
         infos.push(this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`));
       }
-      else if(['ouvert', 'ouvert_adapté'].includes(this.point.properties.status) && this.point.properties.tags.delivery && !this.$t(`details.delivery.${this.point.properties.tags.delivery}`).startsWith('details.')) {
+      else if(['open', 'open_adapted'].includes(this.point.properties.status) && this.point.properties.tags.delivery && !this.$t(`details.delivery.${this.point.properties.tags.delivery}`).startsWith('details.')) {
         infos.push(this.$t(`details.delivery.${this.point.properties.tags.delivery}`));
       }
 

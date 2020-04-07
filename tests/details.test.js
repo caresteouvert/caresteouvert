@@ -15,11 +15,13 @@ describe('Detail', () => {
     'v-icon': '<div></div>',
     'v-btn': '<div></div>',
     'v-spacer': '<div></div>',
+    'v-footer': '<div></div>',
     'v-slide-x-reverse-transition': '<div><slot /></div>'
   };
 
   beforeEach(() => {
     localVue = createLocalVue();
+    localVue.prototype.$te = () => true;
     localVue.prototype.$t = (key) => key;
     localVue.directive('resize', {});
 
@@ -79,6 +81,25 @@ describe('Detail', () => {
     await global.fetch();
     await Vue.nextTick();
     expect(detail.findAll(DetailOpeningHours).length).toEqual(1);
+  });
+
+  it('add the facebook url if not present', async () => {
+    point = { properties: { status: 'ouvert', cat: '', tags: { facebook: 'test' } } };
+    const detail = createWrapper({ id: '' });
+    await global.fetch();
+    await Vue.nextTick();
+    expect(detail.vm.contact('facebook')).toEqual('https://facebook.com/test');
+
+    detail.vm.point.properties.tags.facebook = 'https://facebook.com/test2';
+    expect(detail.vm.contact('facebook')).toEqual('https://facebook.com/test2');
+  });
+
+  it('returns phone', async () => {
+    point = { properties: { status: 'ouvert', cat: '', tags: { phone: 'test' } } };
+    const detail = createWrapper({ id: '' });
+    await global.fetch();
+    await Vue.nextTick();
+    expect(detail.vm.contact('phone')).toEqual('test');
   });
 
 });

@@ -8,7 +8,7 @@
      }"
     >
     <div>
-      <navigation-drawer
+      <v-navigation-drawer
         v-model="sidebar"
         :temporary="isMobile"
         :stateless="!isMobile"
@@ -17,74 +17,27 @@
         fixed
       >
         <osm-sidebar>
-          <osm-filter-features :filters="filters" />
-        </osm-sidebar>
-      </navigation-drawer>
-      <v-content>
-        <v-toolbar
-          dense
-          class="search ml-sm-5 mt-sm-5"
-        >
-          <v-tooltip bottom>
-            <template v-slot:activator="{ on }">
-              <v-btn
-                icon
-                @click="sidebar = !sidebar"
-                v-on="on"
-              >
-                <v-icon>osm-filter_list</v-icon>
-              </v-btn>
-            </template>
-            <span>{{ $t('menu') }}</span>
-          </v-tooltip>
-
-          <h2
-            v-if="!geocoder"
-            class="subtitle-1 title-mobile"
-          >{{ $t('subtitle-dense') }}</h2>
-          <v-spacer v-if="!geocoder"></v-spacer>
-          <v-tooltip
-            v-if="!geocoder"
-            bottom
-          >
-            <template v-slot:activator="{ on }">
-              <v-btn
-                icon
-                @click="geocoder = !geocoder"
-                v-on="on"
-              >
-                <v-icon>osm-magnify</v-icon>
-              </v-btn>
-            </template>
-            <span>{{ $t('search') }}</span>
-          </v-tooltip>
-
-          <geocoder
-            v-if="geocoder"
-            @select="updateMapBounds"
+          <osm-filter-features
+            v-model="filter"
+            :categories="categories"
           />
-          <geolocate @input="updateMapCenter" />
-        </v-toolbar>
+        </osm-sidebar>
+      </v-navigation-drawer>
+      <v-content>
+        <top-toolbar
+          @toggleSidebar="sidebar = !sidebar"
+          @onGeocode="updateMapBounds"
+        />
         <osm-map
           v-if="loadMap"
           ref="map"
           :map-style="mapStyle"
           :map-center.sync="mapCenter"
           :map-zoom.sync="mapZoom"
-          :filters="filters"
+          :filter="filter"
           :featuresAndLocation="featuresAndLocation"
         />
-        <a
-          href="https://blog.caresteouvert.fr/about/"
-          target="_blank"
-        >
-          <img
-            v-if="isMobile"
-            :alt="$t('title')"
-            class="logo-map"
-            src="../images/logo.png"
-            />
-        </a>
+        <rgpd-banner />
       </v-content>
     </div>
     <router-view />
@@ -93,22 +46,21 @@
 
 <script>
 import * as config from '../config.json';
-import { encode, decode, encodePosition, decodePosition, encodeFeatures, decodeFeatures } from './url';
-import NavigationDrawer from './navigation_drawer';
-import Geocoder from './geocoder';
-import Geolocate from './geolocate';
+import * as categories from '../categories.json';
+import { encode, decode, encodePosition, decodePosition } from './url';
 import OsmSidebar from './sidebar';
 import OsmFilterFeatures from './filter_features';
 import OsmMap from './map';
+import TopToolbar from './top_toolbar';
+import RgpdBanner from './rgpd_banner';
 
 export default {
   components: {
-    Geocoder,
-    Geolocate,
-    NavigationDrawer,
     OsmFilterFeatures,
     OsmSidebar,
-    OsmMap
+    OsmMap,
+    TopToolbar,
+    RgpdBanner
   },
 
   props: {
@@ -124,15 +76,12 @@ export default {
       loadMap: false,
       isMobile: false,
       sidebar: false,
-      geocoder: false,
       mapStyle: null,
       mapCenter: null,
       mapZoom: null,
       mapStyle: `${config.mapStyle}${config.apiKey}`,
-      filters: config.filters.reduce((memo, filter) => {
-        memo[filter] = { selected: true };
-        return memo;
-      }, {})
+      filter: '',
+      categories: Object.keys(categories.categories).concat([ "other" ])
     };
   },
 
@@ -140,10 +89,9 @@ export default {
     this.computeIsMobile();
 
     this.sidebar = !this.isMobile;
-    this.geocoder = !this.isMobile;
 
-    const { features, location } = decode(this.featuresAndLocation);
-    decodeFeatures(features, this.filters);
+    const { filter, location } = decode(this.featuresAndLocation);
+    this.filter = this.categories.includes(filter) ? filter : '';
 
     Promise.all([
       this.loadInitialLocation(location),
@@ -162,11 +110,8 @@ export default {
       this.saveCurrentView();
     },
 
-    filters: {
-      deep: true,
-      handler() {
-        this.updateRoute();
-      }
+    filter() {
+      this.updateRoute();
     }
   },
 
@@ -219,24 +164,25 @@ export default {
     },
 
     updateRoute() {
+      const currentFeaturesAndLocation = this.$route.params.featuresAndLocation;
+      const newFeaturesAndLocation = encode(
+        this.filter,
+        encodePosition(this.mapCenter.lat, this.mapCenter.lng, this.mapZoom)
+      );
+      if (currentFeaturesAndLocation === newFeaturesAndLocation) {
+        return;
+      }
       this.$router.replace({
         name: this.$route.name,
         params: {
           ...this.$route.params,
-          featuresAndLocation: encode(
-            encodeFeatures(this.filters),
-            encodePosition(this.mapCenter.lat, this.mapCenter.lng, this.mapZoom)
-          )
+          featuresAndLocation: newFeaturesAndLocation
         }
       });
     },
 
     updateMapBounds(bbox) {
       this.$refs.map.$emit('updateMapBounds', bbox);
-    },
-
-    updateMapCenter(coords) {
-      this.$refs.map.$emit('updateMapCenter', coords);
     },
 
     computeIsMobile() {
@@ -255,9 +201,6 @@ export default {
 </script>
 
 <style>
-.title-mobile {
-  line-height: 1.2 !important;
-}
 .xs .mapboxgl-ctrl-top-right {
   top: 50px;
 }
@@ -266,22 +209,5 @@ export default {
 }
 .sidebar-opened .search {
   transform: translateX(300px);
-}
-.search {
-  position: absolute;
-  z-index: 4;
-}
-.xs .search {
-  width: 100%;
-}
-.logo-map {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  max-width: 30%;
-  max-height: 50px;
-  background: #ffffffe8;
-  border-radius: 10px;
-  padding: 5px;
 }
 </style>

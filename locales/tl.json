@@ -1,0 +1,183 @@
+{
+  "lang": "Filipino",
+  "covid19-alert": "Sundin ang pagtatakda ng pamahalaan. Ang pananagutan ay sa IYO.",
+  "title": "Bukás pa.",
+  "subtitle": "Mga puwestong nanatiling bukás habang may kuwarentenas",
+  "subtitle-dense": "Mga puwestong bukás nitong kuwarentenas",
+  "search": "Hanapin",
+  "menu": "Menu",
+  "missing_shop": "Mag-dagdag ng kulang na puwesto",
+  "change_lang": "Palitan ang wika",
+  "learmore": {
+    "about": "Tungkol",
+    "missing_shop": "Mag-dagdag ng kulang na puwesto",
+    "blog": "Blog",
+    "townhalls": "Bahay Pamahalaan",
+    "press": "Press",
+    "disclaimer": "Pagtatwa"
+  },
+  "days": {
+    "monday": "Lunes",
+    "tuesday": "Martes",
+    "wednesday": "Miyerkules",
+    "thursday": "Huwebes",
+    "friday": "Biyernes",
+    "saturday": "Sabado",
+    "sunday": "Linggo",
+    "ph": "Pista Opisyal"
+  },
+  "contribute_form": {
+    "title": "Mag-ambag",
+    "step1": {
+      "title": "Bukás ba ang puwestong ito habang may kuwarentenas?",
+      "open": {
+        "yes": "oo",
+        "no": "hindi"
+      }
+    },
+    "step2": {
+      "title": "Oras ng operasyon nitong kuwarentenas?",
+      "same_hours": "Pareho pa rin ng oras",
+      "same_hours_without_lockdown": "Pareho pa rin ng normal na oras",
+      "dont_know": "Hindi alam",
+      "continue": "Mag-patuloy"
+    },
+    "step3": {
+      "title": "Mag-dagdag ng detalye",
+      "delivery": {
+        "title": "Ang puwestong ito ay naghahatid ng inorder",
+        "unknown": "Hindi alam",
+        "yes": "Oo",
+        "only": "Naghahatid lang",
+        "no": "Hindi"
+      },
+      "details": "Mag-dagdag ng detalye kung kinakailangan"
+    },
+    "submit": "Ilathala",
+    "cancel": "Bawiin"
+  },
+  "filter": {
+    "bakery": "Panaderya",
+    "bank": "Banko at mga kumpanyang pang-kaseguruhan",
+    "food": "Tindahan ng Pagkain",
+    "fuel": "Gasolinahan",
+    "funeral_directors": "Punerarya",
+    "pharmacy": "Botika",
+    "police": "Himpilan ng Pulis",
+    "post_office": "Koreo",
+    "shop": "Tindahan",
+    "tobacco": "Tabako",
+    "other": "Iba pang puwesto"
+  },
+  "details": {
+    "signal": "Mag-ulat ng pagbabago",
+    "signal_done": "Ang iyong ulat ay na-irehistro na. Salamat!",
+    "containment_opening_hours": "Ang oras ng operasyon ay labas sa panahon ng kuwarentina",
+    "containment_brand_hours": "Ang oras ng operasyon ay nasa website ng tatak",
+    "facebook": "Facebook page",
+    "feature": {
+      "agrarian": "Tindahan ng gamit pang-agrikultura",
+      "alcohol": "Tindahan ng alak",
+      "association": "Samahan",
+      "bakery": "Panaderya",
+      "bank": "Bangko",
+      "bar": "Bar",
+      "beverages": "Tindahan ng inumin",
+      "bicycle": "Bentahan at kumpunihan ng bisikleta",
+      "books": "Tindahan ng libro",
+      "brewery": "Gawaan ng serbesa",
+      "butcher": "Magkakarne",
+      "cafe": "Tindaha ng kape",
+      "car": "Bentahan at kumpunihan ng awto",
+      "car_parts": "Tindahan ng piyesa ng awto",
+      "car_rental": "Arkilahan ng awto",
+      "car_repair": "Kumpunihan ng awto",
+      "caterer": "Caterer",
+      "cheese": "Tindahan ng keso",
+      "chemist": "Botika",
+      "chocolate": "Tindahan ng tsokolate",
+      "company": "Bahay kalakal",
+      "confectionery": "Tindahan ng minatamis",
+      "convenience": "Tindahan ng sari-sari",
+      "convenience;gas": "Gasolinahan",
+      "craft": "Crafts supply store",
+      "deli": "Delicatessen",
+      "doctors": "Doctor's clinic",
+      "doityourself": "Do-It-Yourself-stores",
+      "dry_cleaning": "Dry cleaning",
+      "e-cigarette": "Tindahan ng vape",
+      "electronics": "Electronics store",
+      "electronics_repair": "Electronics repair store",
+      "employment_agency": "Ahensya ng pagtratrabaho",
+      "farm": "Farm shop",
+      "frozen_food": "Frozen food store",
+      "fuel": "Gasolinahan",
+      "funeral_directors": "Punerarya",
+      "gas": "Gasolinahan",
+      "greengrocer": "Tindahan ng prutas at gulay",
+      "hardware": "Hardware store",
+      "insurance": "Paseguruhan",
+      "kiosk": "Kyosko",
+      "laundry": "Palabahan",
+      "mall": "Mall",
+      "marketplace": "Palengke",
+      "medical_supply": "Medical supply store",
+      "mobile_phone": "Mobile phone store",
+      "newsagent": "Tindahan ng pahayagan",
+      "optician": "Optiko",
+      "pet": "Tindahan ng alagang hayop",
+      "pharmacy": "botika",
+      "police": "Himpilan ng Pulis",
+      "post_office": "Koreo",
+      "pub": "Pub",
+      "restaurant": "Restawran",
+      "seafood": "Tindahan ng pagkaing dagat",
+      "social_facility": "Social facility",
+      "stationery": "Office supply shop",
+      "supermarket": "Supermarket",
+      "telecommunication": "Telecomunication company office",
+      "tobacco": "Tindahan ng tabako",
+      "wine": "Tindahan ng bino",
+      "winery": "Gawaan ng alak"
+    },
+    "opening_hours": {
+      "state_until_date": "{state} until {date}",
+      "state": {
+        "open": "bukás",
+        "closed": "sarado"
+      },
+      "tomorrow": "bukas"
+    },
+    "state": {
+      "open": "Bukás habang may lockdown",
+      "open_adapted": "Bukás habang may lockdown. Ang puwesto ay nag-iba ng oras",
+      "partial": "Maaring bukás habang may lockdown (kailangan siyasatin)",
+      "unknown": "Pinahintulutan ang pagbu-bukás habang may lockdown. Bukás o Sarado ? Ipa-alam sa amin.",
+      "closed": "Sarado ang puwesto habang may lockdown."
+    },
+    "delivery": {
+      "yes": "Naghahatid din ng oorderin",
+      "only": "Naghahatid lang"
+    },
+    "takeaway": {
+      "yes": "Maaring mag-takeout",
+      "modified": "Maaring mag-turing ng-takeout",
+      "only": "Take-out lang"
+    }
+  },
+  "opening_hours_editor": {
+    "select_days": "Piliin ang araw",
+    "next": "Piliin ang oras",
+    "select_time": {
+      "start": "Piliin ang oras ng pagbu-bukás",
+      "end": "Piliin ang oras ng pagsa-sara"
+    },
+    "add_interval": "Idagdag ang oras",
+    "add_new_days": "Idagdag ang araw"
+  },
+  "osm_link": {
+    "title": "« Ça reste ouvert » ay gumagamit ng datos ng OpenStreetMap.",
+    "view": "Tignan",
+    "edit": "I-edit"
+  }
+}

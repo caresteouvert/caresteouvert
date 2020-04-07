@@ -17,6 +17,7 @@ import Vuetify, {
   VContent,
   VDialog,
   VDivider,
+  VFooter,
   VIcon,
   VImg,
   VLayout,
@@ -32,6 +33,7 @@ import Vuetify, {
   VListItemTitle,
   VNavigationDrawer,
   VRow,
+  VSelect,
   VSlideXReverseTransition,
   VSpacer,
   VStepper,
@@ -70,6 +72,7 @@ Vue.use(Vuetify, {
     VContent,
     VDialog,
     VDivider,
+    VFooter,
     VIcon,
     VImg,
     VLayout,
@@ -85,6 +88,7 @@ Vue.use(Vuetify, {
     VListItemTitle,
     VNavigationDrawer,
     VRow,
+    VSelect,
     VSlideXReverseTransition,
     VSpacer,
     VStepper,
@@ -112,16 +116,19 @@ const vuetify = new Vuetify({
       next: 'osm-chevron_right',
       expand: 'osm-arrow_down',
       checkboxOn: 'osm-check_box',
-      checkboxOff: 'osm-check_box_outline_blank'
+      checkboxOff: 'osm-check_box_outline_blank',
+      cancel: 'osm-close'
     }
   }
 });
 
 const i18n = new VueI18n({
   locale: localStorage.getItem('lang') || navigator.language.split('-')[0],
-  fallbackLocale: 'fr',
+  fallbackLocale: 'en',
   messages
 });
+
+document.title = i18n.t('title');
 
 const routes = [
   {

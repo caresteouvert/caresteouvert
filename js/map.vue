@@ -9,6 +9,9 @@
     @update:zoom="updateMapZoom"
   >
     <MglNavigationControl :show-compass="false" />
+    <MglGeolocateControl
+      :positionOptions="{ enableHighAccuracy: true }"
+    />
     <MglAttributionControl
       :compact="false"
       position="bottom-right"
@@ -30,7 +33,7 @@
 
 <script>
 import * as config from '../config.json';
-import { MglMap, MglNavigationControl, MglVectorLayer, MglAttributionControl } from 'vue-mapbox/dist/vue-mapbox.umd';
+import { MglMap, MglNavigationControl, MglVectorLayer, MglAttributionControl, MglGeolocateControl } from 'vue-mapbox/dist/vue-mapbox.umd';
 
 const source = "public.poi_osm_light";
 
@@ -44,8 +47,8 @@ const layers = [
       [
         "in",
         "status",
-        "ouvert",
-        "ouvert_adapté"
+        "open",
+        "open_adapted"
       ]
     ],
     paint: {
@@ -68,8 +71,8 @@ const layers = [
       [
         "in",
         "status",
-        "inconnu",
-        "partiel",
+        "unknown",
+        "partial"
       ]
     ],
     paint: {
@@ -92,7 +95,7 @@ const layers = [
       [
         "in",
         "status",
-        "fermé"
+        "closed"
       ]
     ],
     paint: {
@@ -110,18 +113,6 @@ const layers = [
     id: "poi-white-bg",
     type: "circle",
     "source-layer": source,
-    filter: [
-      "all",
-      [
-        "in",
-        "status",
-        "ouvert",
-        "ouvert_adapté",
-        "inconnu",
-        "partiel",
-        "fermé"
-      ]
-    ],
     paint: {
       'circle-color': 'white',
       'circle-radius': [
@@ -137,23 +128,12 @@ const layers = [
     id: "poi-icon",
     type: "symbol",
     "source-layer": source,
-    minzoom: 14.5,
-    filter: [
-      "all",
-      [
-        "in",
-        "status",
-        "ouvert",
-        "ouvert_adapté",
-        "inconnu",
-        "partiel",
-        "fermé"
-      ]
-    ],
+    minzoom: 15,
     "layout": {
       "icon-image": [
         "coalesce",
         ['image', ['concat', ['get', 'cat'], '_11']],
+        ['image', ['concat', ['get', 'normalized_cat'], '_11']],
         ['image', 'other_11']
       ],
       "icon-size": [
@@ -170,8 +150,11 @@ const layers = [
       ],
       "text-max-width": 9,
       "text-offset": [
-        0,
-        1
+        'interpolate',
+        ['linear'],
+        ['zoom'],
+        14, ['literal', [0, 0]],
+        19, ['literal', [0, 1.5]]
       ],
       "text-padding": 2,
       "text-size": 12
@@ -191,6 +174,7 @@ export default {
     MglMap,
     MglNavigationControl,
     MglVectorLayer,
+    MglGeolocateControl
   },
 
   props: {
@@ -215,8 +199,8 @@ export default {
       required: true
     },
 
-    filters: {
-      type: Object,
+    filter: {
+      type: String,
       required: true
     }
   },
@@ -224,9 +208,6 @@ export default {
   mounted() {
     this.$on('updateMapBounds', (bbox) => {
       this.map.fitBounds(bbox, { duration: 0 });
-    });
-    this.$on('updateMapCenter', ({ latitude, longitude }) => {
-      this.map.jumpTo({ center: { lat: latitude, lng: longitude }, zoom: 13});
     });
   },
 
@@ -240,14 +221,17 @@ export default {
     },
 
     layers() {
-      const unselectedCategories = Object.keys(this.filters).filter(filter => !this.filters[filter].selected);
       return layers.map((layer) => {
-        const newLayer = { ...layer, filter: [...layer.filter] };
-        newLayer.filter.push([
-          "!in",
-          "normalized_cat",
-          ...unselectedCategories
-        ]);
+        const newLayer = { ...layer, filter: layer.filter ? [...layer.filter] : [ "all" ] };
+
+        if (this.filter !== '') {
+          newLayer.filter.push([
+            "==",
+            "normalized_cat",
+            this.filter
+          ]);
+        }
+
         return newLayer;
       });
     }
@@ -275,10 +259,14 @@ export default {
     },
 
     clickPoi(e) {
+      const id = e.mapboxEvent.features[0].properties.fid;
+      if (this.$route.name === 'place' && this.$route.params.id === id) {
+        return;
+      }
       this.$router.push({
         name: 'place',
         params: {
-          id: e.mapboxEvent.features[0].properties.fid,
+          id,
           featuresAndLocation: this.featuresAndLocation
         }
       });
