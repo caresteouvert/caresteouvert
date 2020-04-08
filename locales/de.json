@@ -1,26 +1,27 @@
 {
   "lang": "Deutsch",
-  "covid19-alert": "Befolge die Anweisungen der Behörden. Die Verantwortung liegt bei DIR.",
+  "covid19-alert": "Bitte folge den Anweisungen der zuständigen Behörden.",
   "title": "Bleibt offen",
-  "subtitle": "Orte, die während der Ausgangsbeschränkungen geöffnet bleiben",
-  "subtitle-dense": "Orte trotz Beschränkungen geöffnet",
+  "subtitle": "Alle Geschäfte, die weiterhin geöffnet sind.",
+  "subtitle-dense": "Apotheke, Bäcker & Co.",
   "search": "Suche",
   "menu": "Menü",
   "missing_shop": "Fehlendes Geschäft melden",
   "change_lang": "Sprache ändern",
+  "zoomtosee": "Vergrößere die Karte, um offene Geschäfte anzuzeigen",
   "learnmore": {
     "about": "Über",
     "contribute": "Mitmachen",
     "missing_shop": "Fehlendes Geschäft melden",
-    "description": "« {brand} \" ist ein wirksames Werkzeug, um die gezielte Suche nach einem offenen Geschaft in deiner Nachbarschaft zu erleichtern und somit die Ansteckungsgefahr zu reduzieren.\nDiese Karte wird gemeinschaftlich erstellt. Du kannst offene oder geschlossene Orte in deiner Nachbarschaft ganz einfach selbst melden. Auf diese effektive und einheitliche Weise hilfst du mit, die Menschen in deiner Nachbarschaft und deiner Stadt besser zu informieren.",
+    "description": "„{brand}“ ist ein unverzichtbares Werkzeug, wenn es um die Suche nach offenen Geschäften in deiner Nachbarschaft geht. So vermeidest du einen erfolglosen Besuch beim Bäcker um die Ecke und minimierst das Risiko einer Ansteckung.\n\nDiese Karte wird gemeinschaftlich von Menschen wie dir gepflegt. So kannst du Orte in deiner Nachbarschaft ganz einfach selbst als offen oder geschlossen markieren, Öffnungszeiten eintragen und auf Liefer- und Abholmöglichkeiten hinweisen.\n\nAuf diese effektive und einheitliche Weise trägst du aktiv dazu bei, die Menschen in deiner Nachbarschaft und deiner Stadt besser zu informieren.",
     "title": "Mehr erfahren",
     "press": "Presse",
-    "disclaimer": "Impressum",
+    "disclaimer": "Impressum & Datenschutz",
     "blog": "Blog",
-    "townhalls": "Rathäuser"
+    "townhalls": "Rathäuser, verwendet „{brand}“!"
   },
   "rgpd": {
-    "consent": "In Zeiten von Ausgangssperren: Würdest du einen Cookie auf deinem Computer akzeptieren für unsere Statistiken?",
+    "consent": "Akzeptierst du einen Cookie auf deinem Computer für unsere Statistiken?",
     "yes": "Ja",
     "no": "Nein"
   },
@@ -32,26 +33,26 @@
     "friday": "Freitag",
     "saturday": "Samstag",
     "sunday": "Sonntag",
-    "ph": "Feiertage"
+    "ph": "Gesetzliche Feiertage"
   },
   "contribute_form": {
     "title": "Mitmachen",
     "step1": {
-      "title": "Ist dieser Ort trotz Ausgangsbeschränkungen geöffnet?",
+      "title": "Ist dieser Ort weiterhin geöffnet?",
       "open": {
         "yes": "Ja",
         "no": "Nein"
       }
     },
     "step2": {
-      "title": "Öffnungszeiten während der Ausgangsbeschränkungen",
-      "same_hours": "Gleiche Zeiten",
-      "same_hours_without_lockdown": "Die Öffnungszeiten sind die gleichen wie außerhalb der Ausgangsbeschränkungen",
+      "title": "Gelten abweichende Öffnungszeiten?",
+      "same_hours": "Nein, gleiche Zeiten",
+      "same_hours_without_lockdown": "Es gelten die regulären Öffnungszeiten.",
       "dont_know": "Weiß ich nicht",
       "continue": "Weiter"
     },
     "step3": {
-      "title": "Details hinzufügen",
+      "title": "Zusätzliche Angaben (optional)",
       "delivery": {
         "title": "Lieferung möglich",
         "unknown": "Weiß ich nicht",
@@ -60,22 +61,22 @@
         "no": "Nein"
       },
       "takeaway": {
-        "title": "Dieser Ort bietet Abholung an.",
+        "title": "Dieses Geschäft bietet Speisen zur Abholung an.",
         "unknown": "Weiß ich nicht",
         "yes": "Ja",
         "only": "Nur Abholung",
         "no": "Nein"
       },
-      "details": "Erforderliche Angaben während der Beschränkungen"
+      "details": "Zusätzliche wichtige Angaben (optional)"
     },
     "submit": "Veröffentlichen",
     "cancel": "Abbrechen"
   },
   "details": {
     "signal": "Änderung melden",
-    "signal_done": "Deine Meldung wurde gespeichert. Vielen Dank! Bitte habe etwas Geduld, bis deine Änderung erscheint.",
-    "containment_opening_hours": "Öffnungszeiten außerhalb der Ausgangsbeschränkungen",
-    "containment_brand_hours": "Öffnungszeiten auf der Webseite des Betreibers",
+    "signal_done": "Deine Änderungsmeldung wurde erfasst. Vielen Dank!\n\nBitte habe etwas Geduld, es kann bis zu einer Stunde dauern, bis deine Änderung erscheint.",
+    "containment_opening_hours": "Reguläre Öffnungszeiten",
+    "containment_brand_hours": "Öffnungszeiten auf der Webseite",
     "facebook": "Facebook-Seite",
     "opening_hours": {
       "state_until_date": "{state} bis {date}",
@@ -88,9 +89,9 @@
     "state": {
       "open": "Ort weiterhin geöffnet",
       "open_adapted": "Ort geöffnet mit abweichenden Öffnungszeiten",
-      "partial": "Ort möglicherweise weiterhin geöffnet (Prüfung ausstehend)",
-      "unknown": "Ort darf weiterhin geöffnet sein. Geöffnet oder geschlossen? Lass es uns wissen.",
-      "closed": "Ort geschlossen während der Beschränkungen"
+      "partial": "Dieser Ort gehört zu einem Unternehmen, deren Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen? Lass es uns wissen.",
+      "unknown": "Dieser Ort darf wahrscheinlich geöffnet bleiben.\n\nGeöffnet oder geschlossen? Lass es uns wissen.",
+      "closed": "Ort vorübergehend geschlossen"
     },
     "delivery": {
       "yes": "Lieferung möglich",
@@ -106,14 +107,14 @@
     "select_days": "Wochentage auswählen",
     "next": "Zeiten auswählen",
     "select_time": {
-      "start": "Wähle den Beginn der Öffnungszeiten",
-      "end": "Wähle das Ende der Öffnungszeiten"
+      "start": "Beginn der Öffnungszeiten",
+      "end": "Ende der Öffnungszeiten"
     },
     "add_interval": "Zeiten hinzufügen",
     "add_new_days": "Wochentage hinzufügen"
   },
   "osm_link": {
-    "title": "« {brand} » verwendet OpenStreetMap-Daten.",
+    "title": "„{brand}“ verwendet OpenStreetMap-Daten.",
     "view": "Anzeigen",
     "edit": "Bearbeiten"
   },
@@ -138,7 +139,7 @@
     "restaurant": "Restaurant",
     "fast_food": "Schnellimbiss",
     "ice_cream": "Eis",
-    "tobacco": "Tabakwarengeschäft",
+    "tobacco": "Tabakwaren",
     "e_cigarette": "E-Zigarette",
     "shop": "Geschäfte",
     "hardware": "Baumarkt",
@@ -162,6 +163,6 @@
     "car_rental": "Autovermietung",
     "bicycle": "Fahrradladen",
     "car": "Autowerkstatt",
-    "funeral_directors": "Bestattungsunternehmen"
+    "funeral_directors": "Bestatter"
   }
 }
