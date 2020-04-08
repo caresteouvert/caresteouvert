@@ -21,14 +21,12 @@ BEGIN
 		RETURN 'eat';
 	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'cigarettes') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'e-cigarettes') OR (tags->'shop' IN ('tobacco', 'e-cigarette')) OR (tags->'tobacco' IN ('yes', 'only')) THEN
 		RETURN 'tobacco';
-	ELSIF (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'electronics', 'dry_cleaning', 'laundry', 'stationery', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'agrarian', 'garden_centre', 'optician')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') THEN
+	ELSIF (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'electronics', 'dry_cleaning', 'laundry', 'stationery', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'agrarian', 'garden_centre', 'optician', 'funeral_directors')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') THEN
 		RETURN 'shop';
 	ELSIF (tags->'amenity' = 'bank') OR (tags->'office' IN ('financial', 'insurance')) OR (tags->'shop' = 'money_lender') THEN
 		RETURN 'finance';
 	ELSIF (tags->'amenity' IN ('fuel', 'car_rental')) OR (tags->'shop' IN ('gas', 'bicycle', 'car_parts', 'car_repair')) THEN
 		RETURN 'mobility';
-	ELSIF tags->'shop' = 'funeral_directors' THEN
-		RETURN 'funeral_directors';
 	ELSIF tags->'opening_hours:covid19' != '' THEN
 		RETURN 'other';
 	ELSE
@@ -103,6 +101,8 @@ BEGIN
 		RETURN 'optician';
 	ELSIF tags->'office' = 'employment_agency' THEN
 		RETURN 'employment_agency';
+	ELSIF tags->'shop' = 'funeral_directors' THEN
+		RETURN 'funeral_directors';
 	ELSIF (tags->'amenity' = 'bank') OR (tags->'office' = 'financial') THEN
 		RETURN 'bank';
 	ELSIF tags->'shop' = 'money_lender' THEN
@@ -117,8 +117,6 @@ BEGIN
 		RETURN 'bicycle';
 	ELSIF tags->'shop' IN ('car_parts', 'car_repair') THEN
 		RETURN 'car';
-	ELSIF tags->'shop' = 'funeral_directors' THEN
-		RETURN 'funeral_directors';
 	ELSE
 		RETURN 'unknown';
 	END IF;

@@ -345,6 +345,15 @@
             }
           ],
           "areas": "all"
+        },
+        "funeral_directors": {
+          "name": "Funeral directors",
+          "osm_tags": [
+            {
+              "shop": "funeral_directors"
+            }
+          ],
+          "areas": "all"
         }
       }
     },
@@ -421,20 +430,6 @@
           "osm_tags": [
             {
               "shop": "car_parts|car_repair"
-            }
-          ],
-          "areas": "all"
-        }
-      }
-    },
-    "funeral_directors": {
-      "name": "Funeral directors",
-      "subcategories": {
-        "funeral_directors": {
-          "name": "Funeral directors",
-          "osm_tags": [
-            {
-              "shop": "funeral_directors"
             }
           ],
           "areas": "all"
