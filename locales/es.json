@@ -8,6 +8,7 @@
   "menu": "Menú",
   "missing_shop": "Avisar de un sitio por editar",
   "change_lang": "Cambiar el idioma",
+  "zoomtosee": " Acercar para mostrar sitios abiertos",
   "learnmore": {
     "about": "Acerca de",
     "contribute": "Contribuir",
@@ -78,7 +79,7 @@
     "containment_brand_hours": "Horas de apertura en la página web de la marca",
     "facebook": "Página de Facebook",
     "opening_hours": {
-      "state_until_date": "{estado} hasta {fecha}",
+      "state_until_date": "{state} hasta {date}",
       "state": {
         "open": "abierto",
         "closed": "cerrado"
@@ -113,7 +114,7 @@
     "add_new_days": "Añadir días de apertura"
   },
   "osm_link": {
-    "title": "« {brand} » utiliza datos deOpenStreetMap.",
+    "title": "« {brand} » utiliza datos de OpenStreetMap.",
     "view": "Ver",
     "edit": "Editar"
   },
