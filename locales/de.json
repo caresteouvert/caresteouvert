@@ -1,6 +1,6 @@
 {
   "lang": "Deutsch",
-  "covid19-alert": "Bitte folge den Anweisungen der zuständigen Behörden.",
+  "covid19-alert": "Bitte befolge die Anweisungen der zuständigen Behörden.",
   "title": "Bleibt offen",
   "subtitle": "Alle Geschäfte, die weiterhin geöffnet sind.",
   "subtitle-dense": "Apotheke, Bäcker & Co.",
@@ -8,7 +8,7 @@
   "menu": "Menü",
   "missing_shop": "Fehlendes Geschäft melden",
   "change_lang": "Sprache ändern",
-  "zoomtosee": "Vergrößere die Karte, um offene Geschäfte anzuzeigen",
+  "zoomtosee": "Vergrößere die Karte, um offene Geschäfte zu sehen",
   "learnmore": {
     "about": "Über",
     "contribute": "Mitmachen",
@@ -155,6 +155,7 @@
     "garden_centre": "Gartenbaumarkt",
     "optician": "Optiker",
     "employment_agency": "Arbeitsagentur",
+    "funeral_directors": "Bestatter",
     "finance": "Finanzdienstleistungen",
     "bank": "Bank",
     "moneylender": "Geldverleiher",
@@ -164,6 +165,6 @@
     "car_rental": "Autovermietung",
     "bicycle": "Fahrradladen",
     "car": "Autowerkstatt",
-    "funeral_directors": "Bestatter"
+    "chemist": "Drogeriemarkt"
   }
 }
