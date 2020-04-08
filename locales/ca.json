@@ -4,7 +4,7 @@
   "title": "Es manté obert",
   "subtitle": "Llocs que es mantenen oberts durant el confinament",
   "subtitle-dense": "Llocs oberts durant el confinament",
-  "search": "Cerca",
+  "search": "Escriu la cerca",
   "menu": "Menú",
   "missing_shop": "Informa d'una botiga que falta",
   "change_lang": "Canvia de llengua",
@@ -13,7 +13,7 @@
     "about": "Quant a",
     "contribute": "Contribuir",
     "missing_shop": "Avisar d'una botiga que falta",
-    "description": "« {brand} » és l'eina essencial per a evitar desplaçaments innecessaris al voltant de casa durant el confiament i, permet doncs, limitar el risc de contagi.\nAquest mapa col·laboratiu et permet de compartir fàcilment llocs oberts o tancats del vostre barri. És la forma més efectiva d'informar-ne als veïns i als residents de la teva ciutat.",
+    "description": "«{brand}» és l'eina essencial per a evitar desplaçaments innecessaris al voltant de casa durant el confiament i, permet doncs, limitar el risc de contagi.\nAquest mapa col·laboratiu et permet de compartir fàcilment llocs oberts o tancats del vostre barri. És la forma més efectiva d'informar-ne als veïns i als residents de la teva ciutat.",
     "title": "Més informació",
     "press": "Premsa",
     "disclaimer": "Descàrrega de responsabilitat",
@@ -73,6 +73,7 @@
     "cancel": "Cancel·la"
   },
   "details": {
+    "signal_warning": "Estàs escrivint un informe. No es desarà. Vols continuar?",
     "signal": "Informa d'un canvi",
     "signal_done": "S'ha registrat l'avís. Gràcies. Tingues paciència, trigarà una mica a ser processat",
     "containment_opening_hours": "Horari d'obertura durant el confinament",
@@ -154,6 +155,7 @@
     "garden_centre": "Jardineria",
     "optician": "Òptica",
     "employment_agency": "Agència de treball",
+    "funeral_directors": "Tanatori i funerària",
     "finance": "Serveis financers",
     "bank": "Banc",
     "moneylender": "Prestamista",
@@ -162,7 +164,6 @@
     "fuel": "Benzinera",
     "car_rental": "Lloguer de cotxes",
     "bicycle": "Botiga de bicicletes",
-    "car": "Reparació de vehicles",
-    "funeral_directors": "Tanatori i funerària"
+    "car": "Reparació de vehicles"
   }
 }
