@@ -41,7 +41,7 @@
           <v-chip
             v-if="mapZoom < minZoomPoi"
             color="primary"
-            class="zoom-chip mb-3"
+            class="zoom-chip mb-6"
           >
             {{ $t('zoomtosee') }}
           </v-chip>
