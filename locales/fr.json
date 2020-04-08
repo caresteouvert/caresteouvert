@@ -73,6 +73,7 @@
     "cancel": "Annuler"
   },
   "details": {
+    "signal_warning": "Voulez êtes en train de faire un signalement. Il sera perdu. Voulez vous continuer ?",
     "signal": "Signaler un changement",
     "signal_done": "Votre signalement a été enregistré. Merci ! Patientez, cela peut prendre un moment avant qu'il soit pris en compte.",
     "containment_opening_hours": "Horaires d'ouverture hors-confinement",

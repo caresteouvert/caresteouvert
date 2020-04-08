@@ -37,6 +37,7 @@
         </v-toolbar>
 
         <detail-state
+          ref="state"
           :point="point"
           :status="status"
         />
@@ -161,6 +162,25 @@ export default {
   mounted() {
     this.resize();
     this.updatePoint();
+    this.beforeUnloadListener = (event) => {
+      if (this.$refs.state.contribute) {
+        event.preventDefault();
+        event.returnValue = '';
+      }
+    };
+    window.addEventListener('beforeunload', this.beforeUnloadListener);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('beforeunload', this.beforeUnloadListener);
+  },
+
+  beforeRouteLeave(to, from, next) {
+    let result = true;
+    if (this.$refs.state && this.$refs.state.contribute) {
+      result = window.confirm(this.$t('details.signal_warning'));
+    }
+    next(result);
   },
 
   data() {
