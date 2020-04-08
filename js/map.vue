@@ -214,8 +214,8 @@ export default {
   computed: {
     poiSource() {
       return {
-        minzoom: 13,
-        maxzoom: 13,
+        minzoom: config.minZoomPoi,
+        maxzoom: config.maxZoomPoi,
         tiles: [config.tilesUrl]
       };
     },

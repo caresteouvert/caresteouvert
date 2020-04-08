@@ -8,6 +8,8 @@
   "poiFeature": "https://features.caresteouvert.fr/collections/public.poi_osm/items",
   "apiUrl": "https://api.caresteouvert.fr",
   "geoIpUrl": "https://geo.caresteouvert.fr/me",
+  "minZoomPoi": 13,
+  "maxZoomPoi": 13,
   "fr": {
     "brand": "caresteouvert",
     "brand_text": "Ça reste ouvert",

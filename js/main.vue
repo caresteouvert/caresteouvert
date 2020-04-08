@@ -39,7 +39,7 @@
         />
         <v-slide-y-reverse-transition>
           <v-chip
-            v-if="mapZoom < 13"
+            v-if="mapZoom < minZoomPoi"
             color="primary"
             class="zoom-chip mb-3"
           >
@@ -91,7 +91,8 @@ export default {
       mapZoom: null,
       mapStyle: `${config.mapStyle}${config.apiKey}`,
       filter: '',
-      categories: []
+      categories: [],
+      minZoomPoi: config.minZoomPoi
     };
   },
 
