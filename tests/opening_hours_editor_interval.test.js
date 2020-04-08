@@ -4,11 +4,7 @@ import OpeningHoursEditorInterval from '../js/opening_hours_editor_interval';
 
 describe('OpeningHoursEditorInterval', () => {
   let localVue;
-  const stubs = {
-    'v-btn': '<div class="v-btn" />',
-    'v-time-picker': '<div class="v-time-picker" />',
-    'v-slide-x-reverse-transition': '<div><slot /></div>'
-  };
+  const stubs = ['v-btn', 'v-time-picker', 'v-slide-x-reverse-transition'];
 
   beforeEach(() => {
     localVue = createLocalVue();
@@ -28,10 +24,10 @@ describe('OpeningHoursEditorInterval', () => {
       localVue,
       stubs
     });
-    expect(editor.findAll('.v-time-picker').length).toBe(1);
+    expect(editor.findAll('v-time-picker-stub').length).toBe(1);
     editor.vm.intervalStart = '08:00';
     editor.vm.next();
-    expect(editor.findAll('.v-time-picker').length).toBe(1);
+    expect(editor.findAll('v-time-picker-stub').length).toBe(1);
     editor.vm.intervalEnd = '16:00';
     editor.vm.next();
     expect(editor.emitted('input').length).toEqual(1);

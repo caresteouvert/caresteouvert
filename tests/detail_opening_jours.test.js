@@ -4,12 +4,9 @@ import DetailOpeningHours from '../js/detail_opening_hours';
 describe('OpeningHours', () => {
   let localVue;
   const realDate = Date;
-  const stubs = {
-    'v-list-item': '<div />',
-    'v-list-item-icon': '<div />',
-    'v-list-item-content': '<div />',
-    'v-list-group': '<div />'
-  };
+  const stubs = ['v-list-item', 'v-list-item-icon',
+                 'v-list-item-content', 'v-list-group',
+                 'v-list-item-title', 'v-list-item-subtitle', 'v-icon'];
   let fakeDate;
 
   beforeEach(() => {

@@ -3,11 +3,7 @@ import OsmLink from '../js/osm_link';
 
 describe('OSMLink', () => {
   let localVue;
-  const stubs = {
-    'v-row': '<div><slot /></div>',
-    'v-col': '<div><slot /></div>',
-    'v-btn': '<div class="btn" />'
-  };
+  const stubs = ['v-row', 'v-col', 'v-btn'];
 
   beforeEach(() => {
     localVue = createLocalVue();

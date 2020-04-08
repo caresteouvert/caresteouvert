@@ -5,10 +5,7 @@ import ContributeForm from '../js/contribute_form';
 
 describe('DetailState', () => {
   let localVue;
-  const stubs = {
-    'v-alert': '<div></div>',
-    'v-divider': '<div></div>'
-  };
+  const stubs = ['v-alert', 'v-divider', 'v-btn'];
 
   beforeEach(() => {
     localVue = createLocalVue();

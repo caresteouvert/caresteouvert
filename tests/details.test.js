@@ -6,18 +6,8 @@ import DetailOpeningHours from '../js/detail_opening_hours';
 describe('Detail', () => {
   let localVue;
   let point;
-  const stubs = {
-    'v-alert': '<div class="v-alert"><slot /></div>',
-    'v-toolbar': '<div><slot /></div>',
-    'v-toolbar-title': '<div><slot /></div>',
-    'v-card': '<div><slot /></div>',
-    'v-list': '<div><slot /></div>',
-    'v-icon': '<div></div>',
-    'v-btn': '<div></div>',
-    'v-spacer': '<div></div>',
-    'v-footer': '<div></div>',
-    'v-slide-x-reverse-transition': '<div><slot /></div>'
-  };
+  const stubs = ['v-alert', 'v-toolbar', 'v-toolbar-title', 'v-card', 'v-list',
+                 'v-icon', 'v-btn', 'v-spacer', 'v-footer', 'v-slide-x-reverse-transition'];
 
   beforeEach(() => {
     localVue = createLocalVue();
@@ -72,7 +62,7 @@ describe('Detail', () => {
     const detail = createWrapper({ id: '' });
     await global.fetch();
     await Vue.nextTick();
-    expect(detail.find('.v-alert').contains(DetailOpeningHours)).toBe(true);
+    expect(detail.find('v-alert-stub').contains(DetailOpeningHours)).toBe(true);
   });
 
   it('display only one opening_hours', async () => {
@@ -101,5 +91,4 @@ describe('Detail', () => {
     await Vue.nextTick();
     expect(detail.vm.contact('phone')).toEqual('test');
   });
-
 });

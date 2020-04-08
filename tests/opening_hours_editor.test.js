@@ -5,12 +5,7 @@ import OpeningHoursInterval from '../js/opening_hours_editor_interval';
 
 describe('OpeningHoursEditor', () => {
   let localVue;
-  const stubs = {
-    'v-dialog': '<div class="v-dialog"><slot /></div>',
-    'v-card': '<div class="v-card"><slot /></div>',
-    'v-checkbox': '<div class="v-checkbox" />',
-    'v-btn': '<div class="v-btn" />'
-  };
+  const stubs = ['v-dialog', 'v-card', 'v-checkbox', 'v-btn', 'v-icon'];
 
   beforeEach(() => {
     localVue = createLocalVue();
@@ -24,8 +19,8 @@ describe('OpeningHoursEditor', () => {
     });
     editor.vm.dialog = true;
     await Vue.nextTick();
-    expect(editor.findAll('.v-checkbox').length).toBe(8);
-    expect(editor.findAll('.v-btn').length).toBe(2);
+    expect(editor.findAll('v-checkbox-stub').length).toBe(8);
+    expect(editor.findAll('v-btn-stub').length).toBe(2);
   });
 
   it('allow to choose and display the interval', async () => {
@@ -36,7 +31,7 @@ describe('OpeningHoursEditor', () => {
     editor.vm.selectedWeekDays.push('mo');
     editor.vm.next();
     await Vue.nextTick();
-    expect(editor.findAll('.v-checkbox').length).toBe(0);
+    expect(editor.findAll('v-checkbox-stub').length).toBe(0);
     expect(editor.contains(OpeningHoursInterval)).toBe(true);
     editor.vm.interval = '08:00-12:00';
     editor.vm.close();
