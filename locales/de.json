@@ -45,14 +45,14 @@
       }
     },
     "step2": {
-      "title": "Gelten abweichende Öffnungszeiten?",
-      "same_hours": "Nein, gleiche Zeiten",
+      "title": "Wann hat dieser Ort geöffnet?",
+      "same_hours": "Zu den üblichen Zeiten",
       "same_hours_without_lockdown": "Das sind auch die regulären Öffnungszeiten.",
       "dont_know": "Weiß ich nicht",
       "continue": "Weiter"
     },
     "step3": {
-      "title": "Zusätzliche Angaben (optional)",
+      "title": "Zusätzliche Angaben",
       "delivery": {
         "title": "Lieferung möglich",
         "unknown": "Weiß ich nicht",
