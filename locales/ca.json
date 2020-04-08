@@ -1,23 +1,29 @@
 {
-  "lang": "Catalan",
+  "lang": "Català",
   "covid19-alert": "Segueix les recomanacions del govern. La responsabilitat és TEVA.",
   "title": "Es manté obert",
   "subtitle": "Llocs que es mantenen oberts durant el confinament",
   "subtitle-dense": "Llocs oberts durant el confinament",
-  "search": "Cercar",
+  "search": "Cerca",
   "menu": "Menú",
   "missing_shop": "Informa d'una botiga que falta",
-  "change_lang": "Canviar idioma",
+  "change_lang": "Canvia de llengua",
+  "zoomtosee": "Apropa't per a mostrar els llocs oberts",
   "learnmore": {
-    "about": "Sobre",
+    "about": "Quant a",
     "contribute": "Contribuir",
     "missing_shop": "Avisar d'una botiga que falta",
-    "description": "« {brand} » és l'eina essencial per evitar moviments innecessaris  al voltant de casa teva durant el confinament i pel risc de contagi.\nAquest mapa col·laboratiu et permet compartir llocs oberts o tancats al teu veïnat. És la forma més efectiva i unida per informar millor als teus veïns i habitants de la teva ciutat.",
-    "title": "Aprendre'n més",
+    "description": "« {brand} » és l'eina essencial per a evitar desplaçaments innecessaris al voltant de casa durant el confiament i, permet doncs, limitar el risc de contagi.\nAquest mapa col·laboratiu et permet de compartir fàcilment llocs oberts o tancats del vostre barri. És la forma més efectiva d'informar-ne als veïns i als residents de la teva ciutat.",
+    "title": "Més informació",
     "press": "Premsa",
     "disclaimer": "Descàrrega de responsabilitat",
     "blog": "Blog",
-    "townhalls": "Ajuntaments"
+    "townhalls": "Ajuntaments, useu «{brand}»!"
+  },
+  "rgpd": {
+    "consent": "En aquest temp de tancament, vols acceptar una galeta en l'ordinador per a les nostres estadístiques?",
+    "yes": "Sí",
+    "no": "No"
   },
   "days": {
     "monday": "Dilluns",
@@ -32,7 +38,7 @@
   "contribute_form": {
     "title": "Contribueix",
     "step1": {
-      "title": "Aquest lloc està obert durant el confinament?",
+      "title": "Aquest lloc és obert durant el confinament?",
       "open": {
         "yes": "sí",
         "no": "no"
@@ -43,10 +49,10 @@
       "same_hours": "Mateix horari",
       "same_hours_without_lockdown": "Manté el mateix horari que abans del confinament",
       "dont_know": "No ho sé",
-      "continue": "Continuar"
+      "continue": "Continua"
     },
     "step3": {
-      "title": "Afegir detalls",
+      "title": "Afegeix detalls",
       "delivery": {
         "title": "Aquest lloc distribueix a domicili",
         "unknown": "No ho sé",
@@ -54,14 +60,21 @@
         "only": "Només a domicili",
         "no": "No"
       },
+      "takeaway": {
+        "title": "El lloc permet fer la compra per a emportar-se-la",
+        "unknown": "No ho sé",
+        "yes": "Sí",
+        "only": "Només per a emportar-se",
+        "no": "No"
+      },
       "details": "Afegeix els detalls requerits durant el confinament"
     },
-    "submit": "Publicar",
-    "cancel": "Cancel·lar"
+    "submit": "Publica",
+    "cancel": "Cancel·la"
   },
   "details": {
-    "signal": "Avisar d'un canvi",
-    "signal_done": "El teu avís ha estat registrat. Gràcies. Tingues paciència, trigarà una mica en ser processat",
+    "signal": "Informa d'un canvi",
+    "signal_done": "S'ha registrat l'avís. Gràcies. Tingues paciència, trigarà una mica a ser processat",
     "containment_opening_hours": "Horari d'obertura durant el confinament",
     "containment_brand_hours": "Horari d'obertura a la web de la marca",
     "facebook": "Pàgina de Facebook",
@@ -77,35 +90,36 @@
       "open": "Lloc obert durant el confinament",
       "open_adapted": "Lloc obert durant el confinament amb horaris adaptats",
       "partial": "Lloc segurament obert durant el confinament (s'ha de comprovar)",
-      "unknown": "Lloc am permís per obrir durant el confinament. Obert o tancat? Fes-nos-ho saber.",
+      "unknown": "Lloc amb permís per obrir durant el confinament. Obert o tancat? Fes-nos-ho saber.",
       "closed": "Lloc tancat durant el confinament"
     },
     "delivery": {
-      "yes": "Venda a domicili disponible",
+      "yes": "Servei de repartiment a domicili disponible",
       "only": "Només a domicili"
     },
     "takeaway": {
-      "yes": "Venda per emportar disponible",
-      "modified": "Venda per emportar modificada",
-      "only": "Només per emportar"
+      "yes": "Venda per emportar-se disponible",
+      "modified": "Venda per emportar-se modificada",
+      "only": "Només per emportar-se"
     }
   },
   "opening_hours_editor": {
-    "select_days": "Seleccionar dies",
-    "next": "Seleccionar hores",
+    "select_days": "Selecciona els dies",
+    "next": "Selecciona les hores",
     "select_time": {
-      "start": "Triar horari d'obertura",
-      "end": "Triar horari de tancament"
+      "start": "Tria l'horari d'obertura",
+      "end": "Tria l'horari de tancament"
     },
-    "add_interval": "Afegir hores",
-    "add_new_days": "Afegir dies d'obertura"
+    "add_interval": "Afegeix-hi hores",
+    "add_new_days": "Afegeix-hi dies d'obertura"
   },
   "osm_link": {
     "title": "« {brand} » usa dades d'OpenStreetMap.",
-    "view": "Veure",
-    "edit": "Editar"
+    "view": "Mostra",
+    "edit": "Edita"
   },
   "categories": {
+    "other": "Altres llocs",
     "police": "Policia",
     "pharmacy": "Farmàcia",
     "post_office": "Oficina de correus",
@@ -119,7 +133,12 @@
     "grocery": "Ultramarins",
     "alcohol": "Celler / Licoreria",
     "marketplace": "Mercat ambulant",
-    "bakery": "Fleca",
+    "bakery": "Fleca o forn de pa",
+    "eat": "Restaurant i per emportar-se",
+    "vending_machine": "Màquina de vènding",
+    "restaurant": "Restaurant",
+    "fast_food": "Menjar ràpid",
+    "ice_cream": "Gelateria",
     "tobacco": "Estanc",
     "e_cigarette": "Cigarretes electròniques",
     "shop": "Botigues",
@@ -127,21 +146,23 @@
     "mobile_phone": "Mòbils",
     "electronics": "Electrònica",
     "laundry": "Bugaderia",
-    "stationery": "Estacional",
+    "stationery": "Papereria",
     "medical_supply": "Subministres mèdics",
-    "newsagent": "Diaris",
+    "newsagent": "Diaris i quioscos",
     "pet": "Botiga d'animals",
     "agrarian": "Productes agrícoles",
+    "garden_centre": "Jardineria",
     "optician": "Òptica",
     "employment_agency": "Agència de treball",
-    "car_rental": "Lloguer de cotxes",
-    "bicycle": "Botiga de bicicletes",
-    "car": "Garatge",
+    "finance": "Serveis financers",
     "bank": "Banc",
     "moneylender": "Prestamista",
     "insurance": "Assegurances",
+    "mobility": "Mobilitat",
     "fuel": "Benzinera",
-    "funeral_directors": "Tanatori / Funerària",
-    "other": "Altres llocs"
+    "car_rental": "Lloguer de cotxes",
+    "bicycle": "Botiga de bicicletes",
+    "car": "Reparació de vehicles",
+    "funeral_directors": "Tanatori i funerària"
   }
 }
