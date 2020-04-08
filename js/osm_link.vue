@@ -27,9 +27,11 @@
 
 <script>
 import parseId from './parse_id';
-import config from '../config.json';
+import i18nMixin from './mixins/i18n';
 
 export default {
+  mixins: [i18nMixin],
+
   props: {
     id: {
       type: String,
@@ -44,14 +46,7 @@ export default {
       osmLink: `https://www.openstreetmap.org/${type}/${id}`,
       idLink: `https://www.openstreetmap.org/edit?editor=id&${type}=${id}`,
     };
-  },
-
-  computed: {
-    brand() {
-      return (config[this.$i18n.locale] || config.en).brand_text;
-    }
   }
-
 };
 </script>
 

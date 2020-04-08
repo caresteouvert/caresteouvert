@@ -26,7 +26,7 @@
         </v-btn>
       </v-card-title>
       <v-card-text>
-        <p v-for="p in $t('learnmore.description', { brand: links.brand_text }).split('\n')">{{ p }}</p>
+        <p v-for="p in $t('learnmore.description', { brand }).split('\n')">{{ p }}</p>
         <v-row>
           <v-col
             cols="12"
@@ -41,7 +41,7 @@
               </li>
               <li>
                 <a :href="links.townhalls">
-                  {{ $t('learnmore.townhalls', { brand: links.brand_text }) }}
+                  {{ $t('learnmore.townhalls', { brand }) }}
                 </a>
               </li>
             </ul>
@@ -81,19 +81,15 @@
 </template>
 
 <script>
-import config from '../config.json';
+import i18nMixin from './mixins/i18n';
 
 export default {
+  mixins: [i18nMixin],
+
   data() {
     return {
       dialog: false
     };
-  },
-
-  computed: {
-    links() {
-      return config[this.$i18n.locale] || config.en;
-    }
   }
 };
 </script>

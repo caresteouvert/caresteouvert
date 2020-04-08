@@ -7,7 +7,7 @@
     >
       <v-card-title class="pl-1 pt-5 pb-5 justify-center">
         <img
-          :alt="links.brand_text"
+          :alt="brand"
           :src="logo"
           class="px-3 logo"
         />
@@ -54,28 +54,20 @@
 </template>
 
 <script>
-import config from '../config.json';
-import caresteouvert from '../images/caresteouvert.svg';
 import SidebarListItem from './sidebar_list_item';
 import ChangeLanguage from './change_language';
 import LearnMore from './learn_more';
+import i18nMixin from './mixins/i18n';
 
 export default {
   components: { LearnMore, ChangeLanguage, SidebarListItem },
+
+  mixins: [i18nMixin],
 
   data() {
     return {
       alert: localStorage.getItem('showAlert') === 'false' ? false : true
     };
-  },
-
-  computed: {
-    links() {
-      return config[this.$i18n.locale] || config.en;
-    },
-    logo() {
-      return { caresteouvert: caresteouvert }[this.links.brand];
-    }
   },
 
   watch: {
