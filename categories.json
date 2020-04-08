@@ -168,31 +168,25 @@
         "restaurant": {
           "name": "Restaurant",
           "osm_tags": [
-            { "amenity": "restaurant", "delivery": "yes|only" },
-            { "amenity": "restaurant", "takeaway": "yes|only" },
-            { "amenity": "restaurant", "delivery:covid19": "yes|only" },
-            { "amenity": "restaurant", "takeaway:covid19": "yes|only" }
+            { "amenity": "restaurant" }
           ],
+          "osm_filter_tags": [ { "delivery": "yes|only" }, { "takeaway": "yes|only" }, { "delivery:covid19": "yes|only" }, { "takeaway:covid19": "yes|only" } ],
           "areas": "all"
         },
         "fast_food": {
           "name": "Fast food",
           "osm_tags": [
-            { "amenity": "fast_food", "delivery": "yes|only" },
-            { "amenity": "fast_food", "takeaway": "yes|only" },
-            { "amenity": "fast_food", "delivery:covid19": "yes|only" },
-            { "amenity": "fast_food", "takeaway:covid19": "yes|only" }
+            { "amenity": "fast_food" }
           ],
+          "osm_filter_tags": [ { "delivery": "yes|only" }, { "takeaway": "yes|only" }, { "delivery:covid19": "yes|only" }, { "takeaway:covid19": "yes|only" } ],
           "areas": "all"
         },
         "ice_cream": {
           "name": "Ice cream",
           "osm_tags": [
-            { "amenity": "ice_cream", "delivery": "yes|only" },
-            { "amenity": "ice_cream", "takeaway": "yes|only" },
-            { "amenity": "ice_cream", "delivery:covid19": "yes|only" },
-            { "amenity": "ice_cream", "takeaway:covid19": "yes|only" }
+            { "amenity": "ice_cream" }
           ],
+          "osm_filter_tags": [ { "delivery": "yes|only" }, { "takeaway": "yes|only" }, { "delivery:covid19": "yes|only" }, { "takeaway:covid19": "yes|only" } ],
           "areas": "all"
         }
       }

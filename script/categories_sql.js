@@ -23,7 +23,10 @@ function tagsPerCategoryToSql(tpc) {
 			return Object.entries(kv).map(kv => {
 				const [ k, v ] = kv;
 				const values = v.split("|");
-				const rightpart = values.length === 1 ? `= '${values[0]}'` : `IN (${values.map(v => `'${v}'`).join(", ")})`;
+				const rightpart =
+					values.length === 1 ?
+					(values[0] === "*" ? `!= ''` : `= '${values[0]}'`)
+					: `IN (${values.map(v => `'${v}'`).join(", ")})`;
 				return `tags->'${k}' ${rightpart}`;
 			})
 			.join(" AND ");
@@ -51,7 +54,21 @@ const tagsPerCategory = {};
 Object.entries(catg.categories).forEach(e => {
 	const [ catId, cat ] = e;
 	const singleTags = {};
-	tagsPerCategory[catId] = Object.values(cat.subcategories).map(subcat => subcat.osm_tags).flat();
+	tagsPerCategory[catId] = Object.values(cat.subcategories).map(subcat => {
+		if(subcat.osm_filter_tags) {
+			const result = [];
+			subcat.osm_tags.forEach(tags => {
+				result.push(Object.assign({}, tags, { "opening_hours:covid19": "*" }));
+				subcat.osm_filter_tags.forEach(ftags => {
+					result.push(Object.assign({}, tags, ftags));
+				});
+			});
+			return result;
+		}
+		else {
+			return subcat.osm_tags;
+		}
+	}).flat();
 
 	// Merge single tags
 	tagsPerCategory[catId].forEach(kv => {
