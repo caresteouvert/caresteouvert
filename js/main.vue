@@ -42,6 +42,7 @@
             v-if="mapZoom < minZoomPoi"
             color="primary"
             class="zoom-chip mb-6"
+            @click="mapZoom = minZoomPoi"
           >
             {{ $t('zoomtosee') }}
           </v-chip>
