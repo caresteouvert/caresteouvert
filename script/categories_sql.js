@@ -22,12 +22,19 @@ function tagsPerCategoryToSql(tpc) {
 		const sqlCond = tags.map(kv => {
 			return Object.entries(kv).map(kv => {
 				const [ k, v ] = kv;
-				const values = v.split("|");
-				const rightpart =
-					values.length === 1 ?
-					(values[0] === "*" ? `!= ''` : `= '${values[0]}'`)
-					: `IN (${values.map(v => `'${v}'`).join(", ")})`;
-				return `tags->'${k}' ${rightpart}`;
+
+				if(k === "areas") {
+					const rightpart = v.length === 1 ? `= '${v[0]}'` : `IN (${v.map(v1 => `'${v1}'`).join(", ")})`;
+					return `area ${rightpart}`;
+				}
+				else {
+					const values = v.split("|");
+					const rightpart =
+						values.length === 1 ?
+						(values[0] === "*" ? `!= ''` : `= '${values[0]}'`)
+						: `IN (${values.map(v => `'${v}'`).join(", ")})`;
+					return `tags->'${k}' ${rightpart}`;
+				}
 			})
 			.join(" AND ");
 		});
@@ -55,19 +62,25 @@ Object.entries(catg.categories).forEach(e => {
 	const [ catId, cat ] = e;
 	const singleTags = {};
 	tagsPerCategory[catId] = Object.values(cat.subcategories).map(subcat => {
+		let result;
 		if(subcat.osm_filter_tags) {
-			const result = [];
+			result = [];
 			subcat.osm_tags.forEach(tags => {
 				result.push(Object.assign({}, tags, { "opening_hours:covid19": "*" }));
 				subcat.osm_filter_tags.forEach(ftags => {
 					result.push(Object.assign({}, tags, ftags));
 				});
 			});
-			return result;
 		}
 		else {
-			return subcat.osm_tags;
+			result = subcat.osm_tags;
 		}
+
+		if(subcat.areas && subcat.areas !== "all") {
+			result = result.map(obj => Object.assign({}, obj, { areas: subcat.areas }));
+		}
+
+		return result;
 	}).flat();
 
 	// Merge single tags
@@ -89,7 +102,7 @@ Object.entries(catg.categories).forEach(e => {
 	});
 });
 
-const catfct = `CREATE OR REPLACE FUNCTION get_category(tags HSTORE) RETURNS VARCHAR AS $$
+const catfct = `CREATE OR REPLACE FUNCTION get_category(tags HSTORE, area VARCHAR) RETURNS VARCHAR AS $$
 BEGIN
 	${tagsPerCategoryToSql(tagsPerCategory)}
 	ELSIF tags->'opening_hours:covid19' != '' THEN
@@ -111,7 +124,7 @@ Object.values(catg.categories).forEach(cat => {
 	});
 });
 
-const subcatfct = `CREATE OR REPLACE FUNCTION get_subcategory(tags HSTORE) RETURNS VARCHAR AS $$
+const subcatfct = `CREATE OR REPLACE FUNCTION get_subcategory(tags HSTORE, area VARCHAR) RETURNS VARCHAR AS $$
 BEGIN
 	${tagsPerCategoryToSql(tagsPerSubcategory)}
 	ELSE

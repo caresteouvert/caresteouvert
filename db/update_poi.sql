@@ -47,16 +47,20 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+-- Clean-up sub_country values
+CREATE OR REPLACE FUNCTION clean_sub_country(val VARCHAR) RETURNS VARCHAR AS $$
+BEGIN
+	RETURN CASE WHEN val = '<nil>' THEN NULL ELSE val END;
+END;
+$$ LANGUAGE plpgsql;
+
 
 -- Deprecated function to get normalized category label
 DROP INDEX IF EXISTS idx_imposm_osm_point_search;
 DROP INDEX IF EXISTS idx_imposm_osm_polygon_search;
 DROP FUNCTION IF EXISTS normcat(amenity VARCHAR, shop VARCHAR, craft VARCHAR, office VARCHAR, tobacco VARCHAR);
-
-
--- Indexes on filter for imposm tables
-CREATE INDEX IF NOT EXISTS idx_imposm_osm_point_search_v2 ON imposm_osm_point(("opening_hours:covid19" != '' OR get_category(tags) != 'other'));
-CREATE INDEX IF NOT EXISTS idx_imposm_osm_polygon_search_v2 ON imposm_osm_polygon(("opening_hours:covid19" != '' OR get_category(tags) != 'other'));
+DROP INDEX IF EXISTS idx_imposm_osm_point_search_v2;
+DROP INDEX IF EXISTS idx_imposm_osm_polygon_search_v2;
 
 
 -- Next poi_osm table
@@ -87,8 +91,8 @@ SELECT
 	concat('n', osm_id),
 	way,
 	name,
-	get_subcategory(tags),
-	get_category(tags),
+	get_subcategory(tags, COALESCE(clean_sub_country(sub_country), country_iso2)),
+	get_category(tags, COALESCE(clean_sub_country(sub_country), country_iso2)),
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
@@ -100,20 +104,20 @@ SELECT
 		ELSE 'unknown'
 	END,
 	country_iso2,
-	sub_country,
+	clean_sub_country(sub_country),
 	hstore_to_jsonb(tags)
 FROM imposm_osm_point
 WHERE
 	-- The line below is automatically edited using categories.json
 	-- Do not edit directly, run "yarn run categories" instead
-	country_iso2 IN ('DE', 'FR', 'ES', 'AD') AND ("opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fast_food', 'fuel', 'ice_cream', 'marketplace', 'pharmacy', 'police', 'post_office', 'restaurant', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'chocolate', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'garden_centre', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance')) --CATEGORIES
+	country_iso2 IN ('DE', 'FR', 'ES', 'AD') AND ("opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fast_food', 'fuel', 'ice_cream', 'marketplace', 'pharmacy', 'police', 'post_office', 'restaurant', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'chemist', 'chocolate', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'garden_centre', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance')) --CATEGORIES
 UNION ALL
 SELECT
 	CASE WHEN osm_id < 0 THEN concat('r', -osm_id) ELSE concat('w', osm_id) END,
 	ST_Centroid(way),
 	name,
-	get_subcategory(tags),
-	get_category(tags),
+	get_subcategory(tags, COALESCE(clean_sub_country(sub_country), country_iso2)),
+	get_category(tags, COALESCE(clean_sub_country(sub_country), country_iso2)),
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
@@ -125,13 +129,13 @@ SELECT
 		ELSE 'unknown'
 	END,
 	country_iso2,
-	sub_country,
+	clean_sub_country(sub_country),
 	hstore_to_jsonb(tags)
 FROM imposm_osm_polygon
 WHERE
 	-- The line below is automatically edited using categories.json
 	-- Do not edit directly, run "yarn run categories" instead
-	country_iso2 IN ('DE', 'FR', 'ES', 'AD') AND ("opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fast_food', 'fuel', 'ice_cream', 'marketplace', 'pharmacy', 'police', 'post_office', 'restaurant', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'chocolate', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'garden_centre', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance')) --CATEGORIES
+	country_iso2 IN ('DE', 'FR', 'ES', 'AD') AND ("opening_hours:covid19" != '' OR "amenity" IN ('bank', 'car_rental', 'fast_food', 'fuel', 'ice_cream', 'marketplace', 'pharmacy', 'police', 'post_office', 'restaurant', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'car_parts', 'car_repair', 'cheese', 'chemist', 'chocolate', 'convenience', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'farm', 'frozen_food', 'funeral_directors', 'garden_centre', 'gas', 'greengrocer', 'hardware', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pastry', 'pet', 'seafood', 'stationery', 'supermarket', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance')) --CATEGORIES
 ;
 
 -- Remove edge cases needing advanced filtering like vending machines
