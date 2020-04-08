@@ -73,6 +73,7 @@
     "cancel": "Abbrechen"
   },
   "details": {
+    "signal_warning": "Du warst gerade dabei, eine Änderung zu melden. Möchtest du deine Eingaben verwerfen?",
     "signal": "Änderung melden",
     "signal_done": "Deine Änderungsmeldung wurde erfasst. Vielen Dank!\n\nBitte habe etwas Geduld, es kann bis zu einer Stunde dauern, bis deine Änderung erscheint.",
     "containment_opening_hours": "Reguläre Öffnungszeiten",
