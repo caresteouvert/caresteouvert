@@ -36,8 +36,9 @@
     </v-tooltip>
 
     <geocoder
-      v-if="geocoder"
+      v-show="geocoder"
       @select="onGeocoderSelect"
+      @blur="onGeocoderBlur"
     />
   </v-toolbar>
 </template>
@@ -70,6 +71,10 @@ export default {
     onGeocoderSelect(bbox) {
       this.geocoder = !this.isMobile;
       this.$emit('onGeocode', bbox);
+    },
+
+    onGeocoderBlur() {
+      this.geocoder = !this.isMobile;
     }
   }
 }

@@ -12,6 +12,7 @@
     no-filter
     background-color="white"
     prepend-inner-icon="osm-magnify"
+    @blur="$emit('blur')"
   >
     <template v-slot:item="{ item }">
       <v-list-item-content>
