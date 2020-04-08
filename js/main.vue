@@ -231,7 +231,7 @@ export default {
       fetch(`${config.apiUrl}/country?lat=${lat}&lon=${lng}`)
         .then(res => res.text())
         .then((country) => {
-          this.categories = Object.keys(categoriesForCountry(categories, country.split('-')[0]));
+          this.categories = Object.keys(categoriesForCountry(categories, country.split('-')[0])).concat([ "other" ]);
         });
     },
 
