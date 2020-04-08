@@ -146,9 +146,7 @@
               "vending": "bread"
             }
           ],
-          "areas": [
-            "FR"
-          ]
+          "areas": "all"
         }
       }
     },
@@ -354,6 +352,32 @@
             }
           ],
           "areas": "all"
+        },
+        "chemist": {
+          "name": "Chemist",
+          "osm_tags": [
+            {
+              "shop": "chemist"
+            }
+          ],
+          "areas": [
+            "FR"
+          ]
+        }
+      }
+    },
+    "chemist": {
+      "name": "Chemist",
+      "subcategories": {
+        "chemist": {
+          "osm_tags": [
+            {
+              "shop": "chemist"
+            }
+          ],
+          "areas": [
+            "DE"
+          ]
         }
       }
     },
