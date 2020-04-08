@@ -24,8 +24,8 @@
     <img
       v-if="!geocoder"
       :alt="$t('subtitle-dense')"
+      :src="logoMobile"
       class="img-header-mobile"
-      src="../images/logo_header.png"
     />
     <v-spacer v-if="!geocoder"></v-spacer>
     <v-tooltip
@@ -54,11 +54,14 @@
 
 <script>
 import Geocoder from './geocoder';
+import i18nMixin from './mixins/i18n';
 
 export default {
   components: {
     Geocoder
   },
+
+  mixins: [i18nMixin],
 
   data() {
     return {
