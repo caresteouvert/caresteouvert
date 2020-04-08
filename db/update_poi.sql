@@ -204,11 +204,11 @@ FROM poi_osm;
 
 
 -- Analysis requests
--- SELECT SUM((status != 'unknown')::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm;
--- SELECT SUM((status NOT IN ('unknown', 'partial'))::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm;
+-- SELECT country, SUM((status != 'unknown')::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm GROUP BY country;
+-- SELECT country, SUM((status NOT IN ('unknown', 'partial'))::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm GROUP BY country;
 
 -- SELECT status, COUNT(*) FROM poi_osm GROUP BY status ORDER BY COUNT(*) DESC;
 -- SELECT normalized_cat, COUNT(*) FROM poi_osm GROUP BY normalized_cat ORDER BY COUNT(*) DESC;
 
--- SELECT brand, COUNT(*) FROM poi_osm WHERE status = 'unknown' GROUP BY brand HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;
--- SELECT cat, COUNT(*) FROM poi_osm WHERE status = 'unknown' GROUP BY cat HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;
+-- SELECT country, brand, COUNT(*) FROM poi_osm WHERE status = 'unknown' GROUP BY country, brand HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;
+-- SELECT country, cat, COUNT(*) FROM poi_osm WHERE status = 'unknown' GROUP BY country, cat HAVING COUNT(*) > 20 ORDER BY COUNT(*) DESC;
