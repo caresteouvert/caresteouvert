@@ -5,7 +5,7 @@
 --
 
 -- Function for getting normalized category from OSM tags
-CREATE OR REPLACE FUNCTION get_category(tags HSTORE) RETURNS VARCHAR AS $$
+CREATE OR REPLACE FUNCTION get_category(tags HSTORE, area VARCHAR) RETURNS VARCHAR AS $$
 BEGIN
 	IF tags->'amenity' = 'police' THEN
 		RETURN 'police';
@@ -21,9 +21,9 @@ BEGIN
 		RETURN 'eat';
 	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'cigarettes') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'e-cigarettes') OR (tags->'shop' IN ('tobacco', 'e-cigarette')) OR (tags->'tobacco' IN ('yes', 'only')) THEN
 		RETURN 'tobacco';
-	ELSIF (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'electronics', 'dry_cleaning', 'laundry', 'stationery', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'agrarian', 'garden_centre', 'optician', 'funeral_directors', 'chemist')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') THEN
+	ELSIF (tags->'shop' = 'stationery' AND area = 'FR') OR (tags->'shop' = 'agrarian' AND area = 'FR') OR (tags->'shop' = 'chemist' AND area = 'FR') OR (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'electronics', 'dry_cleaning', 'laundry', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'garden_centre', 'optician', 'funeral_directors')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') THEN
 		RETURN 'shop';
-	ELSIF tags->'shop' = 'chemist' THEN
+	ELSIF tags->'shop' = 'chemist' AND area = 'DE' THEN
 		RETURN 'chemist';
 	ELSIF (tags->'amenity' = 'bank') OR (tags->'office' IN ('financial', 'insurance')) OR (tags->'shop' = 'money_lender') THEN
 		RETURN 'finance';
@@ -39,7 +39,7 @@ $$ LANGUAGE plpgsql IMMUTABLE;
 
 
 -- Function for getting normalized subcategory from OSM tags
-CREATE OR REPLACE FUNCTION get_subcategory(tags HSTORE) RETURNS VARCHAR AS $$
+CREATE OR REPLACE FUNCTION get_subcategory(tags HSTORE, area VARCHAR) RETURNS VARCHAR AS $$
 BEGIN
 	IF tags->'amenity' = 'police' THEN
 		RETURN 'police';

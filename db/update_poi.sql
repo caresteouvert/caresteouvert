@@ -47,16 +47,20 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+-- Clean-up sub_country values
+CREATE OR REPLACE FUNCTION clean_sub_country(val VARCHAR) RETURNS VARCHAR AS $$
+BEGIN
+	RETURN CASE WHEN val = '<nil>' THEN NULL ELSE val END;
+END;
+$$ LANGUAGE plpgsql;
+
 
 -- Deprecated function to get normalized category label
 DROP INDEX IF EXISTS idx_imposm_osm_point_search;
 DROP INDEX IF EXISTS idx_imposm_osm_polygon_search;
 DROP FUNCTION IF EXISTS normcat(amenity VARCHAR, shop VARCHAR, craft VARCHAR, office VARCHAR, tobacco VARCHAR);
-
-
--- Indexes on filter for imposm tables
-CREATE INDEX IF NOT EXISTS idx_imposm_osm_point_search_v2 ON imposm_osm_point(("opening_hours:covid19" != '' OR get_category(tags) != 'other'));
-CREATE INDEX IF NOT EXISTS idx_imposm_osm_polygon_search_v2 ON imposm_osm_polygon(("opening_hours:covid19" != '' OR get_category(tags) != 'other'));
+DROP INDEX IF EXISTS idx_imposm_osm_point_search_v2;
+DROP INDEX IF EXISTS idx_imposm_osm_polygon_search_v2;
 
 
 -- Next poi_osm table
@@ -87,8 +91,8 @@ SELECT
 	concat('n', osm_id),
 	way,
 	name,
-	get_subcategory(tags),
-	get_category(tags),
+	get_subcategory(tags, COALESCE(clean_sub_country(sub_country), country_iso2)),
+	get_category(tags, COALESCE(clean_sub_country(sub_country), country_iso2)),
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
@@ -100,7 +104,7 @@ SELECT
 		ELSE 'unknown'
 	END,
 	country_iso2,
-	sub_country,
+	clean_sub_country(sub_country),
 	hstore_to_jsonb(tags)
 FROM imposm_osm_point
 WHERE
@@ -112,8 +116,8 @@ SELECT
 	CASE WHEN osm_id < 0 THEN concat('r', -osm_id) ELSE concat('w', osm_id) END,
 	ST_Centroid(way),
 	name,
-	get_subcategory(tags),
-	get_category(tags),
+	get_subcategory(tags, COALESCE(clean_sub_country(sub_country), country_iso2)),
+	get_category(tags, COALESCE(clean_sub_country(sub_country), country_iso2)),
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
@@ -125,7 +129,7 @@ SELECT
 		ELSE 'unknown'
 	END,
 	country_iso2,
-	sub_country,
+	clean_sub_country(sub_country),
 	hstore_to_jsonb(tags)
 FROM imposm_osm_polygon
 WHERE
