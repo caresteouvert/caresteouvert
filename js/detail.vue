@@ -175,6 +175,14 @@ export default {
     window.removeEventListener('beforeunload', this.beforeUnloadListener);
   },
 
+  beforeRouteUpdate(to, from, next) {
+    let result = true;
+    if (to.params.id !== from.params.id && this.$refs.state && this.$refs.state.contribute) {
+      result = window.confirm(this.$t('details.signal_warning'));
+    }
+    next(result);
+  },
+
   beforeRouteLeave(to, from, next) {
     let result = true;
     if (this.$refs.state && this.$refs.state.contribute) {
