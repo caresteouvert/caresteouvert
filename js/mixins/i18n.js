@@ -1,5 +1,8 @@
 import config from '../../config.json';
 import caresteouvert from '../../images/caresteouvert.svg';
+import bleibtoffen from '../../images/bleibtoffen.svg';
+import caresteouvertMobile from '../../images/logo_header.png';
+import bleibtoffenMobile from '../../images/bleibtoffen-mobile.svg';
 
 export default {
   computed: {
@@ -8,7 +11,11 @@ export default {
     },
 
     logo() {
-      return { caresteouvert: caresteouvert }[this.links.brand];
+      return { caresteouvert, bleibtoffen }[this.links.brand];
+    },
+
+    logoMobile() {
+      return { caresteouvert: caresteouvertMobile, bleibtoffen: bleibtoffenMobile }[this.links.brand];
     },
 
     brand() {

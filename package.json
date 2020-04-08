@@ -22,7 +22,7 @@
       "^.+\\.vue$": "vue-jest"
     },
     "moduleNameMapper": {
-      "\\.(svg)$": "<rootDir>/tests/file_mock.js"
+      "\\.(svg|png)$": "<rootDir>/tests/file_mock.js"
     }
   },
   "htmlnano": {

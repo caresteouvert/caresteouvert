@@ -73,6 +73,7 @@
     "cancel": "Cancelar"
   },
   "details": {
+    "signal_warning": "Estabas escribiendo un informe. No se guardará. ¿Quieres continuar?",
     "signal": "Avisar de un cambio",
     "signal_done": "Su informe ha sido registrado. ¡Gracias! Tenga paciencia, puede llevar un tiempo procesarlo.",
     "containment_opening_hours": "Horario de apertura en periodo normal",
