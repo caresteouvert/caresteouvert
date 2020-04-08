@@ -4,7 +4,7 @@
   "title": "Bleibt offen",
   "subtitle": "Alle Geschäfte, die weiterhin geöffnet sind.",
   "subtitle-dense": "Apotheke, Bäcker & Co.",
-  "search": "Suche",
+  "search": "Suchbegriff eingeben",
   "menu": "Menü",
   "missing_shop": "Fehlendes Geschäft melden",
   "change_lang": "Sprache ändern",
@@ -47,7 +47,7 @@
     "step2": {
       "title": "Gelten abweichende Öffnungszeiten?",
       "same_hours": "Nein, gleiche Zeiten",
-      "same_hours_without_lockdown": "Es gelten die regulären Öffnungszeiten.",
+      "same_hours_without_lockdown": "Das sind auch die regulären Öffnungszeiten.",
       "dont_know": "Weiß ich nicht",
       "continue": "Weiter"
     },
