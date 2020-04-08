@@ -47,8 +47,8 @@
             {{ $t('zoomtosee') }}
           </v-chip>
         </v-slide-y-reverse-transition>
-        <rgpd-banner />
       </v-content>
+      <rgpd-banner />
     </div>
     <router-view />
   </div>
