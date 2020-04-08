@@ -1,10 +1,14 @@
 <template>
   <v-toolbar
-    dense
+    :dense="!isMobile || !geocoder"
+    :height="isMobile && geocoder ? '70px' : undefined"
     class="search ml-sm-5 mt-sm-5"
     v-resize="resize"
   >
-    <v-tooltip bottom>
+    <v-tooltip
+      v-if="!isMobile || !geocoder"
+      bottom
+    >
       <template v-slot:activator="{ on }">
         <v-btn
           icon
@@ -17,7 +21,12 @@
       <span>{{ $t('menu') }}</span>
     </v-tooltip>
 
-    <img v-if="!geocoder" class="img-header-mobile" src="../images/logo_header.png" :alt="$t('subtitle-dense')" />
+    <img
+      v-if="!geocoder"
+      :alt="$t('subtitle-dense')"
+      class="img-header-mobile"
+      src="../images/logo_header.png"
+    />
     <v-spacer v-if="!geocoder"></v-spacer>
     <v-tooltip
       v-if="!geocoder"
@@ -60,12 +69,12 @@ export default {
 
   mounted() {
     this.resize();
-    this.geocoder = !this.isMobile;
   },
 
   methods: {
     resize() {
       this.isMobile = window.innerWidth < 800;
+      this.geocoder = !this.isMobile;
     },
 
     onGeocoderSelect(bbox) {
