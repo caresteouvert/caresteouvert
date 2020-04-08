@@ -20,6 +20,9 @@
     "transform": {
       "^.+\\.js$": "babel-jest",
       "^.+\\.vue$": "vue-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(svg)$": "<rootDir>/tests/file_mock.js"
     }
   },
   "htmlnano": {
