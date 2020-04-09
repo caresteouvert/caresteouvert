@@ -55,6 +55,7 @@ import VueLinkify from 'vue-linkify'
 
 import App from './app.vue';
 import OsmMain from './main.vue';
+import OsmDetail from './detail.vue';
 
 import messages from '../locales/*.json';
 
@@ -148,7 +149,7 @@ const routes = [
       {
         name: 'place',
         path: 'place/:id',
-        component: () => import('./detail'),
+        component: OsmDetail,
         props: (route) => {
           return {
             featuresAndLocation: route.params.featuresAndLocation,
