@@ -13,7 +13,7 @@ BEGIN
 		RETURN 'pharmacy';
 	ELSIF tags->'amenity' = 'post_office' THEN
 		RETURN 'post_office';
-	ELSIF (tags->'shop' IN ('frozen_food', 'supermarket', 'butcher', 'cheese', 'convenience', 'seafood', 'greengrocer', 'deli', 'farm', 'chocolate', 'alcohol', 'beverages', 'wine')) OR (tags->'amenity' = 'marketplace') THEN
+	ELSIF (tags->'shop' IN ('frozen_food', 'supermarket', 'butcher', 'cheese', 'convenience', 'seafood', 'greengrocer', 'deli', 'farm', 'chocolate', 'tea', 'coffee', 'dairy', 'spices', 'honey', 'health_food', 'alcohol', 'beverages', 'wine')) OR (tags->'amenity' = 'marketplace') THEN
 		RETURN 'food';
 	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bread') OR (tags->'shop' IN ('bakery', 'pastry')) THEN
 		RETURN 'bakery';
@@ -21,7 +21,7 @@ BEGIN
 		RETURN 'eat';
 	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'cigarettes') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'e-cigarettes') OR (tags->'shop' IN ('tobacco', 'e-cigarette')) OR (tags->'tobacco' IN ('yes', 'only')) THEN
 		RETURN 'tobacco';
-	ELSIF (tags->'shop' = 'stationery' AND area = 'FR') OR (tags->'shop' = 'agrarian' AND area = 'FR') OR (tags->'shop' = 'chemist' AND area = 'FR') OR (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'electronics', 'dry_cleaning', 'laundry', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'garden_centre', 'optician', 'funeral_directors')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') THEN
+	ELSIF (tags->'shop' = 'stationery' AND area = 'FR') OR (tags->'shop' = 'agrarian' AND area = 'FR') OR (tags->'shop' = 'chemist' AND area = 'FR') OR (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'computer', 'electronics', 'dry_cleaning', 'laundry', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'garden_centre', 'optician', 'funeral_directors')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') THEN
 		RETURN 'shop';
 	ELSIF tags->'shop' = 'chemist' AND area IN ('DE', 'AT', 'CH') THEN
 		RETURN 'chemist';
@@ -59,7 +59,7 @@ BEGIN
 		RETURN 'seafood';
 	ELSIF tags->'shop' = 'greengrocer' THEN
 		RETURN 'greengrocer';
-	ELSIF tags->'shop' IN ('deli', 'farm', 'chocolate') THEN
+	ELSIF tags->'shop' IN ('deli', 'farm', 'chocolate', 'tea', 'coffee', 'dairy', 'spices', 'honey', 'health_food') THEN
 		RETURN 'grocery';
 	ELSIF tags->'shop' IN ('alcohol', 'beverages', 'wine') THEN
 		RETURN 'alcohol';
@@ -83,6 +83,8 @@ BEGIN
 		RETURN 'hardware';
 	ELSIF tags->'shop' = 'mobile_phone' THEN
 		RETURN 'mobile_phone';
+	ELSIF tags->'shop' = 'computer' THEN
+		RETURN 'computer';
 	ELSIF (tags->'shop' = 'electronics') OR (tags->'craft' = 'electronics_repair') THEN
 		RETURN 'electronics';
 	ELSIF tags->'shop' IN ('dry_cleaning', 'laundry') THEN

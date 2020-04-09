@@ -103,7 +103,7 @@ export default {
     this.sidebar = !this.isMobile;
 
     const { filter, location } = decode(this.featuresAndLocation);
-    this.filter = this.categories.includes(filter) ? filter : '';
+    this.filter = filter;
 
     Promise.all([
       this.loadInitialLocation(location),
@@ -232,6 +232,7 @@ export default {
         .then(res => res.text())
         .then((country) => {
           this.categories = Object.keys(categoriesForCountry(categories, country.split('-')[0])).concat([ "other" ]);
+          this.filter = this.categories.includes(this.filter) ? filter : '';
         });
     },
 

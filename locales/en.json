@@ -145,6 +145,7 @@
     "shop": "Shops",
     "hardware": "Hardware",
     "mobile_phone": "Mobile phone",
+    "computer": "Computer",
     "electronics": "Electronics",
     "laundry": "Laundry",
     "stationery": "Stationery",
@@ -164,7 +165,6 @@
     "fuel": "Fuel station",
     "car_rental": "Car rental",
     "bicycle": "Bicycle shop",
-    "car": "Garage",
-    "chemist": "Chemist"
+    "car": "Garage"
   }
 }

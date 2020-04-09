@@ -36,7 +36,7 @@
         <v-btn
           icon
           v-on="on"
-          @click="geocoder = !geocoder"
+          @click="geocoder = true"
         >
           <v-icon>osm-magnify</v-icon>
         </v-btn>
@@ -72,12 +72,12 @@ export default {
 
   mounted() {
     this.resize();
+    this.geocoder = !this.isMobile;
   },
 
   methods: {
     resize() {
       this.isMobile = window.innerWidth < 800;
-      this.geocoder = !this.isMobile;
     },
 
     onGeocoderSelect(bbox) {
@@ -86,7 +86,7 @@ export default {
     },
 
     onGeocoderBlur() {
-      //this.geocoder = !this.isMobile;
+      this.geocoder = !this.isMobile;
     }
   }
 }
