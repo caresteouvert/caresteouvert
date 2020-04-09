@@ -1,13 +1,14 @@
 {
   "lang": "Galego",
-  "covid19-alert": "Segue as recomendacións do goberno. A responsabilidade é TÚA.",
+  "covid19-alert": "Sigue as recomendacións do goberno. A responsabilidade é TÚA.",
   "title": "Mantense aberto",
   "subtitle": "Lugares que se manteñen abertos durante o confinamento",
   "subtitle-dense": "Lugares abertos durante o confinamento",
-  "search": "Procurar",
+  "search": "Escribe a túa procura",
   "menu": "Menú",
   "missing_shop": "Informar dunha tenda que falla",
   "change_lang": "Mudar lingua",
+  "zoomtosee": " Achegar para amosar os lugares abertos",
   "learnmore": {
     "about": "Sobre",
     "contribute": "Contribuír",
@@ -17,7 +18,7 @@
     "press": "Prensa",
     "disclaimer": "Responsabilidade legal",
     "blog": "Blogue",
-    "townhalls": "Concellos, emprega «{brand}»!"
+    "townhalls": "Concellos que empregan «{brand}»!"
   },
   "rgpd": {
     "consent": "Nestes tempos de confinamento, aceptarías as cookies no teu computador para recompilar as nosas estatísticas?",
@@ -72,6 +73,7 @@
     "cancel": "Desbotar"
   },
   "details": {
+    "signal_warning": "Estabas a escribir un informe. Non se gardará. Desexas continuar?",
     "signal": "Informar dun cambio",
     "signal_done": "O teu informe foi rexistrado. Grazas! Ten cachaza, pode levar un tempo procesalo.",
     "containment_opening_hours": "Horario de apertura fóra do período de confinamento",
@@ -120,8 +122,8 @@
   "categories": {
     "other": "Outros lugares",
     "police": "Policía",
-    "pharmacy": "Farmacia",
-    "post_office": "Oficina de correos",
+    "pharmacy": "Farmacias",
+    "post_office": "Oficinas de correos",
     "food": "Alimentación",
     "supermarket": "Supermercado",
     "butcher": "Carnizaría",
@@ -132,7 +134,7 @@
     "grocery": "Ultramarinos",
     "alcohol": "Licoraría",
     "marketplace": "Mercado",
-    "bakery": "Panadaría",
+    "bakery": "Panadarías",
     "eat": "Restaurantes e para levar",
     "vending_machine": "Máquina expendedora",
     "restaurant": "Restaurante",
@@ -143,6 +145,7 @@
     "shop": "Tendas",
     "hardware": "Ferraxaría",
     "mobile_phone": "Telefonía móbil",
+    "computer": "Ordenador",
     "electronics": "Electrónica",
     "laundry": "Lavandaría",
     "stationery": "Papelaría",
@@ -153,6 +156,7 @@
     "garden_centre": "Centro de xardinaría",
     "optician": "Óptica",
     "employment_agency": "Axencia de traballo",
+    "funeral_directors": "Tanatorios ou funerarias",
     "finance": "Servizos financeiros",
     "bank": "Banco",
     "moneylender": "Prestamista",
@@ -161,7 +165,6 @@
     "fuel": "Gasolineira",
     "car_rental": "Alugueiro de coches",
     "bicycle": "Tenda de bicicletas",
-    "car": "Garaxe",
-    "funeral_directors": "Tanatorio ou funeraria"
+    "car": "Garaxe"
   }
 }
