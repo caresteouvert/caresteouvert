@@ -108,9 +108,10 @@ export default {
     Promise.all([
       this.loadInitialLocation(location),
       this.loadAndOverrideMapStyle()
-    ]).then(() => { this.loadMap = true; });
-
-    this.getCurrentCountry();
+    ]).then(() => {
+      this.loadMap = true;
+      this.getCurrentCountry();
+    });
   },
 
   watch: {
