@@ -86,7 +86,7 @@ export default {
     },
 
     onGeocoderBlur() {
-      this.geocoder = !this.isMobile;
+      //this.geocoder = !this.isMobile;
     }
   }
 }
