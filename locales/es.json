@@ -1,8 +1,8 @@
 {
   "lang": "Español",
   "covid19-alert": "Sigue las recomendaciones del gobierno. La responsabilidad es TUYA.",
-  "title": "Permanece abierto",
-  "subtitle": "Sitios que permanecen abiertos durante el Estado de Alarma",
+  "title": "Sigue abierto",
+  "subtitle": "Sitios que siguen abiertos durante el Estado de Alarma",
   "subtitle-dense": "Sitios abiertos durante el Estado de Alarma",
   "search": "Escribe tu búsqueda",
   "menu": "Menú",
@@ -14,7 +14,7 @@
     "contribute": "Contribuir",
     "missing_shop": "Avisar de un sitio por editar",
     "description": "«{brand}» es una herramienta esencial para evitar movimientos inútiles durante el Estado de Alarma y, por lo tanto, limitar el riesgo de contagio.\nEste mapa colaborativo permite compartir fácilmente lugares abiertos o cerrados en su vecindario. Es la forma más efectiva de informar mejor a sus vecinos y habitantes de su ciudad.",
-    "title": "Aprender más",
+    "title": "Saber más",
     "press": "Prensa",
     "disclaimer": "Aviso legal",
     "blog": "Blog",
@@ -155,6 +155,7 @@
     "garden_centre": "Jardinería",
     "optician": "Óptica",
     "employment_agency": "Agencia de empleo",
+    "funeral_directors": "Funerarias",
     "finance": "Servicios financieros",
     "bank": "Bancos",
     "moneylender": "Prestamista",
@@ -164,6 +165,6 @@
     "car_rental": "Alquiler de coches",
     "bicycle": "Tienda de bicicletas",
     "car": "Garaje",
-    "funeral_directors": "Funerarias"
+    "chemist": "Droguerías"
   }
 }
