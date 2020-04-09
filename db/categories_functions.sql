@@ -23,7 +23,7 @@ BEGIN
 		RETURN 'tobacco';
 	ELSIF (tags->'shop' = 'stationery' AND area = 'FR') OR (tags->'shop' = 'agrarian' AND area = 'FR') OR (tags->'shop' = 'chemist' AND area = 'FR') OR (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'electronics', 'dry_cleaning', 'laundry', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'garden_centre', 'optician', 'funeral_directors')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') THEN
 		RETURN 'shop';
-	ELSIF tags->'shop' = 'chemist' AND area = 'DE' THEN
+	ELSIF tags->'shop' = 'chemist' AND area IN ('DE', 'AT', 'CH') THEN
 		RETURN 'chemist';
 	ELSIF (tags->'amenity' = 'bank') OR (tags->'office' IN ('financial', 'insurance')) OR (tags->'shop' = 'money_lender') THEN
 		RETURN 'finance';
