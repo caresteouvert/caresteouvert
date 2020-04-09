@@ -8,7 +8,7 @@
     @update:center="updateMapCenter"
     @update:zoom="updateMapZoom"
   >
-    <MglNavigationControl :show-compass="false" />
+    <MglNavigationControl />
     <MglGeolocateControl
       :positionOptions="{ enableHighAccuracy: true }"
     />
