@@ -107,7 +107,7 @@
           "name": "Grocery",
           "osm_tags": [
             {
-              "shop": "deli|farm|chocolate|tea|coffee|dairy|spices|honey|health_food"
+              "shop": "deli|farm|chocolate|tea|coffee|dairy|spices|honey|health_food|pasta|cannery"
             }
           ],
           "areas": "all"

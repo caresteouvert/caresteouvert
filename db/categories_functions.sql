@@ -13,7 +13,7 @@ BEGIN
 		RETURN 'pharmacy';
 	ELSIF tags->'amenity' = 'post_office' THEN
 		RETURN 'post_office';
-	ELSIF (tags->'shop' IN ('frozen_food', 'supermarket', 'butcher', 'cheese', 'convenience', 'seafood', 'greengrocer', 'deli', 'farm', 'chocolate', 'tea', 'coffee', 'dairy', 'spices', 'honey', 'health_food', 'alcohol', 'beverages', 'wine')) OR (tags->'amenity' = 'marketplace') THEN
+	ELSIF (tags->'shop' IN ('frozen_food', 'supermarket', 'butcher', 'cheese', 'convenience', 'seafood', 'greengrocer', 'deli', 'farm', 'chocolate', 'tea', 'coffee', 'dairy', 'spices', 'honey', 'health_food', 'pasta', 'cannery', 'alcohol', 'beverages', 'wine')) OR (tags->'amenity' = 'marketplace') THEN
 		RETURN 'food';
 	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bread') OR (tags->'shop' IN ('bakery', 'pastry')) THEN
 		RETURN 'bakery';
@@ -59,7 +59,7 @@ BEGIN
 		RETURN 'seafood';
 	ELSIF tags->'shop' = 'greengrocer' THEN
 		RETURN 'greengrocer';
-	ELSIF tags->'shop' IN ('deli', 'farm', 'chocolate', 'tea', 'coffee', 'dairy', 'spices', 'honey', 'health_food') THEN
+	ELSIF tags->'shop' IN ('deli', 'farm', 'chocolate', 'tea', 'coffee', 'dairy', 'spices', 'honey', 'health_food', 'pasta', 'cannery') THEN
 		RETURN 'grocery';
 	ELSIF tags->'shop' IN ('alcohol', 'beverages', 'wine') THEN
 		RETURN 'alcohol';
