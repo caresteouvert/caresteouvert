@@ -107,7 +107,7 @@
           "name": "Grocery",
           "osm_tags": [
             {
-              "shop": "deli|farm|chocolate"
+              "shop": "deli|farm|chocolate|tea|coffee|dairy|spices|honey|health_food"
             }
           ],
           "areas": "all"
@@ -242,6 +242,11 @@
               "shop": "mobile_phone"
             }
           ],
+          "areas": "all"
+        },
+        "computer": {
+          "name": "Computer",
+          "osm_tags": [ { "shop": "computer" } ],
           "areas": "all"
         },
         "electronics": {
