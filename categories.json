@@ -186,6 +186,14 @@
           ],
           "osm_filter_tags": [ { "delivery": "yes|only" }, { "takeaway": "yes|only" }, { "delivery:covid19": "yes|only" }, { "takeaway:covid19": "yes|only" } ],
           "areas": "all"
+        },
+        "cafe": {
+          "name": "Coffee shop",
+          "osm_tags": [
+            { "amenity": "cafe" }
+          ],
+          "osm_filter_tags": [ { "delivery": "yes|only" }, { "takeaway": "yes|only" }, { "delivery:covid19": "yes|only" }, { "takeaway:covid19": "yes|only" } ],
+          "areas": "all"
         }
       }
     },
