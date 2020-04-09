@@ -21,9 +21,9 @@ BEGIN
 		RETURN 'eat';
 	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'cigarettes') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'e-cigarettes') OR (tags->'shop' IN ('tobacco', 'e-cigarette')) OR (tags->'tobacco' IN ('yes', 'only')) THEN
 		RETURN 'tobacco';
-	ELSIF (tags->'shop' = 'stationery' AND area = 'FR') OR (tags->'shop' = 'agrarian' AND area = 'FR') OR (tags->'shop' = 'chemist' AND area = 'FR') OR (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'computer', 'electronics', 'dry_cleaning', 'laundry', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'garden_centre', 'optician', 'funeral_directors')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') THEN
+	ELSIF (tags->'shop' = 'stationery' AND area LIKE 'FR%') OR (tags->'shop' = 'agrarian' AND area LIKE 'FR%') OR (tags->'shop' = 'chemist' AND area LIKE 'FR%') OR (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'computer', 'electronics', 'dry_cleaning', 'laundry', 'medical_supply', 'kiosk', 'newsagent', 'pet', 'garden_centre', 'optician', 'funeral_directors')) OR (tags->'craft' IN ('electronics_repair', 'optician')) OR (tags->'office' = 'employment_agency') THEN
 		RETURN 'shop';
-	ELSIF tags->'shop' = 'chemist' AND area IN ('DE', 'AT', 'CH') THEN
+	ELSIF tags->'shop' = 'chemist' AND area SIMILAR TO '(DE|AT|CH)%' THEN
 		RETURN 'chemist';
 	ELSIF (tags->'amenity' = 'bank') OR (tags->'office' IN ('financial', 'insurance')) OR (tags->'shop' = 'money_lender') THEN
 		RETURN 'finance';

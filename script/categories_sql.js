@@ -24,7 +24,7 @@ function tagsPerCategoryToSql(tpc) {
 				const [ k, v ] = kv;
 
 				if(k === "areas") {
-					const rightpart = v.length === 1 ? `= '${v[0]}'` : `IN (${v.map(v1 => `'${v1}'`).join(", ")})`;
+					const rightpart = v.length === 1 ? `LIKE '${v[0]}%'` : `SIMILAR TO '(${v.join("|")})%'`;
 					return `area ${rightpart}`;
 				}
 				else {
