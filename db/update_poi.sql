@@ -50,7 +50,7 @@ $$ LANGUAGE plpgsql;
 -- Clean-up sub_country values
 CREATE OR REPLACE FUNCTION clean_sub_country(val VARCHAR) RETURNS VARCHAR AS $$
 BEGIN
-	RETURN CASE WHEN val = '<nil>' THEN NULL ELSE val END;
+	RETURN NULLIF(val, '<nil>');
 END;
 $$ LANGUAGE plpgsql;
 
