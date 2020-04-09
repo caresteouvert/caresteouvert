@@ -145,6 +145,7 @@
     "shop": "Geschäfte",
     "hardware": "Baumarkt",
     "mobile_phone": "Mobiltelefon",
+    "computer": "Elektronik-Fachmarkt",
     "electronics": "Elektronik",
     "laundry": "Waschsalon",
     "stationery": "Schreibwaren",
@@ -164,7 +165,6 @@
     "fuel": "Tankstelle",
     "car_rental": "Autovermietung",
     "bicycle": "Fahrradladen",
-    "car": "Autowerkstatt",
-    "chemist": "Drogeriemarkt"
+    "car": "Autowerkstatt"
   }
 }
