@@ -45,7 +45,7 @@
         <v-alert
           v-if="infos"
           v-html="infos"
-          v-linkified:options="{ className: 'alert-link' }"
+          v-linkified:options="{ className: 'alert-link', attributes: { rel: 'noopener' } }"
           :icon="false"
           type="info"
           tile

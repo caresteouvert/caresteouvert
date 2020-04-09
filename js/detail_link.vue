@@ -1,5 +1,9 @@
 <template>
-  <v-list-item :href="href">
+  <v-list-item
+    :href="href"
+    target="_blank"
+    rel="noopener"
+  >
     <v-list-item-icon><v-icon>{{ icon }}</v-icon></v-list-item-icon>
     <v-list-item-content>
       <v-list-item-title>
