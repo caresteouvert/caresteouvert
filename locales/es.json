@@ -54,10 +54,10 @@
     "step3": {
       "title": "Añadir detalles",
       "delivery": {
-        "title": "Este sitio ofrece entregas",
+        "title": "Este sitio ofrece reparto",
         "unknown": "No lo sé",
         "yes": "Sí",
-        "only": "Solo por entrega",
+        "only": "Solo por reparto",
         "no": "No"
       },
       "takeaway": {
@@ -95,8 +95,8 @@
       "closed": "Sitio cerrado durante el Estado de Alarma"
     },
     "delivery": {
-      "yes": "Servicio de entrega disponible",
-      "only": "Solo por entrega"
+      "yes": "Servicio de reparto disponible",
+      "only": "Solo por reparto"
     },
     "takeaway": {
       "yes": "Venta para llevar disponible",
@@ -157,6 +157,7 @@
     "optician": "Óptica",
     "employment_agency": "Agencia de empleo",
     "funeral_directors": "Funerarias",
+    "chemist": "Droguerías",
     "finance": "Servicios financieros",
     "bank": "Bancos",
     "moneylender": "Prestamista",
@@ -165,7 +166,6 @@
     "fuel": "Gasolinera",
     "car_rental": "Alquiler de coches",
     "bicycle": "Tienda de bicicletas",
-    "car": "Garaje",
-    "chemist": "Droguerías"
+    "car": "Garaje"
   }
 }
