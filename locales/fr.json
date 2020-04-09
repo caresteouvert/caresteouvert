@@ -13,12 +13,12 @@
     "about": "À propos",
     "contribute": "Contribuer",
     "missing_shop": "Un lieu est manquant ? Rajoutez le !",
-    "description": "« {brand} » est l’outil indispensable pour éviter les déplacements infructueux autour de chez vous durant le confinement et limiter ainsi le risque de contagion.\n\nCette carte collaborative vous permet de partager simplement les lieux ouverts ou fermés dans votre quartier. C’est la manière la plus efficace et la plus solidaire pour informer au mieux vos voisins et les habitants de votre ville.",
+    "description": "« {brand} » est l’outil indispensable pour éviter les déplacements infructueux autour de chez vous durant le confinement et limiter ainsi le risque de contagion.\nCette carte collaborative vous permet de partager simplement les lieux ouverts ou fermés dans votre quartier. C’est la manière la plus efficace et la plus solidaire pour informer au mieux vos voisins et les habitants de votre ville.",
     "title": "En savoir plus",
     "press": "Presse",
     "disclaimer": "Mentions légales",
     "blog": "Blog",
-    "townhalls": "Mairies, utilisez « {brand} »"
+    "townhalls": "« {brand} », un outil de communication pour les mairies !"
   },
   "rgpd": {
     "consent": "En ces temps de confinement, vous prendriez bien un cookie sur votre ordinateur pour nos statistiques ?",
@@ -73,7 +73,7 @@
     "cancel": "Annuler"
   },
   "details": {
-    "signal_warning": "Voulez êtes en train de faire un signalement. Il sera perdu. Voulez vous continuer ?",
+    "signal_warning": "Vous étiez en train de signaler un changement, si vous partez il ne sera pas sauvegardé. Voulez-vous vraiment quitter la page ?",
     "signal": "Signaler un changement",
     "signal_done": "Votre signalement a été enregistré. Merci ! Patientez, cela peut prendre un moment avant qu'il soit pris en compte.",
     "containment_opening_hours": "Horaires d'ouverture hors-confinement",
@@ -115,7 +115,7 @@
     "add_new_days": "Ajouter des jours d'ouverture"
   },
   "osm_link": {
-    "title": "« {brand} » utilise les données d'OpenStreetMap.",
+    "title": "« {brand} » utilise les données OpenStreetMap.",
     "view": "Voir",
     "edit": "Modifier"
   },
@@ -145,6 +145,7 @@
     "shop": "Boutiques",
     "hardware": "Bricolage",
     "mobile_phone": "Téléphonie mobile",
+    "computer": "Informatique",
     "electronics": "Matériel électronique",
     "laundry": "Laverie",
     "stationery": "Fournitures",
@@ -155,6 +156,7 @@
     "garden_centre": "Jardinerie",
     "optician": "Opticien",
     "employment_agency": "Agence pour l'emploi",
+    "funeral_directors": "Pompes funèbres",
     "finance": "Services financiers",
     "bank": "Banque & assurances",
     "moneylender": "Prêteur ",
@@ -163,7 +165,6 @@
     "fuel": "Station-service",
     "car_rental": "Location de voiture",
     "bicycle": "Magasin de vélos",
-    "car": "Garage",
-    "funeral_directors": "Pompes funèbres"
+    "car": "Garage"
   }
 }
