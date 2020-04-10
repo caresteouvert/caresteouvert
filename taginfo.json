@@ -17,11 +17,11 @@
     },
     {
       "key": "brand",
-      "description": "Used to correlate places without COVID-19 data to their brand to adopt the brand-wide lockdown status, if defined."
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
     },
     {
       "key": "brand:wikidata",
-      "description": "Used to correlate places without COVID-19 data to their brand to adopt the brand-wide lockdown status, if defined."
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
     },
     {
       "key": "craft",
@@ -53,7 +53,7 @@
     },
     {
       "key": "name",
-      "description": "Used to correlate places without COVID-19 data to their brand to adopt the brand-wide lockdown status, if defined."
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
     },
     {
       "key": "note:covid19",
@@ -73,11 +73,11 @@
     },
     {
       "key": "operator",
-      "description": "Used to correlate places without COVID-19 data to their brand to adopt the brand-wide lockdown status, if defined."
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
     },
     {
       "key": "operator:wikidata",
-      "description": "Used to correlate places without COVID-19 data to their brand to adopt the brand-wide lockdown status, if defined."
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
     },
     {
       "key": "phone",
