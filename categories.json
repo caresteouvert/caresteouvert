@@ -267,7 +267,9 @@
               "craft": "electronics_repair"
             }
           ],
-          "areas": "all"
+          "areas": [
+            "FR", "ES", "AD"
+          ]
         },
         "laundry": {
           "name": "Laundry",
