@@ -127,8 +127,15 @@ const vuetify = new Vuetify({
   }
 });
 
+const getLocale = () => {
+  try {
+    return localStorage.getItem('lang') || navigator.language.split('-')[0]
+  } catch (_) {
+    return 'en'
+  }
+}
 const i18n = new VueI18n({
-  locale: localStorage.getItem('lang') || navigator.language.split('-')[0],
+  locale: getLocale(),
   fallbackLocale: 'en',
   messages
 });
