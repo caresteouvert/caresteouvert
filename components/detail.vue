@@ -163,7 +163,7 @@ export default {
     this.resize();
     this.updatePoint();
     this.beforeUnloadListener = (event) => {
-      if (this.$refs.state.contribute) {
+      if (this.$refs.state && this.$refs.state.contribute) {
         event.preventDefault();
         event.returnValue = '';
       }
@@ -173,22 +173,6 @@ export default {
 
   beforeDestroy() {
     window.removeEventListener('beforeunload', this.beforeUnloadListener);
-  },
-
-  beforeRouteUpdate(to, from, next) {
-    let result = true;
-    if (to.params.id !== from.params.id && this.$refs.state && this.$refs.state.contribute) {
-      result = window.confirm(this.$t('details.signal_warning'));
-    }
-    next(result);
-  },
-
-  beforeRouteLeave(to, from, next) {
-    let result = true;
-    if (this.$refs.state && this.$refs.state.contribute) {
-      result = window.confirm(this.$t('details.signal_warning'));
-    }
-    next(result);
   },
 
   data() {
@@ -280,7 +264,23 @@ export default {
     },
 
     close() {
-      this.$router.push({ name: 'index', params: { featuresAndLocation: this.featuresAndLocation } })
+      this.$router.push({ name: 'index', params: { featuresAndLocation: this.$route.params.featuresAndLocation } })
+    },
+
+    beforeRouteUpdate(to, from, next) {
+      let result = true;
+      if (to.params.id !== from.params.id && this.$refs.state && this.$refs.state.contribute) {
+        result = window.confirm(this.$t('details.signal_warning'));
+      }
+      next(result);
+    },
+
+    beforeRouteLeave(to, from, next) {
+      let result = true;
+      if (this.$refs.state && this.$refs.state.contribute) {
+        result = window.confirm(this.$t('details.signal_warning'));
+      }
+      next(result);
     }
   }
 }

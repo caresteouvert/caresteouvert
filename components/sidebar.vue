@@ -54,6 +54,7 @@
 </template>
 
 <script>
+import { getCookie, setCookie } from './cookie';
 import SidebarListItem from './sidebar_list_item';
 import ChangeLanguage from './change_language';
 import LearnMore from './learn_more';
@@ -66,13 +67,13 @@ export default {
 
   data() {
     return {
-      alert: localStorage.getItem('showAlert') === 'false' ? false : true
+      alert: getCookie('showAlert') === 'false' ? false : true
     };
   },
 
   watch: {
     alert() {
-      localStorage.setItem('showAlert', false);
+      setCookie('showAlert', false);
     }
   }
 }

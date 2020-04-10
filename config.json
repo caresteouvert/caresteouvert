@@ -11,6 +11,7 @@
   "minZoomPoi": 13,
   "maxZoomPoi": 13,
   "fr": {
+    "domain": "www.caresteouvert.fr",
     "brand": "caresteouvert",
     "brand_text": "Ça reste ouvert",
     "government": "https://www.gouvernement.fr/info-coronavirus",
@@ -33,6 +34,7 @@
     "disclaimer": "https://blog.caresteouvert.fr/mentions-legales/"
   },
   "de": {
+    "domain": "www.bleibtoffen.de",
     "brand": "bleibtoffen",
     "brand_text": "Bleibt offen",
     "government": "https://www.bundesgesundheitsministerium.de/coronavirus.html",

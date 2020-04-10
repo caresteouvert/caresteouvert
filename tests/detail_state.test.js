@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import DetailState from '../js/detail_state';
-import ContributeForm from '../js/contribute_form';
+import DetailState from '../components/detail_state';
+import ContributeForm from '../components/contribute_form';
 
 describe('DetailState', () => {
   let localVue;

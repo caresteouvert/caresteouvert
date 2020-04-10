@@ -18,12 +18,15 @@
 </template>
 
 <script>
-const RGPD_LOCAL_STORAGE = 'rgpdConsent';
+import { getCookie, setCookie } from './cookie';
+
+const RGPD_COOKIE = 'rgpdConsent';
+
 export default {
   data() {
-    const consent = localStorage.getItem(RGPD_LOCAL_STORAGE);
+    const consent = getCookie(RGPD_COOKIE);
     return {
-      consent: consent === null ? null : (consent === 'true' ? true : false)
+      consent: consent === undefined ? null : (consent === 'true' ? true : false)
     };
   },
 
@@ -39,12 +42,12 @@ export default {
 
   methods: {
     yes() {
-      localStorage.setItem(RGPD_LOCAL_STORAGE, true);
+      setCookie(RGPD_COOKIE, true);
       this.consent = true;
     },
 
     no() {
-      localStorage.setItem(RGPD_LOCAL_STORAGE, false);
+      setCookie(RGPD_COOKIE, false);
       this.consent = false;
     },
 

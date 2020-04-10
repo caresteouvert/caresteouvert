@@ -1,15 +1,16 @@
 {
+  "name": "Caresteouvert",
   "engines": {
     "node": "12"
   },
   "scripts": {
-    "dev": "parcel serve parcel --hmr-port 1235 index.html",
+    "dev": "nuxt --hostname 0.0.0.0 --port 1234",
     "icons": "icon-font-generator icons/*.svg --out font --normalize --html --prefix='osm' --name osm",
     "sprites": "spritezero ./static/sprite/caresteouvert ./mapicons && spritezero --retina ./static/sprite/caresteouvert@2x ./mapicons",
     "categories": "node ./script/categories_i18n_extract.js && node ./script/categories_sql.js",
-    "build": "yarn run icons && yarn run sprites && parcel build index.html",
+    "build": "yarn run icons && yarn run sprites && nuxt build",
     "test": "jest --watch",
-    "start": "node app.js"
+    "start": "nuxt start"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -42,34 +43,27 @@
     "watcherGlob": "**/**"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
     "@mapbox/spritezero-cli": "https://github.com/francois2metz/spritezero-cli",
-    "@vue/component-compiler-utils": "^2.6.0",
+    "@nuxtjs/vuetify": "^1.11.0",
     "@vue/test-utils": "^1.0.0-beta.32",
-    "babel-jest": "^25.1.0",
     "icon-font-generator": "^2.1.10",
     "jest-cli": "^25.1.0",
-    "marked": "^0.8.2",
-    "parcel": "^1.11.0",
-    "parcel-plugin-static-files-copy": "^2.3.1",
-    "sass": "^1.26.3",
-    "vue-hot-reload-api": "^2.3.3",
-    "vue-jest": "^4.0.0-beta.2",
-    "vue-template-compiler": "^2.6.9"
+    "vue-jest": "^4.0.0-0"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "cookie": "^0.4.0",
+    "glob": "^7.1.6",
     "i18next-client": "^1.11.4",
+    "is-https": "^1.0.0",
+    "js-cookie": "^2.2.1",
     "lodash.debounce": "^4.0.8",
     "mapbox-gl": "^1.0.0",
+    "moment": "^2.24.0",
+    "nuxt": "^2.12.2",
     "opening_hours": "^3.5.0",
     "transport-hours": "https://github.com/Jungle-Bus/transport-hours-js",
-    "vue": "^2.6.9",
     "vue-i18n": "^8.12.0",
     "vue-linkify": "^1.0.1",
-    "vue-mapbox": "osmontrouge/vue-mapbox#update",
-    "vue-router": "^3.0.3",
-    "vuetify": "^2.0.0"
+    "vue-mapbox": "osmontrouge/vue-mapbox#update"
   }
 }

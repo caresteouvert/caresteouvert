@@ -1,5 +1,5 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import OsmLink from '../js/osm_link';
+import OsmLink from '../components/osm_link';
 
 describe('OSMLink', () => {
   let localVue;
