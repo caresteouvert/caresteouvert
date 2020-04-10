@@ -4,20 +4,26 @@
   "title": "Rimane aperto",
   "subtitle": "Luoghi che rimangono aperti durante il lockdown",
   "subtitle-dense": "Luoghi aperti durante il lockdown",
-  "search": "Cerca",
+  "search": "Digita la tua ricerca",
   "menu": "Menu",
   "missing_shop": "Riporta un negozio mancate",
   "change_lang": "Cambia lingua",
+  "zoomtosee": "Aumenta lo zoom per visualizzare le attività commerciali aperte",
   "learnmore": {
     "about": "Informazioni",
     "contribute": "Contribuisci",
     "missing_shop": "Segnala un negozio mancante",
-    "description": "« {brand} » ( \"rimane aperto\") è uno strumento essenziale per evitare inutili spostamenti fuori di casa durante il blocco e quindi limitare il rischio di contagio.\nQuesta mappa collaborativa consente di condividere facilmente luoghi aperti o chiusi nel tuo quartiere. È il modo più efficace e completo per informare meglio i tuoi vicini e gli abitanti della tua città.",
+    "description": "« {brand} » è lo strumento essenziale per evitare lunghi spostamenti da casa  durante il blocco e limitare quindi il rischio di contagio.\nQuesta mappa collaborativa ti consente di condividere facilmente attività aperte o chiuse nel tuo quartiere. È il modo più efficace e completo per informare al meglio i tuoi vicini e i tuoi concittadini.",
     "title": "Maggiori informazioni",
     "press": "Stampa",
     "disclaimer": "Esclusione di responsabilità",
     "blog": "Blog",
-    "townhalls": "Municipi"
+    "townhalls": "Questi comuni usano «{brand}»!"
+  },
+  "rgpd": {
+    "consent": "In questi tempi di blocco, accetteresti un cookie sul tuo computer per le nostre statistiche?",
+    "yes": "Sì",
+    "no": "No"
   },
   "days": {
     "monday": "Lunedì",
@@ -54,12 +60,20 @@
         "only": "Offre esclusivamente servizio di consegna a domicilio",
         "no": "No"
       },
+      "takeaway": {
+        "title": "Questa attività commerciale permette l'acquisto d'asporto",
+        "unknown": "Non lo so",
+        "yes": "Sì",
+        "only": "Solo asporto",
+        "no": "No"
+      },
       "details": "Aggiungi dettagli necessari durante il blocco"
     },
     "submit": "Pubblica",
     "cancel": "Annulla"
   },
   "details": {
+    "signal_warning": "Stavi facendo una segnalazione, Questa non sarà salvata. Vuoi proseguire?",
     "signal": "Segnala una modifica",
     "signal_done": "La tua segnalazione è stata registrata. Grazie! Ti chiediamo un po' di pazienza durante il periodo in cui sarà processata.",
     "containment_opening_hours": "Orari di apertura al di fuori del periodo di blocco",
@@ -101,7 +115,7 @@
     "add_new_days": "Aggiungi orari di apertura"
   },
   "osm_link": {
-    "title": "« {brand} » usa i dati di OpenStreetMap.",
+    "title": "« {brand} » usa i dati di OpenStreetMap",
     "view": "Vedi",
     "edit": "Modifica"
   },
@@ -121,11 +135,18 @@
     "alcohol": "Negozio di alcool",
     "marketplace": "Mercato",
     "bakery": "Panificio",
+    "eat": "Ristorante e asporto",
+    "vending_machine": "Distributore automatico",
+    "restaurant": "Ristorante",
+    "fast_food": "Fast food",
+    "ice_cream": "Gelateria",
+    "cafe": "Negozio di caffè",
     "tobacco": "Tabacchi",
     "e_cigarette": "Sigarette elettroniche",
     "shop": "Negozi",
     "hardware": "Ferramenta",
     "mobile_phone": "Telefonia mobile",
+    "computer": "Computer",
     "electronics": "Elettronica",
     "laundry": "Lavanderia",
     "stationery": "Cartoleria",
@@ -136,13 +157,16 @@
     "garden_centre": "Garden center",
     "optician": "Ottico",
     "employment_agency": "Agenzia di collocamento",
-    "car_rental": "Noleggio auto",
-    "bicycle": "Negozio di biciclette",
-    "car": "Garage",
+    "funeral_directors": "Pompe funebri",
+    "chemist": "Prodotti chimici",
+    "finance": "Servizi finanziari",
     "bank": "Banca",
     "moneylender": "Finanziaria",
     "insurance": "Assicurazione",
+    "mobility": "Mobilità",
     "fuel": "Stazione di rifiorimento carburante",
-    "funeral_directors": "Pompe funebri"
+    "car_rental": "Noleggio auto",
+    "bicycle": "Negozio di biciclette",
+    "car": "Garage"
   }
 }
