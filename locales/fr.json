@@ -25,6 +25,13 @@
     "yes": "Oui",
     "no": "Non"
   },
+  "apps_info": {
+    "close": "Fermer",
+    "text": "L'appli mobile « {brand} » est disponible !",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
+  },
   "days": {
     "monday": "Lundi",
     "tuesday": "Mardi",

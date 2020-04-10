@@ -25,6 +25,13 @@
     "yes": "Yes",
     "no": "No"
   },
+  "apps_info": {
+    "close": "Close",
+    "text": "The mobile app « {brand} » is now available !",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
+  },
   "days": {
     "monday": "Monday",
     "tuesday": "Tuesday",

@@ -48,6 +48,7 @@
           </v-chip>
         </v-slide-y-reverse-transition>
         <rgpd-banner />
+        <apps-sheet />
       </v-content>
     </div>
     <router-view />
@@ -59,6 +60,7 @@ import * as config from '../config.json';
 import * as categories from '../categories.json';
 import categoriesForCountry from './categories';
 import { encode, decode, encodePosition, decodePosition } from './url';
+import AppsSheet from './apps_sheet';
 import OsmSidebar from './sidebar';
 import OsmFilterFeatures from './filter_features';
 import OsmMap from './map';
@@ -67,6 +69,7 @@ import RgpdBanner from './rgpd_banner';
 
 export default {
   components: {
+    AppsSheet,
     OsmFilterFeatures,
     OsmSidebar,
     OsmMap,
