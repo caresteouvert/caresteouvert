@@ -1,0 +1,172 @@
+{
+  "lang": "Engels",
+  "covid19-alert": "Volg overheidsbeperkingen. De verantwoordelijkheid is JOUW.",
+  "title": "Het blijft open",
+  "subtitle": "Plaatsen die open blijven tijdens lockdown",
+  "subtitle-dense": "Plaatsen open tijdens lockdown",
+  "search": "Type je zoekopdracht",
+  "menu": "Menu",
+  "missing_shop": "Rapporteer een missende winkel",
+  "change_lang": "Verander de taal",
+  "zoomtosee": "Zoom in om geopende plaatsen weer te geven",
+  "learnmore": {
+    "about": "Over",
+    "contribute": "Draag bij",
+    "missing_shop": "Rapporteer een missende winkel",
+    "description": "« {brand} » is het onmisbare hulpmiddel om onsuccesvolle bewegingen rondom je huis te vermijden en daarmee het risico op besmetting te beperken\nDeze uit samenwerking ontstane kaart stelt je in staat om gemakkelijk open of gesloten plaatsen te delen in je buurt. Het is de meest effectieve en gezamenlijke manier om je buren en de inwoners van je stad te informeren.",
+    "title": "Leer meer",
+    "press": "Pers",
+    "disclaimer": "Disclaimer",
+    "blog": "Blog",
+    "townhalls": "Stadhuizen, gebruik « {brand} »!"
+  },
+  "rgpd": {
+    "consent": "In deze tijden van lockdown, wil je een cookie aannemen op je computer voor onze statistieken?",
+    "yes": "Ja",
+    "no": "Nee"
+  },
+  "days": {
+    "monday": "Maandag",
+    "tuesday": "Dinsdag",
+    "wednesday": "Woensdag",
+    "thursday": "Donderdag",
+    "friday": "Vrijdag",
+    "saturday": "Zaterdag",
+    "sunday": "Zondag",
+    "ph": "Officiële feestdagen"
+  },
+  "contribute_form": {
+    "title": "Draag bij",
+    "step1": {
+      "title": "Is deze plaats open tijdens lockdown?",
+      "open": {
+        "yes": "Ja",
+        "no": "Nee"
+      }
+    },
+    "step2": {
+      "title": "Openingstijden tijdens de lockdown",
+      "same_hours": "Dit zijn dezelfde tijden",
+      "same_hours_without_lockdown": "Dit zijn dezelfde tijden als buiten lockdown",
+      "dont_know": "Weet ik niet",
+      "continue": "Ga verder"
+    },
+    "step3": {
+      "title": "Voeg details toe",
+      "delivery": {
+        "title": "Deze plaats biedt bezorging.",
+        "unknown": "Weet ik niet",
+        "yes": "Ja",
+        "only": "Alleen bezorgen",
+        "no": "Nee"
+      },
+      "takeaway": {
+        "title": "Deze plaats accepteert afhalen",
+        "unknown": "Weet ik niet",
+        "yes": "Ja",
+        "only": "Alleen afhalen",
+        "no": "Nee"
+      },
+      "details": "Voeg eisen tijdens lockdown toe"
+    },
+    "submit": "Publiceren",
+    "cancel": "Annuleer"
+  },
+  "details": {
+    "signal_warning": "Je was een melding aan het schrijven. Het wordt niet opgeslagen. Wil je verder gaan?",
+    "signal": "Rapporteer een wijziging",
+    "signal_done": "Je melding is geregistreerd. Dank je! Wees alsjeblieft geduldig, het kan even duren om te verwerken.",
+    "containment_opening_hours": "Openingstijden buiten de lockdown periode",
+    "containment_brand_hours": "Openingstijden op de website",
+    "facebook": "Facebookpagina",
+    "opening_hours": {
+      "state_until_date": "{state} tot {date}",
+      "state": {
+        "open": "Open",
+        "closed": "Gesloten"
+      },
+      "tomorrow": "Morgen"
+    },
+    "state": {
+      "open": "Plaats open tijdens lockdown",
+      "open_adapted": "Plaats open tijdens lockdown, met aangepaste openingstijden",
+      "partial": "Plaats mogelijk open tijdens lockdown (om te controleren)",
+      "unknown": "Plaats toegestaan om te openen tijdens lockdown. Open of gesloten ? Laat het ons weten",
+      "closed": "Plaats gesloten tijdens lockdown"
+    },
+    "delivery": {
+      "yes": "Bezorgdienst beschikbaar",
+      "only": "Alleen bezorging"
+    },
+    "takeaway": {
+      "yes": "Afhalen beschikbaar",
+      "modified": "Aangepaste afhaalverkoop",
+      "only": "Alleen afhalen"
+    }
+  },
+  "opening_hours_editor": {
+    "select_days": "Beperkte dagen",
+    "next": "Beperkte tijden",
+    "select_time": {
+      "start": "Kies openingstijd",
+      "end": "Kies sluitingstijd"
+    },
+    "add_interval": "Voeg openingstijden toe",
+    "add_new_days": "Voeg openingsdagen toe"
+  },
+  "osm_link": {
+    "title": "« {brand} » gebruikt OpenStreetMap data.",
+    "view": "Bekijk",
+    "edit": "Bewerk"
+  },
+  "categories": {
+    "other": "Andere plaatsen",
+    "police": "Politie",
+    "pharmacy": "Apotheek",
+    "post_office": "Postkantoor",
+    "food": "Eten",
+    "supermarket": "Supermarkt",
+    "butcher": "Slager",
+    "cheese": "Kaas",
+    "convenience": "Gemak",
+    "seafood": "Vis",
+    "greengrocer": "Groenteboer",
+    "grocery": "Supermarkt",
+    "alcohol": "Slijterij",
+    "marketplace": "Markt",
+    "bakery": "Bakker",
+    "eat": "Restaurant & afhaalrestaurant",
+    "vending_machine": "Verkoopautomaat",
+    "restaurant": "Restaurant",
+    "fast_food": "Fast food",
+    "ice_cream": "Ijs",
+    "cafe": "Café",
+    "tobacco": "Tabakzaak",
+    "e_cigarette": "E-sigaret",
+    "shop": "Winkels",
+    "hardware": "Bouwmarkt",
+    "mobile_phone": "Mobiele telefoon",
+    "computer": "Computer",
+    "electronics": "Elektronica",
+    "laundry": "Wasserette",
+    "stationery": "Kantoorbenodigdheden",
+    "medical_supply": "Medische benodigdheden",
+    "newsagent": "Krantenwinkel",
+    "pet": "Dierenwinkel",
+    "agrarian": "Landbouwproducten",
+    "garden_centre": "Tuincentrum",
+    "optician": "Optiek",
+    "employment_agency": "Uitzendbureau",
+    "funeral_directors": "Begrafenisondernemers",
+    "chemist": "Drogist",
+    "finance": "Financiële dienstverlening",
+    "bank": "Bank",
+    "moneylender": "Geldschieter",
+    "insurance": "Verzekering",
+    "mobility": "Mobiliteit",
+    "fuel": "Benzinestation",
+    "car_rental": "Autoverhuur",
+    "bicycle": "Fietsenwinkel",
+    "car": "Garage"
+  }
+}
