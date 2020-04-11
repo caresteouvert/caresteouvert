@@ -168,7 +168,6 @@
           "osm_tags": [
             { "amenity": "restaurant" }
           ],
-          "osm_filter_tags": [ { "delivery": "yes|only" }, { "takeaway": "yes|only" }, { "delivery:covid19": "yes|only" }, { "takeaway:covid19": "yes|only" } ],
           "areas": "all"
         },
         "fast_food": {
@@ -176,7 +175,6 @@
           "osm_tags": [
             { "amenity": "fast_food" }
           ],
-          "osm_filter_tags": [ { "delivery": "yes|only" }, { "takeaway": "yes|only" }, { "delivery:covid19": "yes|only" }, { "takeaway:covid19": "yes|only" } ],
           "areas": "all"
         },
         "ice_cream": {
@@ -374,7 +372,7 @@
             }
           ],
           "areas": [
-            "FR"
+            "FR", "ES", "AD"
           ]
         }
       }

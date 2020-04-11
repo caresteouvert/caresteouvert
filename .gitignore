@@ -2,3 +2,5 @@
 /.nuxt
 /font
 /static/sprite
+/.cache
+/dist
