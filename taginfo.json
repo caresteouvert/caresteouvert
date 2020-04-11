@@ -12,12 +12,24 @@
   },
   "tags": [
     {
+      "key": "amenity",
+      "description": "Used to filter places that may be open during COVID-19 lockdowns."
+    },
+    {
       "key": "brand",
-      "description": "Used to correlate places without COVID-19 data to their brand to adopt the brand-wide lockdown status, if defined."
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
     },
     {
       "key": "brand:wikidata",
-      "description": "Used to correlate places without COVID-19 data to their brand to adopt the brand-wide lockdown status, if defined."
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
+    },
+    {
+      "key": "craft",
+      "description": "Used to filter places that may be open during COVID-19 lockdowns."
+    },
+    {
+      "key": "delivery",
+      "description": "Used to show if a place offers delivery, if delivery:covid19 is not defined."
     },
     {
       "key": "delivery:covid19",
@@ -41,11 +53,15 @@
     },
     {
       "key": "name",
-      "description": "Used to correlate places without COVID-19 data to their brand to adopt the brand-wide lockdown status, if defined."
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
     },
     {
       "key": "note:covid19",
       "description": "Used to show non-standardised information about a place during COVID-19 lockdowns, if description:covid19 is not defined."
+    },
+    {
+      "key": "office",
+      "description": "Used to filter places that may be open during COVID-19 lockdowns."
     },
     {
       "key": "opening_hours",
@@ -57,19 +73,35 @@
     },
     {
       "key": "operator",
-      "description": "Used to correlate places without COVID-19 data to their brand to adopt the brand-wide lockdown status, if defined."
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
     },
     {
       "key": "operator:wikidata",
-      "description": "Used to correlate places without COVID-19 data to their brand to adopt the brand-wide lockdown status, if defined."
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
     },
     {
       "key": "phone",
       "description": "Used to show the phone number of a place."
     },
     {
+      "key": "shop",
+      "description": "Used to filter places that may be open during COVID-19 lockdowns."
+    },
+    {
+      "key": "takeaway",
+      "description": "Used to show if a place offers takeaway, if takeaway:covid19 is not defined."
+    },
+    {
       "key": "takeaway:covid19",
       "description": "Used to show if a place offers takeaway during COVID-19 lockdowns."
+    },
+    {
+      "key": "tobacco",
+      "description": "Used to filter places that may be open during COVID-19 lockdowns."
+    },
+    {
+      "key": "vending",
+      "description": "Used to filter places that may be open during COVID-19 lockdowns."
     },
     {
       "key": "website",
