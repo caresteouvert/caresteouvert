@@ -7,17 +7,17 @@
             <v-row no-gutters align="center" justify="space-around">
               <v-col cols="6" sm="4">
                 <a href="https://play.google.com/" target="_blank" rel="noopener">
-                  <img src="../images/appbadge_gplay.png" class="img-badge" :alt="$t('apps_info.googleplay')" />
+                  <img src="../assets/appbadge_gplay.png" class="img-badge" :alt="$t('apps_info.googleplay')" />
                 </a>
               </v-col>
               <v-col cols="6" sm="4">
                 <a href="https://www.apple.com/fr/ios/app-store/" target="_blank" rel="noopener">
-                  <img src="../images/appbadge_apple.png" class="img-badge" :alt="$t('apps_info.apple')" />
+                  <img src="../assets/appbadge_apple.png" class="img-badge" :alt="$t('apps_info.apple')" />
                 </a>
               </v-col>
               <v-col cols="6" sm="4">
                 <a href="https://f-droid.org/" target="_blank" rel="noopener">
-                  <img src="../images/appbadge_fdroid.png" class="img-badge" :alt="$t('apps_info.fdroid')" />
+                  <img src="../assets/appbadge_fdroid.png" class="img-badge" :alt="$t('apps_info.fdroid')" />
                 </a>
               </v-col>
             </v-row>
@@ -40,9 +40,9 @@ export default {
 
   data() {
     const seen = localStorage.getItem(APPS_INFO_LOCAL_STORAGE);
-    const isMobile = window.innerWidth < 800;
+    const isApp = this.$route.query.fromapp && this.$route.query.fromapp.startsWith("t");
     return {
-      show: !isMobile && !this.isInIframe() && seen === null
+      show: !isApp && !this.isInIframe() && seen === null
     };
   },
 

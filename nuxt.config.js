@@ -1,3 +1,6 @@
+import { resolve } from 'path';
+import FMMode from 'frontmatter-markdown-loader/mode';
+
 export default {
   mode: 'universal',
   /*
@@ -28,7 +31,8 @@ export default {
   */
   plugins: [
     { src: '~/plugins/map', mode: 'client' },
-    { src: '~/plugins/linkified' }
+    { src: '~/plugins/linkified' },
+    { src: '~/plugins/url' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -56,7 +60,17 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend (config, _ctx) {
+      config.module.rules.push(
+        {
+          test: /\.md$/,
+          loader: 'frontmatter-markdown-loader',
+          include: resolve(__dirname, 'articles'),
+          options: {
+            mode: [FMMode.VUE_COMPONENT]
+          }
+        }
+      )
     }
   },
   router: {

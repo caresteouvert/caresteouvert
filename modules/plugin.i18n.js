@@ -6,12 +6,14 @@ import { messages, domains } from './options';
 
 Vue.use(VueI18n);
 
-function getLocale(locales, req) {
+function getLocale(locales, req, params) {
   let matchedLocale;
   const hostname = process.client ? window.location.host : (req.headers['x-forwarded-host'] || req.headers.host);
   const domain = domains.find((d) => d.domain === hostname);
 
-  if (getCookie('lang', req)) {
+  if (params.lang) {
+    matchedLocale = params.lang;
+  } else if (getCookie('lang', req)) {
     matchedLocale = getCookie('lang', req);
   } else if (domain) {
     matchedLocale = domain.locale;
@@ -27,9 +29,9 @@ function getLocale(locales, req) {
 }
 
 export default (context) => {
-  const { app, req } = context;
+  const { app, req, params } = context;
   const locales = Object.keys(messages);
-  const locale = getLocale(locales, req);
+  const locale = getLocale(locales, req, params);
 
   app.i18n = new VueI18n({
     fallbackLocale: 'en',

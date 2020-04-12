@@ -10,7 +10,7 @@ export default {}
 
 <style>
 html {
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .fullHeight {

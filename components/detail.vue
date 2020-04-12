@@ -136,6 +136,7 @@ import DetailOpeningHours from './detail_opening_hours';
 import DetailState from './detail_state';
 import DetailLink from './detail_link';
 import OsmLink from './osm_link';
+import { encodePosition } from './url';
 
 export default {
   components: {
@@ -159,9 +160,25 @@ export default {
     }
   },
 
+  head() {
+    if (!this.point) {
+      return {};
+    }
+    const [lng, lat] = this.point.geometry.coordinates;
+    return {
+      title: `${this.title || this.type} - ${this.$t('title')}`,
+      meta: [
+        { hid: 'ogurl', property: 'og:url',  content: `${this.$rootUrl}${encodePosition(lat, lng, 18)}/place/${this.id}` },
+        { hid: 'ogtitle', property: 'og:title', content: this.$t('title') }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: `${this.$rootUrl}place/${this.id}` }
+      ]
+    }
+  },
+
   mounted() {
     this.resize();
-    this.updatePoint();
     this.beforeUnloadListener = (event) => {
       if (this.$refs.state && this.$refs.state.contribute) {
         event.preventDefault();
@@ -173,6 +190,10 @@ export default {
 
   beforeDestroy() {
     window.removeEventListener('beforeunload', this.beforeUnloadListener);
+  },
+
+  fetch() {
+    return this.updatePoint();
   },
 
   data() {
@@ -256,7 +277,7 @@ export default {
     },
 
     updatePoint() {
-      fetch(`${poiFeature}/${this.id}.json`)
+      return fetch(`${poiFeature}/${this.id}.json`)
         .then(data => data.json())
         .then((feature) => {
           this.point = feature;

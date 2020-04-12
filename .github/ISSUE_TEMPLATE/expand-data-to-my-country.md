@@ -7,12 +7,7 @@ assignees: ''
 
 ---
 
-Thanks for your interest ! We hope you are safe during this lockdown. 
-
-We are working hard to be able to expand operations outside of France. But first, a little disclaimer.
-The first days of "Ça reste ouvert" the app created **thousands of notes** via the contribute form. We have since worked to make automatic edits, but some notes are still created. You need to keep up with theses.
- 
-Except this, you can expect thousands of contributions quickly and improve the coverage of shops in your country in OSM, so this is pretty cool!
+Please read https://github.com/osmontrouge/caresteouvert/wiki/Expand-%22%C3%87a-reste-ouvert%22-to-another-country first.
 
 Please check the following requirements:
 
