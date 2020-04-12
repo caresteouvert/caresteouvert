@@ -30,14 +30,8 @@ export default {
     };
   },
 
-  watch: {
-    consent: {
-      immediate: true,
-      handler(value) {
-        if (!value) return;
-        this.addTracker();
-      }
-    }
+  mounted() {
+    this.addTracker();
   },
 
   methods: {
@@ -52,17 +46,18 @@ export default {
     },
 
     addTracker() {
-      var _gauges = _gauges || [];
+      var _paq = window._paq || [];
+      if (this.content !== true) {
+        _paq.push(["disableCookies"]);
+      }
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
       (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '5e77b69d59eda1617dbd515d');
-        t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
-        t.src = 'https://d2fuc4clr7gvcn.cloudfront.net/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
+        var u="//s.caresteouvert.fr/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
       })();
     }
   }
