@@ -42,13 +42,14 @@
             <v-chip
               v-if="mapZoom < minZoomPoi"
               color="primary"
-              class="zoom-chip mb-12"
+              class="zoom-chip mb-6"
+              :class="{ 'push-up': !rgpdBannerHidden }"
               @click="mapZoom = minZoomPoi"
             >
               {{ $t('zoomtosee') }}
             </v-chip>
           </v-slide-y-reverse-transition>
-          <rgpd-banner />
+          <rgpd-banner @consent="rgpdBannerHidden = true" />
         </client-only>
       </v-content>
     </div>
@@ -94,6 +95,7 @@ export default {
       mapZoom: null,
       filter: '',
       categories: [],
+      rgpdBannerHidden: false,
       minZoomPoi: config.minZoomPoi
     };
   },
@@ -260,9 +262,12 @@ export default {
 <style>
 .zoom-chip {
   position: fixed !important;
-  bottom: 36px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+.zoom-chip.push-up {
+  bottom: 60px;
 }
 .xs .mapboxgl-ctrl-top-right {
   top: 50px;
