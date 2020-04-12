@@ -33,7 +33,7 @@ export default {
         { hid: 'ogtype', property: 'og:type',  content: 'website' },
         { hid: 'ogurl', property: 'og:url',  content: `${this.$rootUrl}${this.$route.fullPath.substring(1)}` },
         { hid: 'ogtitle', property: 'og:title', content: this.title },
-        { hid: 'ogimage', property: 'og:image', content: `${this.$rootUrl}${this.logo.substring(1)}` },
+        { hid: 'ogimage', property: 'og:image', content: `${this.$rootUrl}${this.logoOg.substring(1)}` },
       ]
     };
   },
