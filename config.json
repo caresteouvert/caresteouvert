@@ -51,17 +51,20 @@
     "domain": "esobert.osmcatala.cat",
     "brand": "esobert",
     "brand_text": "És Obert",
-    "government": "https://web.gencat.cat/ca/coronavirus/index.html"
+    "government": "https://web.gencat.cat/ca/coronavirus/index.html",
+    "shopMissing": "/ca/que-fer-si-falta-un-comerc-a-es-obert/"
   },
   "es": {
     "domain": "sigueabierto.openstreetmap.es",
     "brand": "sigueabierto",
     "brand_text": "Sigue Abierto",
-    "government": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/home.htm"
+    "government": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/home.htm",
+    "shopMissing": "/es/que-hacer-si-falta-un-comercio-en-sigue-abierto/"
   },
   "gl": {
     "brand": "segueaberto",
     "brand_text": "Segue Aberto",
-    "government": "https://coronavirus.sergas.es/?idioma=ga"
+    "government": "https://coronavirus.sergas.es/?idioma=ga",
+    "shopMissing": "/gl/que-facer-se-falla-un-negocio-no-segues-aberto/"
   }
 }
