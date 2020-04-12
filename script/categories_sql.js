@@ -27,6 +27,10 @@ function tagsPerCategoryToSql(tpc) {
 					const rightpart = v.length === 1 ? `LIKE '${v[0]}%'` : `SIMILAR TO '(${v.join("|")})%'`;
 					return `area ${rightpart}`;
 				}
+				else if(k === "-areas") {
+					const rightpart = v.length === 1 ? `LIKE '${v[0]}%'` : `SIMILAR TO '(${v.join("|")})%'`;
+					return `area NOT ${rightpart}`;
+				}
 				else {
 					const values = v.split("|");
 					const rightpart =
@@ -78,6 +82,10 @@ Object.entries(catg.categories).forEach(e => {
 
 		if(subcat.areas && subcat.areas !== "all") {
 			result = result.map(obj => Object.assign({}, obj, { areas: subcat.areas }));
+		}
+
+		if(subcat["-areas"]) {
+			result = result.map(obj => Object.assign({}, obj, { "-areas": subcat["-areas"] }));
 		}
 
 		return result;

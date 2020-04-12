@@ -40,6 +40,14 @@ And go to http://localhost:1234/.
 
 Translations are managed via Transifex, [go here to translate it in your language](https://www.transifex.com/openlevelup/ca-reste-ouvert/languages/).
 
+## Data
+
+Data used on our map comes from two sources :
+* [OpenStreetMap](https://openstreetmap.org/) : the free, worldwide geographic database. We use information about points of interest and also lockdown opening hours
+* [Covid enseignes](https://github.com/PanierAvide/Covid_enseignes) : chain stores opening rules by country. This allows to mark as open/closed a wide range of shops worldwide.
+
+So you can either directly contribute to OpenStreetMap (using [opening_hours:covid19=*](https://wiki.openstreetmap.org/wiki/Key:opening_hours:covid19) tag on individual features), or add rules concerning chain stores in [Covid enseignes repository](https://github.com/PanierAvide/Covid_enseignes#report-information).
+
 ## License
 
 Copyright (c) "Ça reste ouvert" 2020

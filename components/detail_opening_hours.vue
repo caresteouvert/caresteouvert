@@ -28,7 +28,9 @@
     </template>
 
     <v-list-item
-      v-for="(interval, day) in weekDays">
+      v-for="(interval, day) in weekDays"
+      :key="day"
+    >
       <v-list-item-content>
         <v-list-item-title>
           {{ $t(`days.${day}`) }}:

@@ -28,6 +28,7 @@
       <v-card-text>
         <v-btn
           v-for="locale in $i18n.availableLocales"
+          :key="locale"
           outlined
           class="ml-2 mb-2"
           @click="changeLang(locale)"
@@ -47,8 +48,7 @@ export default {
 
   methods: {
     changeLang(lang) {
-      this.$root.$i18n.locale = lang;
-      localStorage.setItem('lang', lang);
+      this.$i18n.setLocale(lang);
       this.dialog = false;
     }
   }

@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import 'mapbox-gl/dist/mapbox-gl.css';
 import * as config from '../config.json';
 import { MglMap, MglNavigationControl, MglVectorLayer, MglAttributionControl, MglGeolocateControl } from 'vue-mapbox/dist/vue-mapbox.umd';
 

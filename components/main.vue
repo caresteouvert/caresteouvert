@@ -28,42 +28,45 @@
           @toggleSidebar="sidebar = !sidebar"
           @onGeocode="updateMapBounds"
         />
-        <osm-map
-          v-if="loadMap"
-          ref="map"
-          :map-style="mapStyle"
-          :map-center.sync="mapCenter"
-          :map-zoom.sync="mapZoom"
-          :filter="filter"
-          :featuresAndLocation="featuresAndLocation"
-        />
-        <v-slide-y-reverse-transition>
-          <v-chip
-            v-if="mapZoom < minZoomPoi"
-            color="primary"
-            class="zoom-chip mb-6"
-            @click="mapZoom = minZoomPoi"
-          >
-            {{ $t('zoomtosee') }}
-          </v-chip>
-        </v-slide-y-reverse-transition>
-        <rgpd-banner />
-        <apps-sheet />
+        <client-only>
+          <osm-map
+            v-if="loadMap"
+            ref="map"
+            :map-style="mapStyle"
+            :map-center.sync="mapCenter"
+            :map-zoom.sync="mapZoom"
+            :filter="filter"
+            :featuresAndLocation="featuresAndLocation"
+          />
+          <v-slide-y-reverse-transition>
+            <v-chip
+              v-if="mapZoom < minZoomPoi"
+              color="primary"
+              class="zoom-chip mb-6"
+              @click="mapZoom = minZoomPoi"
+            >
+              {{ $t('zoomtosee') }}
+            </v-chip>
+          </v-slide-y-reverse-transition>
+          <rgpd-banner />
+          <apps-sheet />
+        </client-only>
       </v-content>
     </div>
-    <router-view />
+    <nuxt-child/>
   </div>
 </template>
 
 <script>
-import * as config from '../config.json';
-import * as categories from '../categories.json';
+import Vue from 'vue';
+import config from '../config.json';
+import categories from '../categories.json';
 import categoriesForCountry from './categories';
+import { getCookie, setCookie } from './cookie';
 import { encode, decode, encodePosition, decodePosition } from './url';
 import AppsSheet from './apps_sheet';
 import OsmSidebar from './sidebar';
 import OsmFilterFeatures from './filter_features';
-import OsmMap from './map';
 import TopToolbar from './top_toolbar';
 import RgpdBanner from './rgpd_banner';
 
@@ -72,7 +75,6 @@ export default {
     AppsSheet,
     OsmFilterFeatures,
     OsmSidebar,
-    OsmMap,
     TopToolbar,
     RgpdBanner
   },
@@ -183,14 +185,14 @@ export default {
     },
 
     updateRoute() {
-      const currentFeaturesAndLocation = this.$route.params.featuresAndLocation;
       const newFeaturesAndLocation = encode(
         this.filter,
         encodePosition(this.mapCenter.lat, this.mapCenter.lng, this.mapZoom)
       );
-      if (currentFeaturesAndLocation === newFeaturesAndLocation) {
+      if (this.lastFeaturesAndLocation === newFeaturesAndLocation) {
         return;
       }
+      this.lastFeaturesAndLocation = newFeaturesAndLocation;
       this.$router.replace({
         name: this.$route.name,
         params: {
@@ -209,11 +211,11 @@ export default {
     },
 
     savedMapView() {
-      return localStorage.getItem('mapView');
+      return getCookie('mapView');
     },
 
     saveCurrentView() {
-      localStorage.setItem('mapView', JSON.stringify({ center: this.mapCenter, zoom: this.mapZoom }));
+      setCookie('mapView', JSON.stringify({ center: this.mapCenter, zoom: this.mapZoom }));
     },
 
     refreshCurrentCountry() {
@@ -236,7 +238,7 @@ export default {
         .then(res => res.text())
         .then((country) => {
           this.categories = Object.keys(categoriesForCountry(categories, country.split('-')[0])).concat([ "other" ]);
-          this.filter = this.categories.includes(this.filter) ? filter : '';
+          this.filter = this.categories.includes(this.filter) ? this.filter : '';
         });
     },
 
@@ -261,7 +263,7 @@ export default {
 
 <style>
 .zoom-chip {
-  position: fixed;
+  position: fixed !important;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);

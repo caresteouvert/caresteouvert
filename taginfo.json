@@ -1,0 +1,111 @@
+{
+  "data_format": 1,
+  "data_url": "https://raw.githubusercontent.com/osmontrouge/caresteouvert/master/taginfo.json",
+  "project": {
+    "name": "Ça reste ouvert (It stays open)",
+    "description": "A collaborative map of open places during COVID-19 lockdowns. Enables everyone to report changes using a simple and standardised form.",
+    "project_url": "https://www.caresteouvert.fr/",
+    "doc_url": "https://github.com/osmontrouge/caresteouvert",
+    "icon_url": "https://raw.githubusercontent.com/osmontrouge/caresteouvert/master/images/favicon.png",
+    "contact_name": "Florian Lainez",
+    "contact_email": "florian@caresteouvert.fr"
+  },
+  "tags": [
+    {
+      "key": "amenity",
+      "description": "Used to filter places that may be open during COVID-19 lockdowns."
+    },
+    {
+      "key": "brand",
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
+    },
+    {
+      "key": "brand:wikidata",
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
+    },
+    {
+      "key": "craft",
+      "description": "Used to filter places that may be open during COVID-19 lockdowns."
+    },
+    {
+      "key": "delivery",
+      "description": "Used to show if a place offers delivery, if delivery:covid19 is not defined."
+    },
+    {
+      "key": "delivery:covid19",
+      "description": "Used to show if a place offers delivery during COVID-19 lockdowns."
+    },
+    {
+      "key": "description:covid19",
+      "description": "Used to show non-standardised information about a place during COVID-19 lockdowns."
+    },
+    {
+      "key": "email",
+      "description": "Used to show the email address of a place."
+    },
+    {
+      "key": "facebook",
+      "description": "Used to show a link to the Facebook page of a place."
+    },
+    {
+      "key": "mobile",
+      "description": "Used to show the mobile number of a place."
+    },
+    {
+      "key": "name",
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
+    },
+    {
+      "key": "note:covid19",
+      "description": "Used to show non-standardised information about a place during COVID-19 lockdowns, if description:covid19 is not defined."
+    },
+    {
+      "key": "office",
+      "description": "Used to filter places that may be open during COVID-19 lockdowns."
+    },
+    {
+      "key": "opening_hours",
+      "description": "Used to show the regular opening hours of a place, if opening_hours:covid19 is not defined."
+    },
+    {
+      "key": "opening_hours:covid19",
+      "description": "Used to show the current opening hours of a place during COVID-19 lockdowns."
+    },
+    {
+      "key": "operator",
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
+    },
+    {
+      "key": "operator:wikidata",
+      "description": "Used to correlate places without opening_hours:covid19 to their brand to adopt the brand-wide lockdown status, if defined."
+    },
+    {
+      "key": "phone",
+      "description": "Used to show the phone number of a place."
+    },
+    {
+      "key": "shop",
+      "description": "Used to filter places that may be open during COVID-19 lockdowns."
+    },
+    {
+      "key": "takeaway",
+      "description": "Used to show if a place offers takeaway, if takeaway:covid19 is not defined."
+    },
+    {
+      "key": "takeaway:covid19",
+      "description": "Used to show if a place offers takeaway during COVID-19 lockdowns."
+    },
+    {
+      "key": "tobacco",
+      "description": "Used to filter places that may be open during COVID-19 lockdowns."
+    },
+    {
+      "key": "vending",
+      "description": "Used to filter places that may be open during COVID-19 lockdowns."
+    },
+    {
+      "key": "website",
+      "description": "Used to show a link to the website of a place."
+    }
+  ]
+}

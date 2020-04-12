@@ -1,5 +1,5 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import ContributeForm from '../js/contribute_form';
+import ContributeForm from '../components/contribute_form';
 
 describe('ContributeForm', () => {
   let localVue;

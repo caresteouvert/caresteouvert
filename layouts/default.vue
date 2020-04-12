@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <router-view class="fullHeight" />
+    <nuxt nuxt-child-key="test" class="fullHeight" />
   </v-app>
 </template>
 
@@ -10,7 +10,7 @@ export default {}
 
 <style>
 html {
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .fullHeight {

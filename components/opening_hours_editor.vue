@@ -1,9 +1,15 @@
 <template>
   <div>
-    <div v-for="(interval, index) in openingHours">
+    <div
+      v-for="(interval, index) in openingHours"
+      :key="index"
+    >
       <div>{{ interval.days.map((day) => $t(`days.${weekDaysName[day]}`)).join(', ') }}</div>
       <div class="text-right">
-        <div v-for="(hours, indexHours) in interval.hours">
+        <div
+          v-for="(hours, indexHours) in interval.hours"
+          :key="indexHours"
+        >
           {{ hours }}
           <v-btn
             icon
@@ -34,6 +40,7 @@
           <v-checkbox
             v-for="day in weekDays"
             v-model="selectedWeekDays"
+            :key="day"
             :label="$t(`days.${weekDaysName[day]}`)"
             :value="day"
             :disabled="disabledWeekDays.includes(day)"

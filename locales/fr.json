@@ -98,7 +98,7 @@
       "open": "Lieu ouvert durant le confinement",
       "open_adapted": "Lieu ouvert durant le confinement avec des horaires adaptés",
       "partial": "Lieu potentiellement ouvert durant le confinement (à vérifier)",
-      "unknown": "Lieu autorisé à ouvrir durant le confinement. Ouvert ou fermé ? À vous de le dire",
+      "unknown": "Lieu légalement autorisé à ouvrir durant le confinement, mais est-il vraiment ouvert ou fermé ? À vous de le dire",
       "closed": "Lieu fermé durant le confinement"
     },
     "delivery": {
@@ -139,6 +139,7 @@
     "seafood": "Poissonnerie",
     "greengrocer": "Primeur",
     "grocery": "Épicerie",
+    "farm": "Magasin à la ferme",
     "alcohol": "Vente d'alcool",
     "marketplace": "Marché",
     "bakery": "Boulangerie",
@@ -166,6 +167,7 @@
     "employment_agency": "Agence pour l'emploi",
     "funeral_directors": "Pompes funèbres",
     "chemist": "Droguerie",
+    "fabric": "Tissus",
     "finance": "Services financiers",
     "bank": "Banque & assurances",
     "moneylender": "Prêteur ",

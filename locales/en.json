@@ -98,7 +98,7 @@
       "open": "Place open during lockdown",
       "open_adapted": "Place open during lockdown, with adapted hours",
       "partial": "Place potentially open during lockdown (to be checked)",
-      "unknown": "Place allowed to open during lockdown. Open or closed ? Let us know",
+      "unknown": "Place with legal right to open during lockdown, but is it really open or closed ? Let us know",
       "closed": "Place closed during lockdown"
     },
     "delivery": {
@@ -139,6 +139,7 @@
     "seafood": "Seafood",
     "greengrocer": "Greengrocer",
     "grocery": "Grocery",
+    "farm": "Farm shop",
     "alcohol": "Alcohol store",
     "marketplace": "Marketplace",
     "bakery": "Bakery",
@@ -166,6 +167,7 @@
     "employment_agency": "Employment agency",
     "funeral_directors": "Funeral directors",
     "chemist": "Chemist",
+    "fabric": "Fabric",
     "finance": "Financial services",
     "bank": "Bank",
     "moneylender": "Moneylender",
