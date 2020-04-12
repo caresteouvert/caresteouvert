@@ -68,5 +68,16 @@
     "about": "https://blog.caresteouvert.fr/about/",
     "press": "https://blog.caresteouvert.fr/presse/",
     "disclaimer": "https://blog.caresteouvert.fr/mentions-legales/"
+  },
+  "gl": {
+    "brand": "segueaberto",
+    "brand_text": "Segue Aberto",
+    "government": "https://www.gouvernement.fr/info-coronavirus",
+    "blog": "https://blog.caresteouvert.fr/",
+    "shopMissing": "https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/",
+    "townhalls": "https://blog.caresteouvert.fr/un-outil-de-communication-des-mairies/",
+    "about": "https://blog.caresteouvert.fr/about/",
+    "press": "https://blog.caresteouvert.fr/presse/",
+    "disclaimer": "https://blog.caresteouvert.fr/mentions-legales/"
   }
 }
