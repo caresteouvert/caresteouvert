@@ -107,9 +107,14 @@
           "name": "Grocery",
           "osm_tags": [
             {
-              "shop": "deli|farm|chocolate|tea|coffee|dairy|spices|honey|health_food|pasta|cannery"
+              "shop": "deli|chocolate|tea|coffee|dairy|spices|honey|health_food|pasta|cannery"
             }
           ],
+          "areas": "all"
+        },
+        "farm": {
+          "name": "Farm shop",
+          "osm_tags": [ { "shop": "farm" } ],
           "areas": "all"
         },
         "alcohol": {
@@ -180,10 +185,11 @@
         "ice_cream": {
           "name": "Ice cream",
           "osm_tags": [
-            { "amenity": "ice_cream" }
+            { "amenity": "ice_cream" },
+            { "amenity": "cafe", "cuisine": "ice_cream" },
+            { "shop": "ice_cream" }
           ],
-          "osm_filter_tags": [ { "delivery": "yes|only" }, { "takeaway": "yes|only" }, { "delivery:covid19": "yes|only" }, { "takeaway:covid19": "yes|only" } ],
-          "areas": "all"
+          "areas": [ "DE", "AT", "CH" ]
         },
         "cafe": {
           "name": "Coffee shop",
@@ -371,9 +377,14 @@
               "shop": "chemist"
             }
           ],
-          "areas": [
-            "FR", "ES", "AD"
+          "-areas": [
+            "DE", "AT", "CH"
           ]
+        },
+        "fabric": {
+          "name": "Fabric",
+          "osm_tags": [ { "shop": "fabric" } ],
+          "areas": [ "DE", "AT", "CH" ]
         }
       }
     },
