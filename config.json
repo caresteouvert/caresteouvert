@@ -35,6 +35,30 @@
     "brand_text": "Ça reste ouvert",
     "government": "https://www.who.int/health-topics/coronavirus"
   },
+  "at": {
+    "domain": "www.bleibtoffen.at",
+    "brand": "bleibtoffen",
+    "brand_text": "Bleibt offen",
+    "government": "https://www.sozialministerium.at/Informationen-zum-Coronavirus/Neuartiges-Coronavirus-(2019-nCov).html",
+    "blog": "https://www.bleibtoffen.org/blog.html",
+    "shopMissing": "https://www.bleibtoffen.org/2020/04/10/geschaeft-fehlt.html",
+    "townhalls": "https://www.bleibtoffen.org/2020/04/11/kommunikationswerkzeug.html",
+    "about": "https://www.bleibtoffen.org/ueber.html",
+    "press": "https://www.bleibtoffen.org/presse.html",
+    "disclaimer": "https://www.bleibtoffen.org/impressum.html"
+  },
+  "ch": {
+    "domain": "www.bleibtoffen.ch",
+    "brand": "bleibtoffen",
+    "brand_text": "Bleibt offen",
+    "government": "https://www.bag.admin.ch/bag/de/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/novel-cov.html",
+    "blog": "https://www.bleibtoffen.org/blog.html",
+    "shopMissing": "https://www.bleibtoffen.org/2020/04/10/geschaeft-fehlt.html",
+    "townhalls": "https://www.bleibtoffen.org/2020/04/11/kommunikationswerkzeug.html",
+    "about": "https://www.bleibtoffen.org/ueber.html",
+    "press": "https://www.bleibtoffen.org/presse.html",
+    "disclaimer": "https://www.bleibtoffen.org/impressum.html"
+  },
   "de": {
     "domain": "www.bleibtoffen.de",
     "brand": "bleibtoffen",
