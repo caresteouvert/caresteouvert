@@ -38,11 +38,11 @@
     "brand": "bleibtoffen",
     "brand_text": "Bleibt offen",
     "government": "https://www.bundesgesundheitsministerium.de/coronavirus.html",
-    "blog": "https://blog.caresteouvert.fr/",
-    "shopMissing": "https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/",
-    "townhalls": "https://blog.caresteouvert.fr/un-outil-de-communication-des-mairies/",
-    "about": "https://blog.caresteouvert.fr/about/",
-    "press": "https://blog.caresteouvert.fr/presse/",
-    "disclaimer": "https://blog.caresteouvert.fr/mentions-legales/"
+    "blog": "https://www.bleibtoffen.org/blog.html",
+    "shopMissing": "https://www.bleibtoffen.org/2020/04/10/geschaeft-fehlt.html",
+    "townhalls": "https://www.bleibtoffen.org/2020/04/11/kommunikationswerkzeug.html",
+    "about": "https://www.bleibtoffen.org/ueber.html",
+    "press": "https://www.bleibtoffen.org/presse.html",
+    "disclaimer": "https://www.bleibtoffen.org/impressum.html"
   }
 }
