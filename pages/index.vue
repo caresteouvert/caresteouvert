@@ -23,7 +23,7 @@ export default {
         { hid: 'ogurl', property: 'og:url',  content: this.$rootUrl },
         { hid: 'ogtitle', property: 'og:title', content: this.$t('title') },
         { hid: 'ogdescription', property: 'og:description', content: description },
-        { hid: 'ogimage', property: 'og:image', content: `${this.rootUrl}${this.logo}` },
+        { hid: 'ogimage', property: 'og:image', content: `${this.$rootUrl}${this.logo}` },
       ]
     }
   }
