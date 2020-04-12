@@ -14,7 +14,11 @@ import caresteouvertOg from '../../assets/caresteouvert-og.jpg';
 export default {
   computed: {
     links() {
-      return config[this.$i18n.locale] || config.en;
+      const links = config[this.$i18n.locale] || config.en;
+      return {
+        ...config.defaults,
+        ...links
+      };
     },
 
     logo() {
