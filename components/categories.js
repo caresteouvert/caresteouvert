@@ -1,7 +1,8 @@
 function filterSubCategories(subcategories, lang) {
   return Object.keys(subcategories).reduce((memo, subcategory) => {
     const areas = subcategories[subcategory].areas;
-    if (areas === 'all' || areas.includes(lang)) {
+    const minusAreas = subcategories[subcategory]["-areas"];
+    if ((areas && (areas === 'all' || areas.includes(lang))) || (minusAreas && !minusAreas.includes(lang))) {
       memo[subcategory] = subcategories[subcategory];
     }
     return memo;

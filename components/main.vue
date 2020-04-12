@@ -235,7 +235,7 @@ export default {
         .then(res => res.text())
         .then((country) => {
           this.categories = Object.keys(categoriesForCountry(categories, country.split('-')[0])).concat([ "other" ]);
-          this.filter = this.categories.includes(this.filter) ? filter : '';
+          this.filter = this.categories.includes(this.filter) ? this.filter : '';
         });
     },
 
