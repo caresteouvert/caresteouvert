@@ -1,8 +1,12 @@
 import config from '../../config.json';
 import caresteouvert from '../../images/caresteouvert.svg';
 import bleibtoffen from '../../images/bleibtoffen.svg';
+import sigueabierto from '../../images/sigueabierto.png';
+import esobert from '../../images/esobert.png';
 import caresteouvertMobile from '../../images/logo_header.png';
 import bleibtoffenMobile from '../../images/bleibtoffen-mobile.svg';
+import sigueabiertoMobile from '../../images/sigueabierto-mobile.png';
+import esobertMobile from '../../images/esobert-mobile.png';
 
 export default {
   computed: {
@@ -11,11 +15,16 @@ export default {
     },
 
     logo() {
-      return { caresteouvert, bleibtoffen }[this.links.brand];
+      return { caresteouvert, bleibtoffen, sigueabierto, esobert }[this.links.brand];
     },
 
     logoMobile() {
-      return { caresteouvert: caresteouvertMobile, bleibtoffen: bleibtoffenMobile }[this.links.brand];
+      return {
+        caresteouvert: caresteouvertMobile,
+        bleibtoffen: bleibtoffenMobile,
+        sigueabierto: sigueabiertoMobile,
+        esobert: esobertMobile
+      }[this.links.brand];
     },
 
     brand() {

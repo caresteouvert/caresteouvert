@@ -47,8 +47,8 @@
   },
   "ca": {
     "domain": "esobert.osmcatala.cat",
-    "brand": "caresteouvert",
-    "brand_text": "Ça reste ouvert",
+    "brand": "esobert",
+    "brand_text": "És Obert",
     "government": "https://www.gouvernement.fr/info-coronavirus",
     "blog": "https://blog.caresteouvert.fr/",
     "shopMissing": "https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/",
@@ -59,8 +59,8 @@
   },
   "es": {
     "domain": "sigueabierto.openstreetmap.es",
-    "brand": "caresteouvert",
-    "brand_text": "Ça reste ouvert",
+    "brand": "sigueabierto",
+    "brand_text": "Sigue Abierto",
     "government": "https://www.gouvernement.fr/info-coronavirus",
     "blog": "https://blog.caresteouvert.fr/",
     "shopMissing": "https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/",
