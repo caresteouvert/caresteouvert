@@ -10,6 +10,7 @@ import sigueabiertoMobile from '../../assets/sigueabierto-mobile.png';
 import esobertMobile from '../../assets/esobert-mobile.png';
 import segueabertoMobile from '../../assets/segueaberto-mobile.png';
 import caresteouvertOg from '../../assets/caresteouvert-og.jpg';
+import bleibtoffenOg from '../../assets/bleibtoffen-og.jpg';
 
 export default {
   computed: {
@@ -44,7 +45,7 @@ export default {
     logoOg() {
       return {
         caresteouvert: caresteouvertOg,
-        bleibtoffen,
+        bleibtoffen: bleibtoffenOg,
         sigueabierto,
         segueaberto,
         esobert
