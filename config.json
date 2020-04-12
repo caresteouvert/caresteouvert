@@ -44,5 +44,29 @@
     "about": "https://www.bleibtoffen.org/ueber.html",
     "press": "https://www.bleibtoffen.org/presse.html",
     "disclaimer": "https://www.bleibtoffen.org/impressum.html"
+  },
+  "ca": {
+    "domain": "esobert.osmcatala.cat",
+    "brand": "caresteouvert",
+    "brand_text": "Ça reste ouvert",
+    "government": "https://www.gouvernement.fr/info-coronavirus",
+    "blog": "https://blog.caresteouvert.fr/",
+    "shopMissing": "https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/",
+    "townhalls": "https://blog.caresteouvert.fr/un-outil-de-communication-des-mairies/",
+    "about": "https://blog.caresteouvert.fr/about/",
+    "press": "https://blog.caresteouvert.fr/presse/",
+    "disclaimer": "https://blog.caresteouvert.fr/mentions-legales/"
+  },
+  "es": {
+    "domain": "sigueabierto.openstreetmap.es",
+    "brand": "caresteouvert",
+    "brand_text": "Ça reste ouvert",
+    "government": "https://www.gouvernement.fr/info-coronavirus",
+    "blog": "https://blog.caresteouvert.fr/",
+    "shopMissing": "https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/",
+    "townhalls": "https://blog.caresteouvert.fr/un-outil-de-communication-des-mairies/",
+    "about": "https://blog.caresteouvert.fr/about/",
+    "press": "https://blog.caresteouvert.fr/presse/",
+    "disclaimer": "https://blog.caresteouvert.fr/mentions-legales/"
   }
 }
