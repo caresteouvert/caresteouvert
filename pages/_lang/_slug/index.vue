@@ -20,14 +20,9 @@
 
 <script>
 import i18nMixin from '../../../components/mixins/i18n';
-import { getUrlFromReq } from '../../../components/url';
 
 export default {
   mixins: [i18nMixin],
-
-  asyncData({ req }) {
-    return getUrlFromReq(req);
-  },
 
   head () {
     return {
@@ -36,9 +31,9 @@ export default {
         { hid: 'twittercard', name: 'twitter:card', content: 'summary' },
         { hid: 'twittersite', name: 'twitter:site', content: '@caresteouvert' },
         { hid: 'ogtype', property: 'og:type',  content: 'website' },
-        { hid: 'ogurl', property: 'og:url',  content: `${this.url}${this.$route.fullPath.substring(1)}` },
+        { hid: 'ogurl', property: 'og:url',  content: `${this.$rootUrl}${this.$route.fullPath.substring(1)}` },
         { hid: 'ogtitle', property: 'og:title', content: this.title },
-        { hid: 'ogimage', property: 'og:image', content: `${this.url}${this.logo}` },
+        { hid: 'ogimage', property: 'og:image', content: `${this.$rootUrl}${this.logo}` },
       ]
     };
   },

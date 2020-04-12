@@ -31,7 +31,8 @@ export default {
   */
   plugins: [
     { src: '~/plugins/map', mode: 'client' },
-    { src: '~/plugins/linkified' }
+    { src: '~/plugins/linkified' },
+    { src: '~/plugins/url' }
   ],
   /*
   ** Nuxt.js dev-modules
