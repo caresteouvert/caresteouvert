@@ -51,17 +51,17 @@
     "domain": "esobert.osmcatala.cat",
     "brand": "esobert",
     "brand_text": "És Obert",
-    "government": "https://www.gouvernement.fr/info-coronavirus"
+    "government": "https://web.gencat.cat/ca/coronavirus/index.html"
   },
   "es": {
     "domain": "sigueabierto.openstreetmap.es",
     "brand": "sigueabierto",
     "brand_text": "Sigue Abierto",
-    "government": "https://www.gouvernement.fr/info-coronavirus"
+    "government": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/home.htm"
   },
   "gl": {
     "brand": "segueaberto",
     "brand_text": "Segue Aberto",
-    "government": "https://www.gouvernement.fr/info-coronavirus"
+    "government": "https://coronavirus.sergas.es/?idioma=ga"
   }
 }
