@@ -92,7 +92,6 @@ export default {
       mapStyle: null,
       mapCenter: null,
       mapZoom: null,
-      mapStyle: `${config.mapStyle}${config.apiKey}`,
       filter: '',
       categories: [],
       minZoomPoi: config.minZoomPoi
@@ -142,7 +141,7 @@ export default {
         a.href = a.href
         return a.href
       }
-      return fetch(`${config.mapStyle}${config.apiKey}`)
+      return fetch(`${config.mapStyle}${config.maptilerApiKey}`)
         .then(res => res.json())
         .then((data) => {
           data.sprite = createWebUrl('/sprite/caresteouvert');

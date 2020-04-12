@@ -129,7 +129,7 @@
 </template>
 
 <script>
-import { poiFeature, apiKey } from '../config.json';
+import { poiFeature } from '../config.json';
 import DetailTag from './detail_tag';
 import DetailEntry from './detail_entry';
 import DetailOpeningHours from './detail_opening_hours';
