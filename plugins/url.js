@@ -4,7 +4,7 @@ import Vue from 'vue'
 function getUrlFromReq(req) {
   if (process.server) {
    const protocol = isHttps(req) ? 'https' : 'http';
-   return `${protocol}://${req.headers.host}`;
+   return `${protocol}://${req.headers.host}/`;
   } else {
     function createWebUrl(url) {
       const a = document.createElement("a")
