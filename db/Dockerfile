@@ -24,8 +24,8 @@ RUN rm -rf /tmp/imposm
 
 # Osmosis
 WORKDIR /tmp/osmosis
-RUN wget -N https://bretth.dev.openstreetmap.org/osmosis-build/osmosis-0.47.zip \
-    && unzip -o osmosis-0.47.zip \
+RUN wget -N https://github.com/openstreetmap/osmosis/releases/download/0.47.4/osmosis-0.47.4.zip \
+    && unzip -o osmosis-0.47.4.zip \
     && mv bin/osmosis /usr/bin \ 
     && chmod a+x /usr/bin/osmosis \
     && mv config /usr/config \
