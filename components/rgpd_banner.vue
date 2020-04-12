@@ -46,12 +46,13 @@ export default {
     },
 
     addTracker() {
-      var _paq = window._paq || [];
+      const _paq = window._paq || [];
       if (this.content !== true) {
         _paq.push(["disableCookies"]);
       }
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
+      window._paq = _paq;
       (function() {
         var u="//s.caresteouvert.fr/";
         _paq.push(['setTrackerUrl', u+'matomo.php']);
