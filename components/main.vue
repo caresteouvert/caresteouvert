@@ -42,7 +42,7 @@
             <v-chip
               v-if="mapZoom < minZoomPoi"
               color="primary"
-              class="zoom-chip mb-6"
+              class="zoom-chip mb-12"
               @click="mapZoom = minZoomPoi"
             >
               {{ $t('zoomtosee') }}
@@ -260,7 +260,7 @@ export default {
 <style>
 .zoom-chip {
   position: fixed !important;
-  bottom: 0;
+  bottom: 36px;
   left: 50%;
   transform: translateX(-50%);
 }
