@@ -1,3 +1,5 @@
+import isHttps from 'is-https';
+
 export function decode(url) {
   const locationPart = url.indexOf('@');
   return {
@@ -26,4 +28,20 @@ export function decodePosition(position, config) {
 export function encodePosition(lat, lng, zoom) {
   const position = [lat.toFixed(6), lng.toFixed(6), zoom.toFixed(2)];
   return `@${position.join(',')}`;
+}
+
+export function getUrlFromReq(req) {
+  if (process.server) {
+   const protocol = isHttps(req) ? 'https' : 'http';
+   return { url: `${protocol}://${req.headers.host}` };
+  } else {
+    function createWebUrl(url) {
+      const a = document.createElement("a")
+      a.href = url
+      // Fix populating Location properties in IE. Otherwise, protocol will be blank.
+      a.href = a.href
+      return a.href
+    }
+    return { url: createWebUrl('/') };
+  }
 }

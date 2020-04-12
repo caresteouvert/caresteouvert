@@ -3,9 +3,9 @@
 </template>
 
 <script>
-import isHttps from 'is-https';
 import OsmMain from '../components/main';
 import i18nMixin from '../components/mixins/i18n';
+import { getUrlFromReq } from '../components/url';
 
 export default {
   mixins: [i18nMixin],
@@ -13,20 +13,7 @@ export default {
   components: { OsmMain },
 
   asyncData({ req }) {
-    if (process.server) {
-      const protocol = isHttps(req) ? 'https' : 'http';
-
-      return { url: `${protocol}://${req.headers.host}` };
-    } else {
-      function createWebUrl(url) {
-        const a = document.createElement("a")
-        a.href = url
-        // Fix populating Location properties in IE. Otherwise, protocol will be blank.
-        a.href = a.href
-        return a.href
-      }
-      return { url: createWebUrl('/') };
-    }
+    return getUrlFromReq(req);
   },
 
   head () {

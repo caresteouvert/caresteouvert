@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "cookie": "^0.4.0",
+    "frontmatter-markdown-loader": "^3.3.0",
     "glob": "^7.1.6",
     "i18next-client": "^1.11.4",
     "is-https": "^1.0.0",
