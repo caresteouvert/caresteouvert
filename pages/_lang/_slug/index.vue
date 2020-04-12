@@ -1,5 +1,8 @@
 <template>
-  <v-container lang="$18n.locale">
+  <v-container
+    tag="article"
+    class="article"
+  >
     <header>
       <nuxt-link to="/">
         <img
@@ -54,6 +57,9 @@ export default {
 </script>
 
 <style scoped>
+.article {
+  max-width: 750px;
+}
 .logo {
   max-width: 200px;
 }
