@@ -48,6 +48,8 @@ Data used on our map comes from two sources :
 
 So you can either directly contribute to OpenStreetMap (using [opening_hours:covid19=*](https://wiki.openstreetmap.org/wiki/Key:opening_hours:covid19) tag on individual features), or add rules concerning chain stores in [Covid enseignes repository](https://github.com/PanierAvide/Covid_enseignes#report-information).
 
+Data derivated from Ça reste ouvert can be downloaded at this URL : https://download.osmontrouge.fr/caresteouvert/
+
 ## License
 
 Copyright (c) "Ça reste ouvert" 2020
