@@ -1,0 +1,6 @@
+/.cache
+/.nuxt
+/dist
+/font/*
+/node_modules
+/static/sprite/*

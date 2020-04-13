@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    ports:
+        - "1234:${WEB_PORT:-1234}"
+    restart: always
+  db:
+    build: db/Dockerfile
+    restart: always
