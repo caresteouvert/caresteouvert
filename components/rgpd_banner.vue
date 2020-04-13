@@ -47,7 +47,7 @@ export default {
 
     addTracker() {
       const _paq = window._paq || [];
-      if (this.content !== true) {
+      if (this.consent !== true) {
         _paq.push(["disableCookies"]);
       }
       _paq.push(['trackPageView']);
