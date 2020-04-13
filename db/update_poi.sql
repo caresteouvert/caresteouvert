@@ -79,6 +79,7 @@ CREATE TABLE IF NOT EXISTS poi_osm_next(
 	delivery VARCHAR DEFAULT 'unknown',
 	country VARCHAR,
 	sub_country VARCHAR,
+	source_status VARCHAR DEFAULT 'osm',
 	tags JSONB
 );
 
@@ -156,7 +157,9 @@ SET
 	status = b.opening_rule,
 	opening_hours = COALESCE(poi_osm_next.opening_hours, b.opening_hours),
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
-	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
+	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description),
+	tags = CASE WHEN b.osm_additional_tags IS NOT NULL THEN b.osm_additional_tags::jsonb || poi_osm_next.tags ELSE poi_osm_next.tags END,
+	source_status = 'brand'
 FROM brand_rules b
 WHERE
 	poi_osm_next.status = 'unknown'
@@ -169,7 +172,9 @@ SET
 	status = b.opening_rule,
 	opening_hours = COALESCE(poi_osm_next.opening_hours, b.opening_hours),
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
-	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
+	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description),
+	tags = CASE WHEN b.osm_additional_tags IS NOT NULL THEN b.osm_additional_tags::jsonb || poi_osm_next.tags ELSE poi_osm_next.tags END,
+	source_status = 'brand'
 FROM brand_rules b
 WHERE
 	poi_osm_next.status = 'unknown'
@@ -182,7 +187,9 @@ SET
 	status = b.opening_rule,
 	opening_hours = COALESCE(poi_osm_next.opening_hours, b.opening_hours),
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
-	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description)
+	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description),
+	tags = CASE WHEN b.osm_additional_tags IS NOT NULL THEN b.osm_additional_tags::jsonb || poi_osm_next.tags ELSE poi_osm_next.tags END,
+	source_status = 'brand'
 FROM brand_rules b
 WHERE
 	poi_osm_next.status = 'unknown'

@@ -238,6 +238,8 @@ export default {
 
     infos() {
       const infos = [];
+      const isOpen = ['open', 'open_adapted'].includes(this.point.properties.status);
+      const isOpenOrPartial = ['open', 'open_adapted', 'partial'].includes(this.point.properties.status);
 
       // Access
       if(this.point.properties.tags['access:covid19'] === 'no') {
@@ -245,26 +247,26 @@ export default {
       }
 
       // Takeaway
-      if(this.point.properties.tags['takeaway:covid19'] && !this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`).startsWith('details.')) {
+      if(isOpenOrPartial && this.point.properties.tags['takeaway:covid19'] && !this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`).startsWith('details.')) {
         infos.push(this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`));
       }
-      else if(['open', 'open_adapted'].includes(this.point.properties.status) && this.point.properties.tags.takeaway && !this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`).startsWith('details.')) {
+      else if(isOpen && this.point.properties.tags.takeaway && !this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`).startsWith('details.')) {
         infos.push(this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`));
       }
 
       // Delivery
-      if(this.point.properties.tags['delivery:covid19'] && !this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`).startsWith('details.')) {
+      if(isOpenOrPartial && this.point.properties.tags['delivery:covid19'] && !this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`).startsWith('details.')) {
         infos.push(this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`));
       }
-      else if(['open', 'open_adapted'].includes(this.point.properties.status) && this.point.properties.tags.delivery && !this.$t(`details.delivery.${this.point.properties.tags.delivery}`).startsWith('details.')) {
+      else if(isOpen && this.point.properties.tags.delivery && !this.$t(`details.delivery.${this.point.properties.tags.delivery}`).startsWith('details.')) {
         infos.push(this.$t(`details.delivery.${this.point.properties.tags.delivery}`));
       }
 
       // Drive-through
-      if(this.point.properties.tags['drive_through:covid19'] && !this.$t(`details.drive_through.${this.point.properties.tags['drive_through:covid19']}`).startsWith('details.')) {
+      if(isOpenOrPartial && this.point.properties.tags['drive_through:covid19'] && !this.$t(`details.drive_through.${this.point.properties.tags['drive_through:covid19']}`).startsWith('details.')) {
         infos.push(this.$t(`details.drive_through.${this.point.properties.tags['drive_through:covid19']}`));
       }
-      else if(['open', 'open_adapted'].includes(this.point.properties.status) && this.point.properties.tags.drive_through && !this.$t(`details.drive_through.${this.point.properties.tags.drive_through}`).startsWith('details.')) {
+      else if(isOpen && this.point.properties.tags.drive_through && !this.$t(`details.drive_through.${this.point.properties.tags.drive_through}`).startsWith('details.')) {
         infos.push(this.$t(`details.drive_through.${this.point.properties.tags.drive_through}`));
       }
 
