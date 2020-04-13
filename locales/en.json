@@ -35,6 +35,9 @@
     "sunday": "Sunday",
     "ph": "Public holidays"
   },
+  "day_shortcuts": {
+    "weekdays": "Monday to Friday"
+  },
   "contribute_form": {
     "title": "Contribute",
     "step1": {
