@@ -16,7 +16,7 @@
           "name": "Post office",
           "osm_tags": [
             { "amenity": "post_office" },
-            { "amenity": "vending_machine", "vending": "stamps|parcel_mail_in|parcel_pickup" }
+            { "amenity": "vending_machine", "vending": "stamps|parcel_mail_in|parcel_pickup|parcel_pickup;parcel_mail_in" }
           ],
           "areas": "all"
         },
@@ -223,7 +223,7 @@
         "tobacco": {
           "name": "Tobacco",
           "osm_tags": [
-            { "shop": "tobacco" },
+            { "shop": "tobacco|newsagent;tobacco|tobacco;newsagent" },
             { "tobacco": "yes|only" },
             { "amenity": "vending_machine", "vending": "cigarettes" }
           ],
