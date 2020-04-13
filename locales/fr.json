@@ -79,6 +79,7 @@
     "containment_opening_hours": "Horaires d'ouverture hors-confinement",
     "containment_brand_hours": "Horaires sur le site web de l'enseigne",
     "facebook": "Page Facebook",
+    "not_accessible": "L'intérieur n'est pas accessible au public",
     "opening_hours": {
       "state_until_date": "{state} jusqu'à {date}",
       "state": {
@@ -102,6 +103,10 @@
       "yes": "Vente à emporter proposée",
       "modified": "Vente à emporter adaptée",
       "only": "Vente à emporter uniquement"
+    },
+    "drive_through": {
+      "yes": "Service de drive disponible",
+      "only": "Uniquement par drive"
     }
   },
   "opening_hours_editor": {
@@ -127,14 +132,13 @@
     "employment_agency": "Agence pour l'emploi",
     "funeral_directors": "Pompes funèbres",
     "bank": "Banque & assurances",
-    "moneylender": "Prêteur ",
+    "moneylender": "Prêteur",
     "insurance": "Assurance",
     "health": "Santé",
     "pharmacy": "Pharmacie",
     "condoms": "Distributeur de préservatifs",
     "optician": "Opticien",
     "medical_supply": "Matériel médical",
-    "health": "Santé",
     "food": "Alimentation",
     "supermarket": "Supermarché",
     "butcher": "Boucherie",
