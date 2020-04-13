@@ -34,6 +34,17 @@ export default {
     this.addTracker();
   },
 
+  watch: {
+    consent: {
+      immediate: true,
+      handler(value) {
+        if (typeof value === 'boolean') {
+          this.$emit('consent', value);
+        }
+      }
+    }
+  },
+
   methods: {
     yes() {
       setCookie(RGPD_COOKIE, true);
