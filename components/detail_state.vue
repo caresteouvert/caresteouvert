@@ -6,7 +6,7 @@
       tile
       class="mb-0"
     >
-      {{ $t(`details.state.${status}`) }}
+      <span class="text-pre">{{ $t(`details.state.${status}`) }}</span>
       <template v-if="!success">
         <br>
         <br>
@@ -21,7 +21,7 @@
       type="success"
       tile
       class="mb-0"
-    >{{ $t('details.signal_done') }}</v-alert>
+    ><span class="text-pre">{{ $t('details.signal_done') }}</span></v-alert>
     <div v-if="contribute">
       <contribute-form
         :point="point"

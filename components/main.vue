@@ -278,4 +278,7 @@ export default {
 .sidebar-opened .search {
   transform: translateX(300px);
 }
+.text-pre {
+  white-space: pre-line;
+}
 </style>
