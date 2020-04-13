@@ -1,6 +1,6 @@
 # Ça reste ouvert (It Stays Open)
 
-![Ça reste ouvert](images/logo.png)
+![Ça reste ouvert](assets/logo.png)
 
 [Ça reste ouvert](https://caresteouvert.fr), la carte collaborative des lieux ouverts durant le confinement / the collaborative map of the places open during the lockdown #Covid19.
 
