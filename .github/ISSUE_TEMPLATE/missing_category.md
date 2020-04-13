@@ -3,7 +3,7 @@ name: Missing category
 about: Report a category of places that is missing in the map for your country.
 title: 'Missing category: (name of category)'
 labels: 'categories'
-assignees: 'francois2metz'
+assignees: 'PanierAvide'
 
 ---
 
