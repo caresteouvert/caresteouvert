@@ -90,8 +90,8 @@
     "state": {
       "open": "Place open during lockdown",
       "open_adapted": "Place open during lockdown, with adapted hours",
-      "partial": "Place potentially open during lockdown (to be checked)",
-      "unknown": "Place with legal right to open during lockdown, but is it really open or closed ? Let us know",
+      "partial": "Place belongs to a brand whose places are partially open during lockdown. Is it open or closed? Let us know.",
+      "unknown": "Place may be allowed to open during lockdown. Is it open or closed? Let us know.",
       "closed": "Place closed during lockdown"
     },
     "delivery": {
