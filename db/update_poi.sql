@@ -38,8 +38,8 @@ BEGIN
 			status := 'open_adapted';
 		END IF;
 
-	-- Self-service
-	ELSIF tags->'self_service' = 'yes' THEN
+	-- Self-service / vending machines
+	ELSIF tags->'self_service' = 'yes' OR tags->'amenity' = 'vending_machine' THEN
 		status := 'open';
 	END IF;
 
@@ -97,7 +97,11 @@ SELECT
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
 	opening_state(tags),
-	CASE WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') AND NOT "opening_hours:covid19" ILIKE 'off%' THEN "opening_hours:covid19" ELSE NULL END,
+	CASE
+		WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') AND NOT "opening_hours:covid19" ILIKE 'off%' THEN "opening_hours:covid19"
+		WHEN amenity = 'vending_machine' AND tags->'opening_hours' IN ('', '24/7') THEN '24/7'
+		ELSE NULL
+	END,
 	CASE
 		WHEN tags->'delivery:covid19' IN ('yes', 'no', 'only') THEN tags->'delivery:covid19'
 		WHEN tags->'delivery' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'delivery'
@@ -110,7 +114,7 @@ FROM imposm_osm_point
 WHERE
 	-- The line below is automatically edited using categories.json
 	-- Do not edit directly, run "yarn run categories" instead
-	country_iso2 IN ('DE', 'FR', 'ES', 'AD', 'CH', 'AT') AND ("opening_hours:covid19" != '' OR "amenity" IN ('bank', 'cafe', 'car_rental', 'fast_food', 'fuel', 'ice_cream', 'marketplace', 'pharmacy', 'police', 'post_office', 'restaurant', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'cannery', 'car_parts', 'car_repair', 'cheese', 'chemist', 'chocolate', 'coffee', 'computer', 'convenience', 'dairy', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'fabric', 'farm', 'frozen_food', 'funeral_directors', 'garden_centre', 'gas', 'greengrocer', 'hardware', 'health_food', 'honey', 'ice_cream', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pasta', 'pastry', 'pet', 'seafood', 'spices', 'stationery', 'supermarket', 'tea', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance')) --CATEGORIES
+	country_iso2 IN ('DE', 'FR', 'ES', 'AD', 'CH', 'AT') AND ("opening_hours:covid19" != '' OR "amenity" IN ('bank', 'cafe', 'car_rental', 'fast_food', 'fuel', 'ice_cream', 'marketplace', 'pharmacy', 'police', 'post_office', 'public_bookcase', 'restaurant', 'vending_machine') OR "office" IN ('employment_agency', 'financial', 'insurance') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'books', 'butcher', 'cannery', 'car_parts', 'car_repair', 'cheese', 'chemist', 'chocolate', 'coffee', 'computer', 'convenience', 'dairy', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'fabric', 'farm', 'frozen_food', 'funeral_directors', 'garden_centre', 'gas', 'greengrocer', 'hardware', 'health_food', 'honey', 'ice_cream', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pasta', 'pastry', 'pet', 'seafood', 'spices', 'stationery', 'supermarket', 'tea', 'tobacco', 'wine') OR "craft" IN ('electronics_repair', 'optician') OR "tobacco" IN ('only', 'yes')) --CATEGORIES
 UNION ALL
 SELECT
 	CASE WHEN osm_id < 0 THEN concat('r', -osm_id) ELSE concat('w', osm_id) END,
@@ -122,7 +126,11 @@ SELECT
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
 	opening_state(tags),
-	CASE WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') AND NOT "opening_hours:covid19" ILIKE 'off%' THEN "opening_hours:covid19" ELSE NULL END,
+	CASE
+		WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') AND NOT "opening_hours:covid19" ILIKE 'off%' THEN "opening_hours:covid19"
+		WHEN amenity = 'vending_machine' AND tags->'opening_hours' IN ('', '24/7') THEN '24/7'
+		ELSE NULL
+	END,
 	CASE
 		WHEN tags->'delivery:covid19' IN ('yes', 'no', 'only') THEN tags->'delivery:covid19'
 		WHEN tags->'delivery' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'delivery'
@@ -135,7 +143,7 @@ FROM imposm_osm_polygon
 WHERE
 	-- The line below is automatically edited using categories.json
 	-- Do not edit directly, run "yarn run categories" instead
-	country_iso2 IN ('DE', 'FR', 'ES', 'AD', 'CH', 'AT') AND ("opening_hours:covid19" != '' OR "amenity" IN ('bank', 'cafe', 'car_rental', 'fast_food', 'fuel', 'ice_cream', 'marketplace', 'pharmacy', 'police', 'post_office', 'restaurant', 'vending_machine') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'butcher', 'cannery', 'car_parts', 'car_repair', 'cheese', 'chemist', 'chocolate', 'coffee', 'computer', 'convenience', 'dairy', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'fabric', 'farm', 'frozen_food', 'funeral_directors', 'garden_centre', 'gas', 'greengrocer', 'hardware', 'health_food', 'honey', 'ice_cream', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pasta', 'pastry', 'pet', 'seafood', 'spices', 'stationery', 'supermarket', 'tea', 'tobacco', 'wine') OR "tobacco" IN ('only', 'yes') OR "craft" IN ('electronics_repair', 'optician') OR "office" IN ('employment_agency', 'financial', 'insurance')) --CATEGORIES
+	country_iso2 IN ('DE', 'FR', 'ES', 'AD', 'CH', 'AT') AND ("opening_hours:covid19" != '' OR "amenity" IN ('bank', 'cafe', 'car_rental', 'fast_food', 'fuel', 'ice_cream', 'marketplace', 'pharmacy', 'police', 'post_office', 'public_bookcase', 'restaurant', 'vending_machine') OR "office" IN ('employment_agency', 'financial', 'insurance') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'books', 'butcher', 'cannery', 'car_parts', 'car_repair', 'cheese', 'chemist', 'chocolate', 'coffee', 'computer', 'convenience', 'dairy', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'fabric', 'farm', 'frozen_food', 'funeral_directors', 'garden_centre', 'gas', 'greengrocer', 'hardware', 'health_food', 'honey', 'ice_cream', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'optician', 'pasta', 'pastry', 'pet', 'seafood', 'spices', 'stationery', 'supermarket', 'tea', 'tobacco', 'wine') OR "craft" IN ('electronics_repair', 'optician') OR "tobacco" IN ('only', 'yes')) --CATEGORIES
 ;
 
 -- Remove edge cases needing advanced filtering like vending machines
