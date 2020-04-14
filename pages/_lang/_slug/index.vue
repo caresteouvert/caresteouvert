@@ -56,11 +56,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .article {
   max-width: 750px;
 }
-.logo {
+.article img {
+  max-width: 100%;
+}
+.article .logo {
   max-width: 200px;
 }
 </style>

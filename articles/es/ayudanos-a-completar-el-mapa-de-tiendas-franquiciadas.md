@@ -18,7 +18,7 @@ Comienza iniciando sesión con tu cuenta de OpenStreetMap para participar.
 
 Si no estás familiarizado con la herramienta MapRoulette, que permite compartir fácilmente las tareas entre los contribuyentes, comienza con el desafío sobre los bancos y amplia a tu vecindario o un área que conoces para seleccionar un marcador. De lo contrario, simplemente haz clic en "Start" para comenzar con un objeto aleatorio.
 
-![Un desafío MapRoulette](images/1_Maproulette.png)
+![Un desafío MapRoulette](~/assets/es/1_Maproulette.png)
 
 Luego haz clic en el marcador para ver la información ya proporcionada sobre este negocio y averigua si pertenece a una marca.
 
@@ -28,7 +28,7 @@ Hay tres posibilidades:
 - no estás seguro o no hay suficiente información para tomar una decisión. No te preocupes, simplemente haz clic en "Skip"
 - es una marca. En este caso, haz clic en "Edit" para agregar la información relevante
 
-![una tarea de MapRoulette](images/2_Maproulette.png)
+![una tarea de MapRoulette](~/assets/es/2_Maproulette.png)
 
 aquí se trata de un banco "SabadellHerrero"
 
@@ -38,13 +38,13 @@ Esta [pagina](https://nsi.guide) enumera muchas marcas con etiquetas asociadas.
 
 Si usas el editor iD, a veces puede adivinar qué etiquetas agregar para las marcas más comunes:
 
-![ID puede adivinar las etiquetas correctas para agregar](images/3_Brand_con_ID.png)
+![ID puede adivinar las etiquetas correctas para agregar](~/assets/es/3_Brand_con_ID.png)
 
 El editor sugiere que agreguemos automáticamente las etiquetas brand y brand:wikidata a este supermercado Carrefour
 
 Si estás utilizando el editor JOSM, puedes habilitar ajustes preestablecidos de marca en Preferencias> Ajustes del mapa> Etiquetas de predefinidos> Índice de sugerencia de nombres. Luego, cuando desees modificar una empresa, usa el menú Predefinidos> Buscar predefinido...
 
-![Los ajustes preestablecidos del índice de sugerencia de nombres en el editor JOSM](images/4_Brand_con_JOSM.png)
+![Los ajustes preestablecidos del índice de sugerencia de nombres en el editor JOSM](~/assets/es/4_Brand_con_JOSM.png)
 
 El editor JOSM puede aplicar directamente las etiquetas brand y brand:wikidata de este supermercado Carrefour
 
