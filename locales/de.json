@@ -52,7 +52,7 @@
       "continue": "Weiter"
     },
     "step3": {
-      "title": "Zusätzliche Angaben",
+      "title": "Details hinzufügen",
       "delivery": {
         "title": "Lieferung möglich",
         "unknown": "Weiß ich nicht",
@@ -67,7 +67,7 @@
         "only": "Nur Abholung",
         "no": "Nein"
       },
-      "details": "Zusätzliche wichtige Angaben (optional)"
+      "details": "Wichtige Anmerkungen (optional, erfordert eine manuelle Prüfung durch die OpenStreetMap-Community)\n"
     },
     "submit": "Veröffentlichen",
     "cancel": "Abbrechen"
