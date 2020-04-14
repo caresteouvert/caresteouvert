@@ -31,7 +31,7 @@
         icon
         x-small
         color="secondary"
-        :href="links.government"
+        :href="countryConfig.government"
         target="_blank"
       >
         <v-icon>{{ `osm-info` }}</v-icon>

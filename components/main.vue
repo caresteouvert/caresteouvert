@@ -58,10 +58,9 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import debounce from 'lodash.debounce';
 import config from '../config.json';
-import categories from '../categories.json';
-import categoriesForCountry from './categories';
 import { getCookie, setCookie } from './cookie';
 import { encode, decode, encodePosition, decodePosition } from './url';
 import OsmSidebar from './sidebar';
@@ -94,7 +93,6 @@ export default {
       mapCenter: null,
       mapZoom: null,
       filter: '',
-      categories: [],
       rgpdBannerHidden: false,
       minZoomPoi: config.minZoomPoi
     };
@@ -116,6 +114,8 @@ export default {
       this.getCurrentCountry();
     });
   },
+
+  computed: mapGetters(['categories']),
 
   watch: {
     mapCenter() {
@@ -234,8 +234,9 @@ export default {
       const { lat, lng } = this.mapCenter;
       fetch(`${config.apiUrl}/country?lat=${lat}&lon=${lng}`)
         .then(res => res.text())
-        .then((country) => {
-          this.categories = Object.keys(categoriesForCountry(categories, country.split('-')[0])).concat([ "other" ]);
+        .then((res) => {
+          const country = res.split('-')[0];
+          this.$store.commit('setCountry', country);
           this.filter = this.categories.includes(this.filter) ? this.filter : '';
         });
     },

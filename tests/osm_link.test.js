@@ -1,20 +1,25 @@
+import Vuex from 'vuex';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import OsmLink from '../components/osm_link';
 
 describe('OSMLink', () => {
-  let localVue;
   const stubs = ['v-row', 'v-col', 'v-btn'];
+  let localVue;
+  let store;
 
   beforeEach(() => {
     localVue = createLocalVue();
     localVue.prototype.$t = () => {};
     localVue.prototype.$i18n = {};
+    localVue.use(Vuex);
+    store = new Vuex.Store({ state: { country: '' } });
   });
 
   function createWrapper(props) {
     return shallowMount(OsmLink, {
       localVue,
       stubs,
+      store,
       propsData: props
     });
   }
