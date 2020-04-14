@@ -70,7 +70,7 @@
         "only": "Vente à emporter uniquement",
         "no": "Non"
       },
-      "details": "Ajouter des détails nécessaire au confinement"
+      "details": "Optionnel : ajouter d'autres détails liés au confinement"
     },
     "submit": "Publier",
     "cancel": "Annuler"
