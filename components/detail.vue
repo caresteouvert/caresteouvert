@@ -255,26 +255,19 @@ export default {
         infos.push(this.$t('details.not_accessible'));
       }
 
-      // Takeaway
-      if (isOpenOrPartial && this.point.properties.tags['takeaway:covid19'] && this.$te(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`)) {
-        infos.push(this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`));
-      } else if (isOpen && this.point.properties.tags.takeaway && this.$te(`details.takeaway.${this.point.properties.tags.takeaway}`)) {
-        infos.push(this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`));
-      }
+      const addInfosDependingOfTagAndStatus = (tagName) => {
+        const tagCovid19 = this.point.properties.tags[`${tagName}:covid19`];
+        const tag = this.point.properties.tags[tagName];
+        if (isOpenOrPartial && tagCovid19 && this.$te(`details.${tagName}.${tagCovid19}`)) {
+          infos.push(this.$t(`details.${tagName}.${tagCovid19}`));
+        } else if (isOpen && tag && this.$te(`details.${tagName}.${tag}`)) {
+          infos.push(this.$t(`details.${tagName}.${tag}`));
+        }
+      };
 
-      // Delivery
-      if (isOpenOrPartial && this.point.properties.tags['delivery:covid19'] && this.$te(`details.delivery.${this.point.properties.tags['delivery:covid19']}`)) {
-        infos.push(this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`));
-      } else if(isOpen && this.point.properties.tags.delivery && !this.$te(`details.delivery.${this.point.properties.tags.delivery}`)) {
-        infos.push(this.$t(`details.delivery.${this.point.properties.tags.delivery}`));
-      }
-
-      // Drive-through
-      if (isOpenOrPartial && this.point.properties.tags['drive_through:covid19'] && this.$te(`details.drive_through.${this.point.properties.tags['drive_through:covid19']}`)) {
-        infos.push(this.$t(`details.drive_through.${this.point.properties.tags['drive_through:covid19']}`));
-      } else if (isOpen && this.point.properties.tags.drive_through && this.$te(`details.drive_through.${this.point.properties.tags.drive_through}`)) {
-        infos.push(this.$t(`details.drive_through.${this.point.properties.tags.drive_through}`));
-      }
+      addInfosDependingOfTagAndStatus('takeaway');
+      addInfosDependingOfTagAndStatus('delivery');
+      addInfosDependingOfTagAndStatus('drive_through');
 
       // POI information
       if (this.point.properties.brand_infos) {
