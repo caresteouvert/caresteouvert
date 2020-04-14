@@ -44,13 +44,16 @@
 
         <v-alert
           v-if="infos"
-          v-html="infos"
-          v-linkified:options="{ className: 'alert-link', attributes: { rel: 'noopener' } }"
           :icon="false"
           type="info"
           tile
           class="mb-0"
         >
+          <p
+            v-html="infos"
+            v-linkified:options="{ className: 'alert-link', attributes: { rel: 'noopener' } }"
+            class="mb-0 overflowwrap-anywhere"
+          />
         </v-alert>
 
         <v-list>
@@ -343,6 +346,9 @@ export default {
   left: 0;
   z-index: 10;
   overflow-y: auto;
+}
+.overflowwrap-anywhere {
+  overflow-wrap: anywhere;
 }
 >>>.alert-link {
   color: white;
