@@ -57,6 +57,7 @@
     "i18next-client": "^1.11.4",
     "is-https": "^1.0.0",
     "js-cookie": "^2.2.1",
+    "lodash.chunk": "^4.2.0",
     "lodash.debounce": "^4.0.8",
     "mapbox-gl": "^1.0.0",
     "moment": "^2.24.0",
