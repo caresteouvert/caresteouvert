@@ -58,6 +58,7 @@
 </template>
 
 <script>
+import debounce from 'lodash.debounce';
 import config from '../config.json';
 import categories from '../categories.json';
 import categoriesForCountry from './categories';
@@ -215,7 +216,7 @@ export default {
       setCookie('mapView', JSON.stringify({ center: this.mapCenter, zoom: this.mapZoom }));
     },
 
-    refreshCurrentCountry() {
+    refreshCurrentCountry: debounce(function() {
       if (!this.lastMapCenter) {
         this.lastMapCenter = this.mapCenter;
       }
@@ -227,7 +228,7 @@ export default {
         this.lastMapCenter = this.mapCenter;
         this.getCurrentCountry();
       }
-    },
+    }, 1),
 
     getCurrentCountry() {
       const { lat, lng } = this.mapCenter;
