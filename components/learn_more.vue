@@ -27,7 +27,7 @@
         </v-btn>
       </v-card-title>
       <v-card-text>
-        <p v-for="p in $t('learnmore.description', { brand }).split('\n')">{{ p }}</p>
+        <span class="text-pre">{{ $t('learnmore.description', { brand }) }}</span>
         <v-row>
           <v-col
             cols="12"
