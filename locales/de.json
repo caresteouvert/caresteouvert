@@ -35,6 +35,9 @@
     "sunday": "Sonntag",
     "ph": "Gesetzliche Feiertage"
   },
+  "day_shortcuts": {
+    "weekdays": "Montag bis Samstag"
+  },
   "contribute_form": {
     "title": "Mitmachen",
     "step1": {
