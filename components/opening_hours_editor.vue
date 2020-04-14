@@ -37,6 +37,16 @@
       <v-card class="pa-2">
         <template v-if="!selectTime">
           <h3 class="subtitle-1">{{ $t('opening_hours_editor.select_days') }}</h3>
+          <v-switch
+            v-for="(days, shortcut) in shortcutDays"
+            :key="shortcut"
+            :label="$t(`day_shortcuts.${shortcut}`)"
+            :value="days.every(day => selectedWeekDays.includes(day))"
+            :disabled="days.some(day => disabledWeekDays.includes(day))"
+            @change="value => toggleSelectedWeekDays(value, ...days)"
+            dense
+            hide-details
+          />
           <v-checkbox
             v-for="day in weekDays"
             v-model="selectedWeekDays"
@@ -78,6 +88,9 @@ export default {
 
   data() {
     return {
+      shortcutDays: {
+        'weekdays': ['mo', 'tu', 'we', 'th', 'fr', 'sa']
+      },
       weekDays: ['mo', 'tu', 'we', 'th', 'fr', 'sa', 'su', 'ph'],
       weekDaysName: {
         'mo': 'monday',
@@ -151,6 +164,14 @@ export default {
       this.selectTime = false;
       this.indexSubInterval = -1;
       this.dialog = false;
+    },
+
+    toggleSelectedWeekDays(value, ...days) {
+      if (value) {
+        this.selectedWeekDays = this.weekDays.filter(day => this.selectedWeekDays.includes(day) || days.includes(day));
+      } else {
+        this.selectedWeekDays = this.selectedWeekDays.filter(day => !days.includes(day));
+      }
     }
   }
 };
