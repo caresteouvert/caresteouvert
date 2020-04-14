@@ -35,6 +35,9 @@
     "sunday": "Dimanche",
     "ph": "Jours fériés"
   },
+  "day_shortcuts": {
+    "weekdays": "Du lundi au samedi"
+  },
   "contribute_form": {
     "title": "Contribuer",
     "step1": {
