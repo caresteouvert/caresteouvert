@@ -36,7 +36,7 @@ export default {
         sigueabierto,
         segueaberto,
         esobert
-      }[this.countryConfig.brand];
+      }[this.links.brand];
     },
 
     logoMobile() {
@@ -46,7 +46,7 @@ export default {
         sigueabierto: sigueabiertoMobile,
         segueaberto: segueabertoMobile,
         esobert: esobertMobile
-      }[this.countryConfig.brand];
+      }[this.links.brand];
     },
 
     logoOg() {
@@ -56,11 +56,11 @@ export default {
         sigueabierto,
         segueaberto,
         esobert
-      }[this.countryConfig.brand];
+      }[this.links.brand];
     },
 
     brand() {
-      return this.countryConfig.brand_text;
+      return this.links.brand_text;
     }
   }
 }
