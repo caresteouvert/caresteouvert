@@ -79,6 +79,7 @@
     "containment_opening_hours": "Reguläre Öffnungszeiten",
     "containment_brand_hours": "Öffnungszeiten auf der Webseite",
     "facebook": "Facebook-Seite",
+    "not_accessible": "Innenbereich nicht öffentlich zugänglich",
     "opening_hours": {
       "state_until_date": "{state} bis {date}",
       "state": {
@@ -102,6 +103,10 @@
       "yes": "Abholung möglich",
       "modified": "Abholung abweichend",
       "only": "Nur Abholung"
+    },
+    "drive_through": {
+      "yes": "Drive-in geöffnet",
+      "only": "Nur im Drive-in"
     }
   },
   "opening_hours_editor": {
