@@ -58,7 +58,6 @@
 </template>
 
 <script>
-import Vue from 'vue';
 import config from '../config.json';
 import categories from '../categories.json';
 import categoriesForCountry from './categories';
