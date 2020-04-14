@@ -1,0 +1,200 @@
+{
+  "lang": "Ingelesa",
+  "covid19-alert": "Jarrai itzazu gobernuaren murrizketak. Errespontsabilitatea ZUREA da.",
+  "title": "Irekita jarraitzen du",
+  "subtitle": "Itxialdi garaian irekita jarraitzen duten lekuak",
+  "subtitle-dense": "Itxialdian irekita dauden lekuak",
+  "search": "Idatzi zure bilaketa",
+  "menu": "Menua",
+  "missing_shop": "Falta den denda baten berri eman",
+  "change_lang": "Hizkuntza aldatu",
+  "zoomtosee": "Gerturatu irekita dauden lekuak ikusteko",
+  "learnmore": {
+    "about": "Honi buruz",
+    "contribute": "Lagundu",
+    "missing_shop": "Falta den denda baten berri eman",
+    "description": "« {brand} » itxialdi garaian behar ez diren mugimenduak ekiditeko eta horrela kutsadura arriskua mugatzeko ezinbesteko tresna da. Elkarlanean egindako mapa honek zure auzoko lekuak itxita ala irekita dauden adierazteko balio du. Auzotar eta herritarrak hobe informatzeko bide zuzenena da.",
+    "title": "Gehiago ikasi",
+    "press": "Prentsa",
+    "disclaimer": "Lege-oharra",
+    "blog": "Bloga",
+    "townhalls": "Udaletxeak, erabili « {brand} »!"
+  },
+  "rgpd": {
+    "consent": "Itxialdi garaian, hartuko al zenuke cookie bat gure estatistikak osatzeko?",
+    "yes": "Bai",
+    "no": "Ez"
+  },
+  "days": {
+    "monday": "Astelehena",
+    "tuesday": "Asteartea",
+    "wednesday": "Azteazkena",
+    "thursday": "Osteguna",
+    "friday": "Ostirala",
+    "saturday": "Larunbata",
+    "sunday": "Igandea",
+    "ph": "Jai egunak"
+  },
+  "day_shortcuts": {
+    "weekdays": "Astelehenetik larunbatera"
+  },
+  "contribute_form": {
+    "title": "Lagundu",
+    "step1": {
+      "title": "Leku hau irekita al dago itxialdi garaian?",
+      "open": {
+        "yes": "bai",
+        "no": "ez"
+      }
+    },
+    "step2": {
+      "title": "Itxialdi garaiko irekitze ordutegia",
+      "same_hours": "Ordutegi berdina da",
+      "same_hours_without_lockdown": "Ordutegi berdina du itxialditik kanpo",
+      "dont_know": "Ez dakit",
+      "continue": "Jarraitu"
+    },
+    "step3": {
+      "title": "Xehetasunak gehitu",
+      "delivery": {
+        "title": "Leku honek bidalketa eskaintzen du",
+        "unknown": "Ez dakit",
+        "yes": "Bai",
+        "only": "Bidalketa bakarrik eskaintzen du",
+        "no": "Ez"
+      },
+      "takeaway": {
+        "title": "Leku honek eramateko erosketa eskaintzen du",
+        "unknown": "Ez dakit",
+        "yes": "Bai",
+        "only": "Eramateko bakarrik",
+        "no": "Ez"
+      },
+      "details": "Itxialdiran beharrezkoak diren xehetasunak gehitu"
+    },
+    "submit": "Argitaratu",
+    "cancel": "Kantzelatu"
+  },
+  "details": {
+    "signal_warning": "Txosten bat idazten ari zara. Ez da gordeko. Jarraitu nahi al duzu?",
+    "signal": "Aldaketa baten berri eman",
+    "signal_done": "Zure aldaketa erregistratu da. Eskerrik asko! Mesedez izan pazientzia, prozesatzeko denbora behar du.",
+    "containment_opening_hours": "Itxialdi garai kanpoko egutegia",
+    "containment_brand_hours": "Ordutegia orri berrian",
+    "facebook": "Facebook orria",
+    "not_accessible": "Barrukaldea publikoari itxita dago",
+    "opening_hours": {
+      "state_until_date": "{state} {date} arte",
+      "state": {
+        "open": "irekita",
+        "closed": "itxita"
+      },
+      "tomorrow": "bihar"
+    },
+    "state": {
+      "open": "Itxialdian irekita dauden lekuak",
+      "open_adapted": "Itxialdi garaian irekita dagoen lekua, moldatutako ordutegiarekin",
+      "partial": "Itxialdi garaian seguruaski irekita dagoen lekua (egiaztatzeko)",
+      "unknown": "Leku honek irekitzeko baimena du itxialdi garaian, baina benetan irekita al itxita al dago? Esaiguzu",
+      "closed": "Itxialdi garaian itxita dagoen lekua"
+    },
+    "delivery": {
+      "yes": "Banaketa zerbitzua eskuragarri",
+      "only": "Bidalketa bakarrik"
+    },
+    "takeaway": {
+      "yes": "Eramateko salmenta eskuragarri",
+      "modified": "Moldatutako eramateko salmenta",
+      "only": "Eramateko salmenta bakarrik"
+    },
+    "drive_through": {
+      "yes": "Autotik jasotzeko zerbitzua dago",
+      "only": "Autotik jasotzen bakarrik"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Zigiluak",
+      "parcel_mail_in": "Paketeak uzteko lekua",
+      "parcel_pickup": "Pakete bilketa",
+      "parcel_pickup;parcel_mail_in": "Paketeak bidali eta jasotzeko lekua",
+      "milk": "Esnea",
+      "drinks": "Edariak",
+      "water": "Ura",
+      "sweets": "Goxokiak"
+    }
+  },
+  "opening_hours_editor": {
+    "select_days": "Egunak aukeratu",
+    "next": "Orduak aukeratu",
+    "select_time": {
+      "start": "Aukeratu irekiera ordua",
+      "end": "Aukeratu itxiera ordua"
+    },
+    "add_interval": "Orduak gehitu",
+    "add_new_days": "Gehitu irekitako egunak"
+  },
+  "osm_link": {
+    "title": "« {brand} » OpenStreetMap datuak erabiltzen ditu.",
+    "view": "Ikusi",
+    "edit": "Editatu"
+  },
+  "categories": {
+    "other": "Beste lekuak",
+    "amenity": "Zerbitzua",
+    "police": "Polizia",
+    "post_office": "Posta bulegoa",
+    "employment_agency": "Enplegu agentziak",
+    "funeral_directors": "Hileta zuzendariak",
+    "bank": "Bankua",
+    "moneylender": "Mailegu emailea",
+    "insurance": "Asegurua",
+    "health": "Osasuna",
+    "pharmacy": "Farmazia",
+    "condoms": "Kondoi salmenta makina",
+    "optician": "Optika",
+    "medical_supply": "Mediku hornidurak",
+    "hearing_aids": "Entzumen laguntzak",
+    "food": "Janaria",
+    "supermarket": "Supermerkatua",
+    "butcher": "Harakina",
+    "cheese": "Gazta",
+    "convenience": "Denda",
+    "seafood": "Itsaski denda",
+    "greengrocer": "Barazki denda",
+    "grocery": "Janari denda",
+    "farm": "Barazki denda",
+    "marketplace": "Merkatua",
+    "bakery": "Okindegia",
+    "eat": "Jatetxe eta eramateko janaria",
+    "vending_machine": "Makina saltzailea",
+    "restaurant": "Jatetxea",
+    "fast_food": "Janari azkarra",
+    "ice_cream": "Izozki denda",
+    "cafe": "Kafetegia",
+    "drugs": "Medikamenduak",
+    "tobacco": "Tabakoa",
+    "e_cigarette": "Zigarro elektronikoak",
+    "alcohol": "Alkohol denda",
+    "shop": "Dendak",
+    "hardware": "Burdindegia",
+    "mobile_phone": "Mugikor denda",
+    "computer": "Ordenagailu denda",
+    "electronics": "Elektronika denda",
+    "laundry": "Garbitegia",
+    "stationery": "Bulegoko materiala",
+    "newsagent": "Egunkari saltzailea",
+    "pet": "Maskota denda",
+    "agrarian": "Nekazaritzako produktuak",
+    "garden_centre": "Lorategia",
+    "chemist": "Kimikaria",
+    "fabric": "Lantokia",
+    "books": "Liburudenda",
+    "mobility": "Mugikortasuna",
+    "fuel": "Gasolindegia",
+    "car_rental": "Ibilgailu alokairua",
+    "bicycle": "Bizikleta denda",
+    "car": "Garagea",
+    "bicycle_tube": "Bizikleta kamerak saltzeko makina",
+    "public_transport_tickets": "Garraio publiko txartel makina"
+  }
+}
