@@ -9,7 +9,7 @@ CREATE OR REPLACE FUNCTION get_category(tags HSTORE, area VARCHAR) RETURNS VARCH
 BEGIN
 	IF (tags->'amenity' = 'vending_machine' AND tags->'vending' IN ('stamps', 'parcel_mail_in', 'parcel_pickup', 'parcel_pickup;parcel_mail_in')) OR (tags->'amenity' IN ('police', 'post_office', 'bank')) OR (tags->'office' IN ('employment_agency', 'financial', 'insurance')) OR (tags->'shop' IN ('funeral_directors', 'money_lender')) THEN
 		RETURN 'amenity';
-	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'condoms') OR (tags->'amenity' = 'pharmacy') OR (tags->'shop' IN ('optician', 'medical_supply')) OR (tags->'craft' = 'optician') THEN
+	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'condoms') OR (tags->'amenity' = 'pharmacy') OR (tags->'shop' IN ('optician', 'medical_supply', 'hearing_aids')) OR (tags->'craft' = 'optician') THEN
 		RETURN 'health';
 	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'milk') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bread') OR (tags->'shop' IN ('frozen_food', 'supermarket', 'butcher', 'cheese', 'convenience', 'seafood', 'greengrocer', 'deli', 'chocolate', 'tea', 'coffee', 'dairy', 'spices', 'honey', 'health_food', 'pasta', 'cannery', 'farm', 'bakery', 'pastry')) OR (tags->'amenity' = 'marketplace') THEN
 		RETURN 'food';
@@ -17,7 +17,7 @@ BEGIN
 		RETURN 'eat';
 	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'cigarettes') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'e-cigarettes') OR (tags->'shop' IN ('tobacco', 'newsagent;tobacco', 'tobacco;newsagent', 'e-cigarette', 'alcohol', 'beverages', 'wine')) OR (tags->'tobacco' IN ('yes', 'only')) THEN
 		RETURN 'drugs';
-	ELSIF (tags->'shop' = 'stationery' AND area LIKE 'FR%') OR (tags->'shop' = 'agrarian' AND area LIKE 'FR%') OR (tags->'shop' = 'chemist' AND area NOT SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'fabric' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'books' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'books' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'amenity' = 'public_bookcase' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' IN ('doityourself', 'hardware', 'mobile_phone', 'computer', 'electronics', 'dry_cleaning', 'laundry', 'kiosk', 'newsagent', 'pet', 'garden_centre')) OR (tags->'craft' = 'electronics_repair') THEN
+	ELSIF (tags->'shop' = 'stationery' AND area LIKE 'FR%') OR (tags->'shop' = 'agrarian' AND area LIKE 'FR%') OR (tags->'shop' = 'chemist' AND area NOT SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'fabric' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'books' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'books' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'amenity' = 'public_bookcase' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' IN ('doityourself', 'hardware', 'paint', 'glaziery', 'mobile_phone', 'computer', 'electronics', 'dry_cleaning', 'laundry', 'kiosk', 'newsagent', 'pet', 'garden_centre')) OR (tags->'craft' = 'electronics_repair') THEN
 		RETURN 'shop';
 	ELSIF tags->'shop' = 'chemist' AND area SIMILAR TO '(DE|AT|CH)%' THEN
 		RETURN 'chemist';
@@ -57,6 +57,8 @@ BEGIN
 		RETURN 'optician';
 	ELSIF tags->'shop' = 'medical_supply' THEN
 		RETURN 'medical_supply';
+	ELSIF tags->'shop' = 'hearing_aids' THEN
+		RETURN 'hearing_aids';
 	ELSIF tags->'shop' IN ('frozen_food', 'supermarket') THEN
 		RETURN 'supermarket';
 	ELSIF tags->'shop' = 'butcher' THEN
@@ -93,7 +95,7 @@ BEGIN
 		RETURN 'e_cigarette';
 	ELSIF tags->'shop' IN ('alcohol', 'beverages', 'wine') THEN
 		RETURN 'alcohol';
-	ELSIF tags->'shop' IN ('doityourself', 'hardware') THEN
+	ELSIF tags->'shop' IN ('doityourself', 'hardware', 'paint', 'glaziery') THEN
 		RETURN 'hardware';
 	ELSIF tags->'shop' = 'mobile_phone' THEN
 		RETURN 'mobile_phone';

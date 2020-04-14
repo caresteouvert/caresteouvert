@@ -89,6 +89,13 @@
             { "shop": "medical_supply" }
           ],
           "areas": "all"
+        },
+        "hearing_aids": {
+          "name": "Hearing aids",
+          "osm_tags": [
+            { "shop": "hearing_aids" }
+          ],
+          "areas": "all"
         }
       }
     },
@@ -252,7 +259,7 @@
         "hardware": {
           "name": "Hardware",
           "osm_tags": [
-            { "shop": "doityourself|hardware" }
+            { "shop": "doityourself|hardware|paint|glaziery" }
           ],
           "areas": "all"
         },
