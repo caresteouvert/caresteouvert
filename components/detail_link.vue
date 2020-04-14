@@ -18,7 +18,7 @@ export default {
   props: {
     href: {
       type: String,
-      required: true
+      required: false
     },
     icon: {
       type: String,

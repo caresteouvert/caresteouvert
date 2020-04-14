@@ -55,6 +55,11 @@
 
         <v-list>
           <detail-link
+            v-if="hasVending"
+            :title="$t(`details.vending.${point.properties.tags.vending}`)"
+            icon="osm-vending_machine"
+          />
+          <detail-link
             v-if="contact('phone')"
             :href="`tel:${contact('phone')}`"
             :title="contact('phone')"
@@ -210,6 +215,10 @@ export default {
 
     category() {
       return this.point.properties.cat === 'unknown' ? 'other' : this.point.properties.cat;
+    },
+
+    hasVending() {
+      return !this.$t(`details.vending.${this.point.properties.tags.vending}`).startsWith('details.');
     },
 
     type() {
