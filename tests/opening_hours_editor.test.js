@@ -5,7 +5,7 @@ import OpeningHoursInterval from '../components/opening_hours_editor_interval';
 
 describe('OpeningHoursEditor', () => {
   let localVue;
-  const stubs = ['v-dialog', 'v-card', 'v-checkbox', 'v-btn', 'v-icon'];
+  const stubs = ['v-dialog', 'v-card', 'v-checkbox', 'v-btn', 'v-icon', 'v-switch'];
 
   beforeEach(() => {
     localVue = createLocalVue();
