@@ -51,7 +51,11 @@ export default {
   ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
-    optionsPath: './vuetify.options.js'
+    optionsPath: './vuetify.options.js',
+    defaultAssets: {
+      icons: false,
+      font: false
+    }
   },
   /*
   ** Build configuration

@@ -79,6 +79,7 @@
     "containment_opening_hours": "Reguläre Öffnungszeiten",
     "containment_brand_hours": "Öffnungszeiten auf der Webseite",
     "facebook": "Facebook-Seite",
+    "not_accessible": "Innenbereich nicht öffentlich zugänglich",
     "opening_hours": {
       "state_until_date": "{state} bis {date}",
       "state": {
@@ -102,6 +103,10 @@
       "yes": "Abholung möglich",
       "modified": "Abholung abweichend",
       "only": "Nur Abholung"
+    },
+    "drive_through": {
+      "yes": "Drive-in geöffnet",
+      "only": "Nur im Drive-in"
     }
   },
   "opening_hours_editor": {
@@ -121,9 +126,19 @@
   },
   "categories": {
     "other": "Sonstige Orte",
+    "amenity": "Post, Bank & Co. ",
     "police": "Polizei",
-    "pharmacy": "Apotheke",
     "post_office": "Postfiliale",
+    "employment_agency": "Arbeitsagentur",
+    "funeral_directors": "Bestatter",
+    "bank": "Bank",
+    "moneylender": "Geldverleiher",
+    "insurance": "Versicherung",
+    "health": "Apotheke & Gesundheit",
+    "pharmacy": "Apotheke",
+    "condoms": "Kondomautomat",
+    "optician": "Optiker",
+    "medical_supply": "Sanitätshaus",
     "food": "Lebensmittel",
     "supermarket": "Supermarkt",
     "butcher": "Metzger",
@@ -132,7 +147,7 @@
     "seafood": "Fisch",
     "greengrocer": "Gemüse",
     "grocery": "Lebensmittel",
-    "alcohol": "Alkoholgeschäft",
+    "farm": "Hofladen",
     "marketplace": "Wochenmarkt",
     "bakery": "Bäckerei",
     "eat": "Restaurant & Abholung",
@@ -141,8 +156,10 @@
     "fast_food": "Schnellimbiss",
     "ice_cream": "Eis",
     "cafe": "Café",
+    "drugs": "Tabak & Alkohol",
     "tobacco": "Tabakwaren",
     "e_cigarette": "E-Zigarette",
+    "alcohol": "Alkoholgeschäft",
     "shop": "Geschäfte",
     "hardware": "Baumarkt",
     "mobile_phone": "Mobiltelefon",
@@ -150,23 +167,19 @@
     "electronics": "Elektronik",
     "laundry": "Waschsalon",
     "stationery": "Schreibwaren",
-    "medical_supply": "Sanitätshaus",
     "newsagent": "Kiosk",
     "pet": "Tierbedarf",
     "agrarian": "Landhandel",
     "garden_centre": "Gartenbaumarkt",
-    "optician": "Optiker",
-    "employment_agency": "Arbeitsagentur",
-    "funeral_directors": "Bestatter",
     "chemist": "Drogeriemarkt",
-    "finance": "Finanzdienstleistungen",
-    "bank": "Bank",
-    "moneylender": "Geldverleiher",
-    "insurance": "Versicherung",
+    "fabric": "Textilgeschäft",
+    "books": "Buchhandlung",
     "mobility": "Mobiiltät",
     "fuel": "Tankstelle",
     "car_rental": "Autovermietung",
     "bicycle": "Fahrradladen",
-    "car": "Autowerkstatt"
+    "car": "Autowerkstatt",
+    "bicycle_tube": "Fahrradschlauch-Automat",
+    "public_transport_tickets": "Fahrkartenautomat"
   }
 }

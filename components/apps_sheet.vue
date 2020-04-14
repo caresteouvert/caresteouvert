@@ -11,12 +11,12 @@
                 </a>
               </v-col>
               <v-col cols="6" sm="4">
-                <a href="https://www.apple.com/fr/ios/app-store/" target="_blank" rel="noopener">
+                <a href="https://apps.apple.com/fr/app/%C3%A7a-reste-ouvert/id1506199151" target="_blank" rel="noopener">
                   <img src="../assets/appbadge_apple.png" class="img-badge" :alt="$t('apps_info.apple')" />
                 </a>
               </v-col>
               <v-col cols="6" sm="4">
-                <a href="https://f-droid.org/" target="_blank" rel="noopener">
+                <a href="https://f-droid.org/fr/packages/com.transway.caresteouvert/" target="_blank" rel="noopener">
                   <img src="../assets/appbadge_fdroid.png" class="img-badge" :alt="$t('apps_info.fdroid')" />
                 </a>
               </v-col>

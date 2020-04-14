@@ -2,7 +2,7 @@
   <v-row>
     <v-col class="col-2">
       <img
-        src="../assets/openstreetmap.svg"
+        src="~/assets/openstreetmap.svg"
         class="logo"
        />
     </v-col>

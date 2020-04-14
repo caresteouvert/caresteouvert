@@ -1,5 +1,5 @@
 {
-  "apiKey": "g4dFyegDp3zEYbv8nawB",
+  "maptilerApiKey": "g4dFyegDp3zEYbv8nawB",
   "jawgApiKey": "QRajeAKRBSKrFYnU1InkHcNJUZtcArA5xDOetW0CqQzmy9XVRF0IX1sGQ7oHrjaD",
   "mapStyle": "https://api.maptiler.com/maps/basic/style.json?key=",
   "mapZoom": 6,
@@ -35,6 +35,30 @@
     "brand_text": "Ça reste ouvert",
     "government": "https://www.who.int/health-topics/coronavirus"
   },
+  "at": {
+    "domain": "www.bleibtoffen.at",
+    "brand": "bleibtoffen",
+    "brand_text": "Bleibt offen",
+    "government": "https://www.sozialministerium.at/Informationen-zum-Coronavirus/Neuartiges-Coronavirus-(2019-nCov).html",
+    "blog": "https://www.bleibtoffen.org/blog.html",
+    "shopMissing": "https://www.bleibtoffen.org/2020/04/10/geschaeft-fehlt.html",
+    "townhalls": "https://www.bleibtoffen.org/2020/04/11/kommunikationswerkzeug.html",
+    "about": "https://www.bleibtoffen.org/ueber.html",
+    "press": "https://www.bleibtoffen.org/presse.html",
+    "disclaimer": "https://www.bleibtoffen.org/impressum.html"
+  },
+  "ch": {
+    "domain": "www.bleibtoffen.ch",
+    "brand": "bleibtoffen",
+    "brand_text": "Bleibt offen",
+    "government": "https://www.bag.admin.ch/bag/de/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/novel-cov.html",
+    "blog": "https://www.bleibtoffen.org/blog.html",
+    "shopMissing": "https://www.bleibtoffen.org/2020/04/10/geschaeft-fehlt.html",
+    "townhalls": "https://www.bleibtoffen.org/2020/04/11/kommunikationswerkzeug.html",
+    "about": "https://www.bleibtoffen.org/ueber.html",
+    "press": "https://www.bleibtoffen.org/presse.html",
+    "disclaimer": "https://www.bleibtoffen.org/impressum.html"
+  },
   "de": {
     "domain": "www.bleibtoffen.de",
     "brand": "bleibtoffen",
@@ -51,17 +75,20 @@
     "domain": "esobert.osmcatala.cat",
     "brand": "esobert",
     "brand_text": "És Obert",
-    "government": "https://www.gouvernement.fr/info-coronavirus"
+    "government": "https://web.gencat.cat/ca/coronavirus/index.html",
+    "shopMissing": "/ca/que-fer-si-falta-un-comerc-a-es-obert/"
   },
   "es": {
     "domain": "sigueabierto.openstreetmap.es",
     "brand": "sigueabierto",
     "brand_text": "Sigue Abierto",
-    "government": "https://www.gouvernement.fr/info-coronavirus"
+    "government": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/home.htm",
+    "shopMissing": "/es/que-hacer-si-falta-un-comercio-en-sigue-abierto/"
   },
   "gl": {
     "brand": "segueaberto",
     "brand_text": "Segue Aberto",
-    "government": "https://www.gouvernement.fr/info-coronavirus"
+    "government": "https://coronavirus.sergas.es/?idioma=ga",
+    "shopMissing": "/gl/que-facer-se-falla-un-negocio-no-segues-aberto/"
   }
 }

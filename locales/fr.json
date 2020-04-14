@@ -86,6 +86,7 @@
     "containment_opening_hours": "Horaires d'ouverture hors-confinement",
     "containment_brand_hours": "Horaires sur le site web de l'enseigne",
     "facebook": "Page Facebook",
+    "not_accessible": "L'intérieur n'est pas accessible au public",
     "opening_hours": {
       "state_until_date": "{state} jusqu'à {date}",
       "state": {
@@ -109,6 +110,10 @@
       "yes": "Vente à emporter proposée",
       "modified": "Vente à emporter adaptée",
       "only": "Vente à emporter uniquement"
+    },
+    "drive_through": {
+      "yes": "Service de drive disponible",
+      "only": "Uniquement par drive"
     }
   },
   "opening_hours_editor": {
@@ -128,9 +133,19 @@
   },
   "categories": {
     "other": "Autres établissements",
+    "amenity": "Services pratiques",
     "police": "Police",
-    "pharmacy": "Pharmacie",
     "post_office": "Bureau de poste",
+    "employment_agency": "Agence pour l'emploi",
+    "funeral_directors": "Pompes funèbres",
+    "bank": "Banque & assurances",
+    "moneylender": "Prêteur",
+    "insurance": "Assurance",
+    "health": "Santé",
+    "pharmacy": "Pharmacie",
+    "condoms": "Distributeur de préservatifs",
+    "optician": "Opticien",
+    "medical_supply": "Matériel médical",
     "food": "Alimentation",
     "supermarket": "Supermarché",
     "butcher": "Boucherie",
@@ -140,7 +155,6 @@
     "greengrocer": "Primeur",
     "grocery": "Épicerie",
     "farm": "Magasin à la ferme",
-    "alcohol": "Vente d'alcool",
     "marketplace": "Marché",
     "bakery": "Boulangerie",
     "eat": "Restauration",
@@ -149,8 +163,10 @@
     "fast_food": "Restauration rapide",
     "ice_cream": "Glacier",
     "cafe": "Café",
+    "drugs": "Tabac & alcool",
     "tobacco": "Tabac",
     "e_cigarette": "E-cigarette",
+    "alcohol": "Vente d'alcool",
     "shop": "Boutiques",
     "hardware": "Bricolage",
     "mobile_phone": "Téléphonie mobile",
@@ -158,24 +174,19 @@
     "electronics": "Matériel électronique",
     "laundry": "Laverie",
     "stationery": "Fournitures",
-    "medical_supply": "Matériel médical",
     "newsagent": "Journaux",
     "pet": "Animalerie",
     "agrarian": "Produits pour l'agriculture",
     "garden_centre": "Jardinerie",
-    "optician": "Opticien",
-    "employment_agency": "Agence pour l'emploi",
-    "funeral_directors": "Pompes funèbres",
     "chemist": "Droguerie",
     "fabric": "Tissus",
-    "finance": "Services financiers",
-    "bank": "Banque & assurances",
-    "moneylender": "Prêteur ",
-    "insurance": "Assurance",
+    "books": "Librairie",
     "mobility": "Mobilité",
     "fuel": "Station-service",
     "car_rental": "Location de voiture",
     "bicycle": "Magasin de vélos",
-    "car": "Garage"
+    "car": "Garage",
+    "bicycle_tube": "Distributeur de chambres à air pour vélos",
+    "public_transport_tickets": "Distributeur de tickets de transport"
   }
 }

@@ -17,7 +17,7 @@ export default {
       title: this.$t('title'),
       meta: [
         { hid: 'description', name: 'description', content: description },
-        { hid: 'twittercard', name: 'twitter:card', content: 'summary' },
+        { hid: 'twittercard', name: 'twitter:card', content: 'summary_large_image' },
         { hid: 'twittersite', name: 'twitter:site', content: '@caresteouvert' },
         { hid: 'ogtype', property: 'og:type',  content: 'website' },
         { hid: 'ogurl', property: 'og:url',  content: this.$rootUrl },

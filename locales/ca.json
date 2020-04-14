@@ -1,7 +1,7 @@
 {
   "lang": "Català",
   "covid19-alert": "Segueix les recomanacions del govern. La responsabilitat és TEVA.",
-  "title": "Es manté obert",
+  "title": "És obert",
   "subtitle": "Llocs que es mantenen oberts durant el confinament",
   "subtitle-dense": "Llocs oberts durant el confinament",
   "search": "Escriu la cerca",
@@ -21,7 +21,7 @@
     "townhalls": "Ajuntaments, useu «{brand}»!"
   },
   "rgpd": {
-    "consent": "En aquest temp de tancament, vols acceptar una galeta en l'ordinador per a les nostres estadístiques?",
+    "consent": "En aquests temps de tancament, vols acceptar una galeta en l'ordinador per a les nostres estadístiques?",
     "yes": "Sí",
     "no": "No"
   },
@@ -79,6 +79,7 @@
     "containment_opening_hours": "Horari d'obertura durant el confinament",
     "containment_brand_hours": "Horari d'obertura a la web de la marca",
     "facebook": "Pàgina de Facebook",
+    "not_accessible": "Espai interior no accessible al públic",
     "opening_hours": {
       "state_until_date": "{state} fins {date}",
       "state": {
@@ -102,6 +103,10 @@
       "yes": "Venda per emportar-se disponible",
       "modified": "Venda per emportar-se modificada",
       "only": "Només per emportar-se"
+    },
+    "drive_through": {
+      "yes": "Servei des de l'automòbil disponible",
+      "only": "Només servei des de l'automòbil"
     }
   },
   "opening_hours_editor": {
@@ -121,9 +126,19 @@
   },
   "categories": {
     "other": "Altres llocs",
+    "amenity": "Servei",
     "police": "Policia",
-    "pharmacy": "Farmàcia",
     "post_office": "Oficina de correus",
+    "employment_agency": "Agència de treball",
+    "funeral_directors": "Tanatori i funerària",
+    "bank": "Banc",
+    "moneylender": "Prestamista",
+    "insurance": "Assegurances",
+    "health": "Salut",
+    "pharmacy": "Farmàcia",
+    "condoms": "Màquina de venda de preservatius",
+    "optician": "Òptica",
+    "medical_supply": "Subministres mèdics",
     "food": "Menjar",
     "supermarket": "Supermercat",
     "butcher": "Carnisseria",
@@ -132,7 +147,7 @@
     "seafood": "Ultramarins / Peixateria",
     "greengrocer": "Fruiteria / Verduleria",
     "grocery": "Ultramarins",
-    "alcohol": "Celler / Licoreria",
+    "farm": "Botiga ramadera",
     "marketplace": "Mercat ambulant",
     "bakery": "Fleca o forn de pa",
     "eat": "Restaurant i per emportar-se",
@@ -141,8 +156,10 @@
     "fast_food": "Menjar ràpid",
     "ice_cream": "Gelateria",
     "cafe": "Cafeteria",
+    "drugs": "Drogues i medicaments",
     "tobacco": "Estanc",
     "e_cigarette": "Cigarretes electròniques",
+    "alcohol": "Celler / Licoreria",
     "shop": "Botigues",
     "hardware": "Ferreteria",
     "mobile_phone": "Mòbils",
@@ -150,23 +167,19 @@
     "electronics": "Electrònica",
     "laundry": "Bugaderia",
     "stationery": "Papereria",
-    "medical_supply": "Subministres mèdics",
     "newsagent": "Diaris i quioscos",
     "pet": "Botiga d'animals",
     "agrarian": "Productes agrícoles",
     "garden_centre": "Jardineria",
-    "optician": "Òptica",
-    "employment_agency": "Agència de treball",
-    "funeral_directors": "Tanatori i funerària",
     "chemist": "Adrogueria",
-    "finance": "Serveis financers",
-    "bank": "Banc",
-    "moneylender": "Prestamista",
-    "insurance": "Assegurances",
+    "fabric": "Fàbrica",
+    "books": "Llibreria",
     "mobility": "Mobilitat",
     "fuel": "Benzinera",
     "car_rental": "Lloguer de cotxes",
     "bicycle": "Botiga de bicicletes",
-    "car": "Reparació de vehicles"
+    "car": "Reparació de vehicles",
+    "bicycle_tube": "Màquina de venda de càmeres de bicicletes",
+    "public_transport_tickets": "Màquina de venda de bitllets de transport públic"
   }
 }

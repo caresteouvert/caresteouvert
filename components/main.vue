@@ -43,12 +43,13 @@
               v-if="mapZoom < minZoomPoi"
               color="primary"
               class="zoom-chip mb-6"
+              :class="{ 'push-up': !rgpdBannerHidden }"
               @click="mapZoom = minZoomPoi"
             >
               {{ $t('zoomtosee') }}
             </v-chip>
           </v-slide-y-reverse-transition>
-          <rgpd-banner />
+          <rgpd-banner @consent="rgpdBannerHidden = true" />
           <apps-sheet />
         </client-only>
       </v-content>
@@ -95,9 +96,9 @@ export default {
       mapStyle: null,
       mapCenter: null,
       mapZoom: null,
-      mapStyle: `${config.mapStyle}${config.apiKey}`,
       filter: '',
       categories: [],
+      rgpdBannerHidden: false,
       minZoomPoi: config.minZoomPoi
     };
   },
@@ -145,7 +146,7 @@ export default {
         a.href = a.href
         return a.href
       }
-      return fetch(`${config.mapStyle}${config.apiKey}`)
+      return fetch(`${config.mapStyle}${config.maptilerApiKey}`)
         .then(res => res.json())
         .then((data) => {
           data.sprite = createWebUrl('/sprite/caresteouvert');
@@ -267,6 +268,9 @@ export default {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+.zoom-chip.push-up {
+  bottom: 60px;
 }
 .xs .mapboxgl-ctrl-top-right {
   top: 50px;
