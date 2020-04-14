@@ -89,7 +89,7 @@ export default {
   data() {
     return {
       shortcutDays: {
-        'weekdays': ['mo', 'tu', 'we', 'th', 'fr']
+        'weekdays': ['mo', 'tu', 'we', 'th', 'fr', 'sa']
       },
       weekDays: ['mo', 'tu', 'we', 'th', 'fr', 'sa', 'su', 'ph'],
       weekDaysName: {
