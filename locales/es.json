@@ -35,6 +35,9 @@
     "sunday": "Domingo",
     "ph": "Vacaciones"
   },
+  "day_shortcuts": {
+    "weekdays": "Lunes a Sábado"
+  },
   "contribute_form": {
     "title": "Contribuir",
     "step1": {
