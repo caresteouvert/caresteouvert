@@ -39,7 +39,7 @@ Para crear el comercio que falta, sitúa el mapa donde está este, haz clic en e
 
 Luego, usando el campo de búsqueda, indica el tipo de comercio que deseas crear.
 
-![el campo búsqueda te permite encontrar fácilmente la categoría de comercios a crear](~/assets/es/3_Tipo_de comercio.png)
+![el campo búsqueda te permite encontrar fácilmente la categoría de comercios a crear](~/assets/es/3_Tipo_de_comercio.png)
 
 _Consejo: Si deseas informar de una empresa franquiciada o perteneciente a una red, también puedes buscar el nombre de la marca (por ejemplo 'BBVA')_
 
@@ -59,7 +59,7 @@ Cuando hayas terminado, todo lo que tienes que hacer es guardar los cambios haci
 
 Agrega un pequeño mensaje para indicar lo que has cambiado en el mapa, luego haz clic en el botón 'Subir'.
 
-![indica que has hecho cambios con el botón azul](~/assets/es/6_Subir a OSM.png)
+![indica que has hecho cambios con el botón azul](~/assets/es/6_Subir_a_OSM.png)
 
 #### ¡Listo!
 
