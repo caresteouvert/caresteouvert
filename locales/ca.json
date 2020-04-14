@@ -35,6 +35,9 @@
     "sunday": "Diumenge",
     "ph": "Vacances"
   },
+  "day_shortcuts": {
+    "weekdays": "De dilluns a dissabte"
+  },
   "contribute_form": {
     "title": "Contribueix",
     "step1": {
