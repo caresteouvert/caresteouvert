@@ -1,7 +1,8 @@
 ---
 title: "Contribuyentes de OpenStreetMap, ayudadnos a completar el mapa de España de tiendas franquiciadas"
-coverImage: "3_Brand_con_ID.png"
 ---
+
+![](~assets/es/3_Brand_con_ID.png)
 
 En respuesta a la situación excepcional que estamos experimentando actualmente, muchas empresas han tomado medidas a escala nacional que están afectando a la mayoría de sus tiendas. Por ejemplo, todos los supermercados Mercadona están abiertos pero con horarios nuevos mientras que todas las tiendas Norauto están cerradas hasta nuevo aviso.
 

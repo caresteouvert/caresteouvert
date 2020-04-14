@@ -1,7 +1,8 @@
 ---
 title: "¿Qué hacer si falta un negocio en 'Sigue abierto'?"
-coverImage: "3_Tipo_de_comercio.png"
 ---
+
+![](~/assets/es/3_Tipo_de_comercio.png)
 
 ¿No encuentras tu panadería o farmacia habitual en [Sigue abierto](https://sigueabierto.openstreetmap.es) ? Sigue esta guía para ayudarnos a mejorar nuestro mapa colaborativo de sitios accesibles durante el Estado de Alarma.
 
