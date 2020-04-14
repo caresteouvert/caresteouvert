@@ -110,6 +110,17 @@
     "drive_through": {
       "yes": "Drive-in geöffnet",
       "only": "Nur im Drive-in"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Briefmarken",
+      "parcel_mail_in": "Paketautomat (nur Versand)",
+      "parcel_pickup": "Paketautomat (nur Abholung)",
+      "parcel_pickup;parcel_mail_in": "Paketautomat (Abholung & Versand)",
+      "milk": "Milch",
+      "drinks": "Getränke",
+      "water": "Wasser",
+      "sweets": "Süßigkeiten"
     }
   },
   "opening_hours_editor": {
@@ -142,6 +153,7 @@
     "condoms": "Kondomautomat",
     "optician": "Optiker",
     "medical_supply": "Sanitätshaus",
+    "hearing_aids": "Hörgeräte",
     "food": "Lebensmittel",
     "supermarket": "Supermarkt",
     "butcher": "Metzger",
