@@ -1,16 +1,17 @@
 import glob from 'glob';
 import { resolve, basename, join } from 'path';
 import config from '../config.json';
+import { countries } from '../categories';
 
 const messages = {};
 glob.sync('./locales/*.json' ).forEach((file) => {
   const locale = basename(file, '.json');
   messages[locale] = require(resolve(file));
 });
-const domains = Object.keys(messages).map((locale) => {
+const domains = countries.map(c => c.toLowerCase()).map((country) => {
   return {
-    domain: config[locale] && config[locale].domain,
-    locale: locale
+    domain: config[country] && config[country].domain,
+    locale: (config[country] && config[country].locale) || country
   };
 }).filter(v => v.domain);
 
