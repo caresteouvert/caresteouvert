@@ -79,6 +79,7 @@
     "containment_opening_hours": "Horario de apertura en periodo normal",
     "containment_brand_hours": "Horas de apertura en la página web de la marca",
     "facebook": "Página de Facebook",
+    "not_accessible": "Espacio interior no accesible al público",
     "opening_hours": {
       "state_until_date": "{state} hasta {date}",
       "state": {
@@ -102,6 +103,10 @@
       "yes": "Venta para llevar disponible",
       "modified": "Modificado a ventas para llevar",
       "only": "Solo venta para llevar"
+    },
+    "drive_through": {
+      "yes": "Servicio al coche disponible",
+      "only": "Solo servicio al coche"
     }
   },
   "opening_hours_editor": {
@@ -121,9 +126,19 @@
   },
   "categories": {
     "other": "Otros lugares",
+    "amenity": "Servicios",
     "police": "Policía",
-    "pharmacy": "Farmacias",
     "post_office": "Oficinas de correos",
+    "employment_agency": "Agencia de empleo",
+    "funeral_directors": "Funerarias",
+    "bank": "Bancos",
+    "moneylender": "Prestamista",
+    "insurance": "Aseguradora",
+    "health": "Salud",
+    "pharmacy": "Farmacias",
+    "condoms": "Máquinas expendedoras de condones",
+    "optician": "Óptica",
+    "medical_supply": "Suministros médicos",
     "food": "Alimentación",
     "supermarket": "Supermercado",
     "butcher": "Carnicería",
@@ -132,7 +147,7 @@
     "seafood": "Pescadería",
     "greengrocer": "Verdulería",
     "grocery": "Ultramarinos",
-    "alcohol": "Licorería",
+    "farm": "Venta directa del productor",
     "marketplace": "Mercado",
     "bakery": "Panaderías",
     "eat": "Restaurantes y para llevar",
@@ -141,8 +156,10 @@
     "fast_food": "Comida rápida",
     "ice_cream": "Heladerías",
     "cafe": "Cafeterías",
+    "drugs": "Medicamentos",
     "tobacco": "Estancos",
     "e_cigarette": "Cigarrillos electrónicos",
+    "alcohol": "Licorería",
     "shop": "Tiendas",
     "hardware": "Ferretería",
     "mobile_phone": "Telefonía móvil",
@@ -150,23 +167,19 @@
     "electronics": "Electrónica",
     "laundry": " Lavandería",
     "stationery": "Papelería",
-    "medical_supply": "Suministros médicos",
     "newsagent": "Vendedor de periódicos",
     "pet": "Tienda de mascotas",
     "agrarian": "Productos agrícolas",
     "garden_centre": "Jardinería",
-    "optician": "Óptica",
-    "employment_agency": "Agencia de empleo",
-    "funeral_directors": "Funerarias",
     "chemist": "Droguerías",
-    "finance": "Servicios financieros",
-    "bank": "Bancos",
-    "moneylender": "Prestamista",
-    "insurance": "Aseguradora",
+    "fabric": "Tiendas textil",
+    "books": "Librerías",
     "mobility": "Movilidad",
     "fuel": "Gasolinera",
     "car_rental": "Alquiler de coches",
     "bicycle": "Tienda de bicicletas",
-    "car": "Garaje"
+    "car": "Garaje",
+    "bicycle_tube": "Máquina expendedora de cámaras para bicicleta",
+    "public_transport_tickets": "Máquina expendedora de billetes de transporte público"
   }
 }
