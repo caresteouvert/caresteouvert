@@ -113,7 +113,7 @@
     }
   },
   "opening_hours_editor": {
-    "select_days": "Sélectionnez les jours",
+    "select_days": "Sélectionnez les jours qui ont les même horaires d'ouverture",
     "next": "Sélectionnez les horaires",
     "select_time": {
       "start": "Entrer l'horaire d'ouverture",

@@ -124,7 +124,7 @@
     }
   },
   "opening_hours_editor": {
-    "select_days": "Select days",
+    "select_days": "Select days that share the same opening hours",
     "next": "Select hours",
     "select_time": {
       "start": "Choose opening hour",
