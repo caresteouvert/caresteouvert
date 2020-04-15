@@ -110,6 +110,17 @@
     "drive_through": {
       "yes": "Servei des de l'automòbil disponible",
       "only": "Només servei des de l'automòbil"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Segells",
+      "parcel_mail_in": "Bústia d'entrega",
+      "parcel_pickup": "Bústia de recollida",
+      "parcel_pickup;parcel_mail_in": "Bústia d'entrega i recollida",
+      "milk": "Llet",
+      "drinks": "Begudes",
+      "water": "Aigua",
+      "sweets": "Llaminadures"
     }
   },
   "opening_hours_editor": {
@@ -142,6 +153,7 @@
     "condoms": "Màquina de venda de preservatius",
     "optician": "Òptica",
     "medical_supply": "Subministres mèdics",
+    "hearing_aids": "Audiòfons",
     "food": "Menjar",
     "supermarket": "Supermercat",
     "butcher": "Carnisseria",
