@@ -6,7 +6,7 @@
     "description": "A collaborative map of open places during COVID-19 lockdowns. Enables everyone to report changes using a simple and standardised form.",
     "project_url": "https://www.caresteouvert.fr/",
     "doc_url": "https://github.com/osmontrouge/caresteouvert",
-    "icon_url": "https://raw.githubusercontent.com/osmontrouge/caresteouvert/master/images/favicon.png",
+    "icon_url": "https://raw.githubusercontent.com/osmontrouge/caresteouvert/master/static/favicon.png",
     "contact_name": "Florian Lainez",
     "contact_email": "florian@caresteouvert.fr"
   },
