@@ -35,9 +35,6 @@
     "sunday": "Diumenge",
     "ph": "Vacances"
   },
-  "day_shortcuts": {
-    "weekdays": "De dilluns a dissabte"
-  },
   "contribute_form": {
     "title": "Contribueix",
     "step1": {
@@ -124,7 +121,10 @@
     }
   },
   "opening_hours_editor": {
-    "select_days": "Selecciona els dies",
+    "day_shortcuts": {
+      "weekdays": "De dilluns a dissabte"
+    },
+    "select_days": "Selecciona els dies que comparteixen el mateix horari d'obertura.",
     "next": "Selecciona les hores",
     "select_time": {
       "start": "Tria l'horari d'obertura",
@@ -171,7 +171,7 @@
     "fast_food": "Menjar ràpid",
     "ice_cream": "Gelateria",
     "cafe": "Cafeteria",
-    "drugs": "Drogues i medicaments",
+    "drugs": "Tabac, alcohol i medicaments",
     "tobacco": "Estanc",
     "e_cigarette": "Cigarretes electròniques",
     "alcohol": "Celler / Licoreria",
