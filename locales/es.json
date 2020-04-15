@@ -35,9 +35,6 @@
     "sunday": "Domingo",
     "ph": "Vacaciones"
   },
-  "day_shortcuts": {
-    "weekdays": "Lunes a Sábado"
-  },
   "contribute_form": {
     "title": "Contribuir",
     "step1": {
@@ -110,10 +107,24 @@
     "drive_through": {
       "yes": "Servicio al coche disponible",
       "only": "Solo servicio al coche"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Sellos",
+      "parcel_mail_in": "Buzón",
+      "parcel_pickup": " Recogida de paquetes",
+      "parcel_pickup;parcel_mail_in": "Recogida de paquetes y buzón",
+      "milk": "Leche",
+      "drinks": "Bebidas",
+      "water": "Agua",
+      "sweets": "Dulces"
     }
   },
   "opening_hours_editor": {
-    "select_days": "Seleccionar días",
+    "day_shortcuts": {
+      "weekdays": "Lunes a Sábado"
+    },
+    "select_days": " \nSeleccione los días que compartan el mismo horario",
     "next": "Seleccionar horas",
     "select_time": {
       "start": "Elegir hora de apertura",
@@ -142,6 +153,7 @@
     "condoms": "Máquinas expendedoras de condones",
     "optician": "Óptica",
     "medical_supply": "Suministros médicos",
+    "hearing_aids": "Audífonos",
     "food": "Alimentación",
     "supermarket": "Supermercado",
     "butcher": "Carnicería",
