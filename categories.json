@@ -147,7 +147,7 @@
         "grocery": {
           "name": "Grocery",
           "osm_tags": [
-            { "shop": "deli|chocolate|tea|coffee|dairy|spices|honey|health_food|pasta|cannery" },
+            { "shop": "deli|chocolate|tea|coffee|dairy|spices|honey|health_food|pasta|cannery|confectionery" },
             { "amenity": "vending_machine", "vending": "milk" }
           ],
           "areas": "all"
