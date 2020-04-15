@@ -35,9 +35,6 @@
     "sunday": "Igandea",
     "ph": "Jai egunak"
   },
-  "day_shortcuts": {
-    "weekdays": "Astelehenetik larunbatera"
-  },
   "contribute_form": {
     "title": "Lagundu",
     "step1": {
@@ -124,7 +121,10 @@
     }
   },
   "opening_hours_editor": {
-    "select_days": "Egunak aukeratu",
+    "day_shortcuts": {
+      "weekdays": "Astelehenetik larunbatera"
+    },
+    "select_days": "Aukeratu irekiera ordu berdinak dituzten egunak",
     "next": "Orduak aukeratu",
     "select_time": {
       "start": "Aukeratu irekiera ordua",
