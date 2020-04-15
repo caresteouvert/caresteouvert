@@ -25,6 +25,11 @@
           <v-list-item-content class="ml-2 py-1">
             <v-list-item-title>{{ $t(`categories.${category}`) }}</v-list-item-title>
           </v-list-item-content>
+          <v-list-item-action v-if="value === category">
+            <v-btn icon>
+              <v-icon>osm-close</v-icon>
+            </v-btn>
+          </v-list-item-action>
         </v-list-item>
       </v-list-item-group>
     </v-list>
