@@ -1,5 +1,5 @@
 ---
-title: "Llamada pública para contribuir en la web "Sigue abierto""
+title: "Llamada pública para contribuir en la web 'Sigue abierto'"
 date: "2020-04-15"
 ---
 
