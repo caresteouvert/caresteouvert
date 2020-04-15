@@ -35,9 +35,6 @@
     "sunday": "Sunday",
     "ph": "Public holidays"
   },
-  "day_shortcuts": {
-    "weekdays": "Monday to Saturday"
-  },
   "contribute_form": {
     "title": "Contribute",
     "step1": {
@@ -124,6 +121,9 @@
     }
   },
   "opening_hours_editor": {
+    "day_shortcuts": {
+      "weekdays": "Monday to Saturday"
+    },
     "select_days": "Select days that share the same opening hours",
     "next": "Select hours",
     "select_time": {

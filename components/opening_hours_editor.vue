@@ -40,7 +40,7 @@
           <v-switch
             v-for="(days, shortcut) in shortcutDays"
             :key="shortcut"
-            :label="$t(`day_shortcuts.${shortcut}`)"
+            :label="$t(`opening_hours_editor.day_shortcuts.${shortcut}`)"
             :value="days.every(day => selectedWeekDays.includes(day))"
             :disabled="days.some(day => disabledWeekDays.includes(day))"
             @change="value => toggleSelectedWeekDays(value, ...days)"

@@ -35,9 +35,6 @@
     "sunday": "Dimanche",
     "ph": "Jours fériés"
   },
-  "day_shortcuts": {
-    "weekdays": "Du lundi au samedi"
-  },
   "contribute_form": {
     "title": "Contribuer",
     "step1": {
@@ -113,6 +110,9 @@
     }
   },
   "opening_hours_editor": {
+    "day_shortcuts": {
+      "weekdays": "Du lundi au samedi"
+    },
     "select_days": "Sélectionnez les jours qui ont les même horaires d'ouverture",
     "next": "Sélectionnez les horaires",
     "select_time": {
