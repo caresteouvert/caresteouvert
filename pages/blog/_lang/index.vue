@@ -34,6 +34,12 @@ context.keys().forEach((file) => {
 export default {
   mixins: [i18nMixin],
 
+  head() {
+    return {
+      title: `Blog - ${this.$t('title')}`
+    };
+  },
+
   data() {
     return { lang: this.$route.params.lang, posts: [] };
   },
