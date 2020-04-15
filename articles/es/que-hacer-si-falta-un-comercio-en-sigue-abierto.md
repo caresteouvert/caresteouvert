@@ -4,13 +4,13 @@ title: "¿Qué hacer si falta un negocio en 'Sigue abierto'?"
 
 ![](~/assets/es/3_Tipo_de_comercio.png)
 
-¿No encuentras tu panadería o farmacia habitual en [Sigue abierto](https://sigueabierto.openstreetmap.es) ? Sigue esta guía para ayudarnos a mejorar nuestro mapa colaborativo de sitios accesibles durante el Estado de Alarma.
+*¿No encuentras tu panadería o farmacia habitual en [Sigue abierto](https://sigueabierto.openstreetmap.es) ? Sigue esta guía para ayudarnos a mejorar nuestro mapa colaborativo de sitios accesibles durante el Estado de Alarma.*
 
 
 **Sigue abierto** se basa en los datos de [OpenStreetMap](http://openstreetmap.org) (OSM). OSM es un poco como la 'Wikipedia de la cartografía': un mapa del mundo que puedes enriquecer en función de tu conocimiento local.
 
 
-Y eso es lo que vamos a hacer: ¡modificar el mapa para agregar ese comercio que falta!
+Y eso es lo que vamos a hacer, ¡modificar el mapa para agregar ese comercio que falta!
 
 #### Primer paso: crear una cuenta
 
@@ -47,7 +47,7 @@ _Consejo: Si deseas informar de una empresa franquiciada o perteneciente a una r
 
 Completa la información sobre el comercio, como su nombre o número de teléfono.
 
-No tienes que completar todo el formulario, si no recuerdas el nombre del restaurante, no importa.
+No tienes que completar todo el formulario, si no recuerdas el nombre de la farmacia, no importa.
 
 ![](~/assets/es/4_Editar_elemento.png)
 
@@ -65,13 +65,13 @@ Agrega un pequeño mensaje para indicar lo que has cambiado en el mapa, luego ha
 
 ¡Felicidades por esta primera contribución y bienvenido a la comunidad OpenStreetMap!
 
-Ahora hay que esperar: los nuevos negocios se agregan regularmente y automáticamente a  **Sigue Abierto**. Puedes indicar cualquier información adicional útil durante el Estado de Alarma directamente allí.
+Ahora hay que esperar, los nuevos negocios se agregan regularmente y automáticamente a  **Sigue Abierto**. Puedes indicar cualquier información adicional útil durante el Estado de Alarma directamente allí.
 
 #### Algunas observaciones adicionales
 
-Antes de crear el negocio, examina cuidadosamente los alrededores: puede que ya esté allí, pero con el tipo incorrecto.
+Antes de crear el negocio, examina cuidadosamente los alrededores, puede que ya esté allí, pero con el tipo incorrecto.
 
-OpenStreetMap es un mapa público: no ingreses ningún dato personal sobre ti o los comercios que describas.
+OpenStreetMap es un mapa público, no ingreses ningún dato personal sobre ti o los comercios que describas.
 
 No copies la información de otros mapas, generalmente están protegidos por derechos de autor.
 
