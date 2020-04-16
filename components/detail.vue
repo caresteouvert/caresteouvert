@@ -74,6 +74,11 @@
             :title="contact('mobile')"
             icon="osm-mobile_phone"
           />
+          <detail-link
+            v-if="contact('fax')"
+            :title="contact('fax')"
+            icon="osm-fax"
+          />
 
           <detail-link
             v-if="contact('email')"
