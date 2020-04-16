@@ -4,7 +4,7 @@ title: "¿Qué hacer si falta un negocio en 'Sigue abierto'?"
 
 ![](~/assets/es/3_Tipo_de_comercio.png)
 
-*¿No encuentras tu panadería o farmacia habitual en [Sigue abierto](https://sigueabierto.openstreetmap.es) ? Sigue esta guía para ayudarnos a mejorar nuestro mapa colaborativo de sitios accesibles durante el Estado de Alarma.*
+*¿No encuentras tu panadería o farmacia habitual en [Sigue abierto](https://www.sigueabierto.es) ? Sigue esta guía para ayudarnos a mejorar nuestro mapa colaborativo de sitios accesibles durante el Estado de Alarma.*
 
 
 **Sigue abierto** se basa en los datos de [OpenStreetMap](http://openstreetmap.org) (OSM). OSM es un poco como la 'Wikipedia de la cartografía': un mapa del mundo que puedes enriquecer en función de tu conocimiento local.
