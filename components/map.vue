@@ -171,16 +171,16 @@ export default {
     },
 
     layers() {
+      const [categories, subcategories] = this.filter.reduce(([categories, subcategories], category) => {
+        if (category.indexOf('/') === -1) {
+          return [[...categories, category], subcategories];
+        } else {
+          return [categories, [...subcategories, category.split('/')[1]]];
+        }
+      }, [[], []]);
       return layers.map((layer) => {
         if (this.filter.length !== 0) {
           const newLayer = { ...layer, filter: [ "any" ] };
-          const [categories, subcategories] = this.filter.reduce(([categories, subcategories], category) => {
-            if (category.indexOf('/') === -1) {
-              return [[...categories, category], subcategories];
-            } else {
-              return [categories, [...subcategories, category.split('/')[1]]];
-            }
-          }, [[], []]);
           newLayer.filter.push([
             "in",
             "normalized_cat",
