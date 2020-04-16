@@ -131,7 +131,7 @@
       "end": "Entrer l'horaire de fermeture"
     },
     "add_interval": "Ajouter un horaire",
-    "add_new_days": "Ajouter des jours d'ouverture"
+    "add_new_days": "Ajouter des jours…"
   },
   "osm_link": {
     "title": "« {brand} » utilise les données OpenStreetMap.",
