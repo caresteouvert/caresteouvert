@@ -19,7 +19,6 @@
         <osm-sidebar>
           <osm-filter-features
             v-model="filter"
-            :categories="categories"
           />
         </osm-sidebar>
       </v-navigation-drawer>
@@ -92,7 +91,7 @@ export default {
       mapStyle: null,
       mapCenter: null,
       mapZoom: null,
-      filter: '',
+      filter: [],
       rgpdBannerHidden: false,
       minZoomPoi: config.minZoomPoi
     };
@@ -104,7 +103,7 @@ export default {
     this.sidebar = !this.isMobile;
 
     const { filter, location } = decode(this.featuresAndLocation);
-    this.filter = filter;
+    //this.filter = filter;
 
     Promise.all([
       this.loadInitialLocation(location),
@@ -237,7 +236,7 @@ export default {
         .then((res) => {
           const country = res.split('-')[0];
           this.$store.commit('setCountry', country);
-          this.filter = this.categories.includes(this.filter) ? this.filter : '';
+          //this.filter = this.categories.includes(this.filter) ? this.filter : '';
         });
     },
 
