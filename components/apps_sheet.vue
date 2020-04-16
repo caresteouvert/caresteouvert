@@ -41,8 +41,9 @@ export default {
   data() {
     const seen = localStorage.getItem(APPS_INFO_LOCAL_STORAGE);
     const isApp = this.$route.query.fromapp && this.$route.query.fromapp.startsWith("t");
+    const isFr = this.$i18n.locale.startsWith("fr");
     return {
-      show: !isApp && !this.isInIframe() && seen === null
+      show: !isApp && isFr && !this.isInIframe() && seen === null
     };
   },
 
