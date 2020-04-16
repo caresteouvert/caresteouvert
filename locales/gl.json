@@ -35,9 +35,6 @@
     "sunday": "Domingo",
     "ph": "Vacacións"
   },
-  "day_shortcuts": {
-    "weekdays": "De luns a sábado"
-  },
   "contribute_form": {
     "title": "Contribuír",
     "step1": {
@@ -110,10 +107,24 @@
     "drive_through": {
       "yes": "Recollida con coche dispoñíbel",
       "only": "Só recollida con coche"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Selos",
+      "parcel_mail_in": "Caixa de entrega",
+      "parcel_pickup": "Recollida de paquetaría",
+      "parcel_pickup;parcel_mail_in": "Recollida de paquetaría e caixa de entrega",
+      "milk": "Leite",
+      "drinks": "Bebidas",
+      "water": "Auga",
+      "sweets": "Doces"
     }
   },
   "opening_hours_editor": {
-    "select_days": "Escoller días",
+    "day_shortcuts": {
+      "weekdays": "De luns a sábado"
+    },
+    "select_days": "Escolle os días que compartan o mesmo horario",
     "next": "Escoller horas",
     "select_time": {
       "start": "Escoller horario de apertura",
@@ -142,6 +153,7 @@
     "condoms": "Máquinas expendedoras de condóns",
     "optician": "Óptica",
     "medical_supply": "Subministracións médicas",
+    "hearing_aids": "Audífonos",
     "food": "Alimentación",
     "supermarket": "Supermercado",
     "butcher": "Carnizaría",
@@ -159,7 +171,7 @@
     "fast_food": "Comida rápida",
     "ice_cream": "Xeadaría",
     "cafe": "Tenda de café",
-    "drugs": "Menciñas",
+    "drugs": "Tabaco e alcol",
     "tobacco": "Estancos",
     "e_cigarette": "Cigarros electrónicos",
     "alcohol": "Licoraría",
