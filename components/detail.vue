@@ -62,18 +62,22 @@
             :title="$t(`details.vending.${point.properties.tags.vending}`)"
             icon="osm-vending_machine"
           />
-          <detail-link
-            v-if="contact('phone')"
-            :href="`tel:${contact('phone')}`"
-            :title="contact('phone')"
-            icon="osm-phone"
-          />
-          <detail-link
-            v-if="contact('mobile')"
-            :href="`tel:${contact('mobile')}`"
-            :title="contact('mobile')"
-            icon="osm-mobile_phone"
-          />
+          <template v-if="contact('phone')">
+            <detail-link
+              v-for="phone in contact('phone').split(';')"
+              :href="`tel:${phone}`"
+              :title="phone"
+              icon="osm-phone"
+            />
+          </template>
+          <template v-if="contact('mobile')">
+            <detail-link
+              v-for="mobile in contact('mobile').split(';')"
+              :href="`tel:${mobile}`"
+              :title="mobile"
+              icon="osm-mobile_phone"
+            />
+          </template>
           <detail-link
             v-if="contact('fax')"
             :title="contact('fax')"
