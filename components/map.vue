@@ -39,7 +39,7 @@ import { MglMap, MglNavigationControl, MglVectorLayer, MglAttributionControl, Mg
 const source = "public.poi_osm_light";
 
 const layers = [
- {
+  {
     id: "poi-background",
     type: "circle",
     "source-layer": source,
@@ -171,17 +171,14 @@ export default {
     },
 
     layers() {
+      const [ category, subcategory ] = this.filter.split('/');
       return layers.map((layer) => {
-        const newLayer = { ...layer, filter: layer.filter ? [...layer.filter] : [ "all" ] };
-
-        if (this.filter !== '') {
-          newLayer.filter.push([
-            "==",
-            "normalized_cat",
-            this.filter
-          ]);
+        const newLayer = { ...layer, filter: ['all'] };
+        if (subcategory) {
+          newLayer.filter.push(['==', 'cat', subcategory]);
+        } else if (category !== '') {
+          newLayer.filter.push(['==', 'normalized_cat', category]);
         }
-
         return newLayer;
       });
     }

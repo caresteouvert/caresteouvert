@@ -2,7 +2,7 @@
   <div
     v-resize="computeIsMobile"
     :class="{
-       xs: $vuetify.breakpoint.xsOnly,
+       xs: isMobile,
       'place-opened': $route.name === 'place' && !isMobile,
       'sidebar-opened': sidebar && !isMobile
      }"
@@ -19,12 +19,12 @@
         <osm-sidebar>
           <osm-filter-features
             v-model="filter"
-            :categories="categories"
           />
         </osm-sidebar>
       </v-navigation-drawer>
       <v-content>
         <top-toolbar
+          v-model="filter"
           @toggleSidebar="sidebar = !sidebar"
           @onGeocode="updateMapBounds"
         />
@@ -118,7 +118,7 @@ export default {
     });
   },
 
-  computed: mapGetters(['categories']),
+  computed: mapGetters(['categories', 'allCategories']),
 
   watch: {
     mapCenter() {
@@ -240,7 +240,12 @@ export default {
         .then((res) => {
           const country = res.split('-')[0];
           this.$store.commit('setCountry', country);
-          this.filter = this.categories.includes(this.filter) ? this.filter : '';
+          const [category, subcategory] = this.filter.split('/');
+          if (!this.categories.includes(category)) {
+            this.filter = '';
+          } else if (subcategory && !this.allCategories[category].includes(subcategory)) {
+            this.filter = category;
+          }
         });
     },
 
