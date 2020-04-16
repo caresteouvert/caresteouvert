@@ -303,6 +303,8 @@ export default {
         .then(data => data.json())
         .then((feature) => {
           this.point = feature;
+        }).catch(() => {
+          this.$nuxt.context.redirect(`/${this.$route.params.featuresAndLocation || ''}`);
         });
     },
 
