@@ -179,18 +179,21 @@ export default {
         }
       }, [[], []]);
       return layers.map((layer) => {
-        const newLayer = { ...layer, filter: [ "any" ] };
+        const newLayer = { ...layer, filter: ['all'] };
         if (this.filter.length > 0) {
-          newLayer.filter.push([
-            "in",
-            "normalized_cat",
-            ...categories
-          ]);
-          newLayer.filter.push([
-            "in",
-            "cat",
-            ...subcategories
-          ]);
+          newLayer.filter = [
+            'any',
+            [
+              "in",
+              "normalized_cat",
+              ...categories
+            ],
+            [
+              "in",
+              "cat",
+              ...subcategories
+            ]
+          ];
         }
         return newLayer;
       });
