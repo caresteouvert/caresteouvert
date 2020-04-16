@@ -50,6 +50,7 @@
             </v-chip>
           </v-slide-y-reverse-transition>
           <rgpd-banner @consent="rgpdBannerHidden = true" />
+          <apps-sheet />
         </client-only>
       </v-content>
     </div>
@@ -63,6 +64,7 @@ import debounce from 'lodash.debounce';
 import config from '../config.json';
 import { getCookie, setCookie } from './cookie';
 import { encode, decode, encodePosition, decodePosition } from './url';
+import AppsSheet from './apps_sheet';
 import OsmSidebar from './sidebar';
 import OsmFilterFeatures from './filter_features';
 import TopToolbar from './top_toolbar';
@@ -70,6 +72,7 @@ import RgpdBanner from './rgpd_banner';
 
 export default {
   components: {
+    AppsSheet,
     OsmFilterFeatures,
     OsmSidebar,
     TopToolbar,
