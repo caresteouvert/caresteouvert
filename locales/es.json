@@ -124,7 +124,7 @@
     "day_shortcuts": {
       "weekdays": "Lunes a Sábado"
     },
-    "select_days": " \nSeleccione los días que compartan el mismo horario",
+    "select_days": "Seleccione los días que compartan el mismo horario",
     "next": "Seleccionar horas",
     "select_time": {
       "start": "Elegir hora de apertura",
@@ -171,7 +171,7 @@
     "fast_food": "Comida rápida",
     "ice_cream": "Heladerías",
     "cafe": "Cafeterías",
-    "drugs": "Medicamentos",
+    "drugs": "Tabaco y alcohol",
     "tobacco": "Estancos",
     "e_cigarette": "Cigarrillos electrónicos",
     "alcohol": "Licorería",
