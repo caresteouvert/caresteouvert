@@ -1,5 +1,5 @@
 {
-  "lang": "Ingelesa",
+  "lang": "Euskera",
   "covid19-alert": "Jarrai itzazu gobernuaren murrizketak. Errespontsabilitatea ZUREA da.",
   "title": "Irekita jarraitzen du",
   "subtitle": "Itxialdi garaian irekita jarraitzen duten lekuak",
@@ -140,7 +140,7 @@
   },
   "categories": {
     "other": "Beste lekuak",
-    "amenity": "Zerbitzua",
+    "amenity": "Zerbitzuak",
     "police": "Polizia",
     "post_office": "Posta bulegoa",
     "employment_agency": "Enplegu agentziak",
@@ -171,7 +171,7 @@
     "fast_food": "Janari azkarra",
     "ice_cream": "Izozki denda",
     "cafe": "Kafetegia",
-    "drugs": "Medikamenduak",
+    "drugs": "Tabako eta alkohola",
     "tobacco": "Tabakoa",
     "e_cigarette": "Zigarro elektronikoak",
     "alcohol": "Alkohol denda",
