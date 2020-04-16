@@ -1,0 +1,200 @@
+{
+  "lang": "suomi",
+  "covid19-alert": "Seuraa viranomaisten määräyksiä. Vastuu on yksinomaan sinun!",
+  "title": "Tämä on auki",
+  "subtitle": "Eristyksen aikana avoinna pysyvät paikat",
+  "subtitle-dense": "Eristyksen aikana avoimet paikat",
+  "search": "Kirjoita hakusana",
+  "menu": "Valikko",
+  "missing_shop": "Raportoi puuttuva kauppa",
+  "change_lang": "Vaihda kieli",
+  "zoomtosee": "Zoomaa lähemmäs nähdäksesi avoimet paikat",
+  "learnmore": {
+    "about": "Tietoja",
+    "contribute": "Osallistu",
+    "missing_shop": "Raportoi puuttuva kauppa",
+    "description": "« {brand} » on palvelu tarpeettoman liikkumisen vähentämiseksi ja tartuntariskin minimoimiseksi koronaviruseristyksen aikana.\nKarttapalvelun avulla voit helposti jakaa tietoa lähiympäristösi palveluiden poikkeusaukioloista. Tehokkain tapa helpottaa naapureittesi elämää!",
+    "title": "Lue lisää",
+    "press": "Lehdistölle",
+    "disclaimer": "Vastuuvapauslauseke",
+    "blog": "Blogi",
+    "townhalls": "Kaupungit ja kunnat, tässä käyttöönne « {brand} »!"
+  },
+  "rgpd": {
+    "consent": "Sallitko palvelun käytön tilastoinnin evästeellä?",
+    "yes": "Kyllä",
+    "no": "Ei"
+  },
+  "days": {
+    "monday": "Maanantai",
+    "tuesday": "Tiistai",
+    "wednesday": "Keskiviikko",
+    "thursday": "Torstai",
+    "friday": "Perjantai",
+    "saturday": "Lauantai",
+    "sunday": "Sunnuntai",
+    "ph": "Pyhäpäivät"
+  },
+  "contribute_form": {
+    "title": "Osallistu",
+    "step1": {
+      "title": "Onko tämä paikka avoinna eristyksen aikana?",
+      "open": {
+        "yes": "kyllä",
+        "no": "ei"
+      }
+    },
+    "step2": {
+      "title": "Aukioloajat eristyksen aikana",
+      "same_hours": "Samat aukioloajat",
+      "same_hours_without_lockdown": "Samat aukioloajat kuin normaalisti",
+      "dont_know": "En tiedä",
+      "continue": "Jatka"
+    },
+    "step3": {
+      "title": "Lisää tietoja",
+      "delivery": {
+        "title": "Kotiinkuljetus",
+        "unknown": "En tiedä",
+        "yes": "Kyllä",
+        "only": "Vain kotiinkuljetus",
+        "no": "Ei"
+      },
+      "takeaway": {
+        "title": "Take away",
+        "unknown": "En tiedä",
+        "yes": "Kyllä",
+        "only": "Vain take away",
+        "no": "Ei"
+      },
+      "details": "Lisää vaadittavat eristyksen aikana käytössä olevat tiedot"
+    },
+    "submit": "Julkaise",
+    "cancel": "Peruuta"
+  },
+  "details": {
+    "signal_warning": "Olit kirjoittamassa ilmoitusta, joka ei tallennu. Haluatko jatkaa?",
+    "signal": "Raportoi muutoksesta",
+    "signal_done": "Ilmoituksesi on vastaanotettu. Kiitos! Käsittely vie oman aikansa.",
+    "containment_opening_hours": "Aukioloajat muulloin kuin eristyksen aikana",
+    "containment_brand_hours": "Aukioloajat palvelun kotisivuilla",
+    "facebook": "Facebook-sivu",
+    "not_accessible": "Sisätila on suljettu",
+    "opening_hours": {
+      "state_until_date": "{state} {date} asti",
+      "state": {
+        "open": "avoinna",
+        "closed": "suljettu"
+      },
+      "tomorrow": "huomenna"
+    },
+    "state": {
+      "open": "Avoinna eristyksen aikana",
+      "open_adapted": "Avoinna eristyksen aikana, muutoksia aukioloajoissa",
+      "partial": "Mahdollisesti avoinna eristyksen aikana (tarkistettava)",
+      "unknown": "Tällä palvelulla on oikeus olla auki eristyksen aikana, mutta onko se? Kerro meille",
+      "closed": "Suljettu eristyksen aikana"
+    },
+    "delivery": {
+      "yes": "Kotiinkuljetusmahdollisuus",
+      "only": "Vain kotiinkuljetuksella"
+    },
+    "takeaway": {
+      "yes": "Take away alennus saatavilla",
+      "modified": "Muokattu take away alennus",
+      "only": "Vain take away alennus"
+    },
+    "drive_through": {
+      "yes": "Autokaistamahdollisuus",
+      "only": "Vain autokaista"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Postimerkkejä",
+      "parcel_mail_in": "Pakettiautomaatti",
+      "parcel_pickup": "Pakettinouto",
+      "parcel_pickup;parcel_mail_in": "Pakettinouto ja -automaatti",
+      "milk": "Maitoa",
+      "drinks": "Juomia",
+      "water": "Vettä",
+      "sweets": "Karkkia"
+    }
+  },
+  "opening_hours_editor": {
+    "day_shortcuts": {
+      "weekdays": "Maanantaista sunnuntaihin"
+    },
+    "select_days": "Valitse päivät joilla on samat aukioloajat",
+    "next": "Valitse tunnit",
+    "select_time": {
+      "start": "Valitse aukeamisaika",
+      "end": "Valitse sulkemisaika"
+    },
+    "add_interval": "Lisää aukioloajat",
+    "add_new_days": "Lisää päivät"
+  },
+  "osm_link": {
+    "title": "« {brand} » käyttää OpenStreetMap-aineistoja.",
+    "view": "Katso",
+    "edit": "Muokkaa"
+  },
+  "categories": {
+    "other": "Muut palvelut",
+    "amenity": "Palvelut",
+    "police": "Poliisi",
+    "post_office": "Posti",
+    "employment_agency": "Työvoimatoimisto",
+    "funeral_directors": "Hautaustoimisto",
+    "bank": "Pankki",
+    "moneylender": "Rahanlainaamo",
+    "insurance": "Vakuutus",
+    "health": "Terveydenhoito",
+    "pharmacy": "Apteekki",
+    "condoms": "Kondomiautomaatti",
+    "optician": "Optikko",
+    "medical_supply": "Terveydenhoitotarvikkeita",
+    "hearing_aids": "Kuulokojeita",
+    "food": "Ruokaa",
+    "supermarket": "Supermarket",
+    "butcher": "Lihakauppa",
+    "cheese": "Juustoja",
+    "convenience": "Kauppa",
+    "seafood": "Kalakauppa",
+    "greengrocer": "Vihanneskauppa",
+    "grocery": "Elintarvikekauppa",
+    "farm": "Maatilapuoti",
+    "marketplace": "Tori",
+    "bakery": "Leipomo",
+    "eat": "Ravintola & take away",
+    "vending_machine": "Automaatti",
+    "restaurant": "Ravintola",
+    "fast_food": "Pikaruoka",
+    "ice_cream": "Jäätelö",
+    "cafe": "Kahvila",
+    "drugs": "Alkoholi ja tupakka",
+    "tobacco": "Tupakka",
+    "e_cigarette": "Sähkötupakka",
+    "alcohol": "Alko",
+    "shop": "Kaupat",
+    "hardware": "Rautakauppa",
+    "mobile_phone": "Matkapuhelin",
+    "computer": "Tietokone",
+    "electronics": "Elektroniikka",
+    "laundry": "Pesula",
+    "stationery": "Paperi",
+    "newsagent": "Lehtimyynti",
+    "pet": "Lemmikkieläinliike",
+    "agrarian": "Maataloustuotteita",
+    "garden_centre": "Puutarhatuotteita",
+    "chemist": "Apteekki",
+    "fabric": "Kangaskauppa",
+    "books": "Kirjakauppa",
+    "mobility": "Liikkuminen",
+    "fuel": "Huoltoasema",
+    "car_rental": "Autovuokraamo",
+    "bicycle": "Polkupyöräkauppa",
+    "car": "Huoltamo",
+    "bicycle_tube": "Polkupyöränkumiautomaatti",
+    "public_transport_tickets": "Julkisen liikenteen lippuautomaatti"
+  }
+}
