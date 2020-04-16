@@ -179,8 +179,8 @@ export default {
         }
       }, [[], []]);
       return layers.map((layer) => {
-        if (this.filter.length !== 0) {
-          const newLayer = { ...layer, filter: [ "any" ] };
+        const newLayer = { ...layer, filter: [ "any" ] };
+        if (this.filter.length > 0) {
           newLayer.filter.push([
             "in",
             "normalized_cat",
@@ -191,10 +191,8 @@ export default {
             "cat",
             ...subcategories
           ]);
-          return newLayer;
         }
-
-        return layer;
+        return newLayer;
       });
     }
   },
