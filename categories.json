@@ -47,7 +47,7 @@
           "osm_tags": [
             { "shop": "money_lender" }
           ],
-          "areas": "all"
+          "-areas": [ "FR" ]
         },
         "insurance": {
           "name": "Insurance",
@@ -147,9 +147,36 @@
         "grocery": {
           "name": "Grocery",
           "osm_tags": [
-            { "shop": "deli|chocolate|tea|coffee|dairy|spices|honey|health_food|pasta|cannery|confectionery" },
+            { "shop": "deli|spices|honey|health_food|pasta|cannery" }
+          ],
+          "areas": "all"
+        },
+        "chocolate": {
+          "name": "Chocolate",
+          "osm_tags": [ { "shop": "chocolate" } ],
+          "areas": "all"
+        },
+        "tea": {
+          "name": "Tea",
+          "osm_tags": [ { "shop": "tea" } ],
+          "areas": "all"
+        },
+        "coffee": {
+          "name": "Coffee",
+          "osm_tags": [ { "shop": "coffee" } ],
+          "areas": "all"
+        },
+        "dairy": {
+          "name": "Dairy",
+          "osm_tags": [
+            { "shop": "dairy" },
             { "amenity": "vending_machine", "vending": "milk" }
           ],
+          "areas": "all"
+        },
+        "confectionery": {
+          "name": "Confectionery",
+          "osm_tags": [ { "shop": "confectionery" } ],
           "areas": "all"
         },
         "farm": {
