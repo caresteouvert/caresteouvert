@@ -3,7 +3,7 @@ title: "Llamada pública para contribuir en la web 'Sigue abierto'"
 date: "2020-04-15"
 ---
 
-Hoy estamos lanzando una convocatoria pública a contribuir en [***Sigue abierto***](https://sigueabierto.openstreetmap.es). Ciudadanos, administraciones, comunidades, empresas, actores involucrados en la respuesta a la crisis de salud actual, ¡compartan sus datos!
+Hoy estamos lanzando una convocatoria pública a contribuir en [***Sigue abierto***](https://www.sigueabierto.es). Ciudadanos, administraciones, comunidades, empresas, actores involucrados en la respuesta a la crisis de salud actual, ¡compartan sus datos!
 
 La emergencia actual nos obliga a unir nuestras fuerzas de manera urgente y pragmática.
 
@@ -33,4 +33,4 @@ Muchas comunidades ya están contribuyendo a OpenStreetMap. Hoy, este proyecto r
 
 Si ya ha recopilado datos de comerciantes y otros lugares en su territorio, puede agregalos a OpenStreetMap directamente.
 
-Una vez que los datos se han integrado en OpenStreetMap, los detalles de apertura aparecerán, con un breve retraso, en la web https://sigueabierto.openstreemap.es. Este sitio puede servir como una herramienta de información y visualización para los ciudadanos.
+Una vez que los datos se han integrado en OpenStreetMap, los detalles de apertura aparecerán, con un breve retraso, en la web https://www.sigueabierto.es. Este sitio puede servir como una herramienta de información y visualización para los ciudadanos.
