@@ -1,3 +1,4 @@
+import { mapState } from 'vuex';
 import config from '../../config.json';
 import caresteouvert from '../../assets/caresteouvert.svg';
 import bleibtoffen from '../../assets/bleibtoffen.svg';
@@ -14,12 +15,18 @@ import bleibtoffenOg from '../../assets/bleibtoffen-og.jpg';
 
 export default {
   computed: {
+    ...mapState(['country']),
+
     links() {
       const links = config[this.$i18n.locale] || config.en;
       return {
         ...config.defaults,
         ...links
       };
+    },
+
+    countryConfig() {
+      return config[this.country.toLowerCase()] || this.links;
     },
 
     logo() {

@@ -26,24 +26,41 @@
         </v-btn>
       </v-card-title>
       <v-card-text>
-        <v-btn
-          v-for="locale in $i18n.availableLocales"
-          :key="locale"
-          outlined
-          class="ml-2 mb-2"
-          @click="changeLang(locale)"
-        >{{ $t('lang', locale) }}</v-btn>
+        <v-row
+          v-for="locales in chunkLocales"
+          :key="locales.join()"
+        >
+          <v-col
+            v-for="locale in locales"
+            :key="locale"
+          >
+            <v-btn
+              outlined
+              width="100%"
+              @click="changeLang(locale)"
+            >{{ $t('lang', locale) }}</v-btn>
+          </v-col>
+          <v-col v-if="locales.length === 1" />
+        </v-row>
       </v-card-text>
     </v-card>
   </v-dialog>
 </template>
 
 <script>
+import chunk from 'lodash.chunk';
+
 export default {
   data() {
     return {
       dialog: false
     };
+  },
+
+  computed: {
+    chunkLocales() {
+      return chunk(this.$i18n.availableLocales, 2);
+    }
   },
 
   methods: {

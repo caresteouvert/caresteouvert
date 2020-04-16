@@ -114,10 +114,24 @@
     "drive_through": {
       "yes": "Drive-through service available",
       "only": "Only by drive-through"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Stamps",
+      "parcel_mail_in": "Parcel drop-box",
+      "parcel_pickup": "Parcel pickup",
+      "parcel_pickup;parcel_mail_in": "Parcel pickup & drop-box",
+      "milk": "Milk",
+      "drinks": "Drinks",
+      "water": "Water",
+      "sweets": "Sweets"
     }
   },
   "opening_hours_editor": {
-    "select_days": "Select days",
+    "day_shortcuts": {
+      "weekdays": "Monday to Saturday"
+    },
+    "select_days": "Select days that share the same opening hours",
     "next": "Select hours",
     "select_time": {
       "start": "Choose opening hour",
@@ -146,6 +160,7 @@
     "condoms": "Condoms vending machine",
     "optician": "Optician",
     "medical_supply": "Medical supplies",
+    "hearing_aids": "Hearing aids",
     "food": "Food",
     "supermarket": "Supermarket",
     "butcher": "Butcher",

@@ -1,16 +1,16 @@
 {
   "lang": "Filipino",
   "covid19-alert": "Sundin ang pagtatakda ng pamahalaan. Ang pananagutan ay sa IYO.",
-  "title": "Bukás pa.",
-  "subtitle": "Mga puwestong nanatiling bukás habang may kuwarentenas",
+  "title": "Bukás pa rin.",
+  "subtitle": "Mga puestong nanatiling bukás habang may kuwarentenas",
   "subtitle-dense": "Mga puwestong bukás nitong kuwarentenas",
   "search": "Hanapin",
   "menu": "Menu",
-  "missing_shop": "Mag-dagdag ng kulang na puwesto",
+  "missing_shop": "Mag-dagdag ng kulang na puesto",
   "change_lang": "Palitan ang wika",
   "learmore": {
     "about": "Tungkol",
-    "missing_shop": "Mag-dagdag ng kulang na puwesto",
+    "missing_shop": "Mag-dagdag ng kulang na puesto",
     "blog": "Blog",
     "townhalls": "Bahay Pamahalaan",
     "press": "Press",
@@ -29,7 +29,7 @@
   "contribute_form": {
     "title": "Mag-ambag",
     "step1": {
-      "title": "Bukás ba ang puwestong ito habang may kuwarentenas?",
+      "title": "Bukás ba ang puestong ito habang may kuwarentenas?",
       "open": {
         "yes": "oo",
         "no": "hindi"
@@ -37,15 +37,15 @@
     },
     "step2": {
       "title": "Oras ng operasyon nitong kuwarentenas?",
-      "same_hours": "Pareho pa rin ng oras",
-      "same_hours_without_lockdown": "Pareho pa rin ng normal na oras",
+      "same_hours": "Parehong oras pa rin",
+      "same_hours_without_lockdown": "Parehong oras noong walang kuwarentenas",
       "dont_know": "Hindi alam",
       "continue": "Mag-patuloy"
     },
     "step3": {
       "title": "Mag-dagdag ng detalye",
       "delivery": {
-        "title": "Ang puwestong ito ay naghahatid ng inorder",
+        "title": "Ang puestong ito ay naghahatid ng inorder",
         "unknown": "Hindi alam",
         "yes": "Oo",
         "only": "Naghahatid lang",
@@ -67,20 +67,20 @@
     "post_office": "Koreo",
     "shop": "Tindahan",
     "tobacco": "Tabako",
-    "other": "Iba pang puwesto"
+    "other": "Iba pang puesto"
   },
   "details": {
     "signal": "Mag-ulat ng pagbabago",
     "signal_done": "Ang iyong ulat ay na-irehistro na. Salamat!",
     "containment_opening_hours": "Ang oras ng operasyon ay labas sa panahon ng kuwarentina",
-    "containment_brand_hours": "Ang oras ng operasyon ay nasa website ng tatak",
+    "containment_brand_hours": "Ang oras ng operasyon ay nasa website ng kumpanya",
     "facebook": "Facebook page",
     "feature": {
       "agrarian": "Tindahan ng gamit pang-agrikultura",
       "alcohol": "Tindahan ng alak",
       "association": "Samahan",
       "bakery": "Panaderya",
-      "bank": "Bangko",
+      "bank": "Banko",
       "bar": "Bar",
       "beverages": "Tindahan ng inumin",
       "bicycle": "Bentahan at kumpunihan ng bisikleta",
@@ -99,14 +99,14 @@
       "company": "Bahay kalakal",
       "confectionery": "Tindahan ng minatamis",
       "convenience": "Tindahan ng sari-sari",
-      "convenience;gas": "Gasolinahan",
+      "convenience;gas": "Tindahasan sa Gasolinahan",
       "craft": "Crafts supply store",
       "deli": "Delicatessen",
       "doctors": "Doctor's clinic",
       "doityourself": "Do-It-Yourself-stores",
       "dry_cleaning": "Dry cleaning",
-      "e-cigarette": "Tindahan ng vape",
-      "electronics": "Electronics store",
+      "e-cigarette": "Tindahan ng vape o e-cigarette",
+      "electronics": "Tindahan ng Electroniks",
       "electronics_repair": "Electronics repair store",
       "employment_agency": "Ahensya ng pagtratrabaho",
       "farm": "Farm shop",
@@ -115,14 +115,14 @@
       "funeral_directors": "Punerarya",
       "gas": "Gasolinahan",
       "greengrocer": "Tindahan ng prutas at gulay",
-      "hardware": "Hardware store",
+      "hardware": "Tindahan ng hardwer",
       "insurance": "Paseguruhan",
       "kiosk": "Kyosko",
       "laundry": "Palabahan",
       "mall": "Mall",
       "marketplace": "Palengke",
-      "medical_supply": "Medical supply store",
-      "mobile_phone": "Mobile phone store",
+      "medical_supply": "Tindahan ng gamit medikal",
+      "mobile_phone": "Tindahan ng Selfon",
       "newsagent": "Tindahan ng pahayagan",
       "optician": "Optiko",
       "pet": "Tindahan ng alagang hayop",
@@ -150,7 +150,7 @@
     },
     "state": {
       "open": "Bukás habang may lockdown",
-      "open_adapted": "Bukás habang may lockdown. Ang puwesto ay nag-iba ng oras",
+      "open_adapted": "Bukás habang may lockdown. Ang puesto ay nag-iba ng oras",
       "partial": "Maaring bukás habang may lockdown (kailangan siyasatin)",
       "unknown": "Pinahintulutan ang pagbu-bukás habang may lockdown. Bukás o Sarado ? Ipa-alam sa amin.",
       "closed": "Sarado ang puwesto habang may lockdown."

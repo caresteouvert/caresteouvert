@@ -44,16 +44,24 @@
 
         <v-alert
           v-if="infos"
-          v-html="infos"
-          v-linkified:options="{ className: 'alert-link', attributes: { rel: 'noopener' } }"
           :icon="false"
           type="info"
           tile
           class="mb-0"
         >
+          <p
+            v-html="infos"
+            v-linkified:options="{ className: 'alert-link', attributes: { rel: 'noopener' } }"
+            class="mb-0 overflowwrap-anywhere"
+          />
         </v-alert>
 
         <v-list>
+          <detail-link
+            v-if="hasVending"
+            :title="$t(`details.vending.${point.properties.tags.vending}`)"
+            icon="osm-vending_machine"
+          />
           <detail-link
             v-if="contact('phone')"
             :href="`tel:${contact('phone')}`"
@@ -65,6 +73,11 @@
             :href="`tel:${contact('mobile')}`"
             :title="contact('mobile')"
             icon="osm-mobile_phone"
+          />
+          <detail-link
+            v-if="contact('fax')"
+            :title="contact('fax')"
+            icon="osm-fax"
           />
 
           <detail-link
@@ -212,6 +225,10 @@ export default {
       return this.point.properties.cat === 'unknown' ? 'other' : this.point.properties.cat;
     },
 
+    hasVending() {
+      return this.$te(`details.vending.${this.point.properties.tags.vending}`);
+    },
+
     type() {
       const key = `categories.${this.point.properties.cat}`;
       return this.$te(key) ? this.$t(key) : this.$t('categories.other');
@@ -242,36 +259,26 @@ export default {
       const isOpenOrPartial = ['open', 'open_adapted', 'partial'].includes(this.point.properties.status);
 
       // Access
-      if(this.point.properties.tags['access:covid19'] === 'no') {
+      if (this.point.properties.tags['access:covid19'] === 'no') {
         infos.push(this.$t('details.not_accessible'));
       }
 
-      // Takeaway
-      if(isOpenOrPartial && this.point.properties.tags['takeaway:covid19'] && !this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`).startsWith('details.')) {
-        infos.push(this.$t(`details.takeaway.${this.point.properties.tags['takeaway:covid19']}`));
-      }
-      else if(isOpen && this.point.properties.tags.takeaway && !this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`).startsWith('details.')) {
-        infos.push(this.$t(`details.takeaway.${this.point.properties.tags.takeaway}`));
-      }
+      const addInfosDependingOfTagAndStatus = (tagName) => {
+        const tagCovid19 = this.point.properties.tags[`${tagName}:covid19`];
+        const tag = this.point.properties.tags[tagName];
+        if (isOpenOrPartial && tagCovid19 && this.$te(`details.${tagName}.${tagCovid19}`)) {
+          infos.push(this.$t(`details.${tagName}.${tagCovid19}`));
+        } else if (isOpen && tag && this.$te(`details.${tagName}.${tag}`)) {
+          infos.push(this.$t(`details.${tagName}.${tag}`));
+        }
+      };
 
-      // Delivery
-      if(isOpenOrPartial && this.point.properties.tags['delivery:covid19'] && !this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`).startsWith('details.')) {
-        infos.push(this.$t(`details.delivery.${this.point.properties.tags['delivery:covid19']}`));
-      }
-      else if(isOpen && this.point.properties.tags.delivery && !this.$t(`details.delivery.${this.point.properties.tags.delivery}`).startsWith('details.')) {
-        infos.push(this.$t(`details.delivery.${this.point.properties.tags.delivery}`));
-      }
-
-      // Drive-through
-      if(isOpenOrPartial && this.point.properties.tags['drive_through:covid19'] && !this.$t(`details.drive_through.${this.point.properties.tags['drive_through:covid19']}`).startsWith('details.')) {
-        infos.push(this.$t(`details.drive_through.${this.point.properties.tags['drive_through:covid19']}`));
-      }
-      else if(isOpen && this.point.properties.tags.drive_through && !this.$t(`details.drive_through.${this.point.properties.tags.drive_through}`).startsWith('details.')) {
-        infos.push(this.$t(`details.drive_through.${this.point.properties.tags.drive_through}`));
-      }
+      addInfosDependingOfTagAndStatus('takeaway');
+      addInfosDependingOfTagAndStatus('delivery');
+      addInfosDependingOfTagAndStatus('drive_through');
 
       // POI information
-      if(this.point.properties.brand_infos) {
+      if (this.point.properties.brand_infos) {
         infos.push(this.point.properties.brand_infos);
       }
 
@@ -344,6 +351,9 @@ export default {
   left: 0;
   z-index: 10;
   overflow-y: auto;
+}
+.overflowwrap-anywhere {
+  overflow-wrap: anywhere;
 }
 >>>.alert-link {
   color: white;

@@ -89,6 +89,13 @@
             { "shop": "medical_supply" }
           ],
           "areas": "all"
+        },
+        "hearing_aids": {
+          "name": "Hearing aids",
+          "osm_tags": [
+            { "shop": "hearing_aids" }
+          ],
+          "areas": "all"
         }
       }
     },
@@ -140,7 +147,7 @@
         "grocery": {
           "name": "Grocery",
           "osm_tags": [
-            { "shop": "deli|chocolate|tea|coffee|dairy|spices|honey|health_food|pasta|cannery" },
+            { "shop": "deli|chocolate|tea|coffee|dairy|spices|honey|health_food|pasta|cannery|confectionery" },
             { "amenity": "vending_machine", "vending": "milk" }
           ],
           "areas": "all"
@@ -252,7 +259,7 @@
         "hardware": {
           "name": "Hardware",
           "osm_tags": [
-            { "shop": "doityourself|hardware" }
+            { "shop": "doityourself|hardware|paint|glaziery" }
           ],
           "areas": "all"
         },

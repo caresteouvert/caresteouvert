@@ -59,10 +59,9 @@
 </template>
 
 <script>
-import Vue from 'vue';
+import { mapGetters } from 'vuex';
+import debounce from 'lodash.debounce';
 import config from '../config.json';
-import categories from '../categories.json';
-import categoriesForCountry from './categories';
 import { getCookie, setCookie } from './cookie';
 import { encode, decode, encodePosition, decodePosition } from './url';
 import AppsSheet from './apps_sheet';
@@ -97,7 +96,6 @@ export default {
       mapCenter: null,
       mapZoom: null,
       filter: '',
-      categories: [],
       rgpdBannerHidden: false,
       minZoomPoi: config.minZoomPoi
     };
@@ -119,6 +117,8 @@ export default {
       this.getCurrentCountry();
     });
   },
+
+  computed: mapGetters(['categories']),
 
   watch: {
     mapCenter() {
@@ -219,7 +219,7 @@ export default {
       setCookie('mapView', JSON.stringify({ center: this.mapCenter, zoom: this.mapZoom }));
     },
 
-    refreshCurrentCountry() {
+    refreshCurrentCountry: debounce(function() {
       if (!this.lastMapCenter) {
         this.lastMapCenter = this.mapCenter;
       }
@@ -231,14 +231,15 @@ export default {
         this.lastMapCenter = this.mapCenter;
         this.getCurrentCountry();
       }
-    },
+    }, 1),
 
     getCurrentCountry() {
       const { lat, lng } = this.mapCenter;
       fetch(`${config.apiUrl}/country?lat=${lat}&lon=${lng}`)
         .then(res => res.text())
-        .then((country) => {
-          this.categories = Object.keys(categoriesForCountry(categories, country.split('-')[0])).concat([ "other" ]);
+        .then((res) => {
+          const country = res.split('-')[0];
+          this.$store.commit('setCountry', country);
           this.filter = this.categories.includes(this.filter) ? this.filter : '';
         });
     },
@@ -280,5 +281,8 @@ export default {
 }
 .sidebar-opened .search {
   transform: translateX(300px);
+}
+.text-pre {
+  white-space: pre-line;
 }
 </style>
