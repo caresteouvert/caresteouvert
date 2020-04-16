@@ -64,8 +64,9 @@
     <template v-if="isMobile && allCategories[category]">
       <v-chip-group
         :value="value"
-        @change="updateValue"
-        class="ml-2 subcategories"
+        show-arrows
+        class="subcategories"
+        @change="updateSubCategory"
       >
         <v-chip
           v-for="(_, subcategory) in allCategories[category].subcategories"
@@ -137,6 +138,14 @@ export default {
 
     updateValue(value) {
       this.$emit('input', value || '');
+    },
+
+    updateSubCategory(choice) {
+      if (!choice) {
+        this.updateValue(this.value.split('/')[0]);
+      } else {
+        this.updateValue(choice)
+      }
     }
   }
 }
