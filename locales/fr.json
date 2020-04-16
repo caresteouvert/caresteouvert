@@ -107,6 +107,17 @@
     "drive_through": {
       "yes": "Service de drive disponible",
       "only": "Uniquement par drive"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Timbres",
+      "parcel_mail_in": "Dépose de colis",
+      "parcel_pickup": "Consigne à colis",
+      "parcel_pickup;parcel_mail_in": "Dépose et consigne de colis",
+      "milk": "Lait",
+      "drinks": "Boissons",
+      "water": "Eau",
+      "sweets": "Bonbons"
     }
   },
   "opening_hours_editor": {
@@ -142,6 +153,7 @@
     "condoms": "Distributeur de préservatifs",
     "optician": "Opticien",
     "medical_supply": "Matériel médical",
+    "hearing_aids": "Appareils auditifs",
     "food": "Alimentation",
     "supermarket": "Supermarché",
     "butcher": "Boucherie",
