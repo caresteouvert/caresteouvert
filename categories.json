@@ -68,12 +68,10 @@
           ],
           "areas": "all"
         },
-        "condoms": {
-          "name": "Condoms vending machine",
-          "osm_tags": [
-            { "amenity": "vending_machine", "vending": "condoms" }
-          ],
-          "areas": "all"
+        "covid19_centre": {
+          "name": "Covid-19 consultation centre",
+          "osm_tags": [ { "healthcare": "centre", "healthcare:speciality": "covid19" } ],
+          "areas": [ "FR" ]
         },
         "optician": {
           "name": "Optician",
@@ -83,17 +81,24 @@
           ],
           "areas": "all"
         },
-        "medical_supply": {
-          "name": "Medical supplies",
-          "osm_tags": [
-            { "shop": "medical_supply" }
-          ],
-          "areas": "all"
-        },
         "hearing_aids": {
           "name": "Hearing aids",
           "osm_tags": [
             { "shop": "hearing_aids" }
+          ],
+          "areas": "all"
+        },
+        "condoms": {
+          "name": "Condoms vending machine",
+          "osm_tags": [
+            { "amenity": "vending_machine", "vending": "condoms" }
+          ],
+          "areas": "all"
+        },
+        "medical_supply": {
+          "name": "Medical supplies",
+          "osm_tags": [
+            { "shop": "medical_supply" }
           ],
           "areas": "all"
         }

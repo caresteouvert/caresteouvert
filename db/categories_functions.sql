@@ -9,7 +9,7 @@ CREATE OR REPLACE FUNCTION get_category(tags HSTORE, area VARCHAR) RETURNS VARCH
 BEGIN
 	IF (tags->'amenity' = 'vending_machine' AND tags->'vending' IN ('stamps', 'parcel_mail_in', 'parcel_pickup', 'parcel_pickup;parcel_mail_in')) OR (tags->'shop' = 'money_lender' AND area NOT LIKE 'FR%') OR (tags->'amenity' IN ('police', 'post_office', 'bank')) OR (tags->'office' IN ('employment_agency', 'financial', 'insurance')) OR (tags->'shop' = 'funeral_directors') THEN
 		RETURN 'amenity';
-	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'condoms') OR (tags->'amenity' = 'pharmacy') OR (tags->'shop' IN ('optician', 'medical_supply', 'hearing_aids')) OR (tags->'craft' = 'optician') THEN
+	ELSIF (tags->'healthcare' = 'centre' AND tags->'healthcare:speciality' = 'covid19' AND area LIKE 'FR%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'condoms') OR (tags->'amenity' = 'pharmacy') OR (tags->'shop' IN ('optician', 'hearing_aids', 'medical_supply')) OR (tags->'craft' = 'optician') THEN
 		RETURN 'health';
 	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'milk') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bread') OR (tags->'shop' IN ('frozen_food', 'supermarket', 'butcher', 'cheese', 'convenience', 'seafood', 'greengrocer', 'deli', 'spices', 'honey', 'health_food', 'pasta', 'cannery', 'chocolate', 'tea', 'coffee', 'dairy', 'confectionery', 'farm', 'bakery', 'pastry')) OR (tags->'amenity' = 'marketplace') THEN
 		RETURN 'food';
@@ -51,14 +51,16 @@ BEGIN
 		RETURN 'insurance';
 	ELSIF tags->'amenity' = 'pharmacy' THEN
 		RETURN 'pharmacy';
-	ELSIF tags->'amenity' = 'vending_machine' AND tags->'vending' = 'condoms' THEN
-		RETURN 'condoms';
+	ELSIF tags->'healthcare' = 'centre' AND tags->'healthcare:speciality' = 'covid19' THEN
+		RETURN 'covid19_centre';
 	ELSIF (tags->'shop' = 'optician') OR (tags->'craft' = 'optician') THEN
 		RETURN 'optician';
-	ELSIF tags->'shop' = 'medical_supply' THEN
-		RETURN 'medical_supply';
 	ELSIF tags->'shop' = 'hearing_aids' THEN
 		RETURN 'hearing_aids';
+	ELSIF tags->'amenity' = 'vending_machine' AND tags->'vending' = 'condoms' THEN
+		RETURN 'condoms';
+	ELSIF tags->'shop' = 'medical_supply' THEN
+		RETURN 'medical_supply';
 	ELSIF tags->'shop' IN ('frozen_food', 'supermarket') THEN
 		RETURN 'supermarket';
 	ELSIF tags->'shop' = 'butcher' THEN
