@@ -39,68 +39,17 @@ import { MglMap, MglNavigationControl, MglVectorLayer, MglAttributionControl, Mg
 const source = "public.poi_osm_light";
 
 const layers = [
-  {
-    id: "poi-open-background",
+ {
+    id: "poi-background",
     type: "circle",
     "source-layer": source,
-    filter: [
-      "all",
-      [
-        "in",
-        "status",
-        "open",
-        "open_adapted"
-      ]
-    ],
     paint: {
-      'circle-color': 'green',
-      'circle-radius': [
-        'interpolate',
-        ['linear'],
-        ['zoom'],
-        14, 6,
-        19, 17
-      ]
-    }
-  },
-  {
-    id: "poi-unknow-background",
-    type: "circle",
-    "source-layer": source,
-    filter: [
-      "all",
-      [
-        "in",
-        "status",
-        "unknown",
-        "partial"
-      ]
-    ],
-    paint: {
-      'circle-color': 'gray',
-      'circle-radius': [
-        'interpolate',
-        ['linear'],
-        ['zoom'],
-        14, 6,
-        19, 17
-      ]
-    }
-  },
-  {
-    id: "poi-closed-background",
-    type: "circle",
-    "source-layer": source,
-    filter: [
-      "all",
-      [
-        "in",
-        "status",
-        "closed"
-      ]
-    ],
-    paint: {
-      'circle-color': '#96281b',
+     'circle-color': [
+        'case',
+        ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], "green",
+        ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], "gray",
+        "#96281b"
+     ],
       'circle-radius': [
         'interpolate',
         ['linear'],
