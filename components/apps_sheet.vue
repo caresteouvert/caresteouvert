@@ -6,7 +6,7 @@
           <v-container class="pb-0">
             <v-row no-gutters align="center" justify="space-around">
               <v-col cols="6" sm="4">
-                <a href="https://play.google.com/" target="_blank" rel="noopener">
+                <a href="https://play.google.com/store/apps/details?id=com.transway.caresteouvert" target="_blank" rel="noopener">
                   <img src="../assets/appbadge_gplay.png" class="img-badge" :alt="$t('apps_info.googleplay')" />
                 </a>
               </v-col>
