@@ -64,14 +64,18 @@
         "title": "This place offers delivery",
         "unknown": "I don't know",
         "yes": "Yes",
-        "only": "Only offers delivery",
         "no": "No"
       },
       "takeaway": {
         "title": "This place allows to purchase to take-away",
         "unknown": "I don't know",
         "yes": "Yes",
-        "only": "Take-away only",
+        "no": "No"
+      },
+      "access": {
+        "title": "Public can enter or stay inside this place",
+        "unknown": "I don't know",
+        "yes": "Yes",
         "no": "No"
       },
       "details": "Add details required during the lockdown"

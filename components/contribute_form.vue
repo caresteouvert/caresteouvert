@@ -112,6 +112,20 @@
           ></v-select>
         </label>
 
+        <label
+          v-if="showAccess"
+          class="d-block mt-2"
+        >
+          {{ $t('contribute_form.step3.access.title') }}
+          <v-select
+            v-model="access"
+            :items="accessItems"
+            filled
+            dense
+            hide-details
+          ></v-select>
+        </label>
+
         <label class="d-block pt-4">
           {{ $t('contribute_form.step3.details') }}
           <v-textarea
@@ -153,18 +167,22 @@ export default {
     return {
       step: 1,
       details: '',
+      access: null,
+      accessItems: [
+        { text: this.$t('contribute_form.step3.access.unknown'), value: null },
+        { text: this.$t('contribute_form.step3.access.yes'), value: 'yes' },
+        { text: this.$t('contribute_form.step3.access.no'), value: 'no' }
+      ],
       delivery: null,
       deliveryItems: [
         { text: this.$t('contribute_form.step3.delivery.unknown'), value: null },
         { text: this.$t('contribute_form.step3.delivery.yes'), value: 'yes' },
-        { text: this.$t('contribute_form.step3.delivery.only'), value: 'only' },
         { text: this.$t('contribute_form.step3.delivery.no'), value: 'no' }
       ],
       takeaway: null,
       takeawayItems: [
         { text: this.$t('contribute_form.step3.takeaway.unknown'), value: null },
         { text: this.$t('contribute_form.step3.takeaway.yes'), value: 'yes' },
-        { text: this.$t('contribute_form.step3.takeaway.only'), value: 'only' },
         { text: this.$t('contribute_form.step3.takeaway.no'), value: 'no' }
       ],
       loading: false,
@@ -178,6 +196,7 @@ export default {
     if (this.properties.opening_hours) {
       this.openingHours = this.parseOpeningHours(this.properties.opening_hours);
     }
+    this.access = this.parseTag('access:covid19', this.accessItems);
     this.delivery = this.parseTag('delivery:covid19', this.deliveryItems);
     this.takeaway = this.parseTag('takeaway:covid19', this.takeawayItems);
   },
@@ -193,6 +212,10 @@ export default {
 
     showOpeningHoursWithoutLockDown() {
       return !this.hasOpeningHours && this.openingHours.length !== 0;
+    },
+
+    showAccess() {
+      return this.showField('access:covid19', this.accessItems);
     },
 
     showDelivery() {
@@ -222,7 +245,8 @@ export default {
         tags: {
           opening_hours: this.openingHoursWithoutLockDown ? 'same': undefined,
           'delivery:covid19': this.delivery ? this.delivery : undefined,
-          'takeaway:covid19': this.takeaway ? this.takeaway : undefined
+          'takeaway:covid19': this.takeaway ? this.takeaway : undefined,
+          'access:covid19': this.access ? this.access : undefined
         }
       };
     }
@@ -285,7 +309,11 @@ export default {
     },
 
     parseTag(tag, items) {
-      const value = this.properties.tags[tag];
+      let value = this.properties.tags[tag];
+      if(['delivery:covid19', 'takeaway:covid19'].includes(tag) && value === "only") {
+        value = "yes";
+      }
+
       return items.map(e => e.value).includes(value) ? value : null;
     }
   }

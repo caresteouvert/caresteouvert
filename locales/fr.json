@@ -64,14 +64,18 @@
         "title": "Ce lieu propose la livraison pendant le confinement",
         "unknown": "Ne sais pas",
         "yes": "Oui",
-        "only": "seulement la livraison",
         "no": "Non"
       },
       "takeaway": {
         "title": "Ce lieu propose la vente à emporter",
         "unknown": "Ne sais pas",
         "yes": "Oui",
-        "only": "Vente à emporter uniquement",
+        "no": "Non"
+      },
+      "access": {
+        "title": "Les clients peuvent entrer ou rester à l'intérieur",
+        "unknown": "Ne sais pas",
+        "yes": "Oui",
         "no": "Non"
       },
       "details": "Optionnel : ajouter d'autres détails liés au confinement"
