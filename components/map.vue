@@ -77,9 +77,9 @@ const layers = [
     "layout": {
       "icon-image": [
         "coalesce",
-        ['image', ['concat', ['get', 'cat'], '_11']],
-        ['image', ['concat', ['get', 'normalized_cat'], '_11']],
-        ['image', 'other_11']
+        ['image', ['get', 'cat']],
+        ['image', ['get', 'normalized_cat']],
+        ['image', 'other']
       ],
       "icon-size": [
         'interpolate',
