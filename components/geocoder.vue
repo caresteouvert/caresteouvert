@@ -49,6 +49,21 @@ export default {
         this.controller = null;
       }
       if (!val || val.trim().length < 3) return;
+
+      // Direct coordinates input ?
+      let directCoordinates = null;
+      if(/^-?\d+\.\d+[,;]-?\d+\.\d+$/.test(val.trim().replace(/ /g, ''))) {
+        const separator = val.includes(',') ? ',' : ';';
+        const coordsLatLng = val.split(separator).map(c => parseFloat(c.trim()));
+        const bbox = [ coordsLatLng[1] - 0.0005, coordsLatLng[0] - 0.0005, coordsLatLng[1] + 0.0005, coordsLatLng[0] + 0.0005 ];
+        directCoordinates = {
+          text: this.$t('coordinates'),
+          region: coordsLatLng.join(', '),
+          value: bbox
+        };
+        this.items = [ directCoordinates ];
+      }
+
       this.error = null;
       this.isLoading = true;
       this.controller = new AbortController();
@@ -67,6 +82,7 @@ export default {
               value: feature.bbox ? feature.bbox : feature.geometry.coordinates.concat(feature.geometry.coordinates)
             };
           });
+          if(directCoordinates) { this.items.unshift(directCoordinates); }
         })
         .catch(err => {
           this.error = err;
