@@ -2,7 +2,7 @@
   <div
     v-resize="computeIsMobile"
     :class="{
-       xs: isMobile,
+       sm: isMobile,
       'place-opened': $route.name === 'place' && !isMobile,
       'sidebar-opened': sidebar && !isMobile
      }"
@@ -208,7 +208,7 @@ export default {
     },
 
     computeIsMobile() {
-      this.isMobile = window.innerWidth < 800;
+      this.isMobile = this.$vuetify.breakpoint.smAndDown;
     },
 
     savedMapView() {
@@ -278,7 +278,7 @@ export default {
 .zoom-chip.push-up {
   bottom: 60px;
 }
-.xs .mapboxgl-ctrl-top-right {
+.sm .mapboxgl-ctrl-top-right {
   top: 50px;
 }
 .place-opened .mapboxgl-ctrl-top-right, .place-opened .mapboxgl-ctrl-bottom-right {
