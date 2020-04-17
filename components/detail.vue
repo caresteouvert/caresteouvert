@@ -283,6 +283,11 @@ export default {
       addInfosDependingOfTagAndStatus('delivery');
       addInfosDependingOfTagAndStatus('drive_through');
 
+      // Maximal capacity
+      if(!isNaN(parseInt(this.point.properties.tags['capacity:covid19']))) {
+        infos.push(this.$t('details.capacity', { capacity: this.point.properties.tags['capacity:covid19'] }));
+      }
+
       // POI information
       if (this.point.properties.brand_infos) {
         infos.push(this.point.properties.brand_infos);

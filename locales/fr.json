@@ -94,6 +94,7 @@
     "containment_brand_hours": "Horaires sur le site web de l'enseigne",
     "facebook": "Page Facebook",
     "not_accessible": "L'intérieur n'est pas accessible au public",
+    "capacity": "Capacité maximale : {capacity} personnes",
     "opening_hours": {
       "state_until_date": "{state} jusqu'à {date}",
       "state": {
