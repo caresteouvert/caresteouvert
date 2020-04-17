@@ -94,7 +94,7 @@
     "containment_brand_hours": "Opening hours on the brand web page",
     "facebook": "Facebook page",
     "not_accessible": "Indoor space not accessible to public",
-    "capacity": "Maximal capacity : {capacity} persons",
+    "capacity": "Maximal capacity : 0 persons | Maximal capacity : 1 person | Maximal capacity : {count} persons",
     "opening_hours": {
       "state_until_date": "{state} until {date}",
       "state": {
