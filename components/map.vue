@@ -3,7 +3,6 @@
     :center="mapCenter"
     :zoom="mapZoom"
     :map-style="mapStyle"
-    :attribution-control="false"
     @load="load"
     @update:center="updateMapCenter"
     @update:zoom="updateMapZoom"
@@ -11,10 +10,6 @@
     <MglNavigationControl />
     <MglGeolocateControl
       :positionOptions="{ enableHighAccuracy: true }"
-    />
-    <MglAttributionControl
-      :compact="false"
-      position="bottom-right"
     />
     <MglVectorLayer
       v-for="layer in layers"
@@ -34,7 +29,7 @@
 <script>
 import 'mapbox-gl/dist/mapbox-gl.css';
 import * as config from '../config.json';
-import { MglMap, MglNavigationControl, MglVectorLayer, MglAttributionControl, MglGeolocateControl } from 'vue-mapbox/dist/vue-mapbox.umd';
+import { MglMap, MglNavigationControl, MglVectorLayer, MglGeolocateControl } from 'vue-mapbox/dist/vue-mapbox.umd';
 
 const source = "public.poi_osm_light";
 
@@ -120,7 +115,6 @@ const layers = [
 
 export default {
   components: {
-    MglAttributionControl,
     MglMap,
     MglNavigationControl,
     MglVectorLayer,

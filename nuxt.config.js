@@ -58,6 +58,9 @@ export default {
   ** https://github.com/nuxt-community/vuetify-module
   */
   vuetify: {
+    treeShake: {
+      directives: ['Touch']
+    },
     optionsPath: './vuetify.options.js',
     defaultAssets: {
       icons: false,

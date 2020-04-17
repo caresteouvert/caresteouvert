@@ -52,6 +52,14 @@
           <rgpd-banner @consent="rgpdBannerHidden = true" />
           <apps-sheet />
         </client-only>
+        <bottom-menu
+          v-if="isMobile"
+          v-model="filter"
+        >
+          <osm-sidebar :show-brand="false">
+            <osm-filter-features v-model="filter" />
+          </osm-sidebar>
+        </bottom-menu>
       </v-content>
     </div>
     <nuxt-child/>
@@ -68,11 +76,13 @@ import AppsSheet from './apps_sheet';
 import OsmSidebar from './sidebar';
 import OsmFilterFeatures from './filter_features';
 import TopToolbar from './top_toolbar';
+import BottomMenu from './bottom_menu';
 import RgpdBanner from './rgpd_banner';
 
 export default {
   components: {
     AppsSheet,
+    BottomMenu,
     OsmFilterFeatures,
     OsmSidebar,
     TopToolbar,
@@ -243,7 +253,7 @@ export default {
           const [category, subcategory] = this.filter.split('/');
           if (!this.categories.includes(category)) {
             this.filter = '';
-          } else if (subcategory && !this.allCategories[category].includes(subcategory)) {
+          } else if (subcategory && !this.allCategories[category].subcategories[subcategory]) {
             this.filter = category;
           }
         });
@@ -278,8 +288,14 @@ export default {
 .zoom-chip.push-up {
   bottom: 60px;
 }
+.sm .zoom-chip {
+  bottom: 40px;
+}
 .sm .mapboxgl-ctrl-top-right {
   top: 50px;
+}
+.sm .mapboxgl-ctrl-bottom-right {
+  bottom: 20px;
 }
 .place-opened .mapboxgl-ctrl-top-right, .place-opened .mapboxgl-ctrl-bottom-right {
   transform: translateX(-400px);
