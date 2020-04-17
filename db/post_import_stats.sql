@@ -31,5 +31,6 @@ CREATE TABLE IF NOT EXISTS stats_poi_count(
 	total INT,
 	nb_open INT,
 	nb_closed INT,
-	nb_unknown INT
+	nb_unknown INT,
+	nb_partial INT
 );
