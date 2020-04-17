@@ -160,6 +160,11 @@ export default {
     filter: {
       type: String,
       required: true
+    },
+
+    sidebar: {
+      type: Boolean,
+      required: true
     }
   },
 
@@ -191,6 +196,24 @@ export default {
         }
         return newLayer;
       });
+    }
+  },
+
+  watch: {
+    poi(poi) {
+      if (poi) {
+        const isPoiUnderUI = (x, y) => {
+          const height = document.body.clientHeight;
+          const width = document.body.clientWidth;
+          const offsetSidebar = this.sidebar ? 300 : 0;
+          const offsetPoi = this.$vuetify.breakpoint.smAndDown ? 0 : 300;
+          return (x < offsetSidebar || x > width - offsetPoi || y > height || y < 0);
+        }
+        const { x, y } = this.map.project(poi.geometry.coordinates);
+        if (isPoiUnderUI(x, y)) {
+          this.map.panTo(poi.geometry.coordinates);
+        }
+      }
     }
   },
 

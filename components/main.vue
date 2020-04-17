@@ -32,6 +32,7 @@
           <osm-map
             v-if="loadMap"
             ref="map"
+            :sidebar="sidebar"
             :map-style="mapStyle"
             :map-center.sync="mapCenter"
             :map-zoom.sync="mapZoom"
