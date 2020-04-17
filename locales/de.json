@@ -91,7 +91,7 @@
     "state": {
       "open": "Ort weiterhin geöffnet",
       "open_adapted": "Ort geöffnet mit abweichenden Öffnungszeiten",
-      "partial": "Dieser Ort gehört zu einem Unternehmen, deren Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen? Lass es uns wissen.",
+      "partial": "Dieser Ort gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen? Lass es uns wissen.",
       "unknown": "Dieser Ort darf wahrscheinlich geöffnet bleiben.\n\nGeöffnet oder geschlossen? Lass es uns wissen.",
       "closed": "Ort vorübergehend geschlossen"
     },
@@ -107,10 +107,24 @@
     "drive_through": {
       "yes": "Drive-in geöffnet",
       "only": "Nur im Drive-in"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Briefmarken",
+      "parcel_mail_in": "Paketautomat (nur Versand)",
+      "parcel_pickup": "Paketautomat (nur Abholung)",
+      "parcel_pickup;parcel_mail_in": "Paketautomat (Abholung & Versand)",
+      "milk": "Milch",
+      "drinks": "Getränke",
+      "water": "Wasser",
+      "sweets": "Süßigkeiten"
     }
   },
   "opening_hours_editor": {
-    "select_days": "Wochentage auswählen",
+    "day_shortcuts": {
+      "weekdays": "Montag bis Samstag"
+    },
+    "select_days": "Wähle Tage mit den gleichen Zeiten aus:",
     "next": "Zeiten auswählen",
     "select_time": {
       "start": "Beginn der Öffnungszeiten",
@@ -139,6 +153,7 @@
     "condoms": "Kondomautomat",
     "optician": "Optiker",
     "medical_supply": "Sanitätshaus",
+    "hearing_aids": "Hörgeräte",
     "food": "Lebensmittel",
     "supermarket": "Supermarkt",
     "butcher": "Metzger",

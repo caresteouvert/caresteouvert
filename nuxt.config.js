@@ -1,5 +1,12 @@
-import { resolve } from 'path';
+import glob from 'glob';
+import { resolve, basename } from 'path';
 import FMMode from 'frontmatter-markdown-loader/mode';
+
+const messages = {};
+glob.sync('./locales/*.json' ).forEach((file) => {
+  const locale = basename(file, '.json');
+  messages[locale] = require(resolve(file));
+});
 
 export default {
   mode: 'universal',
@@ -44,7 +51,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '~/modules/i18n'
+    ['~/modules/i18n', { messages }]
   ],
   /*
   ** vuetify module configuration

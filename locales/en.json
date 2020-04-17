@@ -25,6 +25,13 @@
     "yes": "Yes",
     "no": "No"
   },
+  "apps_info": {
+    "close": "Close",
+    "text": "The mobile app « {brand} » is now available !",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
+  },
   "days": {
     "monday": "Monday",
     "tuesday": "Tuesday",
@@ -107,10 +114,24 @@
     "drive_through": {
       "yes": "Drive-through service available",
       "only": "Only by drive-through"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Stamps",
+      "parcel_mail_in": "Parcel drop-box",
+      "parcel_pickup": "Parcel pickup",
+      "parcel_pickup;parcel_mail_in": "Parcel pickup & drop-box",
+      "milk": "Milk",
+      "drinks": "Drinks",
+      "water": "Water",
+      "sweets": "Sweets"
     }
   },
   "opening_hours_editor": {
-    "select_days": "Select days",
+    "day_shortcuts": {
+      "weekdays": "Monday to Saturday"
+    },
+    "select_days": "Select days that share the same opening hours",
     "next": "Select hours",
     "select_time": {
       "start": "Choose opening hour",
@@ -136,8 +157,10 @@
     "insurance": "Insurance",
     "health": "Health",
     "pharmacy": "Pharmacy",
-    "condoms": "Condoms vending machine",
+    "covid19_centre": "Covid-19 consultation centre",
     "optician": "Optician",
+    "hearing_aids": "Hearing aids",
+    "condoms": "Condoms vending machine",
     "medical_supply": "Medical supplies",
     "food": "Food",
     "supermarket": "Supermarket",
@@ -147,6 +170,11 @@
     "seafood": "Seafood",
     "greengrocer": "Greengrocer",
     "grocery": "Grocery",
+    "chocolate": "Chocolate",
+    "tea": "Tea",
+    "coffee": "Coffee",
+    "dairy": "Dairy",
+    "confectionery": "Confectionery",
     "farm": "Farm shop",
     "marketplace": "Marketplace",
     "bakery": "Bakery",

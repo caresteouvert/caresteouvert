@@ -1,15 +1,16 @@
 ---
 title: "¿Qué hacer si falta un negocio en 'Sigue abierto'?"
-coverImage: "3_Tipo_de_comercio.png"
 ---
 
-¿No encuentras tu panadería o farmacia habitual en [Sigue abierto](https://sigueabierto.openstreetmap.es) ? Sigue esta guía para ayudarnos a mejorar nuestro mapa colaborativo de sitios accesibles durante el Estado de Alarma.
+![](~/assets/es/3_Tipo_de_comercio.png)
+
+*¿No encuentras tu panadería o farmacia habitual en [Sigue abierto](https://www.sigueabierto.es) ? Sigue esta guía para ayudarnos a mejorar nuestro mapa colaborativo de sitios accesibles durante el Estado de Alarma.*
 
 
 **Sigue abierto** se basa en los datos de [OpenStreetMap](http://openstreetmap.org) (OSM). OSM es un poco como la 'Wikipedia de la cartografía': un mapa del mundo que puedes enriquecer en función de tu conocimiento local.
 
 
-Y eso es lo que vamos a hacer: ¡modificar el mapa para agregar ese comercio que falta!
+Y eso es lo que vamos a hacer, ¡modificar el mapa para agregar ese comercio que falta!
 
 #### Primer paso: crear una cuenta
 
@@ -38,7 +39,7 @@ Para crear el comercio que falta, sitúa el mapa donde está este, haz clic en e
 
 Luego, usando el campo de búsqueda, indica el tipo de comercio que deseas crear.
 
-![el campo búsqueda te permite encontrar fácilmente la categoría de comercios a crear](~/assets/es/3_Tipo_de comercio.png)
+![el campo búsqueda te permite encontrar fácilmente la categoría de comercios a crear](~/assets/es/3_Tipo_de_comercio.png)
 
 _Consejo: Si deseas informar de una empresa franquiciada o perteneciente a una red, también puedes buscar el nombre de la marca (por ejemplo 'BBVA')_
 
@@ -46,7 +47,7 @@ _Consejo: Si deseas informar de una empresa franquiciada o perteneciente a una r
 
 Completa la información sobre el comercio, como su nombre o número de teléfono.
 
-No tienes que completar todo el formulario, si no recuerdas el nombre del restaurante, no importa.
+No tienes que completar todo el formulario, si no recuerdas el nombre de la farmacia, no importa.
 
 ![](~/assets/es/4_Editar_elemento.png)
 
@@ -58,19 +59,19 @@ Cuando hayas terminado, todo lo que tienes que hacer es guardar los cambios haci
 
 Agrega un pequeño mensaje para indicar lo que has cambiado en el mapa, luego haz clic en el botón 'Subir'.
 
-![indica que has hecho cambios con el botón azul](~/assets/es/6_Subir a OSM.png)
+![indica que has hecho cambios con el botón azul](~/assets/es/6_Subir_a_OSM.png)
 
 #### ¡Listo!
 
 ¡Felicidades por esta primera contribución y bienvenido a la comunidad OpenStreetMap!
 
-Ahora hay que esperar: los nuevos negocios se agregan regularmente y automáticamente a  **Sigue Abierto**. Puedes indicar cualquier información adicional útil durante el Estado de Alarma directamente allí.
+Ahora hay que esperar, los nuevos negocios se agregan regularmente y automáticamente a  **Sigue Abierto**. Puedes indicar cualquier información adicional útil durante el Estado de Alarma directamente allí.
 
 #### Algunas observaciones adicionales
 
-Antes de crear el negocio, examina cuidadosamente los alrededores: puede que ya esté allí, pero con el tipo incorrecto.
+Antes de crear el negocio, examina cuidadosamente los alrededores, puede que ya esté allí, pero con el tipo incorrecto.
 
-OpenStreetMap es un mapa público: no ingreses ningún dato personal sobre ti o los comercios que describas.
+OpenStreetMap es un mapa público, no ingreses ningún dato personal sobre ti o los comercios que describas.
 
 No copies la información de otros mapas, generalmente están protegidos por derechos de autor.
 

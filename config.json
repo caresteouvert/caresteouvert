@@ -36,6 +36,7 @@
     "government": "https://www.who.int/health-topics/coronavirus"
   },
   "at": {
+    "locale": "de",
     "domain": "www.bleibtoffen.at",
     "brand": "bleibtoffen",
     "brand_text": "Bleibt offen",
@@ -48,6 +49,7 @@
     "disclaimer": "https://www.bleibtoffen.org/impressum.html"
   },
   "ch": {
+    "locale": "de",
     "domain": "www.bleibtoffen.ch",
     "brand": "bleibtoffen",
     "brand_text": "Bleibt offen",
@@ -79,10 +81,11 @@
     "shopMissing": "/ca/que-fer-si-falta-un-comerc-a-es-obert/"
   },
   "es": {
-    "domain": "sigueabierto.openstreetmap.es",
+    "domain": "www.sigueabierto.es",
     "brand": "sigueabierto",
     "brand_text": "Sigue Abierto",
     "government": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/home.htm",
+    "blog": "/blog/es/",
     "shopMissing": "/es/que-hacer-si-falta-un-comercio-en-sigue-abierto/"
   },
   "gl": {

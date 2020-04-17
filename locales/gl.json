@@ -79,6 +79,7 @@
     "containment_opening_hours": "Horario de apertura fóra do período de confinamento",
     "containment_brand_hours": "Horario de apertura na páxina web da marca",
     "facebook": "Páxina do Facebook",
+    "not_accessible": "Espazo interior non accesíbel ó público",
     "opening_hours": {
       "state_until_date": "{state} até {date}",
       "state": {
@@ -102,10 +103,28 @@
       "yes": "Venda para levar dispoñíbel",
       "modified": "Venda para levar modificada",
       "only": "Só venda para levar"
+    },
+    "drive_through": {
+      "yes": "Recollida con coche dispoñíbel",
+      "only": "Só recollida con coche"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Selos",
+      "parcel_mail_in": "Caixa de entrega",
+      "parcel_pickup": "Recollida de paquetaría",
+      "parcel_pickup;parcel_mail_in": "Recollida de paquetaría e caixa de entrega",
+      "milk": "Leite",
+      "drinks": "Bebidas",
+      "water": "Auga",
+      "sweets": "Doces"
     }
   },
   "opening_hours_editor": {
-    "select_days": "Escoller días",
+    "day_shortcuts": {
+      "weekdays": "De luns a sábado"
+    },
+    "select_days": "Escolle os días que compartan o mesmo horario",
     "next": "Escoller horas",
     "select_time": {
       "start": "Escoller horario de apertura",
@@ -121,9 +140,20 @@
   },
   "categories": {
     "other": "Outros lugares",
+    "amenity": "Instalacións",
     "police": "Policía",
-    "pharmacy": "Farmacias",
     "post_office": "Oficinas de correos",
+    "employment_agency": "Axencia de traballo",
+    "funeral_directors": "Tanatorios ou funerarias",
+    "bank": "Banco",
+    "moneylender": "Prestamista",
+    "insurance": "Aseguradora",
+    "health": "Saúde",
+    "pharmacy": "Farmacias",
+    "condoms": "Máquinas expendedoras de condóns",
+    "optician": "Óptica",
+    "medical_supply": "Subministracións médicas",
+    "hearing_aids": "Audífonos",
     "food": "Alimentación",
     "supermarket": "Supermercado",
     "butcher": "Carnizaría",
@@ -132,7 +162,7 @@
     "seafood": "Peixaría",
     "greengrocer": "Froitaría",
     "grocery": "Ultramarinos",
-    "alcohol": "Licoraría",
+    "farm": "Tenda de produtos agrícolas",
     "marketplace": "Mercado",
     "bakery": "Panadarías",
     "eat": "Restaurantes e para levar",
@@ -141,8 +171,10 @@
     "fast_food": "Comida rápida",
     "ice_cream": "Xeadaría",
     "cafe": "Tenda de café",
+    "drugs": "Tabaco e alcol",
     "tobacco": "Estancos",
     "e_cigarette": "Cigarros electrónicos",
+    "alcohol": "Licoraría",
     "shop": "Tendas",
     "hardware": "Ferraxaría",
     "mobile_phone": "Telefonía móbil",
@@ -150,23 +182,19 @@
     "electronics": "Electrónica",
     "laundry": "Lavandaría",
     "stationery": "Papelaría",
-    "medical_supply": "Subministracións médicas",
     "newsagent": "Quiosco",
     "pet": "Tenda de animais",
     "agrarian": "Produtos agrícolas",
     "garden_centre": "Centro de xardinaría",
-    "optician": "Óptica",
-    "employment_agency": "Axencia de traballo",
-    "funeral_directors": "Tanatorios ou funerarias",
     "chemist": "Drogaría",
-    "finance": "Servizos financeiros",
-    "bank": "Banco",
-    "moneylender": "Prestamista",
-    "insurance": "Aseguradora",
+    "fabric": "Tendas téxtil",
+    "books": "Libraría",
     "mobility": "Mobilidade",
     "fuel": "Gasolineira",
     "car_rental": "Alugueiro de coches",
     "bicycle": "Tenda de bicicletas",
-    "car": "Garaxe"
+    "car": "Garaxe",
+    "bicycle_tube": "Máquina expendedora de tubos para bicicletas",
+    "public_transport_tickets": "Máquina expendedora de billetes do transporte público"
   }
 }

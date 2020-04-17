@@ -25,6 +25,13 @@
     "yes": "Oui",
     "no": "Non"
   },
+  "apps_info": {
+    "close": "Fermer",
+    "text": "L'appli mobile « {brand} » est disponible !",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
+  },
   "days": {
     "monday": "Lundi",
     "tuesday": "Mardi",
@@ -67,7 +74,7 @@
         "only": "Vente à emporter uniquement",
         "no": "Non"
       },
-      "details": "Ajouter des détails nécessaire au confinement"
+      "details": "Optionnel : ajouter d'autres détails liés au confinement"
     },
     "submit": "Publier",
     "cancel": "Annuler"
@@ -107,10 +114,24 @@
     "drive_through": {
       "yes": "Service de drive disponible",
       "only": "Uniquement par drive"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Timbres",
+      "parcel_mail_in": "Dépose de colis",
+      "parcel_pickup": "Consigne à colis",
+      "parcel_pickup;parcel_mail_in": "Dépose et consigne de colis",
+      "milk": "Lait",
+      "drinks": "Boissons",
+      "water": "Eau",
+      "sweets": "Bonbons"
     }
   },
   "opening_hours_editor": {
-    "select_days": "Sélectionnez les jours",
+    "day_shortcuts": {
+      "weekdays": "Du lundi au samedi"
+    },
+    "select_days": "Sélectionnez les jours qui ont les même horaires d'ouverture",
     "next": "Sélectionnez les horaires",
     "select_time": {
       "start": "Entrer l'horaire d'ouverture",
@@ -136,8 +157,10 @@
     "insurance": "Assurance",
     "health": "Santé",
     "pharmacy": "Pharmacie",
-    "condoms": "Distributeur de préservatifs",
+    "covid19_centre": "Centre de consultation Covid-19",
     "optician": "Opticien",
+    "hearing_aids": "Appareils auditifs",
+    "condoms": "Distributeur de préservatifs",
     "medical_supply": "Matériel médical",
     "food": "Alimentation",
     "supermarket": "Supermarché",
@@ -147,6 +170,11 @@
     "seafood": "Poissonnerie",
     "greengrocer": "Primeur",
     "grocery": "Épicerie",
+    "chocolate": "Chocolat",
+    "tea": "Thé",
+    "coffee": "Café",
+    "dairy": "Laiterie",
+    "confectionery": "Magasin de bonbons",
     "farm": "Magasin à la ferme",
     "marketplace": "Marché",
     "bakery": "Boulangerie",

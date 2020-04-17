@@ -124,4 +124,15 @@ describe('OpeningHours', () => {
     detail.setProps({ value: 'We-Sa 09:00-18:00' });
     expect(detail.vm.formatNextDate).toEqual('Wednesday 09:00 AM');
   });
+
+  it('handle invalid opening hours', () => {
+    const detail = shallowMount(DetailOpeningHours, {
+      localVue,
+      stubs,
+      propsData: {
+        value: 'Mardi au jeudi'
+      }
+    });
+    expect(detail.isEmpty()).toBe(true);
+  });
 });

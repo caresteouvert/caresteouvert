@@ -1,12 +1,12 @@
 <template>
-  <v-list-item v-if="alwaysOpen">
+  <v-list-item v-if="openingHours && alwaysOpen">
     <v-list-item-icon><v-icon>osm-time</v-icon></v-list-item-icon>
     <v-list-item-content>
       <v-list-item-title>24/7</v-list-item-title>
     </v-list-item-content>
   </v-list-item>
   <v-list-group
-    v-else
+    v-else-if="openingHours"
     prepend-icon="osm-time"
     no-action
   >
@@ -68,7 +68,10 @@ export default {
 
   computed: {
     openingHours() {
-      return new OpeningHours(this.value, null, { mode: this.mode });
+      try {
+        return new OpeningHours(this.value, null, { mode: this.mode });
+      } catch (e) {
+      }
     },
     comment() {
       return this.openingHours.getComment();

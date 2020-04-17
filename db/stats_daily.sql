@@ -18,14 +18,15 @@ HAVING COUNT(*) >= 20
 ORDER BY country, COUNT(*) DESC;
 
 -- Status of POIs
-INSERT INTO stats_poi_count(day, country, total, nb_open, nb_closed, nb_unknown)
+INSERT INTO stats_poi_count(day, country, total, nb_open, nb_closed, nb_unknown, nb_partial)
 SELECT
 	current_date,
 	country,
 	COUNT(*),
 	SUM((status IN ('open', 'open_adapted'))::int),
 	SUM((status = 'closed')::int),
-	SUM((status IN ('unknown', 'partial'))::int)
+	SUM((status = 'unknown')::int),
+	SUM((status = 'partial')::int)
 FROM poi_osm
 GROUP BY current_date, country
 ORDER BY current_date, country;
