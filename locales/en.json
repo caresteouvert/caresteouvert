@@ -80,7 +80,8 @@
         "yes": "Yes",
         "no": "No"
       },
-      "details": "Add details required during the lockdown"
+      "details": "Optional : add details required during the lockdown",
+      "details_error": "Should be either empty or at least 10 characters long"
     },
     "submit": "Publish",
     "cancel": "Cancel"

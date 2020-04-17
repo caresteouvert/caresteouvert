@@ -131,6 +131,8 @@
           <v-textarea
             v-model="details"
             class="mt-2"
+            rows="2"
+            :rules="[ detailsRules ]"
             filled
           ></v-textarea>
         </label>
@@ -273,6 +275,11 @@ export default {
       return Object.keys(table).map((day) => {
         return { days: [day], hours: [...table[day]] };
       }).filter(interval => interval.hours.length > 0);
+    },
+
+    detailsRules(val) {
+      if(val === null || val === undefined || val.length === 0 || (val.length >= 10 && val.length <= 200)) { return true; }
+      else { return this.$t('contribute_form.step3.details_error'); }
     },
 
     submit() {

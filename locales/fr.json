@@ -80,7 +80,8 @@
         "yes": "Oui",
         "no": "Non"
       },
-      "details": "Optionnel : ajouter d'autres détails liés au confinement"
+      "details": "Optionnel : ajouter d'autres détails liés au confinement",
+      "details_error": "Doit être soit vide, soit contenir au moins 10 caractères"
     },
     "submit": "Publier",
     "cancel": "Annuler"
