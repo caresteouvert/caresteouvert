@@ -1,8 +1,9 @@
 <template>
   <div>
     <v-card
+      v-if="showBrand"
       :to="{ name: 'index' }"
-      title
+      tile
       flat
     >
       <v-card-title class="pl-1 pt-5 pb-5 justify-center">
@@ -18,7 +19,7 @@
     </v-card>
 
     <governement-alert />
-    <v-divider></v-divider>
+    <v-divider v-if="showBrand"></v-divider>
     <slot />
     <v-list>
       <v-divider></v-divider>
@@ -49,7 +50,15 @@ export default {
     SidebarListItem,
   },
 
-  mixins: [i18nMixin]
+  mixins: [i18nMixin],
+
+  props: {
+    showBrand: {
+      type: Boolean,
+      required: false,
+      default: true
+    }
+  }
 }
 </script>
 
