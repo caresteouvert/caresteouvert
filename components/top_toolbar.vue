@@ -1,5 +1,5 @@
 <template>
-  <div class="search ml-sm-5 mt-sm-5">
+  <div class="search ml-md-5 mt-md-5">
     <v-toolbar
       :dense="!isMobile || !geocoder"
       :height="isMobile && geocoder ? '70px' : undefined"
@@ -124,7 +124,7 @@ export default {
 
   methods: {
     resize() {
-      this.isMobile = window.innerWidth < 800;
+      this.isMobile = this.$vuetify.breakpoint.smAndDown;
     },
 
     onGeocoderSelect(bbox) {
@@ -156,7 +156,7 @@ export default {
   position: absolute;
   z-index: 4;
 }
-.xs .search {
+.sm .search {
   width: 100%;
 }
 .img-header-mobile {
