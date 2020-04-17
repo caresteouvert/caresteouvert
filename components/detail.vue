@@ -65,6 +65,7 @@
           <template v-if="contact('phone')">
             <detail-link
               v-for="phone in contact('phone').split(';')"
+              :key="phone"
               :href="`tel:${phone}`"
               :title="phone"
               icon="osm-phone"
@@ -73,6 +74,7 @@
           <template v-if="contact('mobile')">
             <detail-link
               v-for="mobile in contact('mobile').split(';')"
+              :key="mobile"
               :href="`tel:${mobile}`"
               :title="mobile"
               icon="osm-mobile_phone"
