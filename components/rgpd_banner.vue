@@ -24,7 +24,7 @@ const RGPD_COOKIE = 'rgpdConsent';
 
 export default {
   data() {
-    const consent = getCookie(RGPD_COOKIE);
+    const consent = getCookie(RGPD_COOKIE) || (navigator.doNotTrack === "1" ? 'false' : undefined);
     return {
       consent: consent === undefined ? null : (consent === 'true' ? true : false)
     };
@@ -62,6 +62,7 @@ export default {
         _paq.push(["disableCookies"]);
       }
       _paq.push(['trackPageView']);
+      _paq.push(["setDoNotTrack", true]);
       _paq.push(['enableLinkTracking']);
       window._paq = _paq;
       (function() {
