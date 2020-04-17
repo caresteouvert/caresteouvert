@@ -3,12 +3,17 @@ import categoriesForCountry from '../components/categories';
 
 export const state = () => ({
   country: '',
-  categories: []
+  categories: [],
+  poi: null
 });
 
 export const mutations = {
   setCountry (state, country) {
     state.country = country;
+  },
+
+  setPoi (state, poi) {
+    state.poi = poi;
   }
 };
 

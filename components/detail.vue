@@ -312,8 +312,9 @@ export default {
     updatePoint() {
       return fetch(`${poiFeature}/${this.id}.json`)
         .then(data => data.json())
-        .then((feature) => {
-          this.point = feature;
+        .then((poi) => {
+          this.point = poi;
+          this.$store.commit('setPoi', poi);
         }).catch(() => {
           this.$nuxt.context.redirect(`/${this.$route.params.featuresAndLocation || ''}`);
         });
@@ -337,6 +338,9 @@ export default {
         result = window.confirm(this.$t('details.signal_warning'));
       }
       next(result);
+      if (result) {
+        this.$store.commit('setPoi', null);
+      }
     }
   }
 }

@@ -7,6 +7,12 @@
     @update:center="updateMapCenter"
     @update:zoom="updateMapZoom"
   >
+    <MglMarker
+      v-if="poi"
+      :coordinates="poi.geometry.coordinates"
+      :offset="{ x: 0, y: -15 }"
+      color="red"
+    />
     <MglNavigationControl />
     <MglGeolocateControl
       :positionOptions="{ enableHighAccuracy: true }"
@@ -28,8 +34,15 @@
 
 <script>
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { mapState } from 'vuex';
 import * as config from '../config.json';
-import { MglMap, MglNavigationControl, MglVectorLayer, MglGeolocateControl } from 'vue-mapbox/dist/vue-mapbox.umd';
+import {
+  MglGeolocateControl,
+  MglMap,
+  MglMarker,
+  MglNavigationControl,
+  MglVectorLayer,
+} from 'vue-mapbox/dist/vue-mapbox.umd';
 
 const source = "public.poi_osm_light";
 
@@ -115,10 +128,11 @@ const layers = [
 
 export default {
   components: {
+    MglGeolocateControl,
     MglMap,
+    MglMarker,
     MglNavigationControl,
     MglVectorLayer,
-    MglGeolocateControl
   },
 
   props: {
@@ -156,6 +170,8 @@ export default {
   },
 
   computed: {
+    ...mapState(['poi']),
+
     poiSource() {
       return {
         minzoom: config.minZoomPoi,
