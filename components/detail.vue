@@ -101,7 +101,7 @@
             v-else-if="point.properties.brand_hours"
             :href="point.properties.brand_hours"
             :title="$t('details.containment_brand_hours')"
-            icon="osm-time"
+            icon="osm-chevron_right"
           />
           <template
             v-else-if="point.properties.tags.opening_hours"

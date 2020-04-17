@@ -91,7 +91,7 @@
     "signal": "Report a change",
     "signal_done": "Your report has been registered. Thank you! Please be patient, it may take a while to be processed.",
     "containment_opening_hours": "Opening hours outside the lockdown period",
-    "containment_brand_hours": "Opening hours on the brand web page",
+    "containment_brand_hours": "Look at the opening hours",
     "facebook": "Facebook page",
     "not_accessible": "Indoor space not accessible to public",
     "capacity": "Maximal capacity : 0 persons | Maximal capacity : 1 person | Maximal capacity : {count} persons",

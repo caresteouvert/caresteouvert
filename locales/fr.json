@@ -91,7 +91,7 @@
     "signal": "Signaler un changement",
     "signal_done": "Votre signalement a été enregistré. Merci ! Patientez, cela peut prendre un moment avant qu'il soit pris en compte.",
     "containment_opening_hours": "Horaires d'ouverture hors-confinement",
-    "containment_brand_hours": "Horaires sur le site web de l'enseigne",
+    "containment_brand_hours": "Consulter les horaires",
     "facebook": "Page Facebook",
     "not_accessible": "L'intérieur n'est pas accessible au public",
     "capacity": "Capacité maximale : 0 personnes | Capacité maximale : 1 personne | Capacité maximale : {count} personnes",
