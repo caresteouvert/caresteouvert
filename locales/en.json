@@ -19,7 +19,8 @@
     "press": "Press",
     "disclaimer": "Disclaimer",
     "blog": "Blog",
-    "townhalls": "Townhalls, use « {brand} »!"
+    "townhalls": "Townhalls, use « {brand} »!",
+    "osm_contributors": "Documentation for OpenStreetMap contributors"
   },
   "rgpd": {
     "consent": "In these times of lockdown, would you take a cookie on your computer for our statistics?",

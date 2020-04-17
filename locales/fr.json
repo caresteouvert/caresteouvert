@@ -19,7 +19,8 @@
     "press": "Presse",
     "disclaimer": "Mentions légales",
     "blog": "Blog",
-    "townhalls": "« {brand} », un outil de communication pour les mairies !"
+    "townhalls": "« {brand} », un outil de communication pour les mairies !",
+    "osm_contributors": "Documentation pour contributeur OpenStreetMap"
   },
   "rgpd": {
     "consent": "En ces temps de confinement, vous prendriez bien un cookie sur votre ordinateur pour nos statistiques ?",

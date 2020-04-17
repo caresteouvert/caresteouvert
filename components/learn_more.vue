@@ -45,6 +45,13 @@
                   {{ $t('learnmore.townhalls', { brand }) }}
                 </a>
               </li>
+              <li
+                v-if="$i18n.locale.startsWith('fr')"
+              >
+                <a href="https://wiki.openstreetmap.org/wiki/France/Covid-19">
+                  {{ $t('learnmore.osm_contributors') }}
+                </a>
+              </li>
             </ul>
           </v-col>
           <v-col
