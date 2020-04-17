@@ -1,27 +1,22 @@
-# Utilisation d'imposm avec Docker
+# Adding a country
 
-### Builder l'image
+### How to register a new set of boundaries for a country
 
-    docker image build -t osm_imposm .
+A country is composed of a set of geojson MultiPolygon features stored in a sigle .geojson file in the "geojson" subdirectory. Every feature has a required attribute and an optional one :
+- field "country_iso2" is required. Its value is the Alpha-2 code of the country. A list of available codes is [available here](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
+- field "sub_country" is optional (default to empty). Fill this value in case of subdivisons of the country. Only usefull to apply different Covid19 rules by region/state/Land/whatever
 
-### Chargement initial des données OSM
+SRID is 4326 and coordinates precision is set to 5 digits
 
-Au moyen de l'image Docker avec comme options :
 
-    -v `<repertoire local de telechargement>:/data`
-    -v `<repertoire local du présent repo git>:/git/covid19_map`
+### How to build the countries_subcountries geojson file
 
-Lancer l'image avec le shell import_imposm.sh et en arguments :
-1. l'URL du dataset souhaité.
-    En production : https://planet.openstreetmap.org/pbf/planet-latest.osm.pbf ou https://download.geofabrik.de/europe-latest.osm.pbf
-    Pour tester : https://download.geofabrik.de/europe/luxembourg.html
-2. la chaîne de connexion Postgres sur le modèle postgis://username:password@host:port/databasename?sslmode=require&prefix=NONE
+The file is required for the imposm process (initial load & diff)
 
-### Mise à jour avec osmosis & imposm
+Run
+    ./build_countries_geojson.sh
 
-Lancer l'image avec le shell `con_refresh_db.sh` et en argument la chaîne de connexion Postgres
-
-### How to load the countries_subcountries geojson file
+### How to load the geojson country files into Postgres (required for the "country" API)
 
 Once : pull the GDAL/OGR Docker image
 
@@ -38,6 +33,7 @@ connexion_string may be formated for ogr2ogr with any combination of following a
 connexion_string may also follow the URL syntax :
 
     postgres://username:password@host:port/databasename?sslmode=require
+
 
 ### How to update imposm points & polyons with new country & sub-country codes
 
