@@ -1,57 +1,56 @@
 <template>
-  <div class="search ml-md-5 mt-md-5">
-    <v-toolbar
-      :dense="!isMobile || !geocoder"
-      :height="isMobile && geocoder ? '70px' : undefined"
-      v-resize="resize"
+  <v-toolbar
+    :dense="!isMobile || !geocoder"
+    :height="isMobile && geocoder ? '70px' : undefined"
+    v-resize="resize"
+    class="search ml-md-5 mt-md-5"
+  >
+    <v-tooltip
+      v-if="!isMobile"
+      bottom
     >
-      <v-tooltip
-        v-if="!isMobile"
-        bottom
-      >
-        <template v-slot:activator="{ on }">
-          <v-btn
-            icon
-            v-on="on"
-            @click.native="$emit('toggleSidebar')"
-          >
-            <v-icon>osm-filter_list</v-icon>
-          </v-btn>
-        </template>
-        <span>{{ $t('menu') }}</span>
-      </v-tooltip>
-
-      <template v-if="!geocoder">
-        <img
-          :alt="$t('subtitle-dense')"
-          :src="logoMobile"
-          class="img-header-mobile"
-        />
-        <v-spacer></v-spacer>
+      <template v-slot:activator="{ on }">
+        <v-btn
+          icon
+          v-on="on"
+          @click.native="$emit('toggleSidebar')"
+        >
+          <v-icon>osm-filter_list</v-icon>
+        </v-btn>
       </template>
-      <v-tooltip
-        v-if="!geocoder"
-        bottom
-      >
-        <template v-slot:activator="{ on }">
-          <v-btn
-            icon
-            v-on="on"
-            @click="geocoder = true"
-          >
-            <v-icon>osm-magnify</v-icon>
-          </v-btn>
-        </template>
-        <span>{{ $t('search') }}</span>
-      </v-tooltip>
+      <span>{{ $t('menu') }}</span>
+    </v-tooltip>
 
-      <geocoder
-        v-show="geocoder"
-        @select="onGeocoderSelect"
-        @blur="onGeocoderBlur"
+    <template v-if="!geocoder">
+      <img
+        :alt="$t('subtitle-dense')"
+        :src="logoMobile"
+        class="img-header-mobile"
       />
-    </v-toolbar>
-  </div>
+      <v-spacer></v-spacer>
+    </template>
+    <v-tooltip
+      v-if="!geocoder"
+      bottom
+    >
+      <template v-slot:activator="{ on }">
+        <v-btn
+          icon
+          v-on="on"
+          @click="geocoder = true"
+        >
+          <v-icon>osm-magnify</v-icon>
+        </v-btn>
+      </template>
+      <span>{{ $t('search') }}</span>
+    </v-tooltip>
+
+    <geocoder
+      v-show="geocoder"
+      @select="onGeocoderSelect"
+      @blur="onGeocoderBlur"
+    />
+  </v-toolbar>
 </template>
 
 <script>
