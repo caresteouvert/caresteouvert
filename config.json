@@ -93,5 +93,17 @@
     "brand_text": "Segue Aberto",
     "government": "https://coronavirus.sergas.es/?idioma=ga",
     "shopMissing": "/gl/que-facer-se-falla-un-negocio-no-segues-aberto/"
+  },
+  "fi": {
+    "brand": "caresteouvert",
+    "brand_text": "Ça reste ouvert",
+    "domain": "kartta.ollaanauki.fi",
+    "government": "https://valtioneuvosto.fi/tietoa-koronaviruksesta/",
+    "blog": "https://blog.ollaanauki.fi/",
+    "shopMissing": "https://blog.ollaanauki.fi/lisaa_palvelu/",
+    "townhalls": "https://blog.ollaanauki.fi/kaupungeille-ja-yhteisoille/",
+    "about": "https://blog.ollaanauki.fi/meista/",
+    "press": "https://blog.ollaanauki.fi/lehdistolle/",
+    "disclaimer": "https://blog.ollaanauki.fi/vastuuvapauslauseke/"
   }
 }
