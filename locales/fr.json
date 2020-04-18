@@ -140,10 +140,11 @@
       "weekdays": "Du lundi au samedi"
     },
     "select_days": "Sélectionnez les jours qui ont les même horaires d'ouverture",
-    "next": "Sélectionnez les horaires",
+    "next": "Suivant",
+    "cancel": "Annuler",
     "select_time": {
-      "start": "Entrer l'horaire d'ouverture",
-      "end": "Entrer l'horaire de fermeture"
+      "start": "Ouverture à",
+      "end": "Fermeture à"
     },
     "add_interval": "Ajouter un horaire",
     "add_new_days": "Ajouter des jours d'ouverture"
@@ -158,6 +159,7 @@
     "amenity": "Services pratiques",
     "police": "Police",
     "post_office": "Bureau de poste",
+    "childcare": "Garde d'enfants",
     "employment_agency": "Agence pour l'emploi",
     "funeral_directors": "Pompes funèbres",
     "bank": "Banque & assurances",
@@ -192,6 +194,7 @@
     "fast_food": "Restauration rapide",
     "ice_cream": "Glacier",
     "cafe": "Café",
+    "bar": "Bar",
     "drugs": "Tabac & alcool",
     "tobacco": "Tabac",
     "e_cigarette": "E-cigarette",
@@ -206,7 +209,7 @@
     "newsagent": "Journaux",
     "pet": "Animalerie",
     "agrarian": "Produits pour l'agriculture",
-    "garden_centre": "Jardinerie",
+    "flower": "Jardin / fleurs",
     "chemist": "Droguerie",
     "fabric": "Tissus",
     "books": "Librairie",
