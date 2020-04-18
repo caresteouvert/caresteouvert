@@ -21,7 +21,7 @@ class HelloWorldControl {
       if (filters.some(f => f[1] === 'delivery')) {
         this._map.setFilter(layer.id, filters.filter(f => f.length > 1 && f[1] !== 'delivery'))
       } else {
-        this._map.setFilter(layer.id, filters.concat([['==', 'delivery', 'yes']]))
+        this._map.setFilter(layer.id, filters.concat([['in', 'delivery', 'yes', 'only']]))
       }
     })
   }
