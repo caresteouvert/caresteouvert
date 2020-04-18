@@ -7,6 +7,7 @@ coverImage: "image-2.png"
 ## Ano ang gagawin kung ang puesto o negosyo ay wala pa sa mapang 'Bukás pa rin'?
 
 >![](images/image-1.png)
+>
 > Hindi mahanap ang iyong paboritong tindahan o botika sa 'Bukás pa rin'? Huwag mag-alala, sundin lang ang gabay na ito upang makatulong na mapagbuti ang aming pakikipagtulungan ng mga naa-access na mga lugar sa pag-confine.
 
 Ang 'Bukás pa rin' ay datos na hango sa OpenStreetMap(OSM). Isipin na katulad ang konsepto nito sa "Wikipedia" pero para sa mapa: ang mapa ng buong mundo na maaari mong pag-yamanin batay sa iyong personal na kaalamang sa 'yong kapitbahayan.
