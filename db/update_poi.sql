@@ -218,7 +218,7 @@ ALTER INDEX poi_osm_next_geom_idx RENAME TO poi_osm_geom_idx;
 ALTER INDEX poi_osm_next_status_idx RENAME TO poi_osm_status_idx;
 
 CREATE OR REPLACE VIEW poi_osm_light AS
-SELECT fid, geom, name, cat, normalized_cat, status, delivery, country, sub_country
+SELECT fid, geom, name, cat, normalized_cat, status, delivery, opening_hours
 FROM poi_osm;
 
 
