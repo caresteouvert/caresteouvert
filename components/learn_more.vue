@@ -36,19 +36,19 @@
             <h2 class="mb-3">{{ $t('learnmore.contribute') }}</h2>
             <ul>
               <li>
-                <a :href="links.shopMissing">
+                <a :href="links.shopMissing" target="_blank" rel="noopener">
                   {{ $t('learnmore.missing_shop') }}
                 </a>
               </li>
               <li>
-                <a :href="links.townhalls">
+                <a :href="links.townhalls" target="_blank" rel="noopener">
                   {{ $t('learnmore.townhalls', { brand }) }}
                 </a>
               </li>
               <li
                 v-if="$i18n.locale.startsWith('fr')"
               >
-                <a href="https://wiki.openstreetmap.org/wiki/France/Covid-19">
+                <a href="https://wiki.openstreetmap.org/wiki/France/Covid-19" target="_blank" rel="noopener">
                   {{ $t('learnmore.osm_contributors') }}
                 </a>
               </li>
@@ -61,22 +61,22 @@
             <h2 class="mb-3">{{ $t('learnmore.about') }}</h2>
             <ul>
               <li>
-                <a :href="links.blog">
+                <a :href="links.blog" target="_blank" rel="noopener">
                   {{ $t('learnmore.blog') }}
                 </a>
               </li>
               <li>
-                <a :href="links.about">
+                <a :href="links.about" target="_blank" rel="noopener">
                   {{ $t('learnmore.about') }}
                 </a>
               </li>
               <li>
-                <a :href="links.press">
+                <a :href="links.press" target="_blank" rel="noopener">
                   {{ $t('learnmore.press') }}
                 </a>
               </li>
               <li>
-                <a :href="links.disclaimer">
+                <a :href="links.disclaimer" target="_blank" rel="noopener">
                   {{ $t('learnmore.disclaimer') }}
                 </a>
               </li>
