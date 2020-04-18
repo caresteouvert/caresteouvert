@@ -5,6 +5,7 @@
   "subtitle": "Sitios que siguen abiertos durante el Estado de Alarma",
   "subtitle-dense": "Sitios abiertos durante el Estado de Alarma",
   "search": "Escribe tu búsqueda",
+  "coordinates": "Coordenadas",
   "menu": "Menú",
   "missing_shop": "Avisar de un sitio por editar",
   "change_lang": "Cambiar el idioma",
@@ -18,12 +19,20 @@
     "press": "Prensa",
     "disclaimer": "Aviso legal",
     "blog": "Blog",
-    "townhalls": "Ayuntamientos, ¡utilicen  « {brand} »!"
+    "townhalls": "Ayuntamientos, ¡utilicen  « {brand} »!",
+    "osm_contributors": "Documentación para colaboradores de OpenStreetMap"
   },
   "rgpd": {
     "consent": "En estos tiempos de confinamiento, ¿aceptaria las cookies en su ordenador para nuestras estadísticas?",
     "yes": "Sí",
     "no": "No"
+  },
+  "apps_info": {
+    "close": "Cerrar",
+    "text": "¡La aplicación móvil « {brand} » ya está disponible!",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
   },
   "days": {
     "monday": "Lunes",
@@ -57,17 +66,22 @@
         "title": "Este sitio ofrece reparto",
         "unknown": "No lo sé",
         "yes": "Sí",
-        "only": "Solo por reparto",
         "no": "No"
       },
       "takeaway": {
         "title": "Este sitio permite comprar para llevar",
         "unknown": "No lo sé",
         "yes": "Sí",
-        "only": "Solo para llevar",
         "no": "No"
       },
-      "details": "Agregar detalles necesarios durante el Estado de Alarma"
+      "access": {
+        "title": "El público puede entrar o permanecer dentro de este lugar",
+        "unknown": "No lo sé",
+        "yes": "Si",
+        "no": "No"
+      },
+      "details": "Agregar detalles necesarios durante el Estado de Alarma",
+      "details_error": "Debe estar vacío o tener al menos 10 caracteres de longitud."
     },
     "submit": "Publicar",
     "cancel": "Cancelar"
@@ -80,6 +94,7 @@
     "containment_brand_hours": "Horas de apertura en la página web de la marca",
     "facebook": "Página de Facebook",
     "not_accessible": "Espacio interior no accesible al público",
+    "capacity": "Capacidad máxima: 0 personas | Capacidad máxima: 1 persona | Capacidad máxima: {count} personas",
     "opening_hours": {
       "state_until_date": "{state} hasta {date}",
       "state": {
@@ -150,10 +165,11 @@
     "insurance": "Aseguradora",
     "health": "Salud",
     "pharmacy": "Farmacias",
-    "condoms": "Máquinas expendedoras de condones",
+    "covid19_centre": "Centro de consultas sobre Covid-19",
     "optician": "Óptica",
-    "medical_supply": "Suministros médicos",
     "hearing_aids": "Audífonos",
+    "condoms": "Máquinas expendedoras de condones",
+    "medical_supply": "Suministros médicos",
     "food": "Alimentación",
     "supermarket": "Supermercado",
     "butcher": "Carnicería",
@@ -162,6 +178,11 @@
     "seafood": "Pescadería",
     "greengrocer": "Verdulería",
     "grocery": "Ultramarinos",
+    "chocolate": "Chocolate",
+    "tea": "Té",
+    "coffee": "Café",
+    "dairy": "Lechería",
+    "confectionery": "Confitería",
     "farm": "Venta directa del productor",
     "marketplace": "Mercado",
     "bakery": "Panaderías",
