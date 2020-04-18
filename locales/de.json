@@ -5,6 +5,7 @@
   "subtitle": "Alle Geschäfte, die weiterhin geöffnet sind.",
   "subtitle-dense": "Apotheke, Bäcker & Co.",
   "search": "Suchbegriff eingeben",
+  "coordinates": "Koordinaten",
   "menu": "Menü",
   "missing_shop": "Fehlendes Geschäft melden",
   "change_lang": "Sprache ändern",
@@ -18,12 +19,20 @@
     "press": "Presse",
     "disclaimer": "Impressum & Datenschutz",
     "blog": "Blog",
-    "townhalls": "Rathäuser, verwendet „{brand}“!"
+    "townhalls": "Rathäuser, verwendet „{brand}“!",
+    "osm_contributors": "Dokumentation für OSM-Mitwirkende"
   },
   "rgpd": {
     "consent": "Akzeptierst du einen Cookie auf deinem Computer für unsere Statistiken?",
     "yes": "Ja",
     "no": "Nein"
+  },
+  "apps_info": {
+    "close": "Close",
+    "text": "Die Handy-App \"{brand}\" ist jetzt verfügbar!",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
   },
   "days": {
     "monday": "Montag",
@@ -57,17 +66,22 @@
         "title": "Lieferung möglich",
         "unknown": "Weiß ich nicht",
         "yes": "Ja",
-        "only": "Nur Lieferung",
         "no": "Nein"
       },
       "takeaway": {
         "title": "Dieses Geschäft bietet Speisen zur Abholung an.",
         "unknown": "Weiß ich nicht",
         "yes": "Ja",
-        "only": "Nur Abholung",
         "no": "Nein"
       },
-      "details": "Wichtige Anmerkungen (optional, erfordert eine manuelle Prüfung durch die OpenStreetMap-Community)\n"
+      "access": {
+        "title": "Dieser Ort ist öffentlich zugänglich",
+        "unknown": "Ich weiß es nicht",
+        "yes": "Ja",
+        "no": "No"
+      },
+      "details": "Wichtige Anmerkungen (optional, erfordert eine manuelle Prüfung durch die OpenStreetMap-Community)\n",
+      "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein"
     },
     "submit": "Veröffentlichen",
     "cancel": "Abbrechen"
@@ -80,6 +94,7 @@
     "containment_brand_hours": "Öffnungszeiten auf der Webseite",
     "facebook": "Facebook-Seite",
     "not_accessible": "Innenbereich nicht öffentlich zugänglich",
+    "capacity": "Maximale Kapazität: 0 Personen | Maximale Kapazität: 1 Person | Maximale Kapazität: {count} Personen",
     "opening_hours": {
       "state_until_date": "{state} bis {date}",
       "state": {
@@ -150,10 +165,11 @@
     "insurance": "Versicherung",
     "health": "Apotheke & Gesundheit",
     "pharmacy": "Apotheke",
-    "condoms": "Kondomautomat",
+    "covid19_centre": "Covid-19-Beratungsstelle",
     "optician": "Optiker",
-    "medical_supply": "Sanitätshaus",
     "hearing_aids": "Hörgeräte",
+    "condoms": "Kondomautomat",
+    "medical_supply": "Sanitätshaus",
     "food": "Lebensmittel",
     "supermarket": "Supermarkt",
     "butcher": "Metzger",
@@ -162,6 +178,11 @@
     "seafood": "Fisch",
     "greengrocer": "Gemüse",
     "grocery": "Lebensmittel",
+    "chocolate": "Schokolade",
+    "tea": "Tee",
+    "coffee": "Kaffee",
+    "dairy": "Milchprodukte",
+    "confectionery": "Süßwaren",
     "farm": "Hofladen",
     "marketplace": "Wochenmarkt",
     "bakery": "Bäckerei",
