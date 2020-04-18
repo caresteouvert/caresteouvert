@@ -251,7 +251,17 @@
             { "amenity": "vending_machine", "vending": "coffee" }
           ],
           "osm_filter_tags": [
-            { "vending": "coffee" },
+            { "delivery": "yes|only" },
+            { "takeaway": "yes|only" },
+            { "delivery:covid19": "yes|only" },
+            { "takeaway:covid19": "yes|only" }
+          ],
+          "areas": "all"
+        },
+        "bar": {
+          "name": "Bar",
+          "osm_tags": [ { "amenity": "bar|pub" } ],
+          "osm_filter_tags": [
             { "delivery": "yes|only" },
             { "takeaway": "yes|only" },
             { "delivery:covid19": "yes|only" },
