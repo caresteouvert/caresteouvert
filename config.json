@@ -33,7 +33,8 @@
   "en": {
     "brand": "caresteouvert",
     "brand_text": "Ça reste ouvert",
-    "government": "https://www.who.int/health-topics/coronavirus"
+    "government": "https://www.who.int/health-topics/coronavirus",
+    "shopMissing": "/en/what-do-with-missing-establishments/"
   },
   "at": {
     "locale": "de",

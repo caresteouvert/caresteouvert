@@ -58,7 +58,7 @@ export default {
 
 <style>
 .article {
-  max-width: 750px;
+  max-width: 750px !important;
 }
 .article img {
   max-width: 100%;
