@@ -141,6 +141,7 @@
     },
     "select_days": "Wähle Tage mit den gleichen Zeiten aus:",
     "next": "Zeiten auswählen",
+    "cancel": "Abbrechen",
     "select_time": {
       "start": "Beginn der Öffnungszeiten",
       "end": "Ende der Öffnungszeiten"
@@ -158,6 +159,7 @@
     "amenity": "Post, Bank & Co. ",
     "police": "Polizei",
     "post_office": "Postfiliale",
+    "childcare": "Kinderbetreuung",
     "employment_agency": "Arbeitsagentur",
     "funeral_directors": "Bestatter",
     "bank": "Bank",
@@ -192,6 +194,7 @@
     "fast_food": "Schnellimbiss",
     "ice_cream": "Eis",
     "cafe": "Café",
+    "bar": "Kneipe",
     "drugs": "Tabak & Alkohol",
     "tobacco": "Tabakwaren",
     "e_cigarette": "E-Zigarette",
@@ -206,7 +209,7 @@
     "newsagent": "Kiosk",
     "pet": "Tierbedarf",
     "agrarian": "Landhandel",
-    "garden_centre": "Gartenbaumarkt",
+    "flower": "Garten / Blumen",
     "chemist": "Drogeriemarkt",
     "fabric": "Textilgeschäft",
     "books": "Buchhandlung",
