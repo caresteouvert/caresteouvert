@@ -365,10 +365,10 @@
           ],
           "areas": [ "FR" ]
         },
-        "garden_centre": {
-          "name": "Garden centre",
+        "flower": {
+          "name": "Garden / flower",
           "osm_tags": [
-            { "shop": "garden_centre" }
+            { "shop": "garden_centre|florist" }
           ],
           "areas": "all"
         },
