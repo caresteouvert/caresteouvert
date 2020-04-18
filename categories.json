@@ -20,6 +20,11 @@
           ],
           "areas": "all"
         },
+        "childcare": {
+          "name": "Childcare",
+          "osm_tags": [ { "amenity": "childcare|kindergarten" } ],
+          "areas": [ "FR" ]
+        },
         "employment_agency": {
           "name": "Employment agency",
           "osm_tags": [
