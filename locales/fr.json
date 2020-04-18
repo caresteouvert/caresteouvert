@@ -142,8 +142,8 @@
     "select_days": "Sélectionnez les jours qui ont les même horaires d'ouverture",
     "next": "Sélectionnez les horaires",
     "select_time": {
-      "start": "Entrer l'horaire d'ouverture",
-      "end": "Entrer l'horaire de fermeture"
+      "start": "Ouverture à",
+      "end": "Fermeture à"
     },
     "add_interval": "Ajouter un horaire",
     "add_new_days": "Ajouter des jours d'ouverture"

@@ -142,8 +142,8 @@
     "select_days": "Select days that share the same opening hours",
     "next": "Select hours",
     "select_time": {
-      "start": "Choose opening hour",
-      "end": "Choose closing hour"
+      "start": "Open at",
+      "end": "Close at"
     },
     "add_interval": "Add hours",
     "add_new_days": "Add opening days"
