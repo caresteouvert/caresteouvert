@@ -4,7 +4,7 @@ import OpeningHoursEditorInterval from '../components/opening_hours_editor_inter
 
 describe('OpeningHoursEditorInterval', () => {
   let localVue;
-  const stubs = ['v-btn', 'v-time-picker', 'v-slide-x-reverse-transition'];
+  const stubs = ['v-btn', 'v-time-picker', 'v-spacer', 'v-card-actions'];
 
   beforeEach(() => {
     localVue = createLocalVue();

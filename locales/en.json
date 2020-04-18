@@ -140,7 +140,8 @@
       "weekdays": "Monday to Saturday"
     },
     "select_days": "Select days that share the same opening hours",
-    "next": "Select hours",
+    "next": "Next",
+    "cancel": "Cancel",
     "select_time": {
       "start": "Open at",
       "end": "Close at"

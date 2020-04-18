@@ -5,7 +5,7 @@ import OpeningHoursInterval from '../components/opening_hours_editor_interval';
 
 describe('OpeningHoursEditor', () => {
   let localVue;
-  const stubs = ['v-dialog', 'v-card', 'v-checkbox', 'v-btn', 'v-icon', 'v-switch'];
+  const stubs = ['v-dialog', 'v-card', 'v-checkbox', 'v-btn', 'v-icon', 'v-switch', 'v-spacer', 'v-card-actions'];
 
   beforeEach(() => {
     localVue = createLocalVue();
@@ -20,7 +20,7 @@ describe('OpeningHoursEditor', () => {
     editor.vm.dialog = true;
     await Vue.nextTick();
     expect(editor.findAll('v-checkbox-stub').length).toBe(8);
-    expect(editor.findAll('v-btn-stub').length).toBe(2);
+    expect(editor.findAll('v-btn-stub').length).toBe(3);
   });
 
   it('allow to choose and display the interval', async () => {

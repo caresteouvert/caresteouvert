@@ -57,14 +57,24 @@
             dense
             hide-details
           ></v-checkbox>
-          <v-btn
-            class="mt-3"
-            @click="next"
-          >{{ $t('opening_hours_editor.next') }}</v-btn>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn
+              color="blue darken-1"
+              text
+              @click="resetValues"
+            >{{ $t('opening_hours_editor.cancel') }}</v-btn>
+            <v-btn
+              color="blue darken-1"
+              text
+              @click="next"
+            >{{ $t('opening_hours_editor.next') }}</v-btn>
+          </v-card-actions>
         </template>
         <div v-if="selectTime">
           <opening-hours-editor-interval
             v-model="interval"
+            @cancel="resetValues"
             @input="close"
           />
         </div>

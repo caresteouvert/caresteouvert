@@ -140,7 +140,8 @@
       "weekdays": "Du lundi au samedi"
     },
     "select_days": "Sélectionnez les jours qui ont les même horaires d'ouverture",
-    "next": "Sélectionnez les horaires",
+    "next": "Suivant",
+    "cancel": "Annuler",
     "select_time": {
       "start": "Ouverture à",
       "end": "Fermeture à"
