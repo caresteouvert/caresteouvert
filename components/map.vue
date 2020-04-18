@@ -29,6 +29,7 @@
       @click="clickPoi"
       @mouseleave="mouseleave"
     />
+    <FilterControl/>
   </MglMap>
 </template>
 
@@ -43,6 +44,7 @@ import {
   MglNavigationControl,
   MglVectorLayer,
 } from 'vue-mapbox/dist/vue-mapbox.umd';
+
 import FilterControl from './controls/FilterControl'
 
 const source = "public.poi_osm_light";
@@ -134,6 +136,7 @@ export default {
     MglMarker,
     MglNavigationControl,
     MglVectorLayer,
+    FilterControl
   },
 
   props: {
@@ -221,9 +224,6 @@ export default {
   methods: {
     load({ map }) {
       this.map = map;
-
-      this.filterControl = new FilterControl();
-      this.map.addControl(this.filterControl, 'bottom-right')
     },
 
     updateMapCenter(mapCenter) {
