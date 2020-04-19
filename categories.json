@@ -22,7 +22,7 @@
         },
         "childcare": {
           "name": "Childcare",
-          "osm_tags": [ { "amenity": "childcare|kindergarten" } ],
+          "osm_tags": [ { "amenity": "childcare" }, { "amenity": "kindergarten", "kindergarten:FR": "*" } ],
           "areas": [ "FR" ]
         },
         "employment_agency": {
