@@ -1,26 +1,26 @@
 {
   "lang": "suomi",
   "covid19-alert": "Seuraa viranomaisten määräyksiä. Vastuu on yksinomaan sinun!",
-  "title": "Tämä on auki",
+  "title": "Ollaan auki",
   "subtitle": "Eristyksen aikana avoinna pysyvät paikat",
   "subtitle-dense": "Eristyksen aikana avoimet paikat",
   "search": "Kirjoita hakusana",
   "coordinates": "Koordinaatit",
   "menu": "Valikko",
-  "missing_shop": "Raportoi puuttuva kauppa",
+  "missing_shop": "Ilmoita puuttuva kauppa",
   "change_lang": "Vaihda kieli",
   "zoomtosee": "Zoomaa lähemmäs nähdäksesi avoimet paikat",
   "learnmore": {
     "about": "Tietoja",
     "contribute": "Osallistu",
-    "missing_shop": "Raportoi puuttuva kauppa",
+    "missing_shop": "Ilmoita puuttuva kauppa",
     "description": "« {brand} » on palvelu tarpeettoman liikkumisen vähentämiseksi ja tartuntariskin minimoimiseksi koronaviruseristyksen aikana.\nKarttapalvelun avulla voit helposti jakaa tietoa lähiympäristösi palveluiden poikkeusaukioloista. Tehokkain tapa helpottaa naapureittesi elämää!",
     "title": "Lue lisää",
     "press": "Lehdistölle",
     "disclaimer": "Vastuuvapauslauseke",
     "blog": "Blogi",
     "townhalls": "Kaupungit ja kunnat, tässä käyttöönne « {brand} »!",
-    "osm_contributors": "Dokumentaatio OpenStreetMap yhteisölle"
+    "osm_contributors": "Dokumentaatio OpenStreetMap-yhteisölle"
   },
   "rgpd": {
     "consent": "Sallitko palvelun käytön tilastoinnin evästeellä?",
@@ -69,7 +69,7 @@
         "no": "Ei"
       },
       "takeaway": {
-        "title": "Take away",
+        "title": "Take away -myyntiä",
         "unknown": "En tiedä",
         "yes": "Kyllä",
         "no": "Ei"
@@ -80,7 +80,7 @@
         "yes": "Kyllä",
         "no": "Ei"
       },
-      "details": "Lisää vaadittavat eristyksen aikana käytössä olevat tiedot",
+      "details": "Voit lisätä tarkempia tietoja",
       "details_error": "Pitää olla joko tyhjä tai vähintään 10 merkkiä pitkä"
     },
     "submit": "Julkaise",
@@ -88,10 +88,10 @@
   },
   "details": {
     "signal_warning": "Olit kirjoittamassa ilmoitusta, joka ei tallennu. Haluatko jatkaa?",
-    "signal": "Raportoi muutoksesta",
+    "signal": "Ilmoita muutoksesta",
     "signal_done": "Ilmoituksesi on vastaanotettu. Kiitos! Käsittely vie oman aikansa.",
     "containment_opening_hours": "Aukioloajat muulloin kuin eristyksen aikana",
-    "containment_brand_hours": "Aukioloajat palvelun kotisivuilla",
+    "containment_brand_hours": "Katso aukioloajat palvelun verkkosivulta",
     "facebook": "Facebook-sivu",
     "not_accessible": "Sisätila on suljettu",
     "capacity": "Maksimikapasiteetti : 0 henkilöä | Maksimikapasiteetti : 1 henkilö | Maksimikapasiteetti : {count} henkilöä",
@@ -101,12 +101,12 @@
         "open": "avoinna",
         "closed": "suljettu"
       },
-      "tomorrow": "huomenna"
+      "tomorrow": "huomiseen"
     },
     "state": {
       "open": "Avoinna eristyksen aikana",
       "open_adapted": "Avoinna eristyksen aikana, muutoksia aukioloajoissa",
-      "partial": "Mahdollisesti avoinna eristyksen aikana (tarkistettava)",
+      "partial": "Palvelu kuuluu ketjuun, jonka liikkeistä osa on avoinna. Onko tämä palvelu avoinna? Kerro meille",
       "unknown": "Tällä palvelulla on oikeus olla auki eristyksen aikana, mutta onko se? Kerro meille",
       "closed": "Suljettu eristyksen aikana"
     },
@@ -115,13 +115,13 @@
       "only": "Vain kotiinkuljetuksella"
     },
     "takeaway": {
-      "yes": "Take away alennus saatavilla",
-      "modified": "Muokattu take away alennus",
-      "only": "Vain take away alennus"
+      "yes": "Take away -myyntiä",
+      "modified": "Tavanomaisesta poikkeavaa take away -myyntiä",
+      "only": "Vain take away -myyntiä"
     },
     "drive_through": {
-      "yes": "Autokaistamahdollisuus",
-      "only": "Vain autokaista"
+      "yes": "Drive in -palvelu",
+      "only": "Vain drive in -palvelu"
     },
     "vending": {
       "pizza": "Pizza",
@@ -137,9 +137,9 @@
   },
   "opening_hours_editor": {
     "day_shortcuts": {
-      "weekdays": "Maanantaista sunnuntaihin"
+      "weekdays": "Maanantaista lauantaihin"
     },
-    "select_days": "Valitse päivät joilla on samat aukioloajat",
+    "select_days": "Valitse päivät, joilla on samat aukioloajat",
     "next": "Valitse tunnit",
     "cancel": "Peru",
     "select_time": {
@@ -158,6 +158,7 @@
     "other": "Muut palvelut",
     "amenity": "Palvelut",
     "police": "Poliisi",
+    "townhall": "Kaupungintalo",
     "post_office": "Posti",
     "childcare": "Lastenhoito",
     "employment_agency": "Työvoimatoimisto",
@@ -167,7 +168,7 @@
     "insurance": "Vakuutus",
     "health": "Terveydenhoito",
     "pharmacy": "Apteekki",
-    "covid19_centre": "Covid-19 neuvontakeskus",
+    "covid19_centre": "Koronavirusneuvonta",
     "optician": "Optikko",
     "hearing_aids": "Kuulokojeita",
     "condoms": "Kondomiautomaatti",
@@ -210,7 +211,7 @@
     "pet": "Lemmikkieläinliike",
     "agrarian": "Maataloustuotteita",
     "flower": "Puutarha / kukat",
-    "chemist": "Apteekki",
+    "chemist": "Kemikaalio",
     "fabric": "Kangaskauppa",
     "books": "Kirjakauppa",
     "mobility": "Liikkuminen",
@@ -218,7 +219,7 @@
     "car_rental": "Autovuokraamo",
     "bicycle": "Polkupyöräkauppa",
     "car": "Huoltamo",
-    "bicycle_tube": "Polkupyöränkumiautomaatti",
+    "bicycle_tube": "Polkupyörän kumien myyntiautomaatti",
     "public_transport_tickets": "Julkisen liikenteen lippuautomaatti"
   }
 }
