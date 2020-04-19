@@ -9,8 +9,17 @@
         <div
           v-for="(hours, indexHours) in interval.hours"
           :key="indexHours"
+          class="d-flex align-center"
         >
-          {{ hours }}
+          <template v-for="(hour, indexHour) in hours">
+            <edit-hour
+              :key="indexHour"
+              :value="hour"
+              :step="indexHour === 0 ? 'start' : 'end'"
+              @input="(hour) => updateHour(index, indexHours, indexHour, hour)"
+            />
+            <span v-if="indexHour == 0"> - </span>
+          </template>
           <v-btn
             icon
             @click="removeInterval(index, indexHours)">
@@ -43,9 +52,9 @@
             :label="$t(`opening_hours_editor.day_shortcuts.${shortcut}`)"
             :value="days.every(day => selectedWeekDays.includes(day))"
             :disabled="days.some(day => disabledWeekDays.includes(day))"
-            @change="value => toggleSelectedWeekDays(value, ...days)"
             dense
             hide-details
+            @change="value => toggleSelectedWeekDays(value, ...days)"
           />
           <v-checkbox
             v-for="day in weekDays"
@@ -75,7 +84,7 @@
           <opening-hours-editor-interval
             v-model="interval"
             @cancel="resetValues"
-            @input="close"
+            @input="closeDialog"
           />
         </div>
       </v-card>
@@ -85,9 +94,13 @@
 
 <script>
 import OpeningHoursEditorInterval from './opening_hours_editor_interval';
+import EditHour from './edit_hour';
 
 export default {
-  components: { OpeningHoursEditorInterval },
+  components: {
+    EditHour,
+    OpeningHoursEditorInterval
+  },
 
   props: {
     value: {
@@ -113,9 +126,9 @@ export default {
         'ph': 'ph'
       },
       selectTime: false,
-      interval: '',
+      interval: [],
       selectedWeekDays: [],
-      openingHours: this.value,
+      openingHours: this.parseValue(this.value),
       indexSubInterval: -1,
       dialog: false
     };
@@ -129,14 +142,25 @@ export default {
 
   watch: {
     value(value) {
-      this.openingHours = value;
+      this.openingHours = this.parseValue(value);
       this.resetValues();
     }
   },
 
   methods: {
+    parseValue(value) {
+      return value.map((i => {
+        return { ...i, hours: i.hours.map(h => h.split('-')) };
+      }));
+    },
+
     openDialog() {
       this.dialog = true;
+    },
+
+    updateHour(indexDay, indexHours, indexHour, hour) {
+      this.openingHours[indexDay].hours[indexHours][indexHour] = hour;
+      this.emitInput();
     },
 
     editSubInterval(index) {
@@ -150,7 +174,7 @@ export default {
       if (this.openingHours[indexDay].hours.length === 0) {
         this.openingHours.splice(indexDay, 1);
       }
-      this.$emit('input', this.openingHours);
+      this.emitInput();
     },
 
     next() {
@@ -158,19 +182,25 @@ export default {
       this.displayDaysSelection = false;
     },
 
-    close() {
+    closeDialog() {
       if (this.indexSubInterval === -1) {
         this.openingHours.push({ days: this.selectedWeekDays, hours: [this.interval] });
       } else {
         this.openingHours[this.indexSubInterval].hours.push(this.interval);
       }
       this.resetValues();
-      this.$emit('input', this.openingHours);
+      this.emitInput();
+    },
+
+    emitInput() {
+      this.$emit('input', this.openingHours.map((i) => {
+        return { ...i, hours: i.hours.map(h => h.join('-')) };
+      }));
     },
 
     resetValues() {
       this.selectedWeekDays = [];
-      this.interval = '';
+      this.interval = [];
       this.selectTime = false;
       this.indexSubInterval = -1;
       this.dialog = false;
