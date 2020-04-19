@@ -5,6 +5,7 @@
   "subtitle": "Itxialdi garaian irekita jarraitzen duten lekuak",
   "subtitle-dense": "Itxialdian irekita dauden lekuak",
   "search": "Idatzi zure bilaketa",
+  "coordinates": "Koordenatuak",
   "menu": "Menua",
   "missing_shop": "Falta den denda baten berri eman",
   "change_lang": "Hizkuntza aldatu",
@@ -18,12 +19,20 @@
     "press": "Prentsa",
     "disclaimer": "Lege-oharra",
     "blog": "Bloga",
-    "townhalls": "Udaletxeak, erabili « {brand} »!"
+    "townhalls": "Udaletxeak, erabili « {brand} »!",
+    "osm_contributors": "OpenStreetMap kolaboratzaileentzat informazioa"
   },
   "rgpd": {
     "consent": "Itxialdi garaian, hartuko al zenuke cookie bat gure estatistikak osatzeko?",
     "yes": "Bai",
     "no": "Ez"
+  },
+  "apps_info": {
+    "close": "Itxi",
+    "text": "Mugikorrerako « {brand} » aplikazioa eskuragarri dago!",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
   },
   "days": {
     "monday": "Astelehena",
@@ -57,17 +66,22 @@
         "title": "Leku honek bidalketa eskaintzen du",
         "unknown": "Ez dakit",
         "yes": "Bai",
-        "only": "Bidalketa bakarrik eskaintzen du",
         "no": "Ez"
       },
       "takeaway": {
         "title": "Leku honek eramateko erosketa eskaintzen du",
         "unknown": "Ez dakit",
         "yes": "Bai",
-        "only": "Eramateko bakarrik",
         "no": "Ez"
       },
-      "details": "Itxialdiran beharrezkoak diren xehetasunak gehitu"
+      "access": {
+        "title": "Publikoa leku honetan sartu edo barruan geratu daiteke",
+        "unknown": "Ez dakit",
+        "yes": "Bai",
+        "no": "Ez"
+      },
+      "details": "Itxialdiran beharrezkoak diren xehetasunak gehitu",
+      "details_error": "Hutsa edo gutxienez 10 karaktere"
     },
     "submit": "Argitaratu",
     "cancel": "Kantzelatu"
@@ -80,6 +94,7 @@
     "containment_brand_hours": "Ordutegia orri berrian",
     "facebook": "Facebook orria",
     "not_accessible": "Barrukaldea publikoari itxita dago",
+    "capacity": "Edukiera maximoa: 0 pertsona | Edukiera maximoa: pertsona 1 | Edukiera maximoa: {count} pertsona",
     "opening_hours": {
       "state_until_date": "{state} {date} arte",
       "state": {
@@ -126,6 +141,7 @@
     },
     "select_days": "Aukeratu irekiera ordu berdinak dituzten egunak",
     "next": "Orduak aukeratu",
+    "cancel": "Kantzelatu",
     "select_time": {
       "start": "Aukeratu irekiera ordua",
       "end": "Aukeratu itxiera ordua"
@@ -143,6 +159,7 @@
     "amenity": "Zerbitzuak",
     "police": "Polizia",
     "post_office": "Posta bulegoa",
+    "childcare": "Haurtzaindegia",
     "employment_agency": "Enplegu agentziak",
     "funeral_directors": "Hileta zuzendariak",
     "bank": "Bankua",
@@ -150,10 +167,11 @@
     "insurance": "Asegurua",
     "health": "Osasuna",
     "pharmacy": "Farmazia",
-    "condoms": "Kondoi salmenta makina",
+    "covid19_centre": "Covid-19 buruzko kontsulta zentrua",
     "optician": "Optika",
-    "medical_supply": "Mediku hornidurak",
     "hearing_aids": "Entzumen laguntzak",
+    "condoms": "Kondoi salmenta makina",
+    "medical_supply": "Mediku hornidurak",
     "food": "Janaria",
     "supermarket": "Supermerkatua",
     "butcher": "Harakina",
@@ -162,6 +180,11 @@
     "seafood": "Itsaski denda",
     "greengrocer": "Barazki denda",
     "grocery": "Janari denda",
+    "chocolate": "Txokolatea",
+    "tea": "Tea",
+    "coffee": "Kafea",
+    "dairy": "Esnekiak",
+    "confectionery": "Gozogintza",
     "farm": "Barazki denda",
     "marketplace": "Merkatua",
     "bakery": "Okindegia",
@@ -171,6 +194,7 @@
     "fast_food": "Janari azkarra",
     "ice_cream": "Izozki denda",
     "cafe": "Kafetegia",
+    "bar": "Taberna",
     "drugs": "Tabako eta alkohola",
     "tobacco": "Tabakoa",
     "e_cigarette": "Zigarro elektronikoak",
@@ -185,7 +209,7 @@
     "newsagent": "Egunkari saltzailea",
     "pet": "Maskota denda",
     "agrarian": "Nekazaritzako produktuak",
-    "garden_centre": "Lorategia",
+    "flower": "Lorategi / loreak",
     "chemist": "Kimikaria",
     "fabric": "Lantokia",
     "books": "Liburudenda",
