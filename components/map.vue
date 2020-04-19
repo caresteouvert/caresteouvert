@@ -29,7 +29,7 @@
       @click="clickPoi"
       @mouseleave="mouseleave"
     />
-    <FilterControl/>
+    <FilterControl v-on:deliveronly="deliverOnly = !deliverOnly"/>
   </MglMap>
 </template>
 
@@ -172,6 +172,12 @@ export default {
     }
   },
 
+  data() {
+    return {
+      deliverOnly: false
+    }
+  },
+
   mounted() {
     this.$on('updateMapBounds', (bbox) => {
       this.map.fitBounds(bbox, { duration: 0 });
@@ -197,6 +203,14 @@ export default {
           newLayer.filter.push(['==', 'cat', subcategory]);
         } else if (category !== '') {
           newLayer.filter.push(['==', 'normalized_cat', category]);
+        }
+        if (this.deliverOnly) {
+          newLayer.filter.push([
+            "in",
+            "delivery",
+            "yes",
+            "only"
+          ])
         }
         return newLayer;
       });
