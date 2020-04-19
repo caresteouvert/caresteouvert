@@ -163,7 +163,7 @@
     "childcare": "Garde d'enfants",
     "employment_agency": "Agence pour l'emploi",
     "funeral_directors": "Pompes funèbres",
-    "bank": "Banque & assurances",
+    "bank": "Banque",
     "moneylender": "Prêteur",
     "insurance": "Assurance",
     "health": "Santé",
@@ -181,11 +181,11 @@
     "seafood": "Poissonnerie",
     "greengrocer": "Primeur",
     "grocery": "Épicerie",
-    "chocolate": "Chocolat",
+    "chocolate": "Chocolaterie",
     "tea": "Thé",
     "coffee": "Café",
-    "dairy": "Laiterie",
-    "confectionery": "Magasin de bonbons",
+    "dairy": "Crémerie",
+    "confectionery": "Confiserie",
     "farm": "Magasin à la ferme",
     "marketplace": "Marché",
     "bakery": "Boulangerie",
@@ -219,7 +219,7 @@
     "car_rental": "Location de voiture",
     "bicycle": "Magasin de vélos",
     "car": "Garage",
-    "bicycle_tube": "Distributeur de chambres à air pour vélos",
-    "public_transport_tickets": "Distributeur de tickets de transport"
+    "bicycle_tube": "Distributeur de chambres à air",
+    "public_transport_tickets": "Distributeur de titres de transport"
   }
 }
