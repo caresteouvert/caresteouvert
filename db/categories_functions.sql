@@ -7,7 +7,7 @@
 -- Function for getting normalized category from OSM tags
 CREATE OR REPLACE FUNCTION get_category(tags HSTORE, area VARCHAR) RETURNS VARCHAR AS $$
 BEGIN
-	IF (tags->'amenity' = 'vending_machine' AND tags->'vending' IN ('stamps', 'parcel_mail_in', 'parcel_pickup', 'parcel_pickup;parcel_mail_in')) OR (tags->'amenity' = 'childcare' AND area LIKE 'FR%') OR (tags->'amenity' = 'kindergarten' AND tags->'kindergarten:FR' != '' AND area LIKE 'FR%') OR (tags->'shop' = 'money_lender' AND area NOT LIKE 'FR%') OR (tags->'amenity' IN ('police', 'post_office', 'bank')) OR (tags->'office' IN ('employment_agency', 'financial', 'insurance')) OR (tags->'shop' = 'funeral_directors') THEN
+	IF (tags->'amenity' = 'vending_machine' AND tags->'vending' IN ('stamps', 'parcel_mail_in', 'parcel_pickup', 'parcel_pickup;parcel_mail_in')) OR (tags->'amenity' = 'childcare' AND area LIKE 'FR%') OR (tags->'amenity' = 'kindergarten' AND tags->'kindergarten:FR' != '' AND area LIKE 'FR%') OR (tags->'shop' = 'money_lender' AND area NOT LIKE 'FR%') OR (tags->'amenity' IN ('police', 'townhall', 'post_office', 'bank')) OR (tags->'office' IN ('employment_agency', 'financial', 'insurance')) OR (tags->'shop' = 'funeral_directors') THEN
 		RETURN 'amenity';
 	ELSIF (tags->'healthcare' = 'centre' AND tags->'healthcare:speciality' = 'covid19' AND area LIKE 'FR%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'condoms') OR (tags->'amenity' = 'pharmacy') OR (tags->'shop' IN ('optician', 'hearing_aids', 'medical_supply')) OR (tags->'craft' = 'optician') THEN
 		RETURN 'health';
@@ -37,6 +37,8 @@ CREATE OR REPLACE FUNCTION get_subcategory(tags HSTORE, area VARCHAR) RETURNS VA
 BEGIN
 	IF tags->'amenity' = 'police' THEN
 		RETURN 'police';
+	ELSIF tags->'amenity' = 'townhall' THEN
+		RETURN 'townhall';
 	ELSIF (tags->'amenity' = 'post_office') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' IN ('stamps', 'parcel_mail_in', 'parcel_pickup', 'parcel_pickup;parcel_mail_in')) THEN
 		RETURN 'post_office';
 	ELSIF (tags->'amenity' = 'childcare') OR (tags->'amenity' = 'kindergarten' AND tags->'kindergarten:FR' != '') THEN

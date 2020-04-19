@@ -12,6 +12,11 @@
           ],
           "areas": "all"
         },
+        "townhall": {
+          "name": "Townhall",
+          "osm_tags": [ { "amenity": "townhall" } ],
+          "areas": "all"
+        },
         "post_office": {
           "name": "Post office",
           "osm_tags": [
