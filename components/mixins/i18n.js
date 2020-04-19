@@ -5,13 +5,13 @@ import bleibtoffen from '../../assets/bleibtoffen.svg';
 import sigueabierto from '../../assets/sigueabierto.png';
 import segueaberto from '../../assets/segueaberto.png';
 import esobert from '../../assets/esobert.png';
-import ollaanauki from '../../assets/ollaanauki.png';
+import ollaanauki from '../../assets/ollaanauki.svg';
 import caresteouvertMobile from '../../assets/logo_header.png';
 import bleibtoffenMobile from '../../assets/bleibtoffen-mobile.svg';
 import sigueabiertoMobile from '../../assets/sigueabierto-mobile.png';
 import esobertMobile from '../../assets/esobert-mobile.png';
 import segueabertoMobile from '../../assets/segueaberto-mobile.png';
-import ollaanaukiMobile from '../../assets/ollaanauki-mobile.png';
+import ollaanaukiMobile from '../../assets/ollaanauki-mobile.svg';
 import caresteouvertOg from '../../assets/caresteouvert-og.jpg';
 import bleibtoffenOg from '../../assets/bleibtoffen-og.jpg';
 

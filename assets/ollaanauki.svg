@@ -1,50 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   id="Calque_1"
-   x="0px"
-   y="0px"
-   viewBox="0 0 1000 352.49"
-   style="enable-background:new 0 0 1000 352.49;"
-   xml:space="preserve"
-   sodipodi:docname="ollaanauki.svg"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"><metadata
-   id="metadata574"><rdf:RDF><cc:Work
-       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
-   id="defs572" /><sodipodi:namedview
-   pagecolor="#ffffff"
-   bordercolor="#666666"
-   borderopacity="1"
-   objecttolerance="10"
-   gridtolerance="10"
-   guidetolerance="10"
-   inkscape:pageopacity="0"
-   inkscape:pageshadow="2"
-   inkscape:window-width="1920"
-   inkscape:window-height="1015"
-   id="namedview570"
-   showgrid="false"
-   inkscape:zoom="0.78630274"
-   inkscape:cx="400.37869"
-   inkscape:cy="159.36812"
-   inkscape:window-x="0"
-   inkscape:window-y="452"
-   inkscape:window-maximized="1"
-   inkscape:current-layer="Calque_1" />
-<style
-   type="text/css"
-   id="style2">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="714.84" height="234.19" version="1.1" viewBox="0 0 714.84 234.19" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<style type="text/css">
 	.st0{fill:url(#SVGID_1_);}
 	.st1{fill:#DAD0C9;}
 	.st2{clip-path:url(#SVGID_3_);}
@@ -84,1079 +40,516 @@
 	.st36{fill:#FFC900;}
 	.st37{fill:#0060B1;}
 </style>
-<g
-   id="g567"
-   inkscape:export-xdpi="67.150002"
-   inkscape:export-ydpi="67.150002">
-	<g
-   id="g541">
-		<g
-   id="g511">
+<g transform="translate(-126.33,-41.58)">
+	
+		
 			
-				<linearGradient
-   id="SVGID_1_"
-   gradientUnits="userSpaceOnUse"
-   x1="127.394"
-   y1="1543.8483"
-   x2="355.7428"
-   y2="1543.8483"
-   gradientTransform="matrix(1 0 0 1 0 -1286.6144)">
-				<stop
-   offset="0"
-   style="stop-color:#E0DFDF"
-   id="stop4" />
-				<stop
-   offset="0.0539"
-   style="stop-color:#DAD0C9"
-   id="stop6" />
-				<stop
-   offset="0.128"
-   style="stop-color:#E0DFDF"
-   id="stop8" />
-				<stop
-   offset="0.8798"
-   style="stop-color:#E0DFDF"
-   id="stop10" />
-				<stop
-   offset="0.9445"
-   style="stop-color:#DAD0C9"
-   id="stop12" />
-				<stop
-   offset="1"
-   style="stop-color:#E0DFDF"
-   id="stop14" />
+				<linearGradient id="SVGID_1_" x1="127.39" x2="355.74" y1="1543.8" y2="1543.8" gradientTransform="translate(0 -1286.6)" gradientUnits="userSpaceOnUse">
+				<stop stop-color="#E0DFDF" offset="0"/>
+				<stop stop-color="#DAD0C9" offset=".0539"/>
+				<stop stop-color="#E0DFDF" offset=".128"/>
+				<stop stop-color="#E0DFDF" offset=".8798"/>
+				<stop stop-color="#DAD0C9" offset=".9445"/>
+				<stop stop-color="#E0DFDF" offset="1"/>
 			</linearGradient>
-			<path
-   class="st0"
-   d="M355.74,238.99H127.39v25.12l0,0c0.26,6.48,9.12,11.37,21.55,11.37h185.51c12.56,0,21.16-4.89,21.29-11.37     l0,0V238.99L355.74,238.99z"
-   id="path17" />
-			<g
-   id="g509">
-				<g
-   id="g507">
-					<g
-   id="g505">
-						<path
-   class="st1"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93,11.24-14.28,20.1-14.28        l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95C357.86,244.28,348.87,250.75,335.38,250.75z"
-   id="path19" />
-						<g
-   id="g503">
-							<g
-   id="g37">
-								<g
-   id="g35">
-									<g
-   id="g33">
-										<g
-   id="g31">
-											<defs
-   id="defs22">
-												<path
-   id="SVGID_2_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+			<path class="st0" d="m355.74 238.99h-228.35v25.12c0.26 6.48 9.12 11.37 21.55 11.37h185.51c12.56 0 21.16-4.89 21.29-11.37z" fill="url(#SVGID_1_)"/>
+			
+				
+					
+						<path class="st1" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z" fill="#dad0c9"/>
+						
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_2_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_3_">
-												<use
-   xlink:href="#SVGID_2_"
-   style="overflow:visible;"
-   id="use24" />
+											<clipPath id="SVGID_3_">
+												<use width="100%" height="100%" xlink:href="#SVGID_2_"/>
 											</clipPath>
-											<g
-   class="st2"
-   clip-path="url(#SVGID_3_)"
-   id="g29">
-												<polygon
-   class="st3"
-   points="155.82,153.97 239.52,140.61 238.59,171.16 180.02,173.14 155.56,157.41             "
-   id="polygon27" />
+											<g class="st2" clip-path="url(#SVGID_3_)">
+												<polygon class="st3" points="238.59 171.16 180.02 173.14 155.56 157.41 155.82 153.97 239.52 140.61" fill="#e0dfdf"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g55">
-								<g
-   id="g53">
-									<g
-   id="g51">
-										<g
-   id="g49">
-											<defs
-   id="defs40">
-												<path
-   id="SVGID_4_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_4_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_5_">
-												<use
-   xlink:href="#SVGID_4_"
-   style="overflow:visible;"
-   id="use42" />
+											<clipPath id="SVGID_5_">
+												<use width="100%" height="100%" xlink:href="#SVGID_4_"/>
 											</clipPath>
-											<g
-   class="st4"
-   clip-path="url(#SVGID_5_)"
-   id="g47">
-												<polygon
-   class="st3"
-   points="345.43,171.42 316.47,187.16 336.83,213.34 360.9,211.35             "
-   id="polygon45" />
+											<g class="st4" clip-path="url(#SVGID_5_)">
+												<polygon class="st3" points="336.83 213.34 360.9 211.35 345.43 171.42 316.47 187.16" fill="#e0dfdf"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g73">
-								<g
-   id="g71">
-									<g
-   id="g69">
-										<g
-   id="g67">
-											<defs
-   id="defs58">
-												<path
-   id="SVGID_6_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_6_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_7_">
-												<use
-   xlink:href="#SVGID_6_"
-   style="overflow:visible;"
-   id="use60" />
+											<clipPath id="SVGID_7_">
+												<use width="100%" height="100%" xlink:href="#SVGID_6_"/>
 											</clipPath>
-											<g
-   class="st5"
-   clip-path="url(#SVGID_7_)"
-   id="g65">
-												<polygon
-   class="st6"
-   points="242.03,255.25 242.16,221.67 252.34,223.25 278,259.22             "
-   id="polygon63" />
+											<g class="st5" clip-path="url(#SVGID_7_)">
+												<polygon class="st6" points="252.34 223.25 278 259.22 242.03 255.25 242.16 221.67" fill="#abd3e0"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g91">
-								<g
-   id="g89">
-									<g
-   id="g87">
-										<g
-   id="g85">
-											<defs
-   id="defs76">
-												<path
-   id="SVGID_8_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_8_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_9_">
-												<use
-   xlink:href="#SVGID_8_"
-   style="overflow:visible;"
-   id="use78" />
+											<clipPath id="SVGID_9_">
+												<use width="100%" height="100%" xlink:href="#SVGID_8_"/>
 											</clipPath>
-											<g
-   class="st7"
-   clip-path="url(#SVGID_9_)"
-   id="g83">
-												<polygon
-   class="st6"
-   points="184.78,253.66 136.25,253.66 147.89,210.56 191.13,210.69             "
-   id="polygon81" />
+											<g class="st7" clip-path="url(#SVGID_9_)">
+												<polygon class="st6" points="147.89 210.56 191.13 210.69 184.78 253.66 136.25 253.66" fill="#abd3e0"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g109">
-								<g
-   id="g107">
-									<g
-   id="g105">
-										<g
-   id="g103">
-											<defs
-   id="defs94">
-												<path
-   id="SVGID_10_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_10_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_11_">
-												<use
-   xlink:href="#SVGID_10_"
-   style="overflow:visible;"
-   id="use96" />
+											<clipPath id="SVGID_11_">
+												<use width="100%" height="100%" xlink:href="#SVGID_10_"/>
 											</clipPath>
-											<g
-   class="st8"
-   clip-path="url(#SVGID_11_)"
-   id="g101">
-												<polygon
-   class="st9"
-   points="240.44,100.15 242.16,147.62 278.66,150.53 276.28,100.29             "
-   id="polygon99" />
+											<g class="st8" clip-path="url(#SVGID_11_)">
+												<polygon class="st9" points="278.66 150.53 276.28 100.29 240.44 100.15 242.16 147.62" fill="#cdecb0"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g127">
-								<g
-   id="g125">
-									<g
-   id="g123">
-										<g
-   id="g121">
-											<defs
-   id="defs112">
-												<path
-   id="SVGID_12_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_12_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_13_">
-												<use
-   xlink:href="#SVGID_12_"
-   style="overflow:visible;"
-   id="use114" />
+											<clipPath id="SVGID_13_">
+												<use width="100%" height="100%" xlink:href="#SVGID_12_"/>
 											</clipPath>
-											<g
-   class="st10"
-   clip-path="url(#SVGID_13_)"
-   id="g119">
-												<polygon
-   class="st9"
-   points="320.31,112.45 304.04,131.49 319.12,144.32 340.01,162.83             "
-   id="polygon117" />
+											<g class="st10" clip-path="url(#SVGID_13_)">
+												<polygon class="st9" points="319.12 144.32 340.01 162.83 320.31 112.45 304.04 131.49" fill="#cdecb0"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g145">
-								<g
-   id="g143">
-									<g
-   id="g141">
-										<g
-   id="g139">
-											<defs
-   id="defs130">
-												<path
-   id="SVGID_14_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_14_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_15_">
-												<use
-   xlink:href="#SVGID_14_"
-   style="overflow:visible;"
-   id="use132" />
+											<clipPath id="SVGID_15_">
+												<use width="100%" height="100%" xlink:href="#SVGID_14_"/>
 											</clipPath>
-											<g
-   class="st11"
-   clip-path="url(#SVGID_15_)"
-   id="g137">
-												<polygon
-   class="st9"
-   points="352.7,212.28 263.98,213.07 258.69,222.19 336.04,255.65 368.17,247.71             "
-   id="polygon135" />
+											<g class="st11" clip-path="url(#SVGID_15_)">
+												<polygon class="st9" points="258.69 222.19 336.04 255.65 368.17 247.71 352.7 212.28 263.98 213.07" fill="#cdecb0"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g163">
-								<g
-   id="g161">
-									<g
-   id="g159">
-										<g
-   id="g157">
-											<defs
-   id="defs148">
-												<path
-   id="SVGID_16_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_16_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_17_">
-												<use
-   xlink:href="#SVGID_16_"
-   style="overflow:visible;"
-   id="use150" />
+											<clipPath id="SVGID_17_">
+												<use width="100%" height="100%" xlink:href="#SVGID_16_"/>
 											</clipPath>
-											<g
-   class="st12"
-   clip-path="url(#SVGID_17_)"
-   id="g155">
-												<polygon
-   class="st6"
-   points="140.22,127.39 241.24,111.66 238.73,139.16 131.49,156.48             "
-   id="polygon153" />
+											<g class="st12" clip-path="url(#SVGID_17_)">
+												<polygon class="st6" points="238.73 139.16 131.49 156.48 140.22 127.39 241.24 111.66" fill="#abd3e0"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g181">
-								<g
-   id="g179">
-									<g
-   id="g177">
-										<g
-   id="g175">
-											<defs
-   id="defs166">
-												<path
-   id="SVGID_18_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_18_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_19_">
-												<use
-   xlink:href="#SVGID_18_"
-   style="overflow:visible;"
-   id="use168" />
+											<clipPath id="SVGID_19_">
+												<use width="100%" height="100%" xlink:href="#SVGID_18_"/>
 											</clipPath>
-											<g
-   class="st13"
-   clip-path="url(#SVGID_19_)"
-   id="g173">
-												<polygon
-   class="st6"
-   points="282.09,152.78 303.38,129.37 338.55,161.11 340.01,174.59 308.67,185.17             "
-   id="polygon171" />
+											<g class="st13" clip-path="url(#SVGID_19_)">
+												<polygon class="st6" points="338.55 161.11 340.01 174.59 308.67 185.17 282.09 152.78 303.38 129.37" fill="#abd3e0"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g199">
-								<g
-   id="g197">
-									<g
-   id="g195">
-										<g
-   id="g193">
-											<defs
-   id="defs184">
-												<path
-   id="SVGID_20_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_20_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_21_">
-												<use
-   xlink:href="#SVGID_20_"
-   style="overflow:visible;"
-   id="use186" />
+											<clipPath id="SVGID_21_">
+												<use width="100%" height="100%" xlink:href="#SVGID_20_"/>
 											</clipPath>
-											<g
-   class="st14"
-   clip-path="url(#SVGID_21_)"
-   id="g191">
-												<polygon
-   class="st9"
-   points="119.46,195.49 178.17,175.12 223.12,201.44 213.34,212.15 120.65,211.62             "
-   id="polygon189" />
+											<g class="st14" clip-path="url(#SVGID_21_)">
+												<polygon class="st9" points="223.12 201.44 213.34 212.15 120.65 211.62 119.46 195.49 178.17 175.12" fill="#cdecb0"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g217">
-								<g
-   id="g215">
-									<g
-   id="g213">
-										<g
-   id="g211">
-											<defs
-   id="defs202">
-												<path
-   id="SVGID_22_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_22_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_23_">
-												<use
-   xlink:href="#SVGID_22_"
-   style="overflow:visible;"
-   id="use204" />
+											<clipPath id="SVGID_23_">
+												<use width="100%" height="100%" xlink:href="#SVGID_22_"/>
 											</clipPath>
-											<g
-   class="st15"
-   clip-path="url(#SVGID_23_)"
-   id="g209">
-												<polygon
-   class="st16"
-   points="143.92,130.83 144.85,123.95 275.48,103.33 277.73,110.33             "
-   id="polygon207" />
+											<g class="st15" clip-path="url(#SVGID_23_)">
+												<polygon class="st16" points="275.48 103.33 277.73 110.33 143.92 130.83 144.85 123.95" fill="#fff"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g235">
-								<g
-   id="g233">
-									<g
-   id="g231">
-										<g
-   id="g229">
-											<defs
-   id="defs220">
-												<path
-   id="SVGID_24_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_24_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_25_">
-												<use
-   xlink:href="#SVGID_24_"
-   style="overflow:visible;"
-   id="use222" />
+											<clipPath id="SVGID_25_">
+												<use width="100%" height="100%" xlink:href="#SVGID_24_"/>
 											</clipPath>
-											<g
-   class="st17"
-   clip-path="url(#SVGID_25_)"
-   id="g227">
-												<polygon
-   class="st16"
-   points="236.61,205.14 237.67,104.65 245.34,104.65 247.32,205.14             "
-   id="polygon225" />
+											<g class="st17" clip-path="url(#SVGID_25_)">
+												<polygon class="st16" points="245.34 104.65 247.32 205.14 236.61 205.14 237.67 104.65" fill="#fff"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g253">
-								<g
-   id="g251">
-									<g
-   id="g249">
-										<g
-   id="g247">
-											<defs
-   id="defs238">
-												<path
-   id="SVGID_26_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_26_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_27_">
-												<use
-   xlink:href="#SVGID_26_"
-   style="overflow:visible;"
-   id="use240" />
+											<clipPath id="SVGID_27_">
+												<use width="100%" height="100%" xlink:href="#SVGID_26_"/>
 											</clipPath>
-											<g
-   class="st18"
-   clip-path="url(#SVGID_27_)"
-   id="g245">
-												<polygon
-   class="st16"
-   points="336.7,213.6 274.95,153.57 272.97,104.12 280.64,104.52 283.95,151.85 345.16,210.03                           "
-   id="polygon243" />
+											<g class="st18" clip-path="url(#SVGID_27_)">
+												<polygon class="st16" points="272.97 104.12 280.64 104.52 283.95 151.85 345.16 210.03 336.7 213.6 274.95 153.57" fill="#fff"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g271">
-								<g
-   id="g269">
-									<g
-   id="g267">
-										<g
-   id="g265">
-											<defs
-   id="defs256">
-												<path
-   id="SVGID_28_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_28_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_29_">
-												<use
-   xlink:href="#SVGID_28_"
-   style="overflow:visible;"
-   id="use258" />
+											<clipPath id="SVGID_29_">
+												<use width="100%" height="100%" xlink:href="#SVGID_28_"/>
 											</clipPath>
-											<g
-   class="st19"
-   clip-path="url(#SVGID_29_)"
-   id="g263">
-												<polygon
-   class="st16"
-   points="349.92,215.85 255.25,215.72 254.99,208.71 347.81,208.71             "
-   id="polygon261" />
+											<g class="st19" clip-path="url(#SVGID_29_)">
+												<polygon class="st16" points="254.99 208.71 347.81 208.71 349.92 215.85 255.25 215.72" fill="#fff"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g289">
-								<g
-   id="g287">
-									<g
-   id="g285">
-										<g
-   id="g283">
-											<defs
-   id="defs274">
-												<path
-   id="SVGID_30_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_30_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_31_">
-												<use
-   xlink:href="#SVGID_30_"
-   style="overflow:visible;"
-   id="use276" />
+											<clipPath id="SVGID_31_">
+												<use width="100%" height="100%" xlink:href="#SVGID_30_"/>
 											</clipPath>
-											<g
-   class="st20"
-   clip-path="url(#SVGID_31_)"
-   id="g281">
-												<polygon
-   class="st16"
-   points="281.43,156.61 241.37,151.19 242.96,144.18 277.47,148.94 315.28,113.9 322.29,119.06                           "
-   id="polygon279" />
+											<g class="st20" clip-path="url(#SVGID_31_)">
+												<polygon class="st16" points="242.96 144.18 277.47 148.94 315.28 113.9 322.29 119.06 281.43 156.61 241.37 151.19" fill="#fff"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g307">
-								<g
-   id="g305">
-									<g
-   id="g303">
-										<g
-   id="g301">
-											<defs
-   id="defs292">
-												<path
-   id="SVGID_32_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_32_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_33_">
-												<use
-   xlink:href="#SVGID_32_"
-   style="overflow:visible;"
-   id="use294" />
+											<clipPath id="SVGID_33_">
+												<use width="100%" height="100%" xlink:href="#SVGID_32_"/>
 											</clipPath>
-											<g
-   class="st21"
-   clip-path="url(#SVGID_33_)"
-   id="g299">
-												<polygon
-   class="st16"
-   points="333.26,160.71 303.12,130.56 309.6,126.86 340.27,157.14             "
-   id="polygon297" />
+											<g class="st21" clip-path="url(#SVGID_33_)">
+												<polygon class="st16" points="309.6 126.86 340.27 157.14 333.26 160.71 303.12 130.56" fill="#fff"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g325">
-								<g
-   id="g323">
-									<g
-   id="g321">
-										<g
-   id="g319">
-											<defs
-   id="defs310">
-												<path
-   id="SVGID_34_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_34_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_35_">
-												<use
-   xlink:href="#SVGID_34_"
-   style="overflow:visible;"
-   id="use312" />
+											<clipPath id="SVGID_35_">
+												<use width="100%" height="100%" xlink:href="#SVGID_34_"/>
 											</clipPath>
-											<g
-   class="st22"
-   clip-path="url(#SVGID_35_)"
-   id="g317">
-												<polygon
-   class="st16"
-   points="315.15,189.93 308.54,183.85 337.76,169.83 344.64,175.92             "
-   id="polygon315" />
+											<g class="st22" clip-path="url(#SVGID_35_)">
+												<polygon class="st16" points="337.76 169.83 344.64 175.92 315.15 189.93 308.54 183.85" fill="#fff"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g343">
-								<g
-   id="g341">
-									<g
-   id="g339">
-										<g
-   id="g337">
-											<defs
-   id="defs328">
-												<path
-   id="SVGID_36_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_36_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_37_">
-												<use
-   xlink:href="#SVGID_36_"
-   style="overflow:visible;"
-   id="use330" />
+											<clipPath id="SVGID_37_">
+												<use width="100%" height="100%" xlink:href="#SVGID_36_"/>
 											</clipPath>
-											<g
-   class="st23"
-   clip-path="url(#SVGID_37_)"
-   id="g335">
-												<polygon
-   class="st16"
-   points="127,195.75 124.35,189.4 177.9,171.29 242.03,169.7 242.3,176.84 179.09,178.43                           "
-   id="polygon333" />
+											<g class="st23" clip-path="url(#SVGID_37_)">
+												<polygon class="st16" points="177.9 171.29 242.03 169.7 242.3 176.84 179.09 178.43 127 195.75 124.35 189.4" fill="#fff"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g361">
-								<g
-   id="g359">
-									<g
-   id="g357">
-										<g
-   id="g355">
-											<defs
-   id="defs346">
-												<path
-   id="SVGID_38_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_38_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_39_">
-												<use
-   xlink:href="#SVGID_38_"
-   style="overflow:visible;"
-   id="use348" />
+											<clipPath id="SVGID_39_">
+												<use width="100%" height="100%" xlink:href="#SVGID_38_"/>
 											</clipPath>
-											<g
-   class="st24"
-   clip-path="url(#SVGID_39_)"
-   id="g353">
-												<polygon
-   class="st16"
-   points="231.06,214.66 125.81,214.66 128.06,207.52 231.32,207.65             "
-   id="polygon351" />
+											<g class="st24" clip-path="url(#SVGID_39_)">
+												<polygon class="st16" points="128.06 207.52 231.32 207.65 231.06 214.66 125.81 214.66" fill="#fff"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g379">
-								<g
-   id="g377">
-									<g
-   id="g375">
-										<g
-   id="g373">
-											<defs
-   id="defs364">
-												<path
-   id="SVGID_40_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_40_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_41_">
-												<use
-   xlink:href="#SVGID_40_"
-   style="overflow:visible;"
-   id="use366" />
+											<clipPath id="SVGID_41_">
+												<use width="100%" height="100%" xlink:href="#SVGID_40_"/>
 											</clipPath>
-											<g
-   class="st25"
-   clip-path="url(#SVGID_41_)"
-   id="g371">
-												<polygon
-   class="st16"
-   points="141.54,253.66 129.25,253.66 141.41,211.75 152.25,211.75             "
-   id="polygon369" />
+											<g class="st25" clip-path="url(#SVGID_41_)">
+												<polygon class="st16" points="141.41 211.75 152.25 211.75 141.54 253.66 129.25 253.66" fill="#fff"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g397">
-								<g
-   id="g395">
-									<g
-   id="g393">
-										<g
-   id="g391">
-											<defs
-   id="defs382">
-												<path
-   id="SVGID_42_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_42_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_43_">
-												<use
-   xlink:href="#SVGID_42_"
-   style="overflow:visible;"
-   id="use384" />
+											<clipPath id="SVGID_43_">
+												<use width="100%" height="100%" xlink:href="#SVGID_42_"/>
 											</clipPath>
-											<g
-   class="st26"
-   clip-path="url(#SVGID_43_)"
-   id="g389">
-												<polygon
-   class="st16"
-   points="189.54,251.68 177.24,251.68 183.85,211.75 194.83,211.88             "
-   id="polygon387" />
+											<g class="st26" clip-path="url(#SVGID_43_)">
+												<polygon class="st16" points="183.85 211.75 194.83 211.88 189.54 251.68 177.24 251.68" fill="#fff"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g415">
-								<g
-   id="g413">
-									<g
-   id="g411">
-										<g
-   id="g409">
-											<defs
-   id="defs400">
-												<path
-   id="SVGID_44_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_44_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_45_">
-												<use
-   xlink:href="#SVGID_44_"
-   style="overflow:visible;"
-   id="use402" />
+											<clipPath id="SVGID_45_">
+												<use width="100%" height="100%" xlink:href="#SVGID_44_"/>
 											</clipPath>
-											<g
-   class="st27"
-   clip-path="url(#SVGID_45_)"
-   id="g407">
-												<polygon
-   class="st16"
-   points="268.61,255.25 246.92,229.73 247.19,251.68 235.02,251.68 235.95,198.66 279.45,252.21                           "
-   id="polygon405" />
+											<g class="st27" clip-path="url(#SVGID_45_)">
+												<polygon class="st16" points="247.19 251.68 235.02 251.68 235.95 198.66 279.45 252.21 268.61 255.25 246.92 229.73" fill="#fff"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g433">
-								<g
-   id="g431">
-									<g
-   id="g429">
-										<g
-   id="g427">
-											<defs
-   id="defs418">
-												<path
-   id="SVGID_46_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_46_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_47_">
-												<use
-   xlink:href="#SVGID_46_"
-   style="overflow:visible;"
-   id="use420" />
+											<clipPath id="SVGID_47_">
+												<use width="100%" height="100%" xlink:href="#SVGID_46_"/>
 											</clipPath>
-											<g
-   class="st28"
-   clip-path="url(#SVGID_47_)"
-   id="g425">
-												<polygon
-   class="st29"
-   points="327.05,256.44 251.95,220.87 258.82,215.45 333.66,251.02             "
-   id="polygon423" />
+											<g class="st28" clip-path="url(#SVGID_47_)">
+												<polygon class="st29" points="258.82 215.45 333.66 251.02 327.05 256.44 251.95 220.87" fill="#fcd6a5"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g451">
-								<g
-   id="g449">
-									<g
-   id="g447">
-										<g
-   id="g445">
-											<defs
-   id="defs436">
-												<path
-   id="SVGID_48_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_48_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_49_">
-												<use
-   xlink:href="#SVGID_48_"
-   style="overflow:visible;"
-   id="use438" />
+											<clipPath id="SVGID_49_">
+												<use width="100%" height="100%" xlink:href="#SVGID_48_"/>
 											</clipPath>
-											<g
-   class="st30"
-   clip-path="url(#SVGID_49_)"
-   id="g443">
-												<polygon
-   class="st29"
-   points="235.29,213.86 143.79,153.7 151.33,148.28 242.43,208.44             "
-   id="polygon441" />
+											<g class="st30" clip-path="url(#SVGID_49_)">
+												<polygon class="st29" points="151.33 148.28 242.43 208.44 235.29 213.86 143.79 153.7" fill="#fcd6a5"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g467">
-								<g
-   id="g465">
-									<g
-   id="g463">
-										<g
-   id="g461">
-											<defs
-   id="defs454">
-												<path
-   id="SVGID_50_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_50_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_51_">
-												<use
-   xlink:href="#SVGID_50_"
-   style="overflow:visible;"
-   id="use456" />
+											<clipPath id="SVGID_51_">
+												<use width="100%" height="100%" xlink:href="#SVGID_50_"/>
 											</clipPath>
-											<path
-   class="st31"
-   d="M269.93,212.41c0.79,10.05-11.9,18.25-28.3,18.25s-29.09-8.2-28.3-18.25s13.49-18.25,28.3-18.25             C256.44,194.16,269.14,202.36,269.93,212.41z"
-   clip-path="url(#SVGID_51_)"
-   id="path459" />
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g483">
-								<g
-   id="g481">
-									<g
-   id="g479">
-										<g
-   id="g477">
-											<defs
-   id="defs470">
-												<path
-   id="SVGID_52_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+											<path class="st31" d="m269.93 212.41c0.79 10.05-11.9 18.25-28.3 18.25s-29.09-8.2-28.3-18.25 13.49-18.25 28.3-18.25 27.51 8.2 28.3 18.25z" clip-path="url(#SVGID_51_)" fill="#e0dfdf"/>
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_52_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_53_">
-												<use
-   xlink:href="#SVGID_52_"
-   style="overflow:visible;"
-   id="use472" />
+											<clipPath id="SVGID_53_">
+												<use width="100%" height="100%" xlink:href="#SVGID_52_"/>
 											</clipPath>
-											<path
-   class="st32"
-   d="M241.63,234.23c-19.83,0-34.91-9.78-33.72-21.82c1.19-12.03,16.26-21.82,33.85-21.82             c17.45,0,32.66,9.78,33.72,21.82C276.54,224.44,261.34,234.23,241.63,234.23z M241.63,197.73             c-12.03,0-22.35,6.61-22.87,14.68c-0.53,8.07,9.65,14.68,22.74,14.68c13.09,0,23.27-6.61,22.87-14.68             C263.85,204.34,253.67,197.73,241.63,197.73z"
-   clip-path="url(#SVGID_53_)"
-   id="path475" />
-										</g>
-									</g>
-								</g>
-							</g>
-							<g
-   id="g501">
-								<g
-   id="g499">
-									<g
-   id="g497">
-										<g
-   id="g495">
-											<defs
-   id="defs486">
-												<path
-   id="SVGID_54_"
-   d="M335.38,250.75H147.76c-13.35,0-22.35-6.35-19.97-14.15l32.66-109.35              c2.25-7.93,11.24-14.28,20.1-14.28l122.57,0.4c8.73,0,17.72,6.48,19.97,14.15l32.39,108.95              C357.86,244.28,348.87,250.75,335.38,250.75z" />
+											<path class="st32" d="m241.63 234.23c-19.83 0-34.91-9.78-33.72-21.82 1.19-12.03 16.26-21.82 33.85-21.82 17.45 0 32.66 9.78 33.72 21.82 1.06 12.03-14.14 21.82-33.85 21.82zm0-36.5c-12.03 0-22.35 6.61-22.87 14.68-0.53 8.07 9.65 14.68 22.74 14.68s23.27-6.61 22.87-14.68c-0.52-8.07-10.7-14.68-22.74-14.68z" clip-path="url(#SVGID_53_)" fill="#fcd6a5"/>
+										
+									
+								
+							
+							
+								
+									
+										
+											<defs>
+												<path id="SVGID_54_" d="m335.38 250.75h-187.62c-13.35 0-22.35-6.35-19.97-14.15l32.66-109.35c2.25-7.93 11.24-14.28 20.1-14.28l122.57 0.4c8.73 0 17.72 6.48 19.97 14.15l32.39 108.95c2.38 7.81-6.61 14.28-20.1 14.28z"/>
 											</defs>
-											<clipPath
-   id="SVGID_55_">
-												<use
-   xlink:href="#SVGID_54_"
-   style="overflow:visible;"
-   id="use488" />
+											<clipPath id="SVGID_55_">
+												<use width="100%" height="100%" xlink:href="#SVGID_54_"/>
 											</clipPath>
-											<g
-   class="st33"
-   clip-path="url(#SVGID_55_)"
-   id="g493">
-												<polygon
-   class="st16"
-   points="137.05,158.46 137.44,151.46 240.58,134.4 242.43,141.27             "
-   id="polygon491" />
+											<g class="st33" clip-path="url(#SVGID_55_)">
+												<polygon class="st16" points="240.58 134.4 242.43 141.27 137.05 158.46 137.44 151.46" fill="#fff"/>
 											</g>
-										</g>
-									</g>
-								</g>
-							</g>
-						</g>
-					</g>
-				</g>
+										
+									
+								
+							
+						
+					
+				
+			
+		
+		<path class="st34" d="m240.71 41.58c-34.11 0-61.88 27.77-61.88 61.88 0 42.31 55.4 104.46 57.65 107.1 2.25 2.51 6.08 2.51 8.33 0 2.38-2.64 57.65-64.79 57.65-107.1 0-34.11-27.64-61.88-61.75-61.88z" fill="#f12a2a"/>
+		<path class="st35" d="m147.49 169.44c-11.64 0-21.16 9.52-21.16 21.16 0 14.54 18.91 35.83 19.83 36.76 0.79 0.79 2.12 0.79 2.78 0 0.79-0.93 19.83-22.21 19.83-36.76 0.01-11.64-9.51-21.16-21.28-21.16z" fill="#009a00"/>
+		<path class="st36" d="m334.59 117.47c-11.64 0-21.16 9.52-21.16 21.16 0 14.54 18.91 35.83 19.83 36.76 0.79 0.79 2.12 0.79 2.78 0 0.79-0.93 19.83-22.21 19.83-36.76-0.13-11.64-9.52-21.16-21.28-21.16z" fill="#ffc900"/>
+		<path class="st37" d="m302.59 183.19c-11.64 0-21.16 9.52-21.16 21.16 0 14.54 18.91 35.83 19.83 36.76 0.79 0.79 2.12 0.79 2.78 0 0.79-0.93 19.83-22.21 19.83-36.76-0.13-11.64-9.65-21.16-21.28-21.16z" fill="#0060b1"/>
+		
+			
+				<path class="st16" d="m311.98 201.83c-2.51-3.57-5.69-2.78-7.67-2.25-0.26 0-0.4 0.13-0.66 0.13 0.26-2.25 1.45-3.97 3.57-5.29l-0.93-1.45c-1.19 0.66-2.12 1.45-2.78 2.38-0.26-0.79-0.66-1.59-1.19-2.12-1.06-1.06-2.64-1.59-4.76-1.59h-0.79v0.79c0 2.12 0.53 3.7 1.59 4.76 0.93 0.93 2.12 1.45 3.7 1.59 0 0.26-0.13 0.53-0.13 0.79-0.26 0-0.53-0.13-0.79-0.13-2.12-0.53-5.16-1.32-7.67 2.25-1.19 1.72-1.59 4.1-1.06 6.74 0.66 3.17 2.51 6.48 4.36 7.67 2.25 1.45 4.1 0.79 5.29 0.4 0.26-0.13 0.66-0.26 0.79-0.26s0.53 0.13 0.79 0.26c0.66 0.26 1.45 0.53 2.38 0.53 0.79 0 1.85-0.26 2.78-0.93 1.85-1.19 3.7-4.5 4.36-7.67 0.4-2.5 0.01-4.75-1.18-6.6z" fill="#fff"/>
+			
+		
+		
+			<g fill="#fff">
+				<path class="st16" d="m325.86 135.72c0.26 0.13 1.06 0.79 2.51 1.72 1.32 0.93 2.38 1.72 3.17 2.25 0.13 0 0.26 0.13 0.53 0.4 0.26 0.13 0.53 0.4 0.66 0.4 0.13 0.13 0.4 0.26 0.66 0.4 0.26 0.13 0.53 0.26 0.66 0.26 0.26 0.13 0.4 0.13 0.66 0.13 0.13 0 0.4 0 0.66-0.13s0.4-0.13 0.66-0.26 0.4-0.26 0.66-0.4c0.13-0.13 0.4-0.26 0.66-0.4 0.26-0.13 0.4-0.26 0.53-0.4 0.79-0.53 2.64-1.85 5.69-3.97 0.53-0.4 1.06-0.93 1.45-1.45 0.4-0.53 0.53-1.19 0.53-1.85 0-0.53-0.13-0.93-0.53-1.32-0.4-0.4-0.79-0.53-1.32-0.53h-17.72c-0.66 0-1.06 0.26-1.45 0.66-0.4 0.4-0.53 0.93-0.53 1.59 0 0.53 0.26 1.06 0.66 1.59 0.27 0.52 0.67 0.91 1.2 1.31z"/>
+				<path class="st16" d="m344.11 136.91c-2.64 1.72-4.63 3.17-5.95 4.1-0.4 0.4-0.79 0.66-1.06 0.79-0.26 0.13-0.66 0.4-1.19 0.53s-0.93 0.26-1.32 0.26c-0.4 0-0.79-0.13-1.32-0.26s-0.79-0.4-1.19-0.53c-0.26-0.13-0.66-0.4-1.06-0.79-1.06-0.79-3.04-2.12-5.95-4.1-0.4-0.26-0.93-0.66-1.19-1.06v9.52c0 0.53 0.13 0.93 0.53 1.32 0.4 0.4 0.79 0.53 1.32 0.53h17.72c0.53 0 0.93-0.13 1.32-0.53 0.4-0.4 0.53-0.79 0.53-1.32v-9.52c-0.27 0.4-0.66 0.8-1.19 1.06z"/>
 			</g>
-		</g>
-		<path
-   class="st34"
-   d="M240.71,41.58c-34.11,0-61.88,27.77-61.88,61.88c0,42.31,55.4,104.46,57.65,107.1    c2.25,2.51,6.08,2.51,8.33,0c2.38-2.64,57.65-64.79,57.65-107.1C302.46,69.35,274.82,41.58,240.71,41.58z"
-   id="path513" />
-		<path
-   class="st35"
-   d="M147.49,169.44c-11.64,0-21.16,9.52-21.16,21.16c0,14.54,18.91,35.83,19.83,36.76    c0.79,0.79,2.12,0.79,2.78,0c0.79-0.93,19.83-22.21,19.83-36.76C168.78,178.96,159.26,169.44,147.49,169.44z"
-   id="path515" />
-		<path
-   class="st36"
-   d="M334.59,117.47c-11.64,0-21.16,9.52-21.16,21.16c0,14.54,18.91,35.83,19.83,36.76    c0.79,0.79,2.12,0.79,2.78,0c0.79-0.93,19.83-22.21,19.83-36.76C355.74,126.99,346.35,117.47,334.59,117.47z"
-   id="path517" />
-		<path
-   class="st37"
-   d="M302.59,183.19c-11.64,0-21.16,9.52-21.16,21.16c0,14.54,18.91,35.83,19.83,36.76    c0.79,0.79,2.12,0.79,2.78,0c0.79-0.93,19.83-22.21,19.83-36.76C323.74,192.71,314.22,183.19,302.59,183.19z"
-   id="path519" />
-		<g
-   id="g525">
-			<g
-   id="g523">
-				<path
-   class="st16"
-   d="M311.98,201.83c-2.51-3.57-5.69-2.78-7.67-2.25c-0.26,0-0.4,0.13-0.66,0.13c0.26-2.25,1.45-3.97,3.57-5.29      l-0.93-1.45c-1.19,0.66-2.12,1.45-2.78,2.38c-0.26-0.79-0.66-1.59-1.19-2.12c-1.06-1.06-2.64-1.59-4.76-1.59h-0.79v0.79      c0,2.12,0.53,3.7,1.59,4.76c0.93,0.93,2.12,1.45,3.7,1.59c0,0.26-0.13,0.53-0.13,0.79c-0.26,0-0.53-0.13-0.79-0.13      c-2.12-0.53-5.16-1.32-7.67,2.25c-1.19,1.72-1.59,4.1-1.06,6.74c0.66,3.17,2.51,6.48,4.36,7.67c2.25,1.45,4.1,0.79,5.29,0.4      c0.26-0.13,0.66-0.26,0.79-0.26c0.13,0,0.53,0.13,0.79,0.26c0.66,0.26,1.45,0.53,2.38,0.53c0.79,0,1.85-0.26,2.78-0.93      c1.85-1.19,3.7-4.5,4.36-7.67C313.56,205.93,313.17,203.68,311.98,201.83z"
-   id="path521" />
-			</g>
-		</g>
-		<g
-   id="g533">
-			<g
-   id="g531">
-				<path
-   class="st16"
-   d="M325.86,135.72c0.26,0.13,1.06,0.79,2.51,1.72c1.32,0.93,2.38,1.72,3.17,2.25c0.13,0,0.26,0.13,0.53,0.4      c0.26,0.13,0.53,0.4,0.66,0.4c0.13,0.13,0.4,0.26,0.66,0.4c0.26,0.13,0.53,0.26,0.66,0.26c0.26,0.13,0.4,0.13,0.66,0.13l0,0l0,0      c0.13,0,0.4,0,0.66-0.13c0.26-0.13,0.4-0.13,0.66-0.26c0.26-0.13,0.4-0.26,0.66-0.4c0.13-0.13,0.4-0.26,0.66-0.4      c0.26-0.13,0.4-0.26,0.53-0.4c0.79-0.53,2.64-1.85,5.69-3.97c0.53-0.4,1.06-0.93,1.45-1.45c0.4-0.53,0.53-1.19,0.53-1.85      c0-0.53-0.13-0.93-0.53-1.32c-0.4-0.4-0.79-0.53-1.32-0.53h-17.72c-0.66,0-1.06,0.26-1.45,0.66c-0.4,0.4-0.53,0.93-0.53,1.59      c0,0.53,0.26,1.06,0.66,1.59C324.93,134.93,325.33,135.32,325.86,135.72z"
-   id="path527" />
-				<path
-   class="st16"
-   d="M344.11,136.91c-2.64,1.72-4.63,3.17-5.95,4.1c-0.4,0.4-0.79,0.66-1.06,0.79      c-0.26,0.13-0.66,0.4-1.19,0.53c-0.53,0.13-0.93,0.26-1.32,0.26l0,0l0,0c-0.4,0-0.79-0.13-1.32-0.26      c-0.53-0.13-0.79-0.4-1.19-0.53c-0.26-0.13-0.66-0.4-1.06-0.79c-1.06-0.79-3.04-2.12-5.95-4.1c-0.4-0.26-0.93-0.66-1.19-1.06      v9.52c0,0.53,0.13,0.93,0.53,1.32c0.4,0.4,0.79,0.53,1.32,0.53h17.72c0.53,0,0.93-0.13,1.32-0.53c0.4-0.4,0.53-0.79,0.53-1.32      v-9.52C345.03,136.25,344.64,136.65,344.11,136.91z"
-   id="path529" />
-			</g>
-		</g>
-		<path
-   class="st16"
-   d="M151.06,203.02h-7.14c-0.4,0-0.66-0.26-0.66-0.66v-6.48h-6.61c-0.4,0-0.66-0.26-0.66-0.66v-7.14    c0-0.4,0.26-0.66,0.66-0.66h6.48v-6.48c0-0.4,0.26-0.66,0.66-0.66h7.14c0.4,0,0.66,0.26,0.66,0.66v6.48h6.48    c0.4,0,0.66,0.26,0.66,0.66v7.14c0,0.4-0.26,0.66-0.66,0.66h-6.48v6.48C151.72,202.76,151.46,203.02,151.06,203.02z"
-   id="path535" />
-		<circle
-   class="st16"
-   cx="240.97"
-   cy="104.38"
-   r="42.97"
-   id="circle537" />
-		<path
-   class="st34"
-   d="M270.19,81.11c-0.66-1.45-1.45-2.25-3.17-3.44c-1.45-1.06-3.7-0.53-4.89,0.66    c-6.21,6.08-12.16,12.56-17.59,19.3c-2.64,3.31-6.48,7.27-8.86,11.5c-1.19-0.93-2.25-1.85-3.31-2.78    c-3.44-3.17-7.14-7.14-11.5-9.12c-3.57-1.72-6.21-0.13-8.46,2.78c-0.66,0.93-1.45,2.38-1.45,3.57c-0.93,0.93-1.19,2.51,0,3.97    c7.54,9.26,16.92,16.53,26.84,23.14c1.32,0.93,3.83,0.66,4.89-0.66c10.71-13.62,20.76-28.69,29.49-43.63    C273.76,83.76,272.18,81.64,270.19,81.11z"
-   id="path539" />
+		
+		<path class="st16" d="m151.06 203.02h-7.14c-0.4 0-0.66-0.26-0.66-0.66v-6.48h-6.61c-0.4 0-0.66-0.26-0.66-0.66v-7.14c0-0.4 0.26-0.66 0.66-0.66h6.48v-6.48c0-0.4 0.26-0.66 0.66-0.66h7.14c0.4 0 0.66 0.26 0.66 0.66v6.48h6.48c0.4 0 0.66 0.26 0.66 0.66v7.14c0 0.4-0.26 0.66-0.66 0.66h-6.48v6.48c0.13 0.4-0.13 0.66-0.53 0.66z" fill="#fff"/>
+		<circle class="st16" cx="240.97" cy="104.38" r="42.97" fill="#fff"/>
+		<path class="st34" d="m270.19 81.11c-0.66-1.45-1.45-2.25-3.17-3.44-1.45-1.06-3.7-0.53-4.89 0.66-6.21 6.08-12.16 12.56-17.59 19.3-2.64 3.31-6.48 7.27-8.86 11.5-1.19-0.93-2.25-1.85-3.31-2.78-3.44-3.17-7.14-7.14-11.5-9.12-3.57-1.72-6.21-0.13-8.46 2.78-0.66 0.93-1.45 2.38-1.45 3.57-0.93 0.93-1.19 2.51 0 3.97 7.54 9.26 16.92 16.53 26.84 23.14 1.32 0.93 3.83 0.66 4.89-0.66 10.71-13.62 20.76-28.69 29.49-43.63 1.58-2.64 0-4.76-1.99-5.29z" fill="#f12a2a"/>
+	
+	<g fill="#ffc900">
+		<path class="st36" d="m405.37 127.48c-1.07-3.76-1.47-7.65-1.47-11.28 0-11.27 4.15-22.15 10.85-29.13 1.47-0.4 2.01-0.8 2.68-1.34h-0.13l0.27-0.13 1.21-0.81h-0.13l2.41-1.74c3.75-1.34 8.71-1.74 13.4-2.15l2.95-0.27c1.88-0.27 4.42-0.27 6.16-0.27 6.16 0 12.06 0.81 16.88 1.74l2.41 1.74c0.13 0.13 0.67 0.4 2.01 0.94l1.21 1.61c4.69 5.5 11.52 13.42 12.33 22.42 0.54 6.17-0.54 12.08-1.21 16.64 0 0.13-0.54 0.94-0.8 1.21-0.13 0.27-0.4 0.27-0.4 0.67-1.61 2.68-3.08 5.23-4.29 6.71l-2.01 1.88c-0.27 0.27-0.67 0.4-0.94 0.54l-3.22 3.22c-7.24 3.49-15.41 4.83-23.58 4.83-6.16 0-12.33-0.67-18.22-1.61-8.44-2.28-14.47-6.44-17.42-14.23-0.27 0-0.54-0.27-0.54-0.81 0 0-0.13 0.13 0-0.13zm17.42-31.81c0.8-0.27-0.54 1.07-1.61 2.15l-1.21 1.21v-0.13c-3.88 5.1-6.43 11.81-6.43 19.06 0 2.28 0.4 5.5 1.07 8.19 0.67 0.4 1.07 1.07 1.47 2.01 5.22 3.49 14.07 5.64 22.51 5.64 8.31 0 17.15-2.28 22.37-5.91h-0.13c4.42-4.43 7.5-14.77 7.64-23.62-0.4-1.74-1.34-3.62-2.28-5.37l-0.27-0.67c-0.13-0.13-0.27-0.27-0.27-0.4-3.88-3.36-9.51-5.91-16.48-6.17-7.89-0.15-19.15-0.02-26.38 4.01zm54.39 29.79c0.13 0 0.13 0.13 0 0.27z"/>
+		<path class="st36" d="m539.88 130.3 2.01 2.28c2.14 2.15 4.15 5.24 3.35 9.66-2.01 2.15-3.62 1.74-5.49 1.21-0.13 0-0.4-0.13-0.54-0.13l-1.88-0.4c-1.61-0.27-3.62-0.27-5.22-0.27-2.14 0-4.56 0-7.1 0.13-2.01 0.13-5.09 0.27-7.1 0.27-2.41 0-5.49-0.13-7.77-0.4-5.22 0.4-12.59 0.54-18.49 0.54h-0.8c-1.74-0.13-3.75-0.27-4.96-1.48l-1.21-1.61v0.13c-0.67-0.67-1.34-1.74-1.47-2.55l0.13 0.13c-0.4-0.81-0.4-1.48-0.4-2.01 0-0.27 0-0.81-0.4-1.34v0.13c-0.67-0.67-0.94-0.94-1.07-2.42-0.13-1.07 0-1.74 0.13-2.15 0-0.27 0-0.4 0.27-0.67v0.13c0-0.13 0.13-0.13 0.13-0.4v-4.43c-0.13-1.34-0.13-4.03 0-5.37v-1.48c0-0.67 0.13-1.48 0.13-2.01l0.27-7.65c0.27-6.71 0.54-14.09 0.54-20.94 0-1.21-0.13-2.42-0.13-3.62v-3.22c1.47-1.88 2.95-2.68 4.55-2.68 2.41 0 4.82 1.07 6.3 2.68 0.8 1.48 0.94 3.09 1.07 5.1l0.4 2.95c-0.94 13.96-1.21 27.65-1.21 41.88h45.96z"/>
+		<path class="st36" d="m606.73 130.3 2.01 2.28c2.14 2.15 4.15 5.24 3.35 9.66-2.01 2.15-3.62 1.74-5.49 1.21-0.13 0-0.4-0.13-0.54-0.13l-1.88-0.4c-1.61-0.27-3.62-0.27-5.22-0.27-2.14 0-4.56 0-7.1 0.13-2.01 0.13-5.09 0.27-7.1 0.27-2.41 0-5.49-0.13-7.77-0.4-5.22 0.4-12.59 0.54-18.49 0.54h-0.8c-1.74-0.13-3.75-0.27-4.96-1.48l-1.21-1.61v0.13c-0.67-0.67-1.34-1.74-1.47-2.55l0.13 0.13c-0.4-0.81-0.4-1.48-0.4-2.01 0-0.27 0-0.81-0.4-1.34v0.13c-0.67-0.67-0.94-0.94-1.07-2.42-0.13-1.07 0-1.74 0.13-2.15 0-0.27 0-0.4 0.27-0.67v0.13c0-0.13 0.13-0.13 0.13-0.4v-4.43c-0.13-1.34-0.13-4.03 0-5.37v-1.48c0-0.67 0.13-1.48 0.13-2.01l0.27-7.65c0.27-6.71 0.54-14.09 0.54-20.94 0-1.21-0.13-2.42-0.13-3.62v-3.22c1.47-1.88 2.95-2.68 4.55-2.68 2.41 0 4.82 1.07 6.3 2.68 0.8 1.48 0.94 3.09 1.07 5.1l0.4 2.95c-0.94 13.96-1.21 27.65-1.21 41.88h45.96z"/>
+		<path class="st36" d="m658.3 82.38c0 1.07 0.54 2.55 1.34 4.16l0.54 1.48-0.13-0.13c3.35 6.04 6.7 11.81 10.32 17.72l2.14 3.89v-0.13c5.23 8.99 10.18 17.85 14.6 28.32 0 0-0.27 1.21-0.4 2.01 0 0.27-0.13 0.94-0.13 1.21-1.61 1.07-3.62 2.01-5.76 2.28-2.28-1.48-2.81-1.74-4.02-1.48l-4.42-8.72-2.68-5.37-2.28-4.56h-4.15c-8.57 0-18.76 0.27-27.87 0.54-2.01 2.82-2.81 4.3-3.75 6.04-2.41 4.56-3.08 5.64-3.75 6.58-0.94 1.07-1.61 2.01-2.95 4.7h0.13c-0.4 0.94-0.94 2.01-2.28 3.09-4.02 0.54-6.97-2.82-8.71-5.37l1.07-2.55c0.67-1.61 1.34-3.22 3.08-4.43l-0.13 0.27c6.16-11.27 13-22.95 19.83-34.23l4.56-7.25-0.13 0.13c0.4-0.94 1.07-1.74 1.34-2.69v0.13c0-0.13 0.13-0.13 0.13-0.4 0-0.13 0.4 1.07-0.27-2.95 0.8 0.27 2.81-0.94 2.55-1.48 0.4-0.67 0.8-1.07 1.21-1.07 0-0.4 0.13-0.67 0.4-1.48l1.61-0.27c1.07-0.4 2.41-0.67 4.02-0.67s3.22 0.4 4.82 1.61zm-14.87 28.59c3.88-0.94 10.18 0.81 13.4 0h3.75c-2.01-4.3-3.89-8.32-6.3-12.62l-2.01-3.22c-1.34 2.55-3.08 5.64-4.82 8.46v-0.13c-0.54 0.94-1.34 2.01-1.88 3.09z"/>
+		<path class="st36" d="m733.99 82.38c0 1.07 0.54 2.55 1.34 4.16l0.54 1.48-0.13-0.13c3.35 6.04 6.7 11.81 10.32 17.72l2.14 3.89v-0.13c5.23 8.99 10.18 17.85 14.6 28.32 0 0-0.27 1.21-0.4 2.01 0 0.27-0.13 0.94-0.13 1.21-1.61 1.07-3.62 2.01-5.76 2.28-2.28-1.48-2.81-1.74-4.02-1.48l-4.42-8.72-2.68-5.37-2.28-4.56h-4.15c-8.57 0-18.76 0.27-27.87 0.54-2.01 2.82-2.81 4.3-3.75 6.04-2.41 4.56-3.08 5.64-3.75 6.58-0.94 1.07-1.61 2.01-2.95 4.7h0.13c-0.4 0.94-0.94 2.01-2.28 3.09-4.02 0.54-6.97-2.82-8.71-5.37l1.07-2.55c0.67-1.61 1.34-3.22 3.08-4.43l-0.13 0.27c6.16-11.27 13-22.95 19.83-34.23l4.55-7.25-0.13 0.13c0.4-0.94 1.07-1.74 1.34-2.69v0.13c0-0.13 0.13-0.13 0.13-0.4 0-0.13 0.4 1.07-0.27-2.95 0.8 0.27 2.81-0.94 2.55-1.48 0.4-0.67 0.8-1.07 1.21-1.07 0-0.4 0.13-0.67 0.4-1.48l1.61-0.27c1.07-0.4 2.41-0.67 4.02-0.67s3.22 0.4 4.82 1.61zm-14.87 28.59c3.88-0.94 10.18 0.81 13.4 0h3.75c-2.01-4.3-3.89-8.32-6.3-12.62l-2.01-3.22c-1.34 2.55-3.08 5.64-4.82 8.46v-0.13c-0.54 0.94-1.34 2.01-1.88 3.09z"/>
+		<path class="st36" d="m819.33 118.75c2.41 2.68 5.22 5.5 8.17 7.78 0.13-1.74 0-3.76 0-5.77 0-3.62-0.13-7.65-0.27-11.27 0-1.34-0.13-2.82-0.13-4.16-0.13-2.28-0.27-5.64-0.27-8.05 0-4.7 0.27-9.53 1.47-15.17l1.34-0.13h-0.27c1.61-0.67 3.22-1.34 5.09-1.34 1.21 0 2.55 0.4 4.29 1.34 1.74 2.42 1.88 5.64 1.88 8.86 0 1.21-0.13 2.42-0.13 3.49v9.53c0 2.01-0.13 4.16-0.13 6.44 0 9.26 0.27 18.66 0.8 26.58 0 0-0.4 1.48-0.4 2.15 0 0.13-0.13 0.4-0.13 0.54 0 1.21-0.13 2.28-0.8 3.35-1.61 1.21-4.96 1.88-6.83 1.34-12.06-8.59-22.24-19.33-32.42-30.33-6.16-6.71-12.46-13.15-18.89-19.06 0 0.8-0.13 1.74-0.13 2.42v3.76c0 4.83 0.13 9.66 0.27 13.96 0.13 2.68 0.27 5.1 0.27 7.78 0 0.94-0.13 1.88-0.13 2.82v2.55c0 1.21-0.13 2.42-0.13 3.62v3.35c0 0.4 0.13 0.81 0.13 1.07v0.81c0.13 1.88 0.13 2.95-1.61 5.23l-0.67 0.27h0.13c-0.4 0.27-0.67 0.4-0.94 0.4 0 0 0.13 0-0.13 0.81-4.42-0.54-7.37-2.55-9.38-5.64 0.27-4.56 0.4-9.4 0.4-13.83 0-7.92-0.27-15.84-0.67-24.29l-0.54-15.03 1.07-2.01c0.27-0.4 0.67-0.94 0.54-2.55 2.81-0.67 4.29-1.07 6.3-1.34l2.28-0.27 0.67 0.67c0.13 0.13 0.54 0.27 2.01 0.4 3.35 3.49 7.37 7.38 10.99 10.74l3.22 2.95h-0.13c3.35 3.36 7.37 7.11 10.32 10.6l11.79 12.35v-0.13c0.27 0.27 0.27 0.54 0.54 0.8l1.07 1.48z"/>
 	</g>
-	<g
-   id="g555">
-		<path
-   class="st36"
-   d="M405.37,127.48c-1.07-3.76-1.47-7.65-1.47-11.28c0-11.27,4.15-22.15,10.85-29.13    c1.47-0.4,2.01-0.8,2.68-1.34h-0.13l0.27-0.13l1.21-0.81h-0.13l2.41-1.74c3.75-1.34,8.71-1.74,13.4-2.15l2.95-0.27    c1.88-0.27,4.42-0.27,6.16-0.27c6.16,0,12.06,0.81,16.88,1.74l2.41,1.74c0.13,0.13,0.67,0.4,2.01,0.94l1.21,1.61    c4.69,5.5,11.52,13.42,12.33,22.42c0.54,6.17-0.54,12.08-1.21,16.64c0,0.13-0.54,0.94-0.8,1.21c-0.13,0.27-0.4,0.27-0.4,0.67    c-1.61,2.68-3.08,5.23-4.29,6.71l-2.01,1.88c-0.27,0.27-0.67,0.4-0.94,0.54l-3.22,3.22c-7.24,3.49-15.41,4.83-23.58,4.83    c-6.16,0-12.33-0.67-18.22-1.61c-8.44-2.28-14.47-6.44-17.42-14.23c-0.27,0-0.54-0.27-0.54-0.81c0,0-0.13,0.13,0-0.13    L405.37,127.48z M422.79,95.67c0.8-0.27-0.54,1.07-1.61,2.15l-1.21,1.21v-0.13c-3.88,5.1-6.43,11.81-6.43,19.06    c0,2.28,0.4,5.5,1.07,8.19c0.67,0.4,1.07,1.07,1.47,2.01c5.22,3.49,14.07,5.64,22.51,5.64c8.31,0,17.15-2.28,22.37-5.91h-0.13    c4.42-4.43,7.5-14.77,7.64-23.62c-0.4-1.74-1.34-3.62-2.28-5.37l-0.27-0.67c-0.13-0.13-0.27-0.27-0.27-0.4    c-3.88-3.36-9.51-5.91-16.48-6.17C441.28,91.51,430.02,91.64,422.79,95.67z M477.18,125.46c0.13,0,0.13,0.13,0,0.27V125.46z"
-   id="path543" />
-		<path
-   class="st36"
-   d="M539.88,130.3l2.01,2.28c2.14,2.15,4.15,5.24,3.35,9.66c-2.01,2.15-3.62,1.74-5.49,1.21    c-0.13,0-0.4-0.13-0.54-0.13l-1.88-0.4c-1.61-0.27-3.62-0.27-5.22-0.27c-2.14,0-4.56,0-7.1,0.13c-2.01,0.13-5.09,0.27-7.1,0.27    c-2.41,0-5.49-0.13-7.77-0.4c-5.22,0.4-12.59,0.54-18.49,0.54h-0.8c-1.74-0.13-3.75-0.27-4.96-1.48l-1.21-1.61v0.13    c-0.67-0.67-1.34-1.74-1.47-2.55l0.13,0.13c-0.4-0.81-0.4-1.48-0.4-2.01c0-0.27,0-0.81-0.4-1.34v0.13    c-0.67-0.67-0.94-0.94-1.07-2.42c-0.13-1.07,0-1.74,0.13-2.15c0-0.27,0-0.4,0.27-0.67v0.13c0-0.13,0.13-0.13,0.13-0.4v-4.43    c-0.13-1.34-0.13-4.03,0-5.37v-1.48c0-0.67,0.13-1.48,0.13-2.01l0.27-7.65c0.27-6.71,0.54-14.09,0.54-20.94    c0-1.21-0.13-2.42-0.13-3.62v-3.22c1.47-1.88,2.95-2.68,4.55-2.68c2.41,0,4.82,1.07,6.3,2.68c0.8,1.48,0.94,3.09,1.07,5.1    l0.4,2.95c-0.94,13.96-1.21,27.65-1.21,41.88H539.88z"
-   id="path545" />
-		<path
-   class="st36"
-   d="M606.73,130.3l2.01,2.28c2.14,2.15,4.15,5.24,3.35,9.66c-2.01,2.15-3.62,1.74-5.49,1.21    c-0.13,0-0.4-0.13-0.54-0.13l-1.88-0.4c-1.61-0.27-3.62-0.27-5.22-0.27c-2.14,0-4.56,0-7.1,0.13c-2.01,0.13-5.09,0.27-7.1,0.27    c-2.41,0-5.49-0.13-7.77-0.4c-5.22,0.4-12.59,0.54-18.49,0.54h-0.8c-1.74-0.13-3.75-0.27-4.96-1.48l-1.21-1.61v0.13    c-0.67-0.67-1.34-1.74-1.47-2.55l0.13,0.13c-0.4-0.81-0.4-1.48-0.4-2.01c0-0.27,0-0.81-0.4-1.34v0.13    c-0.67-0.67-0.94-0.94-1.07-2.42c-0.13-1.07,0-1.74,0.13-2.15c0-0.27,0-0.4,0.27-0.67v0.13c0-0.13,0.13-0.13,0.13-0.4v-4.43    c-0.13-1.34-0.13-4.03,0-5.37v-1.48c0-0.67,0.13-1.48,0.13-2.01l0.27-7.65c0.27-6.71,0.54-14.09,0.54-20.94    c0-1.21-0.13-2.42-0.13-3.62v-3.22c1.47-1.88,2.95-2.68,4.55-2.68c2.41,0,4.82,1.07,6.3,2.68c0.8,1.48,0.94,3.09,1.07,5.1    l0.4,2.95c-0.94,13.96-1.21,27.65-1.21,41.88H606.73z"
-   id="path547" />
-		<path
-   class="st36"
-   d="M658.3,82.38c0,1.07,0.54,2.55,1.34,4.16l0.54,1.48l-0.13-0.13c3.35,6.04,6.7,11.81,10.32,17.72l2.14,3.89    v-0.13c5.23,8.99,10.18,17.85,14.6,28.32c0,0-0.27,1.21-0.4,2.01c0,0.27-0.13,0.94-0.13,1.21c-1.61,1.07-3.62,2.01-5.76,2.28    c-2.28-1.48-2.81-1.74-4.02-1.48l-4.42-8.72l-2.68-5.37l-2.28-4.56h-4.15c-8.57,0-18.76,0.27-27.87,0.54    c-2.01,2.82-2.81,4.3-3.75,6.04c-2.41,4.56-3.08,5.64-3.75,6.58c-0.94,1.07-1.61,2.01-2.95,4.7h0.13    c-0.4,0.94-0.94,2.01-2.28,3.09c-4.02,0.54-6.97-2.82-8.71-5.37l1.07-2.55c0.67-1.61,1.34-3.22,3.08-4.43l-0.13,0.27    c6.16-11.27,13-22.95,19.83-34.23l4.56-7.25l-0.13,0.13c0.4-0.94,1.07-1.74,1.34-2.69v0.13c0-0.13,0.13-0.13,0.13-0.4    c0-0.13,0.4,1.07-0.27-2.95c0.8,0.27,2.81-0.94,2.55-1.48c0.4-0.67,0.8-1.07,1.21-1.07c0-0.4,0.13-0.67,0.4-1.48l1.61-0.27    c1.07-0.4,2.41-0.67,4.02-0.67c1.61,0,3.22,0.4,4.82,1.61L658.3,82.38z M643.43,110.97c3.88-0.94,10.18,0.81,13.4,0h3.75    c-2.01-4.3-3.89-8.32-6.3-12.62l-2.01-3.22c-1.34,2.55-3.08,5.64-4.82,8.46v-0.13c-0.54,0.94-1.34,2.01-1.88,3.09L643.43,110.97z     M643.43,110.97"
-   id="path549" />
-		<path
-   class="st36"
-   d="M733.99,82.38c0,1.07,0.54,2.55,1.34,4.16l0.54,1.48l-0.13-0.13c3.35,6.04,6.7,11.81,10.32,17.72l2.14,3.89    v-0.13c5.23,8.99,10.18,17.85,14.6,28.32c0,0-0.27,1.21-0.4,2.01c0,0.27-0.13,0.94-0.13,1.21c-1.61,1.07-3.62,2.01-5.76,2.28    c-2.28-1.48-2.81-1.74-4.02-1.48l-4.42-8.72l-2.68-5.37l-2.28-4.56h-4.15c-8.57,0-18.76,0.27-27.87,0.54    c-2.01,2.82-2.81,4.3-3.75,6.04c-2.41,4.56-3.08,5.64-3.75,6.58c-0.94,1.07-1.61,2.01-2.95,4.7h0.13    c-0.4,0.94-0.94,2.01-2.28,3.09c-4.02,0.54-6.97-2.82-8.71-5.37l1.07-2.55c0.67-1.61,1.34-3.22,3.08-4.43l-0.13,0.27    c6.16-11.27,13-22.95,19.83-34.23l4.55-7.25l-0.13,0.13c0.4-0.94,1.07-1.74,1.34-2.69v0.13c0-0.13,0.13-0.13,0.13-0.4    c0-0.13,0.4,1.07-0.27-2.95c0.8,0.27,2.81-0.94,2.55-1.48c0.4-0.67,0.8-1.07,1.21-1.07c0-0.4,0.13-0.67,0.4-1.48l1.61-0.27    c1.07-0.4,2.41-0.67,4.02-0.67c1.61,0,3.22,0.4,4.82,1.61L733.99,82.38z M719.12,110.97c3.88-0.94,10.18,0.81,13.4,0h3.75    c-2.01-4.3-3.89-8.32-6.3-12.62l-2.01-3.22c-1.34,2.55-3.08,5.64-4.82,8.46v-0.13c-0.54,0.94-1.34,2.01-1.88,3.09L719.12,110.97z     M719.12,110.97"
-   id="path551" />
-		<path
-   class="st36"
-   d="M819.33,118.75c2.41,2.68,5.22,5.5,8.17,7.78c0.13-1.74,0-3.76,0-5.77c0-3.62-0.13-7.65-0.27-11.27    c0-1.34-0.13-2.82-0.13-4.16c-0.13-2.28-0.27-5.64-0.27-8.05c0-4.7,0.27-9.53,1.47-15.17l1.34-0.13h-0.27    c1.61-0.67,3.22-1.34,5.09-1.34c1.21,0,2.55,0.4,4.29,1.34c1.74,2.42,1.88,5.64,1.88,8.86c0,1.21-0.13,2.42-0.13,3.49v9.53    c0,2.01-0.13,4.16-0.13,6.44c0,9.26,0.27,18.66,0.8,26.58c0,0-0.4,1.48-0.4,2.15c0,0.13-0.13,0.4-0.13,0.54    c0,1.21-0.13,2.28-0.8,3.35c-1.61,1.21-4.96,1.88-6.83,1.34c-12.06-8.59-22.24-19.33-32.42-30.33    c-6.16-6.71-12.46-13.15-18.89-19.06c0,0.8-0.13,1.74-0.13,2.42v3.76c0,4.83,0.13,9.66,0.27,13.96c0.13,2.68,0.27,5.1,0.27,7.78    c0,0.94-0.13,1.88-0.13,2.82v2.55c0,1.21-0.13,2.42-0.13,3.62v3.35c0,0.4,0.13,0.81,0.13,1.07v0.81c0.13,1.88,0.13,2.95-1.61,5.23    l-0.67,0.27h0.13c-0.4,0.27-0.67,0.4-0.94,0.4c0,0,0.13,0-0.13,0.81c-4.42-0.54-7.37-2.55-9.38-5.64c0.27-4.56,0.4-9.4,0.4-13.83    c0-7.92-0.27-15.84-0.67-24.29l-0.54-15.03l1.07-2.01c0.27-0.4,0.67-0.94,0.54-2.55c2.81-0.67,4.29-1.07,6.3-1.34l2.28-0.27    l0.67,0.67c0.13,0.13,0.54,0.27,2.01,0.4c3.35,3.49,7.37,7.38,10.99,10.74l3.22,2.95h-0.13c3.35,3.36,7.37,7.11,10.32,10.6    l11.79,12.35v-0.13c0.27,0.27,0.27,0.54,0.54,0.8l1.07,1.48L819.33,118.75z"
-   id="path553" />
-	</g>
-	<g
-   id="g565">
-		<path
-   class="st35"
-   d="M475.26,166.99c0,1.88,0.94,4.45,2.34,7.27l0.94,2.58l-0.23-0.24c5.86,10.55,11.72,20.63,18.05,30.95    l3.75,6.8v-0.24c9.14,15.71,17.82,31.18,25.55,49.47c0,0-0.47,2.11-0.7,3.52c0,0.47-0.23,1.64-0.23,2.11    c-2.81,1.88-6.33,3.52-10.08,3.99c-3.98-2.58-4.92-3.05-7.03-2.58l-7.74-15.24l-4.69-9.38l-3.99-7.97h-7.27    c-15,0-32.82,0.47-48.76,0.94c-3.52,4.92-4.92,7.5-6.57,10.55c-4.22,7.97-5.39,9.85-6.56,11.49c-1.64,1.88-2.81,3.52-5.16,8.2    h0.24c-0.7,1.64-1.64,3.52-3.99,5.39c-7.03,0.94-12.19-4.92-15.24-9.38l1.88-4.45c1.17-2.81,2.34-5.63,5.39-7.74l-0.24,0.47    c10.78-19.69,22.74-40.09,34.7-59.78l7.97-12.66l-0.23,0.24c0.7-1.64,1.88-3.05,2.34-4.69v0.24c0-0.24,0.23-0.24,0.23-0.7    c0-0.23,0.7,1.88-0.47-5.16c1.41,0.47,4.92-1.64,4.45-2.58c0.7-1.17,1.41-1.88,2.11-1.88c0-0.7,0.24-1.17,0.7-2.58l2.81-0.47    c1.88-0.7,4.22-1.17,7.03-1.17c2.81,0,5.63,0.7,8.44,2.81L475.26,166.99z M449.24,216.93c6.8-1.64,17.82,1.41,23.44,0h6.56    c-3.52-7.5-6.8-14.53-11.02-22.04l-3.52-5.63c-2.34,4.45-5.39,9.85-8.44,14.77v-0.23c-0.94,1.64-2.34,3.52-3.28,5.39    L449.24,216.93z M449.24,216.93"
-   id="path557" />
-		<path
-   class="st35"
-   d="M636.3,185.75c-0.47-2.81-0.7-5.39-0.7-7.97c0-3.99,0.47-7.5,3.98-11.02c1.41-0.24,3.99-0.47,7.5-0.47    c3.98,0,9.14,1.17,12.19,5.86c0.47,2.81,0.94,5.16,0.23,7.74c0.94,3.99,0.94,7.27,0.94,11.49v4.45c0,0.94-0.23,1.87-0.23,2.81    c-0.7,23.91-1.17,51.81-15.94,64.24c-15,7.97-33.52,12.89-49.23,12.89c-12.42,0-25.08-3.05-37.04-8.91    c-10.08-8.44-18.05-18.29-22.51-31.65c-1.41-9.61-2.81-21.33-2.81-34.23c0-6.8,0.7-14.3,1.87-20.16v-1.41c0-2.11,0-3.52,0.94-8.44    c2.11-2.34,5.16-3.28,8.67-3.28c3.52,0,7.74,0.7,11.02,1.88c0,1.64,0.23,3.52,0.7,3.99l2.34,4.45c0.23,3.05,0.23,6.8,0.23,10.32    c0,4.22,0,8.91-0.23,13.36c-0.24,3.75-0.24,9.38-0.24,13.36c0,12.43,1.64,24.62,7.74,33.99c0.7,0.47,2.11,1.64,2.81,1.88    c1.64,1.64,4.45,3.52,7.27,4.69c3.52,0.7,6.56,1.17,9.38,2.11c5.63-0.23,14.77-0.7,18.99-1.17l7.97-1.41    c1.17-0.47,3.28-1.41,3.99-1.87l2.11-0.7l7.97-4.92c6.33-8.2,8.67-23.21,9.38-36.34C637.24,193.49,636.77,189.74,636.3,185.75z"
-   id="path559" />
-		<path
-   class="st35"
-   d="M764.99,179.89c-8.91,4.22-16.18,9.85-22.51,14.77c-1.64,1.41-3.28,2.58-4.92,3.75l-2.11,1.88    c-1.87,1.87-3.52,3.52-6.09,5.16c10.32,9.61,24.15,18.52,35.63,26.02l4.45,2.81c13.36,8.91,26.96,18.28,36.81,28.13    c-0.94,7.03-4.22,9.14-6.8,11.49h0.24l-1.17,1.17c-5.63,1.17-8.2-0.7-10.55-2.58c-1.17-0.94-2.34-1.88-3.99-2.34    c0-0.47-0.47-0.7-0.47-0.94c-0.23-0.23-0.7-0.7-0.7-1.41c-2.81-2.11-5.63-3.99-8.67-5.86c-2.34-1.64-4.92-3.28-7.5-5.16h0.23    c-3.52-1.64-7.03-3.99-9.85-6.33c0.94,0.94-0.47-0.24-0.94-0.47l-3.75-2.81c-4.22-3.28-7.27-5.39-11.02-7.27    c-7.74-4.69-14.77-9.38-20.63-14.07l0.23-0.24c-1.17-1.17-2.34-1.88-4.69-3.05c-0.7-0.7-1.17-1.41-2.34-2.34l-0.47-0.7    c-8.67,5.63-16.88,11.02-25.32,17.58c0,1.17,0.23,2.11,1.41,3.28c-1.64,7.5-1.41,11.72-1.17,15.71v0.94    c0.24,4.92,0,11.72-2.81,17.35c-4.22,0.94-12.19,0.94-15.71,0.23c-2.34-4.45-2.34-7.97-2.11-10.31v-1.17    c0-0.47,0.23-0.7,0.23-1.17c-0.23-4.45-0.23-11.49-0.23-15.71c0-4.92,0-10.31,0.23-15.47c0.24-6.8,0.24-17.11,0.24-23.21    c0-5.16,0-10.78-0.24-15.94c-0.23-2.81-0.23-7.27-0.23-9.85c0-5.16,0.23-10.78,1.88-16.88c3.75-0.7,8.2-1.64,12.89-1.41    c2.58,1.17,3.52,3.75,4.45,6.56c0.24,1.41,0.47,2.58,1.17,3.52c-0.24,3.52-0.24,6.8-0.24,10.32c0,4.69,0,8.91,0.24,13.36    c0,1.64,0.23,3.28,0.23,4.69v3.75c0,1.41-0.23,2.34-0.23,3.28v0.7c20.63-14.77,42.67-31.41,61.89-46.89c0.47,0.23,0.7,0.23,0.94,0    c0,0,3.75-1.41,3.28-1.17c5.39,0.24,15.24,4.22,15.47,9.85c0,3.05-0.7,3.99-2.11,5.39c-0.7,0.7-1.64,1.64-1.88,2.58L764.99,179.89    z"
-   id="path561" />
-		<path
-   class="st35"
-   d="M832.26,168.87l1.88,2.34c0,3.99-0.24,9.38-0.47,12.89c-0.47,4.22,0,8.44,0.7,12.19    c0.47,2.34,0.7,5.63,0.7,8.67v4.92c0.23,8.91,0.23,22.97,0.23,31.41c0,7.5,0,15,0.24,24.38c0.94,1.64,0.23,2.34-0.94,3.99    c0,0,0.23,0,0.94,2.34c-2.58,0-3.75,0.23-4.22,0.94l-5.16-0.47c-3.75-0.24-7.5-0.7-9.38-4.69c0.47-2.58,0-4.22-0.23-6.1    c-0.24-1.87,0-3.52,0.23-5.16c-0.47-2.34-0.47-5.39-0.47-8.44c0-2.58,0-6.56,0.24-9.14v-4.22c0-1.64,0.23-3.05,0.23-3.99    c0-3.75-0.23-7.5-0.94-10.78c0.24-0.47,1.17-2.11,0.94-1.88c-0.94-5.39-0.7-12.66-0.7-18.75c0-3.75,0-7.03-0.24-10.32l-0.47-5.63    c-0.23-2.58-0.47-6.09-0.47-8.67c0-2.34,0-4.69,0.7-8.21c3.05-2.81,10.55-3.05,14.77-1.41L832.26,168.87z"
-   id="path563" />
+	<g fill="#009a00">
+		<path class="st35" d="m475.26 166.99c0 1.88 0.94 4.45 2.34 7.27l0.94 2.58-0.23-0.24c5.86 10.55 11.72 20.63 18.05 30.95l3.75 6.8v-0.24c9.14 15.71 17.82 31.18 25.55 49.47 0 0-0.47 2.11-0.7 3.52 0 0.47-0.23 1.64-0.23 2.11-2.81 1.88-6.33 3.52-10.08 3.99-3.98-2.58-4.92-3.05-7.03-2.58l-7.74-15.24-4.69-9.38-3.99-7.97h-7.27c-15 0-32.82 0.47-48.76 0.94-3.52 4.92-4.92 7.5-6.57 10.55-4.22 7.97-5.39 9.85-6.56 11.49-1.64 1.88-2.81 3.52-5.16 8.2h0.24c-0.7 1.64-1.64 3.52-3.99 5.39-7.03 0.94-12.19-4.92-15.24-9.38l1.88-4.45c1.17-2.81 2.34-5.63 5.39-7.74l-0.24 0.47c10.78-19.69 22.74-40.09 34.7-59.78l7.97-12.66-0.23 0.24c0.7-1.64 1.88-3.05 2.34-4.69v0.24c0-0.24 0.23-0.24 0.23-0.7 0-0.23 0.7 1.88-0.47-5.16 1.41 0.47 4.92-1.64 4.45-2.58 0.7-1.17 1.41-1.88 2.11-1.88 0-0.7 0.24-1.17 0.7-2.58l2.81-0.47c1.88-0.7 4.22-1.17 7.03-1.17s5.63 0.7 8.44 2.81zm-26.02 49.94c6.8-1.64 17.82 1.41 23.44 0h6.56c-3.52-7.5-6.8-14.53-11.02-22.04l-3.52-5.63c-2.34 4.45-5.39 9.85-8.44 14.77v-0.23c-0.94 1.64-2.34 3.52-3.28 5.39z"/>
+		<path class="st35" d="m636.3 185.75c-0.47-2.81-0.7-5.39-0.7-7.97 0-3.99 0.47-7.5 3.98-11.02 1.41-0.24 3.99-0.47 7.5-0.47 3.98 0 9.14 1.17 12.19 5.86 0.47 2.81 0.94 5.16 0.23 7.74 0.94 3.99 0.94 7.27 0.94 11.49v4.45c0 0.94-0.23 1.87-0.23 2.81-0.7 23.91-1.17 51.81-15.94 64.24-15 7.97-33.52 12.89-49.23 12.89-12.42 0-25.08-3.05-37.04-8.91-10.08-8.44-18.05-18.29-22.51-31.65-1.41-9.61-2.81-21.33-2.81-34.23 0-6.8 0.7-14.3 1.87-20.16v-1.41c0-2.11 0-3.52 0.94-8.44 2.11-2.34 5.16-3.28 8.67-3.28 3.52 0 7.74 0.7 11.02 1.88 0 1.64 0.23 3.52 0.7 3.99l2.34 4.45c0.23 3.05 0.23 6.8 0.23 10.32 0 4.22 0 8.91-0.23 13.36-0.24 3.75-0.24 9.38-0.24 13.36 0 12.43 1.64 24.62 7.74 33.99 0.7 0.47 2.11 1.64 2.81 1.88 1.64 1.64 4.45 3.52 7.27 4.69 3.52 0.7 6.56 1.17 9.38 2.11 5.63-0.23 14.77-0.7 18.99-1.17l7.97-1.41c1.17-0.47 3.28-1.41 3.99-1.87l2.11-0.7 7.97-4.92c6.33-8.2 8.67-23.21 9.38-36.34 1.65-17.82 1.18-21.57 0.71-25.56z"/>
+		<path class="st35" d="m764.99 179.89c-8.91 4.22-16.18 9.85-22.51 14.77-1.64 1.41-3.28 2.58-4.92 3.75l-2.11 1.88c-1.87 1.87-3.52 3.52-6.09 5.16 10.32 9.61 24.15 18.52 35.63 26.02l4.45 2.81c13.36 8.91 26.96 18.28 36.81 28.13-0.94 7.03-4.22 9.14-6.8 11.49h0.24l-1.17 1.17c-5.63 1.17-8.2-0.7-10.55-2.58-1.17-0.94-2.34-1.88-3.99-2.34 0-0.47-0.47-0.7-0.47-0.94-0.23-0.23-0.7-0.7-0.7-1.41-2.81-2.11-5.63-3.99-8.67-5.86-2.34-1.64-4.92-3.28-7.5-5.16h0.23c-3.52-1.64-7.03-3.99-9.85-6.33 0.94 0.94-0.47-0.24-0.94-0.47l-3.75-2.81c-4.22-3.28-7.27-5.39-11.02-7.27-7.74-4.69-14.77-9.38-20.63-14.07l0.23-0.24c-1.17-1.17-2.34-1.88-4.69-3.05-0.7-0.7-1.17-1.41-2.34-2.34l-0.47-0.7c-8.67 5.63-16.88 11.02-25.32 17.58 0 1.17 0.23 2.11 1.41 3.28-1.64 7.5-1.41 11.72-1.17 15.71v0.94c0.24 4.92 0 11.72-2.81 17.35-4.22 0.94-12.19 0.94-15.71 0.23-2.34-4.45-2.34-7.97-2.11-10.31v-1.17c0-0.47 0.23-0.7 0.23-1.17-0.23-4.45-0.23-11.49-0.23-15.71 0-4.92 0-10.31 0.23-15.47 0.24-6.8 0.24-17.11 0.24-23.21 0-5.16 0-10.78-0.24-15.94-0.23-2.81-0.23-7.27-0.23-9.85 0-5.16 0.23-10.78 1.88-16.88 3.75-0.7 8.2-1.64 12.89-1.41 2.58 1.17 3.52 3.75 4.45 6.56 0.24 1.41 0.47 2.58 1.17 3.52-0.24 3.52-0.24 6.8-0.24 10.32 0 4.69 0 8.91 0.24 13.36 0 1.64 0.23 3.28 0.23 4.69v3.75c0 1.41-0.23 2.34-0.23 3.28v0.7c20.63-14.77 42.67-31.41 61.89-46.89 0.47 0.23 0.7 0.23 0.94 0 0 0 3.75-1.41 3.28-1.17 5.39 0.24 15.24 4.22 15.47 9.85 0 3.05-0.7 3.99-2.11 5.39-0.7 0.7-1.64 1.64-1.88 2.58z"/>
+		<path class="st35" d="m832.26 168.87 1.88 2.34c0 3.99-0.24 9.38-0.47 12.89-0.47 4.22 0 8.44 0.7 12.19 0.47 2.34 0.7 5.63 0.7 8.67v4.92c0.23 8.91 0.23 22.97 0.23 31.41 0 7.5 0 15 0.24 24.38 0.94 1.64 0.23 2.34-0.94 3.99 0 0 0.23 0 0.94 2.34-2.58 0-3.75 0.23-4.22 0.94l-5.16-0.47c-3.75-0.24-7.5-0.7-9.38-4.69 0.47-2.58 0-4.22-0.23-6.1-0.24-1.87 0-3.52 0.23-5.16-0.47-2.34-0.47-5.39-0.47-8.44 0-2.58 0-6.56 0.24-9.14v-4.22c0-1.64 0.23-3.05 0.23-3.99 0-3.75-0.23-7.5-0.94-10.78 0.24-0.47 1.17-2.11 0.94-1.88-0.94-5.39-0.7-12.66-0.7-18.75 0-3.75 0-7.03-0.24-10.32l-0.47-5.63c-0.23-2.58-0.47-6.09-0.47-8.67 0-2.34 0-4.69 0.7-8.21 3.05-2.81 10.55-3.05 14.77-1.41z"/>
 	</g>
 </g>
 </svg>
