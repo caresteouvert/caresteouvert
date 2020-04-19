@@ -47,7 +47,7 @@ export default {
   methods: {
     next() {
       if (this.step === 'end') {
-        this.$emit('input', `${this.intervalStart}-${this.intervalEnd}`);
+        this.$emit('input', [this.intervalStart, this.intervalEnd]);
         return;
       }
       this.step = 'end';

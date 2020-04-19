@@ -31,6 +31,6 @@ describe('OpeningHoursEditorInterval', () => {
     editor.vm.intervalEnd = '16:00';
     editor.vm.next();
     expect(editor.emitted('input').length).toEqual(1);
-    expect(editor.emitted('input')[0]).toEqual(['08:00-16:00']);
+    expect(editor.emitted('input')[0]).toEqual([['08:00', '16:00']]);
   });
 });
