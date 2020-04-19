@@ -5,6 +5,7 @@
   "subtitle": "Lugares que se manteñen abertos durante o confinamento",
   "subtitle-dense": "Lugares abertos durante o confinamento",
   "search": "Escribe a túa procura",
+  "coordinates": "Coordenadas",
   "menu": "Menú",
   "missing_shop": "Informar dunha tenda que falla",
   "change_lang": "Mudar lingua",
@@ -18,12 +19,20 @@
     "press": "Prensa",
     "disclaimer": "Responsabilidade legal",
     "blog": "Blogue",
-    "townhalls": "Concellos que empregan «{brand}»!"
+    "townhalls": "Concellos que empregan «{brand}»!",
+    "osm_contributors": "Documentación para contribuíntes do OpenStreetMap"
   },
   "rgpd": {
     "consent": "Nestes tempos de confinamento, aceptarías as cookies no teu computador para recompilar as nosas estatísticas?",
     "yes": "Si",
     "no": "Non"
+  },
+  "apps_info": {
+    "close": "Pechar",
+    "text": "A aplicación móbil « {brand} » xa está dispoñíbel!",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
   },
   "days": {
     "monday": "Luns / Segunda feira",
@@ -57,17 +66,22 @@
         "title": "Este lugar ofrece entregas",
         "unknown": "Non o sei",
         "yes": "Si",
-        "only": "Só ofrece entrega",
         "no": "Non"
       },
       "takeaway": {
         "title": "Este lugar permite mercar para levar",
         "unknown": "Non o sei",
         "yes": "Si",
-        "only": "Só para levar",
         "no": "Non"
       },
-      "details": "Engadir os detalles necesarios durante o confinamento"
+      "access": {
+        "title": "O público pode entrar ou ficar dentro deste lugar",
+        "unknown": "Non o sei",
+        "yes": "Si",
+        "no": "Non"
+      },
+      "details": "Engadir os detalles necesarios durante o confinamento",
+      "details_error": "Ten que estar baleiro ou ter polo menos 10 caracteres de lonxitude"
     },
     "submit": "Publicar",
     "cancel": "Desbotar"
@@ -80,6 +94,7 @@
     "containment_brand_hours": "Horario de apertura na páxina web da marca",
     "facebook": "Páxina do Facebook",
     "not_accessible": "Espazo interior non accesíbel ó público",
+    "capacity": "Capacidade máxima: 0 persoas | Capacidade máxima: 1 persoa | Capacidade máxima: {count} persoas",
     "opening_hours": {
       "state_until_date": "{state} até {date}",
       "state": {
@@ -126,6 +141,7 @@
     },
     "select_days": "Escolle os días que compartan o mesmo horario",
     "next": "Escoller horas",
+    "cancel": "Desbotar",
     "select_time": {
       "start": "Escoller horario de apertura",
       "end": "Escoller hora de peche"
@@ -142,7 +158,9 @@
     "other": "Outros lugares",
     "amenity": "Instalacións",
     "police": "Policía",
+    "townhall": "Concello",
     "post_office": "Oficinas de correos",
+    "childcare": "Gardaría",
     "employment_agency": "Axencia de traballo",
     "funeral_directors": "Tanatorios ou funerarias",
     "bank": "Banco",
@@ -150,10 +168,11 @@
     "insurance": "Aseguradora",
     "health": "Saúde",
     "pharmacy": "Farmacias",
-    "condoms": "Máquinas expendedoras de condóns",
+    "covid19_centre": "Centro de consulta sobre o Covid-19",
     "optician": "Óptica",
-    "medical_supply": "Subministracións médicas",
     "hearing_aids": "Audífonos",
+    "condoms": "Máquinas expendedoras de condóns",
+    "medical_supply": "Subministracións médicas",
     "food": "Alimentación",
     "supermarket": "Supermercado",
     "butcher": "Carnizaría",
@@ -162,6 +181,11 @@
     "seafood": "Peixaría",
     "greengrocer": "Froitaría",
     "grocery": "Ultramarinos",
+    "chocolate": "Chocolates",
+    "tea": "Té",
+    "coffee": "Tenda de café",
+    "dairy": "Leitaría",
+    "confectionery": "Confeitaría",
     "farm": "Tenda de produtos agrícolas",
     "marketplace": "Mercado",
     "bakery": "Panadarías",
@@ -171,6 +195,7 @@
     "fast_food": "Comida rápida",
     "ice_cream": "Xeadaría",
     "cafe": "Tenda de café",
+    "bar": "Bar de copas",
     "drugs": "Tabaco e alcol",
     "tobacco": "Estancos",
     "e_cigarette": "Cigarros electrónicos",
@@ -185,7 +210,7 @@
     "newsagent": "Quiosco",
     "pet": "Tenda de animais",
     "agrarian": "Produtos agrícolas",
-    "garden_centre": "Centro de xardinaría",
+    "flower": "Xardinaría",
     "chemist": "Drogaría",
     "fabric": "Tendas téxtil",
     "books": "Libraría",
