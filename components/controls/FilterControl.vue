@@ -11,34 +11,24 @@
 <script>
 import { $helpers } from "vue-mapbox";
 
-class MyControl {
-  onAdd() {
-    this._container = document.querySelector('.filterController')
-    return this._container;
-  }
-
-  onRemove() {
-    this._container.parentNode.removeChild(this._container);
-    this._map = undefined;
-  }
-
-  getDefaultPosition() {
-    return "bottom-right"
-  }
-}
-
 export default {
   name: "FilterController",
   mixins: [$helpers.asControl],
 
   inject: ["mapbox", "map"],
 
-  created() {
-    this.control = new MyControl();
+  mounted() {
+    this.control = this;
+    this.$_addControl();
   },
 
-  mounted() {
-    this.map.addControl(this.control);
-  },
+  methods: {
+    onAdd() {
+      return this.$el;
+    },
+
+    onRemove() {
+    },
+  }
 };
 </script>

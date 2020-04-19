@@ -29,7 +29,7 @@
       @click="clickPoi"
       @mouseleave="mouseleave"
     />
-    <FilterControl v-on:deliveronly="deliverOnly = !deliverOnly"/>
+    <FilterControl v-on:deliveronly="deliverOnly = !deliverOnly" position="bottom-right"/>
   </MglMap>
 </template>
 
