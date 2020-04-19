@@ -2,8 +2,11 @@
 
 CONNEXION=${1}
 
+WORKDIR=$(dirname $(realpath ${0}))
+cd ${WORKDIR}
+
 # MàJ avec imposm
-./update_imposm.sh ${CONNEXION}
+./update_imposm_nodocker.sh ${CONNEXION}
 
 # MàJ des enseignes
 ./import_brand_rules.sh ${CONNEXION}
