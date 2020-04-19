@@ -14,7 +14,7 @@ Please check the following requirements:
 - [ ] You are a team of at least 2 people experienced with OpenStreetMap
 - [ ] Translate the app via transifex with your country languages
 - [ ] Translate some content of the blog to help newcomers (how to create a new shop, the about page, ...)
-- [ ] Start gathering data about shop open or closed nation wide in https://github.com/PanierAvide/Covid_enseignes/
+- [ ] Start gathering data about chain stores open or closed nation wide, and legal opening rules in https://github.com/PanierAvide/Covid_enseignes/
 - [ ] Once everything has been done and the data have been loaded, you should be busy getting media coverage. So the map will have a lot of contribution and be quickly useful.
 
 Others questions:
