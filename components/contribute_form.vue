@@ -150,7 +150,7 @@
 </template>
 
 <script>
-import OpeningHoursParser from 'transport-hours/src/OpeningHoursParser';
+import OpeningHoursParser from './OpeningHoursParser';
 import { apiUrl } from '../config.json';
 import OpeningHoursEditor from './opening_hours_editor';
 import parseId from './parse_id';
@@ -271,10 +271,7 @@ export default {
     },
 
     parseOpeningHours(openingHours) {
-      const table = new OpeningHoursParser(openingHours).getTable();
-      return Object.keys(table).map((day) => {
-        return { days: [day], hours: [...table[day]] };
-      }).filter(interval => interval.hours.length > 0);
+      return new OpeningHoursParser(openingHours).getTable();
     },
 
     detailsRules(val) {

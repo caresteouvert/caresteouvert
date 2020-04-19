@@ -105,13 +105,8 @@ describe('ContributeForm', () => {
   it('parse and display the opening_hours:covid19 if they are already here', () => {
     const form = createWrapper({ point: { properties: { opening_hours: 'Mo-Fr 08:00-09:00', tags: { } } } });
     expect(form.vm.openingHours).toEqual([
-      { days: ['mo'], hours: ['08:00-09:00'] },
-      { days: ['tu'], hours: ['08:00-09:00'] },
-      { days: ['we'], hours: ['08:00-09:00'] },
-      { days: ['th'], hours: ['08:00-09:00'] },
-      { days: ['fr'], hours: ['08:00-09:00'] }
+      { days: ['mo', 'tu', 'we', 'th', 'fr'], hours: ['08:00-09:00'] }
     ]);
-
   });
 
   it('if there already opening hours, allow to specify same', () => {
@@ -120,11 +115,7 @@ describe('ContributeForm', () => {
     expect(form.vm.openingHours).toEqual([]);
     form.vm.sameOpeningHours();
     expect(form.vm.openingHours).toEqual([
-      { days: ['mo'], hours: ['08:00-09:00'] },
-      { days: ['tu'], hours: ['08:00-09:00'] },
-      { days: ['we'], hours: ['08:00-09:00'] },
-      { days: ['th'], hours: ['08:00-09:00'] },
-      { days: ['fr'], hours: ['08:00-09:00'] }
+      { days: ['mo', 'tu', 'we', 'th', 'fr'], hours: ['08:00-09:00'] },
     ]);
   });
 
