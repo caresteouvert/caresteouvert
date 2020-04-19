@@ -20,9 +20,9 @@ tables:
       reject:
         aeroway: ['parking_position']
         amenity: ['bench', 'waste_basket']
-        emergency: ['fire_hydrant', 'yes']
+        emergency: ['fire_hydrant']
         highway: ['crossing', 'turning_circle', 'street_lamp', 'traffic_signals', 'stop', 'give_way', 'service', 'residential', 'footway', 'pedestrian', 'motorway_junction', 'milestone', 'turning_loop', 'tertiary', 'secondary', 'unclassified', 'mini_roundabout', 'speed_camera', 'primary', 'track', 'path']
-        historic: ['boundary_stone','building','memorial','ruins','wayside_cross','wayside_shrine','yes']
+        historic: ['boundary_stone','ruins','wayside_cross','wayside_shrine']
         leisure: ['common', 'swimming_pool','track']
         railway: ['level_crossing', 'switch','signal','buffer_stop','crossing']
         tourism: ['artwork', 'viewpoint']
@@ -70,9 +70,9 @@ tables:
       reject:
         aeroway: ['parking_position']
         amenity: ['bench', 'waste_basket']
-        emergency: ['fire_hydrant', 'yes']
+        emergency: ['fire_hydrant']
         highway: ['crossing', 'turning_circle', 'street_lamp', 'traffic_signals', 'stop', 'give_way', 'service', 'residential', 'footway', 'pedestrian', 'motorway_junction', 'milestone', 'turning_loop', 'tertiary', 'secondary', 'unclassified', 'mini_roundabout', 'speed_camera', 'primary', 'track', 'path']
-        historic: ['boundary_stone','building','memorial','ruins','wayside_cross','wayside_shrine','yes']
+        historic: ['boundary_stone','ruins','wayside_cross','wayside_shrine']
         leisure: ['common', 'swimming_pool','track']
         railway: ['level_crossing', 'switch','signal','buffer_stop','crossing']
         tourism: ['artwork', 'viewpoint']
