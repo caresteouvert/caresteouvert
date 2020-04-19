@@ -43,9 +43,9 @@
             :label="$t(`opening_hours_editor.day_shortcuts.${shortcut}`)"
             :value="days.every(day => selectedWeekDays.includes(day))"
             :disabled="days.some(day => disabledWeekDays.includes(day))"
-            @change="value => toggleSelectedWeekDays(value, ...days)"
             dense
             hide-details
+            @change="value => toggleSelectedWeekDays(value, ...days)"
           />
           <v-checkbox
             v-for="day in weekDays"
@@ -75,7 +75,7 @@
           <opening-hours-editor-interval
             v-model="interval"
             @cancel="resetValues"
-            @input="close"
+            @input="closeDialog"
           />
         </div>
       </v-card>
@@ -164,7 +164,7 @@ export default {
       this.displayDaysSelection = false;
     },
 
-    close() {
+    closeDialog() {
       if (this.indexSubInterval === -1) {
         this.openingHours.push({ days: this.selectedWeekDays, hours: [this.interval] });
       } else {
