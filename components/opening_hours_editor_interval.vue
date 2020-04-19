@@ -1,21 +1,15 @@
 <template>
   <div>
     <h3 class="title">{{ $t(`opening_hours_editor.select_time.${step}`) }}</h3>
-    <v-time-picker
+    <time-picker
       v-if="step === 'start'"
       v-model="intervalStart"
       :key="step"
-      :allowed-minutes="allowedMinutes"
-      full-width
-      format="24hr"
     />
-    <v-time-picker
+    <time-picker
       v-else
       v-model="intervalEnd"
       :key="step"
-      :allowed-minutes="allowedMinutes"
-      full-width
-      format="24hr"
     />
     <v-card-actions>
       <v-spacer></v-spacer>
@@ -34,13 +28,16 @@
 </template>
 
 <script>
+import TimePicker from './time_picker';
+
 export default {
+  components: { TimePicker },
+
   data() {
     return {
       step: 'start',
       intervalStart: '09:00',
-      intervalEnd: '18:00',
-      allowedMinutes: [...Array(60 / 5)].map((v, index) => index  * 5)
+      intervalEnd: '18:00'
     };
   },
 
