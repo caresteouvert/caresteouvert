@@ -38,8 +38,8 @@ export default {
   data() {
     return {
       step: 'start',
-      intervalStart: '',
-      intervalEnd: '',
+      intervalStart: '09:00',
+      intervalEnd: '18:00',
       allowedMinutes: [...Array(60 / 5)].map((v, index) => index  * 5)
     };
   },
