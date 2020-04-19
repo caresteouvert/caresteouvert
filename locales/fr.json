@@ -89,7 +89,7 @@
   "details": {
     "signal_warning": "Vous étiez en train de signaler un changement, si vous partez il ne sera pas sauvegardé. Voulez-vous vraiment quitter la page ?",
     "signal": "Signaler un changement",
-    "signal_done": "Votre signalement a été enregistré. Merci ! Patientez, cela peut prendre un moment avant qu'il soit pris en compte.",
+    "signal_done": "Votre signalement a été enregistré, merci ! Il apparaitra dans un moment sur la carte.",
     "containment_opening_hours": "Horaires d'ouverture hors-confinement",
     "containment_brand_hours": "Consulter les horaires",
     "facebook": "Page Facebook",

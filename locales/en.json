@@ -89,7 +89,7 @@
   "details": {
     "signal_warning": "You were writing a report. It'll not be saved. Do you want to continue?",
     "signal": "Report a change",
-    "signal_done": "Your report has been registered. Thank you! Please be patient, it may take a while to be processed.",
+    "signal_done": "Your report has been registered, thank you! It'll appear in a while.",
     "containment_opening_hours": "Opening hours outside the lockdown period",
     "containment_brand_hours": "Look at the opening hours",
     "facebook": "Facebook page",
