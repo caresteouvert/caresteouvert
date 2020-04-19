@@ -11,6 +11,7 @@ import bleibtoffenMobile from '../../assets/bleibtoffen-mobile.svg';
 import sigueabiertoMobile from '../../assets/sigueabierto-mobile.png';
 import esobertMobile from '../../assets/esobert-mobile.png';
 import segueabertoMobile from '../../assets/segueaberto-mobile.png';
+import ollaanaukiMobile from '../../assets/ollaanauki-mobile.png';
 import caresteouvertOg from '../../assets/caresteouvert-og.jpg';
 import bleibtoffenOg from '../../assets/bleibtoffen-og.jpg';
 
@@ -48,7 +49,7 @@ export default {
         sigueabierto: sigueabiertoMobile,
         segueaberto: segueabertoMobile,
         esobert: esobertMobile,
-        ollaanauki
+        ollaanauki: ollaanaukiMobile
       }[this.links.brand];
     },
 
