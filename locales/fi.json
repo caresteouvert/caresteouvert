@@ -5,6 +5,7 @@
   "subtitle": "Eristyksen aikana avoinna pysyvät paikat",
   "subtitle-dense": "Eristyksen aikana avoimet paikat",
   "search": "Kirjoita hakusana",
+  "coordinates": "Koordinaatit",
   "menu": "Valikko",
   "missing_shop": "Raportoi puuttuva kauppa",
   "change_lang": "Vaihda kieli",
@@ -18,12 +19,20 @@
     "press": "Lehdistölle",
     "disclaimer": "Vastuuvapauslauseke",
     "blog": "Blogi",
-    "townhalls": "Kaupungit ja kunnat, tässä käyttöönne « {brand} »!"
+    "townhalls": "Kaupungit ja kunnat, tässä käyttöönne « {brand} »!",
+    "osm_contributors": "Dokumentaatio OpenStreetMap yhteisölle"
   },
   "rgpd": {
     "consent": "Sallitko palvelun käytön tilastoinnin evästeellä?",
     "yes": "Kyllä",
     "no": "Ei"
+  },
+  "apps_info": {
+    "close": "Sulje",
+    "text": "Mobiilisovellus  « {brand} » on nyt saatavilla!",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
   },
   "days": {
     "monday": "Maanantai",
@@ -57,17 +66,22 @@
         "title": "Kotiinkuljetus",
         "unknown": "En tiedä",
         "yes": "Kyllä",
-        "only": "Vain kotiinkuljetus",
         "no": "Ei"
       },
       "takeaway": {
         "title": "Take away",
         "unknown": "En tiedä",
         "yes": "Kyllä",
-        "only": "Vain take away",
         "no": "Ei"
       },
-      "details": "Lisää vaadittavat eristyksen aikana käytössä olevat tiedot"
+      "access": {
+        "title": "Asiakkaille pääsy sallittua",
+        "unknown": "En tiedä",
+        "yes": "Kyllä",
+        "no": "Ei"
+      },
+      "details": "Lisää vaadittavat eristyksen aikana käytössä olevat tiedot",
+      "details_error": "Pitää olla joko tyhjä tai vähintään 10 merkkiä pitkä"
     },
     "submit": "Julkaise",
     "cancel": "Peruuta"
@@ -80,6 +94,7 @@
     "containment_brand_hours": "Aukioloajat palvelun kotisivuilla",
     "facebook": "Facebook-sivu",
     "not_accessible": "Sisätila on suljettu",
+    "capacity": "Maksimikapasiteetti : 0 henkilöä | Maksimikapasiteetti : 1 henkilö | Maksimikapasiteetti : {count} henkilöä",
     "opening_hours": {
       "state_until_date": "{state} {date} asti",
       "state": {
@@ -126,6 +141,7 @@
     },
     "select_days": "Valitse päivät joilla on samat aukioloajat",
     "next": "Valitse tunnit",
+    "cancel": "Peru",
     "select_time": {
       "start": "Valitse aukeamisaika",
       "end": "Valitse sulkemisaika"
@@ -143,6 +159,7 @@
     "amenity": "Palvelut",
     "police": "Poliisi",
     "post_office": "Posti",
+    "childcare": "Lastenhoito",
     "employment_agency": "Työvoimatoimisto",
     "funeral_directors": "Hautaustoimisto",
     "bank": "Pankki",
@@ -150,10 +167,11 @@
     "insurance": "Vakuutus",
     "health": "Terveydenhoito",
     "pharmacy": "Apteekki",
-    "condoms": "Kondomiautomaatti",
+    "covid19_centre": "Covid-19 neuvontakeskus",
     "optician": "Optikko",
-    "medical_supply": "Terveydenhoitotarvikkeita",
     "hearing_aids": "Kuulokojeita",
+    "condoms": "Kondomiautomaatti",
+    "medical_supply": "Terveydenhoitotarvikkeita",
     "food": "Ruokaa",
     "supermarket": "Supermarket",
     "butcher": "Lihakauppa",
@@ -162,6 +180,11 @@
     "seafood": "Kalakauppa",
     "greengrocer": "Vihanneskauppa",
     "grocery": "Elintarvikekauppa",
+    "chocolate": "Suklaata",
+    "tea": "Teetä",
+    "coffee": "Kahvia",
+    "dairy": "Maitotuotteita",
+    "confectionery": "Konditoria",
     "farm": "Maatilapuoti",
     "marketplace": "Tori",
     "bakery": "Leipomo",
@@ -171,6 +194,7 @@
     "fast_food": "Pikaruoka",
     "ice_cream": "Jäätelö",
     "cafe": "Kahvila",
+    "bar": "Baari",
     "drugs": "Alkoholi ja tupakka",
     "tobacco": "Tupakka",
     "e_cigarette": "Sähkötupakka",
@@ -185,7 +209,7 @@
     "newsagent": "Lehtimyynti",
     "pet": "Lemmikkieläinliike",
     "agrarian": "Maataloustuotteita",
-    "garden_centre": "Puutarhatuotteita",
+    "flower": "Puutarha / kukat",
     "chemist": "Apteekki",
     "fabric": "Kangaskauppa",
     "books": "Kirjakauppa",
