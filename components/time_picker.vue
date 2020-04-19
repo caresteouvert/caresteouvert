@@ -7,6 +7,7 @@
     @input="updateValue"
   />
 </template>
+
 <script>
 export default {
   props: {

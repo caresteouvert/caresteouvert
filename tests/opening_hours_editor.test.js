@@ -57,6 +57,19 @@ describe('OpeningHoursEditor', () => {
     expect(editor.vm.indexSubInterval).toEqual(-1);
   });
 
+  it('allow to edit an hour', () => {
+    const editor = shallowMount(OpeningHoursEditor, {
+      localVue,
+      stubs,
+      propsData: {
+        value: [{ days: ['mo'], hours: ['08:00-12:00'] }]
+      }
+    });
+    editor.vm.updateHour(0, 0, 1, '14:00');
+    expect(editor.vm.openingHours).toEqual([{ days: ['mo'], hours: [['08:00', '14:00']] }]);
+    expect(editor.emitted('input').length).toEqual(1);
+  });
+
   it('disable days already selected', () => {
     const editor = shallowMount(OpeningHoursEditor, {
       localVue,

@@ -9,8 +9,17 @@
         <div
           v-for="(hours, indexHours) in interval.hours"
           :key="indexHours"
+          class="d-flex align-center"
         >
-          {{ hours.join('-') }}
+          <template v-for="(hour, indexHour) in hours">
+            <edit-hour
+              :key="indexHour"
+              :value="hour"
+              :step="indexHour === 0 ? 'start' : 'end'"
+              @input="(hour) => updateHour(index, indexHours, indexHour, hour)"
+            />
+            <span v-if="indexHour == 0"> - </span>
+          </template>
           <v-btn
             icon
             @click="removeInterval(index, indexHours)">
@@ -85,9 +94,13 @@
 
 <script>
 import OpeningHoursEditorInterval from './opening_hours_editor_interval';
+import EditHour from './edit_hour';
 
 export default {
-  components: { OpeningHoursEditorInterval },
+  components: {
+    EditHour,
+    OpeningHoursEditorInterval
+  },
 
   props: {
     value: {
@@ -143,6 +156,11 @@ export default {
 
     openDialog() {
       this.dialog = true;
+    },
+
+    updateHour(indexDay, indexHours, indexHour, hour) {
+      this.openingHours[indexDay].hours[indexHours][indexHour] = hour;
+      this.emitInput();
     },
 
     editSubInterval(index) {
