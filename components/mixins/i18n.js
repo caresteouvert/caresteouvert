@@ -5,6 +5,7 @@ import bleibtoffen from '../../assets/bleibtoffen.svg';
 import sigueabierto from '../../assets/sigueabierto.png';
 import segueaberto from '../../assets/segueaberto.png';
 import esobert from '../../assets/esobert.png';
+import ollaanauki from '../../assets/ollaanauki.png';
 import caresteouvertMobile from '../../assets/logo_header.png';
 import bleibtoffenMobile from '../../assets/bleibtoffen-mobile.svg';
 import sigueabiertoMobile from '../../assets/sigueabierto-mobile.png';
@@ -35,7 +36,8 @@ export default {
         bleibtoffen,
         sigueabierto,
         segueaberto,
-        esobert
+        esobert,
+        ollaanauki
       }[this.links.brand];
     },
 
@@ -45,7 +47,8 @@ export default {
         bleibtoffen: bleibtoffenMobile,
         sigueabierto: sigueabiertoMobile,
         segueaberto: segueabertoMobile,
-        esobert: esobertMobile
+        esobert: esobertMobile,
+        ollaanauki
       }[this.links.brand];
     },
 
@@ -55,7 +58,8 @@ export default {
         bleibtoffen: bleibtoffenOg,
         sigueabierto,
         segueaberto,
-        esobert
+        esobert,
+        ollaanauki
       }[this.links.brand];
     },
 
