@@ -1,0 +1,224 @@
+{
+  "lang": "Brezhoneg",
+  "covid19-alert": "Doujit d'ar strishadurioù gouarnamantel. Ho kiriegezh an hini eo.",
+  "title": "Chom ra digor",
+  "subtitle": "Al lec'hioù digor e-pad an enkaeañ",
+  "subtitle-dense": "Lec'hioù digor e-pad an enkaeañ",
+  "search": "Skrivit ar pezh a glaskit",
+  "coordinates": "Daveenoù",
+  "menu": "Lañser",
+  "missing_shop": "Ur c'henwerzh a vank?",
+  "change_lang": "Cheñch yezh",
+  "zoomtosee": "Zoumit evit gwelout al lec'hioù digor",
+  "learnmore": {
+    "about": "A-zivout",
+    "contribute": "Kendeurel",
+    "missing_shop": "Mankout a ra ul lec'h? Ouzhpennit anezhañ!",
+    "description": "« {brand} » a zo un ostilh ret evit chom hep mont ha dont diabeg tro-dro d'ho ti e-pad an enkaeañ ha digreskiñ ar riskl kontamiñ.\nAr gartenn-mañ a zo savet a-stroll ha ganti e c'hallit skignañ al lec'hioù digor pe serr en ho karter. An doare efedusañ ha kengretañ eo evit kelaouiñ an amezeien hag annezidi ho kêr.",
+    "title": "Gouzout hiroc'h",
+    "press": "Kazetennoù",
+    "disclaimer": "Menegoù lezenn",
+    "blog": "Blog",
+    "townhalls": "Diskoulm kehentiñ enkadenn evit an tiez-kêr",
+    "osm_contributors": "Teuliadur evit kendaolerien OpenStreetMap"
+  },
+  "rgpd": {
+    "consent": "Ha fellout a ra deoc'h kemer un toupin ganeoc'h evit abegoù stadegoù?",
+    "yes": "Ya",
+    "no": "Ne ran ket"
+  },
+  "apps_info": {
+    "close": "Serriñ",
+    "text": "Un arload hezoug « {brand} » a zo!",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
+  },
+  "days": {
+    "monday": "Lun",
+    "tuesday": "Meurzh",
+    "wednesday": "Merc'her",
+    "thursday": "Yaou",
+    "friday": "Gwener",
+    "saturday": "Sadorn",
+    "sunday": "Sul",
+    "ph": "Devezhioù dilabour"
+  },
+  "contribute_form": {
+    "title": "Kendeurel",
+    "step1": {
+      "title": "Ha digor e chom al lec'h-mañ e-pad an enkaeañ?",
+      "open": {
+        "yes": "ya",
+        "no": "ne ra ket"
+      }
+    },
+    "step2": {
+      "title": "Eurioù digeriñ e-pad an enkaeañ",
+      "same_hours": "An hevelep eurioù eo",
+      "same_hours_without_lockdown": "An hevelep eurioù e diavaez an enkaeañ",
+      "dont_know": "N'ouzon ket",
+      "continue": "Kenderc'hel"
+    },
+    "step3": {
+      "title": "Ouzhpenañ resisadurioù",
+      "delivery": {
+        "title": "Kasadennoù a vez kinniget gant al lec'h-mañ e-pad an enkaeañ",
+        "unknown": "N'ouzon ket",
+        "yes": "Ya",
+        "no": "Ne ra ket"
+      },
+      "takeaway": {
+        "title": "Kinniget e vez gwerzhioù da gas ganeoc'h gant al lec'h-mañ",
+        "unknown": "N'ouzon ket",
+        "yes": "Ya",
+        "no": "Ne ra ket"
+      },
+      "access": {
+        "title": "Gouest eo an arvalien da vont pe da chom e-barzh",
+        "unknown": "N'ouzon ket",
+        "yes": "Ya",
+        "no": "N'int ket"
+      },
+      "details": "Diret : ouzhpennañ munudoù all liammet gant an enkaeañ",
+      "details_error": "A rank bezañ goullo pe enderc'hel 10 arouezenn d'an nebeutañ"
+    },
+    "submit": "Embann",
+    "cancel": "Nullañ"
+  },
+  "details": {
+    "signal_warning": "O titouriñ ur c'hemm e oac'h, ne vo ket enrollet ma kuitait bremañ. Ha fellout a ra deoc'h kuitaat ar bajenn?",
+    "signal": "Titouriñ ur c'hemm",
+    "signal_done": "Enrollet eo bet ho titour. Trugarez deoc'h ! Gallout a ra bezañ gorrek ar c'hemm.",
+    "containment_opening_hours": "Eurioù digeriñ e diavaez an enkaeañ",
+    "containment_brand_hours": "Sellout ouzh an eurioù",
+    "facebook": "Pajenn Facebook",
+    "not_accessible": "N'eo ket digoret an diabarzh d'ar foran",
+    "capacity": "Niver brasañ a dud aotreet : 0 den | Niver brasañ a dud aotreet : 1 den | Niver brasañ a dud aotreet : {count} a zud",
+    "opening_hours": {
+      "state_until_date": "{state} betek {date}",
+      "state": {
+        "open": "digor",
+        "closed": "serr"
+      },
+      "tomorrow": "warc'hoazh"
+    },
+    "state": {
+      "open": "Lec'h digor e-pad an enkaeañ",
+      "open_adapted": "Lec'h digor e-pad an enkaeañ, gant eurioù azasaet",
+      "partial": "Lec'h a c'hall bezañ digor e-pad an enkaeañ (da wiriekaat)",
+      "unknown": "Lec'h a zo aotreet hervez al lezenn da zigeriñ e-pad an enkaeañ. Ha digor eo evit gwir? Deoc'h da lâr deomp",
+      "closed": "Lec'h serr e-pad an enkaeañ"
+    },
+    "delivery": {
+      "yes": "Gwazerezh kas kinniget",
+      "only": "Kasadennoù hepken"
+    },
+    "takeaway": {
+      "yes": "Kinniget eo kas ganeoc'h ar prenadennoù",
+      "modified": "Azasaet eo ar gwerzhioù da gas ganeoc'h",
+      "only": "Gallout a rit prenañ en ur gas ganeoc'h nemetken"
+    },
+    "drive_through": {
+      "yes": "Gwazerezh drive kinniget",
+      "only": "Gant an drive nemetken"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Timbroù",
+      "parcel_mail_in": "Lezel pakadoù",
+      "parcel_pickup": "Fizlec'h pakadoù",
+      "parcel_pickup;parcel_mail_in": "Lezel ha fizlec'h pakadoù",
+      "milk": "Laezh",
+      "drinks": "Evajoù",
+      "water": "Dour",
+      "sweets": "Madigoù"
+    }
+  },
+  "opening_hours_editor": {
+    "day_shortcuts": {
+      "weekdays": "Eus al Lun d'ar Sadorn"
+    },
+    "select_days": "Diuzit an devezhioù gant an hevelep deurioù digeriñ",
+    "next": "Da-heul",
+    "cancel": "Nullañ",
+    "select_time": {
+      "start": "Digoradur da",
+      "end": "Serradur da"
+    },
+    "add_interval": "Ouzhpennañ un eur",
+    "add_new_days": "Ouzhpennañ devezhioù digeriñ"
+  },
+  "osm_link": {
+    "title": "« {brand} » a ra gant roadennoù OpenStreetMap.",
+    "view": "Gwelet",
+    "edit": "Kemmañ"
+  },
+  "categories": {
+    "other": "Stalioù all",
+    "amenity": "Servijoù pleustrek",
+    "police": "Polis",
+    "post_office": "Burev post",
+    "childcare": "Diwallerezh bugale",
+    "employment_agency": "Amsez evit an implij",
+    "funeral_directors": "Liderezh-kañv",
+    "bank": "Tiez-bank ha kretadurioù",
+    "moneylender": "Prester",
+    "insurance": "Kretadur",
+    "health": "Yec'hed",
+    "pharmacy": "Apotiker",
+    "covid19_centre": "Kreizenn guzuliañ Covid-19",
+    "optician": "Lunedour",
+    "hearing_aids": "Binviji selaou",
+    "condoms": "Dasparzher stevelloù",
+    "medical_supply": "Dafar mezegel",
+    "food": "Boued",
+    "supermarket": "Gourmarc'had",
+    "butcher": "Kigerezh",
+    "cheese": "Keuzerezh",
+    "convenience": "Gourstalig",
+    "seafood": "Peskerezh",
+    "greengrocer": "Primeostoù",
+    "grocery": "Ispiserezh",
+    "chocolate": "Chocolad",
+    "tea": "Te",
+    "coffee": "Kafe",
+    "dairy": "Laezerezh",
+    "confectionery": "Stal madigoù",
+    "farm": "Stal er feurm",
+    "marketplace": "Marc'had",
+    "bakery": "Baraerezh",
+    "eat": "Preti",
+    "vending_machine": "Dasparzher emgefreek",
+    "restaurant": "Preti",
+    "fast_food": "Preti prim",
+    "ice_cream": "Skornerezh",
+    "cafe": "Kafe",
+    "bar": "Tavarn",
+    "drugs": "Butun & alkol",
+    "tobacco": "Butun",
+    "e_cigarette": "E-sigaretennoù",
+    "alcohol": "Gwerzh alkol",
+    "shop": "Stalioù",
+    "hardware": "Bitellerezh",
+    "mobile_phone": "Pellgomzerioù hezoug",
+    "computer": "Stlenneg",
+    "electronics": "Dafar elektronek",
+    "laundry": "Kannerezh",
+    "stationery": "Dafar",
+    "newsagent": "Kazetennoù",
+    "pet": "Loened",
+    "agrarian": "Aozadoù evit al labour-douar",
+    "flower": "Liorzh / bleunioù",
+    "chemist": "Drogerezh",
+    "fabric": "Danvez",
+    "books": "Stal-levrioù",
+    "mobility": "Fiñvusted",
+    "fuel": "Porzh-servij",
+    "car_rental": "Feurmiñ kirri",
+    "bicycle": "Stal mirc'hi-houarn",
+    "car": "Karrdi",
+    "bicycle_tube": "Dasparzher bouzellennoù-rod",
+    "public_transport_tickets": "Dasparzher tikidi treuzdougen"
+  }
+}
