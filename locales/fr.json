@@ -10,6 +10,10 @@
   "missing_shop": "Commerce manquant ?",
   "change_lang": "Changer la langue",
   "zoomtosee": "Zoomez pour voir les lieux ouverts",
+  "toggle_color": {
+    "blind": "Activer les couleurs pour daltoniens",
+    "normal": "Désactiver les couleurs pour daltoniens"
+  },
   "learnmore": {
     "about": "À propos",
     "contribute": "Contribuer",
