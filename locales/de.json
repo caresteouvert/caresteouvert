@@ -19,7 +19,7 @@
     "press": "Presse",
     "disclaimer": "Impressum & Datenschutz",
     "blog": "Blog",
-    "townhalls": "Rathäuser, verwendet „{brand}“!",
+    "townhalls": "Lösung zur Krisenkommunikation für Rathäuser",
     "osm_contributors": "Dokumentation für OSM-Mitwirkende"
   },
   "rgpd": {
@@ -47,10 +47,10 @@
   "contribute_form": {
     "title": "Mitmachen",
     "step1": {
-      "title": "Ist dieser Ort weiterhin geöffnet?",
+      "title": "Hat dieser Ort noch geöffnet?",
       "open": {
-        "yes": "Ja",
-        "no": "Nein"
+        "yes": "Geöffnet",
+        "no": "Geschlossen"
       }
     },
     "step2": {
@@ -89,9 +89,9 @@
   "details": {
     "signal_warning": "Du warst gerade dabei, eine Änderung zu melden. Möchtest du deine Eingaben verwerfen?",
     "signal": "Änderung melden",
-    "signal_done": "Deine Änderungsmeldung wurde erfasst. Vielen Dank!\n\nBitte habe etwas Geduld, es kann bis zu einer Stunde dauern, bis deine Änderung erscheint.",
+    "signal_done": "Vielen Dank, deine Änderungsmeldung wurde erfasst!\n\nBitte beachte, dass Meldungen mit Kommentar manuell von der OpenStreetMap-Community geprüft werden. Kommentarlose Änderungen erscheinen automatisch nach einer Stunde in der Karte.",
     "containment_opening_hours": "Reguläre Öffnungszeiten",
-    "containment_brand_hours": "Öffnungszeiten auf der Webseite",
+    "containment_brand_hours": "Öffnungszeiten anzeigen",
     "facebook": "Facebook-Seite",
     "not_accessible": "Innenbereich nicht öffentlich zugänglich",
     "capacity": "Maximale Kapazität: 0 Personen | Maximale Kapazität: 1 Person | Maximale Kapazität: {count} Personen",
@@ -107,7 +107,7 @@
       "open": "Ort weiterhin geöffnet",
       "open_adapted": "Ort geöffnet mit abweichenden Öffnungszeiten",
       "partial": "Dieser Ort gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen? Lass es uns wissen.",
-      "unknown": "Dieser Ort darf wahrscheinlich geöffnet bleiben.\n\nGeöffnet oder geschlossen? Lass es uns wissen.",
+      "unknown": "Dieser Ort ist möglicherweise geöffnet.\n\nGeöffnet oder geschlossen? Lass es uns wissen.",
       "closed": "Ort vorübergehend geschlossen"
     },
     "delivery": {
@@ -140,11 +140,11 @@
       "weekdays": "Montag bis Samstag"
     },
     "select_days": "Wähle Tage mit den gleichen Zeiten aus:",
-    "next": "Zeiten auswählen",
+    "next": "Weiter",
     "cancel": "Abbrechen",
     "select_time": {
-      "start": "Beginn der Öffnungszeiten",
-      "end": "Ende der Öffnungszeiten"
+      "start": "Öffnet um",
+      "end": "Schließt um"
     },
     "add_interval": "Zeiten hinzufügen",
     "add_new_days": "Wochentage hinzufügen"
@@ -158,6 +158,7 @@
     "other": "Sonstige Orte",
     "amenity": "Post, Bank & Co. ",
     "police": "Polizei",
+    "townhall": "Rathaus",
     "post_office": "Postfiliale",
     "childcare": "Kinderbetreuung",
     "employment_agency": "Arbeitsagentur",
@@ -165,6 +166,7 @@
     "bank": "Bank",
     "moneylender": "Geldverleiher",
     "insurance": "Versicherung",
+    "tourism_info": "Tourist-Info",
     "health": "Apotheke & Gesundheit",
     "pharmacy": "Apotheke",
     "covid19_centre": "Covid-19-Beratungsstelle",
@@ -200,20 +202,20 @@
     "e_cigarette": "E-Zigarette",
     "alcohol": "Alkoholgeschäft",
     "shop": "Geschäfte",
-    "hardware": "Baumarkt",
+    "hardware": "Baubedarf",
     "mobile_phone": "Mobiltelefon",
-    "computer": "Elektronik-Fachmarkt",
+    "computer": "Computer",
     "electronics": "Elektronik",
     "laundry": "Waschsalon",
     "stationery": "Schreibwaren",
     "newsagent": "Kiosk",
     "pet": "Tierbedarf",
     "agrarian": "Landhandel",
-    "flower": "Garten / Blumen",
+    "flower": "Garten & Blumen",
     "chemist": "Drogeriemarkt",
     "fabric": "Textilgeschäft",
     "books": "Buchhandlung",
-    "mobility": "Mobiiltät",
+    "mobility": "Mobilität",
     "fuel": "Tankstelle",
     "car_rental": "Autovermietung",
     "bicycle": "Fahrradladen",
