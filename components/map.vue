@@ -253,12 +253,13 @@ export default {
 
   watch: {
     place(place) {
+      if (!this.map) return;
       if (place) {
         const isPlaceUnderUI = (x, y) => {
           const height = document.body.clientHeight;
           const width = document.body.clientWidth;
           const offsetSidebar = this.sidebar ? 300 : 0;
-          const offsetPlace = this.$vuetify.breakpoint.smAndDown ? 0 : 300;
+          const offsetPlace = this.$vuetify.breakpoint.smAndDown ? 0 : 400;
           return (x < offsetSidebar || x > width - offsetPlace || y > height || y < 0);
         }
         const { x, y } = this.map.project(place.geometry.coordinates);

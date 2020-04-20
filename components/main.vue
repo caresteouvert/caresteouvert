@@ -16,7 +16,13 @@
         width="300"
         fixed
       >
-        <main-menu>
+        <filter-results
+          v-if="filter !== ''"
+          v-model="filter"
+          :featuresAndLocation="featuresAndLocation"
+          :map-bounds="mapBounds"
+        />
+        <main-menu v-else>
           <filter-list v-model="filter" />
         </main-menu>
       </v-navigation-drawer>
@@ -57,7 +63,16 @@
           v-if="isMobile"
           v-model="filter"
         >
-          <main-menu :show-brand="false">
+          <filter-results
+            v-if="filter != ''"
+            v-model="filter"
+            :featuresAndLocation="featuresAndLocation"
+            :map-bounds="mapBounds"
+          />
+          <main-menu
+            v-else
+            :show-brand="false"
+          >
             <filter-list v-model="filter" />
           </main-menu>
         </bottom-menu>
@@ -78,6 +93,7 @@ import isMobile from './mixins/is_mobile';
 import AppsSheet from './apps_sheet';
 import MainMenu from './main_menu';
 import FilterList from './filter_list';
+import FilterResults from './filter_results';
 import TopToolbar from './top_toolbar';
 import BottomMenu from './bottom_menu';
 import RgpdBanner from './rgpd_banner';
@@ -88,6 +104,7 @@ export default {
     AppsSheet,
     BottomMenu,
     FilterList,
+    FilterResults,
     MainMenu,
     RgpdBanner,
     SplashScreen,
@@ -284,6 +301,9 @@ export default {
 </script>
 
 <style>
+.full-width {
+  width: 100%;
+}
 .zoom-chip {
   position: fixed !important;
   bottom: 0;
