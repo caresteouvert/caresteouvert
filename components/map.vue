@@ -46,111 +46,113 @@ import {
 
 const source = "public.poi_osm_light";
 
-const conditionalOpacity = [
-  'step',
-  ['zoom'],
-  0,
-  12, [
-    'case',
-    ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 0,
-    1
-  ],
-  15, [
-    'case',
-    ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 0,
-    1
-  ],
-  16, 1
-];
+function getLayers(theme) {
+  const conditionalOpacity = [
+    'step',
+    ['zoom'],
+    0,
+    12, [
+      'case',
+      ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 0,
+      1
+    ],
+    15, [
+      'case',
+      ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 0,
+      1
+    ],
+    16, 1
+  ];
 
-const layers = [
-  {
-    id: "poi-background",
-    type: "circle",
-    "source-layer": source,
-    layout: {
-      'circle-sort-key': [
-        'case',
-        ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 2,
-        ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 0,
-        1
-      ]
-    },
-    paint: {
-      'circle-color': 'white',
-      'circle-opacity': conditionalOpacity,
-      'circle-stroke-opacity': conditionalOpacity,
-      'circle-stroke-width': [
-        'case',
-        ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 2,
-        ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 4,
-        3
-      ],
-      'circle-stroke-color': [
-        'case',
-        ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], "#4dac26",
-        ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], "#ffffbf",
-        "#d01c8b"
-      ],
-      'circle-radius': [
-        'interpolate',
-        ['linear'],
-        ['zoom'],
-        12, 0,
-        15, [
+  return [
+    {
+      id: "poi-background",
+      type: "circle",
+      "source-layer": source,
+      layout: {
+        'circle-sort-key': [
           'case',
-          ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 3,
-          6
+          ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 2,
+          ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 0,
+          1
+        ]
+      },
+      paint: {
+        'circle-color': 'white',
+        'circle-opacity': conditionalOpacity,
+        'circle-stroke-opacity': conditionalOpacity,
+        'circle-stroke-width': [
+          'case',
+          ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 2,
+          ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 4,
+          3
         ],
-        19, 14
-      ]
-    }
-  },
-  {
-    id: "poi-icon",
-    type: "symbol",
-    "source-layer": source,
-    minzoom: 14,
-    "layout": {
-      "icon-image": [
-        "coalesce",
-        ['image', ['get', 'cat']],
-        ['image', ['get', 'normalized_cat']],
-        ['image', 'other']
-      ],
-      "icon-size": [
-        'interpolate',
-        ['linear'],
-        ['zoom'],
-        14, 0.3,
-        19, 0.9
-      ],
-      "text-anchor": "top",
-      "text-field": ["get", "name"],
-      "text-font": [
-        "Noto Sans Regular"
-      ],
-      "text-max-width": 9,
-      "text-offset": [
-        'interpolate',
-        ['linear'],
-        ['zoom'],
-        14, ['literal', [0, 0]],
-        19, ['literal', [0, 1.5]]
-      ],
-      "text-padding": 2,
-      "text-size": 12
+        'circle-stroke-color': [
+          'case',
+          ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], theme.success,
+          ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], "#ffffbf",
+          theme.error
+        ],
+        'circle-radius': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          12, 0,
+          15, [
+            'case',
+            ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 3,
+            6
+          ],
+          19, 14
+        ]
+      }
     },
-    paint: {
-      "icon-opacity": conditionalOpacity,
-      "text-opacity": conditionalOpacity,
-      "text-color": "#666",
-      "text-halo-blur": 0.5,
-      "text-halo-color": "#ffffff",
-      "text-halo-width": 1
+    {
+      id: "poi-icon",
+      type: "symbol",
+      "source-layer": source,
+      minzoom: 14,
+      "layout": {
+        "icon-image": [
+          "coalesce",
+          ['image', ['get', 'cat']],
+          ['image', ['get', 'normalized_cat']],
+          ['image', 'other']
+        ],
+        "icon-size": [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          14, 0.3,
+          19, 0.9
+        ],
+        "text-anchor": "top",
+        "text-field": ["get", "name"],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 9,
+        "text-offset": [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          14, ['literal', [0, 0]],
+          19, ['literal', [0, 1.5]]
+        ],
+        "text-padding": 2,
+        "text-size": 12
+      },
+      paint: {
+        "icon-opacity": conditionalOpacity,
+        "text-opacity": conditionalOpacity,
+        "text-color": "#666",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      }
     }
-  }
-];
+  ];
+}
 
 export default {
   components: {
@@ -213,7 +215,7 @@ export default {
 
     layers() {
       const [ category, subcategory ] = this.filter.split('/');
-      return layers.map((layer) => {
+      return getLayers(this.$vuetify.theme.themes.light).map((layer) => {
         const newLayer = { ...layer, filter: ['all'] };
         if (subcategory) {
           newLayer.filter.push(['==', 'cat', subcategory]);
