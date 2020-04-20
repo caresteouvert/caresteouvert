@@ -148,22 +148,18 @@
 </template>
 
 <script>
-import { poiFeature } from '../config.json';
-import DetailTag from './detail_tag';
-import DetailEntry from './detail_entry';
+import { poiFeature } from '../../config.json';
 import DetailOpeningHours from './detail_opening_hours';
 import DetailState from './detail_state';
 import DetailLink from './detail_link';
-import OsmLink from './osm_link';
-import { encodePosition } from './url';
+import OsmLink from '../osm_link';
+import { encodePosition } from '../url';
 
 export default {
   components: {
-    DetailEntry,
     DetailLink,
     DetailOpeningHours,
     DetailState,
-    DetailTag,
     OsmLink
   },
 

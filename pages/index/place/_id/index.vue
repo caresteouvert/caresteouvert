@@ -1,5 +1,5 @@
 <template>
-  <osm-detail
+  <place-detail
     ref="detail"
     :id="$route.params.id"
     :features-and-location="this.$route.params.featuresAndLocation"
@@ -7,10 +7,10 @@
 </template>
 
 <script>
-import OsmDetail from '../../../../components/detail';
+import PlaceDetail from '../../../../components/place/detail';
 
 export default {
-  components: { OsmDetail },
+  components: { PlaceDetail },
 
   beforeRouteUpdate(to, from, next) {
     if (this.$refs.detail) {

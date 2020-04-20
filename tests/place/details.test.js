@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import Detail from '../components/detail';
-import DetailOpeningHours from '../components/detail_opening_hours';
+import Detail from '../../components/place/detail';
+import DetailOpeningHours from '../../components/place/detail_opening_hours';
 
 describe('Detail', () => {
   let localVue;

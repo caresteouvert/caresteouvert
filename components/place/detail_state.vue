@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import ContributeForm from './contribute_form';
+import ContributeForm from '../contribute_form';
 
 export default {
   components: { ContributeForm },
