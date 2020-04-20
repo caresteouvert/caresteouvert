@@ -150,10 +150,10 @@
 </template>
 
 <script>
-import OpeningHoursParser from './OpeningHoursParser';
 import { apiUrl } from '../config.json';
+import OpeningHoursParser from '../lib/opening_hours_parser';
+import parseId from '../lib/parse_id';
 import OpeningHoursEditor from './opening_hours_editor/editor';
-import parseId from './parse_id';
 
 export default {
   components: { OpeningHoursEditor },

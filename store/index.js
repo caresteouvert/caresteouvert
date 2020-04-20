@@ -1,5 +1,5 @@
 import categories from '../categories.json';
-import categoriesForCountry from '../components/categories';
+import categoriesForCountry from '../lib/categories';
 
 export const state = () => ({
   country: '',

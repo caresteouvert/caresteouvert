@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import parseId from './parse_id';
+import parseId from '../lib/parse_id';
 import i18nMixin from './mixins/i18n';
 
 export default {

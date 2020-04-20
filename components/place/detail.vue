@@ -153,7 +153,7 @@ import DetailOpeningHours from './detail_opening_hours';
 import DetailState from './detail_state';
 import DetailLink from './detail_link';
 import OsmLink from '../osm_link';
-import { encodePosition } from '../url';
+import { encodePosition } from '../../lib/url';
 
 export default {
   components: {

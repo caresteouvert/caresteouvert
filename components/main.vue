@@ -69,8 +69,8 @@
 import { mapGetters } from 'vuex';
 import debounce from 'lodash.debounce';
 import config from '../config.json';
-import { getCookie, setCookie } from './cookie';
-import { encode, decode, encodePosition, decodePosition } from './url';
+import { getCookie, setCookie } from '../lib/cookie';
+import { encode, decode, encodePosition, decodePosition } from '../lib/url';
 import AppsSheet from './apps_sheet';
 import MainMenu from './main_menu';
 import FilterList from './filter_list';

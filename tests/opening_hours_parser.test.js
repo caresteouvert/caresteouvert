@@ -1,4 +1,4 @@
-import  OpeningHoursParser from '../components/OpeningHoursParser';
+import OpeningHoursParser from '../lib/opening_hours_parser';
 
 describe("OpeningHoursParser", () => {
   describe("constructor", () => {

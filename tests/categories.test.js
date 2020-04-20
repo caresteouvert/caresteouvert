@@ -1,4 +1,4 @@
-import categoriesForCountry from '../components/categories';
+import categoriesForCountry from '../lib/categories';
 
 describe('categoriesForCountry', () => {
   it('returns all categories for the given country', () => {

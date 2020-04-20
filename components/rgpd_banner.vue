@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { getCookie, setCookie } from './cookie';
+import { getCookie, setCookie } from '../lib/cookie';
 
 const RGPD_COOKIE = 'rgpdConsent';
 

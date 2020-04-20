@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import { getCookie, setCookie } from './cookie';
+import { getCookie, setCookie } from '../lib/cookie';
 
 export default {
   data() {
