@@ -90,7 +90,7 @@ function getLayers(theme) {
         'circle-stroke-color': [
           'case',
           ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], theme.success,
-          ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], "#ffffbf",
+          ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], "#dfc27d",
           theme.error
         ],
         'circle-radius': [
