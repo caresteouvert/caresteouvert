@@ -21,32 +21,32 @@ describe('DetailState', () => {
   }
 
   it('returns the state when open', () => {
-    const detail = createWrapper({ status: 'open', point: {} });
+    const detail = createWrapper({ status: 'open', place: {} });
     expect(detail.vm.type).toEqual('success');
   });
 
   it('returns the state when open_adapted', () => {
-    const detail = createWrapper({ status: 'open_adapted', point: {} });
+    const detail = createWrapper({ status: 'open_adapted', place: {} });
     expect(detail.vm.type).toEqual('success');
   });
 
   it('returns the state when partial', () => {
-    const detail = createWrapper({ status: 'partial', point: {} });
+    const detail = createWrapper({ status: 'partial', place: {} });
     expect(detail.vm.type).toEqual('warning');
   });
 
   it('returns the state when unknown', () => {
-    const detail = createWrapper({ status: 'unknown', point: {} });
+    const detail = createWrapper({ status: 'unknown', place: {} });
     expect(detail.vm.type).toEqual('warning');
   });
 
   it('returns the state when closed', () => {
-    const detail = createWrapper({ status: 'closed', point: {} });
+    const detail = createWrapper({ status: 'closed', place: {} });
     expect(detail.vm.type).toEqual('error');
   });
 
   it('open the contribute form', async () => {
-    const detail = createWrapper({ status: 'unknown', point: {} });
+    const detail = createWrapper({ status: 'unknown', place: {} });
     expect(detail.contains(ContributeForm)).toBe(false);
     detail.vm.contribute = true;
     await Vue.nextTick();

@@ -159,7 +159,7 @@ export default {
   components: { OpeningHoursEditor },
 
   props: {
-    point: {
+    place: {
       type: Object,
       required: true
     }
@@ -205,7 +205,7 @@ export default {
 
   computed: {
     properties() {
-      return this.point.properties;
+      return this.place.properties;
     },
 
     hasOpeningHours() {
@@ -229,13 +229,12 @@ export default {
     },
 
     id() {
-      const { type, id } = parseId(this.point.id);
+      const { type, id } = parseId(this.place.id);
       return `${type}/${id}`;
     },
 
     payload() {
-      const lat = this.point.geometry.coordinates[1];
-      const lon = this.point.geometry.coordinates[0];
+      const [ lon, lat ] = this.place.geometry.coordinates;
       return {
         name: this.properties.name,
         state: this.open ? 'open' : 'closed',

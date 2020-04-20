@@ -5,7 +5,7 @@
   >
     <v-slide-x-reverse-transition>
       <v-card
-        v-if="point"
+        v-if="place"
         tile
         min-height="100%"
         class="d-flex flex-column"
@@ -38,7 +38,7 @@
 
         <detail-state
           ref="state"
-          :point="point"
+          :place="place"
           :status="status"
         />
 
@@ -59,7 +59,7 @@
         <v-list>
           <detail-link
             v-if="hasVending"
-            :title="$t(`details.vending.${point.properties.tags.vending}`)"
+            :title="$t(`details.vending.${place.properties.tags.vending}`)"
             icon="osm-vending_machine"
           />
           <template v-if="contact('phone')">
@@ -94,17 +94,17 @@
           />
 
           <detail-opening-hours
-            v-if="point.properties.opening_hours && point.properties.opening_hours !== 'open'"
-            :value="point.properties.opening_hours"
+            v-if="place.properties.opening_hours && place.properties.opening_hours !== 'open'"
+            :value="place.properties.opening_hours"
           />
           <detail-link
-            v-else-if="point.properties.brand_hours"
-            :href="point.properties.brand_hours"
+            v-else-if="place.properties.brand_hours"
+            :href="place.properties.brand_hours"
             :title="$t('details.containment_brand_hours')"
             icon="osm-chevron_right"
           />
           <template
-            v-else-if="point.properties.tags.opening_hours"
+            v-else-if="place.properties.tags.opening_hours"
           >
             <v-alert
               dense
@@ -117,8 +117,8 @@
             >
               <div class="ml-3">{{ $t('details.containment_opening_hours') }}</div>
               <detail-opening-hours
-                v-if="point.properties.tags.opening_hours"
-                :value="point.properties.tags.opening_hours"
+                v-if="place.properties.tags.opening_hours"
+                :value="place.properties.tags.opening_hours"
               />
             </v-alert>
           </template>
@@ -176,10 +176,10 @@ export default {
   },
 
   head() {
-    if (!this.point) {
+    if (!this.place) {
       return {};
     }
-    const [lng, lat] = this.point.geometry.coordinates;
+    const [lng, lat] = this.place.geometry.coordinates;
     return {
       title: `${this.title || this.type} - ${this.$t('title')}`,
       meta: [
@@ -208,31 +208,31 @@ export default {
   },
 
   fetch() {
-    return this.updatePoint();
+    return this.updatePlace();
   },
 
   data() {
     return {
       isMobile: true,
-      point: null
+      place: null
     };
   },
 
   computed: {
     title() {
-      return this.point.properties.name;
+      return this.place.properties.name;
     },
 
     category() {
-      return this.point.properties.cat === 'unknown' ? 'other' : this.point.properties.cat;
+      return this.place.properties.cat === 'unknown' ? 'other' : this.place.properties.cat;
     },
 
     hasVending() {
-      return this.$te(`details.vending.${this.point.properties.tags.vending}`);
+      return this.$te(`details.vending.${this.place.properties.tags.vending}`);
     },
 
     type() {
-      const key = `categories.${this.point.properties.cat}`;
+      const key = `categories.${this.place.properties.cat}`;
       return this.$te(key) ? this.$t(key) : this.$t('categories.other');
     },
 
@@ -243,7 +243,7 @@ export default {
           return url.startsWith('http') ? url : `https://facebook.com/${url}`;
         }
       };
-      const tags = this.point.properties.tags;
+      const tags = this.place.properties.tags;
       return (name) => {
         const value = tags[name] || tags[`contact:${name}`];
         const transformFunc = transform[name] || (v => v);
@@ -252,22 +252,22 @@ export default {
     },
 
     status() {
-      return this.point.properties.status;
+      return this.place.properties.status;
     },
 
     infos() {
       const infos = [];
-      const isOpen = ['open', 'open_adapted'].includes(this.point.properties.status);
-      const isOpenOrPartial = ['open', 'open_adapted', 'partial'].includes(this.point.properties.status);
+      const isOpen = ['open', 'open_adapted'].includes(this.place.properties.status);
+      const isOpenOrPartial = ['open', 'open_adapted', 'partial'].includes(this.place.properties.status);
 
       // Access
-      if (this.point.properties.tags['access:covid19'] === 'no') {
+      if (this.place.properties.tags['access:covid19'] === 'no') {
         infos.push(this.$t('details.not_accessible'));
       }
 
       const addInfosDependingOfTagAndStatus = (tagName) => {
-        const tagCovid19 = this.point.properties.tags[`${tagName}:covid19`];
-        const tag = this.point.properties.tags[tagName];
+        const tagCovid19 = this.place.properties.tags[`${tagName}:covid19`];
+        const tag = this.place.properties.tags[tagName];
         if (isOpenOrPartial && tagCovid19 && this.$te(`details.${tagName}.${tagCovid19}`)) {
           infos.push(this.$t(`details.${tagName}.${tagCovid19}`));
         } else if (isOpen && tag && this.$te(`details.${tagName}.${tag}`)) {
@@ -280,13 +280,13 @@ export default {
       addInfosDependingOfTagAndStatus('drive_through');
 
       // Maximal capacity
-      if (!isNaN(parseInt(this.point.properties.tags['capacity:covid19']))) {
-        infos.push(this.$tc('details.capacity', this.point.properties.tags['capacity:covid19']));
+      if (!isNaN(parseInt(this.place.properties.tags['capacity:covid19']))) {
+        infos.push(this.$tc('details.capacity', this.place.properties.tags['capacity:covid19']));
       }
 
       // POI information
-      if (this.point.properties.brand_infos) {
-        infos.push(this.point.properties.brand_infos);
+      if (this.place.properties.brand_infos) {
+        infos.push(this.place.properties.brand_infos);
       }
 
       return infos.join(" | ");
@@ -295,8 +295,8 @@ export default {
 
   watch: {
     id() {
-      this.point = null;
-      this.updatePoint();
+      this.place = null;
+      this.updatePlace();
     }
   },
 
@@ -305,12 +305,12 @@ export default {
       this.isMobile = this.$vuetify.breakpoint.smAndDown;
     },
 
-    updatePoint() {
+    updatePlace() {
       return fetch(`${poiFeature}/${this.id}.json`)
         .then(data => data.json())
-        .then((poi) => {
-          this.point = poi;
-          this.$store.commit('setPoi', poi);
+        .then((place) => {
+          this.place = place;
+          this.$store.commit('setPlace', place);
         }).catch(() => {
           this.$nuxt.context.redirect(`/${this.$route.params.featuresAndLocation || ''}`);
         });
@@ -335,7 +335,7 @@ export default {
       }
       next(result);
       if (result) {
-        this.$store.commit('setPoi', null);
+        this.$store.commit('setPlace', null);
       }
     }
   }

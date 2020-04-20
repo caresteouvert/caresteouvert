@@ -24,7 +24,7 @@
     ><span class="text-pre">{{ $t('details.signal_done') }}</span></v-alert>
     <div v-if="contribute">
       <contribute-form
-        :point="point"
+        :place="place"
         class="pa-2"
         @success="success = true; contribute = false"
         @close="contribute = false"
@@ -46,7 +46,7 @@ export default {
       required: true
     },
 
-    point: {
+    place: {
       type: Object,
       required: true
     }
