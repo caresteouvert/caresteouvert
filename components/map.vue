@@ -52,27 +52,14 @@ const layers = [
     type: "circle",
     "source-layer": source,
     paint: {
-     'circle-color': [
+     'circle-color': 'white',
+     'circle-stroke-width': 3,
+     'circle-stroke-color': [
         'case',
         ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], "green",
         ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], "gray",
         "#96281b"
      ],
-      'circle-radius': [
-        'interpolate',
-        ['linear'],
-        ['zoom'],
-        14, 6,
-        19, 17
-      ]
-    }
-  },
-  {
-    id: "poi-white-bg",
-    type: "circle",
-    "source-layer": source,
-    paint: {
-      'circle-color': 'white',
       'circle-radius': [
         'interpolate',
         ['linear'],
