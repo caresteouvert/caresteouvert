@@ -13,6 +13,7 @@ describe('Detail', () => {
     localVue = createLocalVue();
     localVue.prototype.$te = () => true;
     localVue.prototype.$t = (key) => key;
+    localVue.prototype.$vuetify = { breakpoint: {} };
     localVue.directive('resize', {});
     localVue.directive('linkified', {});
   });
