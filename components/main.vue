@@ -5,8 +5,8 @@
        sm: isMobile,
       'place-opened': $route.name === 'place' && !isMobile,
       'sidebar-opened': sidebar && !isMobile
-     }"
-    >
+    }"
+  >
     <div>
       <v-navigation-drawer
         v-model="sidebar"
@@ -17,9 +17,7 @@
         fixed
       >
         <osm-sidebar>
-          <osm-filter-features
-            v-model="filter"
-          />
+          <filter-list v-model="filter" />
         </osm-sidebar>
       </v-navigation-drawer>
       <v-content>
@@ -58,7 +56,7 @@
           v-model="filter"
         >
           <osm-sidebar :show-brand="false">
-            <osm-filter-features v-model="filter" />
+            <filter-list v-model="filter" />
           </osm-sidebar>
         </bottom-menu>
       </v-content>
@@ -75,7 +73,7 @@ import { getCookie, setCookie } from './cookie';
 import { encode, decode, encodePosition, decodePosition } from './url';
 import AppsSheet from './apps_sheet';
 import OsmSidebar from './sidebar';
-import OsmFilterFeatures from './filter_features';
+import FilterList from './filter_list';
 import TopToolbar from './top_toolbar';
 import BottomMenu from './bottom_menu';
 import RgpdBanner from './rgpd_banner';
@@ -84,7 +82,7 @@ export default {
   components: {
     AppsSheet,
     BottomMenu,
-    OsmFilterFeatures,
+    FilterList,
     OsmSidebar,
     TopToolbar,
     RgpdBanner
