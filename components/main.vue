@@ -16,9 +16,9 @@
         width="300"
         fixed
       >
-        <osm-sidebar>
+        <main-menu>
           <filter-list v-model="filter" />
-        </osm-sidebar>
+        </main-menu>
       </v-navigation-drawer>
       <v-content>
         <top-toolbar
@@ -55,9 +55,9 @@
           v-if="isMobile"
           v-model="filter"
         >
-          <osm-sidebar :show-brand="false">
+          <main-menu :show-brand="false">
             <filter-list v-model="filter" />
-          </osm-sidebar>
+          </main-menu>
         </bottom-menu>
       </v-content>
     </div>
@@ -72,7 +72,7 @@ import config from '../config.json';
 import { getCookie, setCookie } from './cookie';
 import { encode, decode, encodePosition, decodePosition } from './url';
 import AppsSheet from './apps_sheet';
-import OsmSidebar from './sidebar';
+import MainMenu from './main_menu';
 import FilterList from './filter_list';
 import TopToolbar from './top_toolbar';
 import BottomMenu from './bottom_menu';
@@ -83,9 +83,9 @@ export default {
     AppsSheet,
     BottomMenu,
     FilterList,
-    OsmSidebar,
+    MainMenu,
+    RgpdBanner,
     TopToolbar,
-    RgpdBanner
   },
 
   props: {

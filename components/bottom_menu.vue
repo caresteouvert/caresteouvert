@@ -15,9 +15,7 @@
         >
           <v-icon :class="{ icon: animate }">osm-chevron_up</v-icon>
         </v-btn>
-        <v-sheet
-          :elevation="2"
-        />
+        <v-sheet :elevation="2" />
       </div>
     </template>
     <v-card max-height="50vh">
