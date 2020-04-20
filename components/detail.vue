@@ -306,7 +306,7 @@ export default {
 
   methods: {
     resize() {
-      this.isMobile = window.innerWidth < 800;
+      this.isMobile = this.$vuetify.breakpoint.smAndDown;
     },
 
     updatePoint() {
