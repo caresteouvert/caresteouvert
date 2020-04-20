@@ -10,9 +10,9 @@
     <div>
       <v-navigation-drawer
         v-model="sidebar"
-        :temporary="isMobile"
-        :stateless="!isMobile"
-        :hide-overlay="!isMobile || !sidebar"
+        temporary
+        stateless
+        hide-overlay
         width="300"
         fixed
       >
