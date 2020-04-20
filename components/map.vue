@@ -46,25 +46,62 @@ import {
 
 const source = "public.poi_osm_light";
 
+const conditionalOpacity = [
+  'step',
+  ['zoom'],
+  0,
+  12, [
+    'case',
+    ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 0,
+    1
+  ],
+  15, [
+    'case',
+    ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 0,
+    1
+  ],
+  16, 1
+];
+
 const layers = [
   {
     id: "poi-background",
     type: "circle",
     "source-layer": source,
-    paint: {
-     'circle-color': 'white',
-     'circle-stroke-width': 3,
-     'circle-stroke-color': [
+    layout: {
+      'circle-sort-key': [
         'case',
-        ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], "green",
-        ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], "gray",
-        "#96281b"
-     ],
+        ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 2,
+        ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 0,
+        1
+      ]
+    },
+    paint: {
+      'circle-color': 'white',
+      'circle-opacity': conditionalOpacity,
+      'circle-stroke-opacity': conditionalOpacity,
+      'circle-stroke-width': [
+        'case',
+        ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 2,
+        ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 4,
+        3
+      ],
+      'circle-stroke-color': [
+        'case',
+        ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], "#4dac26",
+        ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], "#ffffbf",
+        "#d01c8b"
+      ],
       'circle-radius': [
         'interpolate',
         ['linear'],
         ['zoom'],
-        14, 3,
+        12, 0,
+        15, [
+          'case',
+          ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 3,
+          6
+        ],
         19, 14
       ]
     }
@@ -73,7 +110,7 @@ const layers = [
     id: "poi-icon",
     type: "symbol",
     "source-layer": source,
-    minzoom: 15,
+    minzoom: 14,
     "layout": {
       "icon-image": [
         "coalesce",
@@ -105,6 +142,8 @@ const layers = [
       "text-size": 12
     },
     paint: {
+      "icon-opacity": conditionalOpacity,
+      "text-opacity": conditionalOpacity,
       "text-color": "#666",
       "text-halo-blur": 0.5,
       "text-halo-color": "#ffffff",
