@@ -22,7 +22,7 @@ export default function({ messages }) {
     options: { messages, domains }
   });
   this.addTemplate({
-    src: resolve('components', 'cookie.js'),
+    src: resolve('lib', 'cookie.js'),
     fileName: join('plugins', 'cookie.js')
   });
 }
