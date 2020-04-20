@@ -52,8 +52,8 @@ export default {
 
       // Direct coordinates input ?
       let directCoordinates = null;
-      if(/^-?\d+\.\d+[,;]-?\d+\.\d+$/.test(val.trim().replace(/ /g, ''))) {
-        const separator = val.includes(',') ? ',' : ';';
+      if(/^-?\d+\.\d+[,;/]-?\d+\.\d+$/.test(val.trim().replace(/ /g, ''))) {
+        const separator = val.includes(',') ? ',' : (val.includes('/') ? '/' : ';');
         const coordsLatLng = val.split(separator).map(c => parseFloat(c.trim()));
         const bbox = [ coordsLatLng[1] - 0.0005, coordsLatLng[0] - 0.0005, coordsLatLng[1] + 0.0005, coordsLatLng[0] + 0.0005 ];
         directCoordinates = {

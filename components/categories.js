@@ -2,7 +2,12 @@ function filterSubCategories(subcategories, country) {
   return Object.keys(subcategories).reduce((memo, subcategory) => {
     const areas = subcategories[subcategory].areas;
     const minusAreas = subcategories[subcategory]["-areas"];
-    if ((areas && (areas === 'all' || areas.includes(country))) || (minusAreas && !minusAreas.includes(country))) {
+    const minusMapfilter = subcategories[subcategory]["-mapfilter"];
+
+    if (
+      ((areas && (areas === 'all' || areas.includes(country))) || (minusAreas && !minusAreas.includes(country)))
+      && (!minusMapfilter || (minusMapfilter !== "all" && !minusMapfilter.includes(country)))
+    ) {
       memo[subcategory] = subcategories[subcategory];
     }
     return memo;

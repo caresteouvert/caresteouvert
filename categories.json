@@ -65,6 +65,17 @@
             { "office": "insurance" }
           ],
           "areas": "all"
+        },
+        "tourism_info": {
+          "name": "Tourism information",
+          "osm_tags": [
+            { "tourism": "information", "information": "office" }
+          ],
+          "osm_filter_tags": [
+            { "opening_hours:covid19": "*" }
+          ],
+          "areas": "all",
+          "-mapfilter": "all"
         }
       }
     },
@@ -187,7 +198,8 @@
             { "shop": "dairy" },
             { "amenity": "vending_machine", "vending": "milk" }
           ],
-          "areas": "all"
+          "areas": "all",
+          "-mapfilter": [ "FR" ]
         },
         "confectionery": {
           "name": "Confectionery",
@@ -256,6 +268,7 @@
             { "amenity": "vending_machine", "vending": "coffee" }
           ],
           "osm_filter_tags": [
+            { "opening_hours:covid19": "*" },
             { "delivery": "yes|only" },
             { "takeaway": "yes|only" },
             { "delivery:covid19": "yes|only" },
@@ -267,6 +280,7 @@
           "name": "Bar",
           "osm_tags": [ { "amenity": "bar|pub" } ],
           "osm_filter_tags": [
+            { "opening_hours:covid19": "*" },
             { "delivery": "yes|only" },
             { "takeaway": "yes|only" },
             { "delivery:covid19": "yes|only" },
@@ -447,7 +461,8 @@
         "bicycle_tube": {
           "name": "Bicycle tube vending machine",
           "osm_tags": [ { "amenity": "vending_machine", "vending": "bicycle_tube" } ],
-          "areas": "all"
+          "areas": "all",
+          "-mapfilter": [ "FR" ]
         },
         "public_transport_tickets": {
           "name": "Public transport ticket machine",
