@@ -152,7 +152,7 @@
 <script>
 import OpeningHoursParser from './OpeningHoursParser';
 import { apiUrl } from '../config.json';
-import OpeningHoursEditor from './opening_hours_editor';
+import OpeningHoursEditor from './opening_hours_editor/editor';
 import parseId from './parse_id';
 
 export default {

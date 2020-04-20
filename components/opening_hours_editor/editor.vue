@@ -93,7 +93,7 @@
 </template>
 
 <script>
-import OpeningHoursEditorInterval from './opening_hours_editor_interval';
+import OpeningHoursEditorInterval from './interval';
 import EditHour from './edit_hour';
 
 export default {
