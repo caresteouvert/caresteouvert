@@ -46,72 +46,74 @@ import {
 
 const source = "public.poi_osm_light";
 
-const layers = [
-  {
-    id: "poi-background",
-    type: "circle",
-    "source-layer": source,
-    paint: {
-     'circle-color': 'white',
-     'circle-stroke-width': 3,
-     'circle-stroke-color': [
-        'case',
-        ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], "green",
-        ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], "gray",
-        "#96281b"
-     ],
-      'circle-radius': [
-        'interpolate',
-        ['linear'],
-        ['zoom'],
-        14, 3,
-        19, 14
-      ]
-    }
-  },
-  {
-    id: "poi-icon",
-    type: "symbol",
-    "source-layer": source,
-    minzoom: 15,
-    "layout": {
-      "icon-image": [
-        "coalesce",
-        ['image', ['get', 'cat']],
-        ['image', ['get', 'normalized_cat']],
-        ['image', 'other']
-      ],
-      "icon-size": [
-        'interpolate',
-        ['linear'],
-        ['zoom'],
-        14, 0.3,
-        19, 0.9
-      ],
-      "text-anchor": "top",
-      "text-field": ["get", "name"],
-      "text-font": [
-        "Noto Sans Regular"
-      ],
-      "text-max-width": 9,
-      "text-offset": [
-        'interpolate',
-        ['linear'],
-        ['zoom'],
-        14, ['literal', [0, 0]],
-        19, ['literal', [0, 1.5]]
-      ],
-      "text-padding": 2,
-      "text-size": 12
+function getLayers(theme) {
+  return [
+    {
+      id: "poi-background",
+      type: "circle",
+      "source-layer": source,
+      paint: {
+       'circle-color': 'white',
+       'circle-stroke-width': 3,
+       'circle-stroke-color': [
+          'case',
+          ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], theme.success,
+          ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], "gray",
+          theme.error
+       ],
+        'circle-radius': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          14, 3,
+          19, 14
+        ]
+      }
     },
-    paint: {
-      "text-color": "#666",
-      "text-halo-blur": 0.5,
-      "text-halo-color": "#ffffff",
-      "text-halo-width": 1
+    {
+      id: "poi-icon",
+      type: "symbol",
+      "source-layer": source,
+      minzoom: 15,
+      "layout": {
+        "icon-image": [
+          "coalesce",
+          ['image', ['get', 'cat']],
+          ['image', ['get', 'normalized_cat']],
+          ['image', 'other']
+        ],
+        "icon-size": [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          14, 0.3,
+          19, 0.9
+        ],
+        "text-anchor": "top",
+        "text-field": ["get", "name"],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-max-width": 9,
+        "text-offset": [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          14, ['literal', [0, 0]],
+          19, ['literal', [0, 1.5]]
+        ],
+        "text-padding": 2,
+        "text-size": 12
+      },
+      paint: {
+        "text-color": "#666",
+        "text-halo-blur": 0.5,
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1
+      }
     }
-  }
-];
+  ];
+}
 
 export default {
   components: {
@@ -174,7 +176,7 @@ export default {
 
     layers() {
       const [ category, subcategory ] = this.filter.split('/');
-      return layers.map((layer) => {
+      return getLayers(this.$vuetify.theme.themes.light).map((layer) => {
         const newLayer = { ...layer, filter: ['all'] };
         if (subcategory) {
           newLayer.filter.push(['==', 'cat', subcategory]);
