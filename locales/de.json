@@ -105,7 +105,7 @@
     },
     "state": {
       "open": "Ort weiterhin geöffnet",
-      "open_adapted": "Ort geöffnet mit abweichenden Öffnungszeiten",
+      "open_adapted": "Ort weiterhin geöffnet mit abweichenden Öffnungszeiten",
       "partial": "Dieser Ort gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen? Lass es uns wissen.",
       "unknown": "Dieser Ort ist möglicherweise geöffnet.\n\nGeöffnet oder geschlossen? Lass es uns wissen.",
       "closed": "Ort vorübergehend geschlossen"
