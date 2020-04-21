@@ -5,6 +5,7 @@
   "subtitle": "Llocs que es mantenen oberts durant el confinament",
   "subtitle-dense": "Llocs oberts durant el confinament",
   "search": "Escriu la cerca",
+  "coordinates": "Coordenades",
   "menu": "Menú",
   "missing_shop": "Informa d'una botiga que falta",
   "change_lang": "Canvia de llengua",
@@ -18,12 +19,20 @@
     "press": "Premsa",
     "disclaimer": "Descàrrega de responsabilitat",
     "blog": "Blog",
-    "townhalls": "Ajuntaments, useu «{brand}»!"
+    "townhalls": "Ajuntaments, useu «{brand}»!",
+    "osm_contributors": "Documentació per a col·laboradors de l'OpenStreetMap"
   },
   "rgpd": {
     "consent": "En aquests temps de tancament, vols acceptar una galeta en l'ordinador per a les nostres estadístiques?",
     "yes": "Sí",
     "no": "No"
+  },
+  "apps_info": {
+    "close": "Tanca",
+    "text": "Hi ha disponible l'aplicació mòbil «{brand}»!",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
   },
   "days": {
     "monday": "Dilluns",
@@ -57,17 +66,22 @@
         "title": "Aquest lloc distribueix a domicili",
         "unknown": "No ho sé",
         "yes": "Sí",
-        "only": "Només a domicili",
         "no": "No"
       },
       "takeaway": {
         "title": "El lloc permet fer la compra per a emportar-se-la",
         "unknown": "No ho sé",
         "yes": "Sí",
-        "only": "Només per a emportar-se",
         "no": "No"
       },
-      "details": "Afegeix els detalls requerits durant el confinament"
+      "access": {
+        "title": "Els clients o visitants poden entrar o romandre dins aquest lloc",
+        "unknown": "No ho sé",
+        "yes": "Sí",
+        "no": "No"
+      },
+      "details": "Afegeix els detalls requerits durant el confinament",
+      "details_error": "Això hauria de ser buit o tenir almenys 10 caràcters"
     },
     "submit": "Publica",
     "cancel": "Cancel·la"
@@ -80,6 +94,7 @@
     "containment_brand_hours": "Horari d'obertura a la web de la marca",
     "facebook": "Pàgina de Facebook",
     "not_accessible": "Espai interior no accessible al públic",
+    "capacity": "Capacitat màxima: 0 persones |Capacitat màxima: 1 persona | Capacitat màxima: {count} persones",
     "opening_hours": {
       "state_until_date": "{state} fins {date}",
       "state": {
@@ -126,6 +141,7 @@
     },
     "select_days": "Selecciona els dies que comparteixen el mateix horari d'obertura.",
     "next": "Selecciona les hores",
+    "cancel": "Cancel·la",
     "select_time": {
       "start": "Tria l'horari d'obertura",
       "end": "Tria l'horari de tancament"
@@ -142,18 +158,22 @@
     "other": "Altres llocs",
     "amenity": "Servei",
     "police": "Policia",
+    "townhall": "Ajuntament",
     "post_office": "Oficina de correus",
+    "childcare": "Cura d'infants",
     "employment_agency": "Agència de treball",
     "funeral_directors": "Tanatori i funerària",
     "bank": "Banc",
     "moneylender": "Prestamista",
     "insurance": "Assegurances",
+    "tourism_info": "Informació turística",
     "health": "Salut",
     "pharmacy": "Farmàcia",
-    "condoms": "Màquina de venda de preservatius",
+    "covid19_centre": "Centre de consulta sobre la covid-19",
     "optician": "Òptica",
-    "medical_supply": "Subministres mèdics",
     "hearing_aids": "Audiòfons",
+    "condoms": "Màquina de venda de preservatius",
+    "medical_supply": "Subministres mèdics",
     "food": "Menjar",
     "supermarket": "Supermercat",
     "butcher": "Carnisseria",
@@ -162,6 +182,11 @@
     "seafood": "Ultramarins / Peixateria",
     "greengrocer": "Fruiteria / Verduleria",
     "grocery": "Ultramarins",
+    "chocolate": "Xocolata",
+    "tea": "Te",
+    "coffee": "Cafè",
+    "dairy": "Minimercat",
+    "confectionery": "Llaminadures",
     "farm": "Botiga ramadera",
     "marketplace": "Mercat ambulant",
     "bakery": "Fleca o forn de pa",
@@ -171,6 +196,7 @@
     "fast_food": "Menjar ràpid",
     "ice_cream": "Gelateria",
     "cafe": "Cafeteria",
+    "bar": "Bar",
     "drugs": "Tabac, alcohol i medicaments",
     "tobacco": "Estanc",
     "e_cigarette": "Cigarretes electròniques",
@@ -185,7 +211,7 @@
     "newsagent": "Diaris i quioscos",
     "pet": "Botiga d'animals",
     "agrarian": "Productes agrícoles",
-    "garden_centre": "Jardineria",
+    "flower": "Jardineria o floristeria",
     "chemist": "Adrogueria",
     "fabric": "Fàbrica",
     "books": "Llibreria",
