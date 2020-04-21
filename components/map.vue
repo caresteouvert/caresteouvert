@@ -48,20 +48,20 @@ const source = "public.poi_osm_light";
 
 function getLayers(theme) {
   const conditionalOpacity = [
-    'step',
+    'interpolate', ['linear'],
     ['zoom'],
-    0,
+    0, 0,
     12, [
       'case',
-      ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 0,
+      ["in", ["get", "status"], ["literal", ["unknown", "partial", "closed"]]], 0,
       1
     ],
-    15, [
+    14, [
       'case',
-      ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 0,
+      ["in", ["get", "status"], ["literal", ["unknown", "partial", "closed"]]], 0,
       1
     ],
-    16, 1
+    15, 1
   ];
 
   return [
@@ -73,8 +73,8 @@ function getLayers(theme) {
         'circle-sort-key': [
           'case',
           ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 2,
-          ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 0,
-          1
+          ["in", ["get", "status"], ["literal", ["closed"]]], 1,
+          0
         ]
       },
       paint: {
@@ -83,15 +83,14 @@ function getLayers(theme) {
         'circle-stroke-opacity': conditionalOpacity,
         'circle-stroke-width': [
           'case',
-          ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 2,
           ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 4,
-          3
+          2.5
         ],
         'circle-stroke-color': [
           'case',
           ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], theme.success,
-          ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], "#dfc27d",
-          theme.error
+          ["in", ["get", "status"], ["literal", ["closed"]]], theme.error,
+          "#9E9E9E"
         ],
         'circle-radius': [
           'interpolate',
@@ -100,10 +99,10 @@ function getLayers(theme) {
           12, 0,
           15, [
             'case',
-            ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], 3,
+            ["in", ["get", "status"], ["literal", ["unknown", "partial", "closed"]]], 4,
             6
           ],
-          19, 14
+          19, 13
         ]
       }
     },
@@ -112,7 +111,13 @@ function getLayers(theme) {
       type: "symbol",
       "source-layer": source,
       minzoom: 14,
-      "layout": {
+      layout: {
+        'symbol-sort-key': [
+          'case',
+          ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 0,
+          ["in", ["get", "status"], ["literal", ["closed"]]], 1,
+          2
+        ],
         "icon-image": [
           "coalesce",
           ['image', ['get', 'cat']],
@@ -144,7 +149,13 @@ function getLayers(theme) {
       },
       paint: {
         "icon-opacity": conditionalOpacity,
-        "text-opacity": conditionalOpacity,
+        "text-opacity": [
+          'interpolate', ['linear'],
+          ['zoom'],
+          0, 0,
+          16, 0,
+          17, 1
+        ],
         "text-color": "#666",
         "text-halo-blur": 0.5,
         "text-halo-color": "#ffffff",
