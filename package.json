@@ -48,7 +48,9 @@
     "@vue/test-utils": "^1.0.0-beta.32",
     "icon-font-generator": "^2.1.10",
     "jest-cli": "^25.1.0",
-    "vue-jest": "^4.0.0-0"
+    "vue-jest": "^4.0.0-0",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.42.1"
   },
   "dependencies": {
     "cookie": "^0.4.0",
@@ -63,6 +65,7 @@
     "moment": "^2.24.0",
     "nuxt": "^2.12.2",
     "opening_hours": "^3.5.0",
+    "vue": "^2.6.11",
     "vue-i18n": "^8.12.0",
     "vue-linkify": "^1.0.1",
     "vue-mapbox": "osmontrouge/vue-mapbox#update"

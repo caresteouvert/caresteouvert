@@ -1,4 +1,4 @@
-import parseId from '../components/parse_id';
+import parseId from '../lib/parse_id';
 
 describe('ParseId', () => {
   it('parse a node', () => {

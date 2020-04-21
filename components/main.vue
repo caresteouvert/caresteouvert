@@ -5,8 +5,8 @@
        sm: isMobile,
       'place-opened': $route.name === 'place' && !isMobile,
       'sidebar-opened': sidebar && !isMobile
-     }"
-    >
+    }"
+  >
     <div>
       <v-navigation-drawer
         v-model="sidebar"
@@ -16,11 +16,9 @@
         width="300"
         fixed
       >
-        <osm-sidebar>
-          <osm-filter-features
-            v-model="filter"
-          />
-        </osm-sidebar>
+        <main-menu>
+          <filter-list v-model="filter" />
+        </main-menu>
       </v-navigation-drawer>
       <v-content>
         <top-toolbar
@@ -57,9 +55,9 @@
           v-if="isMobile"
           v-model="filter"
         >
-          <osm-sidebar :show-brand="false">
-            <osm-filter-features v-model="filter" />
-          </osm-sidebar>
+          <main-menu :show-brand="false">
+            <filter-list v-model="filter" />
+          </main-menu>
         </bottom-menu>
       </v-content>
     </div>
@@ -71,11 +69,11 @@
 import { mapGetters } from 'vuex';
 import debounce from 'lodash.debounce';
 import config from '../config.json';
-import { getCookie, setCookie } from './cookie';
-import { encode, decode, encodePosition, decodePosition } from './url';
+import { getCookie, setCookie } from '../lib/cookie';
+import { encode, decode, encodePosition, decodePosition } from '../lib/url';
 import AppsSheet from './apps_sheet';
-import OsmSidebar from './sidebar';
-import OsmFilterFeatures from './filter_features';
+import MainMenu from './main_menu';
+import FilterList from './filter_list';
 import TopToolbar from './top_toolbar';
 import BottomMenu from './bottom_menu';
 import RgpdBanner from './rgpd_banner';
@@ -84,10 +82,10 @@ export default {
   components: {
     AppsSheet,
     BottomMenu,
-    OsmFilterFeatures,
-    OsmSidebar,
+    FilterList,
+    MainMenu,
+    RgpdBanner,
     TopToolbar,
-    RgpdBanner
   },
 
   props: {

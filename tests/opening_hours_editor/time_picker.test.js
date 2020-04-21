@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { shallowMount } from '@vue/test-utils';
-import TimePicker from '../components/time_picker';
+import TimePicker from '../../components/opening_hours_editor/time_picker';
 
 describe('TimePicker', () => {
   const stubs = ['v-time-picker'];

@@ -8,8 +8,8 @@
     @update:zoom="updateMapZoom"
   >
     <MglMarker
-      v-if="poi"
-      :coordinates="poi.geometry.coordinates"
+      v-if="place"
+      :coordinates="place.geometry.coordinates"
       :offset="{ x: 0, y: -15 }"
       color="red"
     />
@@ -203,7 +203,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['poi']),
+    ...mapState(['place']),
 
     poiSource() {
       return {
@@ -228,18 +228,18 @@ export default {
   },
 
   watch: {
-    poi(poi) {
-      if (poi) {
-        const isPoiUnderUI = (x, y) => {
+    place(place) {
+      if (place) {
+        const isPlaceUnderUI = (x, y) => {
           const height = document.body.clientHeight;
           const width = document.body.clientWidth;
           const offsetSidebar = this.sidebar ? 300 : 0;
-          const offsetPoi = this.$vuetify.breakpoint.smAndDown ? 0 : 300;
-          return (x < offsetSidebar || x > width - offsetPoi || y > height || y < 0);
+          const offsetPlace = this.$vuetify.breakpoint.smAndDown ? 0 : 300;
+          return (x < offsetSidebar || x > width - offsetPlace || y > height || y < 0);
         }
-        const { x, y } = this.map.project(poi.geometry.coordinates);
-        if (isPoiUnderUI(x, y)) {
-          this.map.panTo(poi.geometry.coordinates);
+        const { x, y } = this.map.project(place.geometry.coordinates);
+        if (isPlaceUnderUI(x, y)) {
+          this.map.panTo(place.geometry.coordinates);
         }
       }
     }

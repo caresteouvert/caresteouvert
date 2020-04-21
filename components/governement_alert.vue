@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { getCookie, setCookie } from './cookie';
+import { getCookie, setCookie } from '../lib/cookie';
 import i18nMixin from './mixins/i18n';
 
 export default {

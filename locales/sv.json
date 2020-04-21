@@ -1,0 +1,226 @@
+{
+  "lang": "Svenska",
+  "covid19-alert": "Följ myndigheternas anvisningar. Du bär ansvaret.",
+  "title": "Vi har öppet",
+  "subtitle": "Ställen som är öppna under nedstängningen",
+  "subtitle-dense": "Öppna ställen under nedstängningen",
+  "search": "Skriv sökord",
+  "coordinates": "Koordinater",
+  "menu": "Meny",
+  "missing_shop": "Rapportera butik som saknas",
+  "change_lang": "Byt språk",
+  "zoomtosee": "Zooma in för att se öppna ställen",
+  "learnmore": {
+    "about": "Information",
+    "contribute": "Delta",
+    "missing_shop": "Rapportera butik som saknas",
+    "description": "« {brand} » är en service vars avsikt är att minska onödig trafik och minimera smittorisken under coronaisoleringen. Med hjälp av kartservicen kan du enkelt dela med dig information om öppettiderna för serviceställena i din närhet. Ett efektivt sätt att underlätta livet för dina grannar! ",
+    "title": "Läs mer",
+    "press": "Press",
+    "disclaimer": "Ansvarsfriskrivning",
+    "blog": "Blog",
+    "townhalls": "Städer och kommuner, här har ni « {brand} » till ert förfogande!",
+    "osm_contributors": "Dokumentation för OpenStreetMap-gemenskapen"
+  },
+  "rgpd": {
+    "consent": "Godkänner du lagrandet av cookies för användarstatiska ändamål?",
+    "yes": "Ja",
+    "no": "Nej"
+  },
+  "apps_info": {
+    "close": "Stäng",
+    "text": "Mobilappen « {brand} » nu tillgänglig !",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
+  },
+  "days": {
+    "monday": "Måndag",
+    "tuesday": "Tisdag",
+    "wednesday": "Onsdag",
+    "thursday": "Torsdag",
+    "friday": "Fredag",
+    "saturday": "Lördag",
+    "sunday": "Söndag",
+    "ph": "Allmänna helgdagar"
+  },
+  "contribute_form": {
+    "title": "Delta",
+    "step1": {
+      "title": "Är denna plats öppen under nedstängningen?",
+      "open": {
+        "yes": "ja",
+        "no": "nej"
+      }
+    },
+    "step2": {
+      "title": "Öppettider under nedstängningen",
+      "same_hours": "Samma öppettider",
+      "same_hours_without_lockdown": "Samma öppettider som normalt",
+      "dont_know": "Vet ej",
+      "continue": "Fortsätt"
+    },
+    "step3": {
+      "title": "Ange information",
+      "delivery": {
+        "title": "Stället erbjuder hemleverans",
+        "unknown": "Vet ej",
+        "yes": "Ja",
+        "no": "Nej"
+      },
+      "takeaway": {
+        "title": "Stället erbjuder take-away",
+        "unknown": "Vet ej",
+        "yes": "Ja",
+        "no": "Nej"
+      },
+      "access": {
+        "title": "Tillträde inomhus tillåtet",
+        "unknown": "Vet ej",
+        "yes": "Ja",
+        "no": "Nej"
+      },
+      "details": "Du kan ange ytterligare information",
+      "details_error": "Bör vara antingen tomt eller åtminstone 10 märken långt"
+    },
+    "submit": "Publicera",
+    "cancel": "Avbryt"
+  },
+  "details": {
+    "signal_warning": "Du höll på att skriva en rapport. Den sparades ej. Vill du fortsätta?",
+    "signal": "Rapportera ändrade uppgifter",
+    "signal_done": "Din rapport har registrerats. Tack så mycket! Behandlingen tar en stund.",
+    "containment_opening_hours": "Öppettider utanför nedstängningsperioden",
+    "containment_brand_hours": "Se öppettider på servicens hemsida",
+    "facebook": "Facebook sida",
+    "not_accessible": "Tillträde inomhus förbjudet",
+    "capacity": "Maximal kapacitet : 0 personer | Maximal kapacitet : 1 person | Maximal kapacitet : {count} personer",
+    "opening_hours": {
+      "state_until_date": "{state} till {date}",
+      "state": {
+        "open": "öppet",
+        "closed": "stängt"
+      },
+      "tomorrow": "i morgon"
+    },
+    "state": {
+      "open": "Stället är öppet under nedstängningen",
+      "open_adapted": "Stället är öppet unde nedstängningen, med anpassade öppettider",
+      "partial": "Stället tillhör en kedja vars serviceställen är delvis öppna under nedstängningen. Låt oss veta om det är öppet eller stängt.",
+      "unknown": "Detta stället har rätt att hålla öppet under nedstängningen. Låt oss veta om det är öppet? ",
+      "closed": "Stället är stängt under nedstängningen"
+    },
+    "delivery": {
+      "yes": "Hemleverans tillgänglig",
+      "only": "Endast hemleverans"
+    },
+    "takeaway": {
+      "yes": "Take-away service tillgänglig",
+      "modified": "Modifierad take-away service",
+      "only": "Endast take-away service"
+    },
+    "drive_through": {
+      "yes": "Drive-in service tillgänglig",
+      "only": "Endast drive-in service"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Frimärken",
+      "parcel_mail_in": "Paketinlämning",
+      "parcel_pickup": "Paketavhämtning",
+      "parcel_pickup;parcel_mail_in": "Avhämtning och inlämning av paket",
+      "milk": "Mjölk",
+      "drinks": "Drycker",
+      "water": "Vatten",
+      "sweets": "Godis"
+    }
+  },
+  "opening_hours_editor": {
+    "day_shortcuts": {
+      "weekdays": "Måndag till lördag"
+    },
+    "select_days": "Välj de dagar som har samma öppettider",
+    "next": "Nästa",
+    "cancel": "Avbryt",
+    "select_time": {
+      "start": "Öppnar kl.",
+      "end": "Stänger kl. "
+    },
+    "add_interval": "Ange öppettider",
+    "add_new_days": "Ange dagar"
+  },
+  "osm_link": {
+    "title": "« {brand} » använder OpenStreetMap data.",
+    "view": "Visa",
+    "edit": "Editera"
+  },
+  "categories": {
+    "other": "Andra platser",
+    "amenity": "Service",
+    "police": "Polis",
+    "townhall": "Stadshus",
+    "post_office": "Post",
+    "childcare": "Barnomsorg",
+    "employment_agency": "Arbetsförmedling",
+    "funeral_directors": "Begravningsbyrå",
+    "bank": "Bank",
+    "moneylender": "Lån av pengar",
+    "insurance": "Försäkring",
+    "tourism_info": "Turistinformation",
+    "health": "Hälsovård",
+    "pharmacy": "Apotek",
+    "covid19_centre": "Coronavirus informationscenter",
+    "optician": "Optiker",
+    "hearing_aids": "Hörapparater",
+    "condoms": "Kondomautomat",
+    "medical_supply": "Hälsovårdsmaterial",
+    "food": "Mat",
+    "supermarket": "Stormarknad",
+    "butcher": "Charkuteri",
+    "cheese": "Ost",
+    "convenience": "Snabbköp",
+    "seafood": "Fiskaffär",
+    "greengrocer": "Grönsaker",
+    "grocery": "Livsmedel",
+    "chocolate": "Choklad",
+    "tea": "Te",
+    "coffee": "Kaffe",
+    "dairy": "Mejeriprodukter",
+    "confectionery": "Konditori",
+    "farm": "Lantbrukshandel",
+    "marketplace": "Torg",
+    "bakery": "Bageri",
+    "eat": "Restaurang & take-away",
+    "vending_machine": "Varuautomat",
+    "restaurant": "Restaurang",
+    "fast_food": "Snabbmat",
+    "ice_cream": "Glass",
+    "cafe": "Cafe",
+    "bar": "Bar",
+    "drugs": "Alkohol och tobak",
+    "tobacco": "Tobak",
+    "e_cigarette": "E-cigaretter",
+    "alcohol": "Alkohol",
+    "shop": "Affärer",
+    "hardware": "Järnhandel",
+    "mobile_phone": "Mobiltelefon",
+    "computer": "Datorer",
+    "electronics": "Elektronik",
+    "laundry": "Tvättservice",
+    "stationery": "Papper",
+    "newsagent": "Tidningskiosk",
+    "pet": "Djuraffär",
+    "agrarian": "Lantbruksprodukter",
+    "flower": "Trädgård / blommor",
+    "chemist": "Kemikalier",
+    "fabric": "Textilaffär",
+    "books": "Bokhandel",
+    "mobility": "Trafik",
+    "fuel": "Bensinstation",
+    "car_rental": "Biluthyrning",
+    "bicycle": "Cykelaffär",
+    "car": "Bilverkstad",
+    "bicycle_tube": "Cykeldäcksautomat",
+    "public_transport_tickets": "Försäljning av kollektivtrafikbiljetter"
+  }
+}

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import EditHour from '../components/edit_hour';
-import TimePicker from '../components/time_picker';
+import EditHour from '../../components/opening_hours_editor/edit_hour';
+import TimePicker from '../../components/opening_hours_editor/time_picker';
 
 describe('EditHour', () => {
   let localVue;

@@ -150,16 +150,16 @@
 </template>
 
 <script>
-import OpeningHoursParser from './OpeningHoursParser';
 import { apiUrl } from '../config.json';
-import OpeningHoursEditor from './opening_hours_editor';
-import parseId from './parse_id';
+import OpeningHoursParser from '../lib/opening_hours_parser';
+import parseId from '../lib/parse_id';
+import OpeningHoursEditor from './opening_hours_editor/editor';
 
 export default {
   components: { OpeningHoursEditor },
 
   props: {
-    point: {
+    place: {
       type: Object,
       required: true
     }
@@ -205,7 +205,7 @@ export default {
 
   computed: {
     properties() {
-      return this.point.properties;
+      return this.place.properties;
     },
 
     hasOpeningHours() {
@@ -229,13 +229,12 @@ export default {
     },
 
     id() {
-      const { type, id } = parseId(this.point.id);
+      const { type, id } = parseId(this.place.id);
       return `${type}/${id}`;
     },
 
     payload() {
-      const lat = this.point.geometry.coordinates[1];
-      const lon = this.point.geometry.coordinates[0];
+      const [ lon, lat ] = this.place.geometry.coordinates;
       return {
         name: this.properties.name,
         state: this.open ? 'open' : 'closed',

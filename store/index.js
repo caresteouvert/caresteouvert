@@ -1,10 +1,10 @@
 import categories from '../categories.json';
-import categoriesForCountry from '../components/categories';
+import categoriesForCountry from '../lib/categories';
 
 export const state = () => ({
   country: '',
   categories: [],
-  poi: null
+  place: null
 });
 
 export const mutations = {
@@ -12,8 +12,8 @@ export const mutations = {
     state.country = country;
   },
 
-  setPoi (state, poi) {
-    state.poi = poi;
+  setPlace (state, place) {
+    state.place = place;
   }
 };
 

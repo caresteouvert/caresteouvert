@@ -1,12 +1,12 @@
 <template>
-  <v-row>
-    <v-col class="col-2">
+  <v-row no-gutters>
+    <v-col class="col-1">
       <img
         src="~/assets/openstreetmap.svg"
         class="logo"
        />
     </v-col>
-    <v-col class="col-10 body-2">
+    <v-col class="col-11 body-2 pl-2">
       {{ $t('osm_link.title', { brand }) }}
       <br>
       <v-btn
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import parseId from './parse_id';
+import parseId from '../lib/parse_id';
 import i18nMixin from './mixins/i18n';
 
 export default {

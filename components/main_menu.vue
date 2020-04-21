@@ -23,7 +23,7 @@
     <slot />
     <v-list>
       <v-divider></v-divider>
-      <sidebar-list-item
+      <main-menu-list-item
         :title="$t('missing_shop')"
         :href="links.shopMissing"
         icon="plus"
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import SidebarListItem from './sidebar_list_item';
+import MainMenuListItem from './main_menu_list_item';
 import ChangeLanguage from './change_language';
 import LearnMore from './learn_more';
 import GovernementAlert from './governement_alert';
@@ -47,7 +47,7 @@ export default {
     ChangeLanguage,
     GovernementAlert,
     LearnMore,
-    SidebarListItem,
+    MainMenuListItem,
   },
 
   mixins: [i18nMixin],
