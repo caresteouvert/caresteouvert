@@ -106,8 +106,8 @@
     "state": {
       "open": "Lieu ouvert durant le confinement",
       "open_adapted": "Lieu ouvert durant le confinement avec des horaires adaptés",
-      "partial": "Lieu potentiellement ouvert durant le confinement (à vérifier)",
-      "unknown": "Lieu légalement autorisé à ouvrir durant le confinement, mais est-il vraiment ouvert ou fermé ? À vous de le dire",
+      "partial": "Lieu appartenant à une enseigne dont les établissements sont partiellement ouverts. Ouvert ou fermé ? À vous de le dire.",
+      "unknown": "Lieu potentiellement ouvert durant le confinement pour proposer ses services habituels ou de nouveaux. Ouvert ou fermé ? À vous de le dire.",
       "closed": "Lieu fermé durant le confinement"
     },
     "delivery": {
