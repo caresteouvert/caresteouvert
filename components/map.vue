@@ -47,26 +47,63 @@ import {
 const source = "public.poi_osm_light";
 
 function getLayers(theme) {
+  const conditionalOpacity = [
+    'interpolate', ['linear'],
+    ['zoom'],
+    0, 0,
+    12, [
+      'case',
+      ["in", ["get", "status"], ["literal", ["unknown", "partial", "closed"]]], 0,
+      1
+    ],
+    14, [
+      'case',
+      ["in", ["get", "status"], ["literal", ["unknown", "partial", "closed"]]], 0,
+      1
+    ],
+    15, 1
+  ];
+
   return [
     {
       id: "poi-background",
       type: "circle",
       "source-layer": source,
+      layout: {
+        'circle-sort-key': [
+          'case',
+          ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 2,
+          ["in", ["get", "status"], ["literal", ["closed"]]], 1,
+          0
+        ]
+      },
       paint: {
-       'circle-color': 'white',
-       'circle-stroke-width': 3,
-       'circle-stroke-color': [
+        'circle-color': 'white',
+        'circle-opacity': conditionalOpacity,
+        'circle-stroke-opacity': conditionalOpacity,
+        'circle-stroke-width': [
+          'case',
+          ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 4,
+          2.5
+        ],
+        'circle-stroke-color': [
           'case',
           ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], theme.success,
-          ["in", ["get", "status"], ["literal", ["unknown", "partial"]]], "gray",
-          theme.error
-       ],
+          ["in", ["get", "status"], ["literal", ["closed"]]], theme.error,
+          "#9E9E9E"
+        ],
         'circle-radius': [
           'interpolate',
           ['linear'],
           ['zoom'],
-          14, 3,
-          19, 14
+          12, 0,
+          14, 2,
+          15, [
+            'case',
+            ["in", ["get", "status"], ["literal", ["unknown", "partial", "closed"]]], 4,
+            6
+          ],
+          19, 13
         ]
       }
     },
@@ -75,7 +112,13 @@ function getLayers(theme) {
       type: "symbol",
       "source-layer": source,
       minzoom: 15,
-      "layout": {
+      layout: {
+        'symbol-sort-key': [
+          'case',
+          ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 0,
+          ["in", ["get", "status"], ["literal", ["closed"]]], 1,
+          2
+        ],
         "icon-image": [
           "coalesce",
           ['image', ['get', 'cat']],
@@ -106,6 +149,14 @@ function getLayers(theme) {
         "text-size": 12
       },
       paint: {
+        "icon-opacity": conditionalOpacity,
+        "text-opacity": [
+          'interpolate', ['linear'],
+          ['zoom'],
+          0, 0,
+          16, 0,
+          17, 1
+        ],
         "text-color": "#666",
         "text-halo-blur": 0.5,
         "text-halo-color": "#ffffff",
