@@ -97,6 +97,7 @@ function getLayers(theme) {
           ['linear'],
           ['zoom'],
           12, 0,
+          14, 2,
           15, [
             'case',
             ["in", ["get", "status"], ["literal", ["unknown", "partial", "closed"]]], 4,
@@ -110,7 +111,7 @@ function getLayers(theme) {
       id: "poi-icon",
       type: "symbol",
       "source-layer": source,
-      minzoom: 14,
+      minzoom: 15,
       layout: {
         'symbol-sort-key': [
           'case',
