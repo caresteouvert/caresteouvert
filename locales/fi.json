@@ -2,24 +2,24 @@
   "lang": "suomi",
   "covid19-alert": "Seuraa viranomaisten määräyksiä. Vastuu on yksinomaan sinun!",
   "title": "Ollaan auki",
-  "subtitle": "Eristyksen aikana avoinna pysyvät paikat",
+  "subtitle": "Eristyksen aikana auki olevat paikat",
   "subtitle-dense": "Eristyksen aikana avoimet paikat",
   "search": "Kirjoita hakusana",
   "coordinates": "Koordinaatit",
   "menu": "Valikko",
-  "missing_shop": "Ilmoita puuttuva kauppa",
+  "missing_shop": "Ilmoita puuttuva palvelu",
   "change_lang": "Vaihda kieli",
   "zoomtosee": "Zoomaa lähemmäs nähdäksesi avoimet paikat",
   "learnmore": {
     "about": "Tietoja",
     "contribute": "Osallistu",
     "missing_shop": "Ilmoita puuttuva kauppa",
-    "description": "« {brand} » on palvelu tarpeettoman liikkumisen vähentämiseksi ja tartuntariskin minimoimiseksi koronaviruseristyksen aikana.\nKarttapalvelun avulla voit helposti jakaa tietoa lähiympäristösi palveluiden poikkeusaukioloista. Tehokkain tapa helpottaa naapureittesi elämää!",
+    "description": "{brand} on palvelu tarpeettoman liikkumisen vähentämiseksi ja tartuntariskin minimoimiseksi koronaviruseristyksen aikana.\nKarttapalvelun avulla voit helposti jakaa tietoa lähiympäristösi palveluiden poikkeusaukioloista. Tehokkain tapa helpottaa naapureidesi elämää!",
     "title": "Lue lisää",
-    "press": "Lehdistölle",
+    "press": "Medialle",
     "disclaimer": "Vastuuvapauslauseke",
     "blog": "Blogi",
-    "townhalls": "Kaupungit ja kunnat, tässä käyttöönne « {brand} »!",
+    "townhalls": "Kaupungit ja kunnat, tässä käyttöönne {brand}!",
     "osm_contributors": "Dokumentaatio OpenStreetMap-yhteisölle"
   },
   "rgpd": {
@@ -29,7 +29,7 @@
   },
   "apps_info": {
     "close": "Sulje",
-    "text": "Mobiilisovellus  « {brand} » on nyt saatavilla!",
+    "text": "Mobiilisovellus {brand} on nyt saatavilla!",
     "googleplay": "Google Play",
     "apple": "Apple Store",
     "fdroid": "F-Droid"
