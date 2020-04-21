@@ -69,7 +69,7 @@
         "no": "Ei"
       },
       "takeaway": {
-        "title": "Take away -myyntiä",
+        "title": "Noutomyyntiä",
         "unknown": "En tiedä",
         "yes": "Kyllä",
         "no": "Ei"
@@ -115,9 +115,9 @@
       "only": "Vain kotiinkuljetuksella"
     },
     "takeaway": {
-      "yes": "Take away -myyntiä",
-      "modified": "Tavanomaisesta poikkeavaa take away -myyntiä",
-      "only": "Vain take away -myyntiä"
+      "yes": "Noutomyyntiä",
+      "modified": "Tavanomaisesta poikkeavaa noutomyyntiä",
+      "only": "Vain noutomyyntiä"
     },
     "drive_through": {
       "yes": "Drive in -palvelu",
@@ -166,6 +166,7 @@
     "bank": "Pankki",
     "moneylender": "Rahanlainaamo",
     "insurance": "Vakuutus",
+    "tourism_info": "Matkailuneuvonta",
     "health": "Terveydenhoito",
     "pharmacy": "Apteekki",
     "covid19_centre": "Koronavirusneuvonta",
@@ -189,7 +190,7 @@
     "farm": "Maatilapuoti",
     "marketplace": "Tori",
     "bakery": "Leipomo",
-    "eat": "Ravintola & take away",
+    "eat": "Ravintolat & noutomyynti",
     "vending_machine": "Automaatti",
     "restaurant": "Ravintola",
     "fast_food": "Pikaruoka",
@@ -220,6 +221,6 @@
     "bicycle": "Polkupyöräkauppa",
     "car": "Huoltamo",
     "bicycle_tube": "Polkupyörän kumien myyntiautomaatti",
-    "public_transport_tickets": "Julkisen liikenteen lippuautomaatti"
+    "public_transport_tickets": "Joukkoliikenteen lipunmyynti"
   }
 }
