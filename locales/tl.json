@@ -106,7 +106,7 @@
     "state": {
       "open": "Bukás habang may lockdown",
       "open_adapted": "Bukás habang may lockdown. Ang puesto ay nag-iba ng oras",
-      "partial": "Maaring bukás habang may lockdown (kailangan siyasatin)",
+      "partial": "Ang puesto ay sangay ng isang taták  na pinahintulutang mg-bukás habang may lockdown. Bukás o Sarado ? Ipa-alam sa amin.",
       "unknown": "Pinahintulutan ang pagbu-bukás habang may lockdown. Bukás o Sarado ? Ipa-alam sa amin.",
       "closed": "Sarado ang puwesto habang may lockdown."
     },
@@ -116,7 +116,7 @@
     },
     "takeaway": {
       "yes": "Maaring mag-takeout",
-      "modified": "Maaring mag-turing ng-takeout",
+      "modified": "Maaring takeout na turing",
       "only": "Take-out lang"
     },
     "drive_through": {
@@ -158,6 +158,7 @@
     "other": "Iba pang lugar",
     "amenity": "Serbisyo",
     "police": "Pulis",
+    "townhall": "Bahay-pamahalaan",
     "post_office": "Koreo",
     "childcare": "Paalagaan ng mga bata",
     "employment_agency": "Ahensiya ng Trabaho",
@@ -165,6 +166,7 @@
     "bank": "Banko",
     "moneylender": "Usurero",
     "insurance": "Paseguruhan",
+    "tourism_info": "Tourism information",
     "health": "Kalusugan",
     "pharmacy": "Botika",
     "covid19_centre": "Sanggunian pang-Covid-19 ",
@@ -195,7 +197,7 @@
     "ice_cream": "Sorbetes",
     "cafe": "Kapihan",
     "bar": "Bar",
-    "drugs": "Gamot",
+    "drugs": "Tabako & Alkohol",
     "tobacco": "Tabako",
     "e_cigarette": "E-cigarette",
     "alcohol": "Tindahan ng bino at alak",
