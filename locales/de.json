@@ -1,6 +1,6 @@
 {
   "lang": "Deutsch",
-  "covid19-alert": "Bitte befolge die Anweisungen der zuständigen Behörden.",
+  "covid19-alert": "Bitte folge den Anweisungen der zuständigen Behörden.",
   "title": "Bleibt offen",
   "subtitle": "Alle Geschäfte, die weiterhin geöffnet sind.",
   "subtitle-dense": "Apotheke, Bäcker & Co.",
@@ -29,7 +29,7 @@
   },
   "apps_info": {
     "close": "Close",
-    "text": "Die Handy-App \"{brand}\" ist jetzt verfügbar!",
+    "text": "Die Handy-App „{brand}“ ist jetzt verfügbar!",
     "googleplay": "Google Play",
     "apple": "Apple Store",
     "fdroid": "F-Droid"
@@ -63,24 +63,24 @@
     "step3": {
       "title": "Details hinzufügen",
       "delivery": {
-        "title": "Lieferung möglich",
+        "title": "Lieferung möglich?",
         "unknown": "Weiß ich nicht",
-        "yes": "Ja",
-        "no": "Nein"
+        "yes": "Ja, Lieferung möglich",
+        "no": "Nein, Lieferung nicht möglich"
       },
       "takeaway": {
-        "title": "Dieses Geschäft bietet Speisen zur Abholung an.",
+        "title": "Abholung möglich?",
         "unknown": "Weiß ich nicht",
-        "yes": "Ja",
-        "no": "Nein"
+        "yes": "Ja, Abholung möglich",
+        "no": "Nein, Abholung nicht möglich"
       },
       "access": {
-        "title": "Dieser Ort ist öffentlich zugänglich",
-        "unknown": "Ich weiß es nicht",
-        "yes": "Ja",
-        "no": "No"
+        "title": "Kann ich den Ort betreten oder mich darin aufhalten?",
+        "unknown": "Weiß ich nicht",
+        "yes": "Ja, kann betreten werden",
+        "no": "Nein, kann nicht betreten werden"
       },
-      "details": "Wichtige Anmerkungen (optional, erfordert eine manuelle Prüfung durch die OpenStreetMap-Community)\n",
+      "details": "Wichtige Anmerkungen (optional, erfordert eine manuelle Prüfung durch die OpenStreetMap-Community)",
       "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein"
     },
     "submit": "Veröffentlichen",
