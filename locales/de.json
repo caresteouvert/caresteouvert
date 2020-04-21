@@ -23,12 +23,12 @@
     "osm_contributors": "Dokumentation für OSM-Mitwirkende"
   },
   "rgpd": {
-    "consent": "Akzeptierst du einen Cookie auf deinem Computer für unsere Statistiken?",
+    "consent": "Akzeptierst du Cookies auf deinem Computer für unsere Statistiken?",
     "yes": "Ja",
     "no": "Nein"
   },
   "apps_info": {
-    "close": "Close",
+    "close": "Schließen",
     "text": "Die Handy-App „{brand}“ ist jetzt verfügbar!",
     "googleplay": "Google Play",
     "apple": "Apple Store",
