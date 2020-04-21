@@ -14,7 +14,7 @@
     "about": "Über",
     "contribute": "Mitmachen",
     "missing_shop": "Fehlendes Geschäft melden",
-    "description": "„{brand}“ ist ein unverzichtbares Werkzeug, wenn es um die Suche nach offenen Geschäften in deiner Nachbarschaft geht. So vermeidest du einen erfolglosen Besuch beim Bäcker um die Ecke und minimierst das Risiko einer Ansteckung.\n\nDiese Karte wird gemeinschaftlich von Menschen wie dir gepflegt. So kannst du Orte in deiner Nachbarschaft ganz einfach selbst als offen oder geschlossen markieren, Öffnungszeiten eintragen und auf Liefer- und Abholmöglichkeiten hinweisen.\n\nAuf diese effektive und einheitliche Weise trägst du aktiv dazu bei, die Menschen in deiner Nachbarschaft und deiner Stadt besser zu informieren.",
+    "description": "„{brand}“ ist eine gemeinschaftliche Karte aller Geschäfte, die weiterhin geöffnet sind. Suche & melde offene Geschäfte in deiner Umgebung!\n\nDiese Karte ist ein unverzichtbares Werkzeug in der aktuellen Krise. So vermeidest du einen erfolglosen Besuch beim Bäcker um die Ecke und minimierst das Risiko einer Ansteckung.\n\nDiese Karte wird gemeinschaftlich von Menschen wie dir gepflegt. Du kannst Orte in deiner Nachbarschaft ganz einfach selbst als offen oder geschlossen markieren, Öffnungszeiten eintragen und auf angebotene Lieferung oder Abholung hinweisen.\n\nAuf diese effektive und einheitliche Weise leistest du einen aktiven Beitrag dazu, die Menschen in deiner Nachbarschaft und deiner Stadt besser zu informieren.",
     "title": "Mehr erfahren",
     "press": "Presse",
     "disclaimer": "Impressum & Datenschutz",
@@ -23,12 +23,12 @@
     "osm_contributors": "Dokumentation für OSM-Mitwirkende"
   },
   "rgpd": {
-    "consent": "Akzeptierst du einen Cookie auf deinem Computer für unsere Statistiken?",
+    "consent": "Akzeptierst du Cookies auf deinem Computer für unsere Statistiken?",
     "yes": "Ja",
     "no": "Nein"
   },
   "apps_info": {
-    "close": "Close",
+    "close": "Schließen",
     "text": "Die Handy-App „{brand}“ ist jetzt verfügbar!",
     "googleplay": "Google Play",
     "apple": "Apple Store",
@@ -101,13 +101,13 @@
         "open": "Geöffnet",
         "closed": "Geschlossen"
       },
-      "tomorrow": "Morgen"
+      "tomorrow": "morgen"
     },
     "state": {
       "open": "Ort weiterhin geöffnet",
-      "open_adapted": "Ort geöffnet mit abweichenden Öffnungszeiten",
-      "partial": "Dieser Ort gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen? Lass es uns wissen.",
-      "unknown": "Dieser Ort ist möglicherweise geöffnet.\n\nGeöffnet oder geschlossen? Lass es uns wissen.",
+      "open_adapted": "Ort weiterhin geöffnet mit abweichenden Öffnungszeiten",
+      "partial": "Dieser Ort gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
+      "unknown": "Dieser Ort ist möglicherweise geöffnet.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
       "closed": "Ort vorübergehend geschlossen"
     },
     "delivery": {
@@ -121,7 +121,7 @@
     },
     "drive_through": {
       "yes": "Drive-in geöffnet",
-      "only": "Nur im Drive-in"
+      "only": "Nur Drive-in"
     },
     "vending": {
       "pizza": "Pizza",
@@ -132,7 +132,7 @@
       "milk": "Milch",
       "drinks": "Getränke",
       "water": "Wasser",
-      "sweets": "Süßigkeiten"
+      "sweets": "Süßwaren"
     }
   },
   "opening_hours_editor": {
@@ -176,7 +176,7 @@
     "medical_supply": "Sanitätshaus",
     "food": "Lebensmittel",
     "supermarket": "Supermarkt",
-    "butcher": "Metzger",
+    "butcher": "Metzgerei",
     "cheese": "Käse",
     "convenience": "Lebensmittelgeschäft",
     "seafood": "Fisch",
@@ -191,7 +191,7 @@
     "marketplace": "Wochenmarkt",
     "bakery": "Bäckerei",
     "eat": "Restaurant & Abholung",
-    "vending_machine": "Verkaufsaufomat",
+    "vending_machine": "Verkaufsautomat",
     "restaurant": "Restaurant",
     "fast_food": "Schnellimbiss",
     "ice_cream": "Eis",
@@ -199,7 +199,7 @@
     "bar": "Kneipe",
     "drugs": "Tabak & Alkohol",
     "tobacco": "Tabakwaren",
-    "e_cigarette": "E-Zigarette",
+    "e_cigarette": "E-Zigaretten",
     "alcohol": "Alkoholgeschäft",
     "shop": "Geschäfte",
     "hardware": "Baubedarf",
