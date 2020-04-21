@@ -5,6 +5,7 @@
   "subtitle": "Luoghi che rimangono aperti durante il lockdown",
   "subtitle-dense": "Luoghi aperti durante il lockdown",
   "search": "Digita la tua ricerca",
+  "coordinates": "Coordinate",
   "menu": "Menu",
   "missing_shop": "Riporta un negozio mancate",
   "change_lang": "Cambia lingua",
@@ -18,12 +19,20 @@
     "press": "Stampa",
     "disclaimer": "Esclusione di responsabilità",
     "blog": "Blog",
-    "townhalls": "Questi comuni usano «{brand}»!"
+    "townhalls": "Soluzione di comunicazione in caso di crisi per i comuni",
+    "osm_contributors": "Documentazione per i contributori di OpenStreetMap"
   },
   "rgpd": {
     "consent": "In questi tempi di blocco, accetteresti un cookie sul tuo computer per le nostre statistiche?",
     "yes": "Sì",
     "no": "No"
+  },
+  "apps_info": {
+    "close": "Chiudi",
+    "text": "È adesso disponibile la app « {brand} » per dispositivi mobili!",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
   },
   "days": {
     "monday": "Lunedì",
@@ -57,17 +66,22 @@
         "title": "Questo locale offre la consegna a domicilio",
         "unknown": "Non lo so",
         "yes": "Sì",
-        "only": "Offre esclusivamente servizio di consegna a domicilio",
         "no": "No"
       },
       "takeaway": {
         "title": "Questa attività commerciale permette l'acquisto d'asporto",
         "unknown": "Non lo so",
         "yes": "Sì",
-        "only": "Solo asporto",
         "no": "No"
       },
-      "details": "Aggiungi dettagli necessari durante il blocco"
+      "access": {
+        "title": "Le persone possono entrare o rimanere all'interno di questo luogo",
+        "unknown": "Non lo so",
+        "yes": "Sì",
+        "no": "No"
+      },
+      "details": "Aggiungi dettagli necessari durante il blocco",
+      "details_error": "Dovrebbe essere sia vuoto o con almeno 10 caratteri"
     },
     "submit": "Pubblica",
     "cancel": "Annulla"
@@ -79,6 +93,8 @@
     "containment_opening_hours": "Orari di apertura al di fuori del periodo di blocco",
     "containment_brand_hours": "Orari di apertura secondo la pagina web ufficiale",
     "facebook": "Pagina Facebook",
+    "not_accessible": "Spazi interni non accessibili al pubblico",
+    "capacity": "Capacità massima: 0 persone | Capacità massima: 1 persona | Capacità massima: {count} persone",
     "opening_hours": {
       "state_until_date": "{state} fino a {date}",
       "state": {
@@ -90,9 +106,9 @@
     "state": {
       "open": "Luogo aperto durante il blocco",
       "open_adapted": "Posiziona l'attività commerciale aperta durante il blocco con l'adeguato orario di apertura",
-      "partial": "Posizione una pontenziale attività commerciale apertura durante il blocco (da verificare)",
-      "unknown": "Posizione attività commerciale apertura durante il blocco. Chiusa o aperta? Facci sapere.",
-      "closed": "Posizione attività commerciale chiusa durante il blocco"
+      "partial": "Questo posto fa parte di un brand che ha deciso di restare aperto durante il blocco. Il luogo è aperto o chiuso? Faccelo sapere.",
+      "unknown": "Questo posto dovrebbe essere aperto durante il blocco. È aperto o chiuso? Faccelo sapere.",
+      "closed": "Questo posto è chiuso durante il blocco"
     },
     "delivery": {
       "yes": "Servizio di consegna a domicilio disponibile",
@@ -102,11 +118,30 @@
       "yes": "Servizio d'asporto disponibile",
       "modified": "Vendita d'asporto modificata",
       "only": "Solo vendita d'asporto"
+    },
+    "drive_through": {
+      "yes": "Disponibile servizio ritiro dall'auto",
+      "only": "Ritiro solo dall'auto"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Francobolli",
+      "parcel_mail_in": "Cassetta postale",
+      "parcel_pickup": "Ritiro pacchi",
+      "parcel_pickup;parcel_mail_in": "Ritiro pacchi e cassetta postale",
+      "milk": "Latte",
+      "drinks": "Bevande",
+      "water": "Acqua",
+      "sweets": "Dolciumi"
     }
   },
   "opening_hours_editor": {
+    "day_shortcuts": {
+      "weekdays": "Da lunedì al sabato"
+    },
     "select_days": "Seleziona i giorni",
     "next": "Scegli l'orario",
+    "cancel": "Annulla",
     "select_time": {
       "start": "Seleziona orari di apertura",
       "end": "Scegli l'orario di chiusura"
@@ -121,9 +156,24 @@
   },
   "categories": {
     "other": "Altri luoghi",
+    "amenity": "Servizio",
     "police": "Polizia",
-    "pharmacy": "Farmacia",
+    "townhall": "Municipio",
     "post_office": "Ufficio postale",
+    "childcare": "Servizi per l'infanzia",
+    "employment_agency": "Agenzia di collocamento",
+    "funeral_directors": "Pompe funebri",
+    "bank": "Banca",
+    "moneylender": "Finanziaria",
+    "insurance": "Assicurazione",
+    "tourism_info": "Informazioni turistiche",
+    "health": "Salute",
+    "pharmacy": "Farmacia",
+    "covid19_centre": "Centro di consulenza sul Covid-19",
+    "optician": "Ottico",
+    "hearing_aids": "Centro d'ascolto",
+    "condoms": "Distributore automatico preservativi",
+    "medical_supply": "Forniture mediche",
     "food": "Cibo",
     "supermarket": "Supermercato",
     "butcher": "Macellaio",
@@ -132,7 +182,12 @@
     "seafood": "Pescheria",
     "greengrocer": "Fruttivendolo",
     "grocery": "Drogheria",
-    "alcohol": "Negozio di alcool",
+    "chocolate": "Cioccolato",
+    "tea": "Tè",
+    "coffee": "Caffè",
+    "dairy": "Latteria",
+    "confectionery": "Negozio di dolciumi",
+    "farm": "Negozio prodotti agricoli",
     "marketplace": "Mercato",
     "bakery": "Panificio",
     "eat": "Ristorante e asporto",
@@ -141,8 +196,11 @@
     "fast_food": "Fast food",
     "ice_cream": "Gelateria",
     "cafe": "Negozio di caffè",
+    "bar": "Bar",
+    "drugs": "Medicinali",
     "tobacco": "Tabacchi",
     "e_cigarette": "Sigarette elettroniche",
+    "alcohol": "Negozio di alcool",
     "shop": "Negozi",
     "hardware": "Ferramenta",
     "mobile_phone": "Telefonia mobile",
@@ -150,23 +208,19 @@
     "electronics": "Elettronica",
     "laundry": "Lavanderia",
     "stationery": "Cartoleria",
-    "medical_supply": "Forniture mediche",
     "newsagent": "Giornalaio",
     "pet": "Negozio per animali",
     "agrarian": "Prodotti agricoli",
-    "garden_centre": "Garden center",
-    "optician": "Ottico",
-    "employment_agency": "Agenzia di collocamento",
-    "funeral_directors": "Pompe funebri",
+    "flower": "Giardino",
     "chemist": "Prodotti chimici",
-    "finance": "Servizi finanziari",
-    "bank": "Banca",
-    "moneylender": "Finanziaria",
-    "insurance": "Assicurazione",
+    "fabric": "Tessuti",
+    "books": "Libreria",
     "mobility": "Mobilità",
     "fuel": "Stazione di rifiorimento carburante",
     "car_rental": "Noleggio auto",
     "bicycle": "Negozio di biciclette",
-    "car": "Garage"
+    "car": "Garage",
+    "bicycle_tube": "Distributore automatico camere d'aria",
+    "public_transport_tickets": "Biglietteria automatica trasporto pubblico"
   }
 }
