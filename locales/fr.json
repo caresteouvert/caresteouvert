@@ -1,5 +1,6 @@
 {
   "lang": "Français",
+  "loading": "Chargement, veuillez patienter...",
   "covid19-alert": "Respectez les restrictions gouvernementales. Il en va de VOTRE responsabilité.",
   "title": "Ça reste ouvert",
   "subtitle": "Les lieux ouverts durant le confinement",
@@ -11,8 +12,8 @@
   "change_lang": "Changer la langue",
   "zoomtosee": "Zoomez pour voir les lieux ouverts",
   "toggle_color": {
-    "blind": "Activer les couleurs pour daltoniens",
-    "normal": "Désactiver les couleurs pour daltoniens"
+    "blind": "Activer le mode daltonien",
+    "normal": "Désactiver le mode daltonien"
   },
   "learnmore": {
     "about": "À propos",
@@ -170,7 +171,7 @@
     "bank": "Banque",
     "moneylender": "Prêteur",
     "insurance": "Assurance",
-    "tourism_info": "Office du tourisme",
+    "tourism_info": "Office de tourisme",
     "health": "Santé",
     "pharmacy": "Pharmacie",
     "covid19_centre": "Centre de consultation Covid-19",
