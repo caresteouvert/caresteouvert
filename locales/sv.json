@@ -108,7 +108,7 @@
       "open_adapted": "Stället är öppet under undantagstillståndet, med anpassade öppettider",
       "partial": "Stället tillhör en kedja vars serviceställen är delvis öppna under undantagstillståndet. Låt oss veta om det är öppet eller stängt.",
       "unknown": "Detta stället har rätt att hålla öppet under nedstängningen. Låt oss veta om det är öppet? ",
-      "closed": "Stället är stängt under nedstängningen"
+      "closed": "Stället är stängt under undantagstillståndet"
     },
     "delivery": {
       "yes": "Hemleverans tillgänglig",
