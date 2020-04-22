@@ -47,7 +47,7 @@
   "contribute_form": {
     "title": "Osallistu",
     "step1": {
-      "title": "Onko tämä paikka avoinna eristyksen aikana?",
+      "title": "Onko tämä paikka avoinna poikkeusaikana?",
       "open": {
         "yes": "kyllä",
         "no": "ei"
