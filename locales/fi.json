@@ -104,7 +104,7 @@
       "tomorrow": "huomiseen"
     },
     "state": {
-      "open": "Avoinna eristyksen aikana",
+      "open": "Avoinna poikkeusaikana",
       "open_adapted": "Avoinna eristyksen aikana, muutoksia aukioloajoissa",
       "partial": "Palvelu kuuluu ketjuun, jonka liikkeistä osa on avoinna. Onko tämä palvelu avoinna? Kerro meille",
       "unknown": "Tällä palvelulla on oikeus olla auki eristyksen aikana, mutta onko se? Kerro meille",
