@@ -106,5 +106,16 @@
     "about": "https://blog.ollaanauki.fi/meista/",
     "press": "https://blog.ollaanauki.fi/lehdistolle/",
     "disclaimer": "https://blog.ollaanauki.fi/vastuuvapauslauseke/"
+  },
+  "sv": {
+    "brand": "ollaanauki",
+    "brand_text": "Ollaan Auki",
+    "government": "https://valtioneuvosto.fi/tietoa-koronaviruksesta/",
+    "blog": "https://blog.ollaanauki.fi/",
+    "shopMissing": "https://blog.ollaanauki.fi/lisaa_palvelu/",
+    "townhalls": "https://blog.ollaanauki.fi/kaupungeille-ja-yhteisoille/",
+    "about": "https://blog.ollaanauki.fi/meista/",
+    "press": "https://blog.ollaanauki.fi/lehdistolle/",
+    "disclaimer": "https://blog.ollaanauki.fi/vastuuvapauslauseke/"
   }
 }
