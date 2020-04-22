@@ -49,11 +49,11 @@ describe('ContributeForm', () => {
       const form = createWrapper({ place: { properties: { tags: { } } } });
       form.vm.clickOpen();
       expect(form.vm.delivery).toBe(null);
-      expect(form.vm.showDelivery).toBe(true);
+      expect(form.vm.showDelivery).toBe(false);
     });
 
     it('parse the delivery:covid19 tag if it exists', () => {
-      const form = createWrapper({ place: { properties: { tags: { 'delivery:covid19': 'yes' } } } });
+      const form = createWrapper({ place: { properties: { cat: 'restaurant', normalized_cat: 'eat', tags: { 'delivery:covid19': 'yes' } } } });
       form.vm.clickOpen();
       expect(form.vm.delivery).toEqual('yes');
       expect(form.vm.showDelivery).toBe(true);
@@ -78,11 +78,11 @@ describe('ContributeForm', () => {
       const form = createWrapper({ place: { properties: { tags: { } } } });
       form.vm.clickOpen();
       expect(form.vm.takeaway).toBe(null);
-      expect(form.vm.showTakeaway).toBe(true);
+      expect(form.vm.showTakeaway).toBe(false);
     });
 
     it('parse the takeaway:covid19 tag if it exists', () => {
-      const form = createWrapper({ place: { properties: { tags: { 'takeaway:covid19': 'yes' } } } });
+      const form = createWrapper({ place: { properties: { cat: 'restaurant', normalized_cat: 'eat', tags: { 'takeaway:covid19': 'yes' } } } });
       form.vm.clickOpen();
       expect(form.vm.takeaway).toEqual('yes');
       expect(form.vm.showTakeaway).toBe(true);
