@@ -54,7 +54,7 @@
       }
     },
     "step2": {
-      "title": "Öppettider under nedstängningen",
+      "title": "Öppettider under undantagstillståndet",
       "same_hours": "Samma öppettider",
       "same_hours_without_lockdown": "Samma öppettider som normalt",
       "dont_know": "Vet ej",
