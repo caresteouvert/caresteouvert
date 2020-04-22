@@ -107,8 +107,8 @@
       "open": "Avoinna poikkeusaikana",
       "open_adapted": "Avoinna poikkeusaikana, muutoksia aukioloajoissa",
       "partial": "Palvelu kuuluu ketjuun, jonka liikkeistä osa on avoinna. Onko tämä palvelu avoinna? Kerro meille.",
-      "unknown": "Tällä palvelulla on oikeus olla auki poikkeusaikana, mutta onko se? Kerro meille",
-      "closed": "Suljettu eristyksen aikana"
+      "unknown": "Tällä palvelulla on oikeus olla auki poikkeusaikana, mutta onko se? Kerro meille.",
+      "closed": "Suljettu poikkeusaikana"
     },
     "delivery": {
       "yes": "Kotiinkuljetusmahdollisuus",
