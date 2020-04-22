@@ -7,8 +7,7 @@
       'sidebar-opened': sidebar && !isMobile
     }"
   >
-    <splash-screen v-if="!loadMap" />
-    <div v-show="loadMap">
+    <div>
       <v-navigation-drawer
         v-model="sidebar"
         temporary
@@ -37,6 +36,7 @@
             :map-zoom.sync="mapZoom"
             :filter="filter"
             :featuresAndLocation="featuresAndLocation"
+            @loaded="mapLoaded = true"
           />
           <v-slide-y-reverse-transition>
             <v-chip
@@ -63,6 +63,7 @@
       </v-content>
     </div>
     <nuxt-child/>
+    <splash-screen v-if="!mapLoaded" />
   </div>
 </template>
 
@@ -102,6 +103,7 @@ export default {
   data() {
     return {
       loadMap: false,
+      mapLoaded: false,
       isMobile: false,
       sidebar: false,
       mapStyle: null,

@@ -260,6 +260,7 @@ export default {
   methods: {
     load({ map }) {
       this.map = map;
+      this.$emit('loaded');
     },
 
     updateMapCenter(mapCenter) {
