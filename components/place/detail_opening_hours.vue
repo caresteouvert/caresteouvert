@@ -69,7 +69,7 @@ export default {
   computed: {
     openingHours() {
       try {
-        return new OpeningHours(this.value, null, { mode: this.mode });
+        return new OpeningHours(this.value, null, { mode: this.mode, locale: this.$i18n.locale });
       } catch (e) {
       }
     },
