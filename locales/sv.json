@@ -2,8 +2,8 @@
   "lang": "Svenska",
   "covid19-alert": "Följ myndigheternas anvisningar. Du bär ansvaret.",
   "title": "Vi har öppet",
-  "subtitle": "Ställen som är öppna under nedstängningen",
-  "subtitle-dense": "Öppna ställen under nedstängningen",
+  "subtitle": "Ställen som är öppna under undantagstillståndet",
+  "subtitle-dense": "Öppna ställen under undantagstillståndet",
   "search": "Skriv sökord",
   "coordinates": "Koordinater",
   "menu": "Meny",
@@ -47,14 +47,14 @@
   "contribute_form": {
     "title": "Delta",
     "step1": {
-      "title": "Är denna plats öppen under nedstängningen?",
+      "title": "Är denna plats öppen under undantagstillståndet?",
       "open": {
         "yes": "ja",
         "no": "nej"
       }
     },
     "step2": {
-      "title": "Öppettider under nedstängningen",
+      "title": "Öppettider under undantagstillståndet",
       "same_hours": "Samma öppettider",
       "same_hours_without_lockdown": "Samma öppettider som normalt",
       "dont_know": "Vet ej",
@@ -90,7 +90,7 @@
     "signal_warning": "Du höll på att skriva en rapport. Den sparades ej. Vill du fortsätta?",
     "signal": "Rapportera ändrade uppgifter",
     "signal_done": "Din rapport har registrerats. Tack så mycket! Behandlingen tar en stund.",
-    "containment_opening_hours": "Öppettider utanför nedstängningsperioden",
+    "containment_opening_hours": "Öppettider utanför undantagstillståndsperioden",
     "containment_brand_hours": "Se öppettider på servicens hemsida",
     "facebook": "Facebook sida",
     "not_accessible": "Tillträde inomhus förbjudet",
@@ -104,11 +104,11 @@
       "tomorrow": "i morgon"
     },
     "state": {
-      "open": "Stället är öppet under nedstängningen",
-      "open_adapted": "Stället är öppet under nedstängningen, med anpassade öppettider",
-      "partial": "Stället tillhör en kedja vars serviceställen är delvis öppna under nedstängningen. Låt oss veta om det är öppet eller stängt.",
-      "unknown": "Detta stället har rätt att hålla öppet under nedstängningen. Låt oss veta om det är öppet? ",
-      "closed": "Stället är stängt under nedstängningen"
+      "open": "Stället är öppet under undantagstillståndet",
+      "open_adapted": "Stället är öppet under undantagstillståndet, med anpassade öppettider",
+      "partial": "Stället tillhör en kedja vars serviceställen är delvis öppna under undantagstillståndet. Låt oss veta om det är öppet eller stängt.",
+      "unknown": "Detta stället har rätt att hålla öppet under undantagstillståndet. Låt oss veta om det är öppet? ",
+      "closed": "Stället är stängt under undantagstillståndet"
     },
     "delivery": {
       "yes": "Hemleverans tillgänglig",
