@@ -1,6 +1,12 @@
 <template>
   <div>
-    <DirectoryList :title="title" :items="pois" property-label="name,cat" :item-link="pointUrl" />
+    <DirectoryList
+      :title="title"
+      :items="pois"
+      :links="links"
+      property-label="name,cat"
+      :item-link="pointUrl"
+    />
   </div>
 </template>
 
@@ -13,17 +19,17 @@ export default {
   },
   methods: {
     pointUrl: item => {
-      console.log(item);
       return "/place/" + item.id;
     }
   },
-  asyncData({ params }) {
-    return DirectoryList.fetchData(
-      params.regions,
-      params.departements,
-      params.communes,
-      params.categories
-    );
+  asyncData({ params, query }) {
+    return DirectoryList.fetchData({
+      region: params.regions,
+      departement: params.departements,
+      commune: params.communes,
+      category: params.categories,
+      query: query
+    });
   }
 };
 </script>

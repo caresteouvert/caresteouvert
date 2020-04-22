@@ -1,6 +1,11 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
+    <ul id="directory-links">
+      <li v-for="link in getRelatedLinks(links)" :key="link.title">
+        <a :href="link.href" :rel="link.rel">{{ link.title }}</a>
+      </li>
+    </ul>
     <ul id="directory-items">
       <li v-for="item in items" :key="item.id">
         <a :href="itemLink(item)">{{ getLabel(item, propertyLabel) }}</a>
@@ -19,6 +24,10 @@ export default {
       default: undefined
     },
     items: {
+      type: Array,
+      default: undefined
+    },
+    links: {
       type: Array,
       default: undefined
     },
@@ -44,21 +53,31 @@ export default {
           .filter(value => value)
           .join(", ");
       }
+    },
+    getRelatedLinks: links => {
+      return links ? links.filter(link => link.rel !== "self") : links;
     }
   },
-  fetchData(region, departement, commune, category) {
+  fetchData({ region, departement, commune, category, query }) {
     const url =
       directoryUrl +
       (region ? "/" + region : "") +
       (departement ? "/" + departement : "") +
       (commune ? "/" + commune : "") +
-      (category ? "/" + category : "");
+      (category ? "/" + category : "") +
+      (query
+        ? "?" +
+          Object.keys(query)
+            .map(key => `${key}=${query[key]}`)
+            .join("&")
+        : "");
     return fetch(url)
       .then(res => {
         return res.json();
       })
       .then(json => {
-        json.title = json.links.title;
+        const selfLink = json.links.filter(link => link.rel === "self");
+        json.title = selfLink.length > 0 ? selfLink[0].title : "";
         return json;
       });
   }

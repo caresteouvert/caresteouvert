@@ -1,6 +1,6 @@
 <template>
   <div>
-    <DirectoryList :title="title" :items="communes" propertyLabel="libelle" />
+    <DirectoryList :title="title" :items="communes" :links="links" propertyLabel="libelle" />
   </div>
 </template>
 
@@ -11,8 +11,12 @@ export default {
   components: {
     DirectoryList
   },
-  asyncData({ params }) {
-    return DirectoryList.fetchData(params.regions, params.departements);
+  asyncData({ params, query }) {
+    return DirectoryList.fetchData({
+      regions: params.regions,
+      departements: params.departements,
+      query: query
+    });
   }
 };
 </script>
