@@ -1,6 +1,11 @@
 {
   "countries": [ "DE", "FR", "ES", "AD", "CH", "AT", "PH", "FI" ],
-  "sql_columns": ["amenity", "shop", "craft", "office", "emergency", "tobacco", "healthcare", "opening_hours", "opening_hours:covid19"],
+  "sql_columns": [
+    "aeroway", "amenity", "craft", "emergency", "healthcare", "highway", "historic",
+    "leisure", "office", "public_transport", "railway", "shop", "tobacco", "tourism",
+    "opening_hours", "opening_hours:covid19", "access:covid19", "delivery:covid19",
+    "description:covid19", "drive_through:covid19", "takeaway:covid19"
+  ],
   "categories": {
     "amenity": {
       "name": "Amenity",
@@ -83,6 +88,15 @@
           "areas": "all",
           "-mapfilter": "all",
           "form_details": [ "access" ]
+        },
+        "hotel": {
+          "name": "Hosting",
+          "osm_tags": [ { "tourism": "hotel|motel|hostel" } ],
+          "osm_filter_tags": [
+            { "opening_hours:covid19": "*" }
+          ],
+          "areas": "all",
+          "-mapfilter": "all"
         }
       }
     },

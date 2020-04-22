@@ -7,7 +7,7 @@
 -- Function for getting normalized category from OSM tags
 CREATE OR REPLACE FUNCTION get_category(tags HSTORE, area VARCHAR) RETURNS VARCHAR AS $$
 BEGIN
-	IF (tags->'amenity' = 'vending_machine' AND tags->'vending' IN ('stamps', 'parcel_mail_in', 'parcel_pickup', 'parcel_pickup;parcel_mail_in')) OR (tags->'amenity' = 'childcare' AND area LIKE 'FR%') OR (tags->'amenity' = 'kindergarten' AND tags->'kindergarten:FR' != '' AND area LIKE 'FR%') OR (tags->'shop' = 'money_lender' AND area NOT LIKE 'FR%') OR (tags->'tourism' = 'information' AND tags->'information' = 'office' AND tags->'opening_hours:covid19' != '') OR (tags->'tourism' = 'information' AND tags->'information' = 'office' AND tags->'opening_hours:covid19' != '') OR (tags->'amenity' IN ('police', 'townhall', 'post_office', 'bank')) OR (tags->'office' IN ('employment_agency', 'financial', 'insurance')) OR (tags->'shop' = 'funeral_directors') THEN
+	IF (tags->'amenity' = 'vending_machine' AND tags->'vending' IN ('stamps', 'parcel_mail_in', 'parcel_pickup', 'parcel_pickup;parcel_mail_in')) OR (tags->'amenity' = 'childcare' AND area LIKE 'FR%') OR (tags->'amenity' = 'kindergarten' AND tags->'kindergarten:FR' != '' AND area LIKE 'FR%') OR (tags->'shop' = 'money_lender' AND area NOT LIKE 'FR%') OR (tags->'tourism' = 'information' AND tags->'information' = 'office' AND tags->'opening_hours:covid19' != '') OR (tags->'tourism' = 'information' AND tags->'information' = 'office' AND tags->'opening_hours:covid19' != '') OR (tags->'tourism' IN ('hotel', 'motel', 'hostel') AND tags->'opening_hours:covid19' != '') OR (tags->'tourism' IN ('hotel', 'motel', 'hostel') AND tags->'opening_hours:covid19' != '') OR (tags->'amenity' IN ('police', 'townhall', 'post_office', 'bank')) OR (tags->'office' IN ('employment_agency', 'financial', 'insurance')) OR (tags->'shop' = 'funeral_directors') THEN
 		RETURN 'amenity';
 	ELSIF (tags->'healthcare' = 'centre' AND tags->'healthcare:speciality' = 'covid19' AND area LIKE 'FR%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'condoms') OR (tags->'amenity' = 'pharmacy') OR (tags->'shop' IN ('optician', 'hearing_aids', 'medical_supply')) OR (tags->'craft' = 'optician') THEN
 		RETURN 'health';
@@ -55,6 +55,8 @@ BEGIN
 		RETURN 'insurance';
 	ELSIF tags->'tourism' = 'information' AND tags->'information' = 'office' THEN
 		RETURN 'tourism_info';
+	ELSIF tags->'tourism' IN ('hotel', 'motel', 'hostel') THEN
+		RETURN 'hotel';
 	ELSIF tags->'amenity' = 'pharmacy' THEN
 		RETURN 'pharmacy';
 	ELSIF tags->'healthcare' = 'centre' AND tags->'healthcare:speciality' = 'covid19' THEN
