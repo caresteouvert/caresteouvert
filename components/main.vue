@@ -7,7 +7,8 @@
       'sidebar-opened': sidebar && !isMobile
     }"
   >
-    <div>
+    <splash-screen v-if="!loadMap" />
+    <div v-show="loadMap">
       <v-navigation-drawer
         v-model="sidebar"
         temporary
@@ -77,6 +78,7 @@ import FilterList from './filter_list';
 import TopToolbar from './top_toolbar';
 import BottomMenu from './bottom_menu';
 import RgpdBanner from './rgpd_banner';
+import SplashScreen from './splash_screen';
 
 export default {
   components: {
@@ -85,6 +87,7 @@ export default {
     FilterList,
     MainMenu,
     RgpdBanner,
+    SplashScreen,
     TopToolbar,
   },
 
