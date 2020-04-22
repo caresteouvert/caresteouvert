@@ -2,8 +2,8 @@
   "lang": "suomi",
   "covid19-alert": "Seuraa viranomaisten määräyksiä. Vastuu on yksinomaan sinun!",
   "title": "Ollaan auki",
-  "subtitle": "Eristyksen aikana auki olevat paikat",
-  "subtitle-dense": "Eristyksen aikana avoimet paikat",
+  "subtitle": "Poikkeusaikana auki olevat paikat",
+  "subtitle-dense": "Poikkeusaikana auki olevan paikat",
   "search": "Kirjoita hakusana",
   "coordinates": "Koordinaatit",
   "menu": "Valikko",
@@ -14,7 +14,7 @@
     "about": "Tietoja",
     "contribute": "Osallistu",
     "missing_shop": "Ilmoita puuttuva kauppa",
-    "description": "{brand} on palvelu tarpeettoman liikkumisen vähentämiseksi ja tartuntariskin minimoimiseksi koronaviruseristyksen aikana.\nKarttapalvelun avulla voit helposti jakaa tietoa lähiympäristösi palveluiden poikkeusaukioloista. Tehokkain tapa helpottaa naapureidesi elämää!",
+    "description": "{brand} on palvelu tarpeettoman liikkumisen vähentämiseksi ja tartuntariskin minimoimiseksi poikkeusaikana.\nKarttapalvelun avulla voit helposti jakaa tietoa lähiympäristösi palveluiden poikkeusaukioloista. Tehokkain tapa helpottaa naapureidesi elämää!",
     "title": "Lue lisää",
     "press": "Medialle",
     "disclaimer": "Vastuuvapauslauseke",
@@ -47,14 +47,14 @@
   "contribute_form": {
     "title": "Osallistu",
     "step1": {
-      "title": "Onko tämä paikka avoinna eristyksen aikana?",
+      "title": "Onko tämä paikka avoinna poikkeusaikana?",
       "open": {
         "yes": "kyllä",
         "no": "ei"
       }
     },
     "step2": {
-      "title": "Aukioloajat eristyksen aikana",
+      "title": "Aukioloajat poikkeusaikana",
       "same_hours": "Samat aukioloajat",
       "same_hours_without_lockdown": "Samat aukioloajat kuin normaalisti",
       "dont_know": "En tiedä",
@@ -90,7 +90,7 @@
     "signal_warning": "Olit kirjoittamassa ilmoitusta, joka ei tallennu. Haluatko jatkaa?",
     "signal": "Ilmoita muutoksesta",
     "signal_done": "Ilmoituksesi on vastaanotettu. Kiitos! Käsittely vie oman aikansa.",
-    "containment_opening_hours": "Aukioloajat muulloin kuin eristyksen aikana",
+    "containment_opening_hours": "Aukioloajat muulloin kuin poikkeusaikana",
     "containment_brand_hours": "Katso aukioloajat palvelun verkkosivulta",
     "facebook": "Facebook-sivu",
     "not_accessible": "Sisätila on suljettu",
@@ -104,11 +104,11 @@
       "tomorrow": "huomiseen"
     },
     "state": {
-      "open": "Avoinna eristyksen aikana",
-      "open_adapted": "Avoinna eristyksen aikana, muutoksia aukioloajoissa",
-      "partial": "Palvelu kuuluu ketjuun, jonka liikkeistä osa on avoinna. Onko tämä palvelu avoinna? Kerro meille",
-      "unknown": "Tällä palvelulla on oikeus olla auki eristyksen aikana, mutta onko se? Kerro meille",
-      "closed": "Suljettu eristyksen aikana"
+      "open": "Avoinna poikkeusaikana",
+      "open_adapted": "Avoinna poikkeusaikana, muutoksia aukioloajoissa",
+      "partial": "Palvelu kuuluu ketjuun, jonka liikkeistä osa on avoinna. Onko tämä palvelu avoinna? Kerro meille.",
+      "unknown": "Tällä palvelulla on oikeus olla auki poikkeusaikana, mutta onko se? Kerro meille.",
+      "closed": "Suljettu poikkeusaikana"
     },
     "delivery": {
       "yes": "Kotiinkuljetusmahdollisuus",
