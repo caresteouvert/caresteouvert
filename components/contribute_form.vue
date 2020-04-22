@@ -154,6 +154,7 @@ import { apiUrl } from '../config.json';
 import OpeningHoursParser from '../lib/opening_hours_parser';
 import parseId from '../lib/parse_id';
 import OpeningHoursEditor from './opening_hours_editor/editor';
+import { categories } from '../categories.json';
 
 export default {
   components: { OpeningHoursEditor },
@@ -190,7 +191,8 @@ export default {
       loading: false,
       open: null,
       openingHours: [],
-      openingHoursWithoutLockDown: false
+      openingHoursWithoutLockDown: false,
+      form_details: []
     };
   },
 
@@ -201,6 +203,13 @@ export default {
     this.access = this.parseTag('access:covid19', this.accessItems);
     this.delivery = this.parseTag('delivery:covid19', this.deliveryItems);
     this.takeaway = this.parseTag('takeaway:covid19', this.takeawayItems);
+    if(
+      categories[this.place.properties.normalized_cat]
+      && categories[this.place.properties.normalized_cat].subcategories[this.place.properties.cat]
+      && categories[this.place.properties.normalized_cat].subcategories[this.place.properties.cat].form_details
+    ) {
+      this.form_details = categories[this.place.properties.normalized_cat].subcategories[this.place.properties.cat].form_details;
+    }
   },
 
   computed: {
@@ -217,15 +226,15 @@ export default {
     },
 
     showAccess() {
-      return this.showField('access:covid19', this.accessItems);
+      return this.showField('access:covid19', this.accessItems) && this.form_details.includes('access');
     },
 
     showDelivery() {
-      return this.showField('delivery:covid19', this.deliveryItems);
+      return this.showField('delivery:covid19', this.deliveryItems) && this.form_details.includes('delivery');
     },
 
     showTakeaway() {
-      return this.showField('takeaway:covid19', this.takeawayItems);
+      return this.showField('takeaway:covid19', this.takeawayItems) && this.form_details.includes('takeaway');
     },
 
     id() {
@@ -270,7 +279,12 @@ export default {
     },
 
     parseOpeningHours(openingHours) {
-      return new OpeningHoursParser(openingHours).getTable();
+      try {
+        return new OpeningHoursParser(openingHours).getTable();
+      }
+      catch(e) {
+        return [];
+      }
     },
 
     detailsRules(val) {
