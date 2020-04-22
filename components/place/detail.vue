@@ -40,6 +40,7 @@
           ref="state"
           :place="place"
           :status="status"
+          :last_update="last_update"
         />
 
         <v-alert
@@ -148,12 +149,13 @@
 </template>
 
 <script>
-import { poiFeature } from '../../config.json';
+import { poiFeature, osmUrl } from '../../config.json';
 import DetailOpeningHours from './detail_opening_hours';
 import DetailState from './detail_state';
 import DetailLink from './detail_link';
 import OsmLink from '../osm_link';
 import { encodePosition } from '../../lib/url';
+import parseId from '../../lib/parse_id';
 
 export default {
   components: {
@@ -214,7 +216,8 @@ export default {
   data() {
     return {
       isMobile: true,
-      place: null
+      place: null,
+      last_update: null
     };
   },
 
@@ -306,14 +309,28 @@ export default {
     },
 
     updatePlace() {
-      return fetch(`${poiFeature}/${this.id}.json`)
+      const { type, id } = parseId(this.id);
+
+      return Promise.all([
+        fetch(`${poiFeature}/${this.id}.json`)
         .then(data => data.json())
         .then((place) => {
           this.place = place;
           this.$store.commit('setPlace', place);
+          return true;
         }).catch(() => {
           this.$nuxt.context.redirect(`/${this.$route.params.featuresAndLocation || ''}`);
-        });
+        }),
+        fetch(`${osmUrl}/api/0.6/${type}/${id}`)
+        .then(data => data.text())
+        .then(xml => {
+          const match = xml.match(/timestamp="(.+?)"/);
+          if(match && match.length > 1) {
+            this.last_update = new Date(match[1]);
+          }
+          return true;
+        })
+      ]);
     },
 
     close() {
