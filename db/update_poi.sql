@@ -150,6 +150,8 @@ WHERE
 -- Remove edge cases needing advanced filtering like vending machines
 DELETE FROM poi_osm_next
 WHERE normalized_cat IS NULL;
+DELETE FROM poi_osm_next
+WHERE tags ? 'access' AND tags->>'access' NOT IN ('yes', 'public', 'permissive');
 
 -- Join brand informations
 UPDATE poi_osm_next
