@@ -54,7 +54,7 @@
       }
     },
     "step2": {
-      "title": "Aukioloajat eristyksen aikana",
+      "title": "Aukioloajat poikkeusaikana",
       "same_hours": "Samat aukioloajat",
       "same_hours_without_lockdown": "Samat aukioloajat kuin normaalisti",
       "dont_know": "En tiedä",
