@@ -47,7 +47,7 @@
   "contribute_form": {
     "title": "Delta",
     "step1": {
-      "title": "Är denna plats öppen under nedstängningen?",
+      "title": "Är denna plats öppen under undantagstillståndet?",
       "open": {
         "yes": "ja",
         "no": "nej"
