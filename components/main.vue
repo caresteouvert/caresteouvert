@@ -305,4 +305,7 @@ export default {
 .text-pre {
   white-space: pre-line;
 }
+.v-navigation-drawer__content {
+  display: flex;
+}
 </style>

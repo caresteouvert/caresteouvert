@@ -1,0 +1,25 @@
+ALTER TABLE imposm_osm_point RENAME TO imposm_osm_point_old;
+ALTER TABLE imposm_osm_point_old RENAME CONSTRAINT imposm_osm_point_pkey TO imposm_osm_point_pkey_old;
+ALTER INDEX idx_point_amenity RENAME TO idx_point_amenity_old;
+ALTER INDEX idx_point_country_iso2 RENAME TO idx_point_country_iso2_old;
+ALTER INDEX idx_point_craft RENAME TO idx_point_craft_old;
+ALTER INDEX idx_point_emergency RENAME TO idx_point_emergency_old;
+ALTER INDEX idx_point_healthcare RENAME TO idx_point_healthcare_old;
+ALTER INDEX idx_point_office RENAME TO idx_point_office_old;
+ALTER INDEX idx_point_ohcovid19 RENAME TO idx_point_ohcovid19_old;
+ALTER INDEX idx_point_shop RENAME TO idx_point_shop_old;
+ALTER INDEX idx_point_tobacco RENAME TO idx_point_tobacco_old;
+ALTER INDEX imposm_osm_point_geom RENAME TO imposm_osm_point_geom_old;
+
+ALTER TABLE imposm_osm_polygon RENAME TO imposm_osm_polygon_old;
+ALTER TABLE imposm_osm_polygon_old RENAME CONSTRAINT imposm_osm_polygon_pkey TO imposm_osm_polygon_pkey_old;
+ALTER INDEX idx_polygon_amenity RENAME TO idx_polygon_amenity_old;
+ALTER INDEX idx_polygon_country_iso2 RENAME TO idx_polygon_country_iso2_old;
+ALTER INDEX idx_polygon_craft RENAME TO idx_polygon_craft_old;
+ALTER INDEX idx_polygon_emergency RENAME TO idx_polygon_emergency_old;
+ALTER INDEX idx_polygon_healthcare RENAME TO idx_polygon_healthcare_old;
+ALTER INDEX idx_polygon_office RENAME TO idx_polygon_office_old;
+ALTER INDEX idx_polygon_ohcovid19 RENAME TO idx_polygon_ohcovid19_old;
+ALTER INDEX idx_polygon_shop RENAME TO idx_polygon_shop_old;
+ALTER INDEX idx_polygon_tobacco RENAME TO idx_polygon_tobacco_old;
+ALTER INDEX imposm_osm_polygon_geom RENAME TO imposm_osm_polygon_geom_old;

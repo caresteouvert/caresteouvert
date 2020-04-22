@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="d-flex flex-column flex-grow-1">
     <v-card
       v-if="showBrand"
       :to="{ name: 'index' }"
@@ -19,9 +19,14 @@
     </v-card>
 
     <governement-alert />
+
     <v-divider v-if="showBrand"></v-divider>
+
     <slot />
-    <v-list>
+
+    <v-spacer />
+
+    <v-list class="pb-0">
       <v-divider></v-divider>
       <main-menu-list-item
         :title="$t('missing_shop')"
@@ -29,9 +34,15 @@
         icon="plus"
       />
       <learn-more />
-      <v-divider></v-divider>
-      <change-language />
     </v-list>
+
+    <v-divider></v-divider>
+
+    <div class="d-flex">
+      <change-language />
+      <v-divider vertical></v-divider>
+      <toggle-color />
+    </div>
   </div>
 </template>
 
@@ -40,6 +51,7 @@ import MainMenuListItem from './main_menu_list_item';
 import ChangeLanguage from './change_language';
 import LearnMore from './learn_more';
 import GovernementAlert from './governement_alert';
+import ToggleColor from './toggle_color';
 import i18nMixin from './mixins/i18n';
 
 export default {
@@ -48,6 +60,7 @@ export default {
     GovernementAlert,
     LearnMore,
     MainMenuListItem,
+    ToggleColor,
   },
 
   mixins: [i18nMixin],

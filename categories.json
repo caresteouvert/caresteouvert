@@ -18,7 +18,7 @@
           "areas": "all"
         },
         "post_office": {
-          "name": "Post office",
+          "name": "Postal services",
           "osm_tags": [
             { "amenity": "post_office" },
             { "amenity": "vending_machine", "vending": "stamps|parcel_mail_in|parcel_pickup|parcel_pickup;parcel_mail_in" }

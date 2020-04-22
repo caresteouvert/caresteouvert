@@ -10,6 +10,10 @@
   "missing_shop": "Report a missing shop",
   "change_lang": "Change the language",
   "zoomtosee": "Zoom in to display opened places",
+  "toggle_color": {
+    "blind": "Enable color blind mode",
+    "normal": "Disable color blind mode"
+  },
   "learnmore": {
     "about": "About",
     "contribute": "Contribute",
@@ -159,7 +163,7 @@
     "amenity": "Amenity",
     "police": "Police",
     "townhall": "Townhall",
-    "post_office": "Post office",
+    "post_office": "Postal services",
     "childcare": "Childcare",
     "employment_agency": "Employment agency",
     "funeral_directors": "Funeral directors",

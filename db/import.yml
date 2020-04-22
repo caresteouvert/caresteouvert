@@ -16,6 +16,12 @@ tables:
       shop: [__any__]
       tobacco: [__any__]
       tourism: [__any__]
+      opening_hours:covid19: [__any__]
+      delivery:covid19: [__any__]
+      description:covid19: [__any__]
+      drive_through:covid19: [__any__]
+      takeaway:covid19: [__any__]
+      access:covid19: [__any__]
     filters:
       reject:
         aeroway: ['parking_position']
@@ -23,7 +29,6 @@ tables:
         emergency: ['fire_hydrant']
         highway: ['crossing', 'turning_circle', 'street_lamp', 'traffic_signals', 'stop', 'give_way', 'service', 'residential', 'footway', 'pedestrian', 'motorway_junction', 'milestone', 'turning_loop', 'tertiary', 'secondary', 'unclassified', 'mini_roundabout', 'speed_camera', 'primary', 'track', 'path']
         historic: ['boundary_stone','ruins','wayside_cross','wayside_shrine']
-        leisure: ['common', 'swimming_pool','track']
         railway: ['level_crossing', 'switch','signal','buffer_stop','crossing']
         tourism: ['artwork', 'viewpoint']
     columns:
@@ -47,6 +52,11 @@ tables:
       - {key: 'tourism', name: 'tourism', type: string}
       - {key: 'opening_hours', name: 'opening_hours', type: string}
       - {key: 'opening_hours:covid19', name: 'opening_hours:covid19', type: string}
+      - {key: 'access:covid19', name: 'access:covid19', type: string}
+      - {key: 'delivery:covid19', name: 'delivery:covid19', type: string}
+      - {key: 'description:covid19', name: 'description:covid19', type: string}
+      - {key: 'drive_through:covid19', name: 'drive_through:covid19', type: string}
+      - {key: 'takeaway:covid19', name: 'takeaway:covid19', type: string}
       - {name: country_iso2, type: geojson_intersects_feature, args: {geojson: './countries_subcountries.geojson', property: country_iso2}}
       - {name: sub_country, type: geojson_intersects_feature, args: {geojson: './countries_subcountries.geojson', property: sub_country}}
   imposm_osm_polygon:
@@ -66,14 +76,19 @@ tables:
       shop: [__any__]
       tobacco: [__any__]
       tourism: [__any__]
+      opening_hours:covid19: [__any__]
+      delivery:covid19: [__any__]
+      description:covid19: [__any__]
+      takeaway:covid19: [__any__]
+      drive_through:covid19: [__any__]
+      access:covid19: [__any__]
     filters:
       reject:
         aeroway: ['parking_position']
         amenity: ['bench', 'waste_basket']
         emergency: ['fire_hydrant']
-        highway: ['crossing', 'turning_circle', 'street_lamp', 'traffic_signals', 'stop', 'give_way', 'service', 'residential', 'footway', 'pedestrian', 'motorway_junction', 'milestone', 'turning_loop', 'tertiary', 'secondary', 'unclassified', 'mini_roundabout', 'speed_camera', 'primary', 'track', 'path']
+        highway: ['crossing', 'turning_circle', 'street_lamp', 'traffic_signals', 'stop', 'give_way', 'service', 'residential', 'motorway_junction', 'milestone', 'turning_loop', 'tertiary', 'secondary', 'unclassified', 'mini_roundabout', 'speed_camera', 'primary', 'track', 'path']
         historic: ['boundary_stone','ruins','wayside_cross','wayside_shrine']
-        leisure: ['common', 'swimming_pool','track']
         railway: ['level_crossing', 'switch','signal','buffer_stop','crossing']
         tourism: ['artwork', 'viewpoint']
     columns:
@@ -97,6 +112,11 @@ tables:
       - {key: 'tourism', name: 'tourism', type: string}
       - {key: 'opening_hours', name: 'opening_hours', type: string}
       - {key: 'opening_hours:covid19', name: 'opening_hours:covid19', type: string}
+      - {key: 'access:covid19', name: 'access:covid19', type: string}
+      - {key: 'delivery:covid19', name: 'delivery:covid19', type: string}
+      - {key: 'description:covid19', name: 'description:covid19', type: string}
+      - {key: 'drive_through:covid19', name: 'drive_through:covid19', type: string}
+      - {key: 'takeaway:covid19', name: 'takeaway:covid19', type: string}
       - {name: country_iso2, type: geojson_intersects_feature, args: {geojson: './countries_subcountries.geojson', property: country_iso2}}
       - {name: sub_country, type: geojson_intersects_feature, args: {geojson: './countries_subcountries.geojson', property: sub_country}}
 tags:
