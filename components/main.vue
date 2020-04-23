@@ -60,8 +60,8 @@
           <apps-sheet />
         </client-only>
         <bottom-menu
-          v-if="isMobile"
-          v-model="filter"
+          v-if="isMobile && mapLoaded"
+          :filter="filter"
         >
           <filter-results
             v-if="filter != ''"

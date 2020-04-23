@@ -258,13 +258,17 @@ export default {
         const isPlaceUnderUI = (x, y) => {
           const height = document.body.clientHeight;
           const width = document.body.clientWidth;
-          const offsetSidebar = this.sidebar ? 300 : 0;
-          const offsetPlace = this.$vuetify.breakpoint.smAndDown ? 0 : 400;
-          return (x < offsetSidebar || x > width - offsetPlace || y > height || y < 0);
+          if (this.isMobile) {
+            return (x < 0 || x > width || y > height / 2 || y < 0);
+          } else {
+            const offsetSidebar = this.sidebar ? 300 : 0;
+            const offsetPlace = 400;
+            return (x < offsetSidebar || x > width - offsetPlace || y > height || y < 0);
+          }
         }
         const { x, y } = this.map.project(place.geometry.coordinates);
         if (isPlaceUnderUI(x, y)) {
-          this.map.panTo(place.geometry.coordinates);
+          this.map.panTo(place.geometry.coordinates, { offset: [0, this.isMobile ? (-document.body.clientHeight / 4) : 0] });
         }
       }
     },

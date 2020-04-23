@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column flex-grow-1">
+  <div class="d-flex flex-column flex-grow-1 menu">
     <v-card
       v-if="showBrand"
       :to="{ name: 'index' }"
@@ -76,6 +76,9 @@ export default {
 </script>
 
 <style scoped>
+.menu {
+  min-height: 100%;
+}
 .logo {
   max-width: 100%;
 }
