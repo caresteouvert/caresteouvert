@@ -1,5 +1,6 @@
 {
   "lang": "suomi",
+  "loading": "Palvelu avautuu. Ole hyvä ja odota...",
   "covid19-alert": "Seuraa viranomaisten määräyksiä. Vastuu on yksinomaan sinun!",
   "title": "Ollaan auki",
   "subtitle": "Poikkeusaikana auki olevat paikat",
@@ -10,6 +11,10 @@
   "missing_shop": "Ilmoita puuttuva palvelu",
   "change_lang": "Vaihda kieli",
   "zoomtosee": "Zoomaa lähemmäs nähdäksesi avoimet paikat",
+  "toggle_color": {
+    "blind": "Värisokeatila päälle",
+    "normal": "Värisokeatila pois päältä"
+  },
   "learnmore": {
     "about": "Tietoja",
     "contribute": "Osallistu",
@@ -95,6 +100,10 @@
     "facebook": "Facebook-sivu",
     "not_accessible": "Sisätila on suljettu",
     "capacity": "Maksimikapasiteetti : 0 henkilöä | Maksimikapasiteetti : 1 henkilö | Maksimikapasiteetti : {count} henkilöä",
+    "last_update": {
+      "date": "Päivitetty: {date}",
+      "recent": "Päivitetty muutama minuuttia sitten. Tieto saattaa olla muuttunut."
+    },
     "opening_hours": {
       "state_until_date": "{state} {date} asti",
       "state": {
@@ -120,8 +129,8 @@
       "only": "Vain noutomyyntiä"
     },
     "drive_through": {
-      "yes": "Drive in -palvelu",
-      "only": "Vain drive in -palvelu"
+      "yes": "Autokaista",
+      "only": "Vain autokaista"
     },
     "vending": {
       "pizza": "Pizza",
@@ -167,6 +176,7 @@
     "moneylender": "Rahanlainaamo",
     "insurance": "Vakuutus",
     "tourism_info": "Matkailuneuvonta",
+    "hotel": "Majoitus",
     "health": "Terveydenhoito",
     "pharmacy": "Apteekki",
     "covid19_centre": "Koronavirusneuvonta",
