@@ -45,6 +45,8 @@ import {
 } from 'vue-mapbox/dist/vue-mapbox.umd';
 
 const source = "public.poi_osm_light";
+const contribSource = "poi-contrib-src";
+const CONTRIBUTIONS_LOCAL_STORAGE = "recentContributions";
 
 function getLayers(theme) {
   const conditionalOpacity = [
@@ -162,6 +164,26 @@ function getLayers(theme) {
         "text-halo-color": "#ffffff",
         "text-halo-width": 1
       }
+    },
+    {
+      id: 'poi-contrib',
+      type: 'circle',
+      source: contribSource,
+      minzoom: 12,
+      paint: {
+        'circle-color': 'white',
+        'circle-stroke-width': 7,
+        'circle-stroke-color': theme.warning,
+        'circle-radius': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          12, 0,
+          14, 2,
+          15, 5,
+          19, 12
+        ]
+      }
     }
   ];
 }
@@ -215,7 +237,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['place']),
+    ...mapState(['place', 'contribution']),
 
     poiSource() {
       return {
@@ -254,12 +276,26 @@ export default {
           this.map.panTo(place.geometry.coordinates);
         }
       }
+    },
+
+    contribution(contribution) {
+      if(contribution) {
+        this.showContribution(contribution);
+        this.$store.commit('setContribution', null);
+      }
     }
   },
 
   methods: {
     load({ map }) {
       this.map = map;
+      this.contributionGeojson = { type: "FeatureCollection", features: [] };
+      this.map.addSource(contribSource, { type: 'geojson', data: this.contributionGeojson });
+
+      // Load previous contributions from local storage
+      this.readContributionFromStorage()
+      .forEach(c => this.showContribution({ type: "Feature", geometry: { type: "Point", coordinates: c.slice(0, 2) } }, false));
+
       this.$emit('loaded');
     },
 
@@ -291,6 +327,34 @@ export default {
           featuresAndLocation: this.featuresAndLocation
         }
       });
+    },
+
+    readContributionFromStorage() {
+      try {
+        return JSON.parse(localStorage.getItem(CONTRIBUTIONS_LOCAL_STORAGE))
+        .filter(c => Date.now() - (c[2]*1000) <= 3600000);
+      }
+      catch(e) {
+        return [];
+      }
+    },
+
+    showContribution(c, updateStorage = true) {
+      // Do nothing if not ready
+      if(!this.contributionGeojson) { return null; }
+
+      // Add received feature on map
+      this.contributionGeojson.features.push(c);
+      this.map.getSource(contribSource).setData(this.contributionGeojson);
+
+      // Update localStorage
+      if(updateStorage) {
+        const entry = c.geometry.coordinates.slice(0);
+        entry.push(parseInt((Date.now() / 1000).toFixed(0)));
+        const next = this.readContributionFromStorage()
+        next.push(entry);
+        localStorage.setItem(CONTRIBUTIONS_LOCAL_STORAGE, JSON.stringify(next));
+      }
     }
   }
 }

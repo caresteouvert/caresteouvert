@@ -312,7 +312,7 @@ export default {
       const { type, id } = parseId(this.id);
 
       return Promise.all([
-        fetch(`${poiFeature}/${this.id}.json`)
+        fetch(`${poiFeature}/${this.id}.json?precision=7`)
         .then(data => data.json())
         .then((place) => {
           this.place = place;

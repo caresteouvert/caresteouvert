@@ -4,7 +4,8 @@ import categoriesForCountry from '../lib/categories';
 export const state = () => ({
   country: '',
   categories: [],
-  place: null
+  place: null,
+  contribution: null
 });
 
 export const mutations = {
@@ -14,7 +15,11 @@ export const mutations = {
 
   setPlace (state, place) {
     state.place = place;
-  }
+  },
+
+  setContribution (state, contribution) {
+    state.contribution = contribution
+  },
 };
 
 export const getters = {
@@ -24,5 +29,5 @@ export const getters = {
 
   allCategories(state) {
     return categoriesForCountry(categories, state.country);
-  }
+  },
 };

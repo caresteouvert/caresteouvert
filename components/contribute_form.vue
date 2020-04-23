@@ -307,6 +307,7 @@ export default {
      ).then((response) => {
        if (response.status === 200) {
          this.$emit('success');
+         this.$store.commit('setContribution', this.place);
        }
      }).finally(() => {
        this.loading = false
