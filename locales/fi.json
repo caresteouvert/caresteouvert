@@ -67,24 +67,14 @@
     },
     "step3": {
       "title": "Lisää tietoja",
-      "delivery": {
-        "title": "Kotiinkuljetus",
+      "3state": {
         "unknown": "En tiedä",
         "yes": "Kyllä",
         "no": "Ei"
       },
-      "takeaway": {
-        "title": "Noutomyyntiä",
-        "unknown": "En tiedä",
-        "yes": "Kyllä",
-        "no": "Ei"
-      },
-      "access": {
-        "title": "Asiakkaille pääsy sallittua",
-        "unknown": "En tiedä",
-        "yes": "Kyllä",
-        "no": "Ei"
-      },
+      "delivery": "Kotiinkuljetus",
+      "takeaway": "Noutomyyntiä",
+      "access": "Asiakkaille pääsy sallittua",
       "details": "Voit lisätä tarkempia tietoja",
       "details_error": "Pitää olla joko tyhjä tai vähintään 10 merkkiä pitkä"
     },

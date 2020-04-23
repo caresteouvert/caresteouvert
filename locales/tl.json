@@ -62,24 +62,14 @@
     },
     "step3": {
       "title": "Mag-dagdag ng detalye",
-      "delivery": {
-        "title": "Ang puestong ito ay naghahatid ng inorder",
+      "3state": {
         "unknown": "Hindi alam",
         "yes": "Oo",
         "no": "Hindi"
       },
-      "takeaway": {
-        "title": "Maaring bumili dito para i-takeout.",
-        "unknown": "Hindi alam",
-        "yes": "Oo",
-        "no": "Hindi"
-      },
-      "access": {
-        "title": "Kahit sinoman ay maaaring makapasok o manatili sa loob ng lugar na ito",
-        "unknown": "Hindi ko alam",
-        "yes": "Oo",
-        "no": "Hindi"
-      },
+      "delivery": "Ang puestong ito ay naghahatid ng inorder",
+      "takeaway": "Maaring bumili dito para i-takeout.",
+      "access": "Kahit sinoman ay maaaring makapasok o manatili sa loob ng lugar na ito",
       "details": "Mag-dagdag ng detalye kung kinakailangan",
       "details_error": "Dapat ay blanko o hindi kukulang ng 10 titik"
     },

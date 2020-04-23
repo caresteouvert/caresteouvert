@@ -67,24 +67,14 @@
     },
     "step3": {
       "title": "Xehetasunak gehitu",
-      "delivery": {
-        "title": "Leku honek bidalketa eskaintzen du",
+      "3state": {
         "unknown": "Ez dakit",
         "yes": "Bai",
         "no": "Ez"
       },
-      "takeaway": {
-        "title": "Leku honek eramateko erosketa eskaintzen du",
-        "unknown": "Ez dakit",
-        "yes": "Bai",
-        "no": "Ez"
-      },
-      "access": {
-        "title": "Publikoa leku honetan sartu edo barruan geratu daiteke",
-        "unknown": "Ez dakit",
-        "yes": "Bai",
-        "no": "Ez"
-      },
+      "delivery": "Leku honek bidalketa eskaintzen du",
+      "takeaway": "Leku honek eramateko erosketa eskaintzen du",
+      "access": "Publikoa leku honetan sartu edo barruan geratu daiteke",
       "details": "Itxialdiran beharrezkoak diren xehetasunak gehitu",
       "details_error": "Hutsa edo gutxienez 10 karaktere"
     },

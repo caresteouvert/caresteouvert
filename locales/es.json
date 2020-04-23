@@ -67,24 +67,14 @@
     },
     "step3": {
       "title": "Añadir detalles",
-      "delivery": {
-        "title": "Este sitio ofrece reparto",
+      "3state": {
         "unknown": "No lo sé",
         "yes": "Sí",
         "no": "No"
       },
-      "takeaway": {
-        "title": "Este sitio permite comprar para llevar",
-        "unknown": "No lo sé",
-        "yes": "Sí",
-        "no": "No"
-      },
-      "access": {
-        "title": "El público puede entrar o permanecer dentro de este lugar",
-        "unknown": "No lo sé",
-        "yes": "Si",
-        "no": "No"
-      },
+      "delivery": "Este sitio ofrece reparto",
+      "takeaway": "Este sitio permite comprar para llevar",
+      "access": "El público puede entrar o permanecer dentro de este lugar",
       "details": "Agregar detalles necesarios durante el Estado de Alarma",
       "details_error": "Debe estar vacío o tener al menos 10 caracteres de longitud."
     },

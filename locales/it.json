@@ -62,24 +62,14 @@
     },
     "step3": {
       "title": "Aggiungi dettagli",
-      "delivery": {
-        "title": "Questo locale offre la consegna a domicilio",
+      "3state": {
         "unknown": "Non lo so",
         "yes": "Sì",
         "no": "No"
       },
-      "takeaway": {
-        "title": "Questa attività commerciale permette l'acquisto d'asporto",
-        "unknown": "Non lo so",
-        "yes": "Sì",
-        "no": "No"
-      },
-      "access": {
-        "title": "Le persone possono entrare o rimanere all'interno di questo luogo",
-        "unknown": "Non lo so",
-        "yes": "Sì",
-        "no": "No"
-      },
+      "delivery": "Questo locale offre la consegna a domicilio",
+      "takeaway": "Questa attività commerciale permette l'acquisto d'asporto",
+      "access": "Le persone possono entrare o rimanere all'interno di questo luogo",
       "details": "Aggiungi dettagli necessari durante il blocco",
       "details_error": "Dovrebbe essere sia vuoto o con almeno 10 caratteri"
     },

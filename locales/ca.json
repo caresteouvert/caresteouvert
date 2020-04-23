@@ -62,24 +62,14 @@
     },
     "step3": {
       "title": "Afegeix detalls",
-      "delivery": {
-        "title": "Aquest lloc distribueix a domicili",
+      "3state": {
         "unknown": "No ho sé",
         "yes": "Sí",
         "no": "No"
       },
-      "takeaway": {
-        "title": "El lloc permet fer la compra per a emportar-se-la",
-        "unknown": "No ho sé",
-        "yes": "Sí",
-        "no": "No"
-      },
-      "access": {
-        "title": "Els clients o visitants poden entrar o romandre dins aquest lloc",
-        "unknown": "No ho sé",
-        "yes": "Sí",
-        "no": "No"
-      },
+      "delivery": "Aquest lloc distribueix a domicili",
+      "takeaway": "El lloc permet fer la compra per a emportar-se-la",
+      "access": "Els clients o visitants poden entrar o romandre dins aquest lloc",
       "details": "Afegeix els detalls requerits durant el confinament",
       "details_error": "Això hauria de ser buit o tenir almenys 10 caràcters"
     },

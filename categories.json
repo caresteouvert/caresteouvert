@@ -171,7 +171,7 @@
             { "shop": "frozen_food|supermarket" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "access", "drive_through" ]
         },
         "butcher": {
           "name": "Butcher",

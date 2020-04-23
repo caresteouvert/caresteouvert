@@ -62,24 +62,14 @@
     },
     "step3": {
       "title": "Ouzhpenañ resisadurioù",
-      "delivery": {
-        "title": "Kasadennoù a vez kinniget gant al lec'h-mañ e-pad an enkaeañ",
+      "3state": {
         "unknown": "N'ouzon ket",
         "yes": "Ya",
         "no": "Ne ra ket"
       },
-      "takeaway": {
-        "title": "Kinniget e vez gwerzhioù da gas ganeoc'h gant al lec'h-mañ",
-        "unknown": "N'ouzon ket",
-        "yes": "Ya",
-        "no": "Ne ra ket"
-      },
-      "access": {
-        "title": "Gouest eo an arvalien da vont pe da chom e-barzh",
-        "unknown": "N'ouzon ket",
-        "yes": "Ya",
-        "no": "N'int ket"
-      },
+      "delivery": "Kasadennoù a vez kinniget gant al lec'h-mañ e-pad an enkaeañ",
+      "takeaway": "Kinniget e vez gwerzhioù da gas ganeoc'h gant al lec'h-mañ",
+      "access": "Gouest eo an arvalien da vont pe da chom e-barzh",
       "details": "Diret : ouzhpennañ munudoù all liammet gant an enkaeañ",
       "details_error": "A rank bezañ goullo pe enderc'hel 10 arouezenn d'an nebeutañ"
     },

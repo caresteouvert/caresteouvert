@@ -62,24 +62,14 @@
     },
     "step3": {
       "title": "Ange information",
-      "delivery": {
-        "title": "Stället erbjuder hemleverans",
+      "3state": {
         "unknown": "Vet ej",
         "yes": "Ja",
         "no": "Nej"
       },
-      "takeaway": {
-        "title": "Stället erbjuder take-away",
-        "unknown": "Vet ej",
-        "yes": "Ja",
-        "no": "Nej"
-      },
-      "access": {
-        "title": "Tillträde inomhus tillåtet",
-        "unknown": "Vet ej",
-        "yes": "Ja",
-        "no": "Nej"
-      },
+      "delivery": "Stället erbjuder hemleverans",
+      "takeaway": "Stället erbjuder take-away",
+      "access": "Tillträde inomhus tillåtet",
       "details": "Du kan ange ytterligare information",
       "details_error": "Bör vara antingen tomt eller åtminstone 10 märken långt"
     },

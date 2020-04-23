@@ -62,24 +62,14 @@
     },
     "step3": {
       "title": "Engadir detalles",
-      "delivery": {
-        "title": "Este lugar ofrece entregas",
+      "3state": {
         "unknown": "Non o sei",
         "yes": "Si",
         "no": "Non"
       },
-      "takeaway": {
-        "title": "Este lugar permite mercar para levar",
-        "unknown": "Non o sei",
-        "yes": "Si",
-        "no": "Non"
-      },
-      "access": {
-        "title": "O público pode entrar ou ficar dentro deste lugar",
-        "unknown": "Non o sei",
-        "yes": "Si",
-        "no": "Non"
-      },
+      "delivery": "Este lugar ofrece entregas",
+      "takeaway": "Este lugar permite mercar para levar",
+      "access": "O público pode entrar ou ficar dentro deste lugar",
       "details": "Engadir os detalles necesarios durante o confinamento",
       "details_error": "Ten que estar baleiro ou ter polo menos 10 caracteres de lonxitude"
     },
