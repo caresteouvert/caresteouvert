@@ -1,6 +1,5 @@
 <template>
   <div
-    v-resize="computeIsMobile"
     :class="{
        sm: isMobile,
       'place-opened': $route.name === 'place' && !isMobile,
@@ -9,6 +8,7 @@
   >
     <div>
       <v-navigation-drawer
+        v-if="!isMobile"
         v-model="sidebar"
         temporary
         stateless
@@ -73,6 +73,7 @@ import debounce from 'lodash.debounce';
 import config from '../config.json';
 import { getCookie, setCookie } from '../lib/cookie';
 import { encode, decode, encodePosition, decodePosition } from '../lib/url';
+import isMobile from './mixins/is_mobile';
 import AppsSheet from './apps_sheet';
 import MainMenu from './main_menu';
 import FilterList from './filter_list';
@@ -92,6 +93,8 @@ export default {
     TopToolbar,
   },
 
+  mixins: [isMobile],
+
   props: {
     featuresAndLocation: {
       type: String,
@@ -104,7 +107,6 @@ export default {
     return {
       loadMap: false,
       mapLoaded: false,
-      isMobile: false,
       sidebar: false,
       mapStyle: null,
       mapCenter: null,
@@ -116,8 +118,6 @@ export default {
   },
 
   mounted() {
-    this.computeIsMobile();
-
     this.sidebar = !this.isMobile;
 
     const { filter, location } = decode(this.featuresAndLocation);
@@ -219,10 +219,6 @@ export default {
 
     updateMapBounds(bbox) {
       this.$refs.map.$emit('updateMapBounds', bbox);
-    },
-
-    computeIsMobile() {
-      this.isMobile = this.$vuetify.breakpoint.smAndDown;
     },
 
     savedMapView() {

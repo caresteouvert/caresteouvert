@@ -1,8 +1,5 @@
 <template>
-  <div
-    v-resize="resize"
-    :class="{ 'bottom-dialog': isMobile, 'right-sidebar': !isMobile }"
-  >
+  <div :class="{ 'bottom-dialog': isMobile, 'right-sidebar': !isMobile }">
     <v-slide-x-reverse-transition>
       <v-card
         v-if="place"
@@ -150,6 +147,7 @@
 
 <script>
 import { poiFeature, osmUrl } from '../../config.json';
+import isMobile from '../mixins/is_mobile';
 import DetailOpeningHours from './detail_opening_hours';
 import DetailState from './detail_state';
 import DetailLink from './detail_link';
@@ -164,6 +162,8 @@ export default {
     DetailState,
     OsmLink
   },
+
+  mixins: [isMobile],
 
   props: {
     id: {
@@ -195,7 +195,6 @@ export default {
   },
 
   mounted() {
-    this.resize();
     this.beforeUnloadListener = (event) => {
       if (this.$refs.state && this.$refs.state.contribute) {
         event.preventDefault();
@@ -215,7 +214,6 @@ export default {
 
   data() {
     return {
-      isMobile: true,
       place: null,
       last_update: null
     };
@@ -304,10 +302,6 @@ export default {
   },
 
   methods: {
-    resize() {
-      this.isMobile = this.$vuetify.breakpoint.smAndDown;
-    },
-
     updatePlace() {
       const { type, id } = parseId(this.id);
 

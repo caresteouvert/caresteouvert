@@ -2,7 +2,6 @@
   <v-toolbar
     :dense="!isMobile || !geocoder"
     :height="isMobile && geocoder ? '70px' : undefined"
-    v-resize="resize"
     class="search ml-md-5 mt-md-5"
   >
     <v-tooltip
@@ -56,31 +55,31 @@
 <script>
 import Geocoder from './geocoder';
 import i18nMixin from './mixins/i18n';
+import isMobile from './mixins/is_mobile';
 
 export default {
   components: {
     Geocoder
   },
 
-  mixins: [i18nMixin],
+  mixins: [i18nMixin, isMobile],
 
   data() {
     return {
-      geocoder: false,
-      isMobile: false
+      geocoder: false
     };
   },
 
-  mounted() {
-    this.resize();
-    this.geocoder = !this.isMobile;
+  watch: {
+    isMobile: {
+      immediate: true,
+      handler(value) {
+        this.geocoder = !this.isMobile;
+      }
+    }
   },
 
   methods: {
-    resize() {
-      this.isMobile = this.$vuetify.breakpoint.smAndDown;
-    },
-
     onGeocoderSelect(bbox) {
       this.geocoder = !this.isMobile;
       this.$emit('onGeocode', bbox);
