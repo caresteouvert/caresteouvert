@@ -100,6 +100,10 @@
     "facebook": "Page Facebook",
     "not_accessible": "L'intérieur n'est pas accessible au public",
     "capacity": "Capacité maximale : 0 personnes | Capacité maximale : 1 personne | Capacité maximale : {count} personnes",
+    "last_update": {
+      "date": "Dernière modification : {date}",
+      "recent": "Modifié il y a quelques minutes, les infos ci-dessous ont pu changer"
+    },
     "opening_hours": {
       "state_until_date": "{state} jusqu'à {date}",
       "state": {

@@ -7,6 +7,12 @@
       class="mb-0"
     >
       <span class="text-pre">{{ $t(`details.state.${status}`) }}</span>
+      <span
+        class="body-2 font-weight-light"
+        v-if="last_update"
+      >
+        <br />{{ lastUpdateTooRecent ? $t('details.last_update.recent') : $t(`details.last_update.date`, { date: last_update.toLocaleString() }) }}
+      </span>
       <template v-if="!success">
         <br>
         <br>
@@ -49,6 +55,11 @@ export default {
     place: {
       type: Object,
       required: true
+    },
+
+    last_update: {
+      type: Date,
+      required: false
     }
   },
 
@@ -69,6 +80,10 @@ export default {
         closed: 'error'
       };
       return statuses[this.status];
+    },
+
+    lastUpdateTooRecent() {
+      return this.last_update !== null && Date.now() - this.last_update.getTime() < 1000*60*60;
     }
   }
 };
