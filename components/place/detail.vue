@@ -99,6 +99,7 @@
             v-else-if="place.properties.brand_hours"
             :href="place.properties.brand_hours"
             :title="$t('details.containment_brand_hours')"
+            external
             icon="osm-chevron_right"
           />
           <template
@@ -125,6 +126,7 @@
             v-if="contact('facebook')"
             :href="contact('facebook')"
             :title="contact('facebook')"
+            external
             icon="osm-fcbk"
           />
 
@@ -132,6 +134,7 @@
             v-if="contact('website')"
             :href="contact('website')"
             :title="contact('website')"
+            external
             icon="osm-link"
           />
 
