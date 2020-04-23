@@ -48,28 +48,28 @@ describe('ContributeForm', () => {
     it('dont parse the delivery:covid19 tag if it dont exists', () => {
       const form = createWrapper({ place: { properties: { tags: { } } } });
       form.vm.clickOpen();
-      expect(form.vm.delivery).toBe(null);
-      expect(form.vm.showDelivery).toBe(false);
+      expect(form.vm.fieldValues.delivery).toBe(null);
+      expect(form.vm.filteredFields.find(f => f.id === 'delivery')).toBe(undefined);
     });
 
     it('parse the delivery:covid19 tag if it exists', () => {
       const form = createWrapper({ place: { properties: { cat: 'restaurant', normalized_cat: 'eat', tags: { 'delivery:covid19': 'yes' } } } });
       form.vm.clickOpen();
-      expect(form.vm.delivery).toEqual('yes');
-      expect(form.vm.showDelivery).toBe(true);
+      expect(form.vm.fieldValues.delivery).toBe('yes');
+      expect(form.vm.filteredFields.find(f => f.id === 'delivery') !== undefined).toBe(true);
     });
 
     it('if the delivery tag has an unknow value, hide the field', () => {
       const form = createWrapper({ place: { properties: { tags: { 'delivery:covid19': 'Mo-Fr 09:00-18:00' } } } });
       form.vm.clickOpen();
-      expect(form.vm.delivery).toBe(null);
-      expect(form.vm.showDelivery).toBe(false);
+      expect(form.vm.fieldValues.delivery).toBe(null);
+      expect(form.vm.filteredFields.find(f => f.id === 'delivery')).toBe(undefined);
     });
 
     it('if the place if closed, dont, hide the delivery field', () => {
       const form = createWrapper({ place: { properties: { tags: { } } } });
       form.vm.clickClose();
-      expect(form.vm.showDelivery).toBe(false);
+      expect(form.vm.filteredFields.find(f => f.id === 'delivery')).toBe(undefined);
     });
   });
 
@@ -77,28 +77,28 @@ describe('ContributeForm', () => {
     it('dont parse the takeaway:covid19 tag if it dont exists', () => {
       const form = createWrapper({ place: { properties: { tags: { } } } });
       form.vm.clickOpen();
-      expect(form.vm.takeaway).toBe(null);
-      expect(form.vm.showTakeaway).toBe(false);
+      expect(form.vm.fieldValues.takeaway).toBe(null);
+      expect(form.vm.filteredFields.find(f => f.id === 'takeaway')).toBe(undefined);
     });
 
     it('parse the takeaway:covid19 tag if it exists', () => {
       const form = createWrapper({ place: { properties: { cat: 'restaurant', normalized_cat: 'eat', tags: { 'takeaway:covid19': 'yes' } } } });
       form.vm.clickOpen();
-      expect(form.vm.takeaway).toEqual('yes');
-      expect(form.vm.showTakeaway).toBe(true);
+      expect(form.vm.fieldValues.takeaway).toBe('yes');
+      expect(form.vm.filteredFields.find(f => f.id === 'takeaway') !== null).toBe(true);
     });
 
     it('if the takeaway tag has an unknow value, hide the field', () => {
       const form = createWrapper({ place: { properties: { tags: { 'takeaway:covid19': 'Mo-Fr 09:00-18:00' } } } });
       form.vm.clickOpen();
-      expect(form.vm.takeaway).toBe(null);
-      expect(form.vm.showTakeaway).toBe(false);
+      expect(form.vm.fieldValues.takeaway).toBe(null);
+      expect(form.vm.filteredFields.find(f => f.id === 'takeaway')).toBe(undefined);
     });
 
     it('if the place if closed, dont, hide the takeaway field', () => {
       const form = createWrapper({ place: { properties: { tags: { } } } });
       form.vm.clickClose();
-      expect(form.vm.showTakeaway).toBe(false);
+      expect(form.vm.filteredFields.find(f => f.id === 'takeaway')).toBe(undefined);
     });
   });
 
@@ -190,7 +190,7 @@ describe('ContributeForm', () => {
       form.vm.clickOpen();
       form.vm.openingHours = [{ days: ['mo'], hours: ['08:00-18:00'] }];
       form.vm.openingHoursWithoutLockDown = false;
-      form.vm.delivery = 'yes';
+      form.vm.fieldValues.delivery = 'yes';
       expect(form.vm.payload).toEqual({
         name: 'Test',
         state: 'open',
@@ -207,7 +207,7 @@ describe('ContributeForm', () => {
 
     it('open, with takeaway', () => {
       form.vm.clickOpen();
-      form.vm.takeaway = 'yes';
+      form.vm.fieldValues.takeaway = 'yes';
       expect(form.vm.payload).toEqual({
         name: 'Test',
         state: 'open',
