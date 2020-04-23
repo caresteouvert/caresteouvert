@@ -1,5 +1,6 @@
 {
   "lang": "Euskera",
+  "loading": "Kargatzen, mesedez itxaron...",
   "covid19-alert": "Jarrai itzazu gobernuaren murrizketak. Errespontsabilitatea ZUREA da.",
   "title": "Irekita jarraitzen du",
   "subtitle": "Itxialdi garaian irekita jarraitzen duten lekuak",
@@ -10,6 +11,10 @@
   "missing_shop": "Falta den denda baten berri eman",
   "change_lang": "Hizkuntza aldatu",
   "zoomtosee": "Gerturatu irekita dauden lekuak ikusteko",
+  "toggle_color": {
+    "blind": "Daltonikoentzar modua",
+    "normal": "Daltonikoentzat modua kendu"
+  },
   "learnmore": {
     "about": "Honi buruz",
     "contribute": "Lagundu",
@@ -95,6 +100,10 @@
     "facebook": "Facebook orria",
     "not_accessible": "Barrukaldea publikoari itxita dago",
     "capacity": "Edukiera maximoa: 0 pertsona | Edukiera maximoa: pertsona 1 | Edukiera maximoa: {count} pertsona",
+    "last_update": {
+      "date": "Azken eguneraketa: {date}",
+      "recent": "Duela minutu gutxi batzuk eguneratuta, beheko informazioa aldatu ahal izan da"
+    },
     "opening_hours": {
       "state_until_date": "{state} {date} arte",
       "state": {
@@ -159,7 +168,7 @@
     "amenity": "Zerbitzuak",
     "police": "Polizia",
     "townhall": "Udaletxea",
-    "post_office": "Posta bulegoa",
+    "post_office": "Posta zerbitzuak",
     "childcare": "Haurtzaindegia",
     "employment_agency": "Enplegu agentziak",
     "funeral_directors": "Hileta zuzendariak",
@@ -167,6 +176,7 @@
     "moneylender": "Mailegu emailea",
     "insurance": "Asegurua",
     "tourism_info": "Informazio turistikoa",
+    "hotel": "Ostalaritza",
     "health": "Osasuna",
     "pharmacy": "Farmazia",
     "covid19_centre": "Covid-19 buruzko kontsulta zentrua",
