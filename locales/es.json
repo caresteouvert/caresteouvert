@@ -69,12 +69,13 @@
       "title": "Añadir detalles",
       "3state": {
         "unknown": "No lo sé",
-        "yes": "Sí",
+        "yes": "Si",
         "no": "No"
       },
       "delivery": "Este sitio ofrece reparto",
       "takeaway": "Este sitio permite comprar para llevar",
       "access": "El público puede entrar o permanecer dentro de este lugar",
+      "drive_through": "Este sitio dispone de servicio al coche",
       "details": "Agregar detalles necesarios durante el Estado de Alarma",
       "details_error": "Debe estar vacío o tener al menos 10 caracteres de longitud."
     },
@@ -90,6 +91,10 @@
     "facebook": "Página de Facebook",
     "not_accessible": "Espacio interior no accesible al público",
     "capacity": "Capacidad máxima: 0 personas | Capacidad máxima: 1 persona | Capacidad máxima: {count} personas",
+    "last_update": {
+      "date": "Última actualización: {date}",
+      "recent": "Actualizado hace unos minutos, la información podría haber cambiado"
+    },
     "opening_hours": {
       "state_until_date": "{state} hasta {date}",
       "state": {
@@ -170,6 +175,7 @@
     "hearing_aids": "Audífonos",
     "condoms": "Máquinas expendedoras de condones",
     "medical_supply": "Suministros médicos",
+    "health_center": "Centros de salud",
     "food": "Alimentación",
     "supermarket": "Supermercados",
     "butcher": "Carnicerías",
