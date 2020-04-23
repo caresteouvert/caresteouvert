@@ -1,5 +1,6 @@
 {
   "lang": "Deutsch",
+  "loading": "Wird geladen, bitte warten…",
   "covid19-alert": "Bitte folge den Anweisungen der zuständigen Behörden.",
   "title": "Bleibt offen",
   "subtitle": "Alle Geschäfte, die weiterhin geöffnet sind.",
@@ -10,6 +11,10 @@
   "missing_shop": "Fehlendes Geschäft melden",
   "change_lang": "Sprache ändern",
   "zoomtosee": "Vergrößere die Karte, um offene Geschäfte zu sehen",
+  "toggle_color": {
+    "blind": "Anzeige für Rot-Grün-Sehschwäche aktivieren",
+    "normal": "Anzeige für Rot-Grün-Sehschwäche deaktivieren"
+  },
   "learnmore": {
     "about": "Über",
     "contribute": "Mitmachen",
@@ -95,6 +100,10 @@
     "facebook": "Facebook-Seite",
     "not_accessible": "Innenbereich nicht öffentlich zugänglich",
     "capacity": "Maximale Kapazität: 0 Personen | Maximale Kapazität: 1 Person | Maximale Kapazität: {count} Personen",
+    "last_update": {
+      "date": "Letzte Änderung: {date}",
+      "recent": "Vor wenigen Minuten aktualisiert, Daten können sich geändert haben"
+    },
     "opening_hours": {
       "state_until_date": "{state} bis {date}",
       "state": {
@@ -159,7 +168,7 @@
     "amenity": "Post, Bank & Co. ",
     "police": "Polizei",
     "townhall": "Rathaus",
-    "post_office": "Postfiliale",
+    "post_office": "Postdienstleistungen",
     "childcare": "Kinderbetreuung",
     "employment_agency": "Arbeitsagentur",
     "funeral_directors": "Bestatter",
@@ -167,6 +176,7 @@
     "moneylender": "Geldverleiher",
     "insurance": "Versicherung",
     "tourism_info": "Tourist-Info",
+    "hotel": "Unterkunft",
     "health": "Apotheke & Gesundheit",
     "pharmacy": "Apotheke",
     "covid19_centre": "Covid-19-Beratungsstelle",
