@@ -1,0 +1,235 @@
+{
+  "lang": "英語",
+  "loading": "読込中。しばらくお待ち下さい...",
+  "covid19-alert": "政府の制限に従ってください。責任は「あなた」にあります。",
+  "title": "開店中",
+  "subtitle": "封鎖中にも開店中の場所",
+  "subtitle-dense": "封鎖中に開店中の場所",
+  "search": "検索文字列を入力",
+  "coordinates": "座標",
+  "menu": "メニュー",
+  "missing_shop": "不明な店舗を報告",
+  "change_lang": "言語切替",
+  "zoomtosee": "ズームインして開店中の場所を表示",
+  "toggle_color": {
+    "blind": "カラーバリアフリーモードを有効化",
+    "normal": "カラーバリアフリーモードを無効化"
+  },
+  "learnmore": {
+    "about": "説明",
+    "contribute": "貢献する",
+    "missing_shop": "不明な店舗を報告",
+    "description": "« {brand} »は封鎖期間中に自宅付近を間違って動き回らないために、そして感染リスクを抑えるために不可欠なツールです。\nこのみんなで作るマップを使うと、近所のお店などの開閉店状況を簡単にシェアできます。それはご近所さんや都市の住民により良い情報を届けるための、最も効果的で統一されたやり方です。",
+    "title": "詳細を知る",
+    "press": "プレス",
+    "disclaimer": "免責事項",
+    "blog": "ブログ",
+    "townhalls": "役所向けの危機コミュニケーションの解決提案",
+    "osm_contributors": "OpenStreetMap 投稿者向け文書"
+  },
+  "rgpd": {
+    "consent": "都市封鎖期間中、統計のためにcookieを保存しても良いですか？",
+    "yes": "はい",
+    "no": "いいえ"
+  },
+  "apps_info": {
+    "close": "閉じる",
+    "text": "モバイルアプリ « {brand} » を公開しました！",
+    "googleplay": "Google Play",
+    "apple": "Apple ストア",
+    "fdroid": "F-Droid"
+  },
+  "days": {
+    "monday": "月",
+    "tuesday": "火",
+    "wednesday": "水",
+    "thursday": "木",
+    "friday": "金",
+    "saturday": "土",
+    "sunday": "日",
+    "ph": "祝祭日"
+  },
+  "contribute_form": {
+    "title": "貢献する",
+    "step1": {
+      "title": "この場所は封鎖中に開店していますか？",
+      "open": {
+        "yes": "はい",
+        "no": "いいえ"
+      }
+    },
+    "step2": {
+      "title": "封鎖中の臨時営業時間",
+      "same_hours": "これは同じ時間帯です",
+      "same_hours_without_lockdown": "これは封鎖の外側と同じ時間帯です",
+      "dont_know": "不明",
+      "continue": "続ける"
+    },
+    "step3": {
+      "title": "詳細を追加",
+      "3state": {
+        "unknown": "不明",
+        "yes": "はい",
+        "no": "いいえ"
+      },
+      "delivery": "この場所では配達があります",
+      "takeaway": "この場所では持ち帰りができます",
+      "access": "お客はこの場所の中に入ったり滞在できます",
+      "drive_through": "この場所にはドライブスルーのサービスがあります",
+      "details": "オプション : 封鎖の間に必要な詳細を追加します",
+      "details_error": "空にするか、最低10文字以上入力します"
+    },
+    "submit": "公開",
+    "cancel": "キャンセル"
+  },
+  "details": {
+    "signal_warning": "報告を書きかけですが保存されません。このまま続けますか？",
+    "signal": "変更を報告",
+    "signal_done": "報告は登録されました。ありがとうございます！しばらくしらた表示されるでしょう。",
+    "containment_opening_hours": "封鎖期間外の通常営業時間",
+    "containment_brand_hours": "営業時間をよく見てください",
+    "facebook": "Facebookページ",
+    "not_accessible": "お客が入れない屋内スペース",
+    "capacity": "定員 : 0 人 | 定員 : 1 人 | 定員 : {count} 人",
+    "last_update": {
+      "date": "最終更新日: {date}",
+      "recent": "数分前に更新されました。下記の情報は変更されているかもしれません"
+    },
+    "opening_hours": {
+      "state_until_date": "{state} {date} まで",
+      "state": {
+        "open": "開店",
+        "closed": "閉店"
+      },
+      "tomorrow": "明日"
+    },
+    "state": {
+      "open": "封鎖中に開店している場所",
+      "open_adapted": "封鎖中に開店している場所、営業時間変更あり",
+      "partial": "この場所は封鎖中に一部開店している場所と同じブランドの場所です。開店しているか、閉店しているかを教えてください。",
+      "unknown": "この場所は封鎖期間中に営業を許可されているかもしれません。開店しているか、閉店しているかを教えて下さい。",
+      "closed": "封鎖中に閉店している場所"
+    },
+    "delivery": {
+      "yes": "配達サービスが利用可",
+      "only": "配達のみ"
+    },
+    "takeaway": {
+      "yes": "持ち帰り販売が利用可",
+      "modified": "変更された持ち帰り販売",
+      "only": "持ち帰り販売のみ"
+    },
+    "drive_through": {
+      "yes": "ドライブスルーサービス利用可",
+      "only": "ドライブスルーのみ"
+    },
+    "vending": {
+      "pizza": "ピザ",
+      "stamps": "切手",
+      "parcel_mail_in": "小包投函ボックス",
+      "parcel_pickup": "小包受取ボックス",
+      "parcel_pickup;parcel_mail_in": "小包受取&投函ボックス",
+      "milk": "ミルク",
+      "drinks": "飲料",
+      "water": "水",
+      "sweets": "お菓子"
+    }
+  },
+  "opening_hours_editor": {
+    "day_shortcuts": {
+      "weekdays": "月曜から土曜"
+    },
+    "select_days": "同じ営業時間を共有する曜日を選びます",
+    "next": "次",
+    "cancel": "キャンセル",
+    "select_time": {
+      "start": "開店時刻",
+      "end": "閉店時刻"
+    },
+    "add_interval": "時間を追加",
+    "add_new_days": "営業曜日を追加"
+  },
+  "osm_link": {
+    "title": "« {brand} » はOpenStreetMapのデータを使用しています。",
+    "view": "閲覧",
+    "edit": "編集"
+  },
+  "categories": {
+    "other": "他の場所",
+    "amenity": "施設",
+    "police": "警察",
+    "townhall": "役所",
+    "post_office": "郵便サービス",
+    "childcare": "育児",
+    "employment_agency": "職業安定所",
+    "funeral_directors": "葬儀社",
+    "bank": "銀行",
+    "moneylender": "サラ金",
+    "insurance": "保険",
+    "tourism_info": "観光案内所",
+    "hotel": "宿泊",
+    "health": "健康",
+    "pharmacy": "薬局",
+    "covid19_centre": "Covid-19 相談センター",
+    "optician": "メガネ屋",
+    "hearing_aids": "補聴器店",
+    "condoms": "コンドーム自販機",
+    "medical_supply": "医療用品店",
+    "health_center": "健康センター",
+    "food": "飲食",
+    "supermarket": "スーパーマーケット",
+    "butcher": "肉屋",
+    "cheese": "チーズ店",
+    "convenience": "コンビニ",
+    "seafood": "魚屋",
+    "greengrocer": "八百屋",
+    "grocery": "食料品店",
+    "chocolate": "チョコレート",
+    "tea": "紅茶",
+    "coffee": "コーヒー",
+    "dairy": "日配品",
+    "confectionery": "お菓子",
+    "farm": "農産物販売所",
+    "marketplace": "市場",
+    "bakery": "パン屋",
+    "eat": "レストラン&持ち帰り",
+    "vending_machine": "自販機",
+    "restaurant": "レストラン",
+    "fast_food": "ファストフード",
+    "ice_cream": "アイスクリーム",
+    "cafe": "喫茶店",
+    "bar": "バー",
+    "drugs": "ドラッグ",
+    "tobacco": "タバコ",
+    "e_cigarette": "電子タバコ",
+    "alcohol": "酒店",
+    "shop": "店舗",
+    "hardware": "金物",
+    "mobile_phone": "携帯電話",
+    "computer": "コンピュータ",
+    "electronics": "電子機器",
+    "laundry": "洗濯屋",
+    "stationery": "文具店",
+    "newsagent": "新聞販売店",
+    "pet": "ペット店",
+    "agrarian": "農業用品店",
+    "flower": "園芸用品店",
+    "chemist": "化粧品店",
+    "fabric": "生地店",
+    "books": "書店",
+    "mobility": "モビリティ",
+    "fuel": "ガソリンスタンド",
+    "car_rental": "レンタカー",
+    "bicycle": "自転車店",
+    "car": "ガレージ",
+    "bicycle_tube": "自転車チューブ自販機",
+    "public_transport_tickets": "公共交通券売機"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "封鎖中に開店している場所を探す",
+      "contribute": "自分の情報でマップを改善する",
+      "organize": "感染リスクを抑えるためのより良いモビリティ"
+    }
+  }
+}
