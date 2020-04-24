@@ -8,10 +8,10 @@
     >
       <span class="text-pre">{{ $t(`details.state.${status}`) }}</span>
       <span
+        v-if="lastUpdate"
         class="body-2 font-weight-light"
-        v-if="last_update"
       >
-        <br />{{ lastUpdateTooRecent ? $t('details.last_update.recent') : $t(`details.last_update.date`, { date: last_update.toLocaleString(this.$i18n.locale, { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', year: 'numeric' }) }) }}
+        <br />{{ lastUpdateTooRecent ? $t('details.last_update.recent') : $t(`details.last_update.date`, { date: lastUpdate.toLocaleString(this.$i18n.locale, { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', year: 'numeric' }) }) }}
       </span>
       <template v-if="!success">
         <br>
@@ -57,7 +57,7 @@ export default {
       required: true
     },
 
-    last_update: {
+    lastUpdate: {
       type: Date,
       required: false
     }
@@ -83,7 +83,7 @@ export default {
     },
 
     lastUpdateTooRecent() {
-      return this.last_update && Date.now() - this.last_update.getTime() < 1000*60*60;
+      return this.lastUpdate && Date.now() - this.lastUpdate.getTime() < 1000*60*60;
     }
   }
 };
