@@ -11,7 +11,7 @@
         class="body-2 font-weight-light"
         v-if="last_update"
       >
-        <br />{{ lastUpdateTooRecent ? $t('details.last_update.recent') : $t(`details.last_update.date`, { date: last_update.toLocaleString(this.$i18n.locale, { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric' }) }) }}
+        <br />{{ lastUpdateTooRecent ? $t('details.last_update.recent') : $t(`details.last_update.date`, { date: last_update.toLocaleString(this.$i18n.locale, { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', year: 'numeric' }) }) }}
       </span>
       <template v-if="!success">
         <br>
