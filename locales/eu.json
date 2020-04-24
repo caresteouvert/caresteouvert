@@ -144,7 +144,7 @@
     "cancel": "Kantzelatu",
     "select_time": {
       "start": "Irekiera ordua",
-      "end": "Aukeratu itxiera ordua"
+      "end": "Itxiera ordua"
     },
     "add_interval": "Orduak gehitu",
     "add_new_days": "Gehitu irekitako egunak"
