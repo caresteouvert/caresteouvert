@@ -70,6 +70,10 @@ export default {
     };
   },
 
+  mounted() {
+    this.geocoder = !this.isMobile;
+  },
+
   watch: {
     isMobile() {
       this.geocoder = !this.isMobile;
