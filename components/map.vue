@@ -36,6 +36,7 @@
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { mapState } from 'vuex';
 import * as config from '../config.json';
+import { readContributionFromStorage, pushContribution } from '../lib/recent_contributions';
 import {
   MglGeolocateControl,
   MglMap,
@@ -46,7 +47,17 @@ import {
 
 const source = "public.poi_osm_light";
 const contribSource = "poi-contrib-src";
-const CONTRIBUTIONS_LOCAL_STORAGE = "recentContributions";
+
+function getColorStroke(theme, contribs = readContributionFromStorage()) {
+  return [
+    'case',
+    ["in", ["get", "fid"], ["literal", contribs.filter(c => c[1].startsWith("open")).map(c => c[0])]], theme.success,
+    ["in", ["get", "fid"], ["literal", contribs.filter(c => c[1] === "closed").map(c => c[0])]], theme.error,
+    ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], theme.success,
+    ["in", ["get", "status"], ["literal", ["closed"]]], theme.error,
+    "#9E9E9E"
+  ];
+}
 
 function getLayers(theme) {
   const conditionalOpacity = [
@@ -64,13 +75,6 @@ function getLayers(theme) {
       1
     ],
     15, 1
-  ];
-
-  const colorStroke = [
-    'case',
-    ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], theme.success,
-    ["in", ["get", "status"], ["literal", ["closed"]]], theme.error,
-    "#9E9E9E"
   ];
 
   return [
@@ -95,7 +99,7 @@ function getLayers(theme) {
           ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 4,
           2.5
         ],
-        'circle-stroke-color': colorStroke,
+        'circle-stroke-color': getColorStroke(theme),
         'circle-radius': [
           'interpolate',
           ['linear'],
@@ -108,26 +112,6 @@ function getLayers(theme) {
             6
           ],
           19, 13
-        ]
-      }
-    },
-    {
-      id: 'poi-contrib',
-      type: 'circle',
-      source: contribSource,
-      minzoom: 12,
-      paint: {
-        'circle-color': 'white',
-        'circle-stroke-width': 7,
-        'circle-stroke-color': colorStroke,
-        'circle-radius': [
-          'interpolate',
-          ['linear'],
-          ['zoom'],
-          12, 0,
-          14, 2,
-          15, 5,
-          19, 12
         ]
       }
     },
@@ -282,7 +266,8 @@ export default {
 
     contribution(contribution) {
       if(contribution) {
-        this.showContribution(contribution);
+        // Update layer coloring
+        this.map.setPaintProperty('poi-background', 'circle-stroke-color', getColorStroke(this.$vuetify.theme.themes.light, pushContribution(contribution)));
         this.$store.commit('setContribution', null);
       }
     }
@@ -291,13 +276,6 @@ export default {
   methods: {
     load({ map }) {
       this.map = map;
-      this.contributionGeojson = { type: "FeatureCollection", features: [] };
-      this.map.addSource(contribSource, { type: 'geojson', data: this.contributionGeojson });
-
-      // Load previous contributions from local storage
-      this.readContributionFromStorage()
-      .forEach(c => this.showContribution({ type: "Feature", geometry: { type: "Point", coordinates: c.slice(0, 2) }, properties: { status: c[3] } }, false));
-
       this.$emit('loaded');
     },
 
@@ -329,35 +307,6 @@ export default {
           featuresAndLocation: this.featuresAndLocation
         }
       });
-    },
-
-    readContributionFromStorage() {
-      try {
-        return JSON.parse(localStorage.getItem(CONTRIBUTIONS_LOCAL_STORAGE))
-        .filter(c => Date.now() - (c[2]*1000) <= 3600000);
-      }
-      catch(e) {
-        return [];
-      }
-    },
-
-    showContribution(c, updateStorage = true) {
-      // Do nothing if not ready
-      if(!this.contributionGeojson) { return null; }
-
-      // Add received feature on map
-      this.contributionGeojson.features.push(c);
-      this.map.getSource(contribSource).setData(this.contributionGeojson);
-
-      // Update localStorage
-      if(updateStorage) {
-        const entry = c.geometry.coordinates.slice(0);
-        entry.push(parseInt((Date.now() / 1000).toFixed(0)));
-        entry.push(c.properties.status);
-        const next = this.readContributionFromStorage()
-        next.push(entry);
-        localStorage.setItem(CONTRIBUTIONS_LOCAL_STORAGE, JSON.stringify(next));
-      }
     }
   }
 }

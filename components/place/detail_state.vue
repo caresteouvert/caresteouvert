@@ -17,7 +17,7 @@
         <br>
         <br>
         <v-btn
-          :disabled="contribute"
+          :disabled="contribute || lastUpdateTooRecent"
           @click="contribute = true">{{ $t('details.signal') }}</v-btn>
       </template>
     </v-alert>

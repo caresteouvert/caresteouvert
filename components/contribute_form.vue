@@ -307,8 +307,11 @@ export default {
      ).then((response) => {
        if (response.status === 200) {
          this.$emit('success');
-         const feature = { type: "Feature", geometry: this.place.geometry, properties: { status: this.payload.state } };
-         this.$store.commit('setContribution', feature);
+         this.$store.commit('setContribution', [
+            this.place.properties.fid,
+            this.payload.state,
+            parseInt((Date.now() / 1000).toFixed(0))
+          ]);
        }
      }).finally(() => {
        this.loading = false
