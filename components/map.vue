@@ -66,6 +66,13 @@ function getLayers(theme) {
     15, 1
   ];
 
+  const colorStroke = [
+    'case',
+    ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], theme.success,
+    ["in", ["get", "status"], ["literal", ["closed"]]], theme.error,
+    "#9E9E9E"
+  ];
+
   return [
     {
       id: "poi-background",
@@ -88,12 +95,7 @@ function getLayers(theme) {
           ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 4,
           2.5
         ],
-        'circle-stroke-color': [
-          'case',
-          ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], theme.success,
-          ["in", ["get", "status"], ["literal", ["closed"]]], theme.error,
-          "#9E9E9E"
-        ],
+        'circle-stroke-color': colorStroke,
         'circle-radius': [
           'interpolate',
           ['linear'],
@@ -106,6 +108,26 @@ function getLayers(theme) {
             6
           ],
           19, 13
+        ]
+      }
+    },
+    {
+      id: 'poi-contrib',
+      type: 'circle',
+      source: contribSource,
+      minzoom: 12,
+      paint: {
+        'circle-color': 'white',
+        'circle-stroke-width': 7,
+        'circle-stroke-color': colorStroke,
+        'circle-radius': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          12, 0,
+          14, 2,
+          15, 5,
+          19, 12
         ]
       }
     },
@@ -163,26 +185,6 @@ function getLayers(theme) {
         "text-halo-blur": 0.5,
         "text-halo-color": "#ffffff",
         "text-halo-width": 1
-      }
-    },
-    {
-      id: 'poi-contrib',
-      type: 'circle',
-      source: contribSource,
-      minzoom: 12,
-      paint: {
-        'circle-color': 'white',
-        'circle-stroke-width': 7,
-        'circle-stroke-color': theme.warning,
-        'circle-radius': [
-          'interpolate',
-          ['linear'],
-          ['zoom'],
-          12, 0,
-          14, 2,
-          15, 5,
-          19, 12
-        ]
       }
     }
   ];
@@ -294,7 +296,7 @@ export default {
 
       // Load previous contributions from local storage
       this.readContributionFromStorage()
-      .forEach(c => this.showContribution({ type: "Feature", geometry: { type: "Point", coordinates: c.slice(0, 2) } }, false));
+      .forEach(c => this.showContribution({ type: "Feature", geometry: { type: "Point", coordinates: c.slice(0, 2) }, properties: { status: c[3] } }, false));
 
       this.$emit('loaded');
     },
@@ -351,6 +353,7 @@ export default {
       if(updateStorage) {
         const entry = c.geometry.coordinates.slice(0);
         entry.push(parseInt((Date.now() / 1000).toFixed(0)));
+        entry.push(c.properties.status);
         const next = this.readContributionFromStorage()
         next.push(entry);
         localStorage.setItem(CONTRIBUTIONS_LOCAL_STORAGE, JSON.stringify(next));

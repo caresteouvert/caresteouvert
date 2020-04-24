@@ -307,7 +307,8 @@ export default {
      ).then((response) => {
        if (response.status === 200) {
          this.$emit('success');
-         this.$store.commit('setContribution', this.place);
+         const feature = { type: "Feature", geometry: this.place.geometry, properties: { status: this.payload.state } };
+         this.$store.commit('setContribution', feature);
        }
      }).finally(() => {
        this.loading = false
