@@ -224,5 +224,12 @@
     "car": "Garage",
     "bicycle_tube": "Distributeur de chambres à air",
     "public_transport_tickets": "Distributeur de titres de transport"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "Trouvez les lieux ouverts durant le confinement",
+      "contribute": "Enrichissez la carte avec vos propres informations",
+      "organize": "Mieux se déplacer pour limiter le risque de contagion"
+    }
   }
 }
