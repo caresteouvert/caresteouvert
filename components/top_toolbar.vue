@@ -71,11 +71,8 @@ export default {
   },
 
   watch: {
-    isMobile: {
-      immediate: true,
-      handler(value) {
-        this.geocoder = !this.isMobile;
-      }
+    isMobile() {
+      this.geocoder = !this.isMobile;
     }
   },
 
