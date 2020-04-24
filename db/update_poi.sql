@@ -75,8 +75,10 @@ CREATE TABLE IF NOT EXISTS poi_osm_next(
 	brand_hours VARCHAR,
 	brand_infos VARCHAR,
 	status VARCHAR DEFAULT 'unknown',
+	status_order INTEGER,
 	opening_hours VARCHAR,
 	delivery VARCHAR DEFAULT 'unknown',
+	takeaway VARCHAR DEFAULT 'unknown',
 	country VARCHAR,
 	sub_country VARCHAR,
 	source_status VARCHAR DEFAULT 'osm',
@@ -87,7 +89,7 @@ TRUNCATE TABLE poi_osm_next;
 
 
 -- Only add POI with appropriate tagging
-INSERT INTO poi_osm_next(fid, geom, name, cat, normalized_cat, brand, brand_wikidata, brand_infos, status, opening_hours, delivery, country, sub_country, tags)
+INSERT INTO poi_osm_next(fid, geom, name, cat, normalized_cat, brand, brand_wikidata, brand_infos, status, status_order, opening_hours, delivery, takeaway, country, sub_country, tags)
 SELECT
 	concat('n', osm_id),
 	way,
@@ -99,6 +101,13 @@ SELECT
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
 	opening_state(tags),
 	CASE
+		WHEN opening_state(tags) = 'open' THEN 1
+		WHEN opening_state(tags) = 'open_adapted' THEN 2
+		WHEN opening_state(tags) = 'partial' THEN 3
+		WHEN opening_state(tags) = 'unknown' THEN 4
+		ELSE 5
+	END,
+	CASE
 		WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') AND NOT "opening_hours:covid19" ILIKE 'off%' THEN "opening_hours:covid19"
 		WHEN amenity = 'vending_machine' AND tags->'opening_hours' IN ('', '24/7') THEN '24/7'
 		ELSE NULL
@@ -106,6 +115,11 @@ SELECT
 	CASE
 		WHEN tags->'delivery:covid19' IN ('yes', 'no', 'only') THEN tags->'delivery:covid19'
 		WHEN tags->'delivery' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'delivery'
+		ELSE 'unknown'
+	END,
+	CASE
+		WHEN tags->'takeaway:covid19' IN ('yes', 'no', 'only') THEN tags->'takeaway:covid19'
+		WHEN tags->'takeaway' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'takeaway'
 		ELSE 'unknown'
 	END,
 	country_iso2,
@@ -128,6 +142,13 @@ SELECT
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
 	opening_state(tags),
 	CASE
+		WHEN opening_state(tags) = 'open' THEN 1
+		WHEN opening_state(tags) = 'open_adapted' THEN 2
+		WHEN opening_state(tags) = 'partial' THEN 3
+		WHEN opening_state(tags) = 'unknown' THEN 4
+		ELSE 5
+	END,
+	CASE
 		WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') AND NOT "opening_hours:covid19" ILIKE 'off%' THEN "opening_hours:covid19"
 		WHEN amenity = 'vending_machine' AND tags->'opening_hours' IN ('', '24/7') THEN '24/7'
 		ELSE NULL
@@ -135,6 +156,11 @@ SELECT
 	CASE
 		WHEN tags->'delivery:covid19' IN ('yes', 'no', 'only') THEN tags->'delivery:covid19'
 		WHEN tags->'delivery' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'delivery'
+		ELSE 'unknown'
+	END,
+	CASE
+		WHEN tags->'takeaway:covid19' IN ('yes', 'no', 'only') THEN tags->'takeaway:covid19'
+		WHEN tags->'takeaway' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'takeaway'
 		ELSE 'unknown'
 	END,
 	country_iso2,
@@ -227,7 +253,7 @@ ALTER INDEX poi_osm_next_geom_idx RENAME TO poi_osm_geom_idx;
 ALTER INDEX poi_osm_next_status_idx RENAME TO poi_osm_status_idx;
 
 CREATE OR REPLACE VIEW poi_osm_light AS
-SELECT fid, fid AS id, geom, name, cat, normalized_cat, status, delivery, opening_hours
+SELECT fid, fid AS id, geom, name, cat, normalized_cat, status, delivery, takeaway
 FROM poi_osm;
 
 
