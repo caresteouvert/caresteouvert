@@ -1,5 +1,11 @@
 <template>
-  <div :class="{ 'bottom-dialog': isMobile, 'right-sidebar': !isMobile }">
+  <v-sheet
+    v-touch="{ up: moveUp, down: moveDown }"
+    :elevation="3"
+    :tile="!isMobile"
+    :height="`${height}vh`"
+    :class="{ 'bottom-dialog': isMobile, 'right-sidebar': !isMobile }"
+  >
     <v-slide-x-reverse-transition>
       <v-card
         v-if="place"
@@ -145,7 +151,7 @@
         </v-footer>
       </v-card>
     </v-slide-x-reverse-transition>
-  </div>
+  </v-sheet>
 </template>
 
 <script>
@@ -200,6 +206,7 @@ export default {
   },
 
   mounted() {
+    this.updateDefaultHeight();
     this.beforeUnloadListener = (event) => {
       if (this.$refs.state && this.$refs.state.contribute) {
         event.preventDefault();
@@ -219,6 +226,7 @@ export default {
 
   data() {
     return {
+      height: 100,
       place: null,
       lastUpdate: null
     };
@@ -271,10 +279,18 @@ export default {
     id() {
       this.place = null;
       this.updatePlace();
+    },
+
+    isMobile() {
+      this.updateDefaultHeight();
     }
   },
 
   methods: {
+    updateDefaultHeight() {
+      this.height = this.isMobile ? 50 : 100;
+    },
+
     updatePlace() {
       const { type, id } = parseId(this.id);
       const contrib = getRecentContribution(this.id);
@@ -332,6 +348,14 @@ export default {
       if (result) {
         this.$store.commit('setPlace', null);
       }
+    },
+
+    moveUp() {
+      this.height = 90;
+    },
+
+    moveDown() {
+      this.height == 50 ? this.close() : this.height = 50;
     }
   }
 }
@@ -352,13 +376,14 @@ export default {
 }
 
 .bottom-dialog {
+  z-index: 300 !important;
   width: 100vw;
-  height: 100vh;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 10;
   overflow-y: auto;
+  transition: height ease-in .2s;
 }
 .overflowwrap-anywhere {
   overflow-wrap: anywhere;

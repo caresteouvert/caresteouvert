@@ -6,7 +6,7 @@ import DetailOpeningHours from '../../components/place/detail_opening_hours';
 describe('Detail', () => {
   let localVue;
   let place;
-  const stubs = ['v-alert', 'v-toolbar', 'v-toolbar-title', 'v-card', 'v-list',
+  const stubs = ['v-alert', 'v-toolbar', 'v-toolbar-title', 'v-card', 'v-list', 'v-sheet',
                  'v-icon', 'v-btn', 'v-spacer', 'v-footer', 'v-slide-x-reverse-transition'];
 
   beforeEach(() => {
@@ -16,6 +16,7 @@ describe('Detail', () => {
     localVue.prototype.$vuetify = { breakpoint: {} };
     localVue.directive('resize', {});
     localVue.directive('linkified', {});
+    localVue.directive('touch', {});
   });
 
   function createWrapper(props) {
