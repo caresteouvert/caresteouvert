@@ -75,6 +75,7 @@
       "delivery": "Leku honek bidalketa eskaintzen du",
       "takeaway": "Leku honek eramateko erosketa eskaintzen du",
       "access": "Publikoa leku honetan sartu edo barruan geratu daiteke",
+      "drive_through": "Leku honek autotik jasotzeko zerbitzua du",
       "details": "Itxialdiran beharrezkoak diren xehetasunak gehitu",
       "details_error": "Hutsa edo gutxienez 10 karaktere"
     },
@@ -174,6 +175,7 @@
     "hearing_aids": "Entzumen laguntzak",
     "condoms": "Kondoi salmenta makina",
     "medical_supply": "Mediku hornidurak",
+    "health_center": "Osasun zentroa",
     "food": "Janaria",
     "supermarket": "Supermerkatua",
     "butcher": "Harakina",
