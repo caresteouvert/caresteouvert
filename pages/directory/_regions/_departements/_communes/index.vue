@@ -13,10 +13,10 @@ export default {
   },
   asyncData({ params, query }) {
     return DirectoryList.fetchData({
-      regions: params.regions,
-      departements: params.departements,
-      communes: params.communes,
-      categories: params.categories,
+      region: params.regions,
+      departement: params.departements,
+      commune: params.communes,
+      category: params.categories,
       query: query
     });
   }

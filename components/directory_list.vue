@@ -65,7 +65,7 @@ export default {
       (departement ? "/" + departement : "") +
       (commune ? "/" + commune : "") +
       (category ? "/" + category : "") +
-      (query
+      (query && Object.keys(query).length > 0
         ? "?" +
           Object.keys(query)
             .map(key => `${key}=${query[key]}`)

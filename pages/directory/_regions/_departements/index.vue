@@ -13,8 +13,8 @@ export default {
   },
   asyncData({ params, query }) {
     return DirectoryList.fetchData({
-      regions: params.regions,
-      departements: params.departements,
+      region: params.regions,
+      departement: params.departements,
       query: query
     });
   }
