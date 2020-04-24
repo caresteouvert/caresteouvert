@@ -85,7 +85,7 @@
   "details": {
     "signal_warning": "レポートを書きかけですが保存されません。このまま続けますか？",
     "signal": "変更をレポート",
-    "signal_done": "レポートは登録されました。ありがとうございます！しばらくしらた表示されるでしょう。",
+    "signal_done": "レポートは登録されました。ありがとうございます！少し経ってから表示されるでしょう。",
     "containment_opening_hours": "封鎖期間外の通常営業時間",
     "containment_brand_hours": "営業時間をよく見てください",
     "facebook": "Facebookページ",
