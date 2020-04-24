@@ -224,5 +224,12 @@
     "car": "Talleres automóvil",
     "bicycle_tube": "Máquinas expendedoras de cámaras para bicicleta",
     "public_transport_tickets": "Máquinas expendedoras de billetes de transporte público"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "Encuentra sitios abiertos durante el Estado de Alarma",
+      "contribute": "Mejora el mapa con tu propia información",
+      "organize": "Movilidad mejorada para limitar el riesgo de contagio."
+    }
   }
 }
