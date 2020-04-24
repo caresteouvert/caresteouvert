@@ -200,6 +200,9 @@ export default {
     },
 
     updateRoute() {
+      if (!this.lastFeaturesAndLocation) {
+        this.lastFeaturesAndLocation = this.featuresAndLocation;
+      }
       const newFeaturesAndLocation = encode(
         this.filter,
         encodePosition(this.mapCenter.lat, this.mapCenter.lng, this.mapZoom)
