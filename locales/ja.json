@@ -92,7 +92,7 @@
     "not_accessible": "お客が入れない屋内スペース",
     "capacity": "定員 : 0 人 | 定員 : 1 人 | 定員 : {count} 人",
     "last_update": {
-      "date": "最終更新日: {date}",
+      "date": "最終更新: {date}",
       "recent": "数分前に更新されました。下記の情報は変更されているかもしれません"
     },
     "opening_hours": {
