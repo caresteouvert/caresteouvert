@@ -1,21 +1,22 @@
 <template>
   <div class="directory">
-    <h1 class="directory-title">{{ title }}</h1>
-    <div class="directory-links">
-      <div v-for="link in getRelatedLinks(links)" :key="link.title" class="directory-link">
-        <a :href="link.href" :rel="link.rel">{{ link.title }}</a>
-      </div>
-    </div>
-    <div class="directory-items">
-      <div v-for="item in items" :key="item.id" class="directory-item">
-        <div class="directory-item-info">{{ getLabel(item, propertyLabel) }}</div>
-        <div class="directory-item-link">
-          <a :href="itemLink(item)">
-            <img src="~/assets/openstreetmap.svg" alt="brand" class="logo" />
-          </a>
-        </div>
-      </div>
-    </div>
+    <h1 class="directory-title">{{ $t(title) }}</h1>
+    <v-divider />
+    <v-list>
+      <v-list-item
+        v-for="link in getRelatedLinks(links)"
+        :key="link.title"
+        :href="link.href"
+        :rel="link.rel"
+      >{{ $t(link.title) }}</v-list-item>
+    </v-list>
+    <v-divider />
+    <v-list>
+      <v-list-item :href="itemLink(item)" v-for="item in items" :key="item.id">
+        <img src="~/assets/caresteouvert.svg" alt="brand" class="directory-logo" />
+        <div>{{ getLabel(item, propertyLabel) }}</div>
+      </v-list-item>
+    </v-list>
   </div>
 </template>
 
@@ -98,45 +99,8 @@ export default {
   padding: 1rem 0;
 }
 
-.directory-links {
-  padding: 1rem 0;
-  display: flex;
-  flex-direction: row;
-}
-
-.directory-links .directory-link {
-  flex-grow: 1;
-  text-align: center;
-  max-width: 25%;
-  border: 0.1rem solid lightgrey;
+.directory-logo {
+  height: 2rem;
   margin-right: 1rem;
-  padding: 1rem 0;
-}
-.directory-links .directory-link:hover {
-  border: 0.1rem solid darkgrey;
-}
-
-.directory-items {
-  display: flex;
-  flex-direction: column;
-}
-
-.directory-items .directory-item {
-  border: 0.1rem solid lightgrey;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-}
-.directory-items .directory-item:hover {
-  border: 0.1rem solid darkgrey;
-}
-
-.directory-items .directory-item .directory-item-info {
-  flex-grow: 1;
-}
-
-.directory-items .directory-item .logo {
-  height: 5rem;
 }
 </style>

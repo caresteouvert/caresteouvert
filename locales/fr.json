@@ -282,5 +282,26 @@
       "contribute": "Enrichissez la carte avec vos propres informations",
       "organize": "Mieux se déplacer pour limiter le risque de contagion"
     }
+  },
+  "directory": {
+    "regions": {
+      "title": "Liste des régions"
+    },
+    "departements": {
+      "title": "Liste des départements"
+    },
+    "communes": {
+      "title": "Liste des communes"
+    },
+    "categories": {
+      "title": "Liste des catégories"
+    },
+    "pois": {
+      "title": "Liste des lieux",
+      "link": {
+        "previous": "Lieux précédents",
+        "next": "Lieux suivants"
+      }
+    }
   }
 }
