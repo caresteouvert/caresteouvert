@@ -17,7 +17,7 @@
         <br>
         <br>
         <v-btn
-          :disabled="contribute"
+          :disabled="contribute || lastUpdateTooRecent"
           @click="contribute = true">{{ $t('details.signal') }}</v-btn>
       </template>
     </v-alert>
@@ -83,7 +83,7 @@ export default {
     },
 
     lastUpdateTooRecent() {
-      return this.last_update !== null && Date.now() - this.last_update.getTime() < 1000*60*60;
+      return this.last_update && Date.now() - this.last_update.getTime() < 1000*60*60;
     }
   }
 };

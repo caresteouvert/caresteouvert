@@ -157,6 +157,7 @@ import DetailLink from './detail_link';
 import OsmLink from '../osm_link';
 import { encodePosition } from '../../lib/url';
 import parseId from '../../lib/parse_id';
+import { getRecentContribution } from '../../lib/recent_contributions';
 
 export default {
   components: {
@@ -307,25 +308,38 @@ export default {
   methods: {
     updatePlace() {
       const { type, id } = parseId(this.id);
-
-      return Promise.all([
-        fetch(`${poiFeature}/${this.id}.json`)
+      const contrib = getRecentContribution(this.id);
+      const promises = [
+        fetch(`${poiFeature}/${this.id}.json?precision=7`)
         .then(data => data.json())
         .then((place) => {
+          if(contrib) {
+            place.properties.status = contrib[1];
+          }
           this.place = place;
           this.$store.commit('setPlace', place);
         }).catch(() => {
           this.$nuxt.context.redirect(`/${this.$route.params.featuresAndLocation || ''}`);
-        }),
-        fetch(`${osmUrl}/api/0.6/${type}/${id}`)
-        .then(data => data.text())
-        .then(xml => {
-          const match = xml.match(/timestamp="(.+?)"/);
-          if(match && match.length > 1) {
-            this.last_update = new Date(match[1]);
-          }
         })
-      ]);
+      ];
+
+      if(contrib) {
+        this.last_update = new Date(contrib[2] * 1000);
+      }
+      else {
+        promises.push(
+          fetch(`${osmUrl}/api/0.6/${type}/${id}`)
+          .then(data => data.text())
+          .then(xml => {
+            const match = xml.match(/timestamp="(.+?)"/);
+            if(match && match.length > 1) {
+              this.last_update = new Date(match[1]);
+            }
+          })
+        );
+      }
+
+      return Promise.all(promises);
     },
 
     close() {
