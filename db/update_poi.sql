@@ -208,6 +208,13 @@ SET opening_hours = tags->>'opening_hours'
 WHERE status = 'open' AND opening_hours IS NULL;
 
 
+-- Join custom tags from poi_cro
+UPDATE poi_osm_next
+SET tags = poi_osm_next.tags || c.tags
+FROM poi_cro c
+WHERE poi_osm_next.fid = c.osmid;
+
+
 -- Index creation and table switch
 REINDEX TABLE poi_osm_next;
 CREATE INDEX poi_osm_next_geom_idx ON poi_osm_next USING GIST(geom);
