@@ -6,6 +6,7 @@
     @load="load"
     @update:center="updateMapCenter"
     @update:zoom="updateMapZoom"
+    @update:bounds="updateMapBounds"
   >
     <MglMarker
       v-if="place"
@@ -44,6 +45,7 @@ import {
   MglNavigationControl,
   MglVectorLayer,
 } from 'vue-mapbox/dist/vue-mapbox.umd';
+import isMobile from './mixins/is_mobile';
 
 const source = "public.poi_osm_light";
 const contribSource = "poi-contrib-src";
@@ -183,6 +185,8 @@ export default {
     MglVectorLayer,
   },
 
+  mixins: [isMobile],
+
   props: {
     featuresAndLocation: {
       type: String,
@@ -277,6 +281,7 @@ export default {
     load({ map }) {
       this.map = map;
       this.$emit('loaded');
+      this.updateMapBounds(map.getBounds());
     },
 
     updateMapCenter(mapCenter) {
@@ -285,6 +290,20 @@ export default {
 
     updateMapZoom(mapZoom) {
       this.$emit('update:mapZoom', mapZoom);
+    },
+
+    updateMapBounds(mapBounds) {
+      if (!this.isMobile) {
+        const height = document.body.clientHeight;
+        const width = document.body.clientWidth;
+        const bounds = [
+          this.map.unproject([300, 0]).toArray(),
+          this.map.unproject([width - 400, height]).toArray()
+        ];
+        this.$emit('update:mapBounds', bounds);
+      } else {
+        this.$emit('update:mapBounds', mapBounds.toArray());
+      }
     },
 
     mouseenter(e) {

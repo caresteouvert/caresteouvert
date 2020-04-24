@@ -34,6 +34,7 @@
             :map-style="mapStyle"
             :map-center.sync="mapCenter"
             :map-zoom.sync="mapZoom"
+            :map-bounds.sync="mapBounds"
             :filter="filter"
             :featuresAndLocation="featuresAndLocation"
             @loaded="mapLoaded = true"
@@ -105,15 +106,16 @@ export default {
 
   data() {
     return {
-      loadMap: false,
-      mapLoaded: false,
-      sidebar: false,
-      mapStyle: null,
-      mapCenter: null,
-      mapZoom: null,
       filter: '',
+      loadMap: false,
+      mapBounds: [],
+      mapCenter: null,
+      mapLoaded: false,
+      mapStyle: null,
+      mapZoom: null,
+      minZoomPoi: config.minZoomPoi,
       rgpdBannerHidden: false,
-      minZoomPoi: config.minZoomPoi
+      sidebar: false,
     };
   },
 
