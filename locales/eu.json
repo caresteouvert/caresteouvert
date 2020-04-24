@@ -143,7 +143,7 @@
     "next": "Orduak aukeratu",
     "cancel": "Kantzelatu",
     "select_time": {
-      "start": "Aukeratu irekiera ordua",
+      "start": "Irekiera ordua",
       "end": "Aukeratu itxiera ordua"
     },
     "add_interval": "Orduak gehitu",
