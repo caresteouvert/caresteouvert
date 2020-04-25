@@ -69,12 +69,13 @@
       "title": "Details hinzufügen",
       "3state": {
         "unknown": "Weiß ich nicht",
-        "yes": "Ja",
-        "no": "Nein"
+        "yes": "Ja, kann betreten werden",
+        "no": "Nein, Lieferung nicht möglich"
       },
       "delivery": "Lieferung möglich?",
       "takeaway": "Abholung möglich?",
       "access": "Kann ich den Ort betreten oder mich darin aufhalten?",
+      "drive_through": "Drive-in vorhanden und geöffnet?",
       "details": "Wichtige Anmerkungen (optional, erfordert eine manuelle Prüfung durch die OpenStreetMap-Community)",
       "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein"
     },
@@ -174,6 +175,7 @@
     "hearing_aids": "Hörgeräte",
     "condoms": "Kondomautomat",
     "medical_supply": "Sanitätshaus",
+    "health_center": "Medizinische Einrichtung",
     "food": "Lebensmittel",
     "supermarket": "Supermarkt",
     "butcher": "Metzgerei",
@@ -222,5 +224,12 @@
     "car": "Autowerkstatt",
     "bicycle_tube": "Fahrradschlauch-Automat",
     "public_transport_tickets": "Fahrkartenautomat"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "Finde weiterhin geöffnete Geschäfte",
+      "contribute": "Verbessere die Karte mit deinem Wissen",
+      "organize": "Bessere Mobilität, um die Ansteckungsgefahr zu verringern"
+    }
   }
 }
