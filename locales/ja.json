@@ -99,7 +99,7 @@
       "state_until_date": "{state} {date} まで",
       "state": {
         "open": "開店中",
-        "closed": "閉店"
+        "closed": "閉店中"
       },
       "tomorrow": "明日"
     },
