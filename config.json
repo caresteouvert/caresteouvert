@@ -111,12 +111,12 @@
   "sv": {
     "brand": "ollaanauki",
     "brand_text": "Ollaan Auki",
-    "government": "https://valtioneuvosto.fi/tietoa-koronaviruksesta/",
-    "blog": "https://blog.ollaanauki.fi/",
-    "shopMissing": "https://blog.ollaanauki.fi/lisaa_palvelu/",
-    "townhalls": "https://blog.ollaanauki.fi/kaupungeille-ja-yhteisoille/",
-    "about": "https://blog.ollaanauki.fi/meista/",
-    "press": "https://blog.ollaanauki.fi/lehdistolle/",
-    "disclaimer": "https://blog.ollaanauki.fi/vastuuvapauslauseke/"
+    "government": "https://valtioneuvosto.fi/sv/information-om-coronaviruset",
+    "blog": "https://blog.ollaanauki.fi/sv/valkommen/",
+    "shopMissing": "https://blog.ollaanauki.fi/sv/hur-lagger-jag-till/",
+    "townhalls": "https://blog.ollaanauki.fi/sv/for-stader-kommuner/",
+    "about": "https://blog.ollaanauki.fi/sv/om-oss/",
+    "press": "https://blog.ollaanauki.fi/sv/till-media/",
+    "disclaimer": "https://blog.ollaanauki.fi/sv/ansvarsfrihetsvillkor/"
   }
 }

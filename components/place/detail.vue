@@ -37,7 +37,7 @@
           ref="state"
           :place="place"
           :status="status"
-          :last_update="last_update"
+          :last-update="lastUpdate"
         />
 
         <v-alert
@@ -219,7 +219,7 @@ export default {
   data() {
     return {
       place: null,
-      last_update: null
+      lastUpdate: null
     };
   },
 
@@ -323,8 +323,8 @@ export default {
         })
       ];
 
-      if(contrib) {
-        this.last_update = new Date(contrib[2] * 1000);
+      if (contrib) {
+        this.lastUpdate = new Date(contrib[2] * 1000);
       }
       else {
         promises.push(
@@ -333,7 +333,7 @@ export default {
           .then(xml => {
             const match = xml.match(/timestamp="(.+?)"/);
             if(match && match.length > 1) {
-              this.last_update = new Date(match[1]);
+              this.lastUpdate = new Date(match[1]);
             }
           })
         );

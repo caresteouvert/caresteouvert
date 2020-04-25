@@ -70,12 +70,13 @@ export default {
     };
   },
 
+  mounted() {
+    this.geocoder = !this.isMobile;
+  },
+
   watch: {
-    isMobile: {
-      immediate: true,
-      handler(value) {
-        this.geocoder = !this.isMobile;
-      }
+    isMobile() {
+      this.geocoder = !this.isMobile;
     }
   },
 
