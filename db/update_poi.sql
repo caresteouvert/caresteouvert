@@ -89,13 +89,15 @@ TRUNCATE TABLE poi_osm_next;
 
 
 -- Only add POI with appropriate tagging
-INSERT INTO poi_osm_next(fid, geom, name, cat, normalized_cat, brand, brand_wikidata, brand_infos, status, status_order, opening_hours, delivery, takeaway, country, sub_country, tags)
-SELECT
+WITH
+selection
+AS
+(SELECT
 	concat('n', osm_id),
 	way,
 	name,
 	get_subcategory(tags, COALESCE(clean_sub_country(sub_country), country_iso2)),
-	get_category(tags, COALESCE(clean_sub_country(sub_country), country_iso2)),
+	get_category(tags, COALESCE(clean_sub_country(sub_country), country_iso2)) AS normalized_cat,
 	COALESCE(tags->'brand', tags->'operator'),
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
@@ -124,7 +126,7 @@ SELECT
 	END,
 	country_iso2,
 	clean_sub_country(sub_country),
-	hstore_to_jsonb(tags)
+	hstore_to_jsonb(tags) AS tags
 FROM imposm_osm_point
 WHERE
 	-- The line below is automatically edited using categories.json
@@ -171,13 +173,12 @@ WHERE
 	-- The line below is automatically edited using categories.json
 	-- Do not edit directly, run "yarn run categories" instead
 	country_iso2 IN ('DE', 'FR', 'ES', 'AD', 'CH', 'AT', 'PH', 'FI') AND ("opening_hours:covid19" != '' OR "amenity" IN ('bank', 'bar', 'cafe', 'car_rental', 'childcare', 'clinic', 'doctors', 'fast_food', 'fuel', 'hospital', 'ice_cream', 'kindergarten', 'marketplace', 'pharmacy', 'police', 'post_office', 'pub', 'public_bookcase', 'restaurant', 'townhall', 'vending_machine') OR "office" IN ('employment_agency', 'financial', 'insurance') OR "shop" IN ('agrarian', 'alcohol', 'bakery', 'beverages', 'bicycle', 'books', 'butcher', 'cannery', 'car_parts', 'car_repair', 'cheese', 'chemist', 'chocolate', 'coffee', 'computer', 'confectionery', 'convenience', 'dairy', 'deli', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electronics', 'fabric', 'farm', 'florist', 'frozen_food', 'funeral_directors', 'garden_centre', 'gas', 'glaziery', 'greengrocer', 'hardware', 'health_food', 'hearing_aids', 'honey', 'ice_cream', 'kiosk', 'laundry', 'medical_supply', 'mobile_phone', 'money_lender', 'newsagent', 'newsagent;tobacco', 'optician', 'paint', 'pasta', 'pastry', 'pet', 'seafood', 'spices', 'stationery', 'supermarket', 'tea', 'tobacco', 'tobacco;newsagent', 'wine') OR "tourism" IN ('hostel', 'hotel', 'information', 'motel') OR "healthcare" IN ('centre', 'clinic', 'doctor', 'hospital', 'rehabilitation') OR "craft" IN ('electronics_repair', 'optician') OR "tobacco" IN ('only', 'yes')) --CATEGORIES
-;
-
+)
+INSERT INTO poi_osm_next(fid, geom, name, cat, normalized_cat, brand, brand_wikidata, brand_infos, status, status_order, opening_hours, delivery, takeaway, country, sub_country, tags)
+SELECT *
+FROM selection
 -- Remove edge cases needing advanced filtering like vending machines
-DELETE FROM poi_osm_next
-WHERE normalized_cat IS NULL;
-DELETE FROM poi_osm_next
-WHERE tags ? 'access' AND tags->>'access' NOT IN ('yes', 'public', 'permissive');
+WHERE normalized_cat IS NOT NULL AND NOT (tags ? 'access' AND tags->>'access' NOT IN ('yes', 'public', 'permissive'));
 
 -- Join brand informations
 UPDATE poi_osm_next
