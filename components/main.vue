@@ -19,6 +19,7 @@
         <filter-results
           v-if="filter !== ''"
           v-model="filter"
+          :services.sync="filterServices"
           :featuresAndLocation="featuresAndLocation"
           :map-bounds="mapBounds"
         />
@@ -66,6 +67,7 @@
           <filter-results
             v-if="filter != ''"
             v-model="filter"
+            :services.sync="filterServices"
             :featuresAndLocation="featuresAndLocation"
             :map-bounds="mapBounds"
           />
@@ -88,7 +90,7 @@ import { mapGetters } from 'vuex';
 import debounce from 'lodash.debounce';
 import config from '../config.json';
 import { getCookie, setCookie } from '../lib/cookie';
-import { encode, decode, encodePosition, decodePosition } from '../lib/url';
+import { encode, decode, encodePosition, decodePosition, encodeFilter, decodeFilter } from '../lib/url';
 import isMobile from './mixins/is_mobile';
 import AppsSheet from './apps_sheet';
 import MainMenu from './main_menu';
@@ -124,6 +126,7 @@ export default {
   data() {
     return {
       filter: '',
+      filterServices: [],
       loadMap: false,
       mapBounds: [],
       mapCenter: null,
@@ -139,8 +142,10 @@ export default {
   mounted() {
     this.sidebar = !this.isMobile;
 
-    const { filter, location } = decode(this.featuresAndLocation);
+    const { filter: filterPart, location } = decode(this.featuresAndLocation);
+    const { filter, services } = decodeFilter(filterPart);
     this.filter = filter;
+    this.filterServices = services;
 
     Promise.all([
       this.loadInitialLocation(location),
@@ -166,6 +171,10 @@ export default {
     },
 
     filter() {
+      this.updateRoute();
+    },
+
+    filterServices() {
       this.updateRoute();
     }
   },
@@ -223,7 +232,7 @@ export default {
         this.lastFeaturesAndLocation = this.featuresAndLocation;
       }
       const newFeaturesAndLocation = encode(
-        this.filter,
+        encodeFilter(this.filter, this.filterServices),
         encodePosition(this.mapCenter.lat, this.mapCenter.lng, this.mapZoom)
       );
       if (this.lastFeaturesAndLocation === newFeaturesAndLocation) {

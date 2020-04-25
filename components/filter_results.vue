@@ -19,8 +19,9 @@
     />
 
     <filter-services
-      v-model="services"
+      :value="services"
       :services="availableServices"
+      @input="(s) => $emit('update:services', s)"
     />
 
     <v-skeleton-loader
@@ -94,6 +95,11 @@ export default {
       required: true
     },
 
+    services: {
+      type: Array,
+      required: true
+    },
+
     mapBounds: {
       type: Array,
       required: true,
@@ -108,7 +114,6 @@ export default {
 
   data() {
     return {
-      services: [],
       loading: true,
       offset: 0,
       results: null

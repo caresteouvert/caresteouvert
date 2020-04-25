@@ -27,12 +27,12 @@ describe('FilterResults', () => {
   }
 
   it('display the current category', () => {
-    const wrapper = createWrapper({ value: 'test/test2', mapBounds: [] });
+    const wrapper = createWrapper({ value: 'test/test2', mapBounds: [], services: [] });
     expect(wrapper.vm.category).toEqual('test');
   });
 
   it('return the filter name', () => {
-    const wrapper = createWrapper({ value: 'test/test2', mapBounds: [] });
+    const wrapper = createWrapper({ value: 'test/test2', mapBounds: [], services: [] });
     expect(wrapper.vm.hasSelectedSubCategory).toBe(true);
     expect(wrapper.vm.filterName).toEqual('cat');
     expect(wrapper.vm.filterValue).toEqual('test2');
@@ -45,7 +45,7 @@ describe('FilterResults', () => {
 
   it('fetch the data', async () => {
     global.fetch = () => {  return Promise.resolve({ json() { return { test: 'hola' }; } }); };
-    const wrapper = createWrapper({ value: 'test/test2', mapBounds: [[], []] });
+    const wrapper = createWrapper({ value: 'test/test2', mapBounds: [[], []], services: [] });
     expect(wrapper.vm.loading).toBe(true);
     await Vue.nextTick();
     await Vue.nextTick();
