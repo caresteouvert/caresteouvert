@@ -147,6 +147,18 @@
           ],
           "areas": "all",
           "form_details": [ "delivery", "access" ]
+        },
+        "health_center": {
+          "name": "Health center",
+          "osm_tags": [
+            { "healthcare": "centre|clinic|doctor|hospital|rehabilitation" },
+            { "amenity": "hospital|clinic|doctors" }
+          ],
+          "areas": "all",
+          "-mapfilter": "all",
+          "osm_filter_tags": [
+            { "opening_hours:covid19": "*" }
+          ]
         }
       }
     },
@@ -159,7 +171,7 @@
             { "shop": "frozen_food|supermarket" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "access", "drive_through" ]
         },
         "butcher": {
           "name": "Butcher",

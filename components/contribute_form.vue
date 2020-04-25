@@ -87,39 +87,14 @@
       </v-stepper-step>
 
       <v-stepper-content step="3">
-        <label v-if="showDelivery">
-          {{ $t('contribute_form.step3.delivery.title') }}
-          <v-select
-            v-model="delivery"
-            :items="deliveryItems"
-            filled
-            dense
-            hide-details
-          ></v-select>
-        </label>
-
         <label
-          v-if="showTakeaway"
-          class="d-block mt-2"
+          v-for="field in filteredFields"
+          :key="field.id"
         >
-          {{ $t('contribute_form.step3.takeaway.title') }}
+          {{ $t(`contribute_form.step3.${field.id}`) }}
           <v-select
-            v-model="takeaway"
-            :items="takeawayItems"
-            filled
-            dense
-            hide-details
-          ></v-select>
-        </label>
-
-        <label
-          v-if="showAccess"
-          class="d-block mt-2"
-        >
-          {{ $t('contribute_form.step3.access.title') }}
-          <v-select
-            v-model="access"
-            :items="accessItems"
+            v-model="fieldValues[field.id]"
+            :items="field.items"
             filled
             dense
             hide-details
@@ -167,27 +142,37 @@ export default {
   },
 
   data() {
+    const threeStateFieldItems = [
+      { text: this.$t('contribute_form.step3.3state.unknown'), value: null },
+      { text: this.$t('contribute_form.step3.3state.yes'), value: 'yes' },
+      { text: this.$t('contribute_form.step3.3state.no'), value: 'no' }
+    ];
+
     return {
       step: 1,
       details: '',
-      access: null,
-      accessItems: [
-        { text: this.$t('contribute_form.step3.access.unknown'), value: null },
-        { text: this.$t('contribute_form.step3.access.yes'), value: 'yes' },
-        { text: this.$t('contribute_form.step3.access.no'), value: 'no' }
-      ],
-      delivery: null,
-      deliveryItems: [
-        { text: this.$t('contribute_form.step3.delivery.unknown'), value: null },
-        { text: this.$t('contribute_form.step3.delivery.yes'), value: 'yes' },
-        { text: this.$t('contribute_form.step3.delivery.no'), value: 'no' }
-      ],
-      takeaway: null,
-      takeawayItems: [
-        { text: this.$t('contribute_form.step3.takeaway.unknown'), value: null },
-        { text: this.$t('contribute_form.step3.takeaway.yes'), value: 'yes' },
-        { text: this.$t('contribute_form.step3.takeaway.no'), value: 'no' }
-      ],
+      fields: {
+        "access": {
+          items: threeStateFieldItems,
+          tag: "access:covid19"
+        },
+        "delivery": {
+          items: threeStateFieldItems,
+          tag: "delivery:covid19",
+          replaceOnly: true
+        },
+        "takeaway": {
+          items: threeStateFieldItems,
+          tag: "takeaway:covid19",
+          replaceOnly: true
+        },
+        "drive_through": {
+          items: threeStateFieldItems,
+          tag: "drive_through:covid19",
+          replaceOnly: true
+        }
+      },
+      fieldValues: {},
       loading: false,
       open: null,
       openingHours: [],
@@ -200,9 +185,12 @@ export default {
     if (this.properties.opening_hours) {
       this.openingHours = this.parseOpeningHours(this.properties.opening_hours);
     }
-    this.access = this.parseTag('access:covid19', this.accessItems);
-    this.delivery = this.parseTag('delivery:covid19', this.deliveryItems);
-    this.takeaway = this.parseTag('takeaway:covid19', this.takeawayItems);
+
+    Object.entries(this.fields).forEach(e => {
+      const [ fieldId, field ] = e;
+      this.fieldValues[fieldId] = this.parseTag(field.tag, field.items);
+    });
+
     if(
       categories[this.place.properties.normalized_cat]
       && categories[this.place.properties.normalized_cat].subcategories[this.place.properties.cat]
@@ -225,16 +213,10 @@ export default {
       return !this.hasOpeningHours && this.openingHours.length !== 0;
     },
 
-    showAccess() {
-      return this.showField('access:covid19', this.accessItems) && this.form_details.includes('access');
-    },
-
-    showDelivery() {
-      return this.showField('delivery:covid19', this.deliveryItems) && this.form_details.includes('delivery');
-    },
-
-    showTakeaway() {
-      return this.showField('takeaway:covid19', this.takeawayItems) && this.form_details.includes('takeaway');
+    filteredFields() {
+      return Object.entries(this.fields)
+        .filter(e => this.showField(e[1].tag, e[1].items) && this.form_details.includes(e[0]))
+        .map(e => ({ id: e[0], ...e[1] }));
     },
 
     id() {
@@ -244,6 +226,17 @@ export default {
 
     payload() {
       const [ lon, lat ] = this.place.geometry.coordinates;
+      const tags = {
+        opening_hours: this.openingHoursWithoutLockDown ? 'same': undefined
+      };
+
+      Object.entries(this.fields).forEach(e => {
+        const [ fieldId, field ] = e;
+        if(this.fieldValues[fieldId]) {
+          tags[field.tag] = this.fieldValues[fieldId];
+        }
+      });
+
       return {
         name: this.properties.name,
         state: this.open ? 'open' : 'closed',
@@ -252,12 +245,7 @@ export default {
         lat,
         lon,
         lang: this.$i18n.locale,
-        tags: {
-          opening_hours: this.openingHoursWithoutLockDown ? 'same': undefined,
-          'delivery:covid19': this.delivery ? this.delivery : undefined,
-          'takeaway:covid19': this.takeaway ? this.takeaway : undefined,
-          'access:covid19': this.access ? this.access : undefined
-        }
+        tags: tags
       };
     }
   },
@@ -307,6 +295,11 @@ export default {
      ).then((response) => {
        if (response.status === 200) {
          this.$emit('success');
+         this.$store.commit('setContribution', [
+            this.place.properties.fid,
+            this.payload.state,
+            parseInt((Date.now() / 1000).toFixed(0))
+          ]);
        }
      }).finally(() => {
        this.loading = false
@@ -327,7 +320,7 @@ export default {
 
     parseTag(tag, items) {
       let value = this.properties.tags[tag];
-      if(['delivery:covid19', 'takeaway:covid19'].includes(tag) && value === "only") {
+      if(value === "only" && Object.values(this.fields).find(f => f.tag === tag && f.replaceOnly)) {
         value = "yes";
       }
 

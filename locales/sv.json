@@ -1,5 +1,6 @@
 {
   "lang": "Svenska",
+  "loading": "Laddar. Var god vänta...",
   "covid19-alert": "Följ myndigheternas anvisningar. Du bär ansvaret.",
   "title": "Vi har öppet",
   "subtitle": "Ställen som är öppna under undantagstillståndet",
@@ -10,6 +11,10 @@
   "missing_shop": "Rapportera butik som saknas",
   "change_lang": "Byt språk",
   "zoomtosee": "Zooma in för att se öppna ställen",
+  "toggle_color": {
+    "blind": "Aktivera färgblindsinställningar",
+    "normal": "Avaktivera färgblindsinställningar"
+  },
   "learnmore": {
     "about": "Information",
     "contribute": "Delta",
@@ -62,24 +67,15 @@
     },
     "step3": {
       "title": "Ange information",
-      "delivery": {
-        "title": "Stället erbjuder hemleverans",
+      "3state": {
         "unknown": "Vet ej",
         "yes": "Ja",
         "no": "Nej"
       },
-      "takeaway": {
-        "title": "Stället erbjuder take-away",
-        "unknown": "Vet ej",
-        "yes": "Ja",
-        "no": "Nej"
-      },
-      "access": {
-        "title": "Tillträde inomhus tillåtet",
-        "unknown": "Vet ej",
-        "yes": "Ja",
-        "no": "Nej"
-      },
+      "delivery": "Stället erbjuder hemleverans",
+      "takeaway": "Stället erbjuder take-away",
+      "access": "Tillträde inomhus tillåtet",
+      "drive_through": "Stället erbjuder drive-in service",
       "details": "Du kan ange ytterligare information",
       "details_error": "Bör vara antingen tomt eller åtminstone 10 märken långt"
     },
@@ -95,6 +91,10 @@
     "facebook": "Facebook sida",
     "not_accessible": "Tillträde inomhus förbjudet",
     "capacity": "Maximal kapacitet : 0 personer | Maximal kapacitet : 1 person | Maximal kapacitet : {count} personer",
+    "last_update": {
+      "date": "Senast uppdaterad: {date}",
+      "recent": "Uppdaterat för några minuter sedan, uppgifterna nedan kan ha ändrats."
+    },
     "opening_hours": {
       "state_until_date": "{state} till {date}",
       "state": {
@@ -167,6 +167,7 @@
     "moneylender": "Lån av pengar",
     "insurance": "Försäkring",
     "tourism_info": "Turistinformation",
+    "hotel": "Logi",
     "health": "Hälsovård",
     "pharmacy": "Apotek",
     "covid19_centre": "Coronavirus informationscenter",
@@ -174,6 +175,7 @@
     "hearing_aids": "Hörapparater",
     "condoms": "Kondomautomat",
     "medical_supply": "Hälsovårdsmaterial",
+    "health_center": "Hälsocentral",
     "food": "Mat",
     "supermarket": "Stormarknad",
     "butcher": "Charkuteri",
@@ -222,5 +224,12 @@
     "car": "Bilverkstad",
     "bicycle_tube": "Cykeldäcksautomat",
     "public_transport_tickets": "Försäljning av kollektivtrafikbiljetter"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "Hitta öppna platser under undantagstillståndet",
+      "contribute": "Förbättra kartan med din egen information",
+      "organize": "Smartare trafik begränsar smittorisken"
+    }
   }
 }

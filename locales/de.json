@@ -67,24 +67,14 @@
     },
     "step3": {
       "title": "Details hinzufügen",
-      "delivery": {
-        "title": "Lieferung möglich?",
+      "3state": {
         "unknown": "Weiß ich nicht",
-        "yes": "Ja, Lieferung möglich",
-        "no": "Nein, Lieferung nicht möglich"
+        "yes": "Ja",
+        "no": "Nein"
       },
-      "takeaway": {
-        "title": "Abholung möglich?",
-        "unknown": "Weiß ich nicht",
-        "yes": "Ja, Abholung möglich",
-        "no": "Nein, Abholung nicht möglich"
-      },
-      "access": {
-        "title": "Kann ich den Ort betreten oder mich darin aufhalten?",
-        "unknown": "Weiß ich nicht",
-        "yes": "Ja, kann betreten werden",
-        "no": "Nein, kann nicht betreten werden"
-      },
+      "delivery": "Lieferung möglich?",
+      "takeaway": "Abholung möglich?",
+      "access": "Kann ich den Ort betreten oder mich darin aufhalten?",
       "details": "Wichtige Anmerkungen (optional, erfordert eine manuelle Prüfung durch die OpenStreetMap-Community)",
       "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein"
     },

@@ -1,7 +1,7 @@
 <template>
   <v-list-item
     :href="href"
-    target="_blank"
+    :target="external ? '_blank': ''"
     rel="noopener"
   >
     <v-list-item-icon><v-icon>{{ icon }}</v-icon></v-list-item-icon>
@@ -27,6 +27,11 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    external: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   }
 };

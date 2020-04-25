@@ -67,24 +67,15 @@
     },
     "step3": {
       "title": "Ajouter des précisions",
-      "delivery": {
-        "title": "Ce lieu propose la livraison pendant le confinement",
+      "3state": {
         "unknown": "Ne sais pas",
         "yes": "Oui",
         "no": "Non"
       },
-      "takeaway": {
-        "title": "Ce lieu propose la vente à emporter",
-        "unknown": "Ne sais pas",
-        "yes": "Oui",
-        "no": "Non"
-      },
-      "access": {
-        "title": "Les clients peuvent entrer ou rester à l'intérieur",
-        "unknown": "Ne sais pas",
-        "yes": "Oui",
-        "no": "Non"
-      },
+      "delivery": "Ce lieu propose la livraison pendant le confinement",
+      "takeaway": "Ce lieu propose la vente à emporter",
+      "access": "Les clients peuvent entrer ou rester à l'intérieur",
+      "drive_through": "Ce lieu dispose d'un service drive",
       "details": "Optionnel : ajouter d'autres détails liés au confinement",
       "details_error": "Doit être soit vide, soit contenir au moins 10 caractères"
     },
@@ -184,6 +175,7 @@
     "hearing_aids": "Appareils auditifs",
     "condoms": "Distributeur de préservatifs",
     "medical_supply": "Matériel médical",
+    "health_center": "Centre de santé",
     "food": "Alimentation",
     "supermarket": "Supermarché",
     "butcher": "Boucherie",
@@ -232,5 +224,12 @@
     "car": "Garage",
     "bicycle_tube": "Distributeur de chambres à air",
     "public_transport_tickets": "Distributeur de titres de transport"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "Trouvez les lieux ouverts durant le confinement",
+      "contribute": "Enrichissez la carte avec vos propres informations",
+      "organize": "Mieux se déplacer pour limiter le risque de contagion"
+    }
   }
 }

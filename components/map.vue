@@ -36,6 +36,7 @@
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { mapState } from 'vuex';
 import * as config from '../config.json';
+import { readContributionFromStorage, pushContribution } from '../lib/recent_contributions';
 import {
   MglGeolocateControl,
   MglMap,
@@ -45,6 +46,18 @@ import {
 } from 'vue-mapbox/dist/vue-mapbox.umd';
 
 const source = "public.poi_osm_light";
+const contribSource = "poi-contrib-src";
+
+function getColorStroke(theme, contribs = readContributionFromStorage()) {
+  return [
+    'case',
+    ["in", ["get", "fid"], ["literal", contribs.filter(c => c[1].startsWith("open")).map(c => c[0])]], theme.success,
+    ["in", ["get", "fid"], ["literal", contribs.filter(c => c[1] === "closed").map(c => c[0])]], theme.error,
+    ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], theme.success,
+    ["in", ["get", "status"], ["literal", ["closed"]]], theme.error,
+    "#9E9E9E"
+  ];
+}
 
 function getLayers(theme) {
   const conditionalOpacity = [
@@ -86,12 +99,7 @@ function getLayers(theme) {
           ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 4,
           2.5
         ],
-        'circle-stroke-color': [
-          'case',
-          ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], theme.success,
-          ["in", ["get", "status"], ["literal", ["closed"]]], theme.error,
-          "#9E9E9E"
-        ],
+        'circle-stroke-color': getColorStroke(theme),
         'circle-radius': [
           'interpolate',
           ['linear'],
@@ -215,7 +223,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['place']),
+    ...mapState(['place', 'contribution']),
 
     poiSource() {
       return {
@@ -253,6 +261,14 @@ export default {
         if (isPlaceUnderUI(x, y)) {
           this.map.panTo(place.geometry.coordinates);
         }
+      }
+    },
+
+    contribution(contribution) {
+      if(contribution) {
+        // Update layer coloring
+        this.map.setPaintProperty('poi-background', 'circle-stroke-color', getColorStroke(this.$vuetify.theme.themes.light, pushContribution(contribution)));
+        this.$store.commit('setContribution', null);
       }
     }
   },

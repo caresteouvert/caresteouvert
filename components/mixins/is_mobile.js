@@ -5,12 +5,13 @@ export default {
     };
   },
 
+  mounted() {
+    this.isMobile = this.$vuetify.breakpoint.smAndDown;
+  },
+
   watch: {
-    '$vuetify.breakpoint.smAndDown': {
-      immediate: true,
-      handler(value) {
-        this.isMobile = this.$vuetify.breakpoint.smAndDown;
-      }
+    '$vuetify.breakpoint.smAndDown'() {
+      this.isMobile = this.$vuetify.breakpoint.smAndDown;
     }
   }
 };

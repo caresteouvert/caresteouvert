@@ -1,5 +1,6 @@
 {
   "lang": "Galego",
+  "loading": "Estase a cargar, por favor, agarda...",
   "covid19-alert": "Sigue as recomendacións do goberno. A responsabilidade é TÚA.",
   "title": "Segue aberto",
   "subtitle": "Lugares que se manteñen abertos durante o confinamento",
@@ -10,11 +11,15 @@
   "missing_shop": "Informar dunha tenda que falla",
   "change_lang": "Mudar lingua",
   "zoomtosee": " Achegar para amosar os lugares abertos",
+  "toggle_color": {
+    "blind": "Activar modo daltónico",
+    "normal": "Desactivar modo daltónico"
+  },
   "learnmore": {
     "about": "Sobre",
     "contribute": "Contribuír",
     "missing_shop": "Informar dunha tenda que falla",
-    "description": "O «{brand}» é a ferramenta esencial para evitar movementos inútiles durante o confinamento e, polo tanto, limitar o risco de contaxio. Este mapa colaborativo permite compartir doadamente lugares abertos ou pechados na túa veciñanza. É o xeito máis efectivo de informar ós teus veciños e ós habitantes da túa cidade.",
+    "description": "O «{brand}» é a ferramenta esencial para evitar movementos inútiles durante o confinamento e, polo tanto, limitar o risco de contaxio. Este mapa colaborativo permite compartir doadamente lugares abertos ou pechados da túa zona. É o xeito máis efectivo de informar ós teus veciños.",
     "title": "Saber máis",
     "press": "Prensa",
     "disclaimer": "Responsabilidade legal",
@@ -62,24 +67,15 @@
     },
     "step3": {
       "title": "Engadir detalles",
-      "delivery": {
-        "title": "Este lugar ofrece entregas",
+      "3state": {
         "unknown": "Non o sei",
         "yes": "Si",
         "no": "Non"
       },
-      "takeaway": {
-        "title": "Este lugar permite mercar para levar",
-        "unknown": "Non o sei",
-        "yes": "Si",
-        "no": "Non"
-      },
-      "access": {
-        "title": "O público pode entrar ou ficar dentro deste lugar",
-        "unknown": "Non o sei",
-        "yes": "Si",
-        "no": "Non"
-      },
+      "delivery": "Este lugar ofrece entregas",
+      "takeaway": "Este lugar permite mercar para levar",
+      "access": "O público pode entrar ou ficar dentro deste lugar",
+      "drive_through": "Este lugar dispón de recollida con coche",
       "details": "Engadir os detalles necesarios durante o confinamento",
       "details_error": "Ten que estar baleiro ou ter polo menos 10 caracteres de lonxitude"
     },
@@ -95,6 +91,10 @@
     "facebook": "Páxina do Facebook",
     "not_accessible": "Espazo interior non accesíbel ó público",
     "capacity": "Capacidade máxima: 0 persoas | Capacidade máxima: 1 persoa | Capacidade máxima: {count} persoas",
+    "last_update": {
+      "date": "Última actualización: {date}",
+      "recent": "Actualizado hai uns minutos, a información podería mudar"
+    },
     "opening_hours": {
       "state_until_date": "{state} até {date}",
       "state": {
@@ -159,14 +159,15 @@
     "amenity": "Instalacións",
     "police": "Policía",
     "townhall": "Concello",
-    "post_office": "Oficinas de correos",
+    "post_office": "Servizos de correos",
     "childcare": "Gardaría",
     "employment_agency": "Axencia de traballo",
     "funeral_directors": "Tanatorios ou funerarias",
     "bank": "Banco",
     "moneylender": "Prestamista",
     "insurance": "Aseguradora",
-    "tourism_info": "Tourism information",
+    "tourism_info": "Información turística",
+    "hotel": "Aloxamento",
     "health": "Saúde",
     "pharmacy": "Farmacias",
     "covid19_centre": "Centro de consulta sobre o Covid-19",
@@ -174,6 +175,7 @@
     "hearing_aids": "Audífonos",
     "condoms": "Máquinas expendedoras de condóns",
     "medical_supply": "Subministracións médicas",
+    "health_center": "Centro de saúde",
     "food": "Alimentación",
     "supermarket": "Supermercado",
     "butcher": "Carnizaría",
@@ -222,5 +224,12 @@
     "car": "Garaxe",
     "bicycle_tube": "Máquina expendedora de tubos para bicicletas",
     "public_transport_tickets": "Máquina expendedora de billetes do transporte público"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "Atopa lugares abertos durante o confinamento",
+      "contribute": "Mellora o mapa coa túa propia información",
+      "organize": "Mobilidade mellorada para limitar o risco de contaxio"
+    }
   }
 }

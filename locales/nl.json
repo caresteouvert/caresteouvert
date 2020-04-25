@@ -53,20 +53,13 @@
     },
     "step3": {
       "title": "Voeg details toe",
-      "delivery": {
-        "title": "Deze plaats biedt bezorging.",
+      "3state": {
         "unknown": "Weet ik niet",
         "yes": "Ja",
-        "only": "Alleen bezorgen",
         "no": "Nee"
       },
-      "takeaway": {
-        "title": "Deze plaats accepteert afhalen",
-        "unknown": "Weet ik niet",
-        "yes": "Ja",
-        "only": "Alleen afhalen",
-        "no": "Nee"
-      },
+      "delivery": "Deze plaats biedt bezorging.",
+      "takeaway": "Deze plaats accepteert afhalen",
       "details": "Voeg eisen tijdens lockdown toe"
     },
     "submit": "Publiceren",

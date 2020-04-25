@@ -6,18 +6,17 @@
       tile
       class="mb-0"
     >
-      <span class="text-pre">{{ $t(`details.state.${status}`) }}</span>
-      <span
-        class="body-2 font-weight-light"
-        v-if="last_update"
+      <p class="text-pre mb-0">{{ $t(`details.state.${status}`) }}</p>
+      <p
+        v-if="lastUpdate"
+        class="body-2 font-weight-light mb-0"
       >
-        <br />{{ lastUpdateTooRecent ? $t('details.last_update.recent') : $t(`details.last_update.date`, { date: last_update.toLocaleString() }) }}
-      </span>
+        {{ lastUpdateText }}
+      </p>
       <template v-if="!success">
         <br>
-        <br>
         <v-btn
-          :disabled="contribute"
+          :disabled="contribute || lastUpdateTooRecent"
           @click="contribute = true">{{ $t('details.signal') }}</v-btn>
       </template>
     </v-alert>
@@ -57,7 +56,7 @@ export default {
       required: true
     },
 
-    last_update: {
+    lastUpdate: {
       type: Date,
       required: false
     }
@@ -83,7 +82,16 @@ export default {
     },
 
     lastUpdateTooRecent() {
-      return this.last_update !== null && Date.now() - this.last_update.getTime() < 1000*60*60;
+      return this.lastUpdate && Date.now() - this.lastUpdate.getTime() < 1000*60*60;
+    },
+
+    lastUpdateText() {
+      if (this.lastUpdateTooRecent) {
+        return this.$t('details.last_update.recent');
+      }
+      const format = { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', year: 'numeric' };
+      const date = this.lastUpdate.toLocaleString(this.$i18n.locale, format);
+      return this.$t('details.last_update.date', { date });
     }
   }
 };

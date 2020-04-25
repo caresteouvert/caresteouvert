@@ -67,24 +67,15 @@
     },
     "step3": {
       "title": "Add details",
-      "delivery": {
-        "title": "This place offers delivery",
+      "3state": {
         "unknown": "I don't know",
         "yes": "Yes",
         "no": "No"
       },
-      "takeaway": {
-        "title": "This place allows to purchase to take-away",
-        "unknown": "I don't know",
-        "yes": "Yes",
-        "no": "No"
-      },
-      "access": {
-        "title": "Public can enter or stay inside this place",
-        "unknown": "I don't know",
-        "yes": "Yes",
-        "no": "No"
-      },
+      "delivery": "This place offers delivery",
+      "takeaway": "This place allows to purchase to take-away",
+      "access": "Public can enter or stay inside this place",
+      "drive_through": "This place has a drive-through service",
       "details": "Optional : add details required during the lockdown",
       "details_error": "Should be either empty or at least 10 characters long"
     },
@@ -184,6 +175,7 @@
     "hearing_aids": "Hearing aids",
     "condoms": "Condoms vending machine",
     "medical_supply": "Medical supplies",
+    "health_center": "Health center",
     "food": "Food",
     "supermarket": "Supermarket",
     "butcher": "Butcher",
@@ -232,5 +224,12 @@
     "car": "Garage",
     "bicycle_tube": "Bicycle tube vending machine",
     "public_transport_tickets": "Public transport ticket machine"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "Find open places during lockdown",
+      "contribute": "Improve map with your own information",
+      "organize": "Better mobility to limit the risk of contagion"
+    }
   }
 }

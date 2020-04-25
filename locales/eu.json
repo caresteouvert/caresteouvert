@@ -20,11 +20,11 @@
     "contribute": "Lagundu",
     "missing_shop": "Falta den denda baten berri eman",
     "description": "« {brand} » itxialdi garaian behar ez diren mugimenduak ekiditeko eta horrela kutsadura arriskua mugatzeko ezinbesteko tresna da. Elkarlanean egindako mapa honek zure auzoko lekuak itxita ala irekita dauden adierazteko balio du. Auzotar eta herritarrak hobe informatzeko bide zuzenena da.",
-    "title": "Gehiago ikasi",
+    "title": "Gehiago jakiteko",
     "press": "Prentsa",
     "disclaimer": "Lege-oharra",
     "blog": "Bloga",
-    "townhalls": "Udaletxeak, erabili « {brand} »!",
+    "townhalls": "Udalentxeentzat krisi komunikazio soluzioa",
     "osm_contributors": "OpenStreetMap kolaboratzaileentzat informazioa"
   },
   "rgpd": {
@@ -67,25 +67,16 @@
     },
     "step3": {
       "title": "Xehetasunak gehitu",
-      "delivery": {
-        "title": "Leku honek bidalketa eskaintzen du",
+      "3state": {
         "unknown": "Ez dakit",
         "yes": "Bai",
         "no": "Ez"
       },
-      "takeaway": {
-        "title": "Leku honek eramateko erosketa eskaintzen du",
-        "unknown": "Ez dakit",
-        "yes": "Bai",
-        "no": "Ez"
-      },
-      "access": {
-        "title": "Publikoa leku honetan sartu edo barruan geratu daiteke",
-        "unknown": "Ez dakit",
-        "yes": "Bai",
-        "no": "Ez"
-      },
-      "details": "Itxialdiran beharrezkoak diren xehetasunak gehitu",
+      "delivery": "Leku honek bidalketa eskaintzen du",
+      "takeaway": "Leku honek eramateko erosketa eskaintzen du",
+      "access": "Publikoa leku honetan sartu edo barruan geratu daiteke",
+      "drive_through": "Leku honek autotik jasotzeko zerbitzua du",
+      "details": "Aukerazkoa: Itxialdiran beharrezkoak diren xehetasunak gehitu",
       "details_error": "Hutsa edo gutxienez 10 karaktere"
     },
     "submit": "Argitaratu",
@@ -96,7 +87,7 @@
     "signal": "Aldaketa baten berri eman",
     "signal_done": "Zure aldaketa erregistratu da. Eskerrik asko! Mesedez izan pazientzia, prozesatzeko denbora behar du.",
     "containment_opening_hours": "Itxialdi garai kanpoko egutegia",
-    "containment_brand_hours": "Ordutegia orri berrian",
+    "containment_brand_hours": "Irekiera orduak begiratu",
     "facebook": "Facebook orria",
     "not_accessible": "Barrukaldea publikoari itxita dago",
     "capacity": "Edukiera maximoa: 0 pertsona | Edukiera maximoa: pertsona 1 | Edukiera maximoa: {count} pertsona",
@@ -116,7 +107,7 @@
       "open": "Itxialdian irekita dauden lekuak",
       "open_adapted": "Itxialdi garaian irekita dagoen lekua, moldatutako ordutegiarekin",
       "partial": "Itxialdi garaian seguruaski irekita dagoen lekua (egiaztatzeko)",
-      "unknown": "Leku honek irekitzeko baimena du itxialdi garaian, baina benetan irekita al itxita al dago? Esaiguzu",
+      "unknown": "Leku honek itxialdi garaian irekitzeko baimena du, baina irekita al itxita al dago? Esaiguzu",
       "closed": "Itxialdi garaian itxita dagoen lekua"
     },
     "delivery": {
@@ -149,11 +140,11 @@
       "weekdays": "Astelehenetik larunbatera"
     },
     "select_days": "Aukeratu irekiera ordu berdinak dituzten egunak",
-    "next": "Orduak aukeratu",
+    "next": "Hurrengoa",
     "cancel": "Kantzelatu",
     "select_time": {
-      "start": "Aukeratu irekiera ordua",
-      "end": "Aukeratu itxiera ordua"
+      "start": "Irekiera ordua",
+      "end": "Itxiera ordua"
     },
     "add_interval": "Orduak gehitu",
     "add_new_days": "Gehitu irekitako egunak"
@@ -184,6 +175,7 @@
     "hearing_aids": "Entzumen laguntzak",
     "condoms": "Kondoi salmenta makina",
     "medical_supply": "Mediku hornidurak",
+    "health_center": "Osasun zentroa",
     "food": "Janaria",
     "supermarket": "Supermerkatua",
     "butcher": "Harakina",
