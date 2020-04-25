@@ -214,6 +214,11 @@ export default {
       required: true
     },
 
+    filterServices: {
+      type: Array,
+      required: true
+    },
+
     sidebar: {
       type: Boolean,
       required: true
@@ -239,6 +244,7 @@ export default {
 
     layers() {
       const [ category, subcategory ] = this.filter.split('/');
+      const services = this.filterServices.map((service) => ['in', service, 'yes', 'only']);
       return getLayers(this.$vuetify.theme.themes.light).map((layer) => {
         const newLayer = { ...layer, filter: ['all'] };
         if (subcategory) {
@@ -246,6 +252,7 @@ export default {
         } else if (category !== '') {
           newLayer.filter.push(['==', 'normalized_cat', category]);
         }
+        newLayer.filter.push(...services);
         return newLayer;
       });
     }

@@ -43,6 +43,7 @@
             :map-zoom.sync="mapZoom"
             :map-bounds.sync="mapBounds"
             :filter="filter"
+            :filter-services="filterServices"
             :featuresAndLocation="featuresAndLocation"
             @loaded="mapLoaded = true"
           />
