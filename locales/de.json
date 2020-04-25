@@ -70,7 +70,7 @@
       "3state": {
         "unknown": "Weiß ich nicht",
         "yes": "Ja",
-        "no": "Nein, Lieferung nicht möglich"
+        "no": "Nein"
       },
       "delivery": "Lieferung möglich?",
       "takeaway": "Abholung möglich?",
