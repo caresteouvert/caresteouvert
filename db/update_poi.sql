@@ -54,6 +54,19 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+--  Determine the status_order
+CREATE OR REPLACE FUNCTION status_order_value(status VARCHAR) RETURNS INTEGER AS $$
+BEGIN
+	CASE status
+		WHEN 'open' THEN RETURN 1;
+		WHEN 'open_adapted' THEN RETURN 2;
+		WHEN 'partial' THEN RETURN 3;
+		WHEN 'unknown' THEN RETURN 4;
+		ELSE RETURN 5;
+	END CASE;
+END;
+$$ LANGUAGE plpgsql;
+
 
 -- Deprecated function to get normalized category label
 DROP INDEX IF EXISTS idx_imposm_osm_point_search;
@@ -102,13 +115,7 @@ AS
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
 	opening_state(tags),
-	CASE
-		WHEN opening_state(tags) = 'open' THEN 1
-		WHEN opening_state(tags) = 'open_adapted' THEN 2
-		WHEN opening_state(tags) = 'partial' THEN 3
-		WHEN opening_state(tags) = 'unknown' THEN 4
-		ELSE 5
-	END,
+	status_order_value(opening_state(tags)),
 	CASE
 		WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') AND NOT "opening_hours:covid19" ILIKE 'off%' THEN "opening_hours:covid19"
 		WHEN amenity = 'vending_machine' AND tags->'opening_hours' IN ('', '24/7') THEN '24/7'
@@ -143,13 +150,7 @@ SELECT
 	COALESCE(tags->'brand:wikidata', tags->'operator:wikidata', tags->'wikidata'),
 	COALESCE(tags->'description:covid19', tags->'note:covid19'),
 	opening_state(tags),
-	CASE
-		WHEN opening_state(tags) = 'open' THEN 1
-		WHEN opening_state(tags) = 'open_adapted' THEN 2
-		WHEN opening_state(tags) = 'partial' THEN 3
-		WHEN opening_state(tags) = 'unknown' THEN 4
-		ELSE 5
-	END,
+	status_order_value(opening_state(tags)),
 	CASE
 		WHEN "opening_hours:covid19" NOT IN ('off', 'same', '') AND NOT "opening_hours:covid19" ILIKE 'off%' THEN "opening_hours:covid19"
 		WHEN amenity = 'vending_machine' AND tags->'opening_hours' IN ('', '24/7') THEN '24/7'
@@ -184,6 +185,7 @@ WHERE normalized_cat IS NOT NULL AND NOT (tags ? 'access' AND tags->>'access' NO
 UPDATE poi_osm_next
 SET
 	status = b.opening_rule,
+	status_order = status_order_value(b.opening_rule),
 	opening_hours = COALESCE(poi_osm_next.opening_hours, b.opening_hours),
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
 	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description),
@@ -199,6 +201,7 @@ WHERE
 UPDATE poi_osm_next
 SET
 	status = b.opening_rule,
+	status_order = status_order_value(b.opening_rule),
 	opening_hours = COALESCE(poi_osm_next.opening_hours, b.opening_hours),
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
 	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description),
@@ -214,6 +217,7 @@ WHERE
 UPDATE poi_osm_next
 SET
 	status = b.opening_rule,
+	status_order = status_order_value(b.opening_rule),
 	opening_hours = COALESCE(poi_osm_next.opening_hours, b.opening_hours),
 	brand_hours = COALESCE(poi_osm_next.brand_hours, b.opening_hours_url),
 	brand_infos = COALESCE(poi_osm_next.brand_infos, b.description),
@@ -227,7 +231,7 @@ WHERE
 	AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.brand_name)));
 
 UPDATE poi_osm_next
-SET status = 'open', opening_hours = '24/7'
+SET status = 'open', status_order = status_order_value('open'), opening_hours = '24/7'
 WHERE status IN ('unknown', 'open_adapted') AND cat = 'fuel' AND tags->>'opening_hours' = '24/7';
 
 UPDATE poi_osm_next
