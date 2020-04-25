@@ -67,24 +67,15 @@
     },
     "step3": {
       "title": "Lisää tietoja",
-      "delivery": {
-        "title": "Kotiinkuljetus",
+      "3state": {
         "unknown": "En tiedä",
         "yes": "Kyllä",
         "no": "Ei"
       },
-      "takeaway": {
-        "title": "Noutomyyntiä",
-        "unknown": "En tiedä",
-        "yes": "Kyllä",
-        "no": "Ei"
-      },
-      "access": {
-        "title": "Asiakkaille pääsy sallittua",
-        "unknown": "En tiedä",
-        "yes": "Kyllä",
-        "no": "Ei"
-      },
+      "delivery": "Kotiinkuljetus",
+      "takeaway": "Noutomyyntiä",
+      "access": "Asiakkaille pääsy sallittua",
+      "drive_through": "Tarjolla autokaista-palvelu",
       "details": "Voit lisätä tarkempia tietoja",
       "details_error": "Pitää olla joko tyhjä tai vähintään 10 merkkiä pitkä"
     },
@@ -184,6 +175,7 @@
     "hearing_aids": "Kuulokojeita",
     "condoms": "Kondomiautomaatti",
     "medical_supply": "Terveydenhoitotarvikkeita",
+    "health_center": "Terveyskeskus",
     "food": "Ruokaa",
     "supermarket": "Supermarket",
     "butcher": "Lihakauppa",
@@ -232,5 +224,12 @@
     "car": "Autohuolto",
     "bicycle_tube": "Polkupyörän kumien myyntiautomaatti",
     "public_transport_tickets": "Joukkoliikenteen lipunmyynti"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "Etsi poikkeusaikana auki olevat paikat",
+      "contribute": "Paranna karttaa omilla tiedoillasi",
+      "organize": "Viisaampi liikkuminen vähentää tartuntariskiä"
+    }
   }
 }
