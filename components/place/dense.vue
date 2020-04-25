@@ -47,6 +47,7 @@
 
 <script>
 import placeMixin from '../mixins/place';
+import { colorForStatus } from '../../lib/place';
 import DenseOpeningHours from './dense_opening_hours';
 
 export default {
@@ -75,14 +76,7 @@ export default {
 
   computed: {
     color() {
-      const statuses = {
-        open: 'success',
-        open_adapted: 'success',
-        partial: 'warning',
-        unknown: 'warning',
-        closed: 'error'
-      };
-      return statuses[this.place.properties.status];
+      return colorForStatus(this.place.properties.status);
     },
   }
 }
