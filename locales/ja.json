@@ -98,7 +98,7 @@
     "opening_hours": {
       "state_until_date": "{state} {date} まで",
       "state": {
-        "open": "開店",
+        "open": "開店中",
         "closed": "閉店"
       },
       "tomorrow": "明日"
