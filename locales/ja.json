@@ -1,10 +1,10 @@
 {
-  "lang": "英語",
+  "lang": "日本語",
   "loading": "読込中。しばらくお待ち下さい...",
   "covid19-alert": "政府の制限に従ってください。責任は「あなた」にあります。",
   "title": "開店中",
-  "subtitle": "封鎖中にも開店中の場所",
-  "subtitle-dense": "封鎖中に開店中の場所",
+  "subtitle": "封鎖(COVID-19対応)中の営業店舗・施設",
+  "subtitle-dense": "封鎖(COVID-19対応)中の営業店舗・施設",
   "search": "検索文字列を入力",
   "coordinates": "座標",
   "menu": "メニュー",
@@ -98,8 +98,8 @@
     "opening_hours": {
       "state_until_date": "{state} {date} まで",
       "state": {
-        "open": "開店",
-        "closed": "閉店"
+        "open": "開店中",
+        "closed": "閉店中"
       },
       "tomorrow": "明日"
     },
@@ -155,7 +155,7 @@
     "edit": "編集"
   },
   "categories": {
-    "other": "他の場所",
+    "other": "その他",
     "amenity": "施設",
     "police": "警察",
     "townhall": "役所",
@@ -199,7 +199,7 @@
     "ice_cream": "アイスクリーム",
     "cafe": "喫茶店",
     "bar": "バー",
-    "drugs": "ドラッグ",
+    "drugs": "嗜好品",
     "tobacco": "タバコ",
     "e_cigarette": "電子タバコ",
     "alcohol": "酒店",
