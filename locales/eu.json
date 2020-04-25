@@ -224,5 +224,12 @@
     "car": "Garagea",
     "bicycle_tube": "Bizikleta kamerak saltzeko makina",
     "public_transport_tickets": "Garraio publiko txartel makina"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "Bilatu itxialdian irekita dauden lekuak",
+      "contribute": "Hobetu mapa zure informazioarekin",
+      "organize": "Kutsadura arriskua murrizteko mugikortasun hobea "
+    }
   }
 }
