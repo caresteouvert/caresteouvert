@@ -301,7 +301,7 @@ export default {
       this.map = map;
 
       // Controls
-      this.navcontrol = new NavigationControl({ showCompass: false });
+      this.navcontrol = new NavigationControl({ showCompass: false, showZoom: !this.isMobile });
       this.geoloccontrol = new GeolocateControl({ positionOptions: { enableHighAccuracy: true } });
       this.map.addControl(this.navcontrol, 'top-right');
       this.map.addControl(this.geoloccontrol, 'top-right');
@@ -347,7 +347,7 @@ export default {
           this.map.removeControl(this.navcontrol);
           this.map.removeControl(this.geoloccontrol);
         }
-        this.navcontrol = new NavigationControl({ showCompass: showCompass });
+        this.navcontrol = new NavigationControl({ showCompass: showCompass, showZoom: !this.isMobile });
         this.map.addControl(this.navcontrol, 'top-right');
         this.map.addControl(this.geoloccontrol, 'top-right');
       }
