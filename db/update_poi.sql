@@ -251,7 +251,11 @@ REINDEX TABLE poi_osm_next;
 CREATE INDEX poi_osm_next_geom_idx ON poi_osm_next USING GIST(geom);
 CREATE INDEX poi_osm_next_status_idx ON poi_osm_next(status);
 
-DROP TABLE IF EXISTS poi_osm CASCADE;
+CREATE SCHEMA IF NOT EXISTS previous;
+DROP TABLE IF EXISTS previous.poi_osm CASCADE;
+ALTER TABLE poi_osm SET SCHEMA previous;
+
+--DROP TABLE IF EXISTS poi_osm CASCADE;
 ALTER TABLE poi_osm_next RENAME TO poi_osm;
 ALTER INDEX poi_osm_next_pkey RENAME TO poi_osm_pkey;
 ALTER INDEX poi_osm_next_geom_idx RENAME TO poi_osm_geom_idx;
