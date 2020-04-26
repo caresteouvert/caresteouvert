@@ -79,7 +79,7 @@
       },
       "delivery": "Ce lieu propose la livraison pendant le confinement",
       "takeaway": "Ce lieu propose la vente à emporter",
-      "access": "Les clients peuvent entrer ou rester à l'intérieur",
+      "access": "Ce lieu propose un accueil physique sur place",
       "drive_through": "Ce lieu dispose d'un service drive",
       "details": "Optionnel : ajouter d'autres détails liés au confinement",
       "details_error": "Doit être soit vide, soit contenir au moins 10 caractères"
@@ -94,7 +94,7 @@
     "containment_opening_hours": "Horaires d'ouverture hors-confinement",
     "containment_brand_hours": "Consulter les horaires",
     "facebook": "Page Facebook",
-    "not_accessible": "L'intérieur n'est pas accessible au public",
+    "not_accessible": "Pas d'accueil physique sur place",
     "capacity": "Capacité maximale : 0 personnes | Capacité maximale : 1 personne | Capacité maximale : {count} personnes",
     "last_update": {
       "date": "Dernière modification : {date}",

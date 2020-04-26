@@ -79,7 +79,7 @@
       },
       "delivery": "This place offers delivery",
       "takeaway": "This place allows to purchase to take-away",
-      "access": "Public can enter or stay inside this place",
+      "access": "This place offers physical reception on site",
       "drive_through": "This place has a drive-through service",
       "details": "Optional : add details required during the lockdown",
       "details_error": "Should be either empty or at least 10 characters long"
@@ -94,7 +94,7 @@
     "containment_opening_hours": "Opening hours outside the lockdown period",
     "containment_brand_hours": "Look at the opening hours",
     "facebook": "Facebook page",
-    "not_accessible": "Indoor space not accessible to public",
+    "not_accessible": "No physical reception on site",
     "capacity": "Maximal capacity : 0 persons | Maximal capacity : 1 person | Maximal capacity : {count} persons",
     "last_update": {
       "date": "Last update: {date}",
