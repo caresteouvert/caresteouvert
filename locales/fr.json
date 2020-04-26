@@ -1,6 +1,6 @@
 {
   "lang": "Français",
-  "loading": "Chargement, veuillez patienter...",
+  "loading": "Chargement en cours...",
   "covid19-alert": "Respectez les restrictions gouvernementales. Il en va de VOTRE responsabilité.",
   "title": "Ça reste ouvert",
   "subtitle": "Les lieux ouverts durant le confinement",
@@ -11,14 +11,14 @@
   "missing_shop": "Commerce manquant ?",
   "change_lang": "Changer la langue",
   "zoomtosee": "Zoomez pour voir les lieux ouverts",
-  "filter_noresults": "Aucun résultat. Essayez de dézoomer.",
+  "filter_noresults": "Aucun résultat. Veuillez zoomer la carte.",
   "toggle_color": {
     "blind": "Activer le mode daltonien",
     "normal": "Désactiver le mode daltonien"
   },
   "services": {
-    "delivery": "Livraison",
-    "takeaway": "A emporter"
+    "delivery": "Livraiso",
+    "takeaway": "Vente à emporter"
   },
   "learnmore": {
     "about": "À propos",
