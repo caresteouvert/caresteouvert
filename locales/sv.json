@@ -11,9 +11,14 @@
   "missing_shop": "Rapportera butik som saknas",
   "change_lang": "Byt språk",
   "zoomtosee": "Zooma in för att se öppna ställen",
+  "filter_noresults": "Inga resultat. Försök zooma ut.",
   "toggle_color": {
     "blind": "Aktivera färgblindsinställningar",
     "normal": "Avaktivera färgblindsinställningar"
+  },
+  "services": {
+    "delivery": "Hemleverans",
+    "takeaway": "Take-away"
   },
   "learnmore": {
     "about": "Information",
@@ -74,7 +79,7 @@
       },
       "delivery": "Stället erbjuder hemleverans",
       "takeaway": "Stället erbjuder take-away",
-      "access": "Tillträde inomhus tillåtet",
+      "access": "Närvarande personal",
       "drive_through": "Stället erbjuder drive-in service",
       "details": "Du kan ange ytterligare information",
       "details_error": "Bör vara antingen tomt eller åtminstone 10 märken långt"
@@ -89,7 +94,7 @@
     "containment_opening_hours": "Öppettider utanför undantagstillståndsperioden",
     "containment_brand_hours": "Se öppettider på servicens hemsida",
     "facebook": "Facebook sida",
-    "not_accessible": "Tillträde inomhus förbjudet",
+    "not_accessible": "Ingen personal närvarande",
     "capacity": "Maximal kapacitet : 0 personer | Maximal kapacitet : 1 person | Maximal kapacitet : {count} personer",
     "last_update": {
       "date": "Senast uppdaterad: {date}",
@@ -109,6 +114,13 @@
       "partial": "Stället tillhör en kedja vars serviceställen är delvis öppna under undantagstillståndet. Låt oss veta om det är öppet eller stängt.",
       "unknown": "Detta stället har rätt att hålla öppet under undantagstillståndet. Låt oss veta om det är öppet? ",
       "closed": "Stället är stängt under undantagstillståndet"
+    },
+    "state_short": {
+      "open": "Öppen under undantagstillståndet",
+      "open_adapted": "Öppen under undantagstillståndet",
+      "partial": "Möjligtvis öppen",
+      "unknown": "Möjligtvis öppen",
+      "closed": "Stängd under undantagstillståndet"
     },
     "delivery": {
       "yes": "Hemleverans tillgänglig",
