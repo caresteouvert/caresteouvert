@@ -11,9 +11,14 @@
   "missing_shop": "Ilmoita puuttuva palvelu",
   "change_lang": "Vaihda kieli",
   "zoomtosee": "Zoomaa lähemmäs nähdäksesi avoimet paikat",
+  "filter_noresults": "Ei tuloksia. Koeta zoomata ulospäin.",
   "toggle_color": {
     "blind": "Värisokeatila päälle",
     "normal": "Värisokeatila pois päältä"
+  },
+  "services": {
+    "delivery": "Kotiinkuljetus",
+    "takeaway": "Noutomyyntiä"
   },
   "learnmore": {
     "about": "Tietoja",
@@ -74,7 +79,7 @@
       },
       "delivery": "Kotiinkuljetus",
       "takeaway": "Noutomyyntiä",
-      "access": "Asiakkaille pääsy sallittua",
+      "access": "Henkilökuntaa paikan päällä",
       "drive_through": "Tarjolla autokaista-palvelu",
       "details": "Voit lisätä tarkempia tietoja",
       "details_error": "Pitää olla joko tyhjä tai vähintään 10 merkkiä pitkä"
@@ -89,7 +94,7 @@
     "containment_opening_hours": "Aukioloajat muulloin kuin poikkeusaikana",
     "containment_brand_hours": "Katso aukioloajat palvelun verkkosivulta",
     "facebook": "Facebook-sivu",
-    "not_accessible": "Sisätila on suljettu",
+    "not_accessible": "Ei henkilökuntaa paikan päällä",
     "capacity": "Maksimikapasiteetti : 0 henkilöä | Maksimikapasiteetti : 1 henkilö | Maksimikapasiteetti : {count} henkilöä",
     "last_update": {
       "date": "Päivitetty: {date}",
@@ -108,6 +113,13 @@
       "open_adapted": "Avoinna poikkeusaikana, muutoksia aukioloajoissa",
       "partial": "Palvelu kuuluu ketjuun, jonka liikkeistä osa on avoinna. Onko tämä palvelu avoinna? Kerro meille.",
       "unknown": "Tällä palvelulla on oikeus olla auki poikkeusaikana, mutta onko se? Kerro meille.",
+      "closed": "Suljettu poikkeusaikana"
+    },
+    "state_short": {
+      "open": "Auki poikkeusaikana",
+      "open_adapted": "Auki poikkeusaikana",
+      "partial": "Mahdollisesti auki",
+      "unknown": "Mahdollisesti auki",
       "closed": "Suljettu poikkeusaikana"
     },
     "delivery": {
