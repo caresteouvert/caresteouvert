@@ -10,8 +10,8 @@
   "geoIpUrl": "https://geo.caresteouvert.fr/me",
   "osmUrl": "https://www.openstreetmap.org",
   "minZoomPoi": 12,
-  "directoryUrl": "http://172.18.0.3:3000/directory",
   "maxZoomPoi": 13,
+  "directoryUrl": "https://covid19-fr-directory.osc-fr1.scalingo.io/directory",
   "brands": {
     "DEFAULT": {
       "brand_text": "Ça reste ouvert",
