@@ -12,6 +12,8 @@ SELECT "name",
        ST_Multi(ST_Subdivide(wkb_geometry, 255))
 FROM complex_areas_to_subdivide;
 
-DROP TABLE IF EXISTS countries_subcountries CASCADE;
+CREATE SCHEMA IF NOT EXISTS previous;
+DROP TABLE IF EXISTS previous.countries_subcountries CASCADE;
+ALTER TABLE countries_subcountries SET SCHEMA previous;
 ALTER TABLE tmp_countries_subcountries RENAME TO countries_subcountries;
 ALTER INDEX tmp_countries_subcountries_wkb_geometry_geom_idx RENAME TO countries_subcountries_wkb_geometry_geom_idx;
