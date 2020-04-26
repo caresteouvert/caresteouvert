@@ -39,6 +39,7 @@ import { mapState } from 'vuex';
 import debounce from 'lodash.debounce';
 import * as config from '../config.json';
 import { readContributionFromStorage, pushContribution } from '../lib/recent_contributions';
+import { rawColorForStatus } from '../lib/place';
 import {
   MglGeolocateControl,
   MglMap,
@@ -54,11 +55,11 @@ const contribSource = "poi-contrib-src";
 function getColorStroke(theme, contribs = readContributionFromStorage()) {
   return [
     'case',
-    ["in", ["get", "fid"], ["literal", contribs.filter(c => c[1].startsWith("open")).map(c => c[0])]], theme.success,
-    ["in", ["get", "fid"], ["literal", contribs.filter(c => c[1] === "closed").map(c => c[0])]], theme.error,
-    ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], theme.success,
-    ["in", ["get", "status"], ["literal", ["closed"]]], theme.error,
-    "#9E9E9E"
+    ["in", ["get", "fid"], ["literal", contribs.filter(c => c[1].startsWith("open")).map(c => c[0])]], rawColorForStatus('open', theme),
+    ["in", ["get", "fid"], ["literal", contribs.filter(c => c[1] === "closed").map(c => c[0])]], rawColorForStatus('closed', theme),
+    ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], rawColorForStatus('open', theme),
+    ["in", ["get", "status"], ["literal", ["closed"]]], rawColorForStatus('closed', theme),
+    rawColorForStatus('unknown', theme)
   ];
 }
 
