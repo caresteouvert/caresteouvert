@@ -98,7 +98,7 @@
     "capacity": "Maximale Kapazität: 0 Personen | Maximale Kapazität: 1 Person | Maximale Kapazität: {count} Personen",
     "last_update": {
       "date": "Letzte Änderung: {date}",
-      "recent": "Vor wenigen Minuten aktualisiert, Daten können sich geändert haben"
+      "recent": "Vor wenigen Minuten aktualisiert, angezeigte Daten können sich geändert haben"
     },
     "opening_hours": {
       "state_until_date": "{state} bis {date}",
