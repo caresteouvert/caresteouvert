@@ -13,7 +13,7 @@
   "zoomtosee": "Vergrößere die Karte, um offene Geschäfte zu sehen",
   "filter_noresults": "Keine Ergebnisse in diesem Kartenbereich.",
   "toggle_color": {
-    "blind": "Anzeige für Rot-Grün-Sehschwäche aktivieren",
+    "blind": "Modus für Rot-Grün-Sehschwäche aktivieren",
     "normal": "Anzeige für Rot-Grün-Sehschwäche deaktivieren"
   },
   "services": {
