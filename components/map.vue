@@ -11,9 +11,10 @@
   >
     <MglMarker
       v-if="place"
+      :key="place.id"
       :coordinates="place.geometry.coordinates"
       :offset="{ x: 0, y: -15 }"
-      :color="rawColorForStatus(place.properties.status, $vuetify.theme.themes.light)"
+      :color="placeColor"
     />
     <MglMarker
       v-if="highlightPlace"
@@ -257,6 +258,10 @@ export default {
         newLayer.filter.push(...services);
         return newLayer;
       });
+    },
+
+    placeColor() {
+      return rawColorForStatus(this.place.properties.status, this.$vuetify.theme.themes.light);
     }
   },
 
@@ -360,9 +365,7 @@ export default {
           featuresAndLocation: this.featuresAndLocation
         }
       });
-    },
-
-    rawColorForStatus
+    }
   }
 }
 </script>
