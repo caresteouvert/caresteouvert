@@ -74,7 +74,7 @@
       "title": "Details hinzufügen",
       "3state": {
         "unknown": "Weiß ich nicht",
-        "yes": "Ja",
+        "yes": "Ja, kann betreten werden",
         "no": "Nein"
       },
       "delivery": "Lieferung möglich?",
