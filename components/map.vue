@@ -13,6 +13,12 @@
       v-if="place"
       :coordinates="place.geometry.coordinates"
       :offset="{ x: 0, y: -15 }"
+      :color="rawColorForStatus(place.properties.status, $vuetify.theme.themes.light)"
+    />
+    <MglMarker
+      v-if="highlightPlace"
+      :coordinates="highlightPlace.geometry.coordinates"
+      :offset="{ x: 0, y: -15 }"
       color="red"
     />
     <MglVectorLayer
@@ -228,7 +234,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['place', 'contribution']),
+    ...mapState(['place', 'highlightPlace', 'contribution']),
 
     poiSource() {
       return {
@@ -354,7 +360,9 @@ export default {
           featuresAndLocation: this.featuresAndLocation
         }
       });
-    }
+    },
+
+    rawColorForStatus
   }
 }
 </script>

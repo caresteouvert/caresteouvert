@@ -5,6 +5,7 @@ export const state = () => ({
   country: '',
   categories: [],
   place: null,
+  highlightPlace: null,
   contribution: null
 });
 
@@ -15,6 +16,10 @@ export const mutations = {
 
   setPlace (state, place) {
     state.place = place;
+  },
+
+  highlightPlace (state, place) {
+    state.highlightPlace = place;
   },
 
   setContribution (state, contribution) {

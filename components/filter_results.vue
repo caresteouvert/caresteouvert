@@ -36,8 +36,8 @@
           :place="place"
           :featuresAndLocation="featuresAndLocation"
           :display-type="!hasSelectedSubCategory"
-          @mouseenter.native="$store.commit('setPlace', place)"
-          @mouseleave.native="$store.commit('setPlace', null)"
+          @mouseenter.native="$store.commit('highlightPlace', place)"
+          @mouseleave.native="$store.commit('highlightPlace', null)"
         />
       </template>
       <v-divider />
