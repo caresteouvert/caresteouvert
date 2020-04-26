@@ -3,9 +3,10 @@
     :to="{ name: 'place', params: { id: place.id, featuresAndLocation } }"
     active-class="primary--text"
   >
-    <v-list-item-icon class="mr-1 mt-3">
+    <v-list-item-icon class="mr-2 mt-3">
       <v-icon
-        :color="color"
+        :style="{ 'border-color': color }"
+        class="circle"
         small
       >{{ `osm-${category}` }}</v-icon>
     </v-list-item-icon>
@@ -47,7 +48,7 @@
 
 <script>
 import placeMixin from '../mixins/place';
-import { colorForStatus } from '../../lib/place';
+import { rawColorForStatus } from '../../lib/place';
 import DenseOpeningHours from './dense_opening_hours';
 
 export default {
@@ -76,8 +77,16 @@ export default {
 
   computed: {
     color() {
-      return colorForStatus(this.place.properties.status);
+      return rawColorForStatus(this.place.properties.status, this.$vuetify.theme.themes.light);
     },
   }
 }
 </script>
+
+<style>
+.circle {
+  border: solid 3px;
+  border-radius: 50%;
+  padding: 5px;
+}
+</style>
