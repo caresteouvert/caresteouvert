@@ -78,7 +78,7 @@
         "no": "Nein"
       },
       "delivery": "Lieferung möglich?",
-      "takeaway": "Außer-Haus-Verkauf möglich?",
+      "takeaway": "Abholung möglich?",
       "access": "Kann dieser Ort betreten werden?",
       "drive_through": "Drive-in vorhanden und geöffnet?",
       "details": "Wichtige Anmerkungen (optional, erfordert eine manuelle Prüfung durch die OpenStreetMap-Community)",
@@ -127,7 +127,7 @@
       "only": "Nur Lieferung"
     },
     "takeaway": {
-      "yes": "Außer-Haus-Verkauf möglich",
+      "yes": "Abholung möglich",
       "modified": "Abholung abweichend",
       "only": "Nur Abholung"
     },
