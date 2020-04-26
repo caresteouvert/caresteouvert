@@ -56,8 +56,7 @@
         "bank": {
           "name": "Bank",
           "osm_tags": [
-            { "amenity": "bank" },
-            { "office": "financial" }
+            { "amenity": "bank" }
           ],
           "areas": "all",
           "form_details": [ "access" ]
