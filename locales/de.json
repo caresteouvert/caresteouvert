@@ -84,7 +84,7 @@
       "details": "Wichtige Anmerkungen (optional, erfordert eine manuelle Prüfung durch die OpenStreetMap-Community)",
       "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein"
     },
-    "submit": "Veröffentlichen",
+    "submit": "Meldung abschicken",
     "cancel": "Abbrechen"
   },
   "details": {
