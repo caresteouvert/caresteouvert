@@ -115,6 +115,13 @@
       "unknown": "Lieu potentiellement ouvert durant le confinement pour proposer ses services habituels ou de nouveaux. Ouvert ou fermé ? À vous de le dire.",
       "closed": "Lieu fermé durant le confinement"
     },
+    "state_short": {
+      "open": "Ouvert durant le confinement",
+      "open_adapted": "Ouvert durant le confinement",
+      "partial": "Potentiellement ouvert",
+      "unknown": "Potentiellement ouvert",
+      "closed": "Fermé durant le confinement"
+    },
     "delivery": {
       "yes": "Service de livraison proposé",
       "only": "Livraison uniquement"

@@ -115,6 +115,13 @@
       "unknown": "Place may be allowed to open during lockdown. Is it open or closed? Let us know.",
       "closed": "Place closed during lockdown"
     },
+    "state_short": {
+      "open": "Open during the lockdown",
+      "open_adapted": "Open during the lockdown",
+      "partial": "Potentially open",
+      "unknown": "Potentially open",
+      "closed": "Closed during lockdown"
+    },
     "delivery": {
       "yes": "Delivery service available",
       "only": "Only by delivery"
