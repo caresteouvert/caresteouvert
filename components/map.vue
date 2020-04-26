@@ -36,6 +36,7 @@
 <script>
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { mapState } from 'vuex';
+import debounce from 'lodash.debounce';
 import * as config from '../config.json';
 import { readContributionFromStorage, pushContribution } from '../lib/recent_contributions';
 import {
@@ -304,7 +305,7 @@ export default {
       this.$emit('update:mapZoom', mapZoom);
     },
 
-    updateMapBounds(mapBounds) {
+    updateMapBounds: debounce(function (mapBounds) {
       if (!this.isMobile) {
         const height = document.body.clientHeight;
         const width = document.body.clientWidth;
@@ -316,7 +317,7 @@ export default {
       } else {
         this.$emit('update:mapBounds', mapBounds.toArray());
       }
-    },
+    }, 1000),
 
     mouseenter(e) {
       e.map.getCanvas().style.cursor = 'pointer';
