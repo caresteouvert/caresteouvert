@@ -126,7 +126,7 @@ export default {
   top: -30px;
 }
 .v-card {
-  transition: height .3s ease;
+  transition: height .1s ease;
 }
 @keyframes move_icon { 0% { top: -10px; } 30% { top: -15px; } 60% { top: -10px; } 100% { top: -10px; }  }
 .animate-button {

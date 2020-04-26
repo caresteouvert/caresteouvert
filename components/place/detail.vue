@@ -383,7 +383,7 @@ export default {
   left: 0;
   z-index: 10;
   overflow-y: auto;
-  transition: height ease-in .2s;
+  transition: height ease .1s;
 }
 .overflowwrap-anywhere {
   overflow-wrap: anywhere;
