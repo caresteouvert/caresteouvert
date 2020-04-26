@@ -1,6 +1,11 @@
 <template>
   <div>
-    <DirectoryList :title="title" :items="communes" :links="links" propertyLabel="libelle" />
+    <DirectoryList
+      :title="title"
+      :items="communes"
+      :links="links"
+      :property-label="[{key: 'libelle'}]"
+    />
   </div>
 </template>
 

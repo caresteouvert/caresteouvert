@@ -4,8 +4,9 @@
       :title="title"
       :items="pois"
       :links="links"
-      property-label="name,cat"
+      :property-label="[{key: 'name'},{key: 'cat', translation: 'categories.'}]"
       :item-link="pointUrl"
+      :display-icon="true"
     />
   </div>
 </template>

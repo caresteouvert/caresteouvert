@@ -13,8 +13,15 @@
     <v-divider />
     <v-list>
       <v-list-item :href="itemLink(item)" v-for="item in items" :key="item.id">
-        <img src="~/assets/caresteouvert.svg" alt="brand" class="directory-logo" />
-        <div>{{ getLabel(item, propertyLabel) }}</div>
+        <img v-if="displayIcon" src="~/assets/caresteouvert.svg" alt="brand" class="directory-logo" />
+        <div
+          v-for="label in getLabels(item, propertyLabel)"
+          :key="label.text"
+          class="directory-item-property"
+        >
+          <span v-if="label.translation">{{ $t(label.translation + label.text) }}</span>
+          <span v-else>{{ label.text }}</span>
+        </div>
       </v-list-item>
     </v-list>
   </div>
@@ -38,7 +45,7 @@ export default {
       default: undefined
     },
     propertyLabel: {
-      type: String,
+      type: Array,
       default: undefined
     },
     itemLink: {
@@ -46,18 +53,27 @@ export default {
       default: item => {
         return item.links.href;
       }
+    },
+    displayIcon: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
-    getLabel: (item, attrs) => {
+    getLabels: (item, attrs) => {
       if (!attrs) {
-        return item.properties;
+        return [{ text: item.properties, translation: "" }];
       } else {
         return attrs
-          .split(",")
-          .map(key => item.properties[key.trim()])
-          .filter(value => value)
-          .join(", ");
+          .map(attr => {
+            return {
+              text: attr.key
+                ? item.properties[attr.key.trim()]
+                : item.properties,
+              translation: attr.translation ? attr.translation : ""
+            };
+          })
+          .filter(value => value && value.text);
       }
     },
     getRelatedLinks: links => {
@@ -101,6 +117,10 @@ export default {
 
 .directory-logo {
   height: 2rem;
+  margin-right: 1rem;
+}
+
+.directory-item-property {
   margin-right: 1rem;
 }
 </style>
