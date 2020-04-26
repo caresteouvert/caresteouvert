@@ -6,6 +6,7 @@
     @load="load"
     @update:center="updateMapCenter"
     @update:zoom="updateMapZoom"
+    @update:bounds="updateMapBounds"
   >
     <MglMarker
       v-if="place"
@@ -44,6 +45,7 @@ import {
   MglNavigationControl,
   MglVectorLayer,
 } from 'vue-mapbox/dist/vue-mapbox.umd';
+import isMobile from './mixins/is_mobile';
 
 const source = "public.poi_osm_light";
 const contribSource = "poi-contrib-src";
@@ -183,6 +185,8 @@ export default {
     MglVectorLayer,
   },
 
+  mixins: [isMobile],
+
   props: {
     featuresAndLocation: {
       type: String,
@@ -207,6 +211,11 @@ export default {
 
     filter: {
       type: String,
+      required: true
+    },
+
+    filterServices: {
+      type: Array,
       required: true
     },
 
@@ -235,6 +244,7 @@ export default {
 
     layers() {
       const [ category, subcategory ] = this.filter.split('/');
+      const services = this.filterServices.map((service) => ['in', service, 'yes', 'only']);
       return getLayers(this.$vuetify.theme.themes.light).map((layer) => {
         const newLayer = { ...layer, filter: ['all'] };
         if (subcategory) {
@@ -242,6 +252,7 @@ export default {
         } else if (category !== '') {
           newLayer.filter.push(['==', 'normalized_cat', category]);
         }
+        newLayer.filter.push(...services);
         return newLayer;
       });
     }
@@ -249,17 +260,22 @@ export default {
 
   watch: {
     place(place) {
+      if (!this.map) return;
       if (place) {
         const isPlaceUnderUI = (x, y) => {
           const height = document.body.clientHeight;
           const width = document.body.clientWidth;
-          const offsetSidebar = this.sidebar ? 300 : 0;
-          const offsetPlace = this.$vuetify.breakpoint.smAndDown ? 0 : 300;
-          return (x < offsetSidebar || x > width - offsetPlace || y > height || y < 0);
+          if (this.isMobile) {
+            return (x < 0 || x > width || y > height / 2 || y < 0);
+          } else {
+            const offsetSidebar = this.sidebar ? 300 : 0;
+            const offsetPlace = 400;
+            return (x < offsetSidebar || x > width - offsetPlace || y > height || y < 0);
+          }
         }
         const { x, y } = this.map.project(place.geometry.coordinates);
         if (isPlaceUnderUI(x, y)) {
-          this.map.panTo(place.geometry.coordinates);
+          this.map.panTo(place.geometry.coordinates, { offset: [0, this.isMobile ? (-document.body.clientHeight / 4) : 0] });
         }
       }
     },
@@ -277,6 +293,7 @@ export default {
     load({ map }) {
       this.map = map;
       this.$emit('loaded');
+      this.updateMapBounds(map.getBounds());
     },
 
     updateMapCenter(mapCenter) {
@@ -285,6 +302,20 @@ export default {
 
     updateMapZoom(mapZoom) {
       this.$emit('update:mapZoom', mapZoom);
+    },
+
+    updateMapBounds(mapBounds) {
+      if (!this.isMobile) {
+        const height = document.body.clientHeight;
+        const width = document.body.clientWidth;
+        const bounds = [
+          this.map.unproject([300, 0]).toArray(),
+          this.map.unproject([width - 400, height]).toArray()
+        ];
+        this.$emit('update:mapBounds', bounds);
+      } else {
+        this.$emit('update:mapBounds', mapBounds.toArray());
+      }
     },
 
     mouseenter(e) {

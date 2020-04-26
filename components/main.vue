@@ -16,7 +16,14 @@
         width="300"
         fixed
       >
-        <main-menu>
+        <filter-results
+          v-if="filter !== ''"
+          v-model="filter"
+          :services.sync="filterServices"
+          :featuresAndLocation="featuresAndLocation"
+          :map-bounds="mapBounds"
+        />
+        <main-menu v-else>
           <filter-list v-model="filter" />
         </main-menu>
       </v-navigation-drawer>
@@ -34,7 +41,9 @@
             :map-style="mapStyle"
             :map-center.sync="mapCenter"
             :map-zoom.sync="mapZoom"
+            :map-bounds.sync="mapBounds"
             :filter="filter"
+            :filter-services="filterServices"
             :featuresAndLocation="featuresAndLocation"
             @loaded="mapLoaded = true"
           />
@@ -53,10 +62,20 @@
           <apps-sheet />
         </client-only>
         <bottom-menu
-          v-if="isMobile"
-          v-model="filter"
+          v-if="isMobile && mapLoaded"
+          :filter="filter"
         >
-          <main-menu :show-brand="false">
+          <filter-results
+            v-if="filter != ''"
+            v-model="filter"
+            :services.sync="filterServices"
+            :featuresAndLocation="featuresAndLocation"
+            :map-bounds="mapBounds"
+          />
+          <main-menu
+            v-else
+            :show-brand="false"
+          >
             <filter-list v-model="filter" />
           </main-menu>
         </bottom-menu>
@@ -72,11 +91,12 @@ import { mapGetters } from 'vuex';
 import debounce from 'lodash.debounce';
 import config from '../config.json';
 import { getCookie, setCookie } from '../lib/cookie';
-import { encode, decode, encodePosition, decodePosition } from '../lib/url';
+import { encode, decode, encodePosition, decodePosition, encodeFilter, decodeFilter } from '../lib/url';
 import isMobile from './mixins/is_mobile';
 import AppsSheet from './apps_sheet';
 import MainMenu from './main_menu';
 import FilterList from './filter_list';
+import FilterResults from './filter_results';
 import TopToolbar from './top_toolbar';
 import BottomMenu from './bottom_menu';
 import RgpdBanner from './rgpd_banner';
@@ -87,6 +107,7 @@ export default {
     AppsSheet,
     BottomMenu,
     FilterList,
+    FilterResults,
     MainMenu,
     RgpdBanner,
     SplashScreen,
@@ -105,23 +126,27 @@ export default {
 
   data() {
     return {
-      loadMap: false,
-      mapLoaded: false,
-      sidebar: false,
-      mapStyle: null,
-      mapCenter: null,
-      mapZoom: null,
       filter: '',
+      filterServices: [],
+      loadMap: false,
+      mapBounds: [],
+      mapCenter: null,
+      mapLoaded: false,
+      mapStyle: null,
+      mapZoom: null,
+      minZoomPoi: config.minZoomPoi,
       rgpdBannerHidden: false,
-      minZoomPoi: config.minZoomPoi
+      sidebar: false,
     };
   },
 
   mounted() {
     this.sidebar = !this.isMobile;
 
-    const { filter, location } = decode(this.featuresAndLocation);
+    const { filter: filterPart, location } = decode(this.featuresAndLocation);
+    const { filter, services } = decodeFilter(filterPart);
     this.filter = filter;
+    this.filterServices = services;
 
     Promise.all([
       this.loadInitialLocation(location),
@@ -147,6 +172,10 @@ export default {
     },
 
     filter() {
+      this.updateRoute();
+    },
+
+    filterServices() {
       this.updateRoute();
     }
   },
@@ -204,7 +233,7 @@ export default {
         this.lastFeaturesAndLocation = this.featuresAndLocation;
       }
       const newFeaturesAndLocation = encode(
-        this.filter,
+        encodeFilter(this.filter, this.filterServices),
         encodePosition(this.mapCenter.lat, this.mapCenter.lng, this.mapZoom)
       );
       if (this.lastFeaturesAndLocation === newFeaturesAndLocation) {
@@ -282,6 +311,9 @@ export default {
 </script>
 
 <style>
+.full-width {
+  width: 100%;
+}
 .zoom-chip {
   position: fixed !important;
   bottom: 0;

@@ -1,5 +1,11 @@
 <template>
-  <div :class="{ 'bottom-dialog': isMobile, 'right-sidebar': !isMobile }">
+  <v-sheet
+    v-touch="{ up: moveUp, down: moveDown }"
+    :elevation="3"
+    :tile="!isMobile"
+    :height="`${height}vh`"
+    :class="{ 'bottom-dialog': isMobile, 'right-sidebar': !isMobile }"
+  >
     <v-slide-x-reverse-transition>
       <v-card
         v-if="place"
@@ -145,12 +151,13 @@
         </v-footer>
       </v-card>
     </v-slide-x-reverse-transition>
-  </div>
+  </v-sheet>
 </template>
 
 <script>
 import { poiFeature, osmUrl } from '../../config.json';
 import isMobile from '../mixins/is_mobile';
+import placeMixin from '../mixins/place';
 import DetailOpeningHours from './detail_opening_hours';
 import DetailState from './detail_state';
 import DetailLink from './detail_link';
@@ -167,7 +174,7 @@ export default {
     OsmLink
   },
 
-  mixins: [isMobile],
+  mixins: [placeMixin, isMobile],
 
   props: {
     id: {
@@ -199,6 +206,7 @@ export default {
   },
 
   mounted() {
+    this.updateDefaultHeight();
     this.beforeUnloadListener = (event) => {
       if (this.$refs.state && this.$refs.state.contribute) {
         event.preventDefault();
@@ -218,46 +226,15 @@ export default {
 
   data() {
     return {
+      height: 100,
       place: null,
       lastUpdate: null
     };
   },
 
   computed: {
-    title() {
-      return this.place.properties.name;
-    },
-
-    category() {
-      return this.place.properties.cat === 'unknown' ? 'other' : this.place.properties.cat;
-    },
-
     hasVending() {
       return this.$te(`details.vending.${this.place.properties.tags.vending}`);
-    },
-
-    type() {
-      const key = `categories.${this.place.properties.cat}`;
-      return this.$te(key) ? this.$t(key) : this.$t('categories.other');
-    },
-
-    contact() {
-      const transform = {
-        facebook(url) {
-          if (!url) return url;
-          return url.startsWith('http') ? url : `https://facebook.com/${url}`;
-        }
-      };
-      const tags = this.place.properties.tags;
-      return (name) => {
-        const value = tags[name] || tags[`contact:${name}`];
-        const transformFunc = transform[name] || (v => v);
-        return transformFunc(value);
-      };
-    },
-
-    status() {
-      return this.place.properties.status;
     },
 
     infos() {
@@ -302,10 +279,18 @@ export default {
     id() {
       this.place = null;
       this.updatePlace();
+    },
+
+    isMobile() {
+      this.updateDefaultHeight();
     }
   },
 
   methods: {
+    updateDefaultHeight() {
+      this.height = this.isMobile ? 50 : 100;
+    },
+
     updatePlace() {
       const { type, id } = parseId(this.id);
       const contrib = getRecentContribution(this.id);
@@ -363,6 +348,14 @@ export default {
       if (result) {
         this.$store.commit('setPlace', null);
       }
+    },
+
+    moveUp() {
+      this.height = 90;
+    },
+
+    moveDown() {
+      this.height == 50 ? this.close() : this.height = 50;
     }
   }
 }
@@ -383,13 +376,14 @@ export default {
 }
 
 .bottom-dialog {
+  z-index: 300 !important;
   width: 100vw;
-  height: 100vh;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 10;
   overflow-y: auto;
+  transition: height ease-in .2s;
 }
 .overflowwrap-anywhere {
   overflow-wrap: anywhere;

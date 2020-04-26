@@ -41,6 +41,7 @@
 
 <script>
 import ContributeForm from '../contribute_form';
+import { colorForStatus } from '../../lib/place';
 
 export default {
   components: { ContributeForm },
@@ -71,14 +72,7 @@ export default {
 
   computed: {
     type() {
-      const statuses = {
-        open: 'success',
-        open_adapted: 'success',
-        partial: 'warning',
-        unknown: 'warning',
-        closed: 'error'
-      };
-      return statuses[this.status];
+      return colorForStatus(this.status);
     },
 
     lastUpdateTooRecent() {

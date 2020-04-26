@@ -6,30 +6,31 @@
   >
     <template v-slot:activator="{ on }">
       <div
-        v-touch="{ up: () => { open = true; } }"
+        v-touch="{ up: openMenu }"
         class="bottom text-center"
       >
         <v-btn
+          :class="{ 'animation-button': animate }"
           color="white"
           v-on="on"
         >
-          <v-icon :class="{ icon: animate }">osm-chevron_up</v-icon>
+          <div class="handle grey lighten-1"></div>
         </v-btn>
         <v-sheet :elevation="2" />
       </div>
     </template>
-    <v-card max-height="50vh">
+    <v-card :height="`${height}vh`">
       <v-card-text class="pa-0">
         <div
           v-if="open"
-          v-touch="{ down: () => open = false }"
+          v-touch="{ up: moveUp, down: moveDown }"
           class="retract text-center"
         >
           <v-btn
             color="white"
             @click="open = false"
           >
-            <v-icon>osm-chevron_down</v-icon>
+            <div class="handle grey lighten-1"></div>
           </v-btn>
         </div>
         <slot />
@@ -42,11 +43,37 @@
 import { getCookie, setCookie } from '../lib/cookie';
 
 export default {
+  props: {
+    filter: {
+      type: String,
+      required: true
+    }
+  },
+
   data() {
     return {
       open: false,
+      height: 50,
       animate: getCookie('animateMenu') ? false : true
     };
+  },
+
+  mounted() {
+    this.open = this.filter !== '' && this.$route.name !== 'place';
+  },
+
+  methods: {
+    openMenu() {
+      this.open = true;
+    },
+
+    moveUp() {
+      this.height = 90;
+    },
+
+    moveDown() {
+      this.height == 50 ? this.open = false : this.height = 50;
+    }
   },
 
   watch: {
@@ -55,12 +82,28 @@ export default {
         setCookie('animateMenu', false);
         this.animate = false;
       }
+    },
+
+    '$route'(route, oldRoute) {
+      if (route.name === 'place') {
+        this.open = false;
+        this.height = 50;
+      } else if (oldRoute.name === 'place' && this.filter !== '') {
+        this.open = true;
+      }
     }
   }
 }
 </script>
 
 <style scoped>
+.handle {
+  width: 35px;
+  height: 5px;
+  border-radius: 2px;
+  position: relative;
+  top: -3px;
+}
 .bottom {
   position: fixed;
   bottom: 0;
@@ -82,8 +125,12 @@ export default {
   width: 100%;
   top: -30px;
 }
-@keyframes move_icon { 0% { bottom: 0; } 50% { bottom: 5px; } 100% { bottom: 0; }  }
-.icon {
-  animation: 1s ease-in-out infinite 5s move_icon;
+.v-card {
+  transition: height .3s ease;
+}
+@keyframes move_icon { 0% { top: -10px; } 30% { top: -15px; } 60% { top: -10px; } 100% { top: -10px; }  }
+.animate-button {
+  position: relative;
+  animation: 2s ease-in-out infinite 5s move_icon;
 }
 </style>
