@@ -284,26 +284,26 @@ export default {
       const [ type, id ] = this.id.split('/');
       this.loading = true;
       fetch(
-       `${apiUrl}/contribute/${type}/${id}`,
-       {
-         method: 'POST',
-         headers: {
-           'Content-Type': 'application/json'
-         },
-         body: JSON.stringify(this.payload)
-       }
-     ).then((response) => {
-       if (response.status === 200) {
-         this.$emit('success');
-         this.$store.commit('setContribution', [
-            this.place.properties.fid,
-            this.payload.state,
-            parseInt((Date.now() / 1000).toFixed(0))
-          ]);
-       }
-     }).finally(() => {
-       this.loading = false
-     });
+        `${apiUrl}/contribute/${type}/${id}`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(this.payload)
+        }
+      ).then((response) => {
+        if (response.status === 200) {
+          this.$emit('success');
+          this.$store.commit('setContribution', [
+             this.place.properties.fid,
+             this.payload.state,
+             parseInt((Date.now() / 1000).toFixed(0))
+           ]);
+        }
+      }).finally(() => {
+        this.loading = false
+      });
     },
 
     close() {

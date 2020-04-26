@@ -48,6 +48,8 @@
             :last-update="lastUpdate"
           />
 
+          <detail-hygiene :place="place" />
+
           <v-list
             v-if="infos.length > 0 || hasVending"
             class="py-0"
@@ -152,16 +154,17 @@
 <script>
 import { mapState } from 'vuex';
 import { poiFeature, osmUrl } from '../../config.json';
-import isMobile from '../mixins/is_mobile';
-import placeMixin from '../mixins/place';
-import DetailOpeningHours from './detail_opening_hours';
-import DetailState from './detail_state';
-import DetailLink from './detail_link';
-import OsmLink from '../osm_link';
-import UpdateDetailDialog from '../update_detail_dialog';
 import { encodePosition } from '../../lib/url';
 import parseId from '../../lib/parse_id';
 import { getRecentContribution } from '../../lib/recent_contributions';
+import isMobile from '../mixins/is_mobile';
+import placeMixin from '../mixins/place';
+import DetailHygiene from './detail_hygiene';
+import DetailLink from './detail_link';
+import DetailOpeningHours from './detail_opening_hours';
+import DetailState from './detail_state';
+import OsmLink from '../osm_link';
+import UpdateDetailDialog from '../update_detail_dialog';
 
 const CONTACTS = {
   phone: 'osm-phone',
@@ -174,6 +177,7 @@ const CONTACTS = {
 
 export default {
   components: {
+    DetailHygiene,
     DetailLink,
     DetailOpeningHours,
     DetailState,

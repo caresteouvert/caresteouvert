@@ -149,6 +149,13 @@
       "drinks": "Boissons",
       "water": "Eau",
       "sweets": "Bonbons"
+    },
+    "hydroalcoholic_gel": "Gel hydroalcoolique",
+    "mask": "Masques",
+    "hygiene": "Hygiène",
+    "hygiene_entry": {
+      "has": "Il en reste",
+      "hasnot": "Il n'y en a plus"
     }
   },
   "opening_hours_editor": {
