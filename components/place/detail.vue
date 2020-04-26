@@ -252,7 +252,7 @@ export default {
         const tag = this.place.properties.tags[tagName];
         if (isOpenOrPartial && tagCovid19 && this.$te(`details.${tagName}.${tagCovid19}`)) {
           infos.push(this.$t(`details.${tagName}.${tagCovid19}`));
-        } else if (isOpen && tag && this.$te(`details.${tagName}.${tag}`)) {
+        } else if (isOpen && tag && this.$te(`details.${tagName}.${tag}`) && !tagCovid19) {
           infos.push(this.$t(`details.${tagName}.${tag}`));
         }
       };
