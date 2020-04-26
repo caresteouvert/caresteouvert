@@ -7,6 +7,7 @@
       <v-icon
         :style="{ 'border-color': color }"
         class="circle"
+        color="grey darken-2"
         small
       >{{ `osm-${category}` }}</v-icon>
     </v-list-item-icon>
