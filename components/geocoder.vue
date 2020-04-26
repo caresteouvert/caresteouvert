@@ -13,6 +13,7 @@
     background-color="white"
     prepend-inner-icon="osm-magnify"
     @blur="$emit('blur')"
+    class="autocomplete-big"
   >
     <template v-slot:item="{ item }">
       <v-list-item-content>
@@ -97,3 +98,17 @@ export default {
   }
 }
 </script>
+
+<style>
+.xs .autocomplete-big input,
+.sm .autocomplete-big input {
+  font-size: 30px;
+  line-height: 35px;
+  max-height: 35px;
+}
+
+.xs .autocomplete-big .v-input__prepend-inner,
+.sm .autocomplete-big .v-input__prepend-inner {
+  margin-top: 6px;
+}
+</style>

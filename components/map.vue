@@ -373,4 +373,10 @@ export default {
   top: 0;
   width: 100%;
 }
+
+.xs .mapboxgl-control-container button,
+.sm .mapboxgl-control-container button {
+  width: 35px;
+  height: 35px;
+}
 </style>
