@@ -90,7 +90,7 @@
   "details": {
     "signal_warning": "Du warst gerade dabei, eine Änderung zu melden. Möchtest du deine Eingaben verwerfen?",
     "signal": "Änderung melden",
-    "signal_done": "Vielen Dank, deine Änderungsmeldung wurde erfasst!\n\nBitte beachte, dass Meldungen mit Kommentar manuell von der OpenStreetMap-Community geprüft werden. Kommentarlose Änderungen erscheinen automatisch nach einer Stunde in der Karte.",
+    "signal_done": "Vielen Dank, deine Änderungsmeldung wurde erfasst!\n\nBitte beachte, dass Meldungen mit Kommentar manuell von der OpenStreetMap-Community bearbeitet werden müssen. Kommentarlose Änderungen erscheinen automatisch nach etwa einer Stunde auf der Karte.",
     "containment_opening_hours": "Reguläre Öffnungszeiten",
     "containment_brand_hours": "Öffnungszeiten anzeigen",
     "facebook": "Facebook-Seite",
