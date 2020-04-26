@@ -11,9 +11,14 @@
   "missing_shop": "Fehlendes Geschäft melden",
   "change_lang": "Sprache ändern",
   "zoomtosee": "Vergrößere die Karte, um offene Geschäfte zu sehen",
+  "filter_noresults": "Keine Ergebnisse in diesem Kartenbereich.",
   "toggle_color": {
     "blind": "Anzeige für Rot-Grün-Sehschwäche aktivieren",
     "normal": "Anzeige für Rot-Grün-Sehschwäche deaktivieren"
+  },
+  "services": {
+    "delivery": "Lieferung",
+    "takeaway": "Außer-Haus-Verkauf"
   },
   "learnmore": {
     "about": "Über",
@@ -74,7 +79,7 @@
       },
       "delivery": "Lieferung möglich?",
       "takeaway": "Abholung möglich?",
-      "access": "Kann ich den Ort betreten oder mich darin aufhalten?",
+      "access": "Kann dieser Ort betreten werden?",
       "drive_through": "Drive-in vorhanden und geöffnet?",
       "details": "Wichtige Anmerkungen (optional, erfordert eine manuelle Prüfung durch die OpenStreetMap-Community)",
       "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein"
@@ -89,7 +94,7 @@
     "containment_opening_hours": "Reguläre Öffnungszeiten",
     "containment_brand_hours": "Öffnungszeiten anzeigen",
     "facebook": "Facebook-Seite",
-    "not_accessible": "Innenbereich nicht öffentlich zugänglich",
+    "not_accessible": "Ort kann nicht betreten werden",
     "capacity": "Maximale Kapazität: 0 Personen | Maximale Kapazität: 1 Person | Maximale Kapazität: {count} Personen",
     "last_update": {
       "date": "Letzte Änderung: {date}",
@@ -109,6 +114,13 @@
       "partial": "Dieser Ort gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
       "unknown": "Dieser Ort ist möglicherweise geöffnet.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
       "closed": "Ort vorübergehend geschlossen"
+    },
+    "state_short": {
+      "open": "weiterhin geöffnet",
+      "open_adapted": "weiterhin geöffnet",
+      "partial": "möglicherweise geöffnet",
+      "unknown": "möglicherweise geöffnet",
+      "closed": "vorübergehend geschlossen"
     },
     "delivery": {
       "yes": "Lieferung möglich",
