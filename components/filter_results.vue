@@ -48,21 +48,21 @@
     >
       {{ $t('filter_noresults') }}
     </div>
-    <div class="d-flex">
+    <div class="d-flex mb-2">
       <v-spacer />
       <v-btn
         :disabled="loading || offset === 0"
         icon
         @click="updateOffset(offset - 10)"
       >
-        <v-icon small>osm-chevron_left</v-icon>
+        <v-icon>osm-chevron_left</v-icon>
       </v-btn>
       <v-btn
         :disabled="loading || !results || results.numberReturned < 10"
         icon
         @click="updateOffset(offset + 10)"
       >
-        <v-icon small>osm-chevron_right</v-icon>
+        <v-icon>osm-chevron_right</v-icon>
       </v-btn>
     </div>
   </div>
