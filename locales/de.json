@@ -81,7 +81,7 @@
       "takeaway": "Abholung möglich?",
       "access": "Kann dieser Ort betreten werden?",
       "drive_through": "Drive-in vorhanden und geöffnet?",
-      "details": "Wichtige Anmerkungen (optional, erzeugt einen OSM-Hinweis und fordert eine manuelle Bearbeitung durch die OpenStreetMap-Community)",
+      "details": "Wichtige Anmerkungen (optional, erzeugt einen OSM-Hinweis und erfordert eine manuelle Bearbeitung durch die OpenStreetMap-Community)",
       "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein"
     },
     "submit": "Meldung abschicken",
