@@ -4,6 +4,7 @@
     :zoom="mapZoom"
     :map-style="mapStyle"
     @load="load"
+    @rotateend="maprotated"
     @update:center="updateMapCenter"
     @update:zoom="updateMapZoom"
     @update:bounds="updateMapBounds"
@@ -13,10 +14,6 @@
       :coordinates="place.geometry.coordinates"
       :offset="{ x: 0, y: -15 }"
       color="red"
-    />
-    <MglNavigationControl />
-    <MglGeolocateControl
-      :positionOptions="{ enableHighAccuracy: true }"
     />
     <MglVectorLayer
       v-for="layer in layers"
@@ -41,12 +38,11 @@ import * as config from '../config.json';
 import { readContributionFromStorage, pushContribution } from '../lib/recent_contributions';
 import { rawColorForStatus } from '../lib/place';
 import {
-  MglGeolocateControl,
   MglMap,
   MglMarker,
-  MglNavigationControl,
   MglVectorLayer,
 } from 'vue-mapbox/dist/vue-mapbox.umd';
+import { GeolocateControl, NavigationControl } from 'mapbox-gl';
 import isMobile from './mixins/is_mobile';
 
 const source = "public.poi_osm_light";
@@ -180,10 +176,8 @@ function getLayers(theme) {
 
 export default {
   components: {
-    MglGeolocateControl,
     MglMap,
     MglMarker,
-    MglNavigationControl,
     MglVectorLayer,
   },
 
@@ -294,6 +288,13 @@ export default {
   methods: {
     load({ map }) {
       this.map = map;
+
+      // Controls
+      this.navcontrol = new NavigationControl({ showCompass: false });
+      this.geoloccontrol = new GeolocateControl({ positionOptions: { enableHighAccuracy: true } });
+      this.map.addControl(this.navcontrol, 'top-right');
+      this.map.addControl(this.geoloccontrol, 'top-right');
+
       this.$emit('loaded');
       this.updateMapBounds(map.getBounds());
     },
@@ -326,6 +327,19 @@ export default {
 
     mouseleave(e) {
       e.map.getCanvas().style.cursor = '';
+    },
+
+    maprotated(e) {
+      const showCompass = this.map.getBearing() !== 0;
+      if(!this.navcontrol || this.navcontrol.options.showCompass !== showCompass) {
+        if(this.navcontrol) {
+          this.map.removeControl(this.navcontrol);
+          this.map.removeControl(this.geoloccontrol);
+        }
+        this.navcontrol = new NavigationControl({ showCompass: showCompass });
+        this.map.addControl(this.navcontrol, 'top-right');
+        this.map.addControl(this.geoloccontrol, 'top-right');
+      }
     },
 
     clickPoi(e) {
