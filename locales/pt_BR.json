@@ -162,11 +162,11 @@
       "start": "Abre às",
       "end": "Fecha às"
     },
-    "add_interval": "Adicionar horas",
+    "add_interval": "Adicionar horário de funcionamento",
     "add_new_days": "Adicionar dias de funcionamento"
   },
   "osm_link": {
-    "title": "\"{brand}\" utilizaa dados do OpenStreetMap.",
+    "title": "\"{brand}\" utiliza dados do OpenStreetMap.",
     "view": "Visualizar",
     "edit": "Editar"
   },
