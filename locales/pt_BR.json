@@ -57,7 +57,7 @@
   "contribute_form": {
     "title": "Contribuir",
     "step1": {
-      "title": "Este lugar permanece aberto durante o confinamento?",
+      "title": "Este lugar está aberto durante o confinamento?",
       "open": {
         "yes": "sim",
         "no": "não"
@@ -210,7 +210,7 @@
     "marketplace": "Mercado",
     "bakery": "Padaria",
     "eat": "Restaurante e retirada",
-    "vending_machine": "Maquinas de venda automática",
+    "vending_machine": "Máquinas de venda automática",
     "restaurant": "Restaurante",
     "fast_food": "Fast-food",
     "ice_cream": "Sorveteria",
