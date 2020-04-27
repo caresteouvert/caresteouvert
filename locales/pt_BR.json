@@ -107,8 +107,8 @@
     "opening_hours": {
       "state_until_date": "{state} até {date}",
       "state": {
-        "open": "aberto(a)",
-        "closed": "fechado(a)"
+        "open": "aberto",
+        "closed": "fechado"
       },
       "tomorrow": "amanhã"
     },
