@@ -307,7 +307,8 @@ export default {
           }
           this.place = place;
           this.$store.commit('setPlace', place);
-        }).catch(() => {
+        })
+        .catch(() => {
           this.$nuxt.context.redirect(`/${this.$route.params.featuresAndLocation || ''}`);
         })
       ];
@@ -325,6 +326,7 @@ export default {
               this.lastUpdate = new Date(match[1]);
             }
           })
+          .catch(() => {})
         );
       }
 
