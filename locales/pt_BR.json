@@ -8,7 +8,7 @@
   "search": "Buscar...",
   "coordinates": "Coordenadas",
   "menu": "Menu",
-  "missing_shop": "Informar sobre lojas faltantes",
+  "missing_shop": "Faltando lojas?",
   "change_lang": "Alterar idioma",
   "zoomtosee": "Aumente o zoom para exibir os lugares abertos",
   "filter_noresults": "Nenhum resultado encontrado. Tente diminuir o zoom.",
@@ -23,8 +23,8 @@
   "learnmore": {
     "about": "Sobre",
     "contribute": "Contribua",
-    "missing_shop": "Informar sobre lojas faltantes",
-    "description": "\"{brand}\" é uma ferramenta essencial para evitar movimentações desnecessárias perto de sua casa durante o confinamento, reduzindo assim o risco de contágio.\nEste mapa colaborativo permite, de maneira simples, que você compartilhe lugares abertos e fechados no seu bairro. É uma maneira eficaz e unida de informar os seus vizinhos e habitantes da sua cidade.",
+    "missing_shop": "Faltando lojas?",
+    "description": "\"{brand}\" é uma ferramenta essencial para evitar movimentações desnecessárias perto de sua casa durante o confinamento, reduzindo assim o risco de contágio.\nEste mapa colaborativo permite, de maneira simples, que você compartilhe lugares abertos e fechados no seu bairro. É uma maneira eficaz e solidária de informar os vizinhos e habitantes da sua cidade.",
     "title": "Saiba mais",
     "press": "Imprensa",
     "disclaimer": "Avisos legais",
@@ -57,7 +57,7 @@
   "contribute_form": {
     "title": "Contribuir",
     "step1": {
-      "title": "Este lugar permanece aberto durante o confinamento?",
+      "title": "Este lugar está aberto durante o confinamento?",
       "open": {
         "yes": "sim",
         "no": "não"
@@ -116,7 +116,7 @@
       "open": "Lugar aberto durante o confinamento",
       "open_adapted": "Lugar aberto durante o confinamento, com horário de funcionamento adaptado",
       "partial": "Este estabelecimento pertence a uma franquia na qual as filias estão parcialmente abertas durante o confinamento. Avise-nos se estiver aberto ou fechado.",
-      "unknown": "O estabelecimento pode ser autorizado a funcionar durante o confinamento. Avise-nos se estiver aberto ou fechado.",
+      "unknown": "Este estabelecimento pode ser autorizado a funcionar durante o confinamento. Avise-nos se estiver aberto ou fechado.",
       "closed": "Lugar fechado durante o confinamento"
     },
     "state_short": {
@@ -162,11 +162,11 @@
       "start": "Abre às",
       "end": "Fecha às"
     },
-    "add_interval": "Adicionar horas",
+    "add_interval": "Adicionar horário de funcionamento",
     "add_new_days": "Adicionar dias de funcionamento"
   },
   "osm_link": {
-    "title": "\"{brand}\" utilizaa dados do OpenStreetMap.",
+    "title": "\"{brand}\" utiliza dados do OpenStreetMap.",
     "view": "Visualizar",
     "edit": "Editar"
   },
@@ -178,7 +178,7 @@
     "post_office": "Serviços postais",
     "childcare": "Creche",
     "employment_agency": "Agência de empregos",
-    "funeral_directors": "Serviço funerário",
+    "funeral_directors": "Serviços funerários",
     "bank": "Banco",
     "moneylender": "Empréstimos",
     "insurance": "Seguradora",
@@ -210,7 +210,7 @@
     "marketplace": "Mercado",
     "bakery": "Padaria",
     "eat": "Restaurante e retirada",
-    "vending_machine": "Maquinas de venda automática",
+    "vending_machine": "Máquinas de venda automática",
     "restaurant": "Restaurante",
     "fast_food": "Fast-food",
     "ice_cream": "Sorveteria",
@@ -224,7 +224,7 @@
     "hardware": "Ferramentas",
     "mobile_phone": "Telefonia",
     "computer": "Computadores",
-    "electronics": "Eletrônica",
+    "electronics": "Eletrônicos",
     "laundry": "Lavanderia",
     "stationery": "Papelaria",
     "newsagent": "Banca",
