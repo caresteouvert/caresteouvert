@@ -11,9 +11,14 @@
   "missing_shop": "不明な店舗をレポート",
   "change_lang": "言語切替",
   "zoomtosee": "ズームインして開店中の場所を表示",
+  "filter_noresults": "データが見つかりません。ズームアウトしてみてください。",
   "toggle_color": {
     "blind": "カラーバリアフリーモードを有効化",
     "normal": "カラーバリアフリーモードを無効化"
+  },
+  "services": {
+    "delivery": "配達",
+    "takeaway": "持ち帰り"
   },
   "learnmore": {
     "about": "説明",
@@ -74,7 +79,7 @@
       },
       "delivery": "この場所では配達があります",
       "takeaway": "この場所では持ち帰りができます",
-      "access": "お客はこの場所の中に入ったり滞在できます",
+      "access": "この施設は現地に物理的な受付場所があります",
       "drive_through": "この場所にはドライブスルーのサービスがあります",
       "details": "オプション : 封鎖の間に必要な詳細を追加します",
       "details_error": "空にするか、最低10文字以上入力します"
@@ -86,10 +91,11 @@
     "signal_warning": "レポートを書きかけですが保存されません。このまま続けますか？",
     "signal": "変更をレポート",
     "signal_done": "レポートは登録されました。ありがとうございます！少し経ってから表示されるでしょう。",
+    "signal_done_gofurther": "この施設について情報提供します",
     "containment_opening_hours": "封鎖期間外の通常営業時間",
     "containment_brand_hours": "営業時間をよく見てください",
     "facebook": "Facebookページ",
-    "not_accessible": "お客が入れない屋内スペース",
+    "not_accessible": "現地に物理的な受付場所はありません",
     "capacity": "定員 : 0 人 | 定員 : 1 人 | 定員 : {count} 人",
     "last_update": {
       "date": "最終更新: {date}",
@@ -109,6 +115,13 @@
       "partial": "この場所は封鎖中に一部開店している場所と同じブランドの場所です。開店しているか、閉店しているかを教えてください。",
       "unknown": "この場所は封鎖期間中に営業を許可されているかもしれません。開店しているか、閉店しているかを教えて下さい。",
       "closed": "封鎖中に閉店している場所"
+    },
+    "state_short": {
+      "open": "封鎖中に開店",
+      "open_adapted": "封鎖中に開店",
+      "partial": "開店の可能性あり",
+      "unknown": "開店の可能性あり",
+      "closed": "封鎖中に閉店"
     },
     "delivery": {
       "yes": "配達サービスが利用可",
@@ -168,6 +181,7 @@
     "insurance": "保険",
     "tourism_info": "観光案内所",
     "hotel": "宿泊",
+    "recycling_centre": "リサイクルセンター",
     "health": "健康",
     "pharmacy": "薬局",
     "covid19_centre": "Covid-19 相談センター",
