@@ -92,11 +92,14 @@
     "signal": "Signaler un changement",
     "signal_done": "Votre signalement a été enregistré, merci ! Il apparaitra dans un moment sur la carte.",
     "signal_done_gofurther": "Je souhaite donner plus d'infos sur ce lieu",
-    "containment_opening_hours": "Horaires d'ouverture hors-confinement",
-    "containment_brand_hours": "Consulter les horaires",
+    "lockdown_opening_hours": "Horaires d'ouverture",
+    "normal_opening_hours": "Horaires d'ouverture hors-confinement",
+    "lockdown_brand_hours": "Consulter les horaires",
     "facebook": "Page Facebook",
     "not_accessible": "Pas d'accueil physique sur place",
     "capacity": "Capacité maximale : 0 personnes | Capacité maximale : 1 personne | Capacité maximale : {count} personnes",
+    "services": "Services",
+    "contact": "Contact",
     "last_update": {
       "date": "Dernière modification : {date}",
       "recent": "Modifié il y a quelques minutes, les infos ci-dessous ont pu changer"

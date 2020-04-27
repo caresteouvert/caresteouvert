@@ -14,21 +14,27 @@ export default {
     },
 
     contact() {
+      const phone = (p) => { return { text: p, href: `tel:${p}` }; };
       const transform = {
+        phone,
+        mobile: phone,
+        email(email) {
+          return { text: email, href: `mailto:${email}` };
+        },
         facebook(url) {
-          if (!url) return url;
-          return url.startsWith('http') ? url : `https://facebook.com/${url}`;
+          const href = url.startsWith('http') ? url : `https://facebook.com/${url}`;
+          return { text: href, href };
         },
         website(url) {
-          if(!url) return url;
-          return url.startsWith('http') ? url : `http://${url}`;
+          const href = url.startsWith('http') ? url : `http://${url}`;
+          return { text: href, href };
         }
       };
       const tags = this.place.properties.tags;
       return (name) => {
         const value = tags[name] || tags[`contact:${name}`];
-        const transformFunc = transform[name] || (v => v);
-        return transformFunc(value);
+        if (!value) return;
+        return value.split(';').map(transform[name] || (v => { return { text: v, href: v }; }));
       };
     },
 

@@ -25,7 +25,7 @@
       <v-list-item-subtitle v-if="title && displayType">{{ type }}</v-list-item-subtitle>
       <v-list-item-subtitle
         v-if="!$vuetify.breakpoint.smAndDown && (contact('phone') || contact('mobile'))"
-        v-text="(contact('phone') || contact('mobile')).split(';')[0]"
+        v-text="(contact('phone') || contact('mobile'))[0].text"
       />
       <dense-opening-hours
         v-if="place.properties.opening_hours && place.properties.opening_hours !== 'open'"
@@ -38,7 +38,7 @@
       class="my-1"
     >
       <v-btn
-        :href="`tel:${(contact('phone') || contact('mobile')).split(';')[0]}`"
+        :href="(contact('phone') || contact('mobile'))[0].href"
         icon
         @click.stop
       >

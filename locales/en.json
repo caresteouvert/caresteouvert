@@ -92,11 +92,14 @@
     "signal": "Report a change",
     "signal_done": "Your report has been registered, thank you! It'll appear in a while.",
     "signal_done_gofurther": "I want to give more details about this place",
-    "containment_opening_hours": "Opening hours outside the lockdown period",
-    "containment_brand_hours": "Look at the opening hours",
+    "lockdown_opening_hours": "Opening hours",
+    "normal_opening_hours": "Opening hours outside the lockdown period",
+    "lockdown_brand_hours": "Look at the opening hours",
     "facebook": "Facebook page",
     "not_accessible": "No physical reception on site",
     "capacity": "Maximal capacity : 0 persons | Maximal capacity : 1 person | Maximal capacity : {count} persons",
+    "services": "Services",
+    "contact": "Contact",
     "last_update": {
       "date": "Last update: {date}",
       "recent": "Updated a few minutes ago, information below may have changed"
