@@ -92,6 +92,11 @@
           "name": "Hosting",
           "osm_tags": [ { "tourism": "hotel|motel|hostel" } ],
           "areas": [ "FR", "AT", "DE", "CH" ]
+        },
+        "recycling_centre": {
+          "name": "Recycling centre",
+          "osm_tags": [ { "amenity": "recycling", "recycling_type": "centre" } ],
+          "areas": [ "FR" ]
         }
       }
     },
