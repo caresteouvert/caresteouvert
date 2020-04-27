@@ -91,11 +91,7 @@
         "hotel": {
           "name": "Hosting",
           "osm_tags": [ { "tourism": "hotel|motel|hostel" } ],
-          "osm_filter_tags": [
-            { "opening_hours:covid19": "*" }
-          ],
-          "areas": "all",
-          "-mapfilter": "all"
+          "areas": [ "FR", "AT", "DE", "CH" ]
         }
       }
     },
