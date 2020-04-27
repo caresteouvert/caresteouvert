@@ -29,4 +29,11 @@ describe('OSMLink', () => {
     expect(link.vm.osmLink).toEqual('https://www.openstreetmap.org/node/1234');
     expect(link.vm.idLink).toEqual('https://www.openstreetmap.org/edit?editor=id&node=1234');
   });
+
+  it('refresh the links when the id change', () => {
+    const link = createWrapper({ id: 'n1234' });
+    link.setProps({ id: 'w98765' });
+    expect(link.vm.osmLink).toEqual('https://www.openstreetmap.org/way/98765');
+    expect(link.vm.idLink).toEqual('https://www.openstreetmap.org/edit?editor=id&way=98765');
+  });
 });

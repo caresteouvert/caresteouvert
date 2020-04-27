@@ -39,13 +39,18 @@ export default {
     }
   },
 
-  data() {
-    const { type, id } = parseId(this.id);
+  computed: {
+    parsed() {
+      return parseId(this.id);
+    },
 
-    return {
-      osmLink: `https://www.openstreetmap.org/${type}/${id}`,
-      idLink: `https://www.openstreetmap.org/edit?editor=id&${type}=${id}`,
-    };
+    osmLink() {
+      return `https://www.openstreetmap.org/${this.parsed.type}/${this.parsed.id}`;
+    },
+
+    idLink() {
+      return `https://www.openstreetmap.org/edit?editor=id&${this.parsed.type}=${this.parsed.id}`;
+    }
   }
 };
 </script>
