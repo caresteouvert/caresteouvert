@@ -11,9 +11,14 @@
   "missing_shop": "Informar dunha tenda que falla",
   "change_lang": "Mudar lingua",
   "zoomtosee": " Achegar para amosar os lugares abertos",
+  "filter_noresults": "Non se atoparon resultados. Tenta afastarte.",
   "toggle_color": {
     "blind": "Activar modo daltónico",
     "normal": "Desactivar modo daltónico"
+  },
+  "services": {
+    "delivery": "Entrega",
+    "takeaway": "Para levar"
   },
   "learnmore": {
     "about": "Sobre",
@@ -74,7 +79,7 @@
       },
       "delivery": "Este lugar ofrece entregas",
       "takeaway": "Este lugar permite mercar para levar",
-      "access": "O público pode entrar ou ficar dentro deste lugar",
+      "access": "Este lugar ofrece recepción física no lugar",
       "drive_through": "Este lugar dispón de recollida con coche",
       "details": "Engadir os detalles necesarios durante o confinamento",
       "details_error": "Ten que estar baleiro ou ter polo menos 10 caracteres de lonxitude"
@@ -89,7 +94,7 @@
     "containment_opening_hours": "Horario de apertura fóra do período de confinamento",
     "containment_brand_hours": "Horario de apertura na páxina web da marca",
     "facebook": "Páxina do Facebook",
-    "not_accessible": "Espazo interior non accesíbel ó público",
+    "not_accessible": "Non hai recepción física no lugar",
     "capacity": "Capacidade máxima: 0 persoas | Capacidade máxima: 1 persoa | Capacidade máxima: {count} persoas",
     "last_update": {
       "date": "Última actualización: {date}",
@@ -109,6 +114,13 @@
       "partial": "Lugar potencialment aberto durante o confinamento (ten que comprobarse)",
       "unknown": "Permitida a apertura do lugar durante o confinamento. Aberto ou pechado? Infórmanos",
       "closed": "Lugar pechado durante o confinamento"
+    },
+    "state_short": {
+      "open": "Aberto durante o confinamento",
+      "open_adapted": "Aberto durante o confinamento",
+      "partial": "Potencialmente aberto",
+      "unknown": "Potencialmente aberto",
+      "closed": "Pechado durante o confinamento"
     },
     "delivery": {
       "yes": "Venda a domicilio dispoñíbel",
@@ -168,6 +180,7 @@
     "insurance": "Aseguradora",
     "tourism_info": "Información turística",
     "hotel": "Aloxamento",
+    "recycling_centre": "Centro de reciclaxe",
     "health": "Saúde",
     "pharmacy": "Farmacias",
     "covid19_centre": "Centro de consulta sobre o Covid-19",
