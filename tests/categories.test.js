@@ -81,6 +81,9 @@ describe('availableSubFilters', () => {
 
     result = availableSubFilters(categories, 'police/police3');
     expect(result).toEqual(['takeaway']);
+
+    result = availableSubFilters(categories, 'police/doesnotexist');
+    expect(result).toEqual([]);
   });
 
   it('when a category doesnt exists', () => {
