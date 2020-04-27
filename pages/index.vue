@@ -24,6 +24,7 @@ export default {
         { hid: 'ogtitle', property: 'og:title', content: this.$t('title') },
         { hid: 'ogdescription', property: 'og:description', content: description },
         { hid: 'ogimage', property: 'og:image', content: `${this.$rootUrl}${this.logoOg.substring(1)}` },
+        { hid: 'canonical', rel: 'canonical', href: `${this.$rootUrl}` }
       ]
     }
   }
