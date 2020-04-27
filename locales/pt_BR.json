@@ -166,12 +166,12 @@
     "add_new_days": "Adicionar dias de funcionamento"
   },
   "osm_link": {
-    "title": "{brand} usa dados do OpenStreetMap.",
+    "title": "\"{brand}\" utilizaa dados do OpenStreetMap.",
     "view": "Visualizar",
     "edit": "Editar"
   },
   "categories": {
-    "other": "Outros lugares",
+    "other": "Outros",
     "amenity": "Serviços",
     "police": "Polícia",
     "townhall": "Prefeitura",
