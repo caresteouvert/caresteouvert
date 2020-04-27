@@ -1,6 +1,6 @@
 {
   "lang": "Deutsch",
-  "loading": "Wird geladen, bitte warten…",
+  "loading": "Karte wird geladen, bitte warten…",
   "covid19-alert": "Bitte folge den Anweisungen der zuständigen Behörden.",
   "title": "Bleibt offen",
   "subtitle": "Alle Geschäfte, die weiterhin geöffnet sind.",
@@ -13,12 +13,12 @@
   "zoomtosee": "Vergrößere die Karte, um offene Geschäfte zu sehen",
   "filter_noresults": "Keine Ergebnisse in diesem Kartenbereich.",
   "toggle_color": {
-    "blind": "Anzeige für Rot-Grün-Sehschwäche aktivieren",
-    "normal": "Anzeige für Rot-Grün-Sehschwäche deaktivieren"
+    "blind": "Modus für Rot-Grün-Sehschwäche aktivieren",
+    "normal": "Modus für Rot-Grün-Sehschwäche deaktivieren"
   },
   "services": {
     "delivery": "Lieferung",
-    "takeaway": "Außer-Haus-Verkauf"
+    "takeaway": "Abholung"
   },
   "learnmore": {
     "about": "Über",
@@ -33,7 +33,7 @@
     "osm_contributors": "Dokumentation für OSM-Mitwirkende"
   },
   "rgpd": {
-    "consent": "Akzeptierst du Cookies auf deinem Computer für unsere Statistiken?",
+    "consent": "Akzeptierst du Cookies für unsere Statistiken?",
     "yes": "Ja",
     "no": "Nein"
   },
@@ -81,16 +81,16 @@
       "takeaway": "Abholung möglich?",
       "access": "Kann dieser Ort betreten werden?",
       "drive_through": "Drive-in vorhanden und geöffnet?",
-      "details": "Wichtige Anmerkungen (optional, erfordert eine manuelle Prüfung durch die OpenStreetMap-Community)",
+      "details": "Wichtige Anmerkungen (optional, erzeugt einen OSM-Hinweis und erfordert eine manuelle Bearbeitung durch die OpenStreetMap-Community)",
       "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein"
     },
-    "submit": "Veröffentlichen",
+    "submit": "Meldung abschicken",
     "cancel": "Abbrechen"
   },
   "details": {
     "signal_warning": "Du warst gerade dabei, eine Änderung zu melden. Möchtest du deine Eingaben verwerfen?",
     "signal": "Änderung melden",
-    "signal_done": "Vielen Dank, deine Änderungsmeldung wurde erfasst!\n\nBitte beachte, dass Meldungen mit Kommentar manuell von der OpenStreetMap-Community geprüft werden. Kommentarlose Änderungen erscheinen automatisch nach einer Stunde in der Karte.",
+    "signal_done": "Vielen Dank, deine Änderungsmeldung wurde erfasst!\n\nBitte beachte, dass Meldungen mit Kommentar manuell von der OpenStreetMap-Community bearbeitet werden müssen. Kommentarlose Änderungen erscheinen automatisch nach etwa einer Stunde auf der Karte.",
     "containment_opening_hours": "Reguläre Öffnungszeiten",
     "containment_brand_hours": "Öffnungszeiten anzeigen",
     "facebook": "Facebook-Seite",
@@ -98,7 +98,7 @@
     "capacity": "Maximale Kapazität: 0 Personen | Maximale Kapazität: 1 Person | Maximale Kapazität: {count} Personen",
     "last_update": {
       "date": "Letzte Änderung: {date}",
-      "recent": "Vor wenigen Minuten aktualisiert, Daten können sich geändert haben"
+      "recent": "Vor wenigen Minuten aktualisiert, angezeigte Daten können sich geändert haben"
     },
     "opening_hours": {
       "state_until_date": "{state} bis {date}",
@@ -239,7 +239,7 @@
   },
   "external": {
     "mobile": {
-      "places_around": "Finde weiterhin geöffnete Geschäfte",
+      "places_around": "Finde Geschäfte, die weiterhin geöffnet sind.",
       "contribute": "Verbessere die Karte mit deinem Wissen",
       "organize": "Bessere Mobilität, um die Ansteckungsgefahr zu verringern"
     }
