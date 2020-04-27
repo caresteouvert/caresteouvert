@@ -38,6 +38,7 @@
           <v-col
             v-for="locale in locales"
             :key="locale"
+            cols="6"
           >
             <v-btn
               outlined
@@ -45,7 +46,10 @@
               @click="changeLang(locale)"
             >{{ $t('lang', locale) }}</v-btn>
           </v-col>
-          <v-col v-if="locales.length === 1" />
+          <v-col
+            v-if="locales.length === 1"
+            cols="6"
+          />
         </v-row>
       </v-card-text>
     </v-card>
