@@ -18,6 +18,10 @@ export default {
         facebook(url) {
           if (!url) return url;
           return url.startsWith('http') ? url : `https://facebook.com/${url}`;
+        },
+        website(url) {
+          if(!url) return url;
+          return url.startsWith('http') ? url : `http://${url}`;
         }
       };
       const tags = this.place.properties.tags;
