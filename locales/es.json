@@ -11,9 +11,14 @@
   "missing_shop": "Avisar de un sitio por editar",
   "change_lang": "Cambiar el idioma",
   "zoomtosee": " Acercar para mostrar sitios abiertos",
+  "filter_noresults": "No se han encontrado resultados. Intentelo alejando el mapa",
   "toggle_color": {
     "blind": "Activar modo daltónico",
     "normal": "Desactivar modo daltónico"
+  },
+  "services": {
+    "delivery": "Reparto",
+    "takeaway": "Para llevar"
   },
   "learnmore": {
     "about": "Acerca de",
@@ -74,7 +79,7 @@
       },
       "delivery": "Este sitio ofrece reparto",
       "takeaway": "Este sitio permite comprar para llevar",
-      "access": "El público puede entrar o permanecer dentro de este lugar",
+      "access": "Este sitio ofrece recepción física",
       "drive_through": "Este sitio dispone de servicio al coche",
       "details": "Agregar detalles necesarios durante el Estado de Alarma",
       "details_error": "Debe estar vacío o tener al menos 10 caracteres de longitud."
@@ -86,10 +91,11 @@
     "signal_warning": "Estabas escribiendo un informe. No se guardará. ¿Quieres continuar?",
     "signal": "Avisar de un cambio",
     "signal_done": "Su informe ha sido registrado. ¡Gracias! Tenga paciencia, puede llevar un tiempo procesarlo.",
+    "signal_done_gofurther": "Quiero dar más detalles sobre este sitio",
     "containment_opening_hours": "Horario de apertura en periodo normal",
     "containment_brand_hours": "Horas de apertura en la página web de la marca",
     "facebook": "Página de Facebook",
-    "not_accessible": "Espacio interior no accesible al público",
+    "not_accessible": "No hay recepción física",
     "capacity": "Capacidad máxima: 0 personas | Capacidad máxima: 1 persona | Capacidad máxima: {count} personas",
     "last_update": {
       "date": "Última actualización: {date}",
@@ -109,6 +115,13 @@
       "partial": "Sitio potencialmente abierto durante el Estado de Alarma (por verificar)",
       "unknown": "Sitio con permiso para abrir durante el Estado de Alarma. ¿Abierto o cerrado? Haznos saber",
       "closed": "Sitio cerrado durante el Estado de Alarma"
+    },
+    "state_short": {
+      "open": "Abierto durante el Estado de Alarma",
+      "open_adapted": "Abierto durante el Estado de Alarma",
+      "partial": "Potencialmente abierto",
+      "unknown": "Potencialmente abierto",
+      "closed": "Cerrado durante el Estado de Alarma"
     },
     "delivery": {
       "yes": "Servicio de reparto disponible",
@@ -168,6 +181,7 @@
     "insurance": "Aseguradoras",
     "tourism_info": "Información turística",
     "hotel": "Alojamiento",
+    "recycling_centre": "Punto limpio",
     "health": "Salud",
     "pharmacy": "Farmacias",
     "covid19_centre": "Centro de consultas sobre Covid-19",
