@@ -79,7 +79,7 @@
       },
       "delivery": "Este lugar oferece entregas",
       "takeaway": "Este lugar permite retiradas",
-      "access": "Este lugar possui atendimento na loja",
+      "access": "Este lugar possui atendimento presencial",
       "drive_through": "Este lugar possui um serviço de drive-thru",
       "details": "Adicionar os detalhes necessários durante o confinamento",
       "details_error": "Deve estar vazio ou possuir ao menos 10 caracteres"
