@@ -8,12 +8,13 @@
   >
     <v-slide-x-reverse-transition>
       <v-card
-        v-if="place"
+        :loading="!place"
         tile
         min-height="100%"
         class="d-flex flex-column"
       >
         <v-toolbar
+          v-if="place"
           tile
           dark
           class="flex-grow-0"
@@ -39,112 +40,115 @@
           </v-btn>
         </v-toolbar>
 
-        <detail-state
-          ref="state"
-          :place="place"
-          :status="status"
-          :last-update="lastUpdate"
-        />
-
-        <v-alert
-          v-if="infos"
-          :icon="false"
-          type="info"
-          tile
-          class="mb-0"
-        >
-          <p
-            v-html="infos"
-            v-linkified:options="{ className: 'alert-link', attributes: { rel: 'noopener' } }"
-            class="mb-0 overflowwrap-anywhere"
-          />
-        </v-alert>
-
-        <v-list>
-          <detail-link
-            v-if="hasVending"
-            :title="$t(`details.vending.${place.properties.tags.vending}`)"
-            icon="osm-vending_machine"
-          />
-          <template v-if="contact('phone')">
-            <detail-link
-              v-for="phone in contact('phone').split(';')"
-              :key="phone"
-              :href="`tel:${phone}`"
-              :title="phone"
-              icon="osm-phone"
-            />
-          </template>
-          <template v-if="contact('mobile')">
-            <detail-link
-              v-for="mobile in contact('mobile').split(';')"
-              :key="mobile"
-              :href="`tel:${mobile}`"
-              :title="mobile"
-              icon="osm-mobile_phone"
-            />
-          </template>
-          <detail-link
-            v-if="contact('fax')"
-            :title="contact('fax')"
-            icon="osm-fax"
+        <div v-if="place">
+          <detail-state
+            ref="state"
+            :place="place"
+            :status="status"
+            :last-update="lastUpdate"
           />
 
-          <detail-link
-            v-if="contact('email')"
-            :href="`mailto:${contact('email')}`"
-            :title="contact('email')"
-            icon="osm-mail"
-          />
-
-          <detail-opening-hours
-            v-if="place.properties.opening_hours && place.properties.opening_hours !== 'open'"
-            :value="place.properties.opening_hours"
-          />
-          <detail-link
-            v-else-if="place.properties.brand_hours"
-            :href="place.properties.brand_hours"
-            :title="$t('details.containment_brand_hours')"
-            external
-            icon="osm-chevron_right"
-          />
-          <template
-            v-else-if="place.properties.tags.opening_hours"
+          <v-alert
+            v-if="infos"
+            :icon="false"
+            type="info"
+            tile
+            class="mb-0"
           >
-            <v-alert
-              dense
-              tile
-              :icon="false"
-              border="left"
-              colored-border
-              type="warning"
-              class="mb-0 pa-0"
-            >
-              <div class="ml-3">{{ $t('details.containment_opening_hours') }}</div>
-              <detail-opening-hours
-                v-if="place.properties.tags.opening_hours"
-                :value="place.properties.tags.opening_hours"
+            <p
+              v-html="infos"
+              v-linkified:options="{ className: 'alert-link', attributes: { rel: 'noopener' } }"
+              class="mb-0 overflowwrap-anywhere"
+            />
+          </v-alert>
+
+          <v-list>
+            <detail-link
+              v-if="hasVending"
+              :title="$t(`details.vending.${place.properties.tags.vending}`)"
+              icon="osm-vending_machine"
+            />
+            <template v-if="contact('phone')">
+              <detail-link
+                v-for="phone in contact('phone').split(';')"
+                :key="phone"
+                :href="`tel:${phone}`"
+                :title="phone"
+                icon="osm-phone"
               />
-            </v-alert>
-          </template>
+            </template>
+            <template v-if="contact('mobile')">
+              <detail-link
+                v-for="mobile in contact('mobile').split(';')"
+                :key="mobile"
+                :href="`tel:${mobile}`"
+                :title="mobile"
+                icon="osm-mobile_phone"
+              />
+            </template>
+            <detail-link
+              v-if="contact('fax')"
+              :title="contact('fax')"
+              icon="osm-fax"
+            />
 
-          <detail-link
-            v-if="contact('facebook')"
-            :href="contact('facebook')"
-            :title="contact('facebook')"
-            external
-            icon="osm-fcbk"
-          />
+            <detail-link
+              v-if="contact('email')"
+              :href="`mailto:${contact('email')}`"
+              :title="contact('email')"
+              icon="osm-mail"
+            />
 
-          <detail-link
-            v-if="contact('website')"
-            :href="contact('website')"
-            :title="contact('website')"
-            external
-            icon="osm-link"
-          />
+            <detail-opening-hours
+              v-if="place.properties.opening_hours && place.properties.opening_hours !== 'open'"
+              :value="place.properties.opening_hours"
+            />
+            <detail-link
+              v-else-if="place.properties.brand_hours"
+              :href="place.properties.brand_hours"
+              :title="$t('details.containment_brand_hours')"
+              external
+              icon="osm-chevron_right"
+            />
+            <template
+              v-else-if="place.properties.tags.opening_hours"
+            >
+              <v-alert
+                dense
+                tile
+                :icon="false"
+                border="left"
+                colored-border
+                type="warning"
+                class="mb-0 pa-0"
+              >
+                <div class="ml-3">{{ $t('details.containment_opening_hours') }}</div>
+                <detail-opening-hours
+                  v-if="place.properties.tags.opening_hours"
+                  :value="place.properties.tags.opening_hours"
+                />
+              </v-alert>
+            </template>
 
-        </v-list>
+            <detail-link
+              v-if="contact('facebook')"
+              :href="contact('facebook')"
+              :title="contact('facebook')"
+              external
+              icon="osm-fcbk"
+            />
+
+            <detail-link
+              v-if="contact('website')"
+              :href="contact('website')"
+              :title="contact('website')"
+              external
+              icon="osm-link"
+            />
+
+          </v-list>
+        </div>
+
         <v-spacer></v-spacer>
         <v-footer tile>
           <osm-link :id="id" />
