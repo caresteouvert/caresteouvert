@@ -11,9 +11,14 @@
   "missing_shop": "Falta den denda baten berri eman",
   "change_lang": "Hizkuntza aldatu",
   "zoomtosee": "Gerturatu irekita dauden lekuak ikusteko",
+  "filter_noresults": "Ez da emaitzarik aurkitu. Saiatu zoom egiten.",
   "toggle_color": {
     "blind": "Daltonikoentzar modua",
     "normal": "Daltonikoentzat modua kendu"
+  },
+  "services": {
+    "delivery": "Banaketa",
+    "takeaway": "Eramateko"
   },
   "learnmore": {
     "about": "Honi buruz",
@@ -74,7 +79,7 @@
       },
       "delivery": "Leku honek bidalketa eskaintzen du",
       "takeaway": "Leku honek eramateko erosketa eskaintzen du",
-      "access": "Publikoa leku honetan sartu edo barruan geratu daiteke",
+      "access": "Leku honek rezepzioa du bertan",
       "drive_through": "Leku honek autotik jasotzeko zerbitzua du",
       "details": "Aukerazkoa: Itxialdiran beharrezkoak diren xehetasunak gehitu",
       "details_error": "Hutsa edo gutxienez 10 karaktere"
@@ -89,7 +94,7 @@
     "containment_opening_hours": "Itxialdi garai kanpoko egutegia",
     "containment_brand_hours": "Irekiera orduak begiratu",
     "facebook": "Facebook orria",
-    "not_accessible": "Barrukaldea publikoari itxita dago",
+    "not_accessible": "Leku honek ez du rezepziorik",
     "capacity": "Edukiera maximoa: 0 pertsona | Edukiera maximoa: pertsona 1 | Edukiera maximoa: {count} pertsona",
     "last_update": {
       "date": "Azken eguneraketa: {date}",
@@ -109,6 +114,13 @@
       "partial": "Itxialdi garaian seguruaski irekita dagoen lekua (egiaztatzeko)",
       "unknown": "Leku honek itxialdi garaian irekitzeko baimena du, baina irekita al itxita al dago? Esaiguzu",
       "closed": "Itxialdi garaian itxita dagoen lekua"
+    },
+    "state_short": {
+      "open": "Itxialdi garaian irekita",
+      "open_adapted": "Itxialdi garaian irekita",
+      "partial": "Potentzialki irekita",
+      "unknown": "Potentzialki irekita",
+      "closed": "Itxialdi garaian itxita"
     },
     "delivery": {
       "yes": "Banaketa zerbitzua eskuragarri",
@@ -168,6 +180,7 @@
     "insurance": "Asegurua",
     "tourism_info": "Informazio turistikoa",
     "hotel": "Ostalaritza",
+    "recycling_centre": "Birziklapen zentroa",
     "health": "Osasuna",
     "pharmacy": "Farmazia",
     "covid19_centre": "Covid-19 buruzko kontsulta zentrua",
