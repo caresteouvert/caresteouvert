@@ -1,0 +1,252 @@
+{
+  "lang": "Português (Brasil)",
+  "loading": "Carregando. Aguarde...",
+  "covid19-alert": "Siga as orientações do governo local. A responsabilidade é SUA.",
+  "title": "Permanece aberto",
+  "subtitle": "Lugares que permanecem abertos durante o confinamento",
+  "subtitle-dense": "Lugares abertos durante o confinamento",
+  "search": "Buscar...",
+  "coordinates": "Coordenadas",
+  "menu": "Menu",
+  "missing_shop": "Informar sobre lojas faltantes",
+  "change_lang": "Alterar idioma",
+  "zoomtosee": "Aumente o zoom para mostrar os lugares abertos",
+  "filter_noresults": "Nenhum resultado encontrado. Tente diminuir o zoom.",
+  "toggle_color": {
+    "blind": "Ativar modo para daltônicos",
+    "normal": "Desativar modo para daltônicos"
+  },
+  "services": {
+    "delivery": "Entrega",
+    "takeaway": "Retirada"
+  },
+  "learnmore": {
+    "about": "Sobre",
+    "contribute": "Contribua",
+    "missing_shop": "Informar sobre lojas faltantes",
+    "description": "{brand} é uma ferramenta essencial para evitar movimentações desnecessárias perto de sua casa durante o confinamento, reduzindo assim o risco de contágio.\nEste mapa colaborativo permite, de maneira simples, que você compartilhe lugares abertos e fechados no seu bairro. É uma maneira eficaz e unida de informar os seus vizinhos e habitantes da sua cidade.",
+    "title": "Saiba mais",
+    "press": "Imprensa",
+    "disclaimer": "Avisos legais",
+    "blog": "Blog",
+    "townhalls": "Prefeituras, utilizem \"{brand}\"!",
+    "osm_contributors": "Documentação para colaboradores do OpenStreetMap"
+  },
+  "rgpd": {
+    "consent": "Deseja permitir o uso de cookies para coletarmos estatísticas sobre a ferramenta?",
+    "yes": "Sim",
+    "no": "Não"
+  },
+  "apps_info": {
+    "close": "Fechar",
+    "text": "O aplicativo móvel {brand} está disponível!",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
+  },
+  "days": {
+    "monday": "Segunda-feira",
+    "tuesday": "Terça-feira",
+    "wednesday": "Qaurta-feira",
+    "thursday": "Quinta-feira",
+    "friday": "Sexta-feira",
+    "saturday": "Sábado",
+    "sunday": "Domingo",
+    "ph": "Feriados"
+  },
+  "contribute_form": {
+    "title": "Contribua",
+    "step1": {
+      "title": "Este lugar permanece aberto durante o confinamento?",
+      "open": {
+        "yes": "sim",
+        "no": "não"
+      }
+    },
+    "step2": {
+      "title": "Horário de funcionamento durante o confinamento",
+      "same_hours": "Mesmo horário",
+      "same_hours_without_lockdown": "É o mesmo horário fora do confinamento",
+      "dont_know": "Não sei",
+      "continue": "Continuar"
+    },
+    "step3": {
+      "title": "Adicionar detalhes",
+      "3state": {
+        "unknown": "Não sei",
+        "yes": "Sim",
+        "no": "Não"
+      },
+      "delivery": "Este lugar oferece entregas",
+      "takeaway": "Este lugar permite retiradas",
+      "access": "Este lugar permite retiradas",
+      "drive_through": "Este lugar possui um serviço de drive-thru",
+      "details": "Adicionar os detalhes necessários durante o confinamento",
+      "details_error": "Deve estar vazio ou possuir ao menos 10 caracteres"
+    },
+    "submit": "Publicar",
+    "cancel": "Cancelar"
+  },
+  "details": {
+    "signal_warning": "O formulário que você estava preenchendo não será salvo. Deseja continuar?",
+    "signal": "Informar sobre alterações",
+    "signal_done": "O seu formulário foi recebido, muito obrigado! Pode demorar um pouco para processá-lo.",
+    "signal_done_gofurther": "Quero adicionar mais detalhes sobre este lugar",
+    "lockdown_opening_hours": "Horário de funcionamento",
+    "normal_opening_hours": "Horário de funcionamento fora do confinamento",
+    "lockdown_brand_hours": "Ver horário de funcionamento",
+    "facebook": "Página do Facebook",
+    "not_accessible": "Não permite retiradas",
+    "capacity": "Capacidade máxima: 0 pessoas | Capacidade máxima: 1 pessoa | Capacidade máxima: {count} pessoas",
+    "services": "Serviços",
+    "contact": "Contato",
+    "last_update": {
+      "date": "Última atualização: {date}",
+      "recent": "Atualizado há alguns minutos atrás. As informações abaixo podem ter sido alteradas."
+    },
+    "opening_hours": {
+      "state_until_date": "{state} até {date}",
+      "state": {
+        "open": "aberto(a)",
+        "closed": "fechado(a)"
+      },
+      "tomorrow": "amanhã"
+    },
+    "state": {
+      "open": "Lugar aberto durante o confinamento",
+      "open_adapted": "Lugar aberto durante o confinamento, com horário de funcionamento adaptado",
+      "partial": "Este estabelecimento pertence a uma franquia na qual as filias estão parcialmente abertas durante o confinamento. Avise-nos se estiver aberto ou fechado.",
+      "unknown": "O estabelecimento pode ser autorizado a funcionar durante o confinamento. Avise-nos se estiver aberto ou fechado.",
+      "closed": "Lugar fechado durante o confinamento"
+    },
+    "state_short": {
+      "open": "Aberto durante o confinamento",
+      "open_adapted": "Aberto durante o confinamento",
+      "partial": "Potencialmente aberto",
+      "unknown": "Potencialmente aberto",
+      "closed": "Fechado durante o confinamento"
+    },
+    "delivery": {
+      "yes": "Disponível para entrega",
+      "only": "Somente entregas"
+    },
+    "takeaway": {
+      "yes": "Disponível para retirada",
+      "modified": "Modificado para retirada",
+      "only": "Apenas retiradas"
+    },
+    "drive_through": {
+      "yes": "Drive-thru disponível",
+      "only": "Somente drive-thru"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Selos",
+      "parcel_mail_in": "Entrega de pacotes",
+      "parcel_pickup": "Retirada de pacotes",
+      "parcel_pickup;parcel_mail_in": "Entrega e retirada de pacotes",
+      "milk": "Leite",
+      "drinks": "Bebidas",
+      "water": "Água",
+      "sweets": "Doces"
+    }
+  },
+  "opening_hours_editor": {
+    "day_shortcuts": {
+      "weekdays": "Segunda a sábado"
+    },
+    "select_days": "Selecione os dias que possuem os mesmos horários de funcionamento",
+    "next": "Próximo",
+    "cancel": "Cancelar",
+    "select_time": {
+      "start": "Abre às",
+      "end": "Fecha às"
+    },
+    "add_interval": "Adicionar horas",
+    "add_new_days": "Adicionar dias de funcionamento"
+  },
+  "osm_link": {
+    "title": "{brand} usa dados do OpenStreetMap.",
+    "view": "Visualizar",
+    "edit": "Editar"
+  },
+  "categories": {
+    "other": "Outros lugares",
+    "amenity": "Serviços",
+    "police": "Polícia",
+    "townhall": "Prefeitura",
+    "post_office": "Serviços postais",
+    "childcare": "Creche",
+    "employment_agency": "Agência de empregos",
+    "funeral_directors": "Serviço funerário",
+    "bank": "Banco",
+    "moneylender": "Empréstimos",
+    "insurance": "Seguradora",
+    "tourism_info": "Informações turísticas",
+    "hotel": "Hospedagem",
+    "recycling_centre": "Reciclagem",
+    "health": "Saúde",
+    "pharmacy": "Farmácia",
+    "covid19_centre": "Centro de consultas sobre Covid-19",
+    "optician": "Oculista",
+    "hearing_aids": "Aparelhos auditivos",
+    "condoms": "Máquina de preservativos",
+    "medical_supply": "Suprimentos médicos",
+    "health_center": "Centro de saúde",
+    "food": "Alimentação",
+    "supermarket": "Supermercado",
+    "butcher": "Açougue",
+    "cheese": "Queijaria",
+    "convenience": "Loja de conveniência",
+    "seafood": "Frutos do mar",
+    "greengrocer": "Quitanda",
+    "grocery": "Mercearia",
+    "chocolate": "Chocolateria",
+    "tea": "Chá",
+    "coffee": "Cafeteria",
+    "dairy": "Laticínios",
+    "confectionery": "Confeitaria",
+    "farm": "Loja rural",
+    "marketplace": "Mercado",
+    "bakery": "Padaria",
+    "eat": "Restaurante e retirada",
+    "vending_machine": "Maquinas de venda automática",
+    "restaurant": "Restaurante",
+    "fast_food": "Fast-food",
+    "ice_cream": "Sorveteria",
+    "cafe": "Cafeteria",
+    "bar": "Bar",
+    "drugs": "Cigarro e álcool",
+    "tobacco": "Tabacaria",
+    "e_cigarette": "Cigarros eletrônicos",
+    "alcohol": "Loja de bebidas",
+    "shop": "Lojas",
+    "hardware": "Ferramentas",
+    "mobile_phone": "Telefonia",
+    "computer": "Computadores",
+    "electronics": "Eletrônica",
+    "laundry": "Lavanderia",
+    "stationery": "Papelaria",
+    "newsagent": "Banca",
+    "pet": "Pet shop",
+    "agrarian": "Produtos agrícolas",
+    "flower": "Jardinagem e floricultura",
+    "chemist": "Cosméticos e beleza",
+    "fabric": "Tecidos",
+    "books": "Livraria",
+    "mobility": "Mobilidade",
+    "fuel": "Posto de gasolina",
+    "car_rental": "Locadora de veículos",
+    "bicycle": "Loja de bicicletas",
+    "car": "Garagem",
+    "bicycle_tube": "Máquinas de câmaras de ar para bicicletas",
+    "public_transport_tickets": "Máquinas de bilhetes de transporte público"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "Encontre lugares abertos durante o confinamento",
+      "contribute": "Melhore o mapa com as suas informações",
+      "organize": "Melhor mobilidade para limitar o risco de contágio"
+    }
+  }
+}
