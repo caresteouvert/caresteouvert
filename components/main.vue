@@ -23,7 +23,10 @@
           :featuresAndLocation="featuresAndLocation"
           :map-bounds="mapBounds"
         />
-        <main-menu v-else>
+        <main-menu
+          v-else
+          :style="{ width: '300px' }"
+        >
           <filter-list v-model="filter" />
         </main-menu>
       </v-navigation-drawer>
