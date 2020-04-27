@@ -1,6 +1,6 @@
 <template>
   <div>
-    <DirectoryList
+    <directory-list
       :title="title"
       :items="communes"
       :links="links"
