@@ -63,6 +63,13 @@ export default {
       dialog: false,
       osm: `https://openstreetmap.org/${type}/${id}`
     };
+  },
+
+  watch: {
+    dialog(value) {
+      if (!value) return;
+      _paq.push(['trackEvent', 'UpdateDetailPOI', 'Open']);
+    }
   }
 };
 </script>
