@@ -15,12 +15,12 @@ function getLocale(locales, req, params) {
     matchedLocale = params.lang;
   } else if (getCookie('lang', req)) {
     matchedLocale = getCookie('lang', req);
-  } else if (domain) {
-    matchedLocale = domain.locale;
   } else if (process.client && typeof navigator !== 'undefined' && navigator.languages) {
     matchedLocale = matchBrowserLocale(locales, navigator.languages)
   } else if (req && typeof req.headers['accept-language'] !== 'undefined') {
     matchedLocale = matchBrowserLocale(locales, parseAcceptLanguage(req.headers['accept-language']))
+  } else if (domain) {
+    matchedLocale = domain.locale;
   }
   if (locales.includes(matchedLocale)) {
     return matchedLocale;
