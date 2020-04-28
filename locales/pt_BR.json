@@ -124,7 +124,7 @@
       "open_adapted": "Aberto durante o isolamento",
       "partial": "Potencialmente aberto",
       "unknown": "Potencialmente aberto",
-      "closed": "Fechado durante o confinamento"
+      "closed": "Fechado durante o isolamento"
     },
     "delivery": {
       "yes": "Disponível para entrega",
