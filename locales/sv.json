@@ -91,11 +91,15 @@
     "signal_warning": "Du höll på att skriva en rapport. Den sparades ej. Vill du fortsätta?",
     "signal": "Rapportera ändrade uppgifter",
     "signal_done": "Din rapport har registrerats. Tack så mycket! Behandlingen tar en stund.",
-    "containment_opening_hours": "Öppettider utanför undantagstillståndsperioden",
-    "containment_brand_hours": "Se öppettider på servicens hemsida",
+    "signal_done_gofurther": "Jag vill ge mer information om detta stället",
+    "lockdown_opening_hours": "Öppningstider",
+    "normal_opening_hours": "Öppettider utanför undantagstillståndsperioden",
+    "lockdown_brand_hours": "Se öppettider på servicens hemsida",
     "facebook": "Facebook sida",
     "not_accessible": "Ingen personal närvarande",
     "capacity": "Maximal kapacitet : 0 personer | Maximal kapacitet : 1 person | Maximal kapacitet : {count} personer",
+    "services": "Tjänster",
+    "contact": "Kontaktinformation",
     "last_update": {
       "date": "Senast uppdaterad: {date}",
       "recent": "Uppdaterat för några minuter sedan, uppgifterna nedan kan ha ändrats."
@@ -145,6 +149,13 @@
       "drinks": "Drycker",
       "water": "Vatten",
       "sweets": "Godis"
+    },
+    "hygiene": "Hygien",
+    "hydroalcoholic_gel": "Desinfektionsmedel",
+    "mask": "Mask",
+    "hygiene_entry": {
+      "has": "har",
+      "hasnot": "har ej"
     }
   },
   "opening_hours_editor": {
@@ -180,6 +191,7 @@
     "insurance": "Försäkring",
     "tourism_info": "Turistinformation",
     "hotel": "Logi",
+    "recycling_centre": "Återvinningscentral",
     "health": "Hälsovård",
     "pharmacy": "Apotek",
     "covid19_centre": "Coronavirus informationscenter",
@@ -228,6 +240,7 @@
     "flower": "Trädgård / blommor",
     "chemist": "Kemikalier",
     "fabric": "Textilaffär",
+    "shoes": "Skor",
     "books": "Bokhandel",
     "mobility": "Trafik",
     "fuel": "Bensinstation",
