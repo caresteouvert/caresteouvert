@@ -91,11 +91,15 @@
     "signal_warning": "Olit kirjoittamassa ilmoitusta, joka ei tallennu. Haluatko jatkaa?",
     "signal": "Ilmoita muutoksesta",
     "signal_done": "Ilmoituksesi on vastaanotettu. Kiitos! Käsittely vie oman aikansa.",
-    "containment_opening_hours": "Aukioloajat muulloin kuin poikkeusaikana",
-    "containment_brand_hours": "Katso aukioloajat palvelun verkkosivulta",
+    "signal_done_gofurther": "Haluan antaa lisätietoja tästä paikasta",
+    "lockdown_opening_hours": "Aukioloaika",
+    "normal_opening_hours": "Aukioloajat muulloin kuin poikkeusaikana",
+    "lockdown_brand_hours": "Katso aukioloajat palvelun verkkosivulta",
     "facebook": "Facebook-sivu",
     "not_accessible": "Ei henkilökuntaa paikan päällä",
     "capacity": "Maksimikapasiteetti : 0 henkilöä | Maksimikapasiteetti : 1 henkilö | Maksimikapasiteetti : {count} henkilöä",
+    "services": "Palvelut",
+    "contact": "Yhteystiedot",
     "last_update": {
       "date": "Päivitetty: {date}",
       "recent": "Päivitetty muutama minuuttia sitten. Tieto saattaa olla muuttunut."
@@ -145,6 +149,13 @@
       "drinks": "Juomia",
       "water": "Vettä",
       "sweets": "Karkkia"
+    },
+    "hygiene": "Hygienia",
+    "hydroalcoholic_gel": "Desinfiontiaine",
+    "mask": "Naamari",
+    "hygiene_entry": {
+      "has": "on",
+      "hasnot": "ei ole"
     }
   },
   "opening_hours_editor": {
@@ -180,6 +191,7 @@
     "insurance": "Vakuutus",
     "tourism_info": "Matkailuneuvonta",
     "hotel": "Majoitus",
+    "recycling_centre": "Kierrätyskeskus",
     "health": "Terveydenhoito",
     "pharmacy": "Apteekki",
     "covid19_centre": "Koronavirusneuvonta",
@@ -228,6 +240,7 @@
     "flower": "Puutarha / kukat",
     "chemist": "Kemikaalio",
     "fabric": "Kangaskauppa",
+    "shoes": "Kenkiä",
     "books": "Kirjakauppa",
     "mobility": "Liikkuminen",
     "fuel": "Polttoaineasema",
