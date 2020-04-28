@@ -154,7 +154,7 @@
     "hydroalcoholic_gel": "Desinfektionsmedel",
     "mask": "Mask",
     "hygiene_entry": {
-      "has": "har",
+      "has": "ja",
       "hasnot": "har ej"
     }
   },
