@@ -16,3 +16,5 @@ jobs:
       run: yarn install
     - name: Run tests
       run: npx jest
+    - name: Build site
+      run: yarn run build
