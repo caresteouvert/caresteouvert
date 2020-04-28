@@ -37,7 +37,14 @@ export default {
     },
 
     formDetails() {
-      return this.allCategories[this.place.properties.normalized_cat].subcategories[this.place.properties.cat].form_details || [];
+      const normalizedCat = this.place.properties.normalized_cat;
+      const cat = this.place.properties.cat;
+      if (this.allCategories[normalizedCat] &&
+          this.allCategories[normalizedCat].subcategories[cat] &&
+          this.allCategories[normalizedCat].subcategories[cat].form_details) {
+        return this.allCategories[normalizedCat].subcategories[cat].form_details;
+      }
+      return [];
     }
   }
 };
