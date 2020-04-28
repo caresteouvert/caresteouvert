@@ -1,14 +1,14 @@
 {
-  "lang": "Português (Brasil)",
+  "lang": "Português (BR)",
   "loading": "Carregando. Aguarde...",
   "covid19-alert": "Siga as orientações do governo local. A responsabilidade é SUA.",
   "title": "Permanece aberto",
-  "subtitle": "Lugares que permanecem abertos durante o confinamento",
-  "subtitle-dense": "Lugares abertos durante o confinamento",
+  "subtitle": "Lugares que permanecem abertos durante o isolamento",
+  "subtitle-dense": "Lugares abertos durante o isolamento",
   "search": "Buscar...",
   "coordinates": "Coordenadas",
   "menu": "Menu",
-  "missing_shop": "Faltando lojas?",
+  "missing_shop": "Não encontrou uma loja?",
   "change_lang": "Alterar idioma",
   "zoomtosee": "Aumente o zoom para exibir os lugares abertos",
   "filter_noresults": "Nenhum resultado encontrado. Tente diminuir o zoom.",
@@ -23,8 +23,8 @@
   "learnmore": {
     "about": "Sobre",
     "contribute": "Contribua",
-    "missing_shop": "Faltando lojas?",
-    "description": "\"{brand}\" é uma ferramenta essencial para evitar movimentações desnecessárias perto de sua casa durante o confinamento, reduzindo assim o risco de contágio.\nEste mapa colaborativo permite, de maneira simples, que você compartilhe lugares abertos e fechados no seu bairro. É uma maneira eficaz e solidária de informar os vizinhos e habitantes da sua cidade.",
+    "missing_shop": "Não encontrou uma loja?",
+    "description": "\"{brand}\" é uma ferramenta essencial para evitar movimentações desnecessárias perto de sua casa durante o isolamento, reduzindo assim o risco de contágio.\nEste mapa colaborativo permite, de maneira simples, que você compartilhe lugares abertos e fechados no seu bairro. É uma maneira eficaz e solidária de informar os vizinhos e habitantes da sua cidade.",
     "title": "Saiba mais",
     "press": "Imprensa",
     "disclaimer": "Avisos legais",
@@ -57,16 +57,16 @@
   "contribute_form": {
     "title": "Contribuir",
     "step1": {
-      "title": "Este lugar está aberto durante o confinamento?",
+      "title": "Este lugar está aberto durante o isolamento?",
       "open": {
         "yes": "sim",
         "no": "não"
       }
     },
     "step2": {
-      "title": "Horário de funcionamento durante o confinamento",
+      "title": "Horário de funcionamento durante o isolamento",
       "same_hours": "Mesmo horário",
-      "same_hours_without_lockdown": "É o mesmo horário fora do confinamento",
+      "same_hours_without_lockdown": "É o mesmo horário fora do isolamento",
       "dont_know": "Não sei",
       "continue": "Continuar"
     },
@@ -79,9 +79,9 @@
       },
       "delivery": "Este lugar oferece entregas",
       "takeaway": "Este lugar permite retiradas",
-      "access": "Este lugar permite retiradas",
+      "access": "Este lugar possui atendimento presencial",
       "drive_through": "Este lugar possui um serviço de drive-thru",
-      "details": "Adicionar os detalhes necessários durante o confinamento",
+      "details": "Adicionar os detalhes necessários durante o isolamento",
       "details_error": "Deve estar vazio ou possuir ao menos 10 caracteres"
     },
     "submit": "Publicar",
@@ -93,10 +93,10 @@
     "signal_done": "O seu formulário foi recebido, muito obrigado! Pode demorar um pouco para processá-lo.",
     "signal_done_gofurther": "Quero adicionar mais detalhes sobre este lugar",
     "lockdown_opening_hours": "Horário de funcionamento",
-    "normal_opening_hours": "Horário de funcionamento fora do confinamento",
+    "normal_opening_hours": "Horário de funcionamento fora do isolamento",
     "lockdown_brand_hours": "Ver horário de funcionamento",
     "facebook": "Página do Facebook",
-    "not_accessible": "Não permite retiradas",
+    "not_accessible": "Não há atendimento presencial na loja",
     "capacity": "Capacidade máxima: 0 pessoas | Capacidade máxima: 1 pessoa | Capacidade máxima: {count} pessoas",
     "services": "Serviços",
     "contact": "Contato",
@@ -113,18 +113,18 @@
       "tomorrow": "amanhã"
     },
     "state": {
-      "open": "Lugar aberto durante o confinamento",
-      "open_adapted": "Lugar aberto durante o confinamento, com horário de funcionamento adaptado",
-      "partial": "Este estabelecimento pertence a uma franquia na qual as filias estão parcialmente abertas durante o confinamento. Avise-nos se estiver aberto ou fechado.",
-      "unknown": "Este estabelecimento pode ser autorizado a funcionar durante o confinamento. Avise-nos se estiver aberto ou fechado.",
-      "closed": "Lugar fechado durante o confinamento"
+      "open": "Lugar aberto durante o isolamento",
+      "open_adapted": "Lugar aberto durante o isolamento, com horário de funcionamento adaptado",
+      "partial": "Este estabelecimento pertence a uma franquia na qual as filias estão parcialmente abertas durante o isolamento. Avise-nos se estiver aberto ou fechado.",
+      "unknown": "Este estabelecimento pode ser autorizado a funcionar durante o isolamento. Avise-nos se estiver aberto ou fechado.",
+      "closed": "Lugar fechado durante o isolamento"
     },
     "state_short": {
-      "open": "Aberto durante o confinamento",
-      "open_adapted": "Aberto durante o confinamento",
+      "open": "Aberto durante o isolamento",
+      "open_adapted": "Aberto durante o isolamento",
       "partial": "Potencialmente aberto",
       "unknown": "Potencialmente aberto",
-      "closed": "Fechado durante o confinamento"
+      "closed": "Fechado durante o isolamento"
     },
     "delivery": {
       "yes": "Disponível para entrega",
@@ -239,12 +239,12 @@
     "car_rental": "Locadoras",
     "bicycle": "Loja de bicicletas",
     "car": "Garagem",
-    "bicycle_tube": "Máquinas de câmaras de ar para bicicletas",
-    "public_transport_tickets": "Máquinas de bilhetes de transporte público"
+    "bicycle_tube": "Câmara de ar para bicicleta",
+    "public_transport_tickets": "Bilhetes de transporte público"
   },
   "external": {
     "mobile": {
-      "places_around": "Encontre lugares abertos durante o confinamento",
+      "places_around": "Encontre lugares abertos durante o isolamento",
       "contribute": "Melhore o mapa com as suas informações",
       "organize": "Melhor mobilidade para limitar o risco de contágio"
     }
