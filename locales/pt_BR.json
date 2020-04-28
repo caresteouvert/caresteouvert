@@ -116,8 +116,8 @@
       "open": "Lugar aberto durante o isolamento",
       "open_adapted": "Lugar aberto durante o isolamento, com horário de funcionamento adaptado",
       "partial": "Este estabelecimento pertence a uma franquia na qual as filias estão parcialmente abertas durante o isolamento. Avise-nos se estiver aberto ou fechado.",
-      "unknown": "Este estabelecimento pode ser autorizado a funcionar durante o confinamento. Avise-nos se estiver aberto ou fechado.",
-      "closed": "Lugar fechado durante o confinamento"
+      "unknown": "Este estabelecimento pode ser autorizado a funcionar durante o isolamento. Avise-nos se estiver aberto ou fechado.",
+      "closed": "Lugar fechado durante o isolamento"
     },
     "state_short": {
       "open": "Aberto durante o confinamento",
