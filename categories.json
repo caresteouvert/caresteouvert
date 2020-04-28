@@ -1,5 +1,5 @@
 {
-  "countries": [ "DE", "FR", "ES", "AD", "CH", "AT", "PH", "FI" ],
+  "countries": [ "DE", "FR", "ES", "AD", "CH", "AT", "PH", "FI", "MC" ],
   "sql_columns": [
     "aeroway", "amenity", "craft", "emergency", "healthcare", "highway", "historic",
     "leisure", "office", "public_transport", "railway", "shop", "tobacco", "tourism",
@@ -66,7 +66,7 @@
           "osm_tags": [
             { "shop": "money_lender" }
           ],
-          "-areas": [ "FR" ]
+          "-areas": [ "FR", "MC" ]
         },
         "insurance": {
           "name": "Insurance",
@@ -246,7 +246,7 @@
             { "amenity": "vending_machine", "vending": "milk" }
           ],
           "areas": "all",
-          "-mapfilter": [ "FR" ],
+          "-mapfilter": [ "FR", "MC" ],
           "form_details": [ "delivery", "access" ]
         },
         "confectionery": {
