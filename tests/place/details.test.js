@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import Vuex from 'vuex';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Detail from '../../components/place/detail';
 import DetailOpeningHours from '../../components/place/detail_opening_hours';
@@ -6,6 +7,7 @@ import DetailOpeningHours from '../../components/place/detail_opening_hours';
 describe('Detail', () => {
   let localVue;
   let place;
+  let store;
   const stubs = ['v-alert', 'v-toolbar', 'v-toolbar-title', 'v-card', 'v-list', 'v-sheet',
                  'v-subheader', 'v-list-item', 'v-list-item-content', 'v-list-item-icon',
                  'v-icon', 'v-btn', 'v-spacer', 'v-footer', 'v-slide-x-reverse-transition'];
@@ -15,15 +17,18 @@ describe('Detail', () => {
     localVue.prototype.$te = () => true;
     localVue.prototype.$t = (key) => key;
     localVue.prototype.$vuetify = { breakpoint: {} };
+    localVue.use(Vuex);
     localVue.directive('resize', {});
     localVue.directive('linkified', {});
     localVue.directive('touch', {});
+    store = new Vuex.Store({});
   });
 
   function createWrapper(props) {
     return shallowMount(Detail, {
       localVue,
       stubs,
+      store,
       propsData: props
     });
   }
