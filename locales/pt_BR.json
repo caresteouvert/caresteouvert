@@ -64,7 +64,7 @@
       }
     },
     "step2": {
-      "title": "Horário de funcionamento durante o confinamento",
+      "title": "Horário de funcionamento durante o isolamento",
       "same_hours": "Mesmo horário",
       "same_hours_without_lockdown": "É o mesmo horário fora do confinamento",
       "dont_know": "Não sei",
