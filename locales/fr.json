@@ -82,7 +82,7 @@
       "access": "Ce lieu propose un accueil physique sur place",
       "drive_through": "Ce lieu dispose d'un service drive",
       "details": "Optionnel : ajouter d'autres détails liés au confinement",
-      "details_error": "Doit être soit vide, soit contenir au moins 10 caractères"
+      "details_error": "Doit être vide ou compris entre 10 et 200 caractères"
     },
     "submit": "Publier",
     "cancel": "Annuler"
