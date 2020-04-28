@@ -92,11 +92,14 @@
     "signal": "Avisar de un cambio",
     "signal_done": "Su informe ha sido registrado. ¡Gracias! Tenga paciencia, puede llevar un tiempo procesarlo.",
     "signal_done_gofurther": "Quiero dar más detalles sobre este sitio",
-    "containment_opening_hours": "Horario de apertura en periodo normal",
-    "containment_brand_hours": "Horas de apertura en la página web de la marca",
+    "lockdown_opening_hours": "Horas de apertura",
+    "normal_opening_hours": "Horario de apertura en periodo normal",
+    "lockdown_brand_hours": "Horas de apertura en la página web de la marca",
     "facebook": "Página de Facebook",
     "not_accessible": "No hay recepción física",
     "capacity": "Capacidad máxima: 0 personas | Capacidad máxima: 1 persona | Capacidad máxima: {count} personas",
+    "services": "Servicios",
+    "contact": "Contacto",
     "last_update": {
       "date": "Última actualización: {date}",
       "recent": "Actualizado hace unos minutos, la información podría haber cambiado"
