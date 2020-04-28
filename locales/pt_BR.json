@@ -57,7 +57,7 @@
   "contribute_form": {
     "title": "Contribuir",
     "step1": {
-      "title": "Este lugar está aberto durante o confinamento?",
+      "title": "Este lugar está aberto durante o isolamento?",
       "open": {
         "yes": "sim",
         "no": "não"
