@@ -81,7 +81,7 @@
       "takeaway": "Este lugar permite retiradas",
       "access": "Este lugar possui atendimento presencial",
       "drive_through": "Este lugar possui um serviço de drive-thru",
-      "details": "Adicionar os detalhes necessários durante o confinamento",
+      "details": "Adicionar os detalhes necessários durante o isolamento",
       "details_error": "Deve estar vazio ou possuir ao menos 10 caracteres"
     },
     "submit": "Publicar",
