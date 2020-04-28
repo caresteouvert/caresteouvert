@@ -17,7 +17,7 @@ BEGIN
 		RETURN 'eat';
 	ELSIF (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'cigarettes') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'e-cigarettes') OR (tags->'shop' IN ('tobacco', 'newsagent;tobacco', 'tobacco;newsagent', 'e-cigarette', 'alcohol', 'beverages', 'wine')) OR (tags->'tobacco' IN ('yes', 'only')) THEN
 		RETURN 'drugs';
-	ELSIF (tags->'shop' = 'stationery' AND area LIKE 'FR%') OR (tags->'shop' = 'agrarian' AND area LIKE 'FR%') OR (tags->'shop' = 'chemist' AND area NOT SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'fabric' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'books' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'books' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'amenity' = 'public_bookcase' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' IN ('doityourself', 'hardware', 'paint', 'glaziery', 'mobile_phone', 'computer', 'electronics', 'dry_cleaning', 'laundry', 'kiosk', 'newsagent', 'pet', 'garden_centre', 'florist')) OR (tags->'craft' = 'electronics_repair') THEN
+	ELSIF (tags->'shop' = 'stationery' AND area LIKE 'FR%') OR (tags->'shop' = 'agrarian' AND area LIKE 'FR%') OR (tags->'shop' = 'chemist' AND area NOT SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'fabric' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'shoes' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'books' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'books' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'amenity' = 'public_bookcase' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' IN ('doityourself', 'hardware', 'paint', 'glaziery', 'mobile_phone', 'computer', 'electronics', 'dry_cleaning', 'laundry', 'kiosk', 'newsagent', 'pet', 'garden_centre', 'florist')) OR (tags->'craft' = 'electronics_repair') THEN
 		RETURN 'shop';
 	ELSIF tags->'shop' = 'chemist' AND area SIMILAR TO '(DE|AT|CH)%' THEN
 		RETURN 'chemist';
@@ -145,6 +145,8 @@ BEGIN
 		RETURN 'chemist';
 	ELSIF tags->'shop' = 'fabric' THEN
 		RETURN 'fabric';
+	ELSIF tags->'shop' = 'shoes' THEN
+		RETURN 'shoes';
 	ELSIF (tags->'shop' = 'books') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'books') OR (tags->'amenity' = 'public_bookcase') THEN
 		RETURN 'books';
 	ELSIF (tags->'amenity' = 'fuel') OR (tags->'shop' = 'gas') THEN
