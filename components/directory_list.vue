@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { directoryUrl } from "~/config.json";
+import { apiUrl } from "~/config.json";
 
 export default {
   props: {
@@ -82,7 +82,7 @@ export default {
   },
   fetchData({ region, departement, commune, category, query }) {
     const url =
-      directoryUrl +
+      apiUrl + "/directory" +
       (region ? "/" + region : "") +
       (departement ? "/" + departement : "") +
       (commune ? "/" + commune : "") +
