@@ -61,7 +61,6 @@ export default {
       if (this.consent !== true) {
         _paq.push(["disableCookies"]);
       }
-      _paq.push(['trackPageView']);
       _paq.push(["setDoNotTrack", true]);
       _paq.push(['enableLinkTracking']);
       window._paq = _paq;
