@@ -12,7 +12,12 @@
     </v-list>
     <v-divider />
     <v-list>
-      <v-list-item :href="itemLink(item)" v-for="item in items" :key="item.id">
+      <v-list-item
+        v-for="item in items"
+        :key="item.id"
+        :to="itemLink(item)"
+        nuxt
+      >
         <img v-if="displayIcon" src="~/assets/caresteouvert.svg" alt="brand" class="directory-logo" />
         <div
           v-for="label in getLabels(item, propertyLabel)"
