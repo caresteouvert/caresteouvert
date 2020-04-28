@@ -23,19 +23,19 @@ Em seguida, você pode navegar no mapa do mesmo jeito que **Ça reste ouvert** e
 
 Aproxime-se de onde você gostaria de adicionar uma loja, e clique no botão **Editar** no canto superior esquerdo.
 
-![](~/assets/pt_BR/1_Bem-vindo_ao_OSM.png)
+![](~/assets/pt-BR/1_Bem-vindo_ao_OSM.png)
 
 Ao editar pela primeira vez, um breve guia aparecerá para explicar algumas coisas que você deve saber antes de começar a editar. Nós recomendamos que você siga este guia para familiarizar-se com o processo de edição, porém nós focaremos somente na seção de **Pontos** para adicionar a nossa loja.
 
-![](~/assets/pt_BR/2_Pontos.png)
+![](~/assets/pt-BR/2_Pontos.png)
 
 ### Terceiro passo: criando a loja
 
-Para criar uma loja, aproxime-se do local onde a loja está situada, clique no botão **Ponto** e adicione um ponto lá. 
+Para criar uma loja, aproxime-se do local onde a loja está situada, clique no botão **Ponto** e adicione um ponto lá.
 
 Em seguida, utilizando o campo de pesquisa no lado esquerdo da tela, digite o tipo de comércio que você deseja criar. Neste exemplo, adicionaremos uma farmácia.
 
-![](~/assets/pt_BR/3_Tipo_de_comercio.png)
+![](~/assets/pt-BR/3_Tipo_de_comercio.png)
 
 > Caso deseje adicionar a filial de uma franquia ou uma franquia de lojas, você também pode pesquisar pelo nome da marca (por exemplo, "McDonalds" ou "Drogaria Araújo")
 
@@ -45,17 +45,17 @@ Preencha as informações sobre esta loja, como nome ou telefone.
 
 Não é necessário preencher o formulário inteiro caso não se lembre dos detalhes. Adicione somente o que você souber e evite adivinhações. Caso tenha esquecido o nome da loja, deixe em branco, não tem problema.
 
-~[](~/assets/pt_BR/4_Editar_elemento.png)
+~[](~/assets/pt-BR/4_Editar_elemento.png)
 
 ### Quinto passo: salvando as suas alterações
 
 Quando terminar, você deverá salvar as suas informações. Clique em **Salvar** na parte superior direita da tela.
 
-![](~/assets/pt_BR/5_Salvar.png)
+![](~/assets/pt-BR/5_Salvar.png)
 
 Insira um pequeno comentário para indicar o motivo da sua edição, e então clique em **Enviar**.
 
-![](~/assets/pt_BR/6_Enviar.png)
+![](~/assets/pt-BR/6_Enviar.png)
 
 ### Prontinho!
 
