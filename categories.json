@@ -473,6 +473,12 @@
           "areas": [ "DE", "AT", "CH" ],
           "form_details": [ "delivery", "drive", "access" ]
         },
+        "shoes": {
+          "name": "Shoes",
+          "osm_tags": [ { "shop": "shoes" } ],
+          "areas": [ "DE", "AT", "CH" ],
+          "form_details": [ "delivery", "drive", "access" ]
+        },
         "books": {
           "name": "Book store",
           "osm_tags": [
