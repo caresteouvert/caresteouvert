@@ -1,8 +1,5 @@
 <template>
-  <v-list
-    shaped
-    class="pt-1"
-  >
+  <v-list class="pt-1">
     <v-list-item-group
       :value="value"
       @change="updateValue"
