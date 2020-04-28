@@ -20,7 +20,15 @@ export default {
     return DirectoryList.fetchData({
       region: params.regions,
       query: query
+    }).then(directoryData => {
+      directoryData.selected = params.regions;
+      return directoryData;
     });
+  },
+  head({ params }) {
+    return {
+      titleTemplate: `%s - ${this.selected} - ${this.$t(this.title)}`
+    };
   }
 };
 </script>

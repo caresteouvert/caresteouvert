@@ -62,7 +62,7 @@ export default {
   methods: {
     getLabels: (item, attrs) => {
       if (!attrs) {
-        return [{ text: item.properties, translation: "" }];
+        return [{ text: item.properties }];
       } else {
         return attrs
           .map(attr => {
@@ -70,7 +70,7 @@ export default {
               text: attr.key
                 ? item.properties[attr.key.trim()]
                 : item.properties,
-              translation: attr.translation ? attr.translation : ""
+              translation: attr.translation
             };
           })
           .filter(value => value && value.text);
