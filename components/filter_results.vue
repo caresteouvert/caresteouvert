@@ -13,10 +13,11 @@
     <filter-subcategories
       :value="value"
       :category="category"
-      :column="!isMobile"
-      :class="{ 'px-2': !isMobile }"
+      class="px-2"
       @input="(v) => $emit('input', v)"
     />
+
+    <v-divider v-if="availableServices.length > 0" />
 
     <filter-services
       :value="services"
@@ -31,6 +32,7 @@
     <v-list
       v-else-if="results"
       v-touch="{ left: goNext, right: goPrev }"
+      class="pt-0"
     >
       <template v-for="place in results.features">
         <v-divider />
