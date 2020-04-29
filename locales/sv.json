@@ -153,6 +153,11 @@
     "hygiene": "Hygien",
     "hydroalcoholic_gel": "Desinfektionsmedel",
     "mask": "Mask",
+    "hygiene_status": {
+      "yes": "Var tillgänglig {date}",
+      "no": "Var ej tillgänglig {date}",
+      "void": "Information saknas, låt oss veta"
+    },
     "hygiene_entry": {
       "has": "ja",
       "hasnot": "nej"
@@ -239,7 +244,7 @@
     "agrarian": "Lantbruksprodukter",
     "flower": "Trädgård / blommor",
     "chemist": "Kemikalier",
-    "fabric": "Textilaffär",
+    "sewing": "Sömnad",
     "shoes": "Skor",
     "books": "Bokhandel",
     "mobility": "Trafik",
