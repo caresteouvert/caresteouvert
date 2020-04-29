@@ -1,22 +1,13 @@
-<template>
-  <div>
-    <directory-list
-      :title="title"
-      :items="regions"
-      :links="links"
-      :property-label="[{key: 'libelle'}]"
-    />
-  </div>
-</template>
-
 <script>
 import DirectoryList from "~/components/directory_list";
-import i18nMixin from "~/components/mixins/i18n";
 
 export default {
-  mixins: [i18nMixin],
-  components: {
-    DirectoryList
+  extends: DirectoryList,
+  data() {
+    return {
+      propertyLabel: [{ key: "libelle" }],
+      itemKey: "regions"
+    };
   },
   asyncData({ query }) {
     return DirectoryList.fetchData({ query: query });

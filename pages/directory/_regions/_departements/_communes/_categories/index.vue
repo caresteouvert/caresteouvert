@@ -1,25 +1,20 @@
-<template>
-  <div>
-    <directory-list
-      :title="title"
-      :items="pois"
-      :links="links"
-      :property-label="[{key: 'name'},{key: 'cat', translation: 'categories.'}]"
-      :item-link="pointUrl"
-      :display-icon="true"
-    />
-  </div>
-</template>
-
 <script>
 import DirectoryList from "~/components/directory_list";
 
 export default {
-  components: {
-    DirectoryList
+  extends: DirectoryList,
+  data() {
+    return {
+      propertyLabel: [
+        { key: "name" },
+        { key: "cat", translation: "categories." }
+      ],
+      itemKey: "pois",
+      displayIcon: true
+    };
   },
   methods: {
-    pointUrl: item => {
+    itemLink(item) {
       return "/place/" + item.id;
     }
   },

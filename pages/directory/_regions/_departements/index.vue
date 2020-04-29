@@ -1,20 +1,13 @@
-<template>
-  <div>
-    <directory-list
-      :title="title"
-      :items="communes"
-      :links="links"
-      :property-label="[{key: 'libelle'}]"
-    />
-  </div>
-</template>
-
 <script>
 import DirectoryList from "~/components/directory_list";
 
 export default {
-  components: {
-    DirectoryList
+  extends: DirectoryList,
+  data() {
+    return {
+      propertyLabel: [{ key: "libelle" }],
+      itemKey: "communes"
+    };
   },
   asyncData({ params, query }) {
     return DirectoryList.fetchData({

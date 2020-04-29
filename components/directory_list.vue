@@ -1,10 +1,10 @@
 <template>
   <div class="directory">
     <h1 class="directory-title">{{ $t(title) }}</h1>
-    <v-divider />
+    <v-divider v-if="relatedLinks.length > 0" />
     <v-list>
       <v-list-item
-        v-for="link in getRelatedLinks(links)"
+        v-for="link in relatedLinks"
         :key="link.title"
         :href="link.href"
         :rel="link.rel"
@@ -12,15 +12,10 @@
     </v-list>
     <v-divider />
     <v-list>
-      <v-list-item
-        v-for="item in items"
-        :key="item.id"
-        :to="itemLink(item)"
-        nuxt
-      >
+      <v-list-item v-for="item in items" :key="item.id" :to="itemLink(item)" nuxt>
         <img v-if="displayIcon" src="~/assets/caresteouvert.svg" alt="brand" class="directory-logo" />
         <div
-          v-for="label in getLabels(item, propertyLabel)"
+          v-for="label in itemLabels(item, propertyLabel)"
           :key="label.text"
           class="directory-item-property"
         >
@@ -36,36 +31,26 @@
 import { apiUrl } from "~/config.json";
 
 export default {
-  props: {
-    title: {
-      type: String,
-      default: undefined
+  data() {
+    return {
+      displayIcon: false
+    };
+  },
+  computed: {
+    items() {
+      return this[this.itemKey];
     },
-    items: {
-      type: Array,
-      default: undefined
-    },
-    links: {
-      type: Array,
-      default: undefined
-    },
-    propertyLabel: {
-      type: Array,
-      default: undefined
-    },
-    itemLink: {
-      type: Function,
-      default: item => {
-        return item.links.href;
-      }
-    },
-    displayIcon: {
-      type: Boolean,
-      default: false
+    relatedLinks() {
+      return this.links
+        ? this.links.filter(link => link.rel !== "self")
+        : this.links;
     }
   },
   methods: {
-    getLabels: (item, attrs) => {
+    itemLink(item) {
+      return item.links.href;
+    },
+    itemLabels: (item, attrs) => {
       if (!attrs) {
         return [{ text: item.properties }];
       } else {
@@ -80,14 +65,12 @@ export default {
           })
           .filter(value => value && value.text);
       }
-    },
-    getRelatedLinks: links => {
-      return links ? links.filter(link => link.rel !== "self") : links;
     }
   },
   fetchData({ region, departement, commune, category, query }) {
     const url =
-      apiUrl + "/directory" +
+      apiUrl +
+      "/directory" +
       (region ? "/" + region : "") +
       (departement ? "/" + departement : "") +
       (commune ? "/" + commune : "") +
