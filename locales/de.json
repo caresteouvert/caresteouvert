@@ -102,7 +102,7 @@
     "contact": "Kontaktdaten",
     "last_update": {
       "date": "Letzte Änderung: {date}",
-      "recent": "Vor wenigen Minuten aktualisiert, angezeigte Daten können sich geändert haben"
+      "recent": "Vor wenigen Minuten aktualisiert, angezeigte Daten können veraltet sein"
     },
     "opening_hours": {
       "state_until_date": "{state} bis {date}",
