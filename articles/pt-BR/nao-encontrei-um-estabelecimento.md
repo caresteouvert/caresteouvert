@@ -45,7 +45,7 @@ Preencha as informações sobre esta loja, como nome ou telefone.
 
 Não é necessário preencher o formulário inteiro caso não se lembre dos detalhes. Adicione somente o que você souber e evite adivinhações. Caso tenha esquecido o nome da loja, deixe em branco, não tem problema.
 
-[](~/assets/pt-BR/4_Editar_elemento.png)
+![](~/assets/pt-BR/4_Editar_elemento.png)
 
 ### Quinto passo: salvando as suas alterações
 
