@@ -14,6 +14,7 @@ describe('FilterResults', () => {
     localVue.prototype.$t = t => t;
     localVue.prototype.$vuetify = { breakpoint: {} };
     localVue.use(Vuex);
+    localVue.directive('touch', {});
     store = new Vuex.Store({ state: {}, getters: { allCategories() { return {}; } } });
   });
 
