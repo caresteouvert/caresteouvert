@@ -48,8 +48,7 @@
     >
       {{ $t('filter_noresults') }}
     </div>
-    <div class="d-flex mb-2">
-      <v-spacer />
+    <div class="mb-2 text-center">
       <v-btn
         :disabled="loading || offset === 0"
         icon
