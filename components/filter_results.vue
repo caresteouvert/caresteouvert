@@ -53,6 +53,7 @@
       <v-btn
         :disabled="loading || offset === 0"
         icon
+        large
         @click="updateOffset(offset - 10)"
       >
         <v-icon>osm-chevron_left</v-icon>
@@ -60,6 +61,7 @@
       <v-btn
         :disabled="loading || !results || results.numberReturned < 10"
         icon
+        large
         @click="updateOffset(offset + 10)"
       >
         <v-icon>osm-chevron_right</v-icon>
