@@ -28,6 +28,9 @@ export default {
         website(url) {
           const href = url.startsWith('http') ? url : `http://${url}`;
           return { text: href, href };
+        },
+        fax(f) {
+          return { text: f, href: `fax:${f}` };
         }
       };
       const tags = this.place.properties.tags;
