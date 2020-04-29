@@ -27,7 +27,7 @@
         </v-btn>
       </v-card-title>
       <v-card-text>
-        <span class="text-pre">{{ $t('learnmore.description', { brand }) }}</span>
+        <p class="text-pre">{{ $t('learnmore.description', { brand }) }}</p>
         <v-row>
           <v-col
             cols="12"
