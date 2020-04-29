@@ -28,7 +28,10 @@
       v-if="loading && !results"
       type="list-item-two-line@10"
     />
-    <v-list v-else-if="results">
+    <v-list
+      v-else-if="results"
+      v-touch="{ left: goNext, right: goPrev }"
+    >
       <template v-for="place in results.features">
         <v-divider />
         <place-dense
@@ -50,18 +53,18 @@
     </div>
     <div class="mb-2 text-center">
       <v-btn
-        :disabled="loading || offset === 0"
+        :disabled="!canGoPrev"
         icon
         large
-        @click="updateOffset(offset - 10)"
+        @click="goPrev"
       >
         <v-icon>osm-chevron_left</v-icon>
       </v-btn>
       <v-btn
-        :disabled="loading || !results || results.numberReturned < 10"
+        :disabled="!canGoNext"
         icon
         large
-        @click="updateOffset(offset + 10)"
+        @click="goNext"
       >
         <v-icon>osm-chevron_right</v-icon>
       </v-btn>
@@ -146,6 +149,14 @@ export default {
 
     availableServices() {
       return availableSubFilters(this.allCategories, this.value);
+    },
+
+    canGoPrev() {
+      return !this.loading && this.offset > 0;
+    },
+
+    canGoNext() {
+      return !this.loading && this.results && this.results.numberReturned === 10;
     }
   },
 
@@ -169,6 +180,18 @@ export default {
   },
 
   methods: {
+    goPrev() {
+      if (this.canGoPrev) {
+        this.updateOffset(this.offset - 10);
+      }
+    },
+
+    goNext() {
+      if (this.canGoNext) {
+        this.updateOffset(this.offset + 10);
+      }
+    },
+
     updateOffset(offset) {
       this.offset = offset;
       this.results = null;
