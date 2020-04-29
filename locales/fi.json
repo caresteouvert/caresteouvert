@@ -79,7 +79,7 @@
       },
       "delivery": "Kotiinkuljetus",
       "takeaway": "Noutomyyntiä",
-      "access": "Henkilökuntaa paikan päällä",
+      "access": "Asiakkailla pääsy liiketiloihin",
       "drive_through": "Tarjolla autokaista-palvelu",
       "details": "Voit lisätä tarkempia tietoja",
       "details_error": "Pitää olla joko tyhjä tai vähintään 10 merkkiä pitkä"
@@ -96,7 +96,7 @@
     "normal_opening_hours": "Aukioloajat muulloin kuin poikkeusaikana",
     "lockdown_brand_hours": "Katso aukioloajat",
     "facebook": "Facebook-sivu",
-    "not_accessible": "Ei henkilökuntaa paikan päällä",
+    "not_accessible": "Asiakkailla ei pääsyä liiketiloihin",
     "capacity": "Maksimikapasiteetti : 0 henkilöä | Maksimikapasiteetti : 1 henkilö | Maksimikapasiteetti : {count} henkilöä",
     "services": "Palvelut",
     "contact": "Yhteystiedot",
