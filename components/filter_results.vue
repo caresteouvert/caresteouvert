@@ -4,7 +4,7 @@
       <h1 class="title">{{ $t(`categories.${category}`) }}</h1>
       <v-btn
         icon
-        @click="$emit('input', '')"
+        @click="clearSelection"
       >
         <v-icon>osm-close</v-icon>
       </v-btn>
@@ -180,6 +180,11 @@ export default {
   },
 
   methods: {
+    clearSelection() {
+      this.$emit('input', '');
+      this.$emit('update:services', []);
+    },
+
     goPrev() {
       if (this.canGoPrev) {
         this.updateOffset(this.offset - 10);
