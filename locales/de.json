@@ -91,14 +91,18 @@
     "signal_warning": "Du warst gerade dabei, eine Änderung zu melden. Möchtest du deine Eingaben verwerfen?",
     "signal": "Änderung melden",
     "signal_done": "Vielen Dank, deine Änderungsmeldung wurde erfasst!\n\nBitte beachte, dass Meldungen mit Kommentar manuell von der OpenStreetMap-Community bearbeitet werden müssen. Kommentarlose Änderungen erscheinen automatisch nach etwa einer Stunde auf der Karte.",
-    "containment_opening_hours": "Reguläre Öffnungszeiten",
-    "containment_brand_hours": "Öffnungszeiten anzeigen",
+    "signal_done_gofurther": "Ich möchte weitere Angaben zu diesem Ort machen",
+    "lockdown_opening_hours": "Öffnungszeiten",
+    "normal_opening_hours": "Reguläre Öffnungszeiten",
+    "lockdown_brand_hours": "Öffnungszeiten anzeigen",
     "facebook": "Facebook-Seite",
     "not_accessible": "Ort kann nicht betreten werden",
     "capacity": "Maximale Kapazität: 0 Personen | Maximale Kapazität: 1 Person | Maximale Kapazität: {count} Personen",
+    "services": "Dienstleistungen",
+    "contact": "Kontaktdaten",
     "last_update": {
       "date": "Letzte Änderung: {date}",
-      "recent": "Vor wenigen Minuten aktualisiert, angezeigte Daten können sich geändert haben"
+      "recent": "Vor wenigen Minuten aktualisiert, angezeigte Daten können veraltet sein"
     },
     "opening_hours": {
       "state_until_date": "{state} bis {date}",
@@ -145,6 +149,13 @@
       "drinks": "Getränke",
       "water": "Wasser",
       "sweets": "Süßwaren"
+    },
+    "hygiene": "Hygieneartikel",
+    "hydroalcoholic_gel": "Desinfektionsmittel",
+    "mask": "Masken",
+    "hygiene_entry": {
+      "has": "vorrätig",
+      "hasnot": "ausverkauft"
     }
   },
   "opening_hours_editor": {
@@ -180,6 +191,7 @@
     "insurance": "Versicherung",
     "tourism_info": "Tourist-Info",
     "hotel": "Unterkunft",
+    "recycling_centre": "Recyclinghof",
     "health": "Apotheke & Gesundheit",
     "pharmacy": "Apotheke",
     "covid19_centre": "Covid-19-Beratungsstelle",
@@ -227,8 +239,8 @@
     "agrarian": "Landhandel",
     "flower": "Garten & Blumen",
     "chemist": "Drogeriemarkt",
-    "fabric": "Textilgeschäft",
-    "fabric": "Schuhladen",
+    "sewing": "Nähgeschäft",
+    "shoes": "Schuhgeschäft",
     "books": "Buchhandlung",
     "mobility": "Mobilität",
     "fuel": "Tankstelle",
@@ -242,7 +254,7 @@
     "mobile": {
       "places_around": "Finde Geschäfte, die weiterhin geöffnet sind.",
       "contribute": "Verbessere die Karte mit deinem Wissen",
-      "organize": "Bessere Mobilität, um die Ansteckungsgefahr zu verringern"
+      "organize": "Erfolglose Wege verhindern, Ansteckungsgefahr verringern"
     }
   }
 }
