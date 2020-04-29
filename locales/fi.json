@@ -153,6 +153,11 @@
     "hygiene": "Hygienia",
     "hydroalcoholic_gel": "Desinfiontiainetta",
     "mask": "Naamari",
+    "hygiene_status": {
+      "yes": "Oli tarjolla {date}",
+      "no": "Ei ollut tarjolla {date}",
+      "void": "Tieto puuttuu, kerro meille"
+    },
     "hygiene_entry": {
       "has": "on",
       "hasnot": "ei ole"
@@ -239,7 +244,7 @@
     "agrarian": "Maataloustuotteita",
     "flower": "Puutarha / kukat",
     "chemist": "Kemikaalio",
-    "fabric": "Kangaskauppa",
+    "sewing": "Ompelu",
     "shoes": "Kenkiä",
     "books": "Kirjakauppa",
     "mobility": "Liikkuminen",
