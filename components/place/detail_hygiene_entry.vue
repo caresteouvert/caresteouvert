@@ -104,7 +104,7 @@ export default {
 
     status() {
       let date;
-      if(this.place.properties.tags['cro:date']) {
+      if(this.place && this.place.properties && this.place.properties.tags && this.place.properties.tags['cro:date']) {
         const format = { day: 'numeric', month: 'long', hour: 'numeric' };
         date = new Date(this.place.properties.tags['cro:date'] * 1000).toLocaleString(this.$i18n.locale, format);
       }
