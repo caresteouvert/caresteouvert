@@ -79,7 +79,7 @@
       },
       "delivery": "Stället erbjuder hemleverans",
       "takeaway": "Stället erbjuder take-away",
-      "access": "Närvarande personal",
+      "access": "Kunden får stiga in i lokalen",
       "drive_through": "Stället erbjuder drive-in service",
       "details": "Du kan ange ytterligare information",
       "details_error": "Bör vara antingen tomt eller åtminstone 10 märken långt"
@@ -96,7 +96,7 @@
     "normal_opening_hours": "Öppettider utanför undantagstillståndsperioden",
     "lockdown_brand_hours": "Se öppettider",
     "facebook": "Facebook sida",
-    "not_accessible": "Ingen personal närvarande",
+    "not_accessible": "Kunden får ej stiga in i lokalen",
     "capacity": "Maximal kapacitet : 0 personer | Maximal kapacitet : 1 person | Maximal kapacitet : {count} personer",
     "services": "Tjänster",
     "contact": "Kontaktinformation",
