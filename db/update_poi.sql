@@ -241,7 +241,7 @@ WHERE status = 'open' AND opening_hours IS NULL;
 
 -- Join custom tags from poi_cro
 UPDATE poi_osm_next
-SET tags = poi_osm_next.tags || c.tags
+SET tags = poi_osm_next.tags || c.tags || CONCAT('{ "cro:date": "',EXTRACT(EPOCH FROM c.lastupdate)::int,'" }')::jsonb
 FROM poi_cro c
 WHERE poi_osm_next.fid = c.osmid;
 

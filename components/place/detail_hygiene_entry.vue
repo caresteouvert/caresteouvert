@@ -1,7 +1,7 @@
 <template>
   <v-list-item>
     <v-list-item-content>
-      <v-list-item-title>
+      <v-list-item-title class="d-flex align-content-center">
         <div class="icon pb-1 d-inline-block">
           <v-icon
             class="mr-6"
@@ -11,7 +11,10 @@
             :color="color"
           >{{ icon }}</v-icon>
         </div>
-        {{ $t(`details.${type}`) }}
+        <div class="d-inline-block">
+          {{ $t(`details.${type}`) }}
+          <br /><span class="caption">{{ this.status }}</span>
+        </div>
       </v-list-item-title>
     </v-list-item-content>
     <v-list-item-action v-if="!success">
@@ -97,6 +100,15 @@ export default {
 
     color() {
       return statuses[this.value].color;
+    },
+
+    status() {
+      let date;
+      if(this.place.properties.tags['cro:date']) {
+        const format = { day: 'numeric', month: 'long', hour: 'numeric' };
+        date = new Date(this.place.properties.tags['cro:date'] * 1000).toLocaleString(this.$i18n.locale, format);
+      }
+      return this.$t(`details.hygiene_status.${this.value === '' ? 'void' : this.value}`, { date });
     }
   },
 
