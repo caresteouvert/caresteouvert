@@ -79,7 +79,7 @@
       },
       "delivery": "Stället erbjuder hemleverans",
       "takeaway": "Stället erbjuder take-away",
-      "access": "Närvarande personal",
+      "access": "Kunden får stiga in i lokalen",
       "drive_through": "Stället erbjuder drive-in service",
       "details": "Du kan ange ytterligare information",
       "details_error": "Bör vara antingen tomt eller åtminstone 10 märken långt"
