@@ -464,7 +464,7 @@
           "osm_tags": [
             { "shop": "chemist" }
           ],
-          "-areas": [ "DE", "AT", "CH" ],
+          "areas": "all",
           "form_details": [ "delivery", "drive", "access", "hydroalcoholic_gel", "mask" ]
         },
         "sewing": {
@@ -488,19 +488,6 @@
           ],
           "areas": [ "DE", "AT", "CH" ],
           "form_details": [ "delivery", "access" ]
-        }
-      }
-    },
-    "chemist": {
-      "name": "Chemist",
-      "subcategories": {
-        "chemist": {
-          "name": "Chemist",
-          "osm_tags": [
-            { "shop": "chemist" }
-          ],
-          "areas": [ "DE", "AT", "CH" ],
-          "form_details": [ "delivery", "drive", "access" ]
         }
       }
     },
