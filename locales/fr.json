@@ -150,9 +150,9 @@
       "water": "Eau",
       "sweets": "Bonbons"
     },
+    "hygiene": "Hygiène",
     "hydroalcoholic_gel": "Gel hydroalcoolique",
     "mask": "Masques",
-    "hygiene": "Hygiène",
     "hygiene_entry": {
       "has": "Il en reste",
       "hasnot": "Il n'y en a plus"
@@ -240,6 +240,7 @@
     "flower": "Jardin / fleurs",
     "chemist": "Droguerie",
     "sewing": "Mercerie",
+    "shoes": "Chaussures",
     "books": "Librairie",
     "mobility": "Mobilité",
     "fuel": "Station-service",
