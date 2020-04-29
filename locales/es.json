@@ -153,6 +153,11 @@
     "hygiene": "Higiene",
     "hydroalcoholic_gel": "Gel hidroalcohólico",
     "mask": "Mascarillas",
+    "hygiene_status": {
+      "yes": "El {date} disponible",
+      "no": "El {date}: indisponible",
+      "void": "No hay información, haznos saber"
+    },
     "hygiene_entry": {
       "has": "tiene",
       "hasnot": "no tiene"
@@ -239,7 +244,7 @@
     "agrarian": "Productos agrícolas",
     "flower": "Jardines/flores",
     "chemist": "Droguerías",
-    "fabric": "Tiendas textil",
+    "sewing": "Mercerías",
     "shoes": "Zapaterías",
     "books": "Librerías",
     "mobility": "Movilidad",
