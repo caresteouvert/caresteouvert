@@ -465,7 +465,7 @@
             { "shop": "chemist" }
           ],
           "-areas": [ "DE", "AT", "CH" ],
-          "form_details": [ "delivery", "drive", "access" ]
+          "form_details": [ "delivery", "drive", "access", "hydroalcoholic_gel", "mask" ]
         },
         "sewing": {
           "name": "Sewing",
