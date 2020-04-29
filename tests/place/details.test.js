@@ -141,7 +141,7 @@ describe('Detail', () => {
 
     it('returns fax', () => {
       detail.vm.place = { properties: { status: 'open', cat: '', tags: { fax: 'test' } } };
-      expect(detail.vm.contact('fax')).toEqual([{ text: 'test', href: 'test' }]);
+      expect(detail.vm.contact('fax')).toEqual([{ text: 'test', href: 'fax:test' }]);
     });
 
     it('returns nothing', () => {
