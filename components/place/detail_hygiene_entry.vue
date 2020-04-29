@@ -105,7 +105,7 @@ export default {
     status() {
       let date;
       if(this.place && this.place.properties && this.place.properties.tags && this.place.properties.tags['cro:date']) {
-        const format = { day: 'numeric', month: 'long', hour: 'numeric' };
+        const format = { day: 'numeric', month: 'long' };
         date = new Date(this.place.properties.tags['cro:date'] * 1000).toLocaleString(this.$i18n.locale, format);
       }
       return this.$t(`details.hygiene_status.${this.value === '' ? 'void' : this.value}`, { date });
