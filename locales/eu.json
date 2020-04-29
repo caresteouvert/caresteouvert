@@ -1,6 +1,6 @@
 {
   "lang": "Euskera",
-  "loading": "Kargatzen, mesedez itxaron...",
+  "loading": "Kargatzen, itxaron mesedez...",
   "covid19-alert": "Jarrai itzazu gobernuaren murrizketak. Errespontsabilitatea ZUREA da.",
   "title": "Irekita jarraitzen du",
   "subtitle": "Itxialdi garaian irekita jarraitzen duten lekuak",
@@ -155,7 +155,7 @@
     "mask": "Maskara",
     "hygiene_entry": {
       "has": "Dauka",
-      "hasnot": "Ez du"
+      "hasnot": "Ez dauka"
     }
   },
   "opening_hours_editor": {
