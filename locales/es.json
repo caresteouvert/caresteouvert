@@ -132,7 +132,6 @@
     },
     "takeaway": {
       "yes": "Venta para llevar disponible",
-      "modified": "Modificado a ventas para llevar",
       "only": "Solo venta para llevar"
     },
     "drive_through": {
