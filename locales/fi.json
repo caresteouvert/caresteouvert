@@ -79,7 +79,7 @@
       },
       "delivery": "Kotiinkuljetus",
       "takeaway": "Noutomyyntiä",
-      "access": "Henkilökuntaa paikan päällä",
+      "access": "Asiakkailla pääsy liiketiloihin",
       "drive_through": "Tarjolla autokaista-palvelu",
       "details": "Voit lisätä tarkempia tietoja",
       "details_error": "Pitää olla joko tyhjä tai vähintään 10 merkkiä pitkä"
