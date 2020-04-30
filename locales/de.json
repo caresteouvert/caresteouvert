@@ -9,6 +9,13 @@
   "coordinates": "Koordinaten",
   "menu": "Menü",
   "missing_shop": "Fehlendes Geschäft melden",
+  "missing_shop_dialog": {
+    "description": "„{brand}“ zeigt bewusst nur Orte an, die trotz der Ausgangsbeschränkungen möglicherweise geöffnet sind. Aus verschiedenen Gründen können manche Orte fehlen:",
+    "add_osm": "Der Ort ist nicht auf OpenStreetMap, ergänze ihn:",
+    "add_osm_cta": "Folge unserer Anleitung",
+    "add_category": "Es fehlt eine Kategorie:",
+    "add_category_cta": "Kategorie anfordern"
+  },
   "change_lang": "Sprache ändern",
   "zoomtosee": "Vergrößere die Karte, um offene Geschäfte zu sehen",
   "filter_noresults": "Keine Ergebnisse in diesem Kartenbereich.",
@@ -132,7 +139,6 @@
     },
     "takeaway": {
       "yes": "Abholung möglich",
-      "modified": "Abholung abweichend",
       "only": "Nur Abholung"
     },
     "drive_through": {
@@ -153,6 +159,11 @@
     "hygiene": "Hygieneartikel",
     "hydroalcoholic_gel": "Desinfektionsmittel",
     "mask": "Masken",
+    "hygiene_status": {
+      "yes": "Am {date} : vorrätig",
+      "no": "Am {date} : ausverkauft",
+      "void": "Keine Daten, lass  es uns wissen."
+    },
     "hygiene_entry": {
       "has": "vorrätig",
       "hasnot": "ausverkauft"
