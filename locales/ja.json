@@ -165,8 +165,8 @@
       "void": "情報なし。知っていたら教えて下さい"
     },
     "hygiene_entry": {
-      "has": "商品あり",
-      "hasnot": "商品なし"
+      "has": "あり",
+      "hasnot": "なし"
     }
   },
   "opening_hours_editor": {
