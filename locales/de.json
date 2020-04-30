@@ -162,7 +162,7 @@
     "hygiene_status": {
       "yes": "Am {date} : vorrätig",
       "no": "Am {date} : ausverkauft",
-      "void": "Keine Daten, lass  es uns wissen."
+      "void": "Keine Daten, lass es uns wissen."
     },
     "hygiene_entry": {
       "has": "vorrätig",
