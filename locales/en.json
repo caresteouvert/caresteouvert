@@ -98,7 +98,6 @@
     "signal_warning": "You were writing a report. It'll not be saved. Do you want to continue?",
     "signal": "Report a change",
     "signal_done": "Your report has been registered, thank you! It'll appear in a while.",
-    "signal_done_gofurther": "I want to give more details about this place",
     "lockdown_opening_hours": "Opening hours",
     "normal_opening_hours": "Opening hours outside the lockdown period",
     "lockdown_brand_hours": "Look at the opening hours",

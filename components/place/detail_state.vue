@@ -28,15 +28,6 @@
       class="mb-0"
     >
       <span class="text-pre">{{ $t('details.signal_done') }}</span>
-      <template v-if="$i18n.locale.startsWith('fr')">
-        <br />
-        <a
-          href="https://blog.caresteouvert.fr/completer-les-infos-dun-lieu/"
-          target="_blank"
-          rel="noopener"
-          class="alert-link"
-        >{{ $t('details.signal_done_gofurther') }}</a>
-      </template>
     </v-alert>
     <div v-if="contribute">
       <contribute-form
