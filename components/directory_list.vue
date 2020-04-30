@@ -29,7 +29,7 @@
           :key="label.text"
           class="directory-item-property"
         >
-          <span v-if="label.translation">{{ $t(label.translation + label.text) }}</span>
+          <span v-if="label.translation">{{ $te(`${label.translation}${label.text}`) ? $t(`${label.translation}${label.text}`): $t(`${label.translation}other`) }}</span>
           <span v-else>{{ label.text }}</span>
         </div>
       </v-list-item>
