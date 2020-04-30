@@ -5,8 +5,7 @@ export default {
   extends: DirectoryList,
   data() {
     return {
-      propertyLabel: [{ key: "libelle" }],
-      itemKey: "regions"
+      propertyLabel: [{ key: "libelle" }]
     };
   },
   asyncData({ query }) {

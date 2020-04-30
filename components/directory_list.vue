@@ -52,7 +52,7 @@ export default {
 
   computed: {
     items() {
-      return this[this.itemKey];
+      return this.data;
     },
     relatedLinks() {
       return (this.links || [])

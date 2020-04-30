@@ -9,7 +9,6 @@ export default {
         { key: "name" },
         { key: "cat", translation: "categories." }
       ],
-      itemKey: "pois",
       displayIcon: true
     };
   },
