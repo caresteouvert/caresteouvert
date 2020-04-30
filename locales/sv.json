@@ -9,6 +9,13 @@
   "coordinates": "Koordinater",
   "menu": "Meny",
   "missing_shop": "Rapportera butik som saknas",
+  "missing_shop_dialog": {
+    "description": "« {brand} » visar bara ställen som har tillständ att ha öppet under undantagstillståndet.  Det finns flera möjliga orsaker varför några ställen kan saknas:",
+    "add_osm": "Stället finns inte i OpenStreetMap. Lägg till det:",
+    "add_osm_cta": "Följ instruktionerna",
+    "add_category": "En hel tjänstkategori saknas:",
+    "add_category_cta": "Be någon lägga till det"
+  },
   "change_lang": "Byt språk",
   "zoomtosee": "Zooma in för att se öppna ställen",
   "filter_noresults": "Inga resultat. Försök zooma ut.",
@@ -153,8 +160,8 @@
     "hydroalcoholic_gel": "Desinfektionsmedel",
     "mask": "Mask",
     "hygiene_status": {
-      "yes": "Var tillgänglig {date}",
-      "no": "Var ej tillgänglig {date}",
+      "yes": "Tillgänglig {date}",
+      "no": "Ej tillgänglig {date}",
       "void": "Information saknas, låt oss veta"
     },
     "hygiene_entry": {
