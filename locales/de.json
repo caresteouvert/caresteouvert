@@ -10,7 +10,7 @@
   "menu": "Menü",
   "missing_shop": "Fehlendes Geschäft melden",
   "missing_shop_dialog": {
-    "description": "„{brand}“ zeigt insbesondere Orte an, die trotz der Ausgangsbeschränkungen möglicherweise geöffnet sind. Wenn ein Ort fehlt, kann dies verschiedene Gründe haben:",
+    "description": "„{brand}“ zeigt vor allem Orte an, die trotz Ausgangsbeschränkungen weiterhin geöffnet sein können. Wenn ein Ort fehlt, kann dies mehrere Gründe haben:",
     "add_osm": "Der Ort ist nicht auf OpenStreetMap, ergänze ihn:",
     "add_osm_cta": "Folge unserer Anleitung",
     "add_category": "Es fehlt eine Kategorie:",
