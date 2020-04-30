@@ -9,6 +9,13 @@
   "coordinates": "座標",
   "menu": "メニュー",
   "missing_shop": "不明な店舗をレポート",
+  "missing_shop_dialog": {
+    "description": "« {brand} » は封鎖期間中の営業が許可されている施設だけを表示することを意図しています。漏れがある場合、いくつかの理由が考えられます:",
+    "add_osm": "この施設はOpenStreetMapに無いので追加します:",
+    "add_osm_cta": "案内に従ってください",
+    "add_category": "施設のカテゴリがありません:",
+    "add_category_cta": "リクエストの追加"
+  },
   "change_lang": "言語切替",
   "zoomtosee": "ズームインして開店中の場所を表示",
   "filter_noresults": "データが見つかりません。ズームアウトしてみてください。",
@@ -148,6 +155,18 @@
       "drinks": "飲料",
       "water": "水",
       "sweets": "お菓子"
+    },
+    "hygiene": "衛生用品",
+    "hydroalcoholic_gel": "アルコール除菌ジェル",
+    "mask": "マスク",
+    "hygiene_status": {
+      "yes": "{date} : 利用可",
+      "no": "{date} : 利用不可",
+      "void": "情報なし。知っていたら教えて下さい"
+    },
+    "hygiene_entry": {
+      "has": "あり",
+      "hasnot": "なし"
     }
   },
   "opening_hours_editor": {
@@ -231,7 +250,8 @@
     "agrarian": "農業用品店",
     "flower": "園芸用品店",
     "chemist": "化粧品店",
-    "fabric": "生地店",
+    "sewing": "裁縫",
+    "shoes": "靴",
     "books": "書店",
     "mobility": "モビリティ",
     "fuel": "ガソリンスタンド",
