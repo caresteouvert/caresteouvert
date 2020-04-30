@@ -12,7 +12,7 @@
   "missing_shop_dialog": {
     "description": "« {brand} » visar bara ställen som har tillständ att ha öppet under undantagstillståndet.  Det finns flera möjliga orsaker varför några ställen kan saknas:",
     "add_osm": "Stället finns inte i OpenStreetMap. Lägg till det:",
-    "add_osm_cta": "Följ instruktionerna",
+    "add_osm_cta": "Instruktioner",
     "add_category": "En hel tjänstkategori saknas:",
     "add_category_cta": "Be någon lägga till det"
   },
