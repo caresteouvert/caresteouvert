@@ -14,7 +14,7 @@ export default {
   },
   head() {
     return {
-      titleTemplate: "%s - " + this.$t(this.title)
+      title: `${this.$t(this.title)} - ${this.brand}`
     };
   }
 };

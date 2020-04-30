@@ -39,13 +39,17 @@
 
 <script>
 import { apiUrl } from "~/config.json";
+import i18nMixin from "./mixins/i18n";
 
 export default {
+  mixins: [i18nMixin],
+
   data() {
     return {
       displayIcon: false
     };
   },
+
   computed: {
     items() {
       return this[this.itemKey];

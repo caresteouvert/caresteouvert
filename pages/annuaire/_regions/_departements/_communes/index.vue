@@ -23,7 +23,7 @@ export default {
   },
   head() {
     return {
-      titleTemplate: `%s - ${this.selected} - ${this.$t(this.title)}`
+      title: `${this.selected} - ${this.$t(this.title)} - ${this.brand}`
     };
   }
 };

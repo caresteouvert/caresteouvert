@@ -33,9 +33,9 @@ export default {
   },
   head() {
     return {
-      titleTemplate: `%s - ${this.selected} - ${this.$t(
+      title: `${this.selected} - ${this.$t(
         "categories." + this.category
-      )} - ${this.$t(this.title)}`
+      )} - ${this.$t(this.title)} - ${this.brand}`
     };
   }
 };
