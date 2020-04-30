@@ -160,8 +160,8 @@
     "hydroalcoholic_gel": "Desinfektionsmittel",
     "mask": "Masken",
     "hygiene_status": {
-      "yes": "Am {date} : vorrätig",
-      "no": "Am {date} : ausverkauft",
+      "yes": "Am {date}: vorrätig",
+      "no": "Am {date}: ausverkauft",
       "void": "Keine Daten, lass es uns wissen."
     },
     "hygiene_entry": {
