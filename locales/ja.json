@@ -132,7 +132,6 @@
     },
     "takeaway": {
       "yes": "持ち帰り販売が利用可",
-      "modified": "変更された持ち帰り販売",
       "only": "持ち帰り販売のみ"
     },
     "drive_through": {

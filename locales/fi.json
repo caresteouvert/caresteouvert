@@ -9,6 +9,13 @@
   "coordinates": "Koordinaatit",
   "menu": "Valikko",
   "missing_shop": "Ilmoita puuttuva palvelu",
+  "missing_shop_dialog": {
+    "description": "« {brand} » näyttää vain ne paikat joilla on lupa olla auki poikkeusaikana. On olemassa useita mahdollisia syitä sille miksi jotkut paikat eivät näy:",
+    "add_osm": "Paikkaa ei löydy OpenStreetMapista, lisää se:",
+    "add_osm_cta": "Seuraa ohjeita",
+    "add_category": "Kokonainen palvelukategoria puuttuu:",
+    "add_category_cta": "Pyydä lisäystä"
+  },
   "change_lang": "Vaihda kieli",
   "zoomtosee": "Zoomaa lähemmäs nähdäksesi avoimet paikat",
   "filter_noresults": "Ei tuloksia. Koeta zoomata ulospäin.",
@@ -132,7 +139,6 @@
     },
     "takeaway": {
       "yes": "Noutomyyntiä",
-      "modified": "Tavanomaisesta poikkeavaa noutomyyntiä",
       "only": "Vain noutomyyntiä"
     },
     "drive_through": {
@@ -153,6 +159,11 @@
     "hygiene": "Hygienia",
     "hydroalcoholic_gel": "Desinfiontiainetta",
     "mask": "Naamari",
+    "hygiene_status": {
+      "yes": "Käytettävissä {date}",
+      "no": "Ei käytettävissä {date}",
+      "void": "Tieto puuttuu, kerro meille"
+    },
     "hygiene_entry": {
       "has": "on",
       "hasnot": "ei ole"
@@ -239,7 +250,7 @@
     "agrarian": "Maataloustuotteita",
     "flower": "Puutarha / kukat",
     "chemist": "Kemikaalio",
-    "fabric": "Kangaskauppa",
+    "sewing": "Ompelu",
     "shoes": "Kenkiä",
     "books": "Kirjakauppa",
     "mobility": "Liikkuminen",

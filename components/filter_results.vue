@@ -4,7 +4,7 @@
       <h1 class="title">{{ $t(`categories.${category}`) }}</h1>
       <v-btn
         icon
-        @click="$emit('input', '')"
+        @click="clearSelection"
       >
         <v-icon>osm-close</v-icon>
       </v-btn>
@@ -13,10 +13,11 @@
     <filter-subcategories
       :value="value"
       :category="category"
-      :column="!isMobile"
-      :class="{ 'px-2': !isMobile }"
+      class="px-2"
       @input="(v) => $emit('input', v)"
     />
+
+    <v-divider v-if="availableServices.length > 0" />
 
     <filter-services
       :value="services"
@@ -31,6 +32,7 @@
     <v-list
       v-else-if="results"
       v-touch="{ left: goNext, right: goPrev }"
+      class="pt-0"
     >
       <template v-for="place in results.features">
         <v-divider />
@@ -180,6 +182,11 @@ export default {
   },
 
   methods: {
+    clearSelection() {
+      this.$emit('input', '');
+      this.$emit('update:services', []);
+    },
+
     goPrev() {
       if (this.canGoPrev) {
         this.updateOffset(this.offset - 10);

@@ -9,6 +9,13 @@
   "coordinates": "Coordenadas",
   "menu": "Menú",
   "missing_shop": "Avisar de un sitio por editar",
+  "missing_shop_dialog": {
+    "description": "«{brand}» pretende mostrar solo lugares que tienen permitido abrir durante el confinamiento. Hay varias razones posibles si algunos faltan:",
+    "add_osm": "El lugar no está en OpenStreetMap. Añádelo:",
+    "add_osm_cta": "Sigue la guía",
+    "add_category": "Falta una categoría de lugares:",
+    "add_category_cta": "Solicitar adición"
+  },
   "change_lang": "Cambiar el idioma",
   "zoomtosee": " Acercar para mostrar sitios abiertos",
   "filter_noresults": "No se han encontrado resultados. Intentelo alejando el mapa",
@@ -132,7 +139,6 @@
     },
     "takeaway": {
       "yes": "Venta para llevar disponible",
-      "modified": "Modificado a ventas para llevar",
       "only": "Solo venta para llevar"
     },
     "drive_through": {
@@ -153,6 +159,11 @@
     "hygiene": "Higiene",
     "hydroalcoholic_gel": "Gel hidroalcohólico",
     "mask": "Mascarillas",
+    "hygiene_status": {
+      "yes": "El {date} disponible",
+      "no": "El {date}: indisponible",
+      "void": "No hay información, haznos saber"
+    },
     "hygiene_entry": {
       "has": "tiene",
       "hasnot": "no tiene"
@@ -239,7 +250,7 @@
     "agrarian": "Productos agrícolas",
     "flower": "Jardines/flores",
     "chemist": "Droguerías",
-    "fabric": "Tiendas textil",
+    "sewing": "Mercerías",
     "shoes": "Zapaterías",
     "books": "Librerías",
     "mobility": "Movilidad",

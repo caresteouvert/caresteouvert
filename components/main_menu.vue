@@ -28,11 +28,7 @@
 
     <v-list class="pb-0">
       <v-divider></v-divider>
-      <main-menu-list-item
-        :title="$t('missing_shop')"
-        :href="links.shopMissing"
-        icon="plus"
-      />
+      <missing-shop-dialog />
       <learn-more />
     </v-list>
 
@@ -47,7 +43,7 @@
 </template>
 
 <script>
-import MainMenuListItem from './main_menu_list_item';
+import MissingShopDialog from './missing_shop_dialog';
 import ChangeLanguage from './change_language';
 import LearnMore from './learn_more';
 import GovernementAlert from './governement_alert';
@@ -59,7 +55,7 @@ export default {
     ChangeLanguage,
     GovernementAlert,
     LearnMore,
-    MainMenuListItem,
+    MissingShopDialog,
     ToggleColor,
   },
 

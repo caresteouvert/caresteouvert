@@ -106,7 +106,6 @@
     },
     "takeaway": {
       "yes": "Servizio d'asporto disponibile",
-      "modified": "Vendita d'asporto modificata",
       "only": "Solo vendita d'asporto"
     },
     "drive_through": {

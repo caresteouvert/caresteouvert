@@ -1,6 +1,6 @@
 {
   "lang": "Euskera",
-  "loading": "Kargatzen, mesedez itxaron...",
+  "loading": "Kargatzen, itxaron mesedez...",
   "covid19-alert": "Jarrai itzazu gobernuaren murrizketak. Errespontsabilitatea ZUREA da.",
   "title": "Irekita jarraitzen du",
   "subtitle": "Itxialdi garaian irekita jarraitzen duten lekuak",
@@ -13,7 +13,7 @@
   "zoomtosee": "Gerturatu irekita dauden lekuak ikusteko",
   "filter_noresults": "Ez da emaitzarik aurkitu. Saiatu zoom egiten.",
   "toggle_color": {
-    "blind": "Daltonikoentzar modua",
+    "blind": "Daltonikoentzat modua",
     "normal": "Daltonikoentzat modua kendu"
   },
   "services": {
@@ -91,11 +91,15 @@
     "signal_warning": "Txosten bat idazten ari zara. Ez da gordeko. Jarraitu nahi al duzu?",
     "signal": "Aldaketa baten berri eman",
     "signal_done": "Zure aldaketa erregistratu da. Eskerrik asko! Mesedez izan pazientzia, prozesatzeko denbora behar du.",
-    "containment_opening_hours": "Itxialdi garai kanpoko egutegia",
-    "containment_brand_hours": "Irekiera orduak begiratu",
+    "signal_done_gofurther": "Leku honi buruz xehetasun gehiago eman nahi ditut",
+    "lockdown_opening_hours": "Irekiera orduak",
+    "normal_opening_hours": "Itxialdi garai kanpoko egutegia",
+    "lockdown_brand_hours": "Irekiera orduak begiratu",
     "facebook": "Facebook orria",
     "not_accessible": "Leku honek ez du rezepziorik",
     "capacity": "Edukiera maximoa: 0 pertsona | Edukiera maximoa: pertsona 1 | Edukiera maximoa: {count} pertsona",
+    "services": "Zerbitzuak",
+    "contact": "Kontaktua",
     "last_update": {
       "date": "Azken eguneraketa: {date}",
       "recent": "Duela minutu gutxi batzuk eguneratuta, beheko informazioa aldatu ahal izan da"
@@ -128,7 +132,6 @@
     },
     "takeaway": {
       "yes": "Eramateko salmenta eskuragarri",
-      "modified": "Moldatutako eramateko salmenta",
       "only": "Eramateko salmenta bakarrik"
     },
     "drive_through": {
@@ -145,6 +148,13 @@
       "drinks": "Edariak",
       "water": "Ura",
       "sweets": "Goxokiak"
+    },
+    "hygiene": "Higienea",
+    "hydroalcoholic_gel": "Gel hidroalkoholikoa",
+    "mask": "Maskara",
+    "hygiene_entry": {
+      "has": "Dauka",
+      "hasnot": "Ez dauka"
     }
   },
   "opening_hours_editor": {
@@ -228,7 +238,8 @@
     "agrarian": "Nekazaritzako produktuak",
     "flower": "Lorategi / loreak",
     "chemist": "Kimikaria",
-    "fabric": "Lantokia",
+    "sewing": "Mertzeria",
+    "shoes": "Zapatak",
     "books": "Liburudenda",
     "mobility": "Mugikortasuna",
     "fuel": "Gasolindegia",

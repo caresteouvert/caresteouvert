@@ -9,6 +9,13 @@
   "coordinates": "Koordinater",
   "menu": "Meny",
   "missing_shop": "Rapportera butik som saknas",
+  "missing_shop_dialog": {
+    "description": "« {brand} » visar bara ställen som har tillständ att ha öppet under undantagstillståndet.  Det finns flera möjliga orsaker varför några ställen kan saknas:",
+    "add_osm": "Stället finns inte i OpenStreetMap. Lägg till det:",
+    "add_osm_cta": "Instruktioner",
+    "add_category": "En hel tjänstkategori saknas:",
+    "add_category_cta": "Be om tillägg"
+  },
   "change_lang": "Byt språk",
   "zoomtosee": "Zooma in för att se öppna ställen",
   "filter_noresults": "Inga resultat. Försök zooma ut.",
@@ -132,7 +139,6 @@
     },
     "takeaway": {
       "yes": "Take-away service tillgänglig",
-      "modified": "Modifierad take-away service",
       "only": "Endast take-away service"
     },
     "drive_through": {
@@ -153,6 +159,11 @@
     "hygiene": "Hygien",
     "hydroalcoholic_gel": "Desinfektionsmedel",
     "mask": "Mask",
+    "hygiene_status": {
+      "yes": "Tillgänglig {date}",
+      "no": "Ej tillgänglig {date}",
+      "void": "Information saknas, låt oss veta"
+    },
     "hygiene_entry": {
       "has": "ja",
       "hasnot": "nej"
@@ -239,7 +250,7 @@
     "agrarian": "Lantbruksprodukter",
     "flower": "Trädgård / blommor",
     "chemist": "Kemikalier",
-    "fabric": "Textilaffär",
+    "sewing": "Sömnad",
     "shoes": "Skor",
     "books": "Bokhandel",
     "mobility": "Trafik",

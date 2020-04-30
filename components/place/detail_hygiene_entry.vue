@@ -1,7 +1,7 @@
 <template>
   <v-list-item>
     <v-list-item-content>
-      <v-list-item-title>
+      <v-list-item-title class="d-flex align-content-center">
         <div class="icon pb-1 d-inline-block">
           <v-icon
             class="mr-6"
@@ -11,7 +11,10 @@
             :color="color"
           >{{ icon }}</v-icon>
         </div>
-        {{ $t(`details.${type}`) }}
+        <div class="d-inline-block">
+          {{ $t(`details.${type}`) }}
+          <br /><span class="caption">{{ this.status }}</span>
+        </div>
       </v-list-item-title>
     </v-list-item-content>
     <v-list-item-action v-if="!success">
@@ -43,6 +46,7 @@
 <script>
 import { apiUrl } from '../../config.json';
 import parseId from '../../lib/parse_id';
+import { getRecentContribution } from '../../lib/recent_contributions';
 
 const statuses = {
   yes: {
@@ -88,7 +92,13 @@ export default {
 
   computed: {
     value() {
-      return this.submitted !== null ? this.submitted : this.has;
+      const contrib = getRecentContribution(this.place.id);
+      if(contrib && contrib.length >= 4 && contrib[3][this.type]) {
+        return contrib[3][this.type];
+      }
+      else {
+        return this.submitted !== null ? this.submitted : this.has;
+      }
     },
 
     icon() {
@@ -97,6 +107,23 @@ export default {
 
     color() {
       return statuses[this.value].color;
+    },
+
+    status() {
+      let date;
+      const contrib = getRecentContribution(this.place.id);
+
+      if(this.success) {
+        date = new Date();
+      }
+      else if(contrib && contrib.length >= 4 && contrib[3][this.type]) {
+        date = new Date(contrib[2] * 1000);
+      }
+      else if(this.place && this.place.properties && this.place.properties.tags && this.place.properties.tags['cro:date']) {
+        date = new Date(this.place.properties.tags['cro:date'] * 1000)
+      }
+      const format = { day: 'numeric', month: 'long' };
+      return this.$t(`details.hygiene_status.${this.value === '' ? 'void' : this.value}`, { date: date && date.toLocaleString(this.$i18n.locale, format) });
     }
   },
 
@@ -130,6 +157,12 @@ export default {
         if (response.status === 200) {
           this.success = true;
           this.submitted = value;
+          this.$store.commit('setContribution', [
+            this.place.properties.fid,
+            'same',
+            parseInt((Date.now() / 1000).toFixed(0)),
+            { [this.type]: value }
+          ]);
         }
       }).finally(() => {
         this.loading = false

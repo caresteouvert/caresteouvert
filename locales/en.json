@@ -9,6 +9,13 @@
   "coordinates": "Coordinates",
   "menu": "Menu",
   "missing_shop": "Report a missing shop",
+  "missing_shop_dialog": {
+    "description": "« {brand} » is intended to display only places that are allowed to open during the lockdown. There are several possible reasons if some are missing:",
+    "add_osm": "The place is not in OpenStreetMap, add it:",
+    "add_osm_cta": "Follow the guide",
+    "add_category": "A category of places is missing:",
+    "add_category_cta": "Request addition"
+  },
   "change_lang": "Change the language",
   "zoomtosee": "Zoom in to display opened places",
   "filter_noresults": "No results found. Try zooming out.",
@@ -132,7 +139,6 @@
     },
     "takeaway": {
       "yes": "Take-away sale available",
-      "modified": "Modified take-away sale",
       "only": "Take-away sale only"
     },
     "drive_through": {
@@ -153,6 +159,11 @@
     "hygiene": "Hygiene",
     "hydroalcoholic_gel": "Hydroalcoolique gel",
     "mask": "Mask",
+    "hygiene_status": {
+      "yes": "On {date} : available",
+      "no": "On {date} : unavailable",
+      "void": "No information, let us know"
+    },
     "hygiene_entry": {
       "has": "has",
       "hasnot": "has no"

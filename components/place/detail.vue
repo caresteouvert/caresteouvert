@@ -339,7 +339,7 @@ export default {
         fetch(`${poiFeature}/${this.id}.json?precision=7`)
         .then(data => data.json())
         .then((place) => {
-          if(contrib) {
+          if(contrib && contrib[1] !== 'same') {
             place.properties.status = contrib[1];
           }
           this.place = place;
@@ -350,7 +350,7 @@ export default {
         })
       ];
 
-      if (contrib) {
+      if (contrib && contrib[1] !== 'same') {
         this.lastUpdate = new Date(contrib[2] * 1000);
       }
       else {
