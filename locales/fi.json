@@ -13,7 +13,7 @@
     "description": "« {brand} » näyttää vain ne paikat joilla on lupa olla auki poikkeusaikana. On olemassa useita mahdollisia syitä sille miksi jotkut paikat eivät näy:",
     "add_osm": "Paikkaa ei löydy OpenStreetMapista, lisää se:",
     "add_osm_cta": "Seuraa ohjeita",
-    "add_category": "En hel tjänstkategori saknas:",
+    "add_category": "Kokonainen palvelukategoria puuttuu:",
     "add_category_cta": "Pyydä lisäystä"
   },
   "change_lang": "Vaihda kieli",
