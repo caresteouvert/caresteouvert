@@ -161,7 +161,7 @@
     "mask": "Masken",
     "hygiene_status": {
       "yes": "Stand {date}: vorrätig",
-      "no": "Am {date}: ausverkauft",
+      "no": "Stand {date}: ausverkauft",
       "void": "Keine Daten, lass es uns wissen."
     },
     "hygiene_entry": {
