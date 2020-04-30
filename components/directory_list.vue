@@ -12,8 +12,18 @@
     </v-list>
     <v-divider />
     <v-list>
-      <v-list-item v-for="item in items" :key="item.id" :to="itemLink(item)" nuxt>
-        <img v-if="displayIcon" src="~/assets/caresteouvert.svg" alt="brand" class="directory-logo" />
+      <v-list-item
+        v-for="item in items"
+        :key="item.id"
+        :to="itemLink(item)"
+        nuxt
+      >
+        <img
+          v-if="displayIcon"
+          src="~/assets/caresteouvert.svg"
+          alt="Ça reste ouvert"
+          class="directory-logo"
+        />
         <div
           v-for="label in itemLabels(item, propertyLabel)"
           :key="label.text"
@@ -41,14 +51,17 @@ export default {
       return this[this.itemKey];
     },
     relatedLinks() {
-      return this.links
-        ? this.links.filter(link => link.rel !== "self")
-        : this.links;
+      return (this.links || [])
+        .filter(link => link.rel !== "self")
+        .map((link) => {
+          const href = link.href.replace('/directory', '/annuaire');
+          return { ...link, href };
+        });
     }
   },
   methods: {
     itemLink(item) {
-      return item.links.href;
+      return item.links.href.replace('/directory', '/annuaire');
     },
     itemLabels: (item, attrs) => {
       if (!attrs) {
