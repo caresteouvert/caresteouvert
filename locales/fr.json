@@ -10,7 +10,7 @@
   "menu": "Menu",
   "missing_shop": "Commerce manquant ?",
   "missing_shop_dialog": {
-    "description": "« {brand} » a pour but de n'afficher que les lieux qui sont autorisés à ouvrir pendant le confinement.\\\\nPlusieurs raisons sont possibles en cas de manque :",
+    "description": "« {brand} » a pour but de n'afficher que les lieux qui sont autorisés à ouvrir pendant le confinement.\\nPlusieurs raisons sont possibles en cas de manque :",
     "add_osm": "Il n'est pas dans OpenStreetMap, ajoutez le :",
     "add_osm_cta": "Suivez le guide",
     "add_category": "Une catégorie de commerces est manquante :",
