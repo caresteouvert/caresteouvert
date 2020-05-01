@@ -161,7 +161,7 @@
     "hygiene_status": {
       "yes": "Em {date}: disponível",
       "no": "Em {date}: indisponível",
-      "void": "Nenhuma informação. Informe-nos."
+      "void": "Nenhuma informação."
     },
     "hygiene_entry": {
       "has": "possui",
