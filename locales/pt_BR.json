@@ -13,7 +13,7 @@
     "description": "\"{brand}\" apenas mostra lugares que possuem permissão para funcionar durante o isolamento. Caso não tenha encontrado uma loja:",
     "add_osm": "A loja não está no OpenStreetMap. Adicione-a.",
     "add_osm_cta": "Ler o guia",
-    "add_category": "Uma categoria de lojas está faltando",
+    "add_category": "Falta uma categoria de lojas",
     "add_category_cta": "Solicitar adição"
   },
   "change_lang": "Alterar idioma",
