@@ -9,6 +9,13 @@
   "coordinates": "Coordenadas",
   "menu": "Menu",
   "missing_shop": "Não encontrou uma loja?",
+  "missing_shop_dialog": {
+    "description": "\"{brand}\" apenas mostra lugares que possuem permissão para funcionar durante o isolamento. Caso não tenha encontrado uma loja:",
+    "add_osm": "A loja não está no OpenStreetMap. Adicione-a",
+    "add_osm_cta": "Ler o guia",
+    "add_category": "Falta uma categoria de lojas",
+    "add_category_cta": "Solicitar adição"
+  },
   "change_lang": "Alterar idioma",
   "zoomtosee": "Aumente o zoom para exibir os lugares abertos",
   "filter_noresults": "Nenhum resultado encontrado. Tente diminuir o zoom.",
@@ -47,7 +54,7 @@
   "days": {
     "monday": "Segunda-feira",
     "tuesday": "Terça-feira",
-    "wednesday": "Qaurta-feira",
+    "wednesday": "Quarta-feira",
     "thursday": "Quinta-feira",
     "friday": "Sexta-feira",
     "saturday": "Sábado",
@@ -91,7 +98,6 @@
     "signal_warning": "O formulário que você estava preenchendo não será salvo. Deseja continuar?",
     "signal": "Informar sobre alterações",
     "signal_done": "O seu formulário foi recebido, muito obrigado! Pode demorar um pouco para processá-lo.",
-    "signal_done_gofurther": "Quero adicionar mais detalhes sobre este lugar",
     "lockdown_opening_hours": "Horário de funcionamento",
     "normal_opening_hours": "Horário de funcionamento fora do isolamento",
     "lockdown_brand_hours": "Ver horário de funcionamento",
@@ -148,6 +154,18 @@
       "drinks": "Bebidas",
       "water": "Água",
       "sweets": "Doces"
+    },
+    "hygiene": "Higiene",
+    "hydroalcoholic_gel": "Álcool em gel",
+    "mask": "Máscara",
+    "hygiene_status": {
+      "yes": "Em {date}: disponível",
+      "no": "Em {date}: indisponível",
+      "void": "Nenhuma informação."
+    },
+    "hygiene_entry": {
+      "has": "possui",
+      "hasnot": "não possui"
     }
   },
   "opening_hours_editor": {
@@ -231,7 +249,8 @@
     "agrarian": "Produtos agrícolas",
     "flower": "Jardinagem e floricultura",
     "chemist": "Cosméticos e beleza",
-    "fabric": "Tecidos",
+    "sewing": "Costureira",
+    "shoes": "Sapataria",
     "books": "Livraria",
     "mobility": "Mobilidade",
     "fuel": "Postos de gasolina",
