@@ -11,7 +11,7 @@
   "missing_shop": "Não encontrou uma loja?",
   "missing_shop_dialog": {
     "description": "\"{brand}\" apenas mostra lugares que possuem permissão para funcionar durante o isolamento. Caso não tenha encontrado uma loja:",
-    "add_osm": "A loja não está no OpenStreetMap, adicione-a",
+    "add_osm": "A loja não está no OpenStreetMap. Adicione-a.",
     "add_osm_cta": "Seguir o guia",
     "add_category": "Uma categoria de lojas está faltando",
     "add_category_cta": "Solicitar adição"
