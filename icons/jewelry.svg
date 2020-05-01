@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg6"
+   viewBox="0 0 18 18"
+   version="1.1"
+   height="18"
+   width="18">
+  <defs
+     id="defs10" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     style="stroke-width:1.28284204"
+     d="M 7.1157178,0 5.191305,2.5656842 h 7.697552 L 10.964444,0 Z M 5.191305,3.8485263 9.0400309,7.3763671 12.888757,3.8485263 Z M 5.0309422,6.5745534 C 3.5997306,7.7656 2.625501,9.5624969 2.625501,11.545579 2.625501,15.071125 5.6271141,18 9,18 c 3.372886,0 6.374499,-2.928875 6.374499,-6.454421 0,-1.9682152 -0.952199,-3.7398684 -2.36543,-4.9310148 L 11.565784,7.937517 c 1.180969,0.8631571 2.004534,2.262959 2.004534,3.608062 0,2.195609 -2.22195,4.449887 -4.5704177,4.449887 -2.3484682,0 -4.5303075,-2.254378 -4.5303075,-4.449887 0,-1.354682 0.850166,-2.7460823 2.044645,-3.608062 z"
+     id="jewellery" />
+</svg>
