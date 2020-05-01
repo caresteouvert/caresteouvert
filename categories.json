@@ -488,6 +488,50 @@
           ],
           "areas": [ "DE", "AT", "CH" ],
           "form_details": [ "delivery", "access" ]
+        },
+        "beauty": {
+          "name": "Beauty store",
+          "osm_tags": [
+            { "shop": "beauty" }
+          ],
+          "areas": [ "DE", "AT", "CH" ],
+          "form_details": [ "delivery", "access" ]
+        },
+        "clothes": {
+          "name": "Clothes",
+          "osm_tags": [
+            { "shop": "clothes" }
+          ],
+          "areas": [ "DE", "AT", "CH" ],
+          "form_details": [ "delivery", "access" ]
+        },
+        "gift": {
+          "name": "Gift shop",
+          "osm_tags": [
+            { "shop": "gift" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
+        "hairdresser": {
+          "name": "Hairdresser",
+          "osm_tags": [
+            { "shop": "hairdresser" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
+        "jewelry": {
+          "name": "Jewelry",
+          "osm_tags": [
+            { "shop": "jewelry" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
+        "toys": {
+          "name": "Toy store",
+          "osm_tags": [
+            { "shop": "toys" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
         }
       }
     },
@@ -522,6 +566,13 @@
             { "shop": "car_parts|car_repair" }
           ],
           "areas": "all"
+        },
+        "car_dealer": {
+          "name": "Car dealer",
+          "osm_tags": [
+            { "shop": "car" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
         },
         "bicycle_tube": {
           "name": "Bicycle tube vending machine",
