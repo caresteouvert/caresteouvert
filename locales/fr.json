@@ -10,7 +10,7 @@
   "menu": "Menu",
   "missing_shop": "Commerce manquant ?",
   "missing_shop_dialog": {
-    "description": "« {brand} » a pour but de n'afficher que les lieux qui sont autorisés à ouvrir pendant le confinement.\nPlusieurs raisons sont possibles en cas de manque :",
+    "description": "« {brand} » a pour but de n'afficher que les lieux qui sont autorisés à ouvrir pendant le confinement.\\nPlusieurs raisons sont possibles en cas de manque :",
     "add_osm": "Il n'est pas dans OpenStreetMap, ajoutez le :",
     "add_osm_cta": "Suivez le guide",
     "add_category": "Une catégorie de commerces est manquante :",
@@ -98,7 +98,6 @@
     "signal_warning": "Vous étiez en train de signaler un changement, si vous partez il ne sera pas sauvegardé. Voulez-vous vraiment quitter la page ?",
     "signal": "Signaler un changement",
     "signal_done": "Votre signalement a été enregistré, merci ! Il apparaitra dans un moment sur la carte.",
-    "signal_done_gofurther": "Je souhaite donner plus d'infos sur ce lieu",
     "lockdown_opening_hours": "Horaires d'ouverture",
     "normal_opening_hours": "Horaires d'ouverture hors-confinement",
     "lockdown_brand_hours": "Consulter les horaires",
