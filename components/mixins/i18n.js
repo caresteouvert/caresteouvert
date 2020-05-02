@@ -21,16 +21,29 @@ export default {
   computed: {
     ...mapState(['country']),
 
+    bestLocaleCountryConfig() {
+      if(config[this.$i18n.locale] && config[this.$i18n.locale][this.country]) {
+        return config[this.$i18n.locale][this.country];
+      }
+      else if(config[this.$i18n.locale] && config[this.$i18n.locale].DEFAULT) {
+        return typeof config[this.$i18n.locale].DEFAULT === "string" ? config[this.$i18n.locale][config[this.$i18n.locale].DEFAULT] : config[this.$i18n.locale].DEFAULT;
+      }
+      else {
+        // Check if country exist in another locale
+        const countries = Object.values(config).filter(c => typeof c === "object" && c[this.country]);
+        return countries.length > 0 ? countries[0] : config.en.DEFAULT;
+      }
+    },
+
     links() {
-      const links = config[this.$i18n.locale] || config.en;
       return {
         ...config.defaults,
-        ...links
+        ...this.bestLocaleCountryConfig
       };
     },
 
     countryConfig() {
-      return config[this.country.toLowerCase()] || this.links;
+      return this.bestLocaleCountryConfig;
     },
 
     logo() {

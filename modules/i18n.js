@@ -3,10 +3,15 @@ import config from '../config.json';
 import { countries } from '../categories';
 
 const domains = countries.map(c => c.toLowerCase()).map((country) => {
-  return {
-    domain: config[country] && config[country].domain,
-    locale: (config[country] && config[country].locale) || country
-  };
+  for(let c in config) {
+    if(config[c][country] && config[c][country].domain) {
+      return {
+        domain: config[c][country].domain,
+        locale: c
+      };
+    }
+  }
+  return {};
 }).filter(v => v.domain);
 
 export default function({ messages }) {
