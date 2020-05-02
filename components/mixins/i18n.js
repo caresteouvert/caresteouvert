@@ -6,6 +6,7 @@ import sigueabierto from '../../assets/sigueabierto.png';
 import segueaberto from '../../assets/segueaberto.png';
 import esobert from '../../assets/esobert.png';
 import ollaanauki from '../../assets/ollaanauki.svg';
+import ezosala from '../../assets/ezosala.svg';
 import caresteouvertMobile from '../../assets/logo_header.png';
 import bleibtoffenMobile from '../../assets/bleibtoffen-mobile.svg';
 import sigueabiertoMobile from '../../assets/sigueabierto-mobile.png';
@@ -14,6 +15,7 @@ import segueabertoMobile from '../../assets/segueaberto-mobile.png';
 import ollaanaukiMobile from '../../assets/ollaanauki-mobile.svg';
 import caresteouvertOg from '../../assets/caresteouvert-og.jpg';
 import bleibtoffenOg from '../../assets/bleibtoffen-og.jpg';
+import ezosalaMobile from '../../assets/ezosala-mobile.svg';
 
 export default {
   computed: {
@@ -38,7 +40,8 @@ export default {
         sigueabierto,
         segueaberto,
         esobert,
-        ollaanauki
+        ollaanauki,
+        ezosala
       }[this.links.brand];
     },
 
@@ -49,7 +52,8 @@ export default {
         sigueabierto: sigueabiertoMobile,
         segueaberto: segueabertoMobile,
         esobert: esobertMobile,
-        ollaanauki: ollaanaukiMobile
+        ollaanauki: ollaanaukiMobile,
+        ezosala: ezosalaMobile
       }[this.links.brand];
     },
 
@@ -60,7 +64,8 @@ export default {
         sigueabierto,
         segueaberto,
         esobert,
-        ollaanauki
+        ollaanauki,
+        ezosala
       }[this.links.brand];
     },
 

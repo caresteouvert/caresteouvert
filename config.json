@@ -31,6 +31,13 @@
     "press": "https://blog.caresteouvert.fr/presse/",
     "disclaimer": "https://blog.caresteouvert.fr/mentions-legales/"
   },
+  "cd": {
+    "locale": "fr",
+    "domain": "www.ezosala.org",
+    "brand": "ezosala",
+    "brand_text": "Ezo sala",
+    "government": "http://stopcoronavirusrdc.info/mesures-de-protection-contre-le-coronavirus"
+  },
   "en": {
     "brand": "caresteouvert",
     "brand_text": "Ça reste ouvert",
