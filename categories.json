@@ -151,7 +151,7 @@
         "health_center": {
           "name": "Health center",
           "osm_tags": [
-            { "healthcare": "centre|clinic|doctor|hospital|rehabilitation" },
+            { "healthcare": "centre|clinic|doctor|hospital|rehabilitation|laboratory" },
             { "amenity": "hospital|clinic|doctors" }
           ],
           "areas": "all",
