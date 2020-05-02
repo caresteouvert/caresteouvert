@@ -18,6 +18,7 @@ export default {
       const transform = {
         phone,
         mobile: phone,
+        "phone:covid19": phone,
         email(email) {
           return { text: email, href: `mailto:${email}` };
         },

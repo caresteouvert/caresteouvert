@@ -167,6 +167,7 @@ import OsmLink from '../osm_link';
 import UpdateDetailDialog from '../update_detail_dialog';
 
 const CONTACTS = {
+  'phone:covid19': 'osm-phone_covid',
   phone: 'osm-phone',
   mobile: 'osm-mobile_phone',
   fax: 'osm-fax',
