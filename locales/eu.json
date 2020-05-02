@@ -9,6 +9,13 @@
   "coordinates": "Koordenatuak",
   "menu": "Menua",
   "missing_shop": "Falta den denda baten berri eman",
+  "missing_shop_dialog": {
+    "description": "« {brand} » itxialdi garaian irekitzaeko baimena duten lekuak erakusteko asmoa du. Leku batzuk falta badira arrazoi desberdinengatik izan daiteke:",
+    "add_osm": "Lekua ez dago OpenStreetMapen, gehitu:",
+    "add_osm_cta": "Gida jarraitu",
+    "add_category": "Lekuen kategoria falta da:",
+    "add_category_cta": "Gehitzea eskatu"
+  },
   "change_lang": "Hizkuntza aldatu",
   "zoomtosee": "Gerturatu irekita dauden lekuak ikusteko",
   "filter_noresults": "Ez da emaitzarik aurkitu. Saiatu zoom egiten.",
@@ -91,7 +98,6 @@
     "signal_warning": "Txosten bat idazten ari zara. Ez da gordeko. Jarraitu nahi al duzu?",
     "signal": "Aldaketa baten berri eman",
     "signal_done": "Zure aldaketa erregistratu da. Eskerrik asko! Mesedez izan pazientzia, prozesatzeko denbora behar du.",
-    "signal_done_gofurther": "Leku honi buruz xehetasun gehiago eman nahi ditut",
     "lockdown_opening_hours": "Irekiera orduak",
     "normal_opening_hours": "Itxialdi garai kanpoko egutegia",
     "lockdown_brand_hours": "Irekiera orduak begiratu",
@@ -152,6 +158,11 @@
     "hygiene": "Higienea",
     "hydroalcoholic_gel": "Gel hidroalkoholikoa",
     "mask": "Maskara",
+    "hygiene_status": {
+      "yes": "{date} datan: eskuragarri",
+      "no": "{date} datan: ez eskuragarri",
+      "void": "Ez dago informaziorik, kontaiguzu"
+    },
     "hygiene_entry": {
       "has": "Dauka",
       "hasnot": "Ez dauka"
@@ -241,11 +252,18 @@
     "sewing": "Mertzeria",
     "shoes": "Zapatak",
     "books": "Liburudenda",
+    "beauty": "Edertasun denda",
+    "clothes": "Arropak",
+    "gift": "Opari denda",
+    "hairdresser": "Ileapaindegia",
+    "jewelry": "Bitxiak",
+    "toys": "Jostailu denda",
     "mobility": "Mugikortasuna",
     "fuel": "Gasolindegia",
     "car_rental": "Ibilgailu alokairua",
     "bicycle": "Bizikleta denda",
     "car": "Garagea",
+    "car_dealer": "Auto saltzailea",
     "bicycle_tube": "Bizikleta kamerak saltzeko makina",
     "public_transport_tickets": "Garraio publiko txartel makina"
   },
