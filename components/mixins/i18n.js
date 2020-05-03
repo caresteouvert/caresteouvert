@@ -76,7 +76,7 @@ export default {
     },
 
     brand() {
-      return config.brands[this.brandId].brand_text;
+      return this.brandId ? config.brands[this.brandId].brand_text : config.brands.DEFAULT.brand_text;
     },
 
     appsInfo() {
