@@ -144,6 +144,10 @@
       "yes": "Service de drive disponible",
       "only": "Uniquement par drive"
     },
+    "wheelchair": {
+      "yes": "Accessible en fauteuil",
+      "limited": "Accès partiel en fauteuil"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Timbres",

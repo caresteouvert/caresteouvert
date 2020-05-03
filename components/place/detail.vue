@@ -294,6 +294,7 @@ export default {
       addInfosDependingOfTagAndStatus('takeaway');
       addInfosDependingOfTagAndStatus('delivery');
       addInfosDependingOfTagAndStatus('drive_through');
+      addInfosDependingOfTagAndStatus('wheelchair');
 
       return services;
     },

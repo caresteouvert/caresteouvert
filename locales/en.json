@@ -144,6 +144,10 @@
       "yes": "Drive-through service available",
       "only": "Only by drive-through"
     },
+    "wheelchair": {
+      "yes": "Accessible in wheelchair",
+      "limited": "Partial access in wheelchair"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Stamps",
