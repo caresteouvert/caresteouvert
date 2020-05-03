@@ -517,7 +517,7 @@
           "osm_tags": [
             { "shop": "gift" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": []
         },
         "hairdresser": {
           "name": "Hairdresser",
