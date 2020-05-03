@@ -12,12 +12,7 @@
     </v-list>
     <v-divider />
     <v-list>
-      <v-list-item
-        v-for="item in items"
-        :key="item.id"
-        :to="itemLink(item)"
-        nuxt
-      >
+      <v-list-item v-for="item in items" :key="item.id" :to="itemLink(item)" nuxt>
         <img
           v-if="displayIcon"
           src="~/assets/caresteouvert.svg"
@@ -29,7 +24,9 @@
           :key="label.text"
           class="directory-item-property"
         >
-          <span v-if="label.translation">{{ $te(`${label.translation}${label.text}`) ? $t(`${label.translation}${label.text}`): $t(`${label.translation}other`) }}</span>
+          <span
+            v-if="label.translation"
+          >{{ $te(`${label.translation}${label.text}`) ? $t(`${label.translation}${label.text}`): $t(`${label.translation}other`) }}</span>
           <span v-else>{{ label.text }}</span>
         </div>
       </v-list-item>
@@ -51,21 +48,24 @@ export default {
   },
 
   computed: {
+    title() {
+      return this.json?.title;
+    },
     items() {
-      return this.data;
+      return this.json?.data;
     },
     relatedLinks() {
-      return (this.links || [])
+      return (this.json?.links || [])
         .filter(link => link.rel !== "self")
-        .map((link) => {
-          const href = link.href.replace('/directory', '/annuaire');
+        .map(link => {
+          const href = link.href.replace("/directory", "/annuaire");
           return { ...link, href };
         });
     }
   },
   methods: {
     itemLink(item) {
-      return item.links.href.replace('/directory', '/annuaire');
+      return item.links.href.replace("/directory", "/annuaire");
     },
     itemLabels: (item, attrs) => {
       if (!attrs) {
@@ -105,7 +105,9 @@ export default {
       .then(json => {
         const selfLink = json.links.filter(link => link.rel === "self");
         json.title = selfLink.length > 0 ? selfLink[0].title : "";
-        return json;
+        return {
+          json
+        };
       });
   }
 };
