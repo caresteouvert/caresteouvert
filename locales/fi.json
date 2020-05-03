@@ -144,6 +144,10 @@
       "yes": "Autokaista",
       "only": "Vain autokaista"
     },
+    "wheelchair": {
+      "yes": "Pääsy pyörätuolilla",
+      "limited": "Osittainen pääsy pyörätuolilla"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Postimerkkejä",
