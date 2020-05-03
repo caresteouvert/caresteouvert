@@ -5,6 +5,7 @@
 <script>
 import OsmMain from '../components/main';
 import i18nMixin from '../components/mixins/i18n';
+import config from '../config.json';
 
 export default {
   mixins: [i18nMixin],

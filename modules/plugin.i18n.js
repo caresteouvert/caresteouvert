@@ -8,8 +8,8 @@ Vue.use(VueI18n);
 
 function getLocale(locales, req, params) {
   let matchedLocale;
-  const hostname = process.client ? window.location.host : (req.headers['x-forwarded-host'] || req.headers.host);
-  const domain = domains.find((d) => d.domain === hostname);
+  const hostname = (process.client ? window.location.host : (req.headers['x-forwarded-host'] || req.headers.host)).replace("www.", "");
+  const domain = domains.find((d) => d.domain === hostname && (d.domains && d.domains.includes(hostname)));
 
   if (params.lang) {
     matchedLocale = params.lang;
@@ -20,7 +20,7 @@ function getLocale(locales, req, params) {
   } else if (req && typeof req.headers['accept-language'] !== 'undefined') {
     matchedLocale = matchBrowserLocale(locales, parseAcceptLanguage(req.headers['accept-language']))
   } else if (domain) {
-    matchedLocale = domain.locale;
+    matchedLocale = domain.defaultLocale;
   }
   if (locales.includes(matchedLocale)) {
     return matchedLocale;

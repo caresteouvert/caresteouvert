@@ -1,8 +1,10 @@
+import { findBrand } from '../lib/url';
 import categories from '../categories.json';
 import categoriesForCountry from '../lib/categories';
 
 export const state = () => ({
   country: '',
+  brandId: 'DEFAULT',
   categories: [],
   place: null,
   highlightPlace: null,
@@ -16,6 +18,10 @@ export const mutations = {
 
   setPlace (state, place) {
     state.place = place;
+  },
+
+  setBrandId (state, brandId) {
+    state.brandId = brandId;
   },
 
   highlightPlace (state, place) {
@@ -35,4 +41,12 @@ export const getters = {
   allCategories(state) {
     return categoriesForCountry(categories, state.country);
   },
+};
+
+export const actions = {
+  nuxtServerInit ({ commit }, { req }) {
+    if (req.headers.host) {
+      commit('setBrandId', findBrand(req.headers.host).brand);
+    }
+  }
 };

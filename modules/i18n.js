@@ -1,18 +1,7 @@
 import { resolve, join } from 'path';
 import config from '../config.json';
-import { countries } from '../categories';
 
-const domains = countries.map(c => c.toLowerCase()).map((country) => {
-  for(let c in config) {
-    if(config[c][country] && config[c][country].domain) {
-      return {
-        domain: config[c][country].domain,
-        locale: c
-      };
-    }
-  }
-  return {};
-}).filter(v => v.domain);
+const domains = Object.entries(config.brands).map(e => ({ brand: e[0], ...e[1] }));
 
 export default function({ messages }) {
   this.addPlugin({

@@ -34,17 +34,24 @@
 
 <script>
 import i18nMixin from './mixins/i18n';
+
 const APPS_INFO_LOCAL_STORAGE = 'appsInfo';
+
 export default {
   mixins: [i18nMixin],
 
   data() {
-    const seen = localStorage.getItem(APPS_INFO_LOCAL_STORAGE);
-    const isApp = this.$route.query.fromapp && this.$route.query.fromapp.startsWith("t");
-    const isFr = this.$i18n.locale.startsWith("fr");
     return {
-      show: !isApp && isFr && !this.isInIframe() && seen === null
+      closed: false
     };
+  },
+
+  computed: {
+    show() {
+      const seen = localStorage.getItem(APPS_INFO_LOCAL_STORAGE);
+      const isApp = this.$route.query.fromapp && this.$route.query.fromapp.startsWith("t");
+      return !this.closed && !isApp && this.appsInfo && !this.isInIframe() && seen === null;
+    }
   },
 
   watch: {
@@ -58,7 +65,7 @@ export default {
 
   methods: {
     seen() {
-      this.show = false;
+      this.closed = true;
       localStorage.setItem(APPS_INFO_LOCAL_STORAGE, true);
     },
 

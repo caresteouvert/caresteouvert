@@ -17,73 +17,70 @@ import caresteouvertOg from '../../assets/caresteouvert-og.jpg';
 import bleibtoffenOg from '../../assets/bleibtoffen-og.jpg';
 import ezosalaMobile from '../../assets/ezosala-mobile.svg';
 
+function bestLocale(obj, locale) {
+  Object.entries(obj).forEach(e => {
+    if(typeof e[1] === "object") {
+      obj[e[0]] = e[1][locale] || e[1].DEFAULT;
+    }
+  });
+
+  return obj;
+}
+
 export default {
   computed: {
-    ...mapState(['country']),
-
-    bestLocaleCountryConfig() {
-      if(config[this.$i18n.locale] && config[this.$i18n.locale][this.country]) {
-        return config[this.$i18n.locale][this.country];
-      }
-      else if(config[this.$i18n.locale] && config[this.$i18n.locale].DEFAULT) {
-        return typeof config[this.$i18n.locale].DEFAULT === "string" ? config[this.$i18n.locale][config[this.$i18n.locale].DEFAULT] : config[this.$i18n.locale].DEFAULT;
-      }
-      else {
-        // Check if country exist in another locale
-        const countries = Object.values(config).filter(c => typeof c === "object" && c[this.country]);
-        return countries.length > 0 ? countries[0] : config.en.DEFAULT;
-      }
-    },
+    ...mapState(['country', 'brandId']),
 
     links() {
-      return {
-        ...config.defaults,
-        ...this.bestLocaleCountryConfig
-      };
+      return bestLocale(Object.assign({}, config.locales.DEFAULT, config.locales[this.$i18n.locale]), this.$i18n.locale);
     },
 
     countryConfig() {
-      return this.bestLocaleCountryConfig;
+      return bestLocale(Object.assign({}, config.countries.DEFAULT, config.countries[this.country]), this.$i18n.locale);
     },
 
     logo() {
       return {
-        caresteouvert,
+        DEFAULT: caresteouvert,
         bleibtoffen,
         sigueabierto,
         segueaberto,
         esobert,
         ollaanauki,
         ezosala
-      }[this.links.brand];
+      }[this.brandId];
     },
 
     logoMobile() {
       return {
-        caresteouvert: caresteouvertMobile,
+        DEFAULT: caresteouvertMobile,
         bleibtoffen: bleibtoffenMobile,
         sigueabierto: sigueabiertoMobile,
         segueaberto: segueabertoMobile,
         esobert: esobertMobile,
         ollaanauki: ollaanaukiMobile,
         ezosala: ezosalaMobile
-      }[this.links.brand];
+      }[this.brandId];
     },
 
     logoOg() {
       return {
-        caresteouvert: caresteouvertOg,
+        DEFAULT: caresteouvertOg,
         bleibtoffen: bleibtoffenOg,
         sigueabierto,
         segueaberto,
         esobert,
         ollaanauki,
         ezosala
-      }[this.links.brand];
+      }[this.brandId];
     },
 
     brand() {
-      return this.links.brand_text;
+      return config.brands[this.brandId].brand_text;
+    },
+
+    appsInfo() {
+      return config.brands[this.brandId].appsInfo || false;
     }
   }
 }

@@ -11,21 +11,78 @@
   "osmUrl": "https://www.openstreetmap.org",
   "minZoomPoi": 12,
   "maxZoomPoi": 13,
-  "defaults": {
-    "blog": "https://blog.caresteouvert.fr/",
-    "shopMissing": "https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/",
-    "townhalls": "https://blog.caresteouvert.fr/un-outil-de-communication-des-mairies/",
-    "about": "https://blog.caresteouvert.fr/about/",
-    "press": "https://blog.caresteouvert.fr/presse/",
-    "disclaimer": "https://blog.caresteouvert.fr/mentions-legales/"
-  },
-  "fr": {
-    "DEFAULT": "FR",
-    "FR": {
-      "domain": "www.caresteouvert.fr",
-      "brand": "caresteouvert",
+  "brands": {
+    "DEFAULT": {
       "brand_text": "Ça reste ouvert",
-      "government": "https://www.gouvernement.fr/info-coronavirus",
+      "domain": "caresteouvert.fr",
+      "defaultLocale": "fr",
+      "appsInfo": true
+    },
+    "ezosala": {
+      "brand_text": "Ezo sala",
+      "domain": "ezosala.org",
+      "defaultLocale": "fr"
+    },
+    "bleibtoffen": {
+      "brand_text": "Bleibt offen",
+      "domains": [ "bleibtoffen.de", "bleibtoffen.at", "bleibtoffen.ch" ],
+      "defaultLocale": "de"
+    },
+    "esobert": {
+      "brand_text": "És Obert",
+      "domain": "esobert.osmcatala.cat",
+      "defaultLocale": "ca"
+    },
+    "sigueabierto": {
+      "brand_text": "Sigue Abierto",
+      "domain": "sigueabierto.es",
+      "defaultLocale": "es"
+    },
+    "segueaberto": {
+      "brand_text": "Segue Aberto",
+      "defaultLocale": "gl"
+    },
+    "ollaanauki": {
+      "brand_text": "Ollaan Auki",
+      "domain": "kartta.ollaanauki.fi",
+      "defaultLocale": "fi"
+    }
+  },
+  "countries": {
+    "DEFAULT": {
+      "government": "https://www.who.int/health-topics/coronavirus"
+    },
+    "FR": {
+      "government": "https://www.gouvernement.fr/info-coronavirus"
+    },
+    "CD": {
+      "government": "http://stopcoronavirusrdc.info/mesures-de-protection-contre-le-coronavirus"
+    },
+    "DE": {
+      "government": "https://www.bundesgesundheitsministerium.de/coronavirus.html"
+    },
+    "AT": {
+      "government": "https://www.sozialministerium.at/Informationen-zum-Coronavirus/Neuartiges-Coronavirus-(2019-nCov).html"
+    },
+    "CH": {
+      "government": "https://www.bag.admin.ch/bag/de/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/novel-cov.html"
+    },
+    "ES": {
+      "government": {
+        "DEFAULT": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/home.htm",
+        "ca": "https://web.gencat.cat/ca/coronavirus/index.html",
+        "gl": "https://coronavirus.sergas.es/?idioma=ga"
+      }
+    },
+    "FI": {
+      "government": {
+        "DEFAULT": "https://valtioneuvosto.fi/tietoa-koronaviruksesta/",
+        "sv": "https://valtioneuvosto.fi/sv/information-om-coronaviruset"
+      }
+    }
+  },
+  "locales": {
+    "DEFAULT": {
       "blog": "https://blog.caresteouvert.fr/",
       "shopMissing": "https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/",
       "townhalls": "https://blog.caresteouvert.fr/un-outil-de-communication-des-mairies/",
@@ -33,28 +90,23 @@
       "press": "https://blog.caresteouvert.fr/presse/",
       "disclaimer": "https://blog.caresteouvert.fr/mentions-legales/"
     },
-    "CD": {
-      "domain": "www.ezosala.org",
-      "brand": "ezosala",
-      "brand_text": "Ezo sala",
-      "government": "http://stopcoronavirusrdc.info/mesures-de-protection-contre-le-coronavirus"
-    }
-  },
-  "en": {
-    "DEFAULT": {
-      "brand": "caresteouvert",
-      "brand_text": "Ça reste ouvert",
-      "government": "https://www.who.int/health-topics/coronavirus",
-      "shopMissing": "/en/what-do-with-missing-establishments/"
-    }
-  },
-  "de": {
-    "DEFAULT": "DE",
-    "DE": {
-      "domain": "www.bleibtoffen.de",
-      "brand": "bleibtoffen",
-      "brand_text": "Bleibt offen",
-      "government": "https://www.bundesgesundheitsministerium.de/coronavirus.html",
+    "en": {
+      "blog": "https://blog.caresteouvert.fr/",
+      "shopMissing": "/en/what-do-with-missing-establishments/",
+      "townhalls": "https://blog.caresteouvert.fr/un-outil-de-communication-des-mairies/",
+      "about": "https://blog.caresteouvert.fr/about/",
+      "press": "https://blog.caresteouvert.fr/presse/",
+      "disclaimer": "https://blog.caresteouvert.fr/mentions-legales/"
+    },
+    "fr": {
+      "blog": "https://blog.caresteouvert.fr/",
+      "shopMissing": "https://blog.caresteouvert.fr/que-faire-sil-manque-un-commerce-dans-ca-reste-ouvert/",
+      "townhalls": "https://blog.caresteouvert.fr/un-outil-de-communication-des-mairies/",
+      "about": "https://blog.caresteouvert.fr/about/",
+      "press": "https://blog.caresteouvert.fr/presse/",
+      "disclaimer": "https://blog.caresteouvert.fr/mentions-legales/"
+    },
+    "de": {
       "blog": "https://www.bleibtoffen.org/blog.html",
       "shopMissing": "https://www.bleibtoffen.org/2020/04/10/geschaeft-fehlt.html",
       "townhalls": "https://www.bleibtoffen.org/2020/04/11/kommunikationswerkzeug.html",
@@ -62,79 +114,27 @@
       "press": "https://www.bleibtoffen.org/presse.html",
       "disclaimer": "https://www.bleibtoffen.org/impressum.html"
     },
-    "AT": {
-      "domain": "www.bleibtoffen.at",
-      "brand": "bleibtoffen",
-      "brand_text": "Bleibt offen",
-      "government": "https://www.sozialministerium.at/Informationen-zum-Coronavirus/Neuartiges-Coronavirus-(2019-nCov).html",
-      "blog": "https://www.bleibtoffen.org/blog.html",
-      "shopMissing": "https://www.bleibtoffen.org/2020/04/10/geschaeft-fehlt.html",
-      "townhalls": "https://www.bleibtoffen.org/2020/04/11/kommunikationswerkzeug.html",
-      "about": "https://www.bleibtoffen.org/ueber.html",
-      "press": "https://www.bleibtoffen.org/presse.html",
-      "disclaimer": "https://www.bleibtoffen.org/impressum.html"
-    },
-    "CH": {
-      "domain": "www.bleibtoffen.ch",
-      "brand": "bleibtoffen",
-      "brand_text": "Bleibt offen",
-      "government": "https://www.bag.admin.ch/bag/de/home/krankheiten/ausbrueche-epidemien-pandemien/aktuelle-ausbrueche-epidemien/novel-cov.html",
-      "blog": "https://www.bleibtoffen.org/blog.html",
-      "shopMissing": "https://www.bleibtoffen.org/2020/04/10/geschaeft-fehlt.html",
-      "townhalls": "https://www.bleibtoffen.org/2020/04/11/kommunikationswerkzeug.html",
-      "about": "https://www.bleibtoffen.org/ueber.html",
-      "press": "https://www.bleibtoffen.org/presse.html",
-      "disclaimer": "https://www.bleibtoffen.org/impressum.html"
-    }
-  },
-  "ca": {
-    "DEFAULT": {
-      "domain": "esobert.osmcatala.cat",
-      "brand": "esobert",
-      "brand_text": "És Obert",
-      "government": "https://web.gencat.cat/ca/coronavirus/index.html",
+    "ca": {
+      "blog": "/blog/es/",
       "shopMissing": "/ca/que-fer-si-falta-un-comerc-a-es-obert/"
-    }
-  },
-  "es": {
-    "DEFAULT": "ES",
-    "ES": {
-      "domain": "www.sigueabierto.es",
-      "brand": "sigueabierto",
-      "brand_text": "Sigue Abierto",
-      "government": "https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/home.htm",
+    },
+    "es": {
       "blog": "/blog/es/",
       "shopMissing": "/es/que-hacer-si-falta-un-comercio-en-sigue-abierto/"
-    }
-  },
-  "gl": {
-    "DEFAULT": {
-      "brand": "segueaberto",
-      "brand_text": "Segue Aberto",
-      "government": "https://coronavirus.sergas.es/?idioma=ga",
+    },
+    "gl": {
+      "blog": "/blog/es/",
       "shopMissing": "/gl/que-facer-se-falla-un-negocio-no-segues-aberto/"
-    }
-  },
-  "fi": {
-    "DEFAULT": "FI",
-    "FI": {
-      "brand": "ollaanauki",
-      "brand_text": "Ollaan Auki",
-      "domain": "kartta.ollaanauki.fi",
-      "government": "https://valtioneuvosto.fi/tietoa-koronaviruksesta/",
+    },
+    "fi": {
       "blog": "https://blog.ollaanauki.fi/",
       "shopMissing": "https://blog.ollaanauki.fi/lisaa_palvelu/",
       "townhalls": "https://blog.ollaanauki.fi/kaupungeille-ja-yhteisoille/",
       "about": "https://blog.ollaanauki.fi/meista/",
       "press": "https://blog.ollaanauki.fi/lehdistolle/",
       "disclaimer": "https://blog.ollaanauki.fi/vastuuvapauslauseke/"
-    }
-  },
-  "sv": {
-    "FI": {
-      "brand": "ollaanauki",
-      "brand_text": "Ollaan Auki",
-      "government": "https://valtioneuvosto.fi/sv/information-om-coronaviruset",
+    },
+    "sv": {
       "blog": "https://blog.ollaanauki.fi/sv/valkommen/",
       "shopMissing": "https://blog.ollaanauki.fi/sv/hur-lagger-jag-till/",
       "townhalls": "https://blog.ollaanauki.fi/sv/for-stader-kommuner/",
