@@ -48,7 +48,10 @@
             :last-update="lastUpdate"
           />
 
-          <detail-hygiene :place="place" />
+          <detail-hygiene
+            v-if="status != 'closed'"
+            :place="place"
+          />
 
           <v-list
             v-if="infos.length > 0 || hasVending"
