@@ -17,7 +17,7 @@ legal_rules="/ssd/data/download/legal_rules.csv"
 if wget "https://github.com/PanierAvide/Covid_enseignes/raw/master/legal_rules.csv" --quiet -O "${legal_rules}"; then
     psql ${CONNEXION} -c "DROP TABLE IF EXISTS legal_rules; CREATE TABLE legal_rules(country VARCHAR, country_subarea VARCHAR, category VARCHAR, osm_tags JSONB, start_date DATE, end_date DATE, legal_state VARCHAR, details VARCHAR, source_url VARCHAR);"
     psql ${CONNEXION} -c "\copy legal_rules FROM '${legal_rules}' CSV DELIMITER ',' HEADER"
-    psql ${CONNEXION} -c "DELETE FROM legal_rules WHERE current_date < start_date OR (end_date IS NOT NULL AND current_date > end_date); CREATE INDEX legal_rules_country_idx ON legal_rules(country); CREATE INDEX legal_rules_country_subarea_idx ON legal_rules(country_subarea); CREATE INDEX legal_rules_category_idx ON legal_rules(category);"
+    psql ${CONNEXION} -c "DELETE FROM legal_rules WHERE current_date < start_date OR (end_date IS NOT NULL AND current_date > end_date); CREATE INDEX legal_rules_country_idx ON legal_rules(country); CREATE INDEX legal_rules_country_subarea_idx ON legal_rules(country_subarea); CREATE INDEX legal_rules_category_idx ON legal_rules(category); CREATE INDEX legal_rules_legal_state_idx ON legal_rules(legal_state);"
 else
     echo "Error when downloading legal rules"
 fi

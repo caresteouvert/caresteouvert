@@ -26,7 +26,7 @@ BEGIN
 			END IF;
 
 		-- opening_hours:covid19 = closed
-		ELSIF oh_c19 ILIKE 'off%' THEN
+		ELSIF oh_c19 ILIKE 'off%' OR oh_c19 = 'closed' THEN
 			status := 'closed';
 
 		-- opening_hours:covid19 = opening_hours
@@ -180,6 +180,20 @@ SELECT *
 FROM selection
 -- Remove edge cases needing advanced filtering like vending machines
 WHERE normalized_cat IS NOT NULL AND NOT (tags ? 'access' AND tags->>'access' NOT IN ('yes', 'public', 'permissive'));
+
+-- Join legal status
+UPDATE poi_osm_next
+SET
+	status = 'closed',
+	status_order = status_order_value('closed'),
+	source_status = 'legal'
+FROM legal_rules r
+WHERE
+	r.legal_state = 'closed'
+	AND poi_osm_next.status = 'unknown'
+	AND poi_osm_next.country = r.country
+	AND (r.country_subarea IS NULL OR poi_osm_next.sub_country = r.country_subarea)
+	AND (r.category = poi_osm_next.cat OR r.category = poi_osm_next.normalized_cat);
 
 -- Join brand informations
 UPDATE poi_osm_next
