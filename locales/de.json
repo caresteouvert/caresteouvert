@@ -98,7 +98,6 @@
     "signal_warning": "Du warst gerade dabei, eine Änderung zu melden. Möchtest du deine Eingaben verwerfen?",
     "signal": "Änderung melden",
     "signal_done": "Vielen Dank, deine Änderungsmeldung wurde erfasst!\n\nBitte beachte, dass Meldungen mit Kommentar manuell von der OpenStreetMap-Community bearbeitet werden müssen. Kommentarlose Änderungen erscheinen automatisch nach etwa einer Stunde auf der Karte.",
-    "signal_done_gofurther": "Ich möchte weitere Angaben zu diesem Ort machen",
     "lockdown_opening_hours": "Öffnungszeiten",
     "normal_opening_hours": "Reguläre Öffnungszeiten",
     "lockdown_brand_hours": "Öffnungszeiten anzeigen",
@@ -144,6 +143,10 @@
     "drive_through": {
       "yes": "Drive-in geöffnet",
       "only": "Nur Drive-in"
+    },
+    "wheelchair": {
+      "yes": "Voll rollstuhlgerecht",
+      "limited": "Teilweise rollstuhlgerecht"
     },
     "vending": {
       "pizza": "Pizza",
@@ -253,11 +256,18 @@
     "sewing": "Nähgeschäft",
     "shoes": "Schuhgeschäft",
     "books": "Buchhandlung",
+    "beauty": "Schönheitssalon",
+    "clothes": "Bekleidung",
+    "gift": "Souvenirladen",
+    "hairdresser": "Friseur",
+    "jewelry": "Juwelier",
+    "toys": "Spielwaren",
     "mobility": "Mobilität",
     "fuel": "Tankstelle",
     "car_rental": "Autovermietung",
     "bicycle": "Fahrradladen",
     "car": "Autowerkstatt",
+    "car_dealer": "Autohaus",
     "bicycle_tube": "Fahrradschlauch-Automat",
     "public_transport_tickets": "Fahrkartenautomat"
   },
