@@ -505,6 +505,13 @@
           "areas": [ "DE", "AT", "CH" ],
           "form_details": [ "delivery", "access" ]
         },
+        "furniture": {
+          "name": "Furniture",
+          "osm_tags": [
+            { "shop": "furniture" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "gift": {
           "name": "Gift shop",
           "osm_tags": [
