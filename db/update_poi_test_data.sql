@@ -124,3 +124,18 @@ CREATE TABLE poi_cro(
 
 INSERT INTO imposm_osm_point(osm_id, way, name, tags, shop, opening_hours, country_iso2)
   VALUES (1, ST_GeomFromText('POINT(0 0)', 3857), 'Test 1', 'shop=>supermarket'::hstore, 'supermarket', 'Mo-Sa 09:00-10:00', 'FR');
+
+INSERT INTO imposm_osm_point(osm_id, way, name, tags, shop, opening_hours, country_iso2)
+  VALUES (2, ST_GeomFromText('POINT(0 0)', 3857), 'Test 2', 'shop=>supermarket'::hstore, 'supermarket', 'Mo-Sa 09:00-10:00', 'FR');
+INSERT INTO poi_cro(osmid, tags, lastupdate)
+  VALUES ('n2', '{"vending:hydroalcoolic_gel": "yes"}'::jsonb, DATE '2020-05-05');
+
+INSERT INTO imposm_osm_point(osm_id, way, name, tags, shop, opening_hours, country_iso2)
+  VALUES (3, ST_GeomFromText('POINT(0 0)', 3857), 'Test 2', 'shop=>supermarket'::hstore, 'supermarket', 'Mo-Sa 09:00-10:00', 'FR');
+INSERT INTO poi_cro(osmid, tags, lastupdate)
+  VALUES ('n3', '{"vending:mask": "yes"}'::jsonb, DATE '2020-05-05');
+
+INSERT INTO imposm_osm_point(osm_id, way, name, tags, shop, opening_hours, country_iso2)
+  VALUES (4, ST_GeomFromText('POINT(0 0)', 3857), 'Test 2', 'shop=>supermarket'::hstore, 'supermarket', 'Mo-Sa 09:00-10:00', 'FR');
+INSERT INTO poi_cro(osmid, tags, lastupdate)
+  VALUES ('n4', '{"vending:mask": "no", "vending:hydroalcoolic_gel": "yes"}'::jsonb, DATE '2020-05-05');

@@ -1,6 +1,6 @@
 -- Start a transaction.
 BEGIN;
-SELECT plan(2);
+SELECT plan(12);
 
 SELECT tables_are(
     'public',
@@ -10,7 +10,21 @@ SELECT tables_are(
            'countries_subcountries' ]
 );
 
-SELECT is((SELECT count(*)::int FROM poi_osm), 1);
+SELECT has_view('poi_osm_light');
+
+SELECT is((SELECT count(*)::int FROM poi_osm), 4);
+
+SELECT is((SELECT hydroalcoolic_gel FROM poi_osm WHERE fid='n2'), 'yes');
+SELECT is((SELECT mask FROM poi_osm WHERE fid='n2'), NULL);
+SELECT is((SELECT tags FROM poi_osm WHERE fid='n2'), ' {"shop": "supermarket", "cro:date": "1588636800", "vending:hydroalcoolic_gel": "yes"}');
+
+SELECT is((SELECT hydroalcoolic_gel FROM poi_osm WHERE fid='n3'), NULL);
+SELECT is((SELECT mask FROM poi_osm WHERE fid='n3'), 'yes');
+SELECT is((SELECT tags FROM poi_osm WHERE fid='n3'), ' {"shop": "supermarket", "cro:date": "1588636800", "vending:mask": "yes"}');
+
+SELECT is((SELECT hydroalcoolic_gel FROM poi_osm WHERE fid='n4'), 'yes');
+SELECT is((SELECT mask FROM poi_osm WHERE fid='n4'), 'no');
+SELECT is((SELECT tags FROM poi_osm WHERE fid='n4'), ' {"shop": "supermarket", "cro:date": "1588636800", "vending:mask": "no", "vending:hydroalcoolic_gel": "yes"}');
 
 SELECT * FROM finish();
 ROLLBACK;
