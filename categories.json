@@ -505,12 +505,23 @@
           "areas": [ "DE", "AT", "CH" ],
           "form_details": [ "delivery", "access" ]
         },
+        "furniture": {
+          "name": "Furniture",
+          "osm_tags": [
+            { "shop": "furniture" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "gift": {
           "name": "Gift shop",
           "osm_tags": [
             { "shop": "gift" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "osm_filter_tags": [
+            { "opening_hours:covid19": "*" }
+          ],
+          "areas": [ "DE", "AT", "CH" ],
+          "-mapfilter": "all"
         },
         "hairdresser": {
           "name": "Hairdresser",
