@@ -63,14 +63,30 @@ export default {
       type: Number,
       required: false,
       default: 0
+    },
+    country: {
+      type: String,
+      required: false,
+      default: 'FR'
+    },
+    coordinates: {
+      type: Array,
+      required: false,
+      default: [2.3469, 48.8589]
     }
   },
 
   computed: {
     openingHours() {
       try {
-        return new OpeningHours(this.value, null, { mode: this.mode, locale: this.$i18n.locale });
+        return new OpeningHours(this.value, { address: { country_code: this.country.toLowerCase() }, lon: this.coordinates[0], lat: this.coordinates[1] }, { mode: this.mode, locale: this.$i18n.locale });
       } catch (e) {
+        // If missing holidays, no address given
+        try {
+          return new OpeningHours(this.value, null, { mode: this.mode, locale: this.$i18n.locale });
+        }
+        catch(e) {
+        }
       }
     },
     comment() {

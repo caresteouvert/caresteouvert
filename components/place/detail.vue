@@ -97,6 +97,8 @@
              <detail-opening-hours
                v-if="hasSpecificOpeningHours"
                :value="place.properties.opening_hours"
+               :country="place.properties.country"
+               :coordinates="place.geometry.coordinates"
              />
              <detail-link
                v-else-if="place.properties.brand_hours"
@@ -115,7 +117,11 @@
                  type="warning"
                  class="mb-0 pa-0"
                >
-                 <detail-opening-hours :value="place.properties.tags.opening_hours" />
+                 <detail-opening-hours
+                   :value="place.properties.tags.opening_hours"
+                   :country="place.properties.country"
+                   :coordinates="place.geometry.coordinates"
+                 />
                </v-alert>
              </template>
            </v-list>
