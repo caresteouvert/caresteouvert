@@ -174,7 +174,7 @@
   },
   "opening_hours_editor": {
     "day_shortcuts": {
-      "weekdays": "Lunes a Sábado"
+      "weekdays": "De lunes a sábado"
     },
     "select_days": "Seleccione los días que compartan el mismo horario",
     "next": "Seleccionar horas",
