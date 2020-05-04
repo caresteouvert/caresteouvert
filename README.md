@@ -1,4 +1,4 @@
-# Ça reste ouvert (It Stays Open)
+# Ça reste ouvert (It Remains Open)
 
 ![Ça reste ouvert](assets/logo.png)
 
