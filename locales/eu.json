@@ -121,7 +121,7 @@
     "state": {
       "open": "Itxialdian irekita dauden lekuak",
       "open_adapted": "Itxialdi garaian irekita dagoen lekua, moldatutako ordutegiarekin",
-      "partial": "Itxialdi garaian seguruaski irekita dagoen lekua (egiaztatzeko)",
+      "partial": "Leku hau itxialdi garaian partzialki irekita dagoen marka bati dagokio. Irekita edo itxita al dago? Esaiguzu.",
       "unknown": "Leku honek itxialdi garaian irekitzeko baimena du, baina irekita al itxita al dago? Esaiguzu",
       "closed": "Itxialdi garaian itxita dagoen lekua"
     },
