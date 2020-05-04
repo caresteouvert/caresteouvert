@@ -59,7 +59,7 @@
             { "amenity": "bank|atm|money_transfer|mobile_money_agent" },
             { "shop": "money_lender" }
           ],
-          "areas": "all",
+          "-areas": [ "CD" ],
           "form_details": [ "access" ]
         },
         "insurance": {
@@ -381,6 +381,41 @@
         }
       },
       "-mapfilter": [ "CD" ]
+    },
+    "money": {
+      "name": "Money",
+      "subcategories": {
+        "bank": {
+          "name": "Bank",
+          "osm_tags": [
+            { "amenity": "bank" }
+          ],
+          "areas": [ "CD" ],
+          "form_details": [ "access" ]
+        },
+        "atm": {
+          "name": "ATM",
+          "osm_tags": [
+            { "amenity": "atm" }
+          ],
+          "areas": [ "CD" ]
+        },
+        "money_transfer": {
+          "name": "Money transfer",
+          "osm_tags": [
+            { "amenity": "money_transfer" }
+          ],
+          "areas": [ "CD" ]
+        },
+        "mobile_money_agent": {
+          "name": "Mobile money agent",
+          "osm_tags": [
+            { "amenity": "mobile_money_agent" }
+          ],
+          "areas": [ "CD" ]
+        }
+      },
+      "mapfilter": [ "CD" ]
     },
     "shop": {
       "name": "Shops",
