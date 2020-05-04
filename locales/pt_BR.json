@@ -144,6 +144,10 @@
       "yes": "Drive-thru disponível",
       "only": "Somente drive-thru"
     },
+    "wheelchair": {
+      "yes": "Acessível para cadeirantes",
+      "limited": "Acesso parcial para cadeirantes"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Selos",
@@ -196,8 +200,7 @@
     "childcare": "Creche",
     "employment_agency": "Agência de empregos",
     "funeral_directors": "Serviços funerários",
-    "bank": "Banco",
-    "moneylender": "Empréstimos",
+    "money": "Dinheiro",
     "insurance": "Seguradora",
     "tourism_info": "Informações turísticas",
     "hotel": "Hospedagem",
@@ -226,6 +229,7 @@
     "farm": "Loja rural",
     "marketplace": "Mercado",
     "bakery": "Padaria",
+    "alcohol": "Loja de bebidas",
     "eat": "Restaurante e retirada",
     "vending_machine": "Máquinas de venda automática",
     "restaurant": "Restaurante",
@@ -236,7 +240,10 @@
     "drugs": "Cigarro e álcool",
     "tobacco": "Tabacaria",
     "e_cigarette": "Cigarros eletrônicos",
-    "alcohol": "Loja de bebidas",
+    "bank": "Banco",
+    "atm": "Caixa eletrônico",
+    "money_transfer": "Transferência bancária",
+    "mobile_money_agent": "Dinheiro móvel",
     "shop": "Lojas",
     "hardware": "Ferramentas",
     "mobile_phone": "Telefonia",
@@ -254,6 +261,7 @@
     "books": "Livraria",
     "beauty": "Produtos de beleza",
     "clothes": "Loja de roupas",
+    "furniture": "Loja de móveis",
     "gift": "Loja de presentes",
     "hairdresser": "Cabeleireiro",
     "jewelry": "Joalheria",
