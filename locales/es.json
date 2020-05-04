@@ -144,6 +144,10 @@
       "yes": "Servicio al coche disponible",
       "only": "Solo servicio al coche"
     },
+    "wheelchair": {
+      "yes": "Accesible en silla de ruedas",
+      "limited": "Acceso parcial en silla de ruedas"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Sellos",
