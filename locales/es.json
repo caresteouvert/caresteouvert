@@ -88,7 +88,7 @@
       "takeaway": "Este sitio permite comprar para llevar",
       "access": "Este sitio ofrece recepción física",
       "drive_through": "Este sitio dispone de servicio al coche",
-      "details": "Opcional: Agregar otros detalles necesarios durante el Estado de Alarma",
+      "details": "Opcional: agregar otros detalles necesarios durante el Estado de Alarma",
       "details_error": "Debe estar vacío o tener entre 10 y 200 caracteres de longitud"
     },
     "submit": "Publicar",
