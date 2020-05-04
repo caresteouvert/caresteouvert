@@ -122,7 +122,7 @@
       "open": "Sitio abierto durante el Estado de Alarma",
       "open_adapted": "Sitio abierto durante el Estado de Alarma, con horario adaptado",
       "partial": "Sitio perteneciente a una marca dónde los establecimientos están parcialmente abiertos. ¿Abierto o cerrado? Usted nos dirá.",
-      "unknown": "Sitio con permiso para abrir durante el Estado de Alarma. ¿Abierto o cerrado? Haznos saber",
+      "unknown": "Sitio potencialmente abierto durante el Estado de Alarma para ofrecer sus servicios tradicionales o nuevos servicios. ¿Abierto o cerrado? Haznos saber",
       "closed": "Sitio cerrado durante el Estado de Alarma"
     },
     "state_short": {
