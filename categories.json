@@ -53,20 +53,14 @@
           ],
           "areas": "all"
         },
-        "bank": {
-          "name": "Bank",
+        "money": {
+          "name": "Money",
           "osm_tags": [
-            { "amenity": "bank" }
+            { "amenity": "bank|atm|money_transfer|mobile_money_agent" },
+            { "shop": "money_lender" }
           ],
           "areas": "all",
           "form_details": [ "access" ]
-        },
-        "moneylender": {
-          "name": "Moneylender",
-          "osm_tags": [
-            { "shop": "money_lender" }
-          ],
-          "-areas": [ "FR", "MC" ]
         },
         "insurance": {
           "name": "Insurance",
