@@ -100,7 +100,7 @@
     "signal_done": "Su informe ha sido registrado. ¡Gracias! Él aparecerá en un momento sobre el mapa.",
     "lockdown_opening_hours": "Horas de apertura",
     "normal_opening_hours": "Horario de apertura en periodo normal",
-    "lockdown_brand_hours": "Horas de apertura en la página web de la marca",
+    "lockdown_brand_hours": "Consultar los horarios",
     "facebook": "Página de Facebook",
     "not_accessible": "No hay recepción física",
     "capacity": "Capacidad máxima: 0 personas | Capacidad máxima: 1 persona | Capacidad máxima: {count} personas",
