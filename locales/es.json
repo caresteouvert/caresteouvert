@@ -163,7 +163,7 @@
     "hydroalcoholic_gel": "Gel hidroalcohólico",
     "mask": "Mascarillas",
     "hygiene_status": {
-      "yes": "El [date]: disponible",
+      "yes": "El {date} disponible",
       "no": "El {date}: indisponible",
       "void": "No hay información, haznos saber"
     },
