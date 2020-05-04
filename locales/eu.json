@@ -54,7 +54,7 @@
   "days": {
     "monday": "Astelehena",
     "tuesday": "Asteartea",
-    "wednesday": "Azteazkena",
+    "wednesday": "Asteazkena",
     "thursday": "Osteguna",
     "friday": "Ostirala",
     "saturday": "Larunbata",
@@ -121,7 +121,7 @@
     "state": {
       "open": "Itxialdian irekita dauden lekuak",
       "open_adapted": "Itxialdi garaian irekita dagoen lekua, moldatutako ordutegiarekin",
-      "partial": "Itxialdi garaian seguruaski irekita dagoen lekua (egiaztatzeko)",
+      "partial": "Leku hau itxialdi garaian partzialki irekita dagoen marka bati dagokio. Irekita edo itxita al dago? Esaiguzu.",
       "unknown": "Leku honek itxialdi garaian irekitzeko baimena du, baina irekita al itxita al dago? Esaiguzu",
       "closed": "Itxialdi garaian itxita dagoen lekua"
     },
@@ -200,9 +200,8 @@
     "childcare": "Haurtzaindegia",
     "employment_agency": "Enplegu agentziak",
     "funeral_directors": "Hileta zuzendariak",
-    "bank": "Bankua",
-    "moneylender": "Mailegu emailea",
-    "insurance": "Asegurua",
+    "money": "Dirua",
+    "insurance": "Aseguruak",
     "tourism_info": "Informazio turistikoa",
     "hotel": "Ostalaritza",
     "recycling_centre": "Birziklapen zentroa",
@@ -258,6 +257,7 @@
     "books": "Liburudenda",
     "beauty": "Edertasun denda",
     "clothes": "Arropak",
+    "furniture": "Altzariak",
     "gift": "Opari denda",
     "hairdresser": "Ileapaindegia",
     "jewelry": "Bitxiak",
