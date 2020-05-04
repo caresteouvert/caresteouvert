@@ -72,7 +72,9 @@ export default {
     coordinates: {
       type: Array,
       required: false,
-      default: [2.3469, 48.8589]
+      default() {
+        return [2.3469, 48.8589]
+      }
     }
   },
 
