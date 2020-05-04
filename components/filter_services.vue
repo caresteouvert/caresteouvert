@@ -9,6 +9,7 @@
       v-for="service in services"
       :key="service"
       :value="service"
+      label
       active-class="primary--text"
     >
       <v-icon small>{{ `osm-${service}` }}</v-icon>
