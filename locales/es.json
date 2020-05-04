@@ -11,7 +11,7 @@
   "missing_shop": "Avisar de un sitio faltante",
   "missing_shop_dialog": {
     "description": "«{brand}» pretende mostrar solo lugares que tienen permitido abrir durante el confinamiento.\nHay varias razones posibles si algunos faltan:",
-    "add_osm": "El lugar no está en OpenStreetMap. Añádelo:",
+    "add_osm": "El lugar no está en OpenStreetMap, añádelo:",
     "add_osm_cta": "Sigue la guía",
     "add_category": "Falta una categoría de lugares:",
     "add_category_cta": "Solicitar adición"
