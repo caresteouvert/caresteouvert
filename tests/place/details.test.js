@@ -35,14 +35,14 @@ describe('Detail', () => {
 
   it('display opening_hours', async () => {
     const detail = createWrapper({ id: '' });
-    detail.vm.place = { properties: { status: 'open', cat: '', opening_hours: 'Mo-Sa 09:00-18:00', tags: {} } };
+    detail.vm.place = { properties: { status: 'open', cat: '', opening_hours: 'Mo-Sa 09:00-18:00', tags: {}, country: 'FR' }, geometry: { coordinates: [ 48.7, -1.2 ] } };
     await Vue.nextTick();
     expect(detail.contains(DetailOpeningHours)).toBe(true);
   });
 
   it('dont display opening_hours when "open"', async () => {
     const detail = createWrapper({ id: '' });
-    detail.vm.place = { properties: { status: 'open', cat: '', opening_hours: 'open', tags: {} } };
+    detail.vm.place = { properties: { status: 'open', cat: '', opening_hours: 'open', tags: {}, country: 'FR' }, geometry: { coordinates: [ 48.7, -1.2 ] } };
     await Vue.nextTick();
     expect(detail.vm.hasSpecificOpeningHours).toBe(false);
     expect(detail.contains(DetailOpeningHours)).toBe(false);
@@ -52,7 +52,7 @@ describe('Detail', () => {
 
   it('display opening_hours when opening_hours present in tags', async () => {
     const detail = createWrapper({ id: '' });
-    detail.vm.place = { properties: { status: 'open', cat: '', opening_hours: null, tags: { opening_hours: 'Mo-Sa 09:00-18:00' } } };
+    detail.vm.place = { properties: { status: 'open', cat: '', opening_hours: null, tags: { opening_hours: 'Mo-Sa 09:00-18:00' }, country: 'FR' }, geometry: { coordinates: [ 48.7, -1.2 ] } };
     await Vue.nextTick();
     expect(detail.vm.hasSpecificOpeningHours).toBe(false);
     expect(detail.vm.hasOpeningInfos).toBe(true);
@@ -60,7 +60,7 @@ describe('Detail', () => {
 
   it('display only one opening_hours', async () => {
     const detail = createWrapper({ id: '' });
-    detail.vm.place = { properties: { status: 'open', cat: '', opening_hours: 'Mo-Sa 09:00-18:00', tags: { opening_hours: 'Mo-Sa 09:00-18:00' } } };
+    detail.vm.place = { properties: { status: 'open', cat: '', opening_hours: 'Mo-Sa 09:00-18:00', tags: { opening_hours: 'Mo-Sa 09:00-18:00' }, country: 'FR' }, geometry: { coordinates: [ 48.7, -1.2 ] } };
     await Vue.nextTick();
     expect(detail.vm.hasSpecificOpeningHours).toBe(true);
     expect(detail.findAll(DetailOpeningHours).length).toEqual(1);
@@ -69,7 +69,7 @@ describe('Detail', () => {
 
   it('hasOpeningInfos when there is brand_hours', () => {
     const detail = createWrapper({ id: '' });
-    detail.vm.place = { properties: { status: 'open', cat: '', brand_hours: 'https://', tags: { } } };
+    detail.vm.place = { properties: { status: 'open', cat: '', brand_hours: 'https://', tags: { }, country: 'FR' }, geometry: { coordinates: [ 48.7, -1.2 ] } };
     expect(detail.vm.hasSpecificOpeningHours).toBe(false);
     expect(detail.vm.hasOpeningInfos).toBe(true);
   });
