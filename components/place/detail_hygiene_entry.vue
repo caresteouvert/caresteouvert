@@ -1,44 +1,37 @@
 <template>
   <v-list-item>
+    <v-list-item-icon>
+      <v-icon>{{ `osm-${type}` }}</v-icon>
+    </v-list-item-icon>
     <v-list-item-content>
-      <v-list-item-title class="d-flex align-content-center">
-        <div class="icon pb-1 d-inline-block">
-          <v-icon
-            class="mr-6"
-          >{{ `osm-${type}` }}</v-icon>
-          <v-icon
-            class="status"
-            :color="color"
-          >{{ icon }}</v-icon>
-        </div>
-        <div class="d-inline-block">
-          {{ $t(`details.${type}`) }}
-          <br /><span class="caption">{{ this.status }}</span>
-        </div>
+      <v-list-item-title>
+        {{ $t(`details.${type}`) }}
+        <v-icon :color="color">{{ icon }}</v-icon>
       </v-list-item-title>
+      <v-list-item-subtitle>{{ status }}</v-list-item-subtitle>
+      <v-list-item-subtitle v-if="!success">
+        <v-btn
+          :disabled="loading"
+          small
+          outlined
+          color="success"
+          @click="submit('yes')"
+        >
+          {{ $t('details.hygiene_entry.has') }}
+        </v-btn>
+        <v-btn
+          :disabled="loading"
+          small
+          outlined
+          color="error"
+          class="mt-1"
+          @click="submit('no')"
+        >
+          {{ $t('details.hygiene_entry.hasnot') }}
+        </v-btn>
+      </v-list-item-subtitle>
     </v-list-item-content>
     <v-list-item-action v-if="!success">
-      <v-btn
-        :disabled="loading"
-        small
-        outlined
-        width="100%"
-        color="success"
-        @click="submit('yes')"
-      >
-        {{ $t('details.hygiene_entry.has') }}
-      </v-btn>
-      <v-btn
-        :disabled="loading"
-        small
-        outlined
-        width="100%"
-        color="error"
-        class="mt-1"
-        @click="submit('no')"
-      >
-        {{ $t('details.hygiene_entry.hasnot') }}
-      </v-btn>
     </v-list-item-action>
   </v-list-item>
 </template>
@@ -113,14 +106,12 @@ export default {
       let date;
       const contrib = getRecentContribution(this.place.id);
 
-      if(this.success) {
+      if (this.success) {
         date = new Date();
-      }
-      else if(contrib && contrib.length >= 4 && contrib[3][this.type]) {
+      } else if (contrib && contrib.length >= 4 && contrib[3][this.type]) {
         date = new Date(contrib[2] * 1000);
-      }
-      else if(this.place && this.place.properties && this.place.properties.tags && this.place.properties.tags['cro:date']) {
-        date = new Date(this.place.properties.tags['cro:date'] * 1000)
+      } else if(this.place && this.place.properties && this.place.properties.tags && this.place.properties.tags['cro:date']) {
+        date = new Date(this.place.properties.tags['cro:date'] * 1000);
       }
       const format = { day: 'numeric', month: 'long' };
       return this.$t(`details.hygiene_status.${this.value === '' ? 'void' : this.value}`, { date: date && date.toLocaleString(this.$i18n.locale, format) });
@@ -171,14 +162,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.icon {
-  position: relative;
-}
-.icon .status {
-  position: absolute;
-  bottom: -5px;
-  right: 8px;
-}
-</style>

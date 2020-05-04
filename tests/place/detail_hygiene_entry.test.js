@@ -4,8 +4,8 @@ import HygieneEntry from '../../components/place/detail_hygiene_entry';
 
 describe('HygieneEntry', () => {
   let localVue;
-  const stubs = ['v-list-item', 'v-list-item-content', 'v-list-item-title',
-                 'v-list-item-action', 'v-btn', 'v-icon'];
+  const stubs = ['v-list-item', 'v-list-item-content', 'v-list-item-title', 'v-list-item-icon',
+                 'v-list-item-subtitle', 'v-list-item-action', 'v-btn', 'v-icon'];
 
   beforeEach(() => {
     localVue = createLocalVue();
