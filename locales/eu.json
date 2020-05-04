@@ -144,6 +144,10 @@
       "yes": "Autotik jasotzeko zerbitzua dago",
       "only": "Autotik jasotzen bakarrik"
     },
+    "wheelchair": {
+      "yes": "Gurpil-aulkirako sarbidea",
+      "limited": "Gurpil-aulkirako sarbide partziala"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Zigiluak",
