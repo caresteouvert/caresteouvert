@@ -270,6 +270,14 @@
           ],
           "areas": "all",
           "form_details": [ "delivery", "access" ]
+        },
+        "alcohol": {
+          "name": "Alcohol store",
+          "osm_tags": [
+            { "shop": "alcohol|beverages|wine" }
+          ],
+          "areas": [ "CD" ],
+          "form_details": [ "delivery", "access" ]
         }
       }
     },
@@ -368,10 +376,11 @@
           "osm_tags": [
             { "shop": "alcohol|beverages|wine" }
           ],
-          "areas": "all",
+          "-areas": [ "CD" ],
           "form_details": [ "delivery", "access" ]
         }
-      }
+      },
+      "-mapfilter": [ "CD" ]
     },
     "shop": {
       "name": "Shops",
