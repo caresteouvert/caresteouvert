@@ -183,7 +183,7 @@
       "start": "Elegir hora de apertura",
       "end": "Elegir hora de cierre"
     },
-    "add_interval": "Añadir horas",
+    "add_interval": "Añadir horario",
     "add_new_days": "Añadir días de apertura"
   },
   "osm_link": {
