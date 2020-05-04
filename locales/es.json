@@ -8,7 +8,7 @@
   "search": "Buscar",
   "coordinates": "Coordenadas",
   "menu": "Menú",
-  "missing_shop": "Avisar de un sitio por editar",
+  "missing_shop": "Avisar de un sitio faltante",
   "missing_shop_dialog": {
     "description": "«{brand}» pretende mostrar solo lugares que tienen permitido abrir durante el confinamiento. Hay varias razones posibles si algunos faltan:",
     "add_osm": "El lugar no está en OpenStreetMap. Añádelo:",
