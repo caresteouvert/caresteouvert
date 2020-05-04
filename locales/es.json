@@ -97,7 +97,7 @@
   "details": {
     "signal_warning": "Estabas escribiendo un informe. No se guardará. ¿Quieres continuar?",
     "signal": "Avisar de un cambio",
-    "signal_done": "Su informe ha sido registrado. ¡Gracias! Tenga paciencia, puede llevar un tiempo procesarlo.",
+    "signal_done": "Su informe ha sido registrado. ¡Gracias! Él aparecerá en un momento sobre el mapa.",
     "lockdown_opening_hours": "Horas de apertura",
     "normal_opening_hours": "Horario de apertura en periodo normal",
     "lockdown_brand_hours": "Horas de apertura en la página web de la marca",
