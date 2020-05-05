@@ -93,6 +93,28 @@ CREATE TABLE legal_rules(
        source_url VARCHAR
 );
 
+DROP TABLE IF EXISTS poi_custom;
+CREATE TABLE poi_custom(
+       cro_id VARCHAR,
+       osm_id VARCHAR,
+       name VARCHAR,
+       category VARCHAR,
+       subcategory VARCHAR,
+       lat DOUBLE PRECISION,
+       lng DOUBLE PRECISION,
+       tags JSONB DEFAULT '{}'
+);
+
+DROP TABLE IF EXISTS countries_subcountries;
+CREATE TABLE countries_subcountries(
+       ogc_fid integer NOT NULL,
+       name VARCHAR,
+       wikidata VARCHAR,
+       country_iso2 VARCHAR,
+       sub_country VARCHAR,
+       wkb_geometry geometry(MultiPolygon,3857)
+);
+
 DROP TABLE IF EXISTS poi_cro;
 CREATE TABLE poi_cro(
 	osmid VARCHAR PRIMARY KEY,
