@@ -128,7 +128,7 @@ INSERT INTO imposm_osm_point(osm_id, way, name, tags, shop, opening_hours, count
 INSERT INTO imposm_osm_point(osm_id, way, name, tags, shop, opening_hours, country_iso2)
   VALUES (2, ST_GeomFromText('POINT(0 0)', 3857), 'Test 2', 'shop=>supermarket'::hstore, 'supermarket', 'Mo-Sa 09:00-10:00', 'FR');
 INSERT INTO poi_cro(osmid, tags, lastupdate)
-  VALUES ('n2', '{"vending:hydroalcoolic_gel": "yes"}'::jsonb, DATE '2020-05-05');
+  VALUES ('n2', '{"vending:hydroalcoholic_gel": "yes"}'::jsonb, DATE '2020-05-05');
 
 INSERT INTO imposm_osm_point(osm_id, way, name, tags, shop, opening_hours, country_iso2)
   VALUES (3, ST_GeomFromText('POINT(0 0)', 3857), 'Test 2', 'shop=>supermarket'::hstore, 'supermarket', 'Mo-Sa 09:00-10:00', 'FR');
@@ -138,4 +138,4 @@ INSERT INTO poi_cro(osmid, tags, lastupdate)
 INSERT INTO imposm_osm_point(osm_id, way, name, tags, shop, opening_hours, country_iso2)
   VALUES (4, ST_GeomFromText('POINT(0 0)', 3857), 'Test 2', 'shop=>supermarket'::hstore, 'supermarket', 'Mo-Sa 09:00-10:00', 'FR');
 INSERT INTO poi_cro(osmid, tags, lastupdate)
-  VALUES ('n4', '{"vending:mask": "no", "vending:hydroalcoolic_gel": "yes"}'::jsonb, DATE '2020-05-05');
+  VALUES ('n4', '{"vending:mask": "no", "vending:hydroalcoholic_gel": "yes"}'::jsonb, DATE '2020-05-05');
