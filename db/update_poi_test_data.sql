@@ -93,6 +93,18 @@ CREATE TABLE legal_rules(
        source_url VARCHAR
 );
 
+DROP TABLE IF EXISTS poi_custom;
+CREATE TABLE poi_custom(
+       cro_id VARCHAR,
+       osm_id VARCHAR,
+       name VARCHAR,
+       category VARCHAR,
+       subcategory VARCHAR,
+       lat DOUBLE PRECISION,
+       lng DOUBLE PRECISION,
+       tags JSONB DEFAULT '{}'
+);
+
 DROP TABLE IF EXISTS poi_cro;
 CREATE TABLE poi_cro(
 	osmid VARCHAR PRIMARY KEY,
