@@ -19,7 +19,14 @@ export default {
   },
   head({ params }) {
     return {
-      title: `${this.selected} - ${this.$t(this.title)} - ${this.brand}`
+      title: `${this.selected} - ${this.$t(this.title)} - ${this.brand}`,
+      meta: [
+        {
+          hid: "robots",
+          name: "robots",
+          content: "noindex, follow"
+        }
+      ]
     };
   }
 };

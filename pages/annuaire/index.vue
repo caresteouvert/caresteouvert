@@ -13,7 +13,14 @@ export default {
   },
   head() {
     return {
-      title: `${this.$t(this.title)} - ${this.brand}`
+      title: `${this.$t(this.title)} - ${this.brand}`,
+      meta: [
+        {
+          hid: "robots",
+          name: "robots",
+          content: "noindex, follow"
+        },
+      ]
     };
   }
 };
