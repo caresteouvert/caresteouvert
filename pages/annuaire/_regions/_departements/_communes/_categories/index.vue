@@ -9,8 +9,7 @@ export default {
       propertyLabel: [
         { key: "name" },
         { key: "cat", translation: "categories." }
-      ],
-      displayIcon: true
+      ]
     };
   },
   methods: {

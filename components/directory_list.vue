@@ -13,12 +13,6 @@
     <v-divider />
     <v-list>
       <v-list-item v-for="item in items" :key="item.id" :to="itemLink(item)" nuxt>
-        <img
-          v-if="displayIcon"
-          src="~/assets/caresteouvert.svg"
-          alt="Ça reste ouvert"
-          class="directory-logo"
-        />
         <div
           v-for="label in itemLabels(item, propertyLabel)"
           :key="label.text"
@@ -40,12 +34,6 @@ import i18nMixin from "./mixins/i18n";
 
 export default {
   mixins: [i18nMixin],
-
-  data() {
-    return {
-      displayIcon: false
-    };
-  },
 
   computed: {
     title() {
