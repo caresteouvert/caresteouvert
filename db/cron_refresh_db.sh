@@ -13,4 +13,5 @@ cd ${WORKDIR}
 
 # Regénération de la table des POIs
 psql  ${CONNEXION} -f categories_functions.sql
+psql  ${CONNEXION} -f status_order.sql
 psql  ${CONNEXION} -f update_poi.sql
