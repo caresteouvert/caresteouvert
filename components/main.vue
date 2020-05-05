@@ -188,17 +188,10 @@ export default {
 
   methods: {
     loadAndOverrideMapStyle() {
-      function createWebUrl(url) {
-        const a = document.createElement("a")
-        a.href = url
-        // Fix populating Location properties in IE. Otherwise, protocol will be blank.
-        a.href = a.href
-        return a.href
-      }
       return fetch(`${config.mapStyle}${config.maptilerApiKey}`)
         .then(res => res.json())
         .then((data) => {
-          data.sprite = createWebUrl('/sprite/caresteouvert');
+          data.sprite = `${window.location.origin}/sprite/caresteouvert`;
           this.mapStyle = data;
         });
     },
