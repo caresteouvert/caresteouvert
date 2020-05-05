@@ -2,21 +2,23 @@
   <div
     :class="{
        sm: isMobile,
-      'sidebar-opened': sidebar && !isMobile
+      'place-opened': $route.name === 'place' && !isMobile,
+      'sidebar-opened': sidebar && !isMobile,
+      'sidebar-big-opened': sidebar && hasFilter && !isMobile
     }"
   >
     <div>
       <v-navigation-drawer
         v-if="!isMobile"
         v-model="sidebar"
+        :width="hasFilter ? 400 : 300"
         temporary
         stateless
         hide-overlay
-        width="400"
         fixed
       >
         <filter-results
-          v-if="filter !== ''"
+          v-if="hasFilter"
           v-model="filter"
           :services.sync="filterServices"
           :featuresAndLocation="featuresAndLocation"
@@ -24,7 +26,7 @@
         />
         <main-menu
           v-else
-          :style="{ width: '400px' }"
+          :style="{ width: '300px' }"
         >
           <filter-list v-model="filter" />
         </main-menu>
@@ -68,7 +70,7 @@
           :filter="filter"
         >
           <filter-results
-            v-if="filter != ''"
+            v-if="hasFilter"
             v-model="filter"
             :services.sync="filterServices"
             :featuresAndLocation="featuresAndLocation"
@@ -162,7 +164,13 @@ export default {
     });
   },
 
-  computed: mapGetters(['categories', 'allCategories']),
+  computed: {
+    ...mapGetters(['categories', 'allCategories']),
+
+    hasFilter() {
+      return this.filter !== '';
+    }
+  },
 
   watch: {
     mapCenter() {
@@ -332,6 +340,9 @@ export default {
   bottom: 20px;
 }
 .sidebar-opened .search {
+  transform: translateX(300px);
+}
+.sidebar-big-opened .search, .place-opened .search {
   transform: translateX(400px);
 }
 .text-pre {
