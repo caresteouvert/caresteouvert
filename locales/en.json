@@ -282,5 +282,26 @@
       "contribute": "Improve map with your own information",
       "organize": "Better mobility to limit the risk of contagion"
     }
+  },
+  "directory": {
+    "regions": {
+      "title": "Regions list"
+    },
+    "departements": {
+      "title": "Departments list"
+    },
+    "communes": {
+      "title": "Counties list"
+    },
+    "categories": {
+      "title": "Categories list"
+    },
+    "pois": {
+      "title": "Places list",
+      "link": {
+        "previous": "Previous places",
+        "next": "Next places"
+      }
+    }
   }
 }
