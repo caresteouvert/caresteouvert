@@ -29,10 +29,16 @@
       <v-card-text>
         <p class="text-pre">{{ $t('missing_shop_dialog.description', { brand }) }}</p>
         <v-row>
-          <v-col md="7">
+          <v-col
+            cols="12"
+            md="7"
+          >
             {{ $t('missing_shop_dialog.add_osm') }}
           </v-col>
-          <v-col md="5">
+          <v-col
+            cols="12"
+            md="5"
+          >
             <v-btn
               :href="links.shopMissing"
               class="full-width"
@@ -45,10 +51,16 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col md="7">
+          <v-col
+            cols="12"
+            md="7"
+          >
             {{ $t('missing_shop_dialog.add_category') }}
           </v-col>
-          <v-col md="5">
+          <v-col
+            cols="12"
+            md="5"
+          >
             <v-btn
               href="https://github.com/osmontrouge/caresteouvert/issues/new?assignees=&labels=categories&template=missing_category.md&title=Missing+category%3A+%28name+of+category%29"
               class="full-width"
@@ -61,10 +73,16 @@
           </v-col>
         </v-row>
         <v-row v-if="country === 'FR'">
-          <v-col md="7">
+          <v-col
+            cols="12"
+            md="7"
+          >
             <p>Vous avez votre propre établissement et vous avez besoin d'aide pour le rajouter :</p>
           </v-col>
-          <v-col md="5">
+          <v-col
+            cols="12"
+            md="5"
+          >
             <v-btn
               href="https://airtable.com/shrwKi4g2nJu0rwUK"
               class="full-width"
