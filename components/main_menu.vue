@@ -39,6 +39,7 @@
       <v-divider vertical></v-divider>
       <toggle-color />
     </div>
+    <div v-show="false"><a href="/annuaire/">Annuaire</a></div>
   </div>
 </template>
 
