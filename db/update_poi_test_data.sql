@@ -105,6 +105,16 @@ CREATE TABLE poi_custom(
        tags JSONB DEFAULT '{}'
 );
 
+DROP TABLE IF EXISTS countries_subcountries;
+CREATE TABLE countries_subcountries(
+       ogc_fid integer NOT NULL,
+       name VARCHAR,
+       wikidata VARCHAR,
+       country_iso2 VARCHAR,
+       sub_country VARCHAR,
+       wkb_geometry geometry(MultiPolygon,3857)
+);
+
 DROP TABLE IF EXISTS poi_cro;
 CREATE TABLE poi_cro(
 	osmid VARCHAR PRIMARY KEY,

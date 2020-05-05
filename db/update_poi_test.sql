@@ -6,8 +6,8 @@ SELECT tables_are(
     'public',
     ARRAY[ 'poi_osm', 'brand_rules', 'legal_rules',
            'imposm_osm_point', 'imposm_osm_polygon',
-           'poi_cro', 'spatial_ref_sys', 'poi_custom'
-           ]
+           'poi_cro', 'spatial_ref_sys', 'poi_custom',
+           'countries_subcountries' ]
 );
 
 SELECT is((SELECT count(*)::int FROM poi_osm), 1);
