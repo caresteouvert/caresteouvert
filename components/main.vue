@@ -2,7 +2,6 @@
   <div
     :class="{
        sm: isMobile,
-      'place-opened': $route.name === 'place' && !isMobile,
       'sidebar-opened': sidebar && !isMobile
     }"
   >
@@ -331,9 +330,6 @@ export default {
 }
 .sm .mapboxgl-ctrl-bottom-right {
   bottom: 20px;
-}
-.place-opened .mapboxgl-ctrl-top-right, .place-opened .mapboxgl-ctrl-bottom-right {
-  transform: translateX(-400px);
 }
 .sidebar-opened .search {
   transform: translateX(400px);

@@ -276,8 +276,7 @@ export default {
             return (x < 0 || x > width || y > height / 2 || y < 0);
           } else {
             const offsetSidebar = this.sidebar ? 400 : 0;
-            const offsetPlace = 400;
-            return (x < offsetSidebar || x > width - offsetPlace || y > height || y < 0);
+            return (x < offsetSidebar || x > width || y > height || y < 0);
           }
         }
         const { x, y } = this.map.project(place.geometry.coordinates);
@@ -324,7 +323,7 @@ export default {
         const width = document.body.clientWidth;
         const bounds = [
           this.map.unproject([400, 0]).toArray(),
-          this.map.unproject([width - 400, height]).toArray()
+          this.map.unproject([width, height]).toArray()
         ];
         this.$emit('update:mapBounds', bounds);
       } else {
