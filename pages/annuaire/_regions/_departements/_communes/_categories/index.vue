@@ -1,5 +1,6 @@
 <script>
 import DirectoryList from "~/components/directory_list";
+import { maxZoomPoi } from "~/config.json";
 
 export default {
   extends: DirectoryList,
@@ -14,7 +15,9 @@ export default {
   },
   methods: {
     itemLink(item) {
-      return "/place/" + item.id;
+      return item.properties?.lat && item.properties?.lon
+        ? `/@${item.properties.lat},${item.properties.lon},${maxZoomPoi}/place/${item.id}`
+        : `/place/${item.id}`;
     }
   },
   asyncData({ params, query }) {
