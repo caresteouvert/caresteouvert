@@ -25,6 +25,8 @@
   },
   "services": {
     "delivery": "Livraison",
+    "hydroalcoholic_gel": "Gel hydroalcoolique",
+    "mask": "Masques",
     "takeaway": "Vente à emporter"
   },
   "learnmore": {
