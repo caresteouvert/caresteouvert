@@ -299,6 +299,10 @@
           "areas": "all",
           "form_details": [ "delivery", "takeaway", "drive_through", "access" ]
         },
+        "awarded_chef": {
+          "name": "Awarded chef",
+          "mapfilter": [ "FR-admin8_Lyon" ]
+        },
         "fast_food": {
           "name": "Fast food",
           "osm_tags": [

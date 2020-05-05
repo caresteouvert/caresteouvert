@@ -65,7 +65,9 @@ const tagsPerCategory = {};
 Object.entries(catg.categories).forEach(e => {
 	const [ catId, cat ] = e;
 	const singleTags = {};
-	tagsPerCategory[catId] = Object.values(cat.subcategories).map(subcat => {
+	tagsPerCategory[catId] = Object.values(cat.subcategories)
+	.filter(subcat => subcat.osm_tags)
+	.map(subcat => {
 		let result;
 		if(subcat.osm_filter_tags) {
 			result = [];
@@ -128,7 +130,9 @@ const tagsPerSubcategory = {};
 Object.values(catg.categories).forEach(cat => {
 	Object.entries(cat.subcategories).forEach(e => {
 		const [ subcatId, subcat ] = e;
-		tagsPerSubcategory[subcatId] = subcat.osm_tags;
+		if(subcat.osm_tags) {
+			tagsPerSubcategory[subcatId] = subcat.osm_tags;
+		}
 	});
 });
 
@@ -164,7 +168,15 @@ fs.writeFile(CATEGORIES_SQL, wholeSql, (err) => {
 // Edit categories filter in update_poi.sql
 const tagsForCondition = {};
 
-Object.values(catg.categories).map(cat => Object.values(cat.subcategories).map(subcat => subcat.osm_tags).flat()).flat().forEach(e => {
+Object.values(catg.categories)
+.map(cat => (
+	Object.values(cat.subcategories)
+	.filter(subcat => subcat.osm_tags)
+	.map(subcat => subcat.osm_tags)
+	.flat()
+))
+.flat()
+.forEach(e => {
 	Object.entries(e).forEach(kv => {
 		const [ k, v ] = kv;
 		if(catg.sql_columns.includes(k)) {
