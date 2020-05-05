@@ -13,7 +13,7 @@
         temporary
         stateless
         hide-overlay
-        width="300"
+        width="400"
         fixed
       >
         <filter-results
@@ -25,7 +25,7 @@
         />
         <main-menu
           v-else
-          :style="{ width: '300px' }"
+          :style="{ width: '400px' }"
         >
           <filter-list v-model="filter" />
         </main-menu>
@@ -336,7 +336,7 @@ export default {
   transform: translateX(-400px);
 }
 .sidebar-opened .search {
-  transform: translateX(300px);
+  transform: translateX(400px);
 }
 .text-pre {
   white-space: pre-line;
