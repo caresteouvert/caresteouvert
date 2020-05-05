@@ -16,7 +16,7 @@
       :href="countryConfig.government"
       target="_blank"
     >
-      <v-icon>{{ `osm-info` }}</v-icon>
+      <v-icon>osm-info</v-icon>
     </v-btn>
   </v-alert>
 </template>
