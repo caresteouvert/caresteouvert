@@ -246,6 +246,44 @@ FROM poi_cro c
 WHERE poi_osm_next.fid = c.osmid;
 
 
+-- Join custom POIs from poi_custom
+UPDATE poi_osm_next
+SET
+	name = COALESCE(pc.name, poi_osm_next.name),
+	normalized_cat = pc.category,
+	cat = pc.subcategory,
+	tags = CASE WHEN pc.tags IS NOT NULL THEN poi_osm_next.tags || pc.tags ELSE poi_osm_next.tags END
+FROM poi_custom pc
+WHERE
+	pc.osm_id IS NOT NULL
+	AND pc.osm_id = poi_osm_next.fid;
+
+INSERT INTO poi_osm_next(fid, geom, name, cat, normalized_cat, status, status_order, opening_hours, delivery, takeaway, country, sub_country, source_status, tags)
+WITH pc AS (
+	SELECT *, ST_Transform(ST_SetSRID(ST_Point(lng, lat), 4326), 3857) AS geom
+	FROM poi_custom
+	WHERE osm_id IS NULL
+)
+SELECT
+	pc.cro_id,
+	pc.geom,
+	pc.name,
+	pc.category,
+	pc.subcategory,
+	'open',
+	status_order_value('open'),
+	pc.tags->>'opening_hours',
+	pc.tags->>'delivery',
+	pc.tags->>'takeaway',
+	c.country_iso2,
+	c.sub_country,
+	'cro',
+	tags
+FROM pc
+LEFT JOIN countries_subcountries c ON c.wkb_geometry && pc.geom AND ST_Intersects(c.wkb_geometry, pc.geom)
+WHERE pc.osm_id IS NULL;
+
+
 -- Index creation and table switch
 REINDEX TABLE poi_osm_next;
 CREATE INDEX poi_osm_next_geom_idx ON poi_osm_next USING GIST(geom);
