@@ -283,9 +283,10 @@ export default {
       const { lat, lng } = this.mapCenter;
       fetch(`${config.apiUrl}/country?lat=${lat}&lon=${lng}`)
         .then(res => res.text())
-        .then((res) => {
-          const country = res.split('-')[0];
+        .then(area => {
+          const country = area.split('-')[0];
           this.$store.commit('setCountry', country);
+          this.$store.commit('setArea', area);
           const [category, subcategory] = this.filter.split('/');
           if (!this.categories.includes(category)) {
             this.filter = '';

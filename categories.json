@@ -301,7 +301,7 @@
         },
         "awarded_chef": {
           "name": "Awarded chef",
-          "mapfilter": [ "FR-admin8_Lyon" ]
+          "areas": [ "FR-admin8_Lyon" ]
         },
         "fast_food": {
           "name": "Fast food",
