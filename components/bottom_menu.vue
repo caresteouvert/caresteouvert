@@ -42,6 +42,8 @@
 <script>
 import { getCookie, setCookie } from '../lib/cookie';
 
+const ANIMATE_MENU_COOKIE = 'animateMenu';
+
 export default {
   props: {
     filter: {
@@ -54,7 +56,7 @@ export default {
     return {
       open: false,
       height: 50,
-      animate: getCookie('animateMenu') ? false : true
+      animate: getCookie(ANIMATE_MENU_COOKIE) ? false : true
     };
   },
 
@@ -79,7 +81,7 @@ export default {
   watch: {
     open() {
       if (this.animate) {
-        setCookie('animateMenu', false);
+        setCookie(ANIMATE_MENU_COOKIE, false);
         this.animate = false;
       }
     },
