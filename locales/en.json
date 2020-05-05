@@ -304,11 +304,7 @@
     "communes": {
       "title": "Counties list"
     },
-    "categories": {
-      "title": "Categories list"
-    },
     "pois": {
-      "title": "Places list",
       "link": {
         "previous": "Previous places",
         "next": "Next places"
