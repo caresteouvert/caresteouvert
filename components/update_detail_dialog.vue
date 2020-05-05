@@ -17,7 +17,7 @@
     </template>
 
     <v-card>
-      <v-card-title>
+      <v-card-title class="flex-nowrap">
         <span class="body-1">Compléter les informations de votre établissement</span>
         <v-spacer></v-spacer>
         <v-btn
