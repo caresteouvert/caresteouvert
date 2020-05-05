@@ -105,6 +105,8 @@ import BottomMenu from './bottom_menu';
 import RgpdBanner from './rgpd_banner';
 import SplashScreen from './splash_screen';
 
+const MAP_VIEW_COOKIE = 'mapView';
+
 export default {
   components: {
     AppsSheet,
@@ -258,11 +260,11 @@ export default {
     },
 
     savedMapView() {
-      return getCookie('mapView');
+      return getCookie(MAP_VIEW_COOKIE);
     },
 
     saveCurrentView() {
-      setCookie('mapView', JSON.stringify({ center: this.mapCenter, zoom: this.mapZoom }));
+      setCookie(MAP_VIEW_COOKIE, JSON.stringify({ center: this.mapCenter, zoom: this.mapZoom }));
     },
 
     refreshCurrentCountry: debounce(function() {
