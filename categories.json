@@ -585,6 +585,13 @@
             { "shop": "toys" }
           ],
           "areas": [ "DE", "AT", "CH" ]
+        },
+        "sports": {
+          "name": "Sports",
+          "osm_tags": [
+            { "shop": "sports|outdoor" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FI" ]
         }
       }
     },
