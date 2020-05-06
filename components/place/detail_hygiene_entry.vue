@@ -24,7 +24,6 @@
           small
           outlined
           color="error"
-          class="mt-1"
           @click="submit('no')"
         >
           {{ $t('details.hygiene_entry.hasnot') }}
