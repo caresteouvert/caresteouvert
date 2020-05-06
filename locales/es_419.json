@@ -153,7 +153,7 @@
     "vending": {
       "pizza": "Pizza",
       "stamps": "Estampillas",
-      "parcel_mail_in": "Buzón",
+      "parcel_mail_in": "Buzón (Terminal de paquetería)",
       "parcel_pickup": " Recogida de paquetes",
       "parcel_pickup;parcel_mail_in": "Recogida de paquetes y buzón",
       "milk": "Leche",
