@@ -1,13 +1,13 @@
 <template>
   <div class="full-width">
-    <div class="d-flex pa-2">
-      <h1 class="title">{{ $t(`categories.${category}`) }}</h1>
+    <div class="d-flex align-center pa-2">
       <v-btn
         icon
         @click="clearSelection"
       >
-        <v-icon>osm-close</v-icon>
+        <v-icon>osm-arrow-left</v-icon>
       </v-btn>
+      <h1 class="title">{{ $t(`categories.${category}`) }}</h1>
     </div>
 
     <filter-subcategories
