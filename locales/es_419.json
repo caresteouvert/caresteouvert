@@ -167,7 +167,7 @@
     "hygiene_status": {
       "yes": "El {date}: disponible",
       "no": "El {date}: no disponible",
-      "void": "No hay información, déjanos saber"
+      "void": "No hay información, déjanos saberlo"
     },
     "hygiene_entry": {
       "has": "tiene",
