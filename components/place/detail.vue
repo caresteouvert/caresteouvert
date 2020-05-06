@@ -64,7 +64,7 @@
                 :key="info"
                 v-html="info"
                 v-linkified:options="{ className: 'alert-link', attributes: { rel: 'noopener' } }"
-                class="mb-3 overflowwrap-anywhere"
+                class="mb-0 overflowwrap-anywhere"
               />
             </v-list-item-content>
           </v-list-item>
@@ -305,6 +305,11 @@ export default {
 
     infos() {
       const infos = [];
+
+      // Custom POI description
+      if (this.place.properties.tags['description:cro']) {
+        infos.push(this.place.properties.tags['description:cro']);
+      }
 
       // Access
       if (this.place.properties.tags['access:covid19'] === 'no') {
