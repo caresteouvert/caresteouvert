@@ -200,8 +200,7 @@
     "childcare": "育児",
     "employment_agency": "職業安定所",
     "funeral_directors": "葬儀社",
-    "bank": "銀行",
-    "moneylender": "サラ金",
+    "money": "お金",
     "insurance": "保険",
     "tourism_info": "観光案内所",
     "hotel": "宿泊",
@@ -230,9 +229,11 @@
     "farm": "農産物販売所",
     "marketplace": "市場",
     "bakery": "パン屋",
+    "alcohol": "酒店",
     "eat": "レストラン&持ち帰り",
     "vending_machine": "自販機",
     "restaurant": "レストラン",
+    "awarded_chef": "受賞シェフ",
     "fast_food": "ファストフード",
     "ice_cream": "アイスクリーム",
     "cafe": "喫茶店",
@@ -240,7 +241,10 @@
     "drugs": "嗜好品",
     "tobacco": "タバコ",
     "e_cigarette": "電子タバコ",
-    "alcohol": "酒店",
+    "bank": "銀行",
+    "atm": "ATM",
+    "money_transfer": "海外送金所",
+    "mobile_money_agent": "モバイル決済エージェント",
     "shop": "店舗",
     "hardware": "金物",
     "mobile_phone": "携帯電話",
@@ -258,6 +262,7 @@
     "books": "書店",
     "beauty": "美容サービス",
     "clothes": "衣料品店",
+    "furniture": "家具",
     "gift": "ギフト店",
     "hairdresser": "理美容院",
     "jewelry": "宝石店",
@@ -276,6 +281,27 @@
       "places_around": "封鎖中に開店している場所を探す",
       "contribute": "自分の情報でマップを改善する",
       "organize": "感染リスクを抑えるためのより良いモビリティ"
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "地方リスト"
+    },
+    "departements": {
+      "title": "百貨店リスト"
+    },
+    "communes": {
+      "title": "州リスト"
+    },
+    "categories": {
+      "title": "カテゴリーリスト"
+    },
+    "pois": {
+      "title": "施設・店舗リスト",
+      "link": {
+        "previous": "以前の施設・店舗",
+        "next": "次の施設・店舗"
+      }
     }
   }
 }
