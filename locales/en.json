@@ -9,6 +9,7 @@
   "coordinates": "Coordinates",
   "menu": "Menu",
   "missing_shop": "Report a missing shop",
+  "backtolist": "Back to the list",
   "missing_shop_dialog": {
     "description": "« {brand} » is intended to display only places that are allowed to open during the lockdown. There are several possible reasons if some are missing:",
     "add_osm": "The place is not in OpenStreetMap, add it:",

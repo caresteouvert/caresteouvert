@@ -85,7 +85,18 @@
         </bottom-menu>
       </v-content>
     </div>
-    <nuxt-child/>
+    <router-view>
+      <div v-if="hasFilter">
+        <v-btn
+          tile
+          text
+          @click="closePlace"
+        >
+          <v-icon>osm-arrow-left</v-icon>
+          {{ $t('backtolist') }}
+        </v-btn>
+      </div>
+    </router-view>
     <splash-screen v-if="!mapLoaded" />
   </div>
 </template>
@@ -232,6 +243,10 @@ export default {
           this.mapCenter = { lat: config.mapCenter[1], lng: config.mapCenter[0] };
           this.mapZoom = config.mapZoom;
         });
+    },
+
+    closePlace() {
+      this.$router.push({ name: 'index', params: { featuresAndLocation: this.featuresAndLocation } })
     },
 
     updateRoute() {

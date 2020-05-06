@@ -3,7 +3,9 @@
     ref="detail"
     :id="$route.params.id"
     :features-and-location="this.$route.params.featuresAndLocation"
-  />
+  >
+    <slot />
+  </place-detail>
 </template>
 
 <script>

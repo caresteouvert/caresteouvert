@@ -12,6 +12,7 @@
       min-height="100%"
       class="d-flex flex-column"
     >
+      <slot />
       <v-toolbar
         v-if="place"
         tile
@@ -38,7 +39,6 @@
           <v-icon>osm-close</v-icon>
         </v-btn>
       </v-toolbar>
-
       <div v-if="place">
         <detail-state
           ref="state"
