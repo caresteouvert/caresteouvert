@@ -300,7 +300,7 @@
           "form_details": [ "delivery", "takeaway", "drive_through", "access" ]
         },
         "awarded_chef": {
-          "name": "Awarded chef",
+          "name": "Top chef",
           "areas": [ "FR-admin8_Lyon" ]
         },
         "fast_food": {
