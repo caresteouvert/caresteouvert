@@ -20,9 +20,6 @@
         <v-list-item-title v-text="item.text"></v-list-item-title>
         <v-list-item-subtitle v-text="item.region"></v-list-item-subtitle>
       </v-list-item-content>
-      <v-list-item-action>
-        <v-icon>mdi-coin</v-icon>
-      </v-list-item-action>
     </template>
   </v-autocomplete>
 </template>
