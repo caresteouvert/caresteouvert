@@ -140,7 +140,7 @@
     },
     "takeaway": {
       "yes": "Venta \"para llevar\" disponible",
-      "only": "Solo venta para llevar"
+      "only": "Solo venta \"para llevar\""
     },
     "drive_through": {
       "yes": "Servicio al carro disponible",
