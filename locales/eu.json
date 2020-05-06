@@ -3,12 +3,12 @@
   "loading": "Kargatzen, itxaron mesedez...",
   "covid19-alert": "Jarrai itzazu gobernuaren murrizketak. Errespontsabilitatea ZUREA da.",
   "title": "Irekita jarraitzen du",
-  "subtitle": "Itxialdi garaian irekita jarraitzen duten lekuak",
-  "subtitle-dense": "Itxialdian irekita dauden lekuak",
+  "subtitle": "Itxialdi garaian eta ondoren irekita jarraitzen duten lekuak",
   "search": "Idatzi zure bilaketa",
   "coordinates": "Koordenatuak",
   "menu": "Menua",
   "missing_shop": "Falta den denda baten berri eman",
+  "backtolist": "Listara itzuli",
   "missing_shop_dialog": {
     "description": "« {brand} » itxialdi garaian irekitzaeko baimena duten lekuak erakusteko asmoa du. Leku batzuk falta badira arrazoi desberdinengatik izan daiteke:",
     "add_osm": "Lekua ez dago OpenStreetMapen, gehitu:",
@@ -25,6 +25,8 @@
   },
   "services": {
     "delivery": "Banaketa",
+    "hydroalcoholic_gel": "Gel hidroalkoholikoa",
+    "mask": "Maskara",
     "takeaway": "Eramateko"
   },
   "learnmore": {
@@ -233,6 +235,7 @@
     "eat": "Jatetxe eta eramateko janaria",
     "vending_machine": "Makina saltzailea",
     "restaurant": "Jatetxea",
+    "awarded_chef": "Sukaldari gorena",
     "fast_food": "Janari azkarra",
     "ice_cream": "Izozki denda",
     "cafe": "Kafetegia",
@@ -280,6 +283,27 @@
       "places_around": "Bilatu itxialdian irekita dauden lekuak",
       "contribute": "Hobetu mapa zure informazioarekin",
       "organize": "Kutsadura arriskua murrizteko mugikortasun hobea "
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "Eskualde lista"
+    },
+    "departements": {
+      "title": "Departamendu lista"
+    },
+    "communes": {
+      "title": "Udalerri lista"
+    },
+    "categories": {
+      "title": "Kategoria lista"
+    },
+    "pois": {
+      "title": "Lekuen lista",
+      "link": {
+        "previous": "Aurreko lekuak",
+        "next": "Hurrengo lekuak"
+      }
     }
   }
 }
