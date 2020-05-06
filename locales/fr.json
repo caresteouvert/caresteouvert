@@ -9,6 +9,7 @@
   "coordinates": "Coordonnées",
   "menu": "Menu",
   "missing_shop": "Commerce manquant ?",
+  "backtolist": "Retour à la liste",
   "missing_shop_dialog": {
     "description": "« {brand} » a pour but de n'afficher que les lieux qui sont autorisés à ouvrir pendant le confinement.\nPlusieurs raisons sont possibles en cas de manque :",
     "add_osm": "Il n'est pas dans OpenStreetMap, ajoutez le :",
@@ -25,6 +26,8 @@
   },
   "services": {
     "delivery": "Livraison",
+    "hydroalcoholic_gel": "Gel hydroalcoolique",
+    "mask": "Masques",
     "takeaway": "Vente à emporter"
   },
   "learnmore": {

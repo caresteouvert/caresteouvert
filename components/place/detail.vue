@@ -4,159 +4,157 @@
     :elevation="3"
     :tile="!isMobile"
     :height="`${height}vh`"
-    :class="{ 'bottom-dialog': isMobile, 'right-sidebar': !isMobile }"
+    :class="{ 'bottom-dialog': isMobile, 'left-sidebar': !isMobile }"
   >
-    <v-slide-x-reverse-transition>
-      <v-card
-        :loading="!place"
+    <v-card
+      :loading="!place"
+      tile
+      min-height="100%"
+      class="d-flex flex-column"
+    >
+      <slot />
+      <v-toolbar
+        v-if="place"
         tile
-        min-height="100%"
-        class="d-flex flex-column"
+        dark
+        class="flex-grow-0"
       >
-        <v-toolbar
-          v-if="place"
-          tile
-          dark
-          class="flex-grow-0"
+        <v-icon>{{ `osm-${category}` }}</v-icon>
+        <v-toolbar-title
+          :title="title"
+          class="ml-3 toolbar-title"
         >
-          <v-icon>{{ `osm-${category}` }}</v-icon>
-          <v-toolbar-title
-            :title="title"
-            class="ml-3 toolbar-title"
-          >
-            {{ title || type }}
-            <template v-if="title">
-              <br>
-              <span class="subtitle-1">{{ type }}</span>
-            </template>
-          </v-list-item>
-          </v-toolbar-title>
-          <v-spacer></v-spacer>
-          <v-btn
-            icon
-            dark
-            @click="close">
-            <v-icon>osm-close</v-icon>
-          </v-btn>
-        </v-toolbar>
-
-        <div v-if="place">
-          <detail-state
-            ref="state"
-            :place="place"
-            :status="status"
-            :last-update="lastUpdate"
-          />
-
-          <detail-hygiene
-            v-if="status != 'closed'"
-            :place="place"
-          />
-
-          <v-list
-            v-if="infos.length > 0 || hasVending"
-            class="py-0"
-          >
-            <v-list-item v-if="infos.length > 0">
-              <v-list-item-icon><v-icon>osm-info</v-icon></v-list-item-icon>
-              <v-list-item-content>
-                <p
-                  v-for="info in infos"
-                  :key="info"
-                  v-html="info"
-                  v-linkified:options="{ className: 'alert-link', attributes: { rel: 'noopener' } }"
-                  class="mb-3 overflowwrap-anywhere"
-                />
-              </v-list-item-content>
-            </v-list-item>
-
-            <detail-link
-              v-if="hasVending"
-              :title="$t(`details.vending.${place.properties.tags.vending}`)"
-              icon="osm-vending_machine"
-            />
-          </v-list>
-
-          <template v-if="services.length > 0">
-            <v-subheader>{{ $t('details.services') }}</v-subheader>
-             <v-list class="py-0">
-               <detail-link
-                 v-for="{ service, value } in services"
-                 :key="service"
-                 :title="value"
-                 :icon="`osm-${service}`"
-               />
-             </v-list-item>
-           </v-list>
-         </template>
-
-         <template v-if="hasOpeningInfos">
-           <v-subheader v-if="hasSpecificOpeningHours || place.properties.brand_hours">{{ $t('details.lockdown_opening_hours') }}</v-subheader>
-           <v-subheader v-else>{{ $t('details.normal_opening_hours') }}</v-subheader>
-           <v-list class="py-0">
-             <detail-opening-hours
-               v-if="hasSpecificOpeningHours"
-               :value="place.properties.opening_hours"
-               :country="place.properties.country"
-               :coordinates="place.geometry.coordinates"
-             />
-             <detail-link
-               v-else-if="place.properties.brand_hours"
-               :href="place.properties.brand_hours"
-               :title="$t('details.lockdown_brand_hours')"
-               external
-               icon="osm-chevron_right"
-             />
-             <template v-else-if="place.properties.tags.opening_hours">
-               <v-alert
-                 dense
-                 tile
-                 :icon="false"
-                 border="left"
-                 colored-border
-                 type="warning"
-                 class="mb-0 pa-0"
-               >
-                 <detail-opening-hours
-                   :value="place.properties.tags.opening_hours"
-                   :country="place.properties.country"
-                   :coordinates="place.geometry.coordinates"
-                 />
-               </v-alert>
-             </template>
-           </v-list>
-         </template>
-
-         <template v-if="hasContactInfos">
-           <v-subheader>{{ $t('details.contact') }}</v-subheader>
-           <v-list class="py-0">
-             <template v-for="c in contactsDisplayed">
-                <template v-if="contact(c)">
-                  <detail-link
-                    v-for="value in contact(c)"
-                    :key="value.text"
-                    :href="value.href"
-                    :title="value.text"
-                    :icon="contacts[c]"
-                    :external="value.href.startsWith('http')"
-                  />
-                </template>
-              </template>
-            </v-list>
+          {{ title || type }}
+          <template v-if="title">
+            <br>
+            <span class="subtitle-1">{{ type }}</span>
           </template>
-
-          <update-detail-dialog
-            v-if="country === 'FR'"
-            :place="place"
-          />
-        </div>
-
+        </v-list-item>
+        </v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-footer tile>
-          <osm-link :id="id" />
-        </v-footer>
-      </v-card>
-    </v-slide-x-reverse-transition>
+        <v-btn
+          icon
+          dark
+          @click="close">
+          <v-icon>osm-close</v-icon>
+        </v-btn>
+      </v-toolbar>
+      <div v-if="place">
+        <detail-state
+          ref="state"
+          :place="place"
+          :status="status"
+          :last-update="lastUpdate"
+        />
+
+        <detail-hygiene
+          v-if="status != 'closed'"
+          :place="place"
+        />
+
+        <v-list
+          v-if="infos.length > 0 || hasVending"
+          class="py-0"
+        >
+          <v-list-item v-if="infos.length > 0">
+            <v-list-item-icon><v-icon>osm-info</v-icon></v-list-item-icon>
+            <v-list-item-content>
+              <p
+                v-for="info in infos"
+                :key="info"
+                v-html="info"
+                v-linkified:options="{ className: 'alert-link', attributes: { rel: 'noopener' } }"
+                class="mb-3 overflowwrap-anywhere"
+              />
+            </v-list-item-content>
+          </v-list-item>
+
+          <detail-link
+            v-if="hasVending"
+            :title="$t(`details.vending.${place.properties.tags.vending}`)"
+            icon="osm-vending_machine"
+          />
+        </v-list>
+
+        <template v-if="services.length > 0">
+          <v-subheader>{{ $t('details.services') }}</v-subheader>
+           <v-list class="py-0">
+             <detail-link
+               v-for="{ service, value } in services"
+               :key="service"
+               :title="value"
+               :icon="`osm-${service}`"
+             />
+           </v-list-item>
+         </v-list>
+       </template>
+
+       <template v-if="hasOpeningInfos">
+         <v-subheader v-if="hasSpecificOpeningHours || place.properties.brand_hours">{{ $t('details.lockdown_opening_hours') }}</v-subheader>
+         <v-subheader v-else>{{ $t('details.normal_opening_hours') }}</v-subheader>
+         <v-list class="py-0">
+           <detail-opening-hours
+             v-if="hasSpecificOpeningHours"
+             :value="place.properties.opening_hours"
+             :country="place.properties.country"
+             :coordinates="place.geometry.coordinates"
+           />
+           <detail-link
+             v-else-if="place.properties.brand_hours"
+             :href="place.properties.brand_hours"
+             :title="$t('details.lockdown_brand_hours')"
+             external
+             icon="osm-chevron_right"
+           />
+           <template v-else-if="place.properties.tags.opening_hours">
+             <v-alert
+               dense
+               tile
+               :icon="false"
+               border="left"
+               colored-border
+               type="warning"
+               class="mb-0 pa-0"
+             >
+               <detail-opening-hours
+                 :value="place.properties.tags.opening_hours"
+                 :country="place.properties.country"
+                 :coordinates="place.geometry.coordinates"
+               />
+             </v-alert>
+           </template>
+         </v-list>
+       </template>
+
+       <template v-if="hasContactInfos">
+         <v-subheader>{{ $t('details.contact') }}</v-subheader>
+         <v-list class="py-0">
+           <template v-for="c in contactsDisplayed">
+              <template v-if="contact(c)">
+                <detail-link
+                  v-for="value in contact(c)"
+                  :key="value.text"
+                  :href="value.href"
+                  :title="value.text"
+                  :icon="contacts[c]"
+                  :external="value.href.startsWith('http')"
+                />
+              </template>
+            </template>
+          </v-list>
+        </template>
+
+        <update-detail-dialog
+          v-if="country === 'FR'"
+          :place="place"
+        />
+      </div>
+
+      <v-spacer></v-spacer>
+      <v-footer tile>
+        <osm-link :id="id" />
+      </v-footer>
+    </v-card>
   </v-sheet>
 </template>
 
@@ -419,12 +417,12 @@ export default {
 .toolbar-title {
   line-height: 1;
 }
-.right-sidebar {
+.left-sidebar {
   width: 400px;
   height: 100vh;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 10;
   overflow-y: auto;
 }

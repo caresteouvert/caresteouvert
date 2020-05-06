@@ -9,6 +9,7 @@
   "coordinates": "Coordinates",
   "menu": "Menu",
   "missing_shop": "Report a missing shop",
+  "backtolist": "Back to the list",
   "missing_shop_dialog": {
     "description": "« {brand} » is intended to display only places that are allowed to open during the lockdown. There are several possible reasons if some are missing:",
     "add_osm": "The place is not in OpenStreetMap, add it:",
@@ -25,6 +26,8 @@
   },
   "services": {
     "delivery": "Delivery",
+    "hydroalcoholic_gel": "Hydroalcoholic gel",
+    "mask": "Mask",
     "takeaway": "Takeaway"
   },
   "learnmore": {
@@ -160,7 +163,7 @@
       "sweets": "Sweets"
     },
     "hygiene": "Hygiene",
-    "hydroalcoholic_gel": "Hydroalcoolique gel",
+    "hydroalcoholic_gel": "Hydroalcoholic gel",
     "mask": "Mask",
     "hygiene_status": {
       "yes": "On {date} : available",

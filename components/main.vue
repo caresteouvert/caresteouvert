@@ -3,21 +3,22 @@
     :class="{
        sm: isMobile,
       'place-opened': $route.name === 'place' && !isMobile,
-      'sidebar-opened': sidebar && !isMobile
+      'sidebar-opened': sidebar && !isMobile,
+      'sidebar-big-opened': sidebar && hasFilter && !isMobile
     }"
   >
     <div>
       <v-navigation-drawer
         v-if="!isMobile"
         v-model="sidebar"
+        :width="hasFilter ? 400 : 300"
         temporary
         stateless
         hide-overlay
-        width="300"
         fixed
       >
         <filter-results
-          v-if="filter !== ''"
+          v-if="hasFilter"
           v-model="filter"
           :services.sync="filterServices"
           :featuresAndLocation="featuresAndLocation"
@@ -69,7 +70,7 @@
           :filter="filter"
         >
           <filter-results
-            v-if="filter != ''"
+            v-if="hasFilter"
             v-model="filter"
             :services.sync="filterServices"
             :featuresAndLocation="featuresAndLocation"
@@ -84,7 +85,18 @@
         </bottom-menu>
       </v-content>
     </div>
-    <nuxt-child/>
+    <router-view>
+      <div v-if="hasFilter">
+        <v-btn
+          tile
+          text
+          @click="closePlace"
+        >
+          <v-icon>osm-arrow-left</v-icon>
+          {{ $t('backtolist') }}
+        </v-btn>
+      </div>
+    </router-view>
     <splash-screen v-if="!mapLoaded" />
   </div>
 </template>
@@ -163,7 +175,13 @@ export default {
     });
   },
 
-  computed: mapGetters(['categories', 'allCategories']),
+  computed: {
+    ...mapGetters(['categories', 'allCategories']),
+
+    hasFilter() {
+      return this.filter !== '';
+    }
+  },
 
   watch: {
     mapCenter() {
@@ -225,6 +243,10 @@ export default {
           this.mapCenter = { lat: config.mapCenter[1], lng: config.mapCenter[0] };
           this.mapZoom = config.mapZoom;
         });
+    },
+
+    closePlace() {
+      this.$router.push({ name: 'index', params: { featuresAndLocation: this.featuresAndLocation } })
     },
 
     updateRoute() {
@@ -332,11 +354,11 @@ export default {
 .sm .mapboxgl-ctrl-bottom-right {
   bottom: 20px;
 }
-.place-opened .mapboxgl-ctrl-top-right, .place-opened .mapboxgl-ctrl-bottom-right {
-  transform: translateX(-400px);
-}
 .sidebar-opened .search {
   transform: translateX(300px);
+}
+.sidebar-big-opened .search, .place-opened .search {
+  transform: translateX(400px);
 }
 .text-pre {
   white-space: pre-line;

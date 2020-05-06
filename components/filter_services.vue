@@ -1,6 +1,8 @@
 <template>
   <v-chip-group
     :value="value"
+    :show-arrows="false"
+    :mobile-break-point="10000"
     class="px-2"
     multiple
     @change="(v) => $emit('input', v)"
