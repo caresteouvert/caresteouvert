@@ -91,6 +91,11 @@
           "name": "Recycling centre",
           "osm_tags": [ { "amenity": "recycling", "recycling_type": "centre" } ],
           "areas": [ "FR" ]
+        },
+        "library": {
+          "name": "Library",
+          "osm_tags": [ { "amenity": "library" } ],
+          "areas": [ "FI" ]
         }
       }
     },
