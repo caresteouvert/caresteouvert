@@ -22,7 +22,7 @@
 
     <template v-if="!geocoder">
       <img
-        :alt="$t('subtitle-dense')"
+        :alt="$t('subtitle')"
         :src="logoMobile"
         class="img-header-mobile"
       />
