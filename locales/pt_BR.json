@@ -3,17 +3,17 @@
   "loading": "Carregando. Aguarde...",
   "covid19-alert": "Siga as orientações do governo local. A responsabilidade é SUA.",
   "title": "Permanece aberto",
-  "subtitle": "Lugares que permanecem abertos durante o isolamento",
-  "subtitle-dense": "Lugares abertos durante o isolamento",
+  "subtitle": "Lugares que permanecem abertos durante e após o isolamento",
   "search": "Buscar...",
   "coordinates": "Coordenadas",
   "menu": "Menu",
   "missing_shop": "Não encontrou uma loja?",
+  "backtolist": "Voltar",
   "missing_shop_dialog": {
-    "description": "\"{brand}\" apenas mostra lugares que possuem permissão para funcionar durante o isolamento. Caso não tenha encontrado uma loja:",
-    "add_osm": "A loja não está no OpenStreetMap. Adicione-a",
+    "description": "\"{brand}\" mostra lugares que possuem permissão para funcionar durante o isolamento. Caso não tenha encontrado uma loja:",
+    "add_osm": "A loja não está no OpenStreetMap. Adicione-a:",
     "add_osm_cta": "Ler o guia",
-    "add_category": "Falta uma categoria de lojas",
+    "add_category": "Falta uma categoria de lojas:",
     "add_category_cta": "Solicitar adição"
   },
   "change_lang": "Alterar idioma",
@@ -25,6 +25,8 @@
   },
   "services": {
     "delivery": "Entrega",
+    "hydroalcoholic_gel": "Álcool em gel",
+    "mask": "Máscara",
     "takeaway": "Retirada"
   },
   "learnmore": {
@@ -205,6 +207,7 @@
     "tourism_info": "Informações turísticas",
     "hotel": "Hospedagem",
     "recycling_centre": "Reciclagem",
+    "library": "Biblioteca e livraria",
     "health": "Saúde",
     "pharmacy": "Farmácia",
     "covid19_centre": "Centro de consultas sobre Covid-19",
@@ -233,6 +236,7 @@
     "eat": "Restaurante e retirada",
     "vending_machine": "Máquinas de venda automática",
     "restaurant": "Restaurante",
+    "awarded_chef": "Top chef",
     "fast_food": "Fast-food",
     "ice_cream": "Sorveteria",
     "cafe": "Cafeteria",
@@ -266,6 +270,7 @@
     "hairdresser": "Cabeleireiro",
     "jewelry": "Joalheria",
     "toys": "Loja de brinquedos",
+    "sports": "Artigos esportivos",
     "mobility": "Mobilidade",
     "fuel": "Postos de gasolina",
     "car_rental": "Locadoras",
@@ -280,6 +285,27 @@
       "places_around": "Encontre lugares abertos durante o isolamento",
       "contribute": "Melhore o mapa com as suas informações",
       "organize": "Melhor mobilidade para limitar o risco de contágio"
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "Regiões"
+    },
+    "departements": {
+      "title": "Departamentos"
+    },
+    "communes": {
+      "title": "Condados"
+    },
+    "categories": {
+      "title": "Categorias"
+    },
+    "pois": {
+      "title": "Lugares",
+      "link": {
+        "previous": "Lugares anteriores",
+        "next": "Próximos lugares"
+      }
     }
   }
 }
