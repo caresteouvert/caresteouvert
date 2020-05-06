@@ -1,0 +1,307 @@
+{
+  "lang": "Español",
+  "loading": "Cargando. Por favor, espera...",
+  "covid19-alert": "Sigue las recomendaciones del gobierno. La responsabilidad es TUYA.",
+  "title": "Sigue abierto",
+  "subtitle": "Sitios que siguen abiertos durante la cuarentena",
+  "subtitle-dense": "Sitios abiertos durante la cuarentena",
+  "search": "Buscar",
+  "coordinates": "Coordenadas",
+  "menu": "Menú",
+  "missing_shop": "Reportar un sitio faltante",
+  "missing_shop_dialog": {
+    "description": "«{brand}» pretende mostrar solo sitios que tienen permitido abrir durante la cuarentena. Hay varias razones posibles si faltan algunos:",
+    "add_osm": "El sitio no está en OpenStreetMap, adiciónalo:",
+    "add_osm_cta": "Sigue la guía",
+    "add_category": "Falta una categoría de sitios:",
+    "add_category_cta": "Solicita adición"
+  },
+  "change_lang": "Cambia el idioma",
+  "zoomtosee": " Has acercar para mostrar sitios abiertos",
+  "filter_noresults": "No se han encontrado resultados. Inténtalo alejando el mapa.",
+  "toggle_color": {
+    "blind": "Activa modo daltónico",
+    "normal": "Desactiva modo daltónico"
+  },
+  "services": {
+    "delivery": "Entrega",
+    "takeaway": "Para llevar"
+  },
+  "learnmore": {
+    "about": "Acerca de",
+    "contribute": "Contribuir",
+    "missing_shop": "Reportar un sitio faltante",
+    "description": "«{brand}» es una herramienta esencial para evitar desplazamientos innecesarios cercanos a tu domicilio durante la cuarentena y, por lo tanto, limitar el riesgo de contagio.\nEste mapa colaborativo te permite compartir fácilmente los sitios abiertos o cerrados de tu barrio. Es la forma más eficaz y solidaria de mejor informar a todos tus vecinos y habitantes de tu ciudad.",
+    "title": "Saber más",
+    "press": "Prensa",
+    "disclaimer": "Aviso legal",
+    "blog": "Blog",
+    "townhalls": "Solución de comunicación en crisis para las alcaldías",
+    "osm_contributors": "Documentación para colaboradores de OpenStreetMap"
+  },
+  "rgpd": {
+    "consent": "En estos tiempos de cuarentena, ¿aceptarias las cookies en tu computador para nuestras estadísticas?",
+    "yes": "Sí",
+    "no": "No"
+  },
+  "apps_info": {
+    "close": "Cerrar",
+    "text": "¡La aplicación móvil « {brand} » ya está disponible!",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
+  },
+  "days": {
+    "monday": "Lunes",
+    "tuesday": "Martes",
+    "wednesday": "Miércoles",
+    "thursday": "Jueves",
+    "friday": "Viernes",
+    "saturday": "Sábado",
+    "sunday": "Domingo",
+    "ph": "Días feriados"
+  },
+  "contribute_form": {
+    "title": "Contribuir",
+    "step1": {
+      "title": "¿Este sitio está abierto durante la cuarentena?",
+      "open": {
+        "yes": "sí",
+        "no": "no"
+      }
+    },
+    "step2": {
+      "title": "Horario de apertura durante la cuarentena",
+      "same_hours": "Son los mismos horarios",
+      "same_hours_without_lockdown": "Son los mismos horarios que fuera de la cuarentena",
+      "dont_know": "No lo sé",
+      "continue": "Continuar"
+    },
+    "step3": {
+      "title": "Añadir detalles",
+      "3state": {
+        "unknown": "No lo sé",
+        "yes": "Si",
+        "no": "No"
+      },
+      "delivery": "Este sitio ofrece domicilios",
+      "takeaway": "Este sitio permite comprar para llevar",
+      "access": "Este sitio ofrece recepción física en sitio",
+      "drive_through": "Este sitio dispone de servicio al carro",
+      "details": "Opcional: agrega otros detalles necesarios durante la cuarentena",
+      "details_error": "Debe estar vacío o tener entre 10 y 200 caracteres de longitud"
+    },
+    "submit": "Publicar",
+    "cancel": "Cancelar"
+  },
+  "details": {
+    "signal_warning": "Estabas escribiendo un informe, si partes no se guardará. ¿Quieres realmente continuar?",
+    "signal": "Reportar un cambio",
+    "signal_done": "Su informe ha sido registrado. ¡Gracias! Este aparecerá en un momento sobre el mapa.",
+    "lockdown_opening_hours": "Horario de apertura",
+    "normal_opening_hours": "Horario de apertura en periodo fuera de cuarentena",
+    "lockdown_brand_hours": "Consulta los horarios de apertura",
+    "facebook": "Página de Facebook",
+    "not_accessible": "No hay recepción física en sitio",
+    "capacity": "Capacidad máxima: 0 personas | Capacidad máxima: 1 persona | Capacidad máxima: {count} personas",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "last_update": {
+      "date": "Última actualización: {date}",
+      "recent": "Actualizado hace unos minutos, la información podría haber cambiado"
+    },
+    "opening_hours": {
+      "state_until_date": "{state} hasta {date}",
+      "state": {
+        "open": "abierto",
+        "closed": "cerrado"
+      },
+      "tomorrow": "mañana"
+    },
+    "state": {
+      "open": "Sitio abierto durante la cuarentena",
+      "open_adapted": "Sitio abierto durante la cuarentena, con horario adaptado",
+      "partial": "Sitio perteneciente a una marca donde los establecimientos están parcialmente abiertos durante la cuarentena. ¿Este está abierto o cerrado? Déjanos saberlo.",
+      "unknown": "Sitio potencialmente abierto durante la cuarentena para ofrecer sus servicios tradicionales o nuevos servicios. ¿Abierto o cerrado? Haznos saber",
+      "closed": "Sitio cerrado durante la cuarentena"
+    },
+    "state_short": {
+      "open": "Abierto durante la cuarentena",
+      "open_adapted": "Abierto durante la cuarentena",
+      "partial": "Potencialmente abierto",
+      "unknown": "Potencialmente abierto",
+      "closed": "Cerrado durante la cuarentena"
+    },
+    "delivery": {
+      "yes": "Servicio de domicilio disponible",
+      "only": "Solo por domicilio"
+    },
+    "takeaway": {
+      "yes": "Venta para llevar disponible",
+      "only": "Solo venta para llevar"
+    },
+    "drive_through": {
+      "yes": "Servicio al carro disponible",
+      "only": "Solo servicio al carro"
+    },
+    "wheelchair": {
+      "yes": "Accesible en silla de ruedas",
+      "limited": "Acceso parcial en silla de ruedas"
+    },
+    "vending": {
+      "pizza": "Pizza",
+      "stamps": "Sellos",
+      "parcel_mail_in": "Buzón",
+      "parcel_pickup": " Recogida de paquetes",
+      "parcel_pickup;parcel_mail_in": "Recogida de paquetes y buzón",
+      "milk": "Leche",
+      "drinks": "Bebidas",
+      "water": "Agua",
+      "sweets": "Dulces"
+    },
+    "hygiene": "Higiene",
+    "hydroalcoholic_gel": "Gel hidroalcohólico",
+    "mask": "Mascarillas",
+    "hygiene_status": {
+      "yes": "El {date}: disponible",
+      "no": "El {date}: no disponible",
+      "void": "No hay información, déjanos saber"
+    },
+    "hygiene_entry": {
+      "has": "tiene",
+      "hasnot": "no tiene"
+    }
+  },
+  "opening_hours_editor": {
+    "day_shortcuts": {
+      "weekdays": "De lunes a sábado"
+    },
+    "select_days": "Seleccione los días que compartan el mismo horario",
+    "next": "Siguiente",
+    "cancel": "Cancelar",
+    "select_time": {
+      "start": "Elige hora de apertura",
+      "end": "Elige hora de cierre"
+    },
+    "add_interval": "Añadir horario",
+    "add_new_days": "Añadir días de apertura"
+  },
+  "osm_link": {
+    "title": "« {brand} » utiliza datos de OpenStreetMap.",
+    "view": "Ver",
+    "edit": "Editar"
+  },
+  "categories": {
+    "other": "Otros sitios",
+    "amenity": "Servicios",
+    "police": "Policía",
+    "townhall": "Alcaldía",
+    "post_office": "Oficina postal",
+    "childcare": "Guardería",
+    "employment_agency": "Agencia de empleo",
+    "funeral_directors": "Funeraria",
+    "money": "Dinero",
+    "insurance": "Aseguradora",
+    "tourism_info": "Oficina de turismo",
+    "hotel": "Hospedaje",
+    "recycling_centre": "Centro de reciclaje",
+    "health": "Salud",
+    "pharmacy": "Droguería",
+    "covid19_centre": "Centro de consultas sobre Covid-19",
+    "optician": "Óptica",
+    "hearing_aids": "Audífonos",
+    "condoms": "Máquina expendedora de condones",
+    "medical_supply": "Suministros médicos",
+    "health_center": "Centros de salud",
+    "food": "Alimentación",
+    "supermarket": "Supermercado",
+    "butcher": "Carnicería",
+    "cheese": "Quesería",
+    "convenience": "Supermercado",
+    "seafood": "Pescadería",
+    "greengrocer": "Verdulería",
+    "grocery": "Tienda de comida",
+    "chocolate": "Chocolatería",
+    "tea": "Té",
+    "coffee": "Café",
+    "dairy": "Lechería",
+    "confectionery": "Confitería",
+    "farm": "Venta directa del productor",
+    "marketplace": "Mercado",
+    "bakery": "Panadería",
+    "alcohol": "Licorería",
+    "eat": "Restaurante y para llevar",
+    "vending_machine": "Máquina expendedora",
+    "restaurant": "Restaurante",
+    "awarded_chef": "Chef condecorado",
+    "fast_food": "Comida rápida",
+    "ice_cream": "Heladería",
+    "cafe": "Cafetería",
+    "bar": "Bar",
+    "drugs": "Droguería",
+    "tobacco": "Cigarrería",
+    "e_cigarette": "Cigarrillo electrónico",
+    "bank": "Banco",
+    "atm": "Cajero automático",
+    "money_transfer": "Transferencia de dinero",
+    "mobile_money_agent": "Agencia de transferencia de dinero",
+    "shop": "Tienda",
+    "hardware": "Ferretería",
+    "mobile_phone": "Telefonía móvil",
+    "computer": "Computador",
+    "electronics": "Electrónica",
+    "laundry": " Lavandería",
+    "stationery": "Papelería",
+    "newsagent": "Vendedor de periódico",
+    "pet": "Tienda de mascota",
+    "agrarian": "Productos agrícolas",
+    "flower": "Jardín / flores",
+    "chemist": "Droguería",
+    "sewing": "Costurero",
+    "shoes": "Zapatería",
+    "books": "Librería",
+    "beauty": "Tienda de cosmética",
+    "clothes": "Ropa",
+    "furniture": "Muebles",
+    "gift": "Tienda de regalos",
+    "hairdresser": "Peluquería",
+    "jewelry": "Joyería",
+    "toys": "Juguetería",
+    "mobility": "Movilidad",
+    "fuel": "Gasolinera",
+    "car_rental": "Alquiler de coches",
+    "bicycle": "Tienda de bicicletas",
+    "car": "Taller de automóvil",
+    "car_dealer": "Concesionario de carros",
+    "bicycle_tube": "Máquina expendedora de neumáticos para bicicleta",
+    "public_transport_tickets": "Máquina expendedora de tiquetes de transporte público"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "Encuentra sitios abiertos durante la cuarentena",
+      "contribute": "Mejora el mapa con tu propia información",
+      "organize": "Movilidad mejorada para limitar el riesgo de contagio."
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "Lista de regiones"
+    },
+    "departements": {
+      "title": "Lista de departamentos"
+    },
+    "communes": {
+      "title": "Lista de países"
+    },
+    "categories": {
+      "title": "Lista de categorías"
+    },
+    "pois": {
+      "title": "Lista de sitios",
+      "link": {
+        "previous": "Sitios previos",
+        "next": "Próximos sitios"
+      }
+    }
+  }
+}
