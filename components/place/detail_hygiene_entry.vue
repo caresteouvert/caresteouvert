@@ -31,8 +31,6 @@
         </v-btn>
       </v-list-item-subtitle>
     </v-list-item-content>
-    <v-list-item-action v-if="!success">
-    </v-list-item-action>
   </v-list-item>
 </template>
 
