@@ -16,6 +16,7 @@
         <v-icon
           v-for="filter in SUB_FILTERS"
           v-if="['yes', 'only'].includes(place.properties[filter])"
+          :key="filter"
           x-small
         >{{ `osm-${filter}` }}</v-icon>
       </v-list-item-title>
