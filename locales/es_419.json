@@ -17,7 +17,7 @@
     "add_category_cta": "Solicita adición"
   },
   "change_lang": "Cambia el idioma",
-  "zoomtosee": " Acercarte para mostrar sitios abiertos",
+  "zoomtosee": " Acercarte para ver sitios abiertos",
   "filter_noresults": "No se han encontrado resultados. Inténtalo alejando el mapa.",
   "toggle_color": {
     "blind": "Activa modo daltónico",
@@ -87,7 +87,7 @@
         "no": "No"
       },
       "delivery": "Este sitio ofrece domicilios",
-      "takeaway": "Este sitio permite comprar para llevar",
+      "takeaway": "Este sitio permite comprar \"para llevar\"",
       "access": "Este sitio ofrece recepción física en sitio",
       "drive_through": "Este sitio dispone de servicio al carro",
       "details": "Opcional: agrega otros detalles necesarios durante la cuarentena",
@@ -99,7 +99,7 @@
   "details": {
     "signal_warning": "Estabas escribiendo un informe, si partes no se guardará. ¿Quieres realmente continuar?",
     "signal": "Reportar un cambio",
-    "signal_done": "Su informe ha sido registrado. ¡Gracias! Este aparecerá en un momento sobre el mapa.",
+    "signal_done": "Tu informe ha sido registrado. ¡Gracias! Este aparecerá en un momento sobre el mapa.",
     "lockdown_opening_hours": "Horario de apertura",
     "normal_opening_hours": "Horario de apertura en periodo fuera de cuarentena",
     "lockdown_brand_hours": "Consulta los horarios de apertura",
@@ -123,8 +123,8 @@
     "state": {
       "open": "Sitio abierto durante la cuarentena",
       "open_adapted": "Sitio abierto durante la cuarentena, con horario adaptado",
-      "partial": "Sitio perteneciente a una marca donde los establecimientos están parcialmente abiertos durante la cuarentena. ¿Este está abierto o cerrado? Déjanos saberlo.",
-      "unknown": "Sitio potencialmente abierto durante la cuarentena para ofrecer sus servicios tradicionales o nuevos servicios. ¿Abierto o cerrado? Haznos saber",
+      "partial": "Sitio perteneciente a una marca cuyos establecimientos están parcialmente abiertos durante la cuarentena. ¿Éste está abierto o cerrado? Déjanos saberlo.",
+      "unknown": "El sitio puede estar abierto durante la cuarentena. ¿Éste está abierto o cerrado? Déjanos saberlo.",
       "closed": "Sitio cerrado durante la cuarentena"
     },
     "state_short": {
@@ -135,12 +135,12 @@
       "closed": "Cerrado durante la cuarentena"
     },
     "delivery": {
-      "yes": "Servicio de domicilio disponible",
-      "only": "Solo por domicilio"
+      "yes": "Servicio de domicilios disponible",
+      "only": "Solo por domicilios"
     },
     "takeaway": {
-      "yes": "Venta para llevar disponible",
-      "only": "Solo venta para llevar"
+      "yes": "Venta \"para llevar\" disponible",
+      "only": "Solo venta \"para llevar\""
     },
     "drive_through": {
       "yes": "Servicio al carro disponible",
@@ -152,10 +152,10 @@
     },
     "vending": {
       "pizza": "Pizza",
-      "stamps": "Sellos",
-      "parcel_mail_in": "Buzón",
+      "stamps": "Estampillas",
+      "parcel_mail_in": "Buzón (Terminal de paquetería)",
       "parcel_pickup": " Recogida de paquetes",
-      "parcel_pickup;parcel_mail_in": "Recogida de paquetes y buzón",
+      "parcel_pickup;parcel_mail_in": "Recogida de paquetes y buzón (Terminal de paquetería)",
       "milk": "Leche",
       "drinks": "Bebidas",
       "water": "Agua",
@@ -167,7 +167,7 @@
     "hygiene_status": {
       "yes": "El {date}: disponible",
       "no": "El {date}: no disponible",
-      "void": "No hay información, déjanos saber"
+      "void": "No hay información, déjanos saberlo"
     },
     "hygiene_entry": {
       "has": "tiene",
@@ -207,6 +207,7 @@
     "tourism_info": "Oficina de turismo",
     "hotel": "Hospedaje",
     "recycling_centre": "Centro de reciclaje",
+    "library": "Bibliotecas",
     "health": "Salud",
     "pharmacy": "Droguerías",
     "covid19_centre": "Centro de consultas sobre Covid-19",
@@ -221,45 +222,45 @@
     "cheese": "Queserías",
     "convenience": "Minimercados",
     "seafood": "Pescaderías",
-    "greengrocer": "Verdulería",
-    "grocery": "Tienda de comida",
+    "greengrocer": "Fruterías",
+    "grocery": "Tiendas de comida",
     "chocolate": "Chocolaterías",
-    "tea": "Té",
-    "coffee": "Cafeterías",
+    "tea": "Tiendas de té",
+    "coffee": "Tiendas de café",
     "dairy": "Lecherías",
     "confectionery": "Confiterías",
     "farm": "Venta directa del productor",
     "marketplace": "Mercados",
     "bakery": "Panaderías",
-    "alcohol": "Licorería",
-    "eat": "Restaurante y para llevar",
-    "vending_machine": "Máquina expendedora",
-    "restaurant": "Restaurante",
+    "alcohol": "Licorerías",
+    "eat": "Restaurantes y \"para llevar\"",
+    "vending_machine": "Máquinas expendedoras",
+    "restaurant": "Restaurantes",
     "awarded_chef": "Mejores chefs",
-    "fast_food": "Comida rápida",
+    "fast_food": "Comidas rápidas",
     "ice_cream": "Heladería",
-    "cafe": "Cafetería",
-    "bar": "Bar",
-    "drugs": "Droguería",
+    "cafe": "Cafeterías",
+    "bar": "Bares",
+    "drugs": "Cigarrerías",
     "tobacco": "Cigarrería",
-    "e_cigarette": "Cigarrillo electrónico",
+    "e_cigarette": "Cigarrillos electrónicos",
     "bank": "Banco",
     "atm": "Cajero automático",
     "money_transfer": "Transferencia de dinero",
     "mobile_money_agent": "Agencia de transferencia de dinero",
     "shop": "Tienda",
-    "hardware": "Ferretería",
+    "hardware": "Ferreterías",
     "mobile_phone": "Telefonía móvil",
-    "computer": "Computador",
+    "computer": "Computadores",
     "electronics": "Electrónica",
-    "laundry": " Lavandería",
-    "stationery": "Papelería",
-    "newsagent": "Vendedor de periódico",
-    "pet": "Tienda de mascota",
+    "laundry": " Lavanderías",
+    "stationery": "Papelerías",
+    "newsagent": "Vendedores de periódico",
+    "pet": "Tiendas de mascotas",
     "agrarian": "Productos agrícolas",
-    "flower": "Jardín / flores",
-    "chemist": "Droguería",
-    "sewing": "Costurero",
+    "flower": "Floristerías / Viveros",
+    "chemist": "Droguerías",
+    "sewing": "Modisterías",
     "shoes": "Zapatería",
     "books": "Librería",
     "beauty": "Tienda de cosmética",
@@ -271,19 +272,19 @@
     "toys": "Juguetería",
     "sports": "Deportes",
     "mobility": "Movilidad",
-    "fuel": "Gasolinera",
-    "car_rental": "Alquiler de coches",
-    "bicycle": "Tienda de bicicletas",
-    "car": "Taller de automóvil",
+    "fuel": "Gasolineras",
+    "car_rental": "Alquiler de carros",
+    "bicycle": "Tiendas de bicicletas",
+    "car": "Talleres de automóvil",
     "car_dealer": "Concesionario de carros",
-    "bicycle_tube": "Máquina expendedora de neumáticos para bicicleta",
-    "public_transport_tickets": "Máquina expendedora de tiquetes de transporte público"
+    "bicycle_tube": "Máquinas expendedoras de neumáticos para bicicleta",
+    "public_transport_tickets": "Máquinas expendedoras de tiquetes de transporte público"
   },
   "external": {
     "mobile": {
       "places_around": "Encuentra sitios abiertos durante la cuarentena",
       "contribute": "Mejora el mapa con tu propia información",
-      "organize": "Movilidad mejorada para limitar el riesgo de contagio."
+      "organize": "Mejores desplazamientos para limitar el riesgo de contagio."
     }
   },
   "directory": {
