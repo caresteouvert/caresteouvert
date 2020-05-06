@@ -9,7 +9,7 @@ Vue.use(VueI18n);
 function getLocale(locales, req, params) {
   let matchedLocale;
   const hostname = (process.client ? window.location.host : (req.headers['x-forwarded-host'] || req.headers.host)).replace("www.", "");
-  const domain = domains.find((d) => d.domain === hostname && (d.domains && d.domains.includes(hostname)));
+  const domain = domains.find((d) => d.domain === hostname || (d.domains && d.domains.includes(hostname)));
 
   if (params.lang) {
     matchedLocale = params.lang;
