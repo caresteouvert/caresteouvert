@@ -78,7 +78,7 @@ export default {
 
   data() {
     return {
-       ...SUB_FILTERS
+       SUB_FILTERS
     };
   },
 
