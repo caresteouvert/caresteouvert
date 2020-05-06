@@ -90,7 +90,9 @@ export default {
         });
     }, 350, { maxWait: 500 }),
     selected(val) {
-      this.$emit('select', val);
+      if (Array.isArray(val)) {
+        this.$emit('select', val);
+      }
     }
   }
 }
