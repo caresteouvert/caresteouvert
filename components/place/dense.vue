@@ -14,13 +14,10 @@
     <v-list-item-content class="py-2">
       <v-list-item-title>{{ title || type }}
         <v-icon
-          v-if="['yes', 'only'].includes(place.properties.delivery)"
+          v-for="filter in SUB_FILTERS"
+          v-if="['yes', 'only'].includes(place.properties[filter])"
           x-small
-        >osm-delivery</v-icon>
-        <v-icon
-          v-if="['yes', 'only'].includes(place.properties.takeaway)"
-          x-small
-        >osm-takeaway</v-icon>
+        >{{ `osm-${filter}` }}</v-icon>
       </v-list-item-title>
       <v-list-item-subtitle v-if="title && displayType">{{ type }}</v-list-item-subtitle>
       <v-list-item-subtitle
@@ -51,6 +48,7 @@
 <script>
 import placeMixin from '../mixins/place';
 import { rawColorForStatus } from '../../lib/place';
+import { SUB_FILTERS } from '../../lib/categories';
 import DenseOpeningHours from './dense_opening_hours';
 
 export default {
@@ -75,6 +73,12 @@ export default {
       required: false,
       default: ''
     }
+  },
+
+  data() {
+    return {
+       ...SUB_FILTERS
+    };
   },
 
   computed: {
