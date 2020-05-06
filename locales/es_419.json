@@ -299,7 +299,7 @@
     "pois": {
       "title": "Lista de sitios",
       "link": {
-        "previous": "Sitios previos",
+        "previous": "Sitios anteriores",
         "next": "Próximos sitios"
       }
     }
