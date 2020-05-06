@@ -181,6 +181,8 @@ function getLayers(theme) {
   ];
 }
 
+const SIDEBAR_SIZE = 400;
+
 export default {
   components: {
     MglMap,
@@ -275,7 +277,7 @@ export default {
           if (this.isMobile) {
             return (x < 0 || x > width || y > height / 2 || y < 0);
           } else {
-            const offsetSidebar = this.sidebar ? 400 : 0;
+            const offsetSidebar = this.sidebar ? SIDEBAR_SIZE : 0;
             return (x < offsetSidebar || x > width || y > height || y < 0);
           }
         }
@@ -322,7 +324,7 @@ export default {
         const height = document.body.clientHeight;
         const width = document.body.clientWidth;
         const bounds = [
-          this.map.unproject([400, 0]).toArray(),
+          this.map.unproject([SIDEBAR_SIZE, 0]).toArray(),
           this.map.unproject([width, height]).toArray()
         ];
         this.$emit('update:mapBounds', bounds);
