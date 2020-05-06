@@ -90,6 +90,7 @@
         <v-btn
           tile
           text
+          class="full-width justify-start"
           @click="closePlace"
         >
           <v-icon>osm-arrow-left</v-icon>
