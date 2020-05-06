@@ -1,14 +1,14 @@
 {
-  "lang": "Español",
+  "lang": "Español (Lat)",
   "loading": "Cargando. Por favor, espera...",
   "covid19-alert": "Sigue las recomendaciones del gobierno. La responsabilidad es TUYA.",
   "title": "Sigue abierto",
-  "subtitle": "Sitios que siguen abiertos durante la cuarentena",
-  "subtitle-dense": "Sitios abiertos durante la cuarentena",
+  "subtitle": "Sitios que permanecen abiertos durante y después de la cuarentena",
   "search": "Buscar",
   "coordinates": "Coordenadas",
   "menu": "Menú",
   "missing_shop": "Reportar un sitio faltante",
+  "backtolist": "Retorno a la lista",
   "missing_shop_dialog": {
     "description": "«{brand}» pretende mostrar solo sitios que tienen permitido abrir durante la cuarentena. Hay varias razones posibles si faltan algunos:",
     "add_osm": "El sitio no está en OpenStreetMap, adiciónalo:",
@@ -25,6 +25,8 @@
   },
   "services": {
     "delivery": "Entrega",
+    "hydroalcoholic_gel": "Gel hidroalcohólico",
+    "mask": "Mascarillas",
     "takeaway": "Para llevar"
   },
   "learnmore": {
@@ -233,7 +235,7 @@
     "eat": "Restaurante y para llevar",
     "vending_machine": "Máquina expendedora",
     "restaurant": "Restaurante",
-    "awarded_chef": "Chef condecorado",
+    "awarded_chef": "Mejores chefs",
     "fast_food": "Comida rápida",
     "ice_cream": "Heladería",
     "cafe": "Cafetería",
@@ -267,6 +269,7 @@
     "hairdresser": "Peluquería",
     "jewelry": "Joyería",
     "toys": "Juguetería",
+    "sports": "Deportes",
     "mobility": "Movilidad",
     "fuel": "Gasolinera",
     "car_rental": "Alquiler de coches",
