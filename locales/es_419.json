@@ -124,7 +124,7 @@
       "open": "Sitio abierto durante la cuarentena",
       "open_adapted": "Sitio abierto durante la cuarentena, con horario adaptado",
       "partial": "Sitio perteneciente a una marca cuyos establecimientos están parcialmente abiertos durante la cuarentena. ¿Éste está abierto o cerrado? Déjanos saberlo.",
-      "unknown": "Sitio potencialmente abierto durante la cuarentena para ofrecer sus servicios tradicionales o nuevos servicios. ¿Abierto o cerrado? Déjanos saberlo.",
+      "unknown": "El sitio puede estar abierto durante la cuarentena. ¿Éste está abierto o cerrado? Déjanos saberlo.",
       "closed": "Sitio cerrado durante la cuarentena"
     },
     "state_short": {
