@@ -172,6 +172,12 @@
     "hygiene_entry": {
       "has": "possui",
       "hasnot": "não possui"
+    },
+    "update_dialog": {
+      "complete": "Este é o seu estabelecimento? Preencha as suas informações",
+      "title": "Preencha as informações de seu estabelecimento",
+      "contact": "Precisa de ajuda? Contate-nos",
+      "use_osm": "Você pode adicionar mais informações <a href=\"https://blog.caresteouvert.fr/completer-les-infos-dun-lieu/\" target=\"_blank\">editando o seu estabelecimento no OpenStreetMap</a>."
     }
   },
   "opening_hours_editor": {
