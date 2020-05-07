@@ -121,7 +121,7 @@
       "tomorrow": "morgen"
     },
     "state": {
-      "open": "Ort weiter oder wieder geöffnet",
+      "open": "Ort geöffnet",
       "open_adapted": "Ort geöffnet mit abweichenden Öffnungszeiten",
       "partial": "Dieser Ort gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
       "unknown": "Dieser Ort ist möglicherweise geöffnet.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
