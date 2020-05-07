@@ -13,12 +13,9 @@ export const state = () => ({
 });
 
 export const mutations = {
-  setCountry (state, country) {
-    state.country = country;
-  },
-
   setArea (state, area) {
     state.area = area;
+    state.country = area.split('-')[0];
   },
 
   setPlace (state, place) {

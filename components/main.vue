@@ -301,8 +301,6 @@ export default {
       fetch(`${config.apiUrl}/country?lat=${lat}&lon=${lng}`)
         .then(res => res.text())
         .then(area => {
-          const country = area.split('-')[0];
-          this.$store.commit('setCountry', country);
           this.$store.commit('setArea', area);
           const [category, subcategory] = this.filter.split('/');
           if (!this.categories.includes(category)) {
