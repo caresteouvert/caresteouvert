@@ -1,4 +1,8 @@
 
+-- AUTOMATICALLY GENERATED SCRIPT
+-- DO NOT EDIT DIRECTLY, EDIT INSTEAD "/categories.json"
+-- THEN RUN "yarn run categories" TO UPDATE
+
 BEGIN;
 SELECT plan(2862);
 
