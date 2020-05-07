@@ -37,7 +37,7 @@ describe('Detail', () => {
     const detail = createWrapper({ id: '' });
     detail.vm.place = { properties: { status: 'open', cat: '', opening_hours: 'Mo-Sa 09:00-18:00', tags: {}, country: 'FR' }, geometry: { coordinates: [ 48.7, -1.2 ] } };
     await Vue.nextTick();
-    expect(detail.contains(DetailOpeningHours)).toBe(true);
+    expect(detail.findComponent(DetailOpeningHours).exists()).toBe(true);
   });
 
   it('dont display opening_hours when "open"', async () => {
@@ -45,7 +45,7 @@ describe('Detail', () => {
     detail.vm.place = { properties: { status: 'open', cat: '', opening_hours: 'open', tags: {}, country: 'FR' }, geometry: { coordinates: [ 48.7, -1.2 ] } };
     await Vue.nextTick();
     expect(detail.vm.hasSpecificOpeningHours).toBe(false);
-    expect(detail.contains(DetailOpeningHours)).toBe(false);
+    expect(detail.findComponent(DetailOpeningHours).exists()).toBe(false);
     expect(detail.vm.hasOpeningInfos).toBe(false);
     expect(detail.vm.hasOpeningInfos).toBe(false);
   });
@@ -63,7 +63,7 @@ describe('Detail', () => {
     detail.vm.place = { properties: { status: 'open', cat: '', opening_hours: 'Mo-Sa 09:00-18:00', tags: { opening_hours: 'Mo-Sa 09:00-18:00' }, country: 'FR' }, geometry: { coordinates: [ 48.7, -1.2 ] } };
     await Vue.nextTick();
     expect(detail.vm.hasSpecificOpeningHours).toBe(true);
-    expect(detail.findAll(DetailOpeningHours).length).toEqual(1);
+    expect(detail.findAllComponents(DetailOpeningHours).length).toEqual(1);
     expect(detail.vm.hasOpeningInfos).toBe(true);
   });
 

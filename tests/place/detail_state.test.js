@@ -47,9 +47,9 @@ describe('DetailState', () => {
 
   it('open the contribute form', async () => {
     const detail = createWrapper({ status: 'unknown', place: {} });
-    expect(detail.contains(ContributeForm)).toBe(false);
+    expect(detail.findComponent(ContributeForm).exists()).toBe(false);
     detail.vm.contribute = true;
     await Vue.nextTick();
-    expect(detail.contains(ContributeForm)).toBe(true);
+    expect(detail.findComponent(ContributeForm).exists()).toBe(true);
   });
 });

@@ -32,11 +32,11 @@ describe('OpeningHoursEditor', () => {
     editor.vm.next();
     await Vue.nextTick();
     expect(editor.findAll('v-checkbox-stub').length).toBe(0);
-    expect(editor.contains(OpeningHoursInterval)).toBe(true);
+    expect(editor.findComponent(OpeningHoursInterval).exists()).toBe(true);
     editor.vm.interval = ['08:00', '12:00'];
     editor.vm.closeDialog();
     await Vue.nextTick();
-    expect(editor.contains(OpeningHoursInterval)).toBe(false);
+    expect(editor.findComponent(OpeningHoursInterval).exists()).toBe(false);
     expect(editor.vm.openingHours).toEqual([{ days: ['mo'], hours: [['08:00', '12:00']] }]);
     expect(editor.vm.selectedWeekDays).toEqual([]);
     expect(editor.vm.interval).toEqual([]);
