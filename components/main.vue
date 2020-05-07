@@ -159,7 +159,6 @@ export default {
   },
 
   mounted() {
-    this.$store.commit('setBrandId', findBrand(window.location.host).brand);
     this.sidebar = !this.isMobile;
 
     const { filter: filterPart, location } = decode(this.featuresAndLocation);
