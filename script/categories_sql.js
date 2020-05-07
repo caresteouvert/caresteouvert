@@ -7,6 +7,7 @@ const fs = require('fs');
 
 const CATEGORIES_JSON = path.join(__dirname, "..", "categories.json");
 const CATEGORIES_SQL = path.join(__dirname, "..", "db", "categories_functions.sql");
+const CATEGORIES_SQL_TESTS = path.join(__dirname, "..", "db", "categories_functions_test.sql");
 const POI_SQL = path.join(__dirname, "..", "db", "update_poi.sql");
 
 const catg = require(CATEGORIES_JSON);
@@ -164,6 +165,99 @@ fs.writeFile(CATEGORIES_SQL, wholeSql, (err) => {
 	if(err) { throw new Error(err); }
 });
 
+
+function areasFor(subCat) {
+  if (subCat.areas === 'all') {
+    return catg.countries;
+  } else if (subCat['-areas']) {
+    return catg.countries.filter(c => !subCat['-areas'].includes(c));
+  } else {
+    return subCat.areas;
+  }
+}
+
+function tagsToHstore(tags) {
+  return Object.entries(tags).map(([key, value]) => {
+    return `${key}=>${value}`;
+  }).join(', ');
+}
+
+
+function allPossibleCases(arr) {
+  if (arr.length == 1) {
+    return arr[0];
+  } else {
+    var result = [];
+    var allCasesOfRest = allPossibleCases(arr.slice(1));
+    for (var i = 0; i < allCasesOfRest.length; i++) {
+      for (var j = 0; j < arr[0].length; j++) {
+        result.push({...arr[0][j], ...allCasesOfRest[i] });
+      }
+    }
+    return result;
+  }
+}
+
+function expandTags(tags) {
+  const toZip = Object.entries(tags).map(([key, value]) => {
+    return value.split('|').map((v) => {
+      return { [key]: v };
+    });
+  });
+  return allPossibleCases(toZip);
+}
+
+
+const categoriesTests = [];
+
+Object.entries(catg.categories).forEach(([catId, cat]) => {
+  Object.entries(cat.subcategories).forEach(([subCatId, subCat]) => {
+    if (!subCat.osm_tags) {
+      return;
+    }
+    let allTags = subCat.osm_tags.flatMap(tags => expandTags(tags));
+    if (subCat.osm_filter_tags) {
+      allTags = subCat.osm_filter_tags.flatMap((tags) => {
+        return allPossibleCases([expandTags(tags), allTags]);
+      });
+    }
+
+    allTags.forEach((tags) => {
+      areasFor(subCat).forEach((area) => {
+        categoriesTests.push({ tags: tagsToHstore(tags), area, subCatId, catId });
+      });
+    });
+   })
+});
+
+function createTest(fn, test, result) {
+  return `SELECT is(
+  ${fn}('${test.tags}'::hstore, '${test.area}'),
+  '${result}',
+  '${fn} ${test.tags} for ${test.area} should be ${result}'
+);`;
+}
+
+const categoriesTestsString = categoriesTests.flatMap((test) => {
+  return [
+    createTest('get_category', test, test.catId),
+    createTest('get_subcategory', test, test.subCatId)
+  ];
+}).join("\n\n");
+
+const testsSql = `
+BEGIN;
+SELECT plan(${categoriesTests.length * 2});
+
+${categoriesTestsString}
+
+SELECT * FROM finish();
+ROLLBACK;
+`;
+
+fs.writeFile(CATEGORIES_SQL_TESTS, testsSql, (err) => {
+	if(err) { throw new Error(err); }
+});
 
 // Edit categories filter in update_poi.sql
 const tagsForCondition = {};
