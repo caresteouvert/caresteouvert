@@ -52,8 +52,14 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    ['~/modules/i18n', { messages }]
+    ['~/modules/i18n', { messages }],
+    ['@nuxtjs/redirect-module']
   ],
+
+  redirect: [
+    { from: '^/about', to: 'https://blog.caresteouvert.fr/about' }
+  ],
+
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
