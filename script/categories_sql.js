@@ -73,7 +73,6 @@ Object.entries(catg.categories).forEach(e => {
 		if(subcat.osm_filter_tags) {
 			result = [];
 			subcat.osm_tags.forEach(tags => {
-				result.push(Object.assign({}, tags, { "opening_hours:covid19": "*" }));
 				subcat.osm_filter_tags.forEach(ftags => {
 					result.push(Object.assign({}, tags, ftags));
 				});
