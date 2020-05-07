@@ -159,7 +159,7 @@ export default {
   },
 
   mounted() {
-    this.$store.commit('setBrandId', findBrand(process.client ? window.location.host : (req.headers['x-forwarded-host'] || req.headers.host)).brand);
+    this.$store.commit('setBrandId', findBrand(window.location.host).brand);
     this.sidebar = !this.isMobile;
 
     const { filter: filterPart, location } = decode(this.featuresAndLocation);
