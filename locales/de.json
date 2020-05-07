@@ -3,12 +3,12 @@
   "loading": "Karte wird geladen, bitte warten…",
   "covid19-alert": "Bitte folge den Anweisungen der zuständigen Behörden.",
   "title": "Bleibt offen",
-  "subtitle": "Alle Geschäfte, die weiterhin geöffnet sind.",
-  "subtitle-dense": "Apotheke, Bäcker & Co.",
+  "subtitle": "Alle Geschäfte, die geöffnet sind.",
   "search": "Suchbegriff eingeben",
   "coordinates": "Koordinaten",
   "menu": "Menü",
   "missing_shop": "Fehlendes Geschäft melden",
+  "backtolist": "Zurück zur Liste",
   "missing_shop_dialog": {
     "description": "„{brand}“ zeigt vor allem Orte an, die trotz Ausgangsbeschränkungen weiterhin geöffnet sein können. Wenn ein Ort fehlt, kann dies mehrere Gründe haben:",
     "add_osm": "Der Ort fehlt auf „OpenStreetMap“:",
@@ -25,6 +25,8 @@
   },
   "services": {
     "delivery": "Lieferung",
+    "hydroalcoholic_gel": "Desinfektionsmittel",
+    "mask": "Masken",
     "takeaway": "Abholung"
   },
   "learnmore": {
@@ -119,8 +121,8 @@
       "tomorrow": "morgen"
     },
     "state": {
-      "open": "Ort weiterhin geöffnet",
-      "open_adapted": "Ort weiterhin geöffnet mit abweichenden Öffnungszeiten",
+      "open": "Ort geöffnet",
+      "open_adapted": "Ort geöffnet mit abweichenden Öffnungszeiten",
       "partial": "Dieser Ort gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
       "unknown": "Dieser Ort ist möglicherweise geöffnet.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
       "closed": "Ort vorübergehend geschlossen"
@@ -170,6 +172,12 @@
     "hygiene_entry": {
       "has": "vorrätig",
       "hasnot": "ausverkauft"
+    },
+    "update_dialog": {
+      "complete": "Gehört Ihnen dieser Ort? Vervollständigen Sie die Daten.",
+      "title": "Vervollständigen Sie die Daten Ihres Geschäfts",
+      "contact": "Benötigen Sie Hilfe? Kontaktieren Sie uns.",
+      "use_osm": "Sie können Informationen ergänzen, indem Sie <a href=\"https://www.bleibtoffen.org/2020/04/10/geschaeft-fehlt.html\" target=\"_blank\">Ihr Geschäft direkt auf OpenStreetMap bearbeiten</a>."
     }
   },
   "opening_hours_editor": {
@@ -205,6 +213,7 @@
     "tourism_info": "Tourist-Info",
     "hotel": "Unterkunft",
     "recycling_centre": "Recyclinghof",
+    "library": "Bibliothek",
     "health": "Apotheke & Gesundheit",
     "pharmacy": "Apotheke",
     "covid19_centre": "Covid-19-Beratungsstelle",
@@ -229,9 +238,11 @@
     "farm": "Hofladen",
     "marketplace": "Wochenmarkt",
     "bakery": "Bäckerei",
+    "alcohol": "Alkohol",
     "eat": "Restaurant & Abholung",
     "vending_machine": "Verkaufsautomat",
     "restaurant": "Restaurant",
+    "awarded_chef": "Ausgezeichnete Küche",
     "fast_food": "Schnellimbiss",
     "ice_cream": "Eis",
     "cafe": "Café",
@@ -239,7 +250,10 @@
     "drugs": "Tabak & Alkohol",
     "tobacco": "Tabak",
     "e_cigarette": "E-Zigaretten",
-    "alcohol": "Alkohol",
+    "bank": "Bank",
+    "atm": "Geldautomat",
+    "money_transfer": "Geldtransfer",
+    "mobile_money_agent": "Mobiler Geldvermittler",
     "shop": "Geschäfte",
     "hardware": "Baubedarf",
     "mobile_phone": "Mobiltelefon",
@@ -262,6 +276,7 @@
     "hairdresser": "Friseur",
     "jewelry": "Juwelier",
     "toys": "Spielwaren",
+    "sports": "Sport",
     "mobility": "Mobilität",
     "fuel": "Tankstelle",
     "car_rental": "Autovermietung",
@@ -276,6 +291,27 @@
       "places_around": "Finde Geschäfte, die weiterhin geöffnet sind.",
       "contribute": "Verbessere die Karte mit deinem Wissen",
       "organize": "Erfolglose Wege verhindern, Ansteckungsgefahr verringern"
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "Regionen"
+    },
+    "departements": {
+      "title": "Bundesländer"
+    },
+    "communes": {
+      "title": "Kreise"
+    },
+    "categories": {
+      "title": "Kategorien"
+    },
+    "pois": {
+      "title": "Orte",
+      "link": {
+        "previous": "Vorherige Orte",
+        "next": "Nächste Orte"
+      }
     }
   }
 }
