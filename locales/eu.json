@@ -172,6 +172,12 @@
     "hygiene_entry": {
       "has": "Dauka",
       "hasnot": "Ez dauka"
+    },
+    "update_dialog": {
+      "complete": "Zure establezimendua da? Osatu zure informazioarekin",
+      "title": "Zure establezimenduaren informazioa osatu",
+      "contact": "Laguntza behar duzu? Kontaktaiguzu",
+      "use_osm": "Informazioa gehitu dezakezu <a href=\"https://blog.caresteouvert.fr/completer-les-infos-dun-lieu/\" target=\"_blank\">establezimendua OpenStreetMapen zu zeuk editatzen</a>."
     }
   },
   "opening_hours_editor": {
@@ -207,6 +213,7 @@
     "tourism_info": "Informazio turistikoa",
     "hotel": "Ostalaritza",
     "recycling_centre": "Birziklapen zentroa",
+    "library": "Liburutegia",
     "health": "Osasuna",
     "pharmacy": "Farmazia",
     "covid19_centre": "Covid-19 buruzko kontsulta zentrua",
@@ -269,6 +276,7 @@
     "hairdresser": "Ileapaindegia",
     "jewelry": "Bitxiak",
     "toys": "Jostailu denda",
+    "sports": "Kiroldegia",
     "mobility": "Mugikortasuna",
     "fuel": "Gasolindegia",
     "car_rental": "Ibilgailu alokairua",
