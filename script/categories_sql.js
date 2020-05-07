@@ -127,11 +127,26 @@ $$ LANGUAGE plpgsql IMMUTABLE;
 
 // Find all tags for subcategories
 const tagsPerSubcategory = {};
-Object.values(catg.categories).forEach(cat => {
-	Object.entries(cat.subcategories).forEach(e => {
-		const [ subcatId, subcat ] = e;
-		if(subcat.osm_tags) {
-			tagsPerSubcategory[subcatId] = subcat.osm_tags;
+Object.values(catg.categories).forEach((cat, index) => {
+	Object.entries(cat.subcategories).forEach(([ subcatId, subcat ], index2) => {
+		if (subcat.osm_tags) {
+			if (!tagsPerSubcategory[subcatId]) {
+				tagsPerSubcategory[subcatId] = subcat.osm_tags;
+			}
+
+			if ((subcat.areas && subcat.areas !== "all") || subcat['-areas']) {
+				const minusArea = subcat['-areas'] || [];
+				const areas = (subcat.areas || catg.countries).filter(a => !minusArea.includes(a));
+
+				tagsPerSubcategory[subcatId] = tagsPerSubcategory[subcatId].map(tags => {
+					if (tags.areas) {
+						tags.areas.push(...areas);
+						return tags;
+					} else {
+						return { ...tags, areas };
+					}
+				});
+			}
 		}
 	});
 });
@@ -205,7 +220,6 @@ function expandTags(tags) {
   });
   return allPossibleCases(toZip);
 }
-
 
 const categoriesTests = [];
 
