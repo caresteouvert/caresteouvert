@@ -1,4 +1,3 @@
--- Start a transaction.
 BEGIN;
 SELECT plan(12);
 
