@@ -174,7 +174,7 @@
       "hasnot": "ausverkauft"
     },
     "update_dialog": {
-      "complete": "Gehört Ihnen dieser Ort? Vervollständigen Sie Ihre Daten.",
+      "complete": "Gehört Ihnen dieser Ort? Vervollständigen Sie die Daten.",
       "title": "Vervollständigen Sie die Daten Ihres Geschäfts",
       "contact": "Benötigen Sie Hilfe? Kontaktieren Sie uns.",
       "use_osm": "Sie können Informationen ergänzen, indem Sie <a href=\"https://www.bleibtoffen.org/2020/04/10/geschaeft-fehlt.html\" target=\"_blank\">Ihr Geschäft direkt auf OpenStreetMap bearbeiten</a>."
