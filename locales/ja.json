@@ -3,12 +3,12 @@
   "loading": "読込中。しばらくお待ち下さい...",
   "covid19-alert": "政府の制限に従ってください。責任は「あなた」にあります。",
   "title": "開店中",
-  "subtitle": "封鎖(COVID-19対応)中の営業店舗・施設",
-  "subtitle-dense": "封鎖(COVID-19対応)中の営業店舗・施設",
+  "subtitle": "封鎖期間中からその後にかけて営業中の店舗・施設",
   "search": "検索文字列を入力",
   "coordinates": "座標",
   "menu": "メニュー",
   "missing_shop": "不明な店舗をレポート",
+  "backtolist": "リストに戻る",
   "missing_shop_dialog": {
     "description": "« {brand} » は封鎖期間中の営業が許可されている施設だけを表示することを意図しています。漏れがある場合、いくつかの理由が考えられます:",
     "add_osm": "この施設はOpenStreetMapに無いので追加します:",
@@ -25,6 +25,8 @@
   },
   "services": {
     "delivery": "配達",
+    "hydroalcoholic_gel": "アルコール除菌ジェル",
+    "mask": "マスク",
     "takeaway": "持ち帰り"
   },
   "learnmore": {
@@ -205,6 +207,7 @@
     "tourism_info": "観光案内所",
     "hotel": "宿泊",
     "recycling_centre": "リサイクルセンター",
+    "library": "図書館",
     "health": "健康",
     "pharmacy": "薬局",
     "covid19_centre": "Covid-19 相談センター",
@@ -267,6 +270,7 @@
     "hairdresser": "理美容院",
     "jewelry": "宝石店",
     "toys": "おもちゃ屋",
+    "sports": "スポーツ",
     "mobility": "モビリティ",
     "fuel": "ガソリンスタンド",
     "car_rental": "レンタカー",
