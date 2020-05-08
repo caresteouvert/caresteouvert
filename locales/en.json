@@ -174,10 +174,11 @@
       "hasnot": "has no"
     },
     "update_dialog": {
-      "complete": "Is this your establishment ? Fill in your information",
-      "title": "Fill in your establishment's information",
-      "contact": "Need help ? Contact us",
-      "use_osm": "You can add information by <a href=\"https://blog.caresteouvert.fr/completer-les-infos-dun-lieu/\" target=\"_blank\">editing your establishment by yourself on OpenStreetMap</a>."
+      "complete1": "Is this your establishment or part of your group ?",
+      "complete2": "Gain visibility after lockdown with our dedicated promotion solution",
+      "title": "Point of sale manager",
+      "promo": "You are the manager of a franchise or director of a franchised network. Gain visibility by listing all your points of sale in \"Ça reste ouvert\". In addition to being highlighted in a personalized way in our service, you will also appear in many sites and mobile applications.",
+      "contact": "Contact us"
     }
   },
   "opening_hours_editor": {

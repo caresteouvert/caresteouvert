@@ -4,13 +4,14 @@
     :width="500"
   >
     <template v-slot:activator="{ on }">
-      <v-list dense>
+      <v-list dense two-line>
         <v-list-item v-on="on">
           <v-list-item-icon class="mr-1">
             <v-icon>osm-alert</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>{{ $t('details.update_dialog.complete') }}</v-list-item-title>
+            <v-list-item-title>{{ $t('details.update_dialog.complete1') }}</v-list-item-title>
+            <v-list-item-subtitle>{{ $t('details.update_dialog.complete2') }}</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -28,11 +29,11 @@
         </v-btn>
       </v-card-title>
       <v-card-text>
-        <p v-html="$t('details.update_dialog.use_osm')"></p>
+        <p v-html="$t('details.update_dialog.promo')"></p>
         <br />
         <p class="text-center">
           <v-btn
-            :href="`https://airtable.com/shr9dsYsPX0VvUoUY?prefill_osm_id=${osm}&prefill_osm_name=${place.properties.name}`"
+            :href="`https://airtable.com/shrfssuOhvXzVxtui?prefill_osm_id=${osm}&prefill_osm_name=${place.properties.name}`"
             target="_blank"
             color="primary"
           >{{ $t('details.update_dialog.contact') }}</v-btn>

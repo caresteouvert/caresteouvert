@@ -145,7 +145,7 @@
         </template>
 
         <update-detail-dialog
-          v-if="country === 'FR'"
+          v-if="country === 'FR' && place.properties.brand"
           :place="place"
         />
       </div>
