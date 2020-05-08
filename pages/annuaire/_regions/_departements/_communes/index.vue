@@ -5,7 +5,7 @@
       <v-list-item
         v-for="category in categories"
         :key="category"
-        :to="`${commune}/${category}`"
+        :href="category"
         nuxt
       >
         {{ $t(`categories.${category}`) }}
