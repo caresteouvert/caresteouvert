@@ -47,6 +47,12 @@
       "brand_text": "Ollaan Auki",
       "domain": "kartta.ollaanauki.fi",
       "defaultLocale": "fi"
+    },
+    "lyon": {
+      "brand_text": "Ça reste ouvert",
+      "domain": "lyon.caresteouvert.fr",
+      "defaultLocale": "fr",
+      "disclaimer": "https://blog.caresteouvert.fr/mentions-legales-lyon"
     }
   },
   "countries": {

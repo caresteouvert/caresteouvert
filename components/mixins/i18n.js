@@ -32,7 +32,13 @@ export default {
     ...mapState(['country', 'brandId']),
 
     links() {
-      return bestLocale(Object.assign({}, config.locales.DEFAULT, config.locales[this.$i18n.locale]), this.$i18n.locale);
+      // Priority to domain, then locales
+      return bestLocale(Object.assign(
+        {},
+        config.locales.DEFAULT,
+        config.locales[this.$i18n.locale],
+        this.brandId && config.brands[this.brandId] ? config.brands[this.brandId] : {}
+      ), this.$i18n.locale);
     },
 
     countryConfig() {
@@ -41,38 +47,35 @@ export default {
 
     logo() {
       return {
-        DEFAULT: caresteouvert,
         bleibtoffen,
         sigueabierto,
         segueaberto,
         esobert,
         ollaanauki,
         ezosala
-      }[this.brandId];
+      }[this.brandId] || caresteouvert;
     },
 
     logoMobile() {
       return {
-        DEFAULT: caresteouvertMobile,
         bleibtoffen: bleibtoffenMobile,
         sigueabierto: sigueabiertoMobile,
         segueaberto: segueabertoMobile,
         esobert: esobertMobile,
         ollaanauki: ollaanaukiMobile,
         ezosala: ezosalaMobile
-      }[this.brandId];
+      }[this.brandId] || caresteouvertMobile;
     },
 
     logoOg() {
       return {
-        DEFAULT: caresteouvertOg,
         bleibtoffen: bleibtoffenOg,
         sigueabierto,
         segueaberto,
         esobert,
         ollaanauki,
         ezosala
-      }[this.brandId];
+      }[this.brandId] || caresteouvertOg;
     },
 
     brand() {
