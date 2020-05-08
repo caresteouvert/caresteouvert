@@ -174,10 +174,11 @@
       "hasnot": "não possui"
     },
     "update_dialog": {
-      "complete": "Este é o seu estabelecimento? Preencha as suas informações",
-      "title": "Preencha as informações de seu estabelecimento",
-      "contact": "Precisa de ajuda? Contate-nos",
-      "use_osm": "Você pode adicionar mais informações <a href=\"https://blog.caresteouvert.fr/completer-les-infos-dun-lieu/\" target=\"_blank\">editando o seu estabelecimento no OpenStreetMap</a>."
+      "complete1": "Este estabelecimento é seu ou faz parte de sua franquia?",
+      "complete2": "Ganhe visibilidade após o isolamento",
+      "title": "Gerente de filial",
+      "promo": "Você é o gerente de uma filial ou o diretor de uma rede de franquias.\nGanhe visibilidade ao listar todas as suas filiais no \"{brand}\".\nAlém de receber um destaque personalizado em nosso serviço, a sua franquia também aparecerá em vários sites e aplicativos móveis que utilizam o OpenStreetMap.",
+      "contact": "Contate-nos"
     }
   },
   "opening_hours_editor": {
@@ -303,11 +304,7 @@
     "communes": {
       "title": "Condados"
     },
-    "categories": {
-      "title": "Categorias"
-    },
     "pois": {
-      "title": "Lugares",
       "link": {
         "previous": "Lugares anteriores",
         "next": "Próximos lugares"
