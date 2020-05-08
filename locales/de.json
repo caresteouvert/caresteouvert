@@ -174,10 +174,11 @@
       "hasnot": "ausverkauft"
     },
     "update_dialog": {
-      "complete": "Gehört Ihnen dieser Ort? Vervollständigen Sie die Daten.",
-      "title": "Vervollständigen Sie die Daten Ihres Geschäfts",
-      "contact": "Benötigen Sie Hilfe? Kontaktieren Sie uns.",
-      "use_osm": "Sie können Informationen ergänzen, indem Sie <a href=\"https://www.bleibtoffen.org/2020/04/10/geschaeft-fehlt.html\" target=\"_blank\">Ihr Geschäft direkt auf OpenStreetMap bearbeiten</a>."
+      "complete1": "Gehört Ihr Geschäft zu dieser Gruppe?",
+      "complete2": "Erhöhen Sie Ihre Sichtbarkeit nach Ende der Ausgangsbeschränkungen mit unserer speziellen Werbelösung",
+      "title": "Verkaufsleitung",
+      "promo": "Sie sind Managerin oder Geschäftsführerin eines Franchise-Unternehmens. Erhöhen Sie Ihre Sichtbarkeit, indem Sie alle Ihre Verkaufsstellen in „Bleibt offen“ auflisten. Neben der persönlichen Hervorhebung in unserem Dienst werden Sie auch auf vielen Websites und mobilen Anwendungen erscheinen.",
+      "contact": "Kontaktiere uns"
     }
   },
   "opening_hours_editor": {
@@ -303,11 +304,7 @@
     "communes": {
       "title": "Kreise"
     },
-    "categories": {
-      "title": "Kategorien"
-    },
     "pois": {
-      "title": "Orte",
       "link": {
         "previous": "Vorherige Orte",
         "next": "Nächste Orte"
