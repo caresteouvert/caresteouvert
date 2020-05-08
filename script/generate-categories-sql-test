@@ -70,11 +70,7 @@ Object.entries(catg.categories).forEach(([catId, cat]) => {
 });
 
 function createTest(fn, test, result) {
-  return `SELECT is(
-  ${fn}('${test.tags}'::hstore, '${test.area}'),
-  '${result}',
-  '${fn} ${test.tags} for ${test.area} should be ${result}'
-);`;
+  return `SELECT is(${fn}('${test.tags}'::hstore, '${test.area}'), '${result}', '${fn} ${test.tags} for ${test.area} should be ${result}');`;
 }
 
 const categoriesTestsString = categoriesTests.flatMap((test) => {
