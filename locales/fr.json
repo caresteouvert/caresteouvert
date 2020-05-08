@@ -175,9 +175,9 @@
     },
     "update_dialog": {
       "complete1": "C'est votre établissement ou celui de votre groupe ?",
-      "complete2": "Gagnez en visibilité après le confinement avec notre solution de promotion dédiée",
+      "complete2": "Gagnez en visibilité après le confinement",
       "title": "Gestionnaire de points de vente",
-      "promo": "Vous êtes gestionnaire d'une franchise ou responsable d'un réseau franchisé. Gagnez en visibilité en référençant tous vos points de vente dans \"Ça reste ouvert\". En plus d'être mis en avant de manière personnalisée dans notre service, vous apparaîtrez également dans de très nombreux sites et applis mobiles.",
+      "promo": "Vous êtes gestionnaire d'une franchise ou responsable d'un réseau franchisé.\nGagnez en visibilité en référençant tous vos points de vente dans \"Ça reste ouvert\".\nEn plus d'être mis en avant de manière personnalisée dans notre service, vous apparaîtrez également dans de très nombreux sites et applis mobiles grâce à OpenStreetMap.",
       "contact": "Contactez nous"
     }
   },

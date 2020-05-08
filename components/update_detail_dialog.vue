@@ -1,7 +1,7 @@
 <template>
   <v-dialog
     v-model="dialog"
-    :width="500"
+    :width="600"
   >
     <template v-slot:activator="{ on }">
       <v-list dense two-line>
@@ -29,7 +29,7 @@
         </v-btn>
       </v-card-title>
       <v-card-text>
-        <p v-html="$t('details.update_dialog.promo')"></p>
+        <p class="mb-0" v-html="$t('details.update_dialog.promo').replace(/\n/g, '<br />')"></p>
         <br />
         <p class="text-center">
           <v-btn
