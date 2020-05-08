@@ -1,9 +1,9 @@
 <template>
   <v-container>
-    <h1>Les lieux ouverts à {{ commune }} durant le confinement</h1>
+    <h1 class="text-center">Les lieux ouverts à {{ commune }} durant le confinement</h1>
     <v-list>
       <v-list-item
-        v-for="(_, category) in categories"
+        v-for="category in categories"
         :key="category"
         :to="`${commune}/${category}`"
         nuxt
@@ -34,7 +34,7 @@ export default {
 
   data() {
     return {
-      categories: categoriesForArea(categories, 'FR')
+      categories: Object.keys(categoriesForArea(categories, 'FR')).concat(['other'])
     };
   },
 
