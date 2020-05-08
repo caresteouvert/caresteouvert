@@ -172,6 +172,12 @@
     "hygiene_entry": {
       "has": "あり",
       "hasnot": "なし"
+    },
+    "update_dialog": {
+      "complete": "これはあなたの施設ですか？ぜひ情報を入力してください",
+      "title": "あなたの施設の情報を入力してください",
+      "contact": "手助けが必要なら連絡してください",
+      "use_osm": " <a href=\"https://blog.caresteouvert.fr/completer-les-infos-dun-lieu/\" target=\"_blank\"> OpenStreetMapにある自分の施設を直接編集して</a>情報を追加できます。"
     }
   },
   "opening_hours_editor": {
