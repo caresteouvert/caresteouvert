@@ -1,43 +1,52 @@
+<template>
+  <div>
+    <h1 class="text-center">{{ title }}</h1>
+    <directory-list>
+      <template v-slot:item="{ item }">
+        <place-dense
+          :place="item"
+          :featuresAndLocation="featuresAndLocation(item)"
+        />
+      </template>
+    </directory-list>
+  </div>
+</template>
+
 <script>
+import i18nMixin from "~/components/mixins/i18n";
 import DirectoryList from "~/components/directory_list";
+import PlaceDense from "~/components/place/dense";
 import { maxZoomPoi } from "~/config.json";
+import { encodePosition } from "~/lib/url";
 
 export default {
-  extends: DirectoryList,
-  data() {
-    return {
-      propertyLabel: [
-        { key: "name" },
-        { key: "cat", translation: "categories." }
-      ]
-    };
+  components: {
+    DirectoryList,
+    PlaceDense
   },
+
+  mixins: [i18nMixin],
+
   methods: {
-    itemLink(item) {
-      return item.properties?.lat && item.properties?.lon
-        ? `/@${item.properties.lat},${item.properties.lon},${maxZoomPoi}/place/${item.id}`
-        : `/place/${item.id}`;
+    featuresAndLocation(item) {
+      return encodePosition(item.properties.lat, item.properties.lon, maxZoomPoi);
     }
   },
-  asyncData({ params, query }) {
-    return DirectoryList.fetchData({
-      region: params.regions,
-      departement: params.departements,
-      commune: params.communes,
-      category: params.categories,
-      query: query
-    }).then(directoryData => {
-      directoryData.selected = params.communes;
-      directoryData.category = params.categories;
-      return directoryData;
-    });
-  },
+
   head() {
     return {
-      title: `${this.selected} - ${this.$t(
-        "categories." + this.category
-      )} - ${this.$t(this.title)} - ${this.brand}`
+      title: `${this.$route.params.communes} - ${this.$t(
+        "categories." + this.$route.params.categories
+      )} - ${this.brand}`
     };
+  },
+
+  computed: {
+    title() {
+      return `${this.$route.params.communes} - ${this.$t(
+        "categories." + this.$route.params.categories
+      )}`;
+    }
   }
 };
 </script>

@@ -304,11 +304,7 @@
     "communes": {
       "title": "Liste des communes"
     },
-    "categories": {
-      "title": "Liste des catégories"
-    },
     "pois": {
-      "title": "Liste des lieux",
       "link": {
         "previous": "Lieux précédents",
         "next": "Lieux suivants"

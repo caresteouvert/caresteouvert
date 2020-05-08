@@ -1,33 +1,32 @@
+<template>
+  <div>
+    <h1 class="text-center">{{ title }}</h1>
+    <directory-list />
+  </div>
+</template>
+
 <script>
+import i18nMixin from "~/components/mixins/i18n";
 import DirectoryList from "~/components/directory_list";
 
 export default {
-  extends: DirectoryList,
-  data() {
-    return {
-      propertyLabel: [{ key: "libelle" }]
-    };
-  },
-  asyncData({ params, query }) {
-    return DirectoryList.fetchData({
-      region: params.regions,
-      query: query
-    }).then(directoryData => {
-      directoryData.selected = params.regions;
-      return directoryData;
-    });
-  },
+  components: { DirectoryList },
+
+  mixins: [i18nMixin],
+
   head({ params }) {
     return {
-      title: `${this.selected} - ${this.$t(this.title)} - ${this.brand}`,
+      title: `${this.$route.params.regions} - ${this.title} - ${this.brand}`,
       meta: [
-        {
-          hid: "robots",
-          name: "robots",
-          content: "noindex, follow"
-        }
+        { hid: "robots", name: "robots", content: "noindex, follow" },
       ]
     };
+  },
+
+  computed: {
+    title() {
+      return this.$t('directory.departements.title');
+    }
   }
 };
 </script>
