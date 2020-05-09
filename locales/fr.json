@@ -91,7 +91,9 @@
       "access": "Ce lieu propose un accueil physique sur place",
       "drive_through": "Ce lieu dispose d'un service drive",
       "details": "Optionnel : ajouter d'autres détails liés au confinement",
-      "details_error": "Doit être vide ou compris entre 10 et 200 caractères"
+      "details_error": "Doit être vide ou compris entre 10 et 200 caractères",
+      "definite_closing": "Fermeture définitive",
+      "details_definite_closing": "Ce lieu a définitivement fermé ses portes. Qu'y a-t-il à ce jour à la place ? Donnez autant de détails que possible, par exemple : bâtiment vide ou en travaux, nouveau commerce..."
     },
     "submit": "Publier",
     "cancel": "Annuler"
