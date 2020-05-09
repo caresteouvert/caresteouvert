@@ -53,6 +53,10 @@
       "domain": "lyon.caresteouvert.fr",
       "defaultLocale": "fr",
       "disclaimer": "https://blog.caresteouvert.fr/mentions-legales-lyon"
+    },
+    "permaneceaberto": {
+      "brand_text": "Permanece Aberto",
+      "defaultLocale": "pt-BR"
     }
   },
   "countries": {
@@ -89,6 +93,9 @@
     },
     "IT": {
       "government": "https://www.salute.gov.it/nuovocoronavirus"
+    },
+    "BR": {
+      "government": "https://coronavirus.saude.gov.br/"
     }
   },
   "locales": {
@@ -155,6 +162,9 @@
     "it": {
       "blog": "/blog/it/",
       "shopMissing": "/it/come-posso-aggiungere-un-posto-mancante-su-RestiamoAperti/"
+    },
+    "pt-BR": {
+      "shopMissing": "/pt-BR/nao-encontrei-um-estabelecimento/"
     }
   }
 }
