@@ -174,10 +174,11 @@
       "hasnot": "no tiene"
     },
     "update_dialog": {
-      "complete": "¿Este es tu establecimiento? Completa su información",
-      "title": "Complételo con la información de tu establecimiento",
-      "contact": "¿Necesitas ayuda? Contáctanos",
-      "use_osm": "Tu puedes adicionar información al <a href=\"https://blog.caresteouvert.fr/completer-les-infos-dun-lieu/\" target=\"_blank\">editar tu establecimiento tu mismo en OpenStreetMap</a>."
+      "complete1": "¿Es este tu establecimiento o parte de tu grupo?",
+      "complete2": "Gana visibilidad después de la cuarentena",
+      "title": "Punto de venta del administrador",
+      "promo": "Tu eres administrador de una franquicia o director de una red de franquicias.\nGana visibilidad al listar todos los puntos de venta en “Sigue abierto.”\nAdemás, serás resaltado en una forma personalizada en nuestro servicio, tu también aparecerás en varios sitios y aplicaciones móviles gracias a OpenStreetMap.",
+      "contact": "Contáctanos"
     }
   },
   "opening_hours_editor": {
@@ -303,11 +304,7 @@
     "communes": {
       "title": "Lista de países"
     },
-    "categories": {
-      "title": "Lista de categorías"
-    },
     "pois": {
-      "title": "Lista de sitios",
       "link": {
         "previous": "Sitios anteriores",
         "next": "Sitios siguientes"
