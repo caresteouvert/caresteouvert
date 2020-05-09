@@ -165,7 +165,7 @@
     },
     "hygiene": "Higiene",
     "hydroalcoholic_gel": "Álcool em gel",
-    "mask": "Máscara",
+    "mask": "Máscaras",
     "hygiene_status": {
       "yes": "Em {date}: disponível",
       "no": "Em {date}: indisponível",
