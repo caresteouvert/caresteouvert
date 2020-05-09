@@ -86,6 +86,9 @@
         "DEFAULT": "https://valtioneuvosto.fi/tietoa-koronaviruksesta/",
         "sv": "https://valtioneuvosto.fi/sv/information-om-coronaviruset"
       }
+    },
+    "IT": {
+      "government": "https://www.salute.gov.it/nuovocoronavirus"
     }
   },
   "locales": {
@@ -148,6 +151,10 @@
       "about": "https://blog.ollaanauki.fi/sv/om-oss/",
       "press": "https://blog.ollaanauki.fi/sv/till-media/",
       "disclaimer": "https://blog.ollaanauki.fi/sv/ansvarsfrihetsvillkor/"
+    },
+    "it": {
+      "blog": "/blog/it/",
+      "shopMissing": "/blog/it/come-posso-aggiungere-un-posto-mancante-su-RestiamoAperti/"
     }
   }
 }
