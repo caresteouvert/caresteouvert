@@ -1,15 +1,34 @@
 {
   "lang": "Italiano",
+  "loading": "Caricamento, attendere...",
   "covid19-alert": "Segui le restrizioni governative. La responsabilità è TUA.",
-  "title": "Rimane aperto",
-  "subtitle": "Luoghi che rimangono aperti durante il lockdown",
-  "subtitle-dense": "Luoghi aperti durante il lockdown",
+  "title": "Restiamo aperti",
+  "subtitle": "I posti che restano aperti durante e dopo il lockdown",
   "search": "Digita la tua ricerca",
   "coordinates": "Coordinate",
   "menu": "Menu",
-  "missing_shop": "Riporta un negozio mancate",
+  "missing_shop": "Segnala un negozio mancate",
+  "backtolist": "Torna alla lista",
+  "missing_shop_dialog": {
+    "description": "{brand} dovrebbe mostrare solo i posti aperti durante il lockdown. Ecco alcuni motivi per cui alcuni potrebbero mancare:",
+    "add_osm": "Il posto non si trova su OpenStreetMap, aggiungilo:",
+    "add_osm_cta": "Segui la guida",
+    "add_category": "Manca una categoria di posti:",
+    "add_category_cta": "Richiedi l'aggiunta"
+  },
   "change_lang": "Cambia lingua",
   "zoomtosee": "Aumenta lo zoom per visualizzare le attività commerciali aperte",
+  "filter_noresults": "Nessun risultato trovato. Prova a ingrandire la mappa.",
+  "toggle_color": {
+    "blind": "Attiva la modalità per daltonici",
+    "normal": "Disattiva la modalità per daltonici"
+  },
+  "services": {
+    "delivery": "Consegna",
+    "hydroalcoholic_gel": "Gel disinfettante",
+    "mask": "Mascherina",
+    "takeaway": "Asporto"
+  },
   "learnmore": {
     "about": "Informazioni",
     "contribute": "Contribuisci",
@@ -70,21 +89,31 @@
       "delivery": "Questo locale offre la consegna a domicilio",
       "takeaway": "Questa attività commerciale permette l'acquisto d'asporto",
       "access": "Le persone possono entrare o rimanere all'interno di questo luogo",
+      "drive_through": "Questo posto ha un servizio di drive-through",
       "details": "Aggiungi dettagli necessari durante il blocco",
-      "details_error": "Dovrebbe essere sia vuoto o con almeno 10 caratteri"
+      "details_error": "Dovrebbe essere sia vuoto o con almeno 10 caratteri",
+      "definite_closing": "Chiuso definitivamente",
+      "details_definite_closing": "Questo posto è chiuso definitivamente. Cosa c'è al suo posto? Dacci quanti più dettagli possibili, ad esempio: nuovo edificio in costruzione, nuova attività..."
     },
     "submit": "Pubblica",
     "cancel": "Annulla"
   },
   "details": {
-    "signal_warning": "Stavi facendo una segnalazione, Questa non sarà salvata. Vuoi proseguire?",
+    "signal_warning": "Stavi facendo una segnalazione. Questa non sarà salvata. Vuoi proseguire?",
     "signal": "Segnala una modifica",
     "signal_done": "La tua segnalazione è stata registrata. Grazie! Ti chiediamo un po' di pazienza durante il periodo in cui sarà processata.",
-    "containment_opening_hours": "Orari di apertura al di fuori del periodo di blocco",
-    "containment_brand_hours": "Orari di apertura secondo la pagina web ufficiale",
+    "lockdown_opening_hours": "Orari di apertura",
+    "normal_opening_hours": "Orari di apertura al di fuori del periodo di blocco",
+    "lockdown_brand_hours": "Orari di apertura secondo la pagina web ufficiale",
     "facebook": "Pagina Facebook",
     "not_accessible": "Spazi interni non accessibili al pubblico",
     "capacity": "Capacità massima: 0 persone | Capacità massima: 1 persona | Capacità massima: {count} persone",
+    "services": "Servizi",
+    "contact": "Contatta",
+    "last_update": {
+      "date": "Ultimo aggiornamentro: {date}",
+      "recent": "Aggiornato pochi minuti fa, le informazioni sottostanti potrebbero essere cambiate"
+    },
     "opening_hours": {
       "state_until_date": "{state} fino a {date}",
       "state": {
@@ -100,6 +129,13 @@
       "unknown": "Questo posto dovrebbe essere aperto durante il blocco. È aperto o chiuso? Faccelo sapere.",
       "closed": "Questo posto è chiuso durante il blocco"
     },
+    "state_short": {
+      "open": "Aperto durante il lockdown",
+      "open_adapted": "Aperto durante il lockdown",
+      "partial": "Aperto con buona probabilità",
+      "unknown": "Aperto con buona probabilità",
+      "closed": "Chiuso durante il lockdown"
+    },
     "delivery": {
       "yes": "Servizio di consegna a domicilio disponibile",
       "only": "Esclusivamente come consegna a domicilio"
@@ -112,6 +148,10 @@
       "yes": "Disponibile servizio ritiro dall'auto",
       "only": "Ritiro solo dall'auto"
     },
+    "wheelchair": {
+      "yes": "Accessibile in sedie a rotelle",
+      "limited": "Parzialmente accessibile in sedie a rotelle"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Francobolli",
@@ -122,6 +162,25 @@
       "drinks": "Bevande",
       "water": "Acqua",
       "sweets": "Dolciumi"
+    },
+    "hygiene": "Igiene",
+    "hydroalcoholic_gel": "Gel disinfettante",
+    "mask": "Mascherina",
+    "hygiene_status": {
+      "yes": "Disponibile il {date}",
+      "no": "Non disponibile il {date}",
+      "void": "Nessuna informazione, facci sapere"
+    },
+    "hygiene_entry": {
+      "has": "ha",
+      "hasnot": "non ha"
+    },
+    "update_dialog": {
+      "complete1": "Questo posto è tuo o fa parte del tuo gruppo?",
+      "complete2": "Ottieni visibilità dopo il lockdown",
+      "title": "Gestore di negozi",
+      "promo": "Gestisci o dirigi un franchise.\nOttieni visibilità aggiungendo tutti i tuoi negozi su \"Restiamo aperti\".\nOltre ad entrare a far parte del nostro servizio, apparirai anche altri siti e applicazioni grazie a OpenStreetMap.",
+      "contact": "Contattaci"
     }
   },
   "opening_hours_editor": {
@@ -152,10 +211,12 @@
     "childcare": "Servizi per l'infanzia",
     "employment_agency": "Agenzia di collocamento",
     "funeral_directors": "Pompe funebri",
-    "bank": "Banca",
-    "moneylender": "Finanziaria",
+    "money": "Denaro",
     "insurance": "Assicurazione",
     "tourism_info": "Informazioni turistiche",
+    "hotel": "Alloggio",
+    "recycling_centre": "Centro per il riciclo",
+    "library": "Biblioteca",
     "health": "Salute",
     "pharmacy": "Farmacia",
     "covid19_centre": "Centro di consulenza sul Covid-19",
@@ -163,6 +224,8 @@
     "hearing_aids": "Centro d'ascolto",
     "condoms": "Distributore automatico preservativi",
     "medical_supply": "Forniture mediche",
+    "health_center": "Studio medico",
+    "herbalist": "Erboristeria",
     "food": "Cibo",
     "supermarket": "Supermercato",
     "butcher": "Macellaio",
@@ -179,9 +242,11 @@
     "farm": "Negozio prodotti agricoli",
     "marketplace": "Mercato",
     "bakery": "Panificio",
+    "alcohol": "Negozio di alcool",
     "eat": "Ristorante e asporto",
     "vending_machine": "Distributore automatico",
     "restaurant": "Ristorante",
+    "awarded_chef": "Top chef",
     "fast_food": "Fast food",
     "ice_cream": "Gelateria",
     "cafe": "Negozio di caffè",
@@ -189,11 +254,15 @@
     "drugs": "Medicinali",
     "tobacco": "Tabacchi",
     "e_cigarette": "Sigarette elettroniche",
-    "alcohol": "Negozio di alcool",
+    "bank": "Banca",
+    "atm": "ATM",
+    "money_transfer": "Trasferimento denaro",
+    "mobile_money_agent": "Negozio per ricariche telefoniche",
     "shop": "Negozi",
     "hardware": "Ferramenta",
     "mobile_phone": "Telefonia mobile",
     "computer": "Computer",
+    "printer_ink": "Cartucce per stampanti",
     "electronics": "Elettronica",
     "laundry": "Lavanderia",
     "stationery": "Cartoleria",
@@ -202,14 +271,53 @@
     "agrarian": "Prodotti agricoli",
     "flower": "Giardino",
     "chemist": "Prodotti chimici",
-    "fabric": "Tessuti",
+    "sewing": "Sartoria",
+    "shoes": "Scarpe",
     "books": "Libreria",
+    "beauty": "Negozio di estetica",
+    "clothes": "Abbigliamento",
+    "child_clothes": "Abbigliamento per bambini",
+    "furniture": "Mobili",
+    "gift": "Negozio di souvenir",
+    "hairdresser": "Parrucchiere",
+    "jewelry": "Gioielleria",
+    "toys": "Negozio di giocattoli",
+    "sports": "Sport",
+    "perfumery": "Profumeria",
+    "copyshop": "Copisteria",
+    "lighting": "Illuminazione",
     "mobility": "Mobilità",
     "fuel": "Stazione di rifiorimento carburante",
     "car_rental": "Noleggio auto",
     "bicycle": "Negozio di biciclette",
     "car": "Garage",
+    "car_dealer": "Vendita di auto",
+    "car_wash": "Autolavaggio",
     "bicycle_tube": "Distributore automatico camere d'aria",
     "public_transport_tickets": "Biglietteria automatica trasporto pubblico"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "Scopri i posti aperti durante il lockdown",
+      "contribute": "Migliora la mappa con le tue informazioni",
+      "organize": "Migliore mobilità per limitare il rischio di contagio"
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "Lista delle regioni"
+    },
+    "departements": {
+      "title": "Lista per categoria"
+    },
+    "communes": {
+      "title": "Lista dei paesi"
+    },
+    "pois": {
+      "link": {
+        "previous": "Posti successivi",
+        "next": "Posti precedenti"
+      }
+    }
   }
 }
