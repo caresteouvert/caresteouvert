@@ -7,7 +7,7 @@
   "search": "Digita la tua ricerca",
   "coordinates": "Coordinate",
   "menu": "Menu",
-  "missing_shop": "Segnala un negozio mancate",
+  "missing_shop": "Segnala un negozio mancante",
   "backtolist": "Torna alla lista",
   "missing_shop_dialog": {
     "description": "{brand} dovrebbe mostrare solo i posti aperti durante il lockdown. Ecco alcuni motivi per cui alcuni potrebbero mancare:",
