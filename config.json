@@ -155,6 +155,9 @@
     "it": {
       "blog": "/blog/it/",
       "shopMissing": "/it/come-posso-aggiungere-un-posto-mancante-su-RestiamoAperti/"
+    },
+    "pt-BR": {
+      "shopMissing": "/pt-BR/nao-encontrei-um-estabelecimento/"
     }
   }
 }
