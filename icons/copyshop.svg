@@ -1,49 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="18" height="18" version="1.1" viewBox="0 0 129.6 129.6" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
- <title>Copy/Clone Icon</title>
- <g transform="translate(0,-924.36)">
-  <g transform="matrix(.99829 0 0 .99829 -101.01 570.97)" fill="#333">
-   <path d="m134.94 354c-3.324 0-6 2.676-6 6v96c0 3.324 2.676 6 6 6h82c3.324 0 6-2.676 6-6v-62h-40c-3.324 0-6-2.676-6-6v-34z"/>
-   <path d="m113.66 374.22c-3.324 0-6 2.676-6 6v96c0 3.324 2.676 6 6 6h82c3.324 0 6-2.676 6-6v-7h-73c-3.324 0-6-2.676-6-6v-89z"/>
-   <path d="m180.94 354v30c0 3.324 2.676 6 6 6h36z"/>
-  </g>
- </g>
- <metadata>
-  <rdf:RDF>
-   <cc:Work>
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <cc:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
-    <dc:publisher>
-     <cc:Agent rdf:about="http://openclipart.org/">
-      <dc:title>Openclipart</dc:title>
-     </cc:Agent>
-    </dc:publisher>
-    <dc:title>Copy/Clone Icon</dc:title>
-    <dc:date>2012-05-11T12:49:15</dc:date>
-    <dc:description>A monochrome copy / clone icon</dc:description>
-    <dc:source>https://openclipart.org/detail/169987/copy--clone-icon-by-ben</dc:source>
-    <dc:creator>
-     <cc:Agent>
-      <dc:title>ben</dc:title>
-     </cc:Agent>
-    </dc:creator>
-    <dc:subject>
-     <rdf:Bag>
-      <rdf:li>clone</rdf:li>
-      <rdf:li>copy</rdf:li>
-      <rdf:li>duplicate</rdf:li>
-      <rdf:li>gray</rdf:li>
-      <rdf:li>icon</rdf:li>
-      <rdf:li>monochrome</rdf:li>
-     </rdf:Bag>
-    </dc:subject>
-   </cc:Work>
-   <cc:License rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
-    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
-    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
-    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
-   </cc:License>
-  </rdf:RDF>
- </metadata>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg16"
+   viewBox="0 0 18 18"
+   version="1.1"
+   height="18"
+   width="18">
+  <path
+     d="M 4.7377794,0 C 4.2711811,0 3.8954198,0.37576134 3.8954198,0.84235965 V 14.318136 c 0,0.466599 0.3757613,0.842359 0.8423596,0.842359 H 16.250027 c 0.466599,0 0.840382,-0.37576 0.840382,-0.842359 V 5.615731 h -5.613752 c -0.466599,0 -0.84236,-0.3757614 -0.84236,-0.8423597 V 0 Z M 11.19587,0 v 4.2117982 c 0,0.4665983 0.375762,0.8423597 0.84236,0.8423597 h 5.052179 z M 1.7519507,2.8395034 c -0.4665983,0 -0.8423597,0.3757613 -0.8423597,0.8423597 V 17.157641 C 0.909591,17.624239 1.2853524,18 1.7519507,18 H 13.262221 c 0.466599,0 0.842361,-0.375761 0.842361,-0.842359 V 16.174887 H 3.8578498 c -0.4665983,0 -0.8423598,-0.375761 -0.8423598,-0.84236 V 2.8395034 Z"
+     style="fill:#000000;fill-opacity:1;stroke-width:0.140372"
+     id="path4" />
 </svg>
