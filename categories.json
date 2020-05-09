@@ -164,7 +164,7 @@
           "osm_tags": [
             { "shop": "herbalist" }
           ],
-          "areas": "IT",
+          "areas": [ "IT" ],
           "form_details": [ "delivery", "access" ]
         }
       }
@@ -462,7 +462,7 @@
         "printer_ink": {
           "name": "Printer ink",
           "osm_tags": [ { "shop": "printer_ink" } ],
-          "areas": "IT",
+          "areas": [ "IT" ],
           "form_details": [ "delivery", "drive", "access" ]
         },
         "electronics": {
@@ -662,7 +662,7 @@
           "osm_tags": [
             { "amenity": "car_rental" }
           ],
-          "-areas": "IT"
+          "-areas": [ "IT" ]
         },
         "bicycle": {
           "name": "Bicycle shop",
@@ -690,7 +690,7 @@
           "osm_tags": [
             { "amenity": "car_wash" }
           ],
-          "areas": "IT"
+          "areas": [ "IT" ]
         },
         "bicycle_tube": {
           "name": "Bicycle tube vending machine",
