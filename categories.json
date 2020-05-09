@@ -1,5 +1,5 @@
 {
-  "countries": [ "DE", "FR", "ES", "AD", "CH", "AT", "PH", "FI", "MC", "CD" ],
+  "countries": [ "DE", "FR", "ES", "AD", "CH", "AT", "PH", "FI", "MC", "CD", "IT" ],
   "sql_columns": [
     "aeroway", "amenity", "craft", "emergency", "healthcare", "highway", "historic",
     "leisure", "office", "public_transport", "railway", "shop", "tobacco", "tourism",
@@ -90,7 +90,7 @@
         "recycling_centre": {
           "name": "Recycling centre",
           "osm_tags": [ { "amenity": "recycling", "recycling_type": "centre" } ],
-          "areas": [ "FR" ]
+          "areas": [ "FR", "IT" ]
         },
         "library": {
           "name": "Library",
@@ -158,6 +158,14 @@
           "osm_filter_tags": [
             { "opening_hours:covid19": "*" }
           ]
+        },
+        "herbalist": {
+          "name": "Herbalist",
+          "osm_tags": [
+            { "shop": "herbalist" }
+          ],
+          "areas": [ "IT" ],
+          "form_details": [ "delivery", "access" ]
         }
       }
     },
@@ -323,7 +331,7 @@
             { "amenity": "cafe", "cuisine": "ice_cream" },
             { "shop": "ice_cream" }
           ],
-          "areas": [ "DE", "AT", "CH" ],
+          "areas": [ "DE", "AT", "CH", "IT" ],
           "form_details": [ "delivery", "takeaway", "access" ]
         },
         "cafe": {
@@ -432,7 +440,7 @@
         "hardware": {
           "name": "Hardware",
           "osm_tags": [
-            { "shop": "doityourself|hardware|paint|glaziery" }
+            { "shop": "doityourself|hardware|paint|glaziery|electrical" }
           ],
           "areas": "all",
           "form_details": [ "delivery", "drive", "access" ]
@@ -451,11 +459,18 @@
           "areas": "all",
           "form_details": [ "delivery", "drive", "access" ]
         },
+        "printer_ink": {
+          "name": "Printer ink",
+          "osm_tags": [ { "shop": "printer_ink" } ],
+          "areas": [ "IT" ],
+          "form_details": [ "delivery", "drive", "access" ]
+        },
         "electronics": {
           "name": "Electronics",
           "osm_tags": [
             { "shop": "electronics" },
-            { "craft": "electronics_repair" }
+            { "craft": "electronics_repair" },
+            { "shop": "appliance"}
           ],
           "areas": "all",
           "form_details": [ "delivery", "drive", "access" ]
@@ -472,7 +487,7 @@
           "osm_tags": [
             { "shop": "stationery" }
           ],
-          "areas": [ "FR" ],
+          "areas": [ "FR", "IT" ],
           "form_details": [ "delivery", "drive", "access" ]
         },
         "newsagent": {
@@ -495,7 +510,7 @@
           "osm_tags": [
             { "shop": "agrarian" }
           ],
-          "areas": [ "FR" ],
+          "areas": [ "FR", "IT" ],
           "form_details": [ "delivery", "drive", "access" ]
         },
         "flower": {
@@ -533,7 +548,7 @@
             { "amenity": "vending_machine", "vending": "books" },
             { "amenity": "public_bookcase" }
           ],
-          "areas": [ "DE", "AT", "CH" ],
+          "areas": [ "DE", "AT", "CH", "IT" ],
           "form_details": [ "delivery", "access" ]
         },
         "beauty": {
@@ -550,6 +565,14 @@
             { "shop": "clothes" }
           ],
           "areas": [ "DE", "AT", "CH" ],
+          "form_details": [ "delivery", "access" ]
+        },
+        "child_clothes": {
+          "name": "Child clothes",
+          "osm_tags": [
+            { "shop": "clothes", "clothes": "babies|children" }
+          ],
+          "areas": [ "IT" ],
           "form_details": [ "delivery", "access" ]
         },
         "furniture": {
@@ -597,6 +620,29 @@
             { "shop": "sports|outdoor" }
           ],
           "areas": [ "DE", "AT", "CH", "FI" ]
+        },
+        "perfumery": {
+          "name": "Perfumery",
+          "osm_tags": [
+            { "shop": "perfumery" }
+          ],
+          "areas": [ "IT" ],
+          "form_details": [ "delivery", "access" ]
+        },
+        "copyshop": {
+          "name": "Copy shop",
+          "osm_tags": [
+            { "shop": "copyshop" }
+          ],
+          "areas": [ "IT" ],
+          "form_details": [ "delivery", "drive", "access" ]
+        },
+        "lighting": {
+          "name": "Lighting",
+          "osm_tags": [
+            { "shop": "lighting" }
+          ],
+          "areas": [ "IT" ]
         }
       }
     },
@@ -638,6 +684,13 @@
             { "shop": "car" }
           ],
           "areas": [ "DE", "AT", "CH" ]
+        },
+        "car_wash": {
+          "name": "Car wash",
+          "osm_tags": [
+            { "amenity": "car_wash" }
+          ],
+          "areas": [ "IT" ]
         },
         "bicycle_tube": {
           "name": "Bicycle tube vending machine",
