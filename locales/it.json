@@ -7,7 +7,7 @@
   "search": "Digita la tua ricerca",
   "coordinates": "Coordinate",
   "menu": "Menu",
-  "missing_shop": "Riporta un negozio mancate",
+  "missing_shop": "Segnala un negozio mancate",
   "backtolist": "Torna alla lista",
   "missing_shop_dialog": {
     "description": "{brand} dovrebbe mostrare solo i posti aperti durante il lockdown. Ecco alcuni motivi per cui alcuni potrebbero mancare:",
@@ -99,7 +99,7 @@
     "cancel": "Annulla"
   },
   "details": {
-    "signal_warning": "Stavi facendo una segnalazione, Questa non sarà salvata. Vuoi proseguire?",
+    "signal_warning": "Stavi facendo una segnalazione. Questa non sarà salvata. Vuoi proseguire?",
     "signal": "Segnala una modifica",
     "signal_done": "La tua segnalazione è stata registrata. Grazie! Ti chiediamo un po' di pazienza durante il periodo in cui sarà processata.",
     "lockdown_opening_hours": "Orari di apertura",
