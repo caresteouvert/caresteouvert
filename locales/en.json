@@ -91,7 +91,9 @@
       "access": "This place offers physical reception on site",
       "drive_through": "This place has a drive-through service",
       "details": "Optional : add details required during the lockdown",
-      "details_error": "Should be either empty or at least 10 characters long"
+      "details_error": "Should be either empty or at least 10 characters long",
+      "definite_closing": "Definite closing",
+      "details_definite_closing": "This place has definitely closed. What's there now instead ? Give as many details as possible, for example: under construction building, new business..."
     },
     "submit": "Publish",
     "cancel": "Cancel"
