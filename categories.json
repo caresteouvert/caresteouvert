@@ -562,10 +562,10 @@
         "clothes": {
           "name": "Clothes",
           "osm_tags": [
-            { "shop": "clothes" }
+            { "shop": "clothes|tailor" }
           ],
           "areas": [ "DE", "AT", "CH" ],
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "access", "mask" ]
         },
         "child_clothes": {
           "name": "Child clothes",
@@ -619,7 +619,8 @@
           "osm_tags": [
             { "shop": "sports|outdoor" }
           ],
-          "areas": [ "DE", "AT", "CH", "FI" ]
+          "areas": [ "DE", "AT", "CH", "FI" ],
+          "form_details": [ "mask", "hydroalcoholic_gel" ]
         },
         "perfumery": {
           "name": "Perfumery",
