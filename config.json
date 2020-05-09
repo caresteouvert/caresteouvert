@@ -88,7 +88,7 @@
       }
     },
     "IT": {
-      "government": "https://www.salute.gov.it/nuovocoronavirus"
+      "government": "http://www.salute.gov.it/nuovocoronavirus"
     }
   },
   "locales": {
@@ -154,7 +154,7 @@
     },
     "it": {
       "blog": "/blog/it/",
-      "shopMissing": "/it/come-posso-aggiungere-un-posto-mancante-su-RestiamoAperti/"
+      "shopMissing": "/it/come-posso-aggiungere-un-posto-mancante/"
     },
     "pt-BR": {
       "shopMissing": "/pt-BR/nao-encontrei-um-estabelecimento/"
