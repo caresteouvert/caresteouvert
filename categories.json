@@ -662,7 +662,7 @@
           "osm_tags": [
             { "amenity": "car_rental" }
           ],
-          "-areas": [ "IT" ]
+          "areas": "all"
         },
         "bicycle": {
           "name": "Bicycle shop",
