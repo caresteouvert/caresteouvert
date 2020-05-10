@@ -694,6 +694,13 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
+        "variety_store": {
+          "name": "Variety store",
+          "osm_tags": [
+            { "shop": "variety_store" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "watches": {
           "name": "Watches",
           "osm_tags": [
