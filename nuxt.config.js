@@ -4,7 +4,7 @@ import FMMode from 'frontmatter-markdown-loader/mode';
 
 const messages = {};
 glob.sync('./locales/*.json' ).forEach((file) => {
-  const locale = basename(file, '.json');
+  const locale = basename(file, '.json').replace('_', '-');
   messages[locale] = require(resolve(file));
 });
 
