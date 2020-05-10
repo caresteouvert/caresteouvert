@@ -39,7 +39,7 @@ BEGIN
 		END IF;
 
 	-- Self-service / vending machines
-	ELSIF tags->'self_service' = 'yes' OR tags->'amenity' = 'vending_machine' THEN
+	ELSIF (tags->'amenity' = 'fuel' AND tags->'self_service' = 'yes') OR tags->'amenity' = 'vending_machine' THEN
 		status := 'open';
 	END IF;
 
