@@ -573,6 +573,13 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
+        "bed": {
+          "name": "Bed",
+          "osm_tags": [
+            { "shop": "bed" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "beauty": {
           "name": "Beauty store",
           "osm_tags": [
