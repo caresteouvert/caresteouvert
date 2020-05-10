@@ -566,6 +566,13 @@
           "areas": [ "DE", "AT", "CH", "IT" ],
           "form_details": [ "delivery", "access" ]
         },
+        "art": {
+          "name": "Art",
+          "osm_tags": [
+            { "shop": "art" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "beauty": {
           "name": "Beauty store",
           "osm_tags": [
@@ -590,10 +597,24 @@
           "areas": [ "IT" ],
           "form_details": [ "delivery", "access" ]
         },
+        "department_store": {
+          "name": "Department store",
+          "osm_tags": [
+            { "shop": "department_store" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "furniture": {
           "name": "Furniture",
           "osm_tags": [
             { "shop": "furniture" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
+        "houseware": {
+          "name": "Houseware",
+          "osm_tags": [
+            { "shop": "houseware" }
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
@@ -615,6 +636,14 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
+        "interior_decoration": {
+          "name": "Interior decoration",
+          "osm_tags": [
+            { "shop": "interior_decoration" }
+          ],
+          "areas": [ "DE", "AT", "CH" ],
+          "form_details": [ "delivery", "access" ]
+        },
         "jewelry": {
           "name": "Jewelry",
           "osm_tags": [
@@ -622,10 +651,60 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
+        "music": {
+          "name": "Music",
+          "osm_tags": [
+            { "shop": "music" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
+        "pottery": {
+          "name": "Pottery",
+          "osm_tags": [
+            { "shop": "pottery" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
+        "tailor": {
+          "name": "Tailor",
+          "osm_tags": [
+            { "shop": "tailor" }
+          ],
+          "areas": [ "DE", "AT", "CH" ],
+          "form_details": [ "delivery", "access" ]
+        },
+        "tickets": {
+          "name": "Tickets",
+          "osm_tags": [
+            { "shop": "tickets" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "toys": {
           "name": "Toy store",
           "osm_tags": [
             { "shop": "toys" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
+        "travel_agency": {
+          "name": "Travel agency",
+          "osm_tags": [
+            { "shop": "travel_agency" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
+        "watch": {
+          "name": "Watch",
+          "osm_tags": [
+            { "shop": "watch" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
+        "weapons": {
+          "name": "Weapons",
+          "osm_tags": [
+            { "shop": "weapons" }
           ],
           "areas": [ "DE", "AT", "CH" ]
         },

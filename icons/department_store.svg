@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.1,0,0,0.1,0,-0.04)">
+        <g>
+            <g>
+                <path d="M180,140L120,140L120,130L180,133.3L180,140Z" style="fill-rule:nonzero;"/>
+                <path d="M180,130L120,125L120,115L180,123.3L180,130Z" style="fill-rule:nonzero;"/>
+                <path d="M180,120L120,110L120,100L180,113.3L180,120Z" style="fill-rule:nonzero;"/>
+                <path d="M180,110L120,95L120,85L180,103.3L180,110Z" style="fill-rule:nonzero;"/>
+                <path d="M180,99.9L120,80L120,70L180,93.3L180,99.9Z" style="fill-rule:nonzero;"/>
+                <path d="M180,89.9L120,65L120,55L180,83.2L180,89.9Z" style="fill-rule:nonzero;"/>
+                <path d="M180,79.9L120,50L120,40L180,73.2L180,79.9Z" style="fill-rule:nonzero;"/>
+                <path d="M180,63.2L180,69.9L120,35L120,25L180,63.2Z" style="fill-rule:nonzero;"/>
+            </g>
+            <g>
+                <g>
+                    <path d="M0,140L120,140L120,130L0,133.3L0,140Z" style="fill-rule:nonzero;"/>
+                    <path d="M0,130L120,125L120,115L0,123.3L0,130Z" style="fill-rule:nonzero;"/>
+                    <path d="M0,120L120,110L120,100L0,113.3L0,120Z" style="fill-rule:nonzero;"/>
+                    <path d="M0,110L120,95L120,85L0,103.3L0,110Z" style="fill-rule:nonzero;"/>
+                    <path d="M0,99.9L120,80L120,70L0,93.3L0,99.9Z" style="fill-rule:nonzero;"/>
+                    <path d="M0,89.9L120,65L120,55L0,83.2L0,89.9Z" style="fill-rule:nonzero;"/>
+                    <path d="M0,79.9L120,50L120,40L0,73.2L0,79.9Z" style="fill-rule:nonzero;"/>
+                    <path d="M0,63.2L0,69.9L120,35L120,25L0,63.2Z" style="fill-rule:nonzero;"/>
+                    <path d="M30,42.4L30,49.9L90,30L90,20.8L30,42.4Z" style="fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

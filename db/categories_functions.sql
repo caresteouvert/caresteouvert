@@ -19,7 +19,7 @@ BEGIN
 		RETURN 'drugs';
 	ELSIF (tags->'amenity' = 'bank' AND area LIKE 'CD%') OR (tags->'amenity' = 'atm' AND area LIKE 'CD%') OR (tags->'amenity' = 'money_transfer' AND area LIKE 'CD%') OR (tags->'amenity' = 'mobile_money_agent' AND area LIKE 'CD%') THEN
 		RETURN 'money';
-	ELSIF (tags->'shop' = 'printer_ink' AND area LIKE 'IT%') OR (tags->'shop' = 'stationery' AND area SIMILAR TO '(FR|IT)%') OR (tags->'shop' = 'agrarian' AND area SIMILAR TO '(FR|IT)%') OR (tags->'shop' = 'shoes' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'books' AND area SIMILAR TO '(DE|AT|CH|IT)%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'books' AND area SIMILAR TO '(DE|AT|CH|IT)%') OR (tags->'amenity' = 'public_bookcase' AND area SIMILAR TO '(DE|AT|CH|IT)%') OR (tags->'shop' = 'beauty' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' IN ('clothes', 'tailor') AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'clothes' AND tags->'clothes' IN ('babies', 'children') AND area LIKE 'IT%') OR (tags->'shop' = 'furniture' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'gift' AND tags->'opening_hours:covid19' != '' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'hairdresser' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'jewelry' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'toys' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' IN ('sports', 'outdoor') AND area SIMILAR TO '(DE|AT|CH|FI)%') OR (tags->'shop' = 'perfumery' AND area LIKE 'IT%') OR (tags->'shop' = 'copyshop' AND area LIKE 'IT%') OR (tags->'shop' = 'lighting' AND area LIKE 'IT%') OR (tags->'shop' IN ('doityourself', 'hardware', 'paint', 'glaziery', 'electrical', 'mobile_phone', 'computer', 'electronics', 'appliance', 'dry_cleaning', 'laundry', 'kiosk', 'newsagent', 'pet', 'garden_centre', 'florist', 'chemist', 'fabric', 'sewing', 'haberdashery')) OR (tags->'craft' IN ('electronics_repair', 'sewing')) THEN
+	ELSIF (tags->'shop' = 'printer_ink' AND area LIKE 'IT%') OR (tags->'shop' = 'stationery' AND area SIMILAR TO '(FR|IT)%') OR (tags->'shop' = 'agrarian' AND area SIMILAR TO '(FR|IT)%') OR (tags->'shop' = 'shoes' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'books' AND area SIMILAR TO '(DE|AT|CH|IT)%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'books' AND area SIMILAR TO '(DE|AT|CH|IT)%') OR (tags->'amenity' = 'public_bookcase' AND area SIMILAR TO '(DE|AT|CH|IT)%') OR (tags->'shop' = 'art' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'beauty' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' IN ('clothes', 'tailor') AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'clothes' AND tags->'clothes' IN ('babies', 'children') AND area LIKE 'IT%') OR (tags->'shop' = 'department_store' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'furniture' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'houseware' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'gift' AND tags->'opening_hours:covid19' != '' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'hairdresser' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'interior_decoration' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'jewelry' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'music' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'pottery' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'tailor' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'tickets' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'toys' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'travel_agency' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'watch' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'weapons' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' IN ('sports', 'outdoor') AND area SIMILAR TO '(DE|AT|CH|FI)%') OR (tags->'shop' = 'perfumery' AND area LIKE 'IT%') OR (tags->'shop' = 'copyshop' AND area LIKE 'IT%') OR (tags->'shop' = 'lighting' AND area LIKE 'IT%') OR (tags->'shop' IN ('doityourself', 'hardware', 'paint', 'glaziery', 'electrical', 'mobile_phone', 'computer', 'electronics', 'appliance', 'dry_cleaning', 'laundry', 'kiosk', 'newsagent', 'pet', 'garden_centre', 'florist', 'chemist', 'fabric', 'sewing', 'haberdashery')) OR (tags->'craft' IN ('electronics_repair', 'sewing')) THEN
 		RETURN 'shop';
 	ELSIF (tags->'shop' = 'car' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'amenity' = 'car_wash' AND area LIKE 'IT%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bicycle_tube') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'public_transport_tickets') OR (tags->'amenity' IN ('fuel', 'car_rental')) OR (tags->'shop' IN ('gas', 'bicycle', 'car_parts', 'car_repair')) THEN
 		RETURN 'mobility';
@@ -165,22 +165,44 @@ BEGIN
 		RETURN 'shoes';
 	ELSIF (tags->'shop' = 'books' AND area SIMILAR TO '(DE|AT|CH|IT)%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'books' AND area SIMILAR TO '(DE|AT|CH|IT)%') OR (tags->'amenity' = 'public_bookcase' AND area SIMILAR TO '(DE|AT|CH|IT)%') THEN
 		RETURN 'books';
+	ELSIF tags->'shop' = 'art' AND area SIMILAR TO '(DE|AT|CH)%' THEN
+		RETURN 'art';
 	ELSIF tags->'shop' = 'beauty' AND area SIMILAR TO '(DE|AT|CH)%' THEN
 		RETURN 'beauty';
 	ELSIF tags->'shop' IN ('clothes', 'tailor') AND area SIMILAR TO '(DE|AT|CH)%' THEN
 		RETURN 'clothes';
 	ELSIF tags->'shop' = 'clothes' AND tags->'clothes' IN ('babies', 'children') AND area LIKE 'IT%' THEN
 		RETURN 'child_clothes';
+	ELSIF tags->'shop' = 'department_store' AND area SIMILAR TO '(DE|AT|CH)%' THEN
+		RETURN 'department_store';
 	ELSIF tags->'shop' = 'furniture' AND area SIMILAR TO '(DE|AT|CH)%' THEN
 		RETURN 'furniture';
+	ELSIF tags->'shop' = 'houseware' AND area SIMILAR TO '(DE|AT|CH)%' THEN
+		RETURN 'houseware';
 	ELSIF tags->'shop' = 'gift' AND area SIMILAR TO '(DE|AT|CH)%' THEN
 		RETURN 'gift';
 	ELSIF tags->'shop' = 'hairdresser' AND area SIMILAR TO '(DE|AT|CH)%' THEN
 		RETURN 'hairdresser';
+	ELSIF tags->'shop' = 'interior_decoration' AND area SIMILAR TO '(DE|AT|CH)%' THEN
+		RETURN 'interior_decoration';
 	ELSIF tags->'shop' = 'jewelry' AND area SIMILAR TO '(DE|AT|CH)%' THEN
 		RETURN 'jewelry';
+	ELSIF tags->'shop' = 'music' AND area SIMILAR TO '(DE|AT|CH)%' THEN
+		RETURN 'music';
+	ELSIF tags->'shop' = 'pottery' AND area SIMILAR TO '(DE|AT|CH)%' THEN
+		RETURN 'pottery';
+	ELSIF tags->'shop' = 'tailor' AND area SIMILAR TO '(DE|AT|CH)%' THEN
+		RETURN 'tailor';
+	ELSIF tags->'shop' = 'tickets' AND area SIMILAR TO '(DE|AT|CH)%' THEN
+		RETURN 'tickets';
 	ELSIF tags->'shop' = 'toys' AND area SIMILAR TO '(DE|AT|CH)%' THEN
 		RETURN 'toys';
+	ELSIF tags->'shop' = 'travel_agency' AND area SIMILAR TO '(DE|AT|CH)%' THEN
+		RETURN 'travel_agency';
+	ELSIF tags->'shop' = 'watch' AND area SIMILAR TO '(DE|AT|CH)%' THEN
+		RETURN 'watch';
+	ELSIF tags->'shop' = 'weapons' AND area SIMILAR TO '(DE|AT|CH)%' THEN
+		RETURN 'weapons';
 	ELSIF tags->'shop' IN ('sports', 'outdoor') AND area SIMILAR TO '(DE|AT|CH|FI)%' THEN
 		RETURN 'sports';
 	ELSIF tags->'shop' = 'perfumery' AND area LIKE 'IT%' THEN
