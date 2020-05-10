@@ -91,12 +91,12 @@
         "recycling_centre": {
           "name": "Recycling centre",
           "osm_tags": [ { "amenity": "recycling", "recycling_type": "centre" } ],
-          "areas": [ "FR", "IT" ]
+          "areas": [ "AT", "CH", "DE", "FR", "IT" ]
         },
         "library": {
           "name": "Library",
           "osm_tags": [ { "amenity": "library" } ],
-          "areas": [ "FI" ]
+          "areas": [ "AT", "CH", "DE", "FI" ]
         }
       }
     },
@@ -503,7 +503,7 @@
           "osm_tags": [
             { "shop": "stationery" }
           ],
-          "areas": [ "FR", "IT" ],
+          "areas": [ "AT", "CH", "DE", "FR", "IT" ],
           "form_details": [ "delivery", "drive", "access" ]
         },
         "newsagent": {
@@ -526,7 +526,7 @@
           "osm_tags": [
             { "shop": "agrarian" }
           ],
-          "areas": [ "FR", "IT" ],
+          "areas": [ "AT", "CH", "DE", "FR", "IT" ],
           "form_details": [ "delivery", "drive", "access" ]
         },
         "flower": {
@@ -605,6 +605,14 @@
           "areas": [ "DE", "AT", "CH" ],
           "form_details": [ "delivery", "access" ]
         },
+        "child_clothes": {
+          "name": "Child clothes",
+          "osm_tags": [
+            { "shop": "clothes", "clothes": "babies|children" }
+          ],
+          "areas": [ "AT", "CH", "DE", "IT" ],
+          "form_details": [ "delivery", "access" ]
+        },
         "clothes": {
           "name": "Clothes",
           "osm_tags": [
@@ -612,14 +620,6 @@
           ],
           "areas": [ "DE", "AT", "CH" ],
           "form_details": [ "delivery", "access", "mask" ]
-        },
-        "child_clothes": {
-          "name": "Child clothes",
-          "osm_tags": [
-            { "shop": "clothes", "clothes": "babies|children" }
-          ],
-          "areas": [ "IT" ],
-          "form_details": [ "delivery", "access" ]
         },
         "cosmetics": {
           "name": "Cosmetics",
@@ -822,7 +822,7 @@
           "osm_tags": [
             { "shop": "perfumery" }
           ],
-          "areas": [ "IT" ],
+          "areas": [ "AT", "CH", "DE", "IT" ],
           "form_details": [ "delivery", "access" ]
         },
         "copyshop": {
@@ -830,7 +830,7 @@
           "osm_tags": [
             { "shop": "copyshop" }
           ],
-          "areas": [ "IT" ],
+          "areas": [ "AT", "CH", "DE", "IT" ],
           "form_details": [ "delivery", "drive", "access" ]
         },
         "lighting": {
@@ -838,7 +838,7 @@
           "osm_tags": [
             { "shop": "lighting" }
           ],
-          "areas": [ "IT" ]
+          "areas": [ "AT", "CH", "DE", "IT" ]
         }
       }
     },
@@ -886,7 +886,7 @@
           "osm_tags": [
             { "amenity": "car_wash" }
           ],
-          "areas": [ "IT" ]
+          "areas": [ "AT", "CH", "DE", "IT" ]
         },
         "motorcycle": {
           "name": "Motorcycles",
