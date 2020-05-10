@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3450);
+SELECT plan(3472);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -1689,6 +1689,50 @@ SELECT is(get_subcategory('shop=>convenience'::hstore, 'CD'), 'convenience', 'ge
 SELECT is(get_category('shop=>convenience'::hstore, 'IT'), 'food', 'get_category shop=>convenience for IT should be food');
 
 SELECT is(get_subcategory('shop=>convenience'::hstore, 'IT'), 'convenience', 'get_subcategory shop=>convenience for IT should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'DE'), 'food', 'get_category shop=>general for DE should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'DE'), 'convenience', 'get_subcategory shop=>general for DE should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'FR'), 'food', 'get_category shop=>general for FR should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'FR'), 'convenience', 'get_subcategory shop=>general for FR should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'ES'), 'food', 'get_category shop=>general for ES should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'ES'), 'convenience', 'get_subcategory shop=>general for ES should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'AD'), 'food', 'get_category shop=>general for AD should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'AD'), 'convenience', 'get_subcategory shop=>general for AD should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'CH'), 'food', 'get_category shop=>general for CH should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'CH'), 'convenience', 'get_subcategory shop=>general for CH should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'AT'), 'food', 'get_category shop=>general for AT should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'AT'), 'convenience', 'get_subcategory shop=>general for AT should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'PH'), 'food', 'get_category shop=>general for PH should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'PH'), 'convenience', 'get_subcategory shop=>general for PH should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'FI'), 'food', 'get_category shop=>general for FI should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'FI'), 'convenience', 'get_subcategory shop=>general for FI should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'MC'), 'food', 'get_category shop=>general for MC should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'MC'), 'convenience', 'get_subcategory shop=>general for MC should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'CD'), 'food', 'get_category shop=>general for CD should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'CD'), 'convenience', 'get_subcategory shop=>general for CD should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'IT'), 'food', 'get_category shop=>general for IT should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'IT'), 'convenience', 'get_subcategory shop=>general for IT should be convenience');
 
 SELECT is(get_category('shop=>seafood'::hstore, 'DE'), 'food', 'get_category shop=>seafood for DE should be food');
 

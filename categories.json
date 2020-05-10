@@ -200,7 +200,7 @@
         "convenience": {
           "name": "Convenience",
           "osm_tags": [
-            { "shop": "convenience" }
+            { "shop": "convenience|general" }
           ],
           "areas": "all",
           "form_details": [ "delivery", "access", "hydroalcoholic_gel", "mask" ]
