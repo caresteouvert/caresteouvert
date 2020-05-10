@@ -1866,50 +1866,6 @@ SELECT is(get_category('shop=>honey'::hstore, 'IT'), 'food', 'get_category shop=
 
 SELECT is(get_subcategory('shop=>honey'::hstore, 'IT'), 'grocery', 'get_subcategory shop=>honey for IT should be grocery');
 
-SELECT is(get_category('shop=>health_food'::hstore, 'DE'), 'food', 'get_category shop=>health_food for DE should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'DE'), 'grocery', 'get_subcategory shop=>health_food for DE should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'FR'), 'food', 'get_category shop=>health_food for FR should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'FR'), 'grocery', 'get_subcategory shop=>health_food for FR should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'ES'), 'food', 'get_category shop=>health_food for ES should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'ES'), 'grocery', 'get_subcategory shop=>health_food for ES should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'AD'), 'food', 'get_category shop=>health_food for AD should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'AD'), 'grocery', 'get_subcategory shop=>health_food for AD should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'CH'), 'food', 'get_category shop=>health_food for CH should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'CH'), 'grocery', 'get_subcategory shop=>health_food for CH should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'AT'), 'food', 'get_category shop=>health_food for AT should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'AT'), 'grocery', 'get_subcategory shop=>health_food for AT should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'PH'), 'food', 'get_category shop=>health_food for PH should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'PH'), 'grocery', 'get_subcategory shop=>health_food for PH should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'FI'), 'food', 'get_category shop=>health_food for FI should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'FI'), 'grocery', 'get_subcategory shop=>health_food for FI should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'MC'), 'food', 'get_category shop=>health_food for MC should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'MC'), 'grocery', 'get_subcategory shop=>health_food for MC should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'CD'), 'food', 'get_category shop=>health_food for CD should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'CD'), 'grocery', 'get_subcategory shop=>health_food for CD should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'IT'), 'food', 'get_category shop=>health_food for IT should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'IT'), 'grocery', 'get_subcategory shop=>health_food for IT should be grocery');
-
 SELECT is(get_category('shop=>pasta'::hstore, 'DE'), 'food', 'get_category shop=>pasta for DE should be food');
 
 SELECT is(get_subcategory('shop=>pasta'::hstore, 'DE'), 'grocery', 'get_subcategory shop=>pasta for DE should be grocery');
@@ -1997,6 +1953,50 @@ SELECT is(get_subcategory('shop=>cannery'::hstore, 'CD'), 'grocery', 'get_subcat
 SELECT is(get_category('shop=>cannery'::hstore, 'IT'), 'food', 'get_category shop=>cannery for IT should be food');
 
 SELECT is(get_subcategory('shop=>cannery'::hstore, 'IT'), 'grocery', 'get_subcategory shop=>cannery for IT should be grocery');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'DE'), 'food', 'get_category shop=>health_food for DE should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'DE'), 'health_food', 'get_subcategory shop=>health_food for DE should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'FR'), 'food', 'get_category shop=>health_food for FR should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'FR'), 'health_food', 'get_subcategory shop=>health_food for FR should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'ES'), 'food', 'get_category shop=>health_food for ES should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'ES'), 'health_food', 'get_subcategory shop=>health_food for ES should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'AD'), 'food', 'get_category shop=>health_food for AD should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'AD'), 'health_food', 'get_subcategory shop=>health_food for AD should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'CH'), 'food', 'get_category shop=>health_food for CH should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'CH'), 'health_food', 'get_subcategory shop=>health_food for CH should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'AT'), 'food', 'get_category shop=>health_food for AT should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'AT'), 'health_food', 'get_subcategory shop=>health_food for AT should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'PH'), 'food', 'get_category shop=>health_food for PH should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'PH'), 'health_food', 'get_subcategory shop=>health_food for PH should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'FI'), 'food', 'get_category shop=>health_food for FI should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'FI'), 'health_food', 'get_subcategory shop=>health_food for FI should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'MC'), 'food', 'get_category shop=>health_food for MC should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'MC'), 'health_food', 'get_subcategory shop=>health_food for MC should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'CD'), 'food', 'get_category shop=>health_food for CD should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'CD'), 'health_food', 'get_subcategory shop=>health_food for CD should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'IT'), 'food', 'get_category shop=>health_food for IT should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'IT'), 'health_food', 'get_subcategory shop=>health_food for IT should be health_food');
 
 SELECT is(get_category('shop=>chocolate'::hstore, 'DE'), 'food', 'get_category shop=>chocolate for DE should be food');
 

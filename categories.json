@@ -223,7 +223,15 @@
         "grocery": {
           "name": "Grocery",
           "osm_tags": [
-            { "shop": "deli|spices|honey|health_food|pasta|cannery" }
+            { "shop": "deli|spices|honey|pasta|cannery" }
+          ],
+          "areas": "all",
+          "form_details": [ "delivery", "access" ]
+        },
+        "health_food": {
+          "name": "Health food",
+          "osm_tags": [
+            { "shop": "health_food" }
           ],
           "areas": "all",
           "form_details": [ "delivery", "access" ]
