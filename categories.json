@@ -483,10 +483,17 @@
           "areas": "all",
           "form_details": [ "delivery", "drive", "access" ]
         },
+        "dry_cleaning": {
+          "name": "Dry cleaning",
+          "osm_tags": [
+            { "shop": "dry_cleaning" }
+          ],
+          "areas": "all"
+        },
         "laundry": {
           "name": "Laundry",
           "osm_tags": [
-            { "shop": "dry_cleaning|laundry" }
+            { "shop": "laundry" }
           ],
           "areas": "all"
         },

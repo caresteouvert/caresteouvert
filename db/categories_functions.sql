@@ -143,7 +143,9 @@ BEGIN
 		RETURN 'printer_ink';
 	ELSIF (tags->'shop' = 'electronics') OR (tags->'craft' = 'electronics_repair') OR (tags->'shop' = 'appliance') THEN
 		RETURN 'electronics';
-	ELSIF tags->'shop' IN ('dry_cleaning', 'laundry') THEN
+	ELSIF tags->'shop' = 'dry_cleaning' THEN
+		RETURN 'dry_cleaning';
+	ELSIF tags->'shop' = 'laundry' THEN
 		RETURN 'laundry';
 	ELSIF tags->'shop' = 'stationery' AND area SIMILAR TO '(FR|IT)%' THEN
 		RETURN 'stationery';

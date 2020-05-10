@@ -5324,47 +5324,47 @@ SELECT is(get_subcategory('shop=>appliance'::hstore, 'IT'), 'electronics', 'get_
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'DE'), 'shop', 'get_category shop=>dry_cleaning for DE should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'DE'), 'laundry', 'get_subcategory shop=>dry_cleaning for DE should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'DE'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for DE should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'FR'), 'shop', 'get_category shop=>dry_cleaning for FR should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'FR'), 'laundry', 'get_subcategory shop=>dry_cleaning for FR should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'FR'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for FR should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'ES'), 'shop', 'get_category shop=>dry_cleaning for ES should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'ES'), 'laundry', 'get_subcategory shop=>dry_cleaning for ES should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'ES'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for ES should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'AD'), 'shop', 'get_category shop=>dry_cleaning for AD should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'AD'), 'laundry', 'get_subcategory shop=>dry_cleaning for AD should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'AD'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for AD should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'CH'), 'shop', 'get_category shop=>dry_cleaning for CH should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'CH'), 'laundry', 'get_subcategory shop=>dry_cleaning for CH should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'CH'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for CH should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'AT'), 'shop', 'get_category shop=>dry_cleaning for AT should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'AT'), 'laundry', 'get_subcategory shop=>dry_cleaning for AT should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'AT'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for AT should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'PH'), 'shop', 'get_category shop=>dry_cleaning for PH should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'PH'), 'laundry', 'get_subcategory shop=>dry_cleaning for PH should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'PH'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for PH should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'FI'), 'shop', 'get_category shop=>dry_cleaning for FI should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'FI'), 'laundry', 'get_subcategory shop=>dry_cleaning for FI should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'FI'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for FI should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'MC'), 'shop', 'get_category shop=>dry_cleaning for MC should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'MC'), 'laundry', 'get_subcategory shop=>dry_cleaning for MC should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'MC'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for MC should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'CD'), 'shop', 'get_category shop=>dry_cleaning for CD should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'CD'), 'laundry', 'get_subcategory shop=>dry_cleaning for CD should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'CD'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for CD should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'IT'), 'shop', 'get_category shop=>dry_cleaning for IT should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'IT'), 'laundry', 'get_subcategory shop=>dry_cleaning for IT should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'IT'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for IT should be dry_cleaning');
 
 SELECT is(get_category('shop=>laundry'::hstore, 'DE'), 'shop', 'get_category shop=>laundry for DE should be shop');
 
