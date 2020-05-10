@@ -26,14 +26,14 @@
   "services": {
     "delivery": "Entrega",
     "hydroalcoholic_gel": "Álcool em gel",
-    "mask": "Máscara",
+    "mask": "Máscaras",
     "takeaway": "Retirada"
   },
   "learnmore": {
     "about": "Sobre",
     "contribute": "Contribua",
     "missing_shop": "Não encontrou uma loja?",
-    "description": "\"{brand}\" é uma ferramenta essencial para evitar movimentações desnecessárias perto de sua casa durante o isolamento, reduzindo assim o risco de contágio.\nEste mapa colaborativo permite, de maneira simples, que você compartilhe lugares abertos e fechados no seu bairro. É uma maneira eficaz e solidária de informar os vizinhos e habitantes da sua cidade.",
+    "description": "\"{brand}\" é uma ferramenta essencial para evitar movimentações desnecessárias perto de sua casa durante o isolamento, reduzindo assim o risco de contágio.\nEste mapa colaborativo permite, de maneira simples, que você compartilhe lugares abertos e fechados em seu bairro. É uma maneira eficaz e solidária de informar os vizinhos e habitantes da sua cidade.",
     "title": "Saiba mais",
     "press": "Imprensa",
     "disclaimer": "Avisos legais",
@@ -91,7 +91,9 @@
       "access": "Este lugar possui atendimento presencial",
       "drive_through": "Este lugar possui um serviço de drive-thru",
       "details": "Adicionar os detalhes necessários durante o isolamento",
-      "details_error": "Deve estar vazio ou possuir ao menos 10 caracteres"
+      "details_error": "Deve estar vazio ou possuir ao menos 10 caracteres",
+      "definite_closing": "Fechado definitivamente",
+      "details_definite_closing": "Este estabelecimento foi fechado definitivamente. Você pode informar outros detalhes, por exemplo: se está em construção, se outra loja abrirá no lugar da antiga..."
     },
     "submit": "Publicar",
     "cancel": "Cancelar"
@@ -163,7 +165,7 @@
     },
     "hygiene": "Higiene",
     "hydroalcoholic_gel": "Álcool em gel",
-    "mask": "Máscara",
+    "mask": "Máscaras",
     "hygiene_status": {
       "yes": "Em {date}: disponível",
       "no": "Em {date}: indisponível",
@@ -174,10 +176,10 @@
       "hasnot": "não possui"
     },
     "update_dialog": {
-      "complete1": "Este estabelecimento é seu ou faz parte de sua franquia?",
+      "complete1": "Esta loja é sua ou faz parte de sua franquia?",
       "complete2": "Ganhe visibilidade após o isolamento",
       "title": "Gerente de filial",
-      "promo": "Você é o gerente de uma filial ou o diretor de uma rede de franquias.\nGanhe visibilidade ao listar todas as suas filiais no \"{brand}\".\nAlém de receber um destaque personalizado em nosso serviço, a sua franquia também aparecerá em vários sites e aplicativos móveis que utilizam o OpenStreetMap.",
+      "promo": "Você é o gerente de uma filial ou o diretor de uma rede de franquias?\nGanhe visibilidade ao listar todas as suas filiais no \"Ça reste ouvert\"!\nAlém ser destacada de forma personalizado em nosso serviço, a sua loja também aparecerá em vários sites e aplicativos móveis que utilizam o OpenStreetMap.",
       "contact": "Contate-nos"
     }
   },
