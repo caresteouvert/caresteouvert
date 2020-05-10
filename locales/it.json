@@ -172,7 +172,7 @@
       "void": "Nessuna informazione, facci sapere"
     },
     "hygiene_entry": {
-      "has": "ha",
+      "has": "si",
       "hasnot": "non ha"
     },
     "update_dialog": {
