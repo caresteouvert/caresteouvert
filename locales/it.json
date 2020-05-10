@@ -164,7 +164,7 @@
       "sweets": "Dolciumi"
     },
     "hygiene": "Igiene",
-    "hydroalcoholic_gel": "Gel disinfettante",
+    "hydroalcoholic_gel": "Gel idroalcolico",
     "mask": "Mascherina",
     "hygiene_status": {
       "yes": "Disponibile il {date}",
