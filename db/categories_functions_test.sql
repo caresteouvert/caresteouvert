@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3494);
+SELECT plan(3516);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -5014,6 +5014,94 @@ SELECT is(get_category('shop=>doityourself'::hstore, 'IT'), 'shop', 'get_categor
 
 SELECT is(get_subcategory('shop=>doityourself'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>doityourself for IT should be hardware');
 
+SELECT is(get_category('shop=>electrical'::hstore, 'DE'), 'shop', 'get_category shop=>electrical for DE should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>electrical for DE should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'FR'), 'shop', 'get_category shop=>electrical for FR should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'FR'), 'hardware', 'get_subcategory shop=>electrical for FR should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'ES'), 'shop', 'get_category shop=>electrical for ES should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'ES'), 'hardware', 'get_subcategory shop=>electrical for ES should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'AD'), 'shop', 'get_category shop=>electrical for AD should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'AD'), 'hardware', 'get_subcategory shop=>electrical for AD should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'CH'), 'shop', 'get_category shop=>electrical for CH should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'CH'), 'hardware', 'get_subcategory shop=>electrical for CH should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'AT'), 'shop', 'get_category shop=>electrical for AT should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'AT'), 'hardware', 'get_subcategory shop=>electrical for AT should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'PH'), 'shop', 'get_category shop=>electrical for PH should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'PH'), 'hardware', 'get_subcategory shop=>electrical for PH should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'FI'), 'shop', 'get_category shop=>electrical for FI should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'FI'), 'hardware', 'get_subcategory shop=>electrical for FI should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'MC'), 'shop', 'get_category shop=>electrical for MC should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'MC'), 'hardware', 'get_subcategory shop=>electrical for MC should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'CD'), 'shop', 'get_category shop=>electrical for CD should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'CD'), 'hardware', 'get_subcategory shop=>electrical for CD should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'IT'), 'shop', 'get_category shop=>electrical for IT should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>electrical for IT should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'DE'), 'shop', 'get_category shop=>glaziery for DE should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>glaziery for DE should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'FR'), 'shop', 'get_category shop=>glaziery for FR should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'FR'), 'hardware', 'get_subcategory shop=>glaziery for FR should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'ES'), 'shop', 'get_category shop=>glaziery for ES should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'ES'), 'hardware', 'get_subcategory shop=>glaziery for ES should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'AD'), 'shop', 'get_category shop=>glaziery for AD should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'AD'), 'hardware', 'get_subcategory shop=>glaziery for AD should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'CH'), 'shop', 'get_category shop=>glaziery for CH should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'CH'), 'hardware', 'get_subcategory shop=>glaziery for CH should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'AT'), 'shop', 'get_category shop=>glaziery for AT should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'AT'), 'hardware', 'get_subcategory shop=>glaziery for AT should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'PH'), 'shop', 'get_category shop=>glaziery for PH should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'PH'), 'hardware', 'get_subcategory shop=>glaziery for PH should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'FI'), 'shop', 'get_category shop=>glaziery for FI should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'FI'), 'hardware', 'get_subcategory shop=>glaziery for FI should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'MC'), 'shop', 'get_category shop=>glaziery for MC should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'MC'), 'hardware', 'get_subcategory shop=>glaziery for MC should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'CD'), 'shop', 'get_category shop=>glaziery for CD should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'CD'), 'hardware', 'get_subcategory shop=>glaziery for CD should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'IT'), 'shop', 'get_category shop=>glaziery for IT should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>glaziery for IT should be hardware');
+
 SELECT is(get_category('shop=>hardware'::hstore, 'DE'), 'shop', 'get_category shop=>hardware for DE should be shop');
 
 SELECT is(get_subcategory('shop=>hardware'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>hardware for DE should be hardware');
@@ -5102,93 +5190,49 @@ SELECT is(get_category('shop=>paint'::hstore, 'IT'), 'shop', 'get_category shop=
 
 SELECT is(get_subcategory('shop=>paint'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>paint for IT should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'DE'), 'shop', 'get_category shop=>glaziery for DE should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'DE'), 'shop', 'get_category shop=>tiles for DE should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>glaziery for DE should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>tiles for DE should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'FR'), 'shop', 'get_category shop=>glaziery for FR should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'FR'), 'shop', 'get_category shop=>tiles for FR should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'FR'), 'hardware', 'get_subcategory shop=>glaziery for FR should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'FR'), 'hardware', 'get_subcategory shop=>tiles for FR should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'ES'), 'shop', 'get_category shop=>glaziery for ES should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'ES'), 'shop', 'get_category shop=>tiles for ES should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'ES'), 'hardware', 'get_subcategory shop=>glaziery for ES should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'ES'), 'hardware', 'get_subcategory shop=>tiles for ES should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'AD'), 'shop', 'get_category shop=>glaziery for AD should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'AD'), 'shop', 'get_category shop=>tiles for AD should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'AD'), 'hardware', 'get_subcategory shop=>glaziery for AD should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'AD'), 'hardware', 'get_subcategory shop=>tiles for AD should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'CH'), 'shop', 'get_category shop=>glaziery for CH should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'CH'), 'shop', 'get_category shop=>tiles for CH should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'CH'), 'hardware', 'get_subcategory shop=>glaziery for CH should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'CH'), 'hardware', 'get_subcategory shop=>tiles for CH should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'AT'), 'shop', 'get_category shop=>glaziery for AT should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'AT'), 'shop', 'get_category shop=>tiles for AT should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'AT'), 'hardware', 'get_subcategory shop=>glaziery for AT should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'AT'), 'hardware', 'get_subcategory shop=>tiles for AT should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'PH'), 'shop', 'get_category shop=>glaziery for PH should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'PH'), 'shop', 'get_category shop=>tiles for PH should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'PH'), 'hardware', 'get_subcategory shop=>glaziery for PH should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'PH'), 'hardware', 'get_subcategory shop=>tiles for PH should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'FI'), 'shop', 'get_category shop=>glaziery for FI should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'FI'), 'shop', 'get_category shop=>tiles for FI should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'FI'), 'hardware', 'get_subcategory shop=>glaziery for FI should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'FI'), 'hardware', 'get_subcategory shop=>tiles for FI should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'MC'), 'shop', 'get_category shop=>glaziery for MC should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'MC'), 'shop', 'get_category shop=>tiles for MC should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'MC'), 'hardware', 'get_subcategory shop=>glaziery for MC should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'MC'), 'hardware', 'get_subcategory shop=>tiles for MC should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'CD'), 'shop', 'get_category shop=>glaziery for CD should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'CD'), 'shop', 'get_category shop=>tiles for CD should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'CD'), 'hardware', 'get_subcategory shop=>glaziery for CD should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'CD'), 'hardware', 'get_subcategory shop=>tiles for CD should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'IT'), 'shop', 'get_category shop=>glaziery for IT should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'IT'), 'shop', 'get_category shop=>tiles for IT should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>glaziery for IT should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'DE'), 'shop', 'get_category shop=>electrical for DE should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>electrical for DE should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'FR'), 'shop', 'get_category shop=>electrical for FR should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'FR'), 'hardware', 'get_subcategory shop=>electrical for FR should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'ES'), 'shop', 'get_category shop=>electrical for ES should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'ES'), 'hardware', 'get_subcategory shop=>electrical for ES should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'AD'), 'shop', 'get_category shop=>electrical for AD should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'AD'), 'hardware', 'get_subcategory shop=>electrical for AD should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'CH'), 'shop', 'get_category shop=>electrical for CH should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'CH'), 'hardware', 'get_subcategory shop=>electrical for CH should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'AT'), 'shop', 'get_category shop=>electrical for AT should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'AT'), 'hardware', 'get_subcategory shop=>electrical for AT should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'PH'), 'shop', 'get_category shop=>electrical for PH should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'PH'), 'hardware', 'get_subcategory shop=>electrical for PH should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'FI'), 'shop', 'get_category shop=>electrical for FI should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'FI'), 'hardware', 'get_subcategory shop=>electrical for FI should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'MC'), 'shop', 'get_category shop=>electrical for MC should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'MC'), 'hardware', 'get_subcategory shop=>electrical for MC should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'CD'), 'shop', 'get_category shop=>electrical for CD should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'CD'), 'hardware', 'get_subcategory shop=>electrical for CD should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'IT'), 'shop', 'get_category shop=>electrical for IT should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>electrical for IT should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>tiles for IT should be hardware');
 
 SELECT is(get_category('shop=>mobile_phone'::hstore, 'DE'), 'shop', 'get_category shop=>mobile_phone for DE should be shop');
 
