@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3344);
+SELECT plan(3356);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6210,6 +6210,18 @@ SELECT is(get_category('shop=>toys'::hstore, 'CH'), 'shop', 'get_category shop=>
 
 SELECT is(get_subcategory('shop=>toys'::hstore, 'CH'), 'toys', 'get_subcategory shop=>toys for CH should be toys');
 
+SELECT is(get_category('shop=>trade'::hstore, 'DE'), 'shop', 'get_category shop=>trade for DE should be shop');
+
+SELECT is(get_subcategory('shop=>trade'::hstore, 'DE'), 'trade', 'get_subcategory shop=>trade for DE should be trade');
+
+SELECT is(get_category('shop=>trade'::hstore, 'AT'), 'shop', 'get_category shop=>trade for AT should be shop');
+
+SELECT is(get_subcategory('shop=>trade'::hstore, 'AT'), 'trade', 'get_subcategory shop=>trade for AT should be trade');
+
+SELECT is(get_category('shop=>trade'::hstore, 'CH'), 'shop', 'get_category shop=>trade for CH should be shop');
+
+SELECT is(get_subcategory('shop=>trade'::hstore, 'CH'), 'trade', 'get_subcategory shop=>trade for CH should be trade');
+
 SELECT is(get_category('shop=>travel_agency'::hstore, 'DE'), 'shop', 'get_category shop=>travel_agency for DE should be shop');
 
 SELECT is(get_subcategory('shop=>travel_agency'::hstore, 'DE'), 'travel_agency', 'get_subcategory shop=>travel_agency for DE should be travel_agency');
@@ -6257,6 +6269,18 @@ SELECT is(get_subcategory('shop=>weapons'::hstore, 'AT'), 'weapons', 'get_subcat
 SELECT is(get_category('shop=>weapons'::hstore, 'CH'), 'shop', 'get_category shop=>weapons for CH should be shop');
 
 SELECT is(get_subcategory('shop=>weapons'::hstore, 'CH'), 'weapons', 'get_subcategory shop=>weapons for CH should be weapons');
+
+SELECT is(get_category('shop=>wholesale'::hstore, 'DE'), 'shop', 'get_category shop=>wholesale for DE should be shop');
+
+SELECT is(get_subcategory('shop=>wholesale'::hstore, 'DE'), 'wholesale', 'get_subcategory shop=>wholesale for DE should be wholesale');
+
+SELECT is(get_category('shop=>wholesale'::hstore, 'AT'), 'shop', 'get_category shop=>wholesale for AT should be shop');
+
+SELECT is(get_subcategory('shop=>wholesale'::hstore, 'AT'), 'wholesale', 'get_subcategory shop=>wholesale for AT should be wholesale');
+
+SELECT is(get_category('shop=>wholesale'::hstore, 'CH'), 'shop', 'get_category shop=>wholesale for CH should be shop');
+
+SELECT is(get_subcategory('shop=>wholesale'::hstore, 'CH'), 'wholesale', 'get_subcategory shop=>wholesale for CH should be wholesale');
 
 SELECT is(get_category('shop=>sports'::hstore, 'DE'), 'shop', 'get_category shop=>sports for DE should be shop');
 

@@ -736,6 +736,13 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
+        "trade": {
+          "name": "Trade",
+          "osm_tags": [
+            { "shop": "trade" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "travel_agency": {
           "name": "Travel agency",
           "osm_tags": [
@@ -761,6 +768,13 @@
           "name": "Weapons",
           "osm_tags": [
             { "shop": "weapons" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
+        "wholesale": {
+          "name": "Wholesale",
+          "osm_tags": [
+            { "shop": "wholesale" }
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
