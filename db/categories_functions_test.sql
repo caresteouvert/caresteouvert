@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3308);
+SELECT plan(3314);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -5993,6 +5993,18 @@ SELECT is(get_subcategory('shop=>clothes, clothes=>babies'::hstore, 'IT'), 'chil
 SELECT is(get_category('shop=>clothes, clothes=>children'::hstore, 'IT'), 'shop', 'get_category shop=>clothes, clothes=>children for IT should be shop');
 
 SELECT is(get_subcategory('shop=>clothes, clothes=>children'::hstore, 'IT'), 'child_clothes', 'get_subcategory shop=>clothes, clothes=>children for IT should be child_clothes');
+
+SELECT is(get_category('shop=>cosmetics'::hstore, 'DE'), 'shop', 'get_category shop=>cosmetics for DE should be shop');
+
+SELECT is(get_subcategory('shop=>cosmetics'::hstore, 'DE'), 'cosmetics', 'get_subcategory shop=>cosmetics for DE should be cosmetics');
+
+SELECT is(get_category('shop=>cosmetics'::hstore, 'AT'), 'shop', 'get_category shop=>cosmetics for AT should be shop');
+
+SELECT is(get_subcategory('shop=>cosmetics'::hstore, 'AT'), 'cosmetics', 'get_subcategory shop=>cosmetics for AT should be cosmetics');
+
+SELECT is(get_category('shop=>cosmetics'::hstore, 'CH'), 'shop', 'get_category shop=>cosmetics for CH should be shop');
+
+SELECT is(get_subcategory('shop=>cosmetics'::hstore, 'CH'), 'cosmetics', 'get_subcategory shop=>cosmetics for CH should be cosmetics');
 
 SELECT is(get_category('shop=>department_store'::hstore, 'DE'), 'shop', 'get_category shop=>department_store for DE should be shop');
 

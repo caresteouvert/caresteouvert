@@ -604,6 +604,13 @@
           "areas": [ "IT" ],
           "form_details": [ "delivery", "access" ]
         },
+        "cosmetics": {
+          "name": "Cosmetics",
+          "osm_tags": [
+            { "shop": "cosmetics" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "department_store": {
           "name": "Department store",
           "osm_tags": [
