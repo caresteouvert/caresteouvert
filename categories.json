@@ -773,6 +773,13 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
+        "video_games": {
+          "name": "Video games",
+          "osm_tags": [
+            { "shop": "video_games" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "watches": {
           "name": "Watches",
           "osm_tags": [

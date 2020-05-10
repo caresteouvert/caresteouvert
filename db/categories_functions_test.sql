@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3422);
+SELECT plan(3450);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -653,6 +653,50 @@ SELECT is(get_subcategory('office=>insurance'::hstore, 'CD'), 'insurance', 'get_
 SELECT is(get_category('office=>insurance'::hstore, 'IT'), 'amenity', 'get_category office=>insurance for IT should be amenity');
 
 SELECT is(get_subcategory('office=>insurance'::hstore, 'IT'), 'insurance', 'get_subcategory office=>insurance for IT should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'DE'), 'amenity', 'get_category shop=>insurance for DE should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'DE'), 'insurance', 'get_subcategory shop=>insurance for DE should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'FR'), 'amenity', 'get_category shop=>insurance for FR should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'FR'), 'insurance', 'get_subcategory shop=>insurance for FR should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'ES'), 'amenity', 'get_category shop=>insurance for ES should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'ES'), 'insurance', 'get_subcategory shop=>insurance for ES should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'AD'), 'amenity', 'get_category shop=>insurance for AD should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'AD'), 'insurance', 'get_subcategory shop=>insurance for AD should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'CH'), 'amenity', 'get_category shop=>insurance for CH should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'CH'), 'insurance', 'get_subcategory shop=>insurance for CH should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'AT'), 'amenity', 'get_category shop=>insurance for AT should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'AT'), 'insurance', 'get_subcategory shop=>insurance for AT should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'PH'), 'amenity', 'get_category shop=>insurance for PH should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'PH'), 'insurance', 'get_subcategory shop=>insurance for PH should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'FI'), 'amenity', 'get_category shop=>insurance for FI should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'FI'), 'insurance', 'get_subcategory shop=>insurance for FI should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'MC'), 'amenity', 'get_category shop=>insurance for MC should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'MC'), 'insurance', 'get_subcategory shop=>insurance for MC should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'CD'), 'amenity', 'get_category shop=>insurance for CD should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'CD'), 'insurance', 'get_subcategory shop=>insurance for CD should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'IT'), 'amenity', 'get_category shop=>insurance for IT should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'IT'), 'insurance', 'get_subcategory shop=>insurance for IT should be insurance');
 
 SELECT is(get_category('opening_hours:covid19=>*, tourism=>information, information=>office'::hstore, 'DE'), 'amenity', 'get_category opening_hours:covid19=>*, tourism=>information, information=>office for DE should be amenity');
 
@@ -6377,6 +6421,18 @@ SELECT is(get_subcategory('shop=>video'::hstore, 'AT'), 'video', 'get_subcategor
 SELECT is(get_category('shop=>video'::hstore, 'CH'), 'shop', 'get_category shop=>video for CH should be shop');
 
 SELECT is(get_subcategory('shop=>video'::hstore, 'CH'), 'video', 'get_subcategory shop=>video for CH should be video');
+
+SELECT is(get_category('shop=>video_games'::hstore, 'DE'), 'shop', 'get_category shop=>video_games for DE should be shop');
+
+SELECT is(get_subcategory('shop=>video_games'::hstore, 'DE'), 'video_games', 'get_subcategory shop=>video_games for DE should be video_games');
+
+SELECT is(get_category('shop=>video_games'::hstore, 'AT'), 'shop', 'get_category shop=>video_games for AT should be shop');
+
+SELECT is(get_subcategory('shop=>video_games'::hstore, 'AT'), 'video_games', 'get_subcategory shop=>video_games for AT should be video_games');
+
+SELECT is(get_category('shop=>video_games'::hstore, 'CH'), 'shop', 'get_category shop=>video_games for CH should be shop');
+
+SELECT is(get_subcategory('shop=>video_games'::hstore, 'CH'), 'video_games', 'get_subcategory shop=>video_games for CH should be video_games');
 
 SELECT is(get_category('shop=>watches'::hstore, 'DE'), 'shop', 'get_category shop=>watches for DE should be shop');
 
