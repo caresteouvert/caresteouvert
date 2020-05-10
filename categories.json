@@ -694,10 +694,10 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
-        "watch": {
-          "name": "Watch",
+        "watches": {
+          "name": "Watches",
           "osm_tags": [
-            { "shop": "watch" }
+            { "shop": "watches" }
           ],
           "areas": [ "DE", "AT", "CH" ]
         },

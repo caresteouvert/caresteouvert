@@ -6138,17 +6138,17 @@ SELECT is(get_category('shop=>travel_agency'::hstore, 'CH'), 'shop', 'get_catego
 
 SELECT is(get_subcategory('shop=>travel_agency'::hstore, 'CH'), 'travel_agency', 'get_subcategory shop=>travel_agency for CH should be travel_agency');
 
-SELECT is(get_category('shop=>watch'::hstore, 'DE'), 'shop', 'get_category shop=>watch for DE should be shop');
+SELECT is(get_category('shop=>watches'::hstore, 'DE'), 'shop', 'get_category shop=>watches for DE should be shop');
 
-SELECT is(get_subcategory('shop=>watch'::hstore, 'DE'), 'watch', 'get_subcategory shop=>watch for DE should be watch');
+SELECT is(get_subcategory('shop=>watches'::hstore, 'DE'), 'watches', 'get_subcategory shop=>watches for DE should be watches');
 
-SELECT is(get_category('shop=>watch'::hstore, 'AT'), 'shop', 'get_category shop=>watch for AT should be shop');
+SELECT is(get_category('shop=>watches'::hstore, 'AT'), 'shop', 'get_category shop=>watches for AT should be shop');
 
-SELECT is(get_subcategory('shop=>watch'::hstore, 'AT'), 'watch', 'get_subcategory shop=>watch for AT should be watch');
+SELECT is(get_subcategory('shop=>watches'::hstore, 'AT'), 'watches', 'get_subcategory shop=>watches for AT should be watches');
 
-SELECT is(get_category('shop=>watch'::hstore, 'CH'), 'shop', 'get_category shop=>watch for CH should be shop');
+SELECT is(get_category('shop=>watches'::hstore, 'CH'), 'shop', 'get_category shop=>watches for CH should be shop');
 
-SELECT is(get_subcategory('shop=>watch'::hstore, 'CH'), 'watch', 'get_subcategory shop=>watch for CH should be watch');
+SELECT is(get_subcategory('shop=>watches'::hstore, 'CH'), 'watches', 'get_subcategory shop=>watches for CH should be watches');
 
 SELECT is(get_category('shop=>weapons'::hstore, 'DE'), 'shop', 'get_category shop=>weapons for DE should be shop');
 
