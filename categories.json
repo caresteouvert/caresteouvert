@@ -651,6 +651,13 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
+        "massage": {
+          "name": "Massage",
+          "osm_tags": [
+            { "shop": "massage" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "music": {
           "name": "Music",
           "osm_tags": [
