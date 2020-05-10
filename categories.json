@@ -665,6 +665,13 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
+        "photo": {
+          "name": "Photo",
+          "osm_tags": [
+            { "shop": "photo" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "pottery": {
           "name": "Pottery",
           "osm_tags": [

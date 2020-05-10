@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3296);
+SELECT plan(3302);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6089,6 +6089,18 @@ SELECT is(get_subcategory('shop=>music'::hstore, 'AT'), 'music', 'get_subcategor
 SELECT is(get_category('shop=>music'::hstore, 'CH'), 'shop', 'get_category shop=>music for CH should be shop');
 
 SELECT is(get_subcategory('shop=>music'::hstore, 'CH'), 'music', 'get_subcategory shop=>music for CH should be music');
+
+SELECT is(get_category('shop=>photo'::hstore, 'DE'), 'shop', 'get_category shop=>photo for DE should be shop');
+
+SELECT is(get_subcategory('shop=>photo'::hstore, 'DE'), 'photo', 'get_subcategory shop=>photo for DE should be photo');
+
+SELECT is(get_category('shop=>photo'::hstore, 'AT'), 'shop', 'get_category shop=>photo for AT should be shop');
+
+SELECT is(get_subcategory('shop=>photo'::hstore, 'AT'), 'photo', 'get_subcategory shop=>photo for AT should be photo');
+
+SELECT is(get_category('shop=>photo'::hstore, 'CH'), 'shop', 'get_category shop=>photo for CH should be shop');
+
+SELECT is(get_subcategory('shop=>photo'::hstore, 'CH'), 'photo', 'get_subcategory shop=>photo for CH should be photo');
 
 SELECT is(get_category('shop=>pottery'::hstore, 'DE'), 'shop', 'get_category shop=>pottery for DE should be shop');
 
