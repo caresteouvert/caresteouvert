@@ -629,7 +629,7 @@
         "furniture": {
           "name": "Furniture",
           "osm_tags": [
-            { "shop": "furniture" }
+            { "shop": "bathroom_furnishing|carpet|curtain|furniture|kitchen" }
           ],
           "areas": [ "DE", "AT", "CH" ]
         },

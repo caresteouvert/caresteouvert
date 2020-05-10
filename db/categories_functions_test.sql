@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3374);
+SELECT plan(3398);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6042,6 +6042,42 @@ SELECT is(get_category('shop=>department_store'::hstore, 'CH'), 'shop', 'get_cat
 
 SELECT is(get_subcategory('shop=>department_store'::hstore, 'CH'), 'department_store', 'get_subcategory shop=>department_store for CH should be department_store');
 
+SELECT is(get_category('shop=>bathroom_furnishing'::hstore, 'DE'), 'shop', 'get_category shop=>bathroom_furnishing for DE should be shop');
+
+SELECT is(get_subcategory('shop=>bathroom_furnishing'::hstore, 'DE'), 'furniture', 'get_subcategory shop=>bathroom_furnishing for DE should be furniture');
+
+SELECT is(get_category('shop=>bathroom_furnishing'::hstore, 'AT'), 'shop', 'get_category shop=>bathroom_furnishing for AT should be shop');
+
+SELECT is(get_subcategory('shop=>bathroom_furnishing'::hstore, 'AT'), 'furniture', 'get_subcategory shop=>bathroom_furnishing for AT should be furniture');
+
+SELECT is(get_category('shop=>bathroom_furnishing'::hstore, 'CH'), 'shop', 'get_category shop=>bathroom_furnishing for CH should be shop');
+
+SELECT is(get_subcategory('shop=>bathroom_furnishing'::hstore, 'CH'), 'furniture', 'get_subcategory shop=>bathroom_furnishing for CH should be furniture');
+
+SELECT is(get_category('shop=>carpet'::hstore, 'DE'), 'shop', 'get_category shop=>carpet for DE should be shop');
+
+SELECT is(get_subcategory('shop=>carpet'::hstore, 'DE'), 'furniture', 'get_subcategory shop=>carpet for DE should be furniture');
+
+SELECT is(get_category('shop=>carpet'::hstore, 'AT'), 'shop', 'get_category shop=>carpet for AT should be shop');
+
+SELECT is(get_subcategory('shop=>carpet'::hstore, 'AT'), 'furniture', 'get_subcategory shop=>carpet for AT should be furniture');
+
+SELECT is(get_category('shop=>carpet'::hstore, 'CH'), 'shop', 'get_category shop=>carpet for CH should be shop');
+
+SELECT is(get_subcategory('shop=>carpet'::hstore, 'CH'), 'furniture', 'get_subcategory shop=>carpet for CH should be furniture');
+
+SELECT is(get_category('shop=>curtain'::hstore, 'DE'), 'shop', 'get_category shop=>curtain for DE should be shop');
+
+SELECT is(get_subcategory('shop=>curtain'::hstore, 'DE'), 'furniture', 'get_subcategory shop=>curtain for DE should be furniture');
+
+SELECT is(get_category('shop=>curtain'::hstore, 'AT'), 'shop', 'get_category shop=>curtain for AT should be shop');
+
+SELECT is(get_subcategory('shop=>curtain'::hstore, 'AT'), 'furniture', 'get_subcategory shop=>curtain for AT should be furniture');
+
+SELECT is(get_category('shop=>curtain'::hstore, 'CH'), 'shop', 'get_category shop=>curtain for CH should be shop');
+
+SELECT is(get_subcategory('shop=>curtain'::hstore, 'CH'), 'furniture', 'get_subcategory shop=>curtain for CH should be furniture');
+
 SELECT is(get_category('shop=>furniture'::hstore, 'DE'), 'shop', 'get_category shop=>furniture for DE should be shop');
 
 SELECT is(get_subcategory('shop=>furniture'::hstore, 'DE'), 'furniture', 'get_subcategory shop=>furniture for DE should be furniture');
@@ -6053,6 +6089,18 @@ SELECT is(get_subcategory('shop=>furniture'::hstore, 'AT'), 'furniture', 'get_su
 SELECT is(get_category('shop=>furniture'::hstore, 'CH'), 'shop', 'get_category shop=>furniture for CH should be shop');
 
 SELECT is(get_subcategory('shop=>furniture'::hstore, 'CH'), 'furniture', 'get_subcategory shop=>furniture for CH should be furniture');
+
+SELECT is(get_category('shop=>kitchen'::hstore, 'DE'), 'shop', 'get_category shop=>kitchen for DE should be shop');
+
+SELECT is(get_subcategory('shop=>kitchen'::hstore, 'DE'), 'furniture', 'get_subcategory shop=>kitchen for DE should be furniture');
+
+SELECT is(get_category('shop=>kitchen'::hstore, 'AT'), 'shop', 'get_category shop=>kitchen for AT should be shop');
+
+SELECT is(get_subcategory('shop=>kitchen'::hstore, 'AT'), 'furniture', 'get_subcategory shop=>kitchen for AT should be furniture');
+
+SELECT is(get_category('shop=>kitchen'::hstore, 'CH'), 'shop', 'get_category shop=>kitchen for CH should be shop');
+
+SELECT is(get_subcategory('shop=>kitchen'::hstore, 'CH'), 'furniture', 'get_subcategory shop=>kitchen for CH should be furniture');
 
 SELECT is(get_category('shop=>houseware'::hstore, 'DE'), 'shop', 'get_category shop=>houseware for DE should be shop');
 
