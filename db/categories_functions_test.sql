@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3320);
+SELECT plan(3326);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6113,6 +6113,18 @@ SELECT is(get_subcategory('shop=>music'::hstore, 'AT'), 'music', 'get_subcategor
 SELECT is(get_category('shop=>music'::hstore, 'CH'), 'shop', 'get_category shop=>music for CH should be shop');
 
 SELECT is(get_subcategory('shop=>music'::hstore, 'CH'), 'music', 'get_subcategory shop=>music for CH should be music');
+
+SELECT is(get_category('shop=>musical_instrument'::hstore, 'DE'), 'shop', 'get_category shop=>musical_instrument for DE should be shop');
+
+SELECT is(get_subcategory('shop=>musical_instrument'::hstore, 'DE'), 'musical_instrument', 'get_subcategory shop=>musical_instrument for DE should be musical_instrument');
+
+SELECT is(get_category('shop=>musical_instrument'::hstore, 'AT'), 'shop', 'get_category shop=>musical_instrument for AT should be shop');
+
+SELECT is(get_subcategory('shop=>musical_instrument'::hstore, 'AT'), 'musical_instrument', 'get_subcategory shop=>musical_instrument for AT should be musical_instrument');
+
+SELECT is(get_category('shop=>musical_instrument'::hstore, 'CH'), 'shop', 'get_category shop=>musical_instrument for CH should be shop');
+
+SELECT is(get_subcategory('shop=>musical_instrument'::hstore, 'CH'), 'musical_instrument', 'get_subcategory shop=>musical_instrument for CH should be musical_instrument');
 
 SELECT is(get_category('shop=>photo'::hstore, 'DE'), 'shop', 'get_category shop=>photo for DE should be shop');
 

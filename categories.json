@@ -679,6 +679,13 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
+        "musical_instrument": {
+          "name": "Musical instrument",
+          "osm_tags": [
+            { "shop": "musical_instrument" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "photo": {
           "name": "Photo",
           "osm_tags": [
