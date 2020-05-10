@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3314);
+SELECT plan(3320);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6137,6 +6137,18 @@ SELECT is(get_subcategory('shop=>pottery'::hstore, 'AT'), 'pottery', 'get_subcat
 SELECT is(get_category('shop=>pottery'::hstore, 'CH'), 'shop', 'get_category shop=>pottery for CH should be shop');
 
 SELECT is(get_subcategory('shop=>pottery'::hstore, 'CH'), 'pottery', 'get_subcategory shop=>pottery for CH should be pottery');
+
+SELECT is(get_category('shop=>second_hand'::hstore, 'DE'), 'shop', 'get_category shop=>second_hand for DE should be shop');
+
+SELECT is(get_subcategory('shop=>second_hand'::hstore, 'DE'), 'second_hand', 'get_subcategory shop=>second_hand for DE should be second_hand');
+
+SELECT is(get_category('shop=>second_hand'::hstore, 'AT'), 'shop', 'get_category shop=>second_hand for AT should be shop');
+
+SELECT is(get_subcategory('shop=>second_hand'::hstore, 'AT'), 'second_hand', 'get_subcategory shop=>second_hand for AT should be second_hand');
+
+SELECT is(get_category('shop=>second_hand'::hstore, 'CH'), 'shop', 'get_category shop=>second_hand for CH should be shop');
+
+SELECT is(get_subcategory('shop=>second_hand'::hstore, 'CH'), 'second_hand', 'get_subcategory shop=>second_hand for CH should be second_hand');
 
 SELECT is(get_category('shop=>tailor'::hstore, 'DE'), 'shop', 'get_category shop=>tailor for DE should be shop');
 

@@ -693,6 +693,13 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
+        "second_hand": {
+          "name": "Second hand",
+          "osm_tags": [
+            { "shop": "second_hand" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "tailor": {
           "name": "Tailor",
           "osm_tags": [
