@@ -65,7 +65,8 @@
         "insurance": {
           "name": "Insurance",
           "osm_tags": [
-            { "office": "insurance" }
+            { "office": "insurance" },
+            { "shop": "insurance" }
           ],
           "areas": "all",
           "form_details": [ "access" ]
