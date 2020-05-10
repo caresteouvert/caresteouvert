@@ -165,7 +165,7 @@
     },
     "hygiene": "Igiene",
     "hydroalcoholic_gel": "È possibile acquistare gel idroalcolico",
-    "mask": "Mascherina",
+    "mask": "È possibile acquistare mascherine",
     "hygiene_status": {
       "yes": "Disponibile il {date}",
       "no": "Non disponibile il {date}",
