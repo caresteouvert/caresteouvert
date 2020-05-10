@@ -173,7 +173,7 @@
     },
     "hygiene_entry": {
       "has": "si",
-      "hasnot": "non ha"
+      "hasnot": "no"
     },
     "update_dialog": {
       "complete1": "Questo posto è tuo o fa parte del tuo gruppo?",
