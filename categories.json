@@ -295,7 +295,7 @@
         "alcohol": {
           "name": "Alcohol store",
           "osm_tags": [
-            { "shop": "alcohol|beverages|wine" }
+            { "shop": "alcohol|beverages|wine|winery" }
           ],
           "areas": [ "CD" ],
           "form_details": [ "delivery", "access" ]
