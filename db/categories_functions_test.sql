@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3398);
+SELECT plan(3420);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -5821,6 +5821,50 @@ SELECT is(get_subcategory('shop=>haberdashery'::hstore, 'CD'), 'sewing', 'get_su
 SELECT is(get_category('shop=>haberdashery'::hstore, 'IT'), 'shop', 'get_category shop=>haberdashery for IT should be shop');
 
 SELECT is(get_subcategory('shop=>haberdashery'::hstore, 'IT'), 'sewing', 'get_subcategory shop=>haberdashery for IT should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'DE'), 'shop', 'get_category shop=>wool for DE should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'DE'), 'sewing', 'get_subcategory shop=>wool for DE should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'FR'), 'shop', 'get_category shop=>wool for FR should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'FR'), 'sewing', 'get_subcategory shop=>wool for FR should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'ES'), 'shop', 'get_category shop=>wool for ES should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'ES'), 'sewing', 'get_subcategory shop=>wool for ES should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'AD'), 'shop', 'get_category shop=>wool for AD should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'AD'), 'sewing', 'get_subcategory shop=>wool for AD should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'CH'), 'shop', 'get_category shop=>wool for CH should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'CH'), 'sewing', 'get_subcategory shop=>wool for CH should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'AT'), 'shop', 'get_category shop=>wool for AT should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'AT'), 'sewing', 'get_subcategory shop=>wool for AT should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'PH'), 'shop', 'get_category shop=>wool for PH should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'PH'), 'sewing', 'get_subcategory shop=>wool for PH should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'FI'), 'shop', 'get_category shop=>wool for FI should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'FI'), 'sewing', 'get_subcategory shop=>wool for FI should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'MC'), 'shop', 'get_category shop=>wool for MC should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'MC'), 'sewing', 'get_subcategory shop=>wool for MC should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'CD'), 'shop', 'get_category shop=>wool for CD should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'CD'), 'sewing', 'get_subcategory shop=>wool for CD should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'IT'), 'shop', 'get_category shop=>wool for IT should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'IT'), 'sewing', 'get_subcategory shop=>wool for IT should be sewing');
 
 SELECT is(get_category('craft=>sewing'::hstore, 'DE'), 'shop', 'get_category craft=>sewing for DE should be shop');
 

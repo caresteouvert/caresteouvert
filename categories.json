@@ -546,7 +546,7 @@
         },
         "sewing": {
           "name": "Sewing",
-          "osm_tags": [ { "shop": "fabric|sewing|haberdashery" }, { "craft": "sewing" } ],
+          "osm_tags": [ { "shop": "fabric|sewing|haberdashery|wool" }, { "craft": "sewing" } ],
           "areas": "all",
           "form_details": [ "delivery", "drive", "access", "mask" ]
         },
