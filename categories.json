@@ -597,6 +597,14 @@
           "areas": [ "DE", "AT", "CH" ],
           "form_details": [ "delivery", "access" ]
         },
+        "charity": {
+          "name": "Charity shop",
+          "osm_tags": [
+            { "shop": "charity" }
+          ],
+          "areas": [ "DE", "AT", "CH" ],
+          "form_details": [ "delivery", "access" ]
+        },
         "clothes": {
           "name": "Clothes",
           "osm_tags": [
