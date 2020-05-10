@@ -765,6 +765,13 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
+        "video": {
+          "name": "Videos",
+          "osm_tags": [
+            { "shop": "video" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "watches": {
           "name": "Watches",
           "osm_tags": [

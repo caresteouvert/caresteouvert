@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3368);
+SELECT plan(3374);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6269,6 +6269,18 @@ SELECT is(get_subcategory('shop=>variety_store'::hstore, 'AT'), 'variety_store',
 SELECT is(get_category('shop=>variety_store'::hstore, 'CH'), 'shop', 'get_category shop=>variety_store for CH should be shop');
 
 SELECT is(get_subcategory('shop=>variety_store'::hstore, 'CH'), 'variety_store', 'get_subcategory shop=>variety_store for CH should be variety_store');
+
+SELECT is(get_category('shop=>video'::hstore, 'DE'), 'shop', 'get_category shop=>video for DE should be shop');
+
+SELECT is(get_subcategory('shop=>video'::hstore, 'DE'), 'video', 'get_subcategory shop=>video for DE should be video');
+
+SELECT is(get_category('shop=>video'::hstore, 'AT'), 'shop', 'get_category shop=>video for AT should be shop');
+
+SELECT is(get_subcategory('shop=>video'::hstore, 'AT'), 'video', 'get_subcategory shop=>video for AT should be video');
+
+SELECT is(get_category('shop=>video'::hstore, 'CH'), 'shop', 'get_category shop=>video for CH should be shop');
+
+SELECT is(get_subcategory('shop=>video'::hstore, 'CH'), 'video', 'get_subcategory shop=>video for CH should be video');
 
 SELECT is(get_category('shop=>watches'::hstore, 'DE'), 'shop', 'get_category shop=>watches for DE should be shop');
 
