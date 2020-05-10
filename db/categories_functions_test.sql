@@ -6102,17 +6102,17 @@ SELECT is(get_category('shop=>tailor'::hstore, 'CH'), 'shop', 'get_category shop
 
 SELECT is(get_subcategory('shop=>tailor'::hstore, 'CH'), 'tailor', 'get_subcategory shop=>tailor for CH should be tailor');
 
-SELECT is(get_category('shop=>tickets'::hstore, 'DE'), 'shop', 'get_category shop=>tickets for DE should be shop');
+SELECT is(get_category('shop=>ticket'::hstore, 'DE'), 'shop', 'get_category shop=>ticket for DE should be shop');
 
-SELECT is(get_subcategory('shop=>tickets'::hstore, 'DE'), 'tickets', 'get_subcategory shop=>tickets for DE should be tickets');
+SELECT is(get_subcategory('shop=>ticket'::hstore, 'DE'), 'ticket', 'get_subcategory shop=>ticket for DE should be ticket');
 
-SELECT is(get_category('shop=>tickets'::hstore, 'AT'), 'shop', 'get_category shop=>tickets for AT should be shop');
+SELECT is(get_category('shop=>ticket'::hstore, 'AT'), 'shop', 'get_category shop=>ticket for AT should be shop');
 
-SELECT is(get_subcategory('shop=>tickets'::hstore, 'AT'), 'tickets', 'get_subcategory shop=>tickets for AT should be tickets');
+SELECT is(get_subcategory('shop=>ticket'::hstore, 'AT'), 'ticket', 'get_subcategory shop=>ticket for AT should be ticket');
 
-SELECT is(get_category('shop=>tickets'::hstore, 'CH'), 'shop', 'get_category shop=>tickets for CH should be shop');
+SELECT is(get_category('shop=>ticket'::hstore, 'CH'), 'shop', 'get_category shop=>ticket for CH should be shop');
 
-SELECT is(get_subcategory('shop=>tickets'::hstore, 'CH'), 'tickets', 'get_subcategory shop=>tickets for CH should be tickets');
+SELECT is(get_subcategory('shop=>ticket'::hstore, 'CH'), 'ticket', 'get_subcategory shop=>ticket for CH should be ticket');
 
 SELECT is(get_category('shop=>toys'::hstore, 'DE'), 'shop', 'get_category shop=>toys for DE should be shop');
 

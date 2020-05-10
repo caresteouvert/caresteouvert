@@ -673,10 +673,10 @@
           "areas": [ "DE", "AT", "CH" ],
           "form_details": [ "delivery", "access" ]
         },
-        "tickets": {
+        "ticket": {
           "name": "Tickets",
           "osm_tags": [
-            { "shop": "tickets" }
+            { "shop": "ticket" }
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
