@@ -843,6 +843,13 @@
           ],
           "areas": [ "IT" ]
         },
+        "motorcycle": {
+          "name": "Motorcycles",
+          "osm_tags": [
+            { "shop": "motorcycle" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "bicycle_tube": {
           "name": "Bicycle tube vending machine",
           "osm_tags": [ { "amenity": "vending_machine", "vending": "bicycle_tube" } ],

@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3332);
+SELECT plan(3338);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6581,6 +6581,18 @@ SELECT is(get_subcategory('shop=>car'::hstore, 'CH'), 'car_dealer', 'get_subcate
 SELECT is(get_category('amenity=>car_wash'::hstore, 'IT'), 'mobility', 'get_category amenity=>car_wash for IT should be mobility');
 
 SELECT is(get_subcategory('amenity=>car_wash'::hstore, 'IT'), 'car_wash', 'get_subcategory amenity=>car_wash for IT should be car_wash');
+
+SELECT is(get_category('shop=>motorcycle'::hstore, 'DE'), 'mobility', 'get_category shop=>motorcycle for DE should be mobility');
+
+SELECT is(get_subcategory('shop=>motorcycle'::hstore, 'DE'), 'motorcycle', 'get_subcategory shop=>motorcycle for DE should be motorcycle');
+
+SELECT is(get_category('shop=>motorcycle'::hstore, 'AT'), 'mobility', 'get_category shop=>motorcycle for AT should be mobility');
+
+SELECT is(get_subcategory('shop=>motorcycle'::hstore, 'AT'), 'motorcycle', 'get_subcategory shop=>motorcycle for AT should be motorcycle');
+
+SELECT is(get_category('shop=>motorcycle'::hstore, 'CH'), 'mobility', 'get_category shop=>motorcycle for CH should be mobility');
+
+SELECT is(get_subcategory('shop=>motorcycle'::hstore, 'CH'), 'motorcycle', 'get_subcategory shop=>motorcycle for CH should be motorcycle');
 
 SELECT is(get_category('amenity=>vending_machine, vending=>bicycle_tube'::hstore, 'DE'), 'mobility', 'get_category amenity=>vending_machine, vending=>bicycle_tube for DE should be mobility');
 
