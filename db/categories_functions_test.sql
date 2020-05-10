@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3472);
+SELECT plan(3488);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6513,6 +6513,38 @@ SELECT is(get_subcategory('shop=>wholesale'::hstore, 'AT'), 'wholesale', 'get_su
 SELECT is(get_category('shop=>wholesale'::hstore, 'CH'), 'shop', 'get_category shop=>wholesale for CH should be shop');
 
 SELECT is(get_subcategory('shop=>wholesale'::hstore, 'CH'), 'wholesale', 'get_subcategory shop=>wholesale for CH should be wholesale');
+
+SELECT is(get_category('shop=>fishing'::hstore, 'DE'), 'shop', 'get_category shop=>fishing for DE should be shop');
+
+SELECT is(get_subcategory('shop=>fishing'::hstore, 'DE'), 'sports', 'get_subcategory shop=>fishing for DE should be sports');
+
+SELECT is(get_category('shop=>fishing'::hstore, 'AT'), 'shop', 'get_category shop=>fishing for AT should be shop');
+
+SELECT is(get_subcategory('shop=>fishing'::hstore, 'AT'), 'sports', 'get_subcategory shop=>fishing for AT should be sports');
+
+SELECT is(get_category('shop=>fishing'::hstore, 'CH'), 'shop', 'get_category shop=>fishing for CH should be shop');
+
+SELECT is(get_subcategory('shop=>fishing'::hstore, 'CH'), 'sports', 'get_subcategory shop=>fishing for CH should be sports');
+
+SELECT is(get_category('shop=>fishing'::hstore, 'FI'), 'shop', 'get_category shop=>fishing for FI should be shop');
+
+SELECT is(get_subcategory('shop=>fishing'::hstore, 'FI'), 'sports', 'get_subcategory shop=>fishing for FI should be sports');
+
+SELECT is(get_category('shop=>hunting'::hstore, 'DE'), 'shop', 'get_category shop=>hunting for DE should be shop');
+
+SELECT is(get_subcategory('shop=>hunting'::hstore, 'DE'), 'sports', 'get_subcategory shop=>hunting for DE should be sports');
+
+SELECT is(get_category('shop=>hunting'::hstore, 'AT'), 'shop', 'get_category shop=>hunting for AT should be shop');
+
+SELECT is(get_subcategory('shop=>hunting'::hstore, 'AT'), 'sports', 'get_subcategory shop=>hunting for AT should be sports');
+
+SELECT is(get_category('shop=>hunting'::hstore, 'CH'), 'shop', 'get_category shop=>hunting for CH should be shop');
+
+SELECT is(get_subcategory('shop=>hunting'::hstore, 'CH'), 'sports', 'get_subcategory shop=>hunting for CH should be sports');
+
+SELECT is(get_category('shop=>hunting'::hstore, 'FI'), 'shop', 'get_category shop=>hunting for FI should be shop');
+
+SELECT is(get_subcategory('shop=>hunting'::hstore, 'FI'), 'sports', 'get_subcategory shop=>hunting for FI should be sports');
 
 SELECT is(get_category('shop=>sports'::hstore, 'DE'), 'shop', 'get_category shop=>sports for DE should be shop');
 

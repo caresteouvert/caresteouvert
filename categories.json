@@ -804,7 +804,7 @@
         "sports": {
           "name": "Sports",
           "osm_tags": [
-            { "shop": "sports|outdoor" }
+            { "shop": "fishing|hunting|sports|outdoor" }
           ],
           "areas": [ "DE", "AT", "CH", "FI" ],
           "form_details": [ "mask", "hydroalcoholic_gel" ]
