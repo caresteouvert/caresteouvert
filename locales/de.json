@@ -91,7 +91,9 @@
       "access": "Kann dieser Ort betreten werden?",
       "drive_through": "Drive-in vorhanden und geöffnet?",
       "details": "Wichtige Anmerkungen (optional, erzeugt einen OSM-Hinweis und erfordert eine manuelle Bearbeitung durch die OpenStreetMap-Community)",
-      "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein"
+      "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein",
+      "definite_closing": "Dauerhaft geschlossen",
+      "details_definite_closing": "Dieser Ort ist dauerhaft geschlossen. Was ist dort nun? Je mehr Details, desto besser, zum Beispiel: Gebäude abgerissen, neues Geschäft…"
     },
     "submit": "Meldung abschicken",
     "cancel": "Abbrechen"
@@ -175,9 +177,9 @@
     },
     "update_dialog": {
       "complete1": "Gehört Ihr Geschäft zu dieser Gruppe?",
-      "complete2": "Erhöhen Sie Ihre Sichtbarkeit nach Ende der Ausgangsbeschränkungen mit unserer speziellen Werbelösung",
+      "complete2": "Sichtbarkeit nach Lockdown-Ende erhöhen",
       "title": "Verkaufsleitung",
-      "promo": "Sie sind Managerin oder Geschäftsführerin eines Franchise-Unternehmens. Erhöhen Sie Ihre Sichtbarkeit, indem Sie alle Ihre Verkaufsstellen in „Bleibt offen“ auflisten. Neben der persönlichen Hervorhebung in unserem Dienst werden Sie auch auf vielen Websites und mobilen Anwendungen erscheinen.",
+      "promo": "Sie sind Managerin oder Geschäftsführerin eines Franchise-Unternehmens. \nErhöhen Sie Ihre Sichtbarkeit, indem Sie alle Ihre Verkaufsstellen in „Bleibt offen“ auflisten.\nNeben der persönlichen Hervorhebung in unserem Dienst werden Sie dank OpenStreetMap auch auf vielen Websites und mobilen Anwendungen erscheinen.",
       "contact": "Kontaktiere uns"
     }
   },
@@ -223,6 +225,7 @@
     "condoms": "Kondomautomat",
     "medical_supply": "Sanitätshaus",
     "health_center": "Medizinische Einrichtung",
+    "herbalist": "Kräuter",
     "food": "Lebensmittel",
     "supermarket": "Supermarkt",
     "butcher": "Metzgerei",
@@ -259,6 +262,7 @@
     "hardware": "Baubedarf",
     "mobile_phone": "Mobiltelefon",
     "computer": "Computer",
+    "printer_ink": "Druckerpatronen",
     "electronics": "Elektronik",
     "laundry": "Waschsalon",
     "stationery": "Schreibwaren",
@@ -272,18 +276,23 @@
     "books": "Bücher",
     "beauty": "Schönheit",
     "clothes": "Bekleidung",
+    "child_clothes": "Kinderkleidung",
     "furniture": "Möbel",
     "gift": "Souvenirs",
     "hairdresser": "Friseur",
     "jewelry": "Juwelier",
     "toys": "Spielwaren",
     "sports": "Sport",
+    "perfumery": "Parfümerie",
+    "copyshop": "Copy-Shop",
+    "lighting": "Beleuchtung",
     "mobility": "Mobilität",
     "fuel": "Tankstelle",
     "car_rental": "Autovermietung",
     "bicycle": "Fahrradladen",
     "car": "Autowerkstatt",
     "car_dealer": "Autohaus",
+    "car_wash": "Autowäsche",
     "bicycle_tube": "Fahrradschlauch-Automat",
     "public_transport_tickets": "Fahrkartenautomat"
   },
