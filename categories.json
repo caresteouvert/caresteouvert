@@ -860,6 +860,13 @@
           "name": "Public transport ticket machine",
           "osm_tags": [ { "amenity": "vending_machine", "vending": "public_transport_tickets" } ],
           "areas": "all"
+        },
+        "tyres": {
+          "name": "Tyres",
+          "osm_tags": [
+            { "shop": "tyres" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
         }
       }
     }

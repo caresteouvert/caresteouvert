@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3338);
+SELECT plan(3344);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6681,6 +6681,18 @@ SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_t
 SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'IT'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for IT should be mobility');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'IT'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for IT should be public_transport_tickets');
+
+SELECT is(get_category('shop=>tyres'::hstore, 'DE'), 'mobility', 'get_category shop=>tyres for DE should be mobility');
+
+SELECT is(get_subcategory('shop=>tyres'::hstore, 'DE'), 'tyres', 'get_subcategory shop=>tyres for DE should be tyres');
+
+SELECT is(get_category('shop=>tyres'::hstore, 'AT'), 'mobility', 'get_category shop=>tyres for AT should be mobility');
+
+SELECT is(get_subcategory('shop=>tyres'::hstore, 'AT'), 'tyres', 'get_subcategory shop=>tyres for AT should be tyres');
+
+SELECT is(get_category('shop=>tyres'::hstore, 'CH'), 'mobility', 'get_category shop=>tyres for CH should be mobility');
+
+SELECT is(get_subcategory('shop=>tyres'::hstore, 'CH'), 'tyres', 'get_subcategory shop=>tyres for CH should be tyres');
 
 SELECT * FROM finish();
 ROLLBACK;

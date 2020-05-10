@@ -316,7 +316,8 @@
     "car_wash": "Car wash",
     "motorcycle": "Motorcycles",
     "bicycle_tube": "Bicycle tube vending machine",
-    "public_transport_tickets": "Public transport ticket machine"
+    "public_transport_tickets": "Public transport ticket machine",
+    "tyres": "Tyres"
   },
   "external": {
     "mobile": {
