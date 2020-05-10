@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3516);
+SELECT plan(3538);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -5057,6 +5057,50 @@ SELECT is(get_subcategory('shop=>electrical'::hstore, 'CD'), 'hardware', 'get_su
 SELECT is(get_category('shop=>electrical'::hstore, 'IT'), 'shop', 'get_category shop=>electrical for IT should be shop');
 
 SELECT is(get_subcategory('shop=>electrical'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>electrical for IT should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'DE'), 'shop', 'get_category shop=>fireplace for DE should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>fireplace for DE should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'FR'), 'shop', 'get_category shop=>fireplace for FR should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'FR'), 'hardware', 'get_subcategory shop=>fireplace for FR should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'ES'), 'shop', 'get_category shop=>fireplace for ES should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'ES'), 'hardware', 'get_subcategory shop=>fireplace for ES should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'AD'), 'shop', 'get_category shop=>fireplace for AD should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'AD'), 'hardware', 'get_subcategory shop=>fireplace for AD should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'CH'), 'shop', 'get_category shop=>fireplace for CH should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'CH'), 'hardware', 'get_subcategory shop=>fireplace for CH should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'AT'), 'shop', 'get_category shop=>fireplace for AT should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'AT'), 'hardware', 'get_subcategory shop=>fireplace for AT should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'PH'), 'shop', 'get_category shop=>fireplace for PH should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'PH'), 'hardware', 'get_subcategory shop=>fireplace for PH should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'FI'), 'shop', 'get_category shop=>fireplace for FI should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'FI'), 'hardware', 'get_subcategory shop=>fireplace for FI should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'MC'), 'shop', 'get_category shop=>fireplace for MC should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'MC'), 'hardware', 'get_subcategory shop=>fireplace for MC should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'CD'), 'shop', 'get_category shop=>fireplace for CD should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'CD'), 'hardware', 'get_subcategory shop=>fireplace for CD should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'IT'), 'shop', 'get_category shop=>fireplace for IT should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>fireplace for IT should be hardware');
 
 SELECT is(get_category('shop=>glaziery'::hstore, 'DE'), 'shop', 'get_category shop=>glaziery for DE should be shop');
 

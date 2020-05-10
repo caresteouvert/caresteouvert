@@ -449,7 +449,7 @@
         "hardware": {
           "name": "Hardware",
           "osm_tags": [
-            { "shop": "doityourself|electrical|glaziery|hardware|paint|tiles" }
+            { "shop": "doityourself|electrical|fireplace|glaziery|hardware|paint|tiles" }
           ],
           "areas": "all",
           "form_details": [ "delivery", "drive", "access" ]
