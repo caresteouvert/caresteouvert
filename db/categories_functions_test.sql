@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3362);
+SELECT plan(3368);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -5937,6 +5937,18 @@ SELECT is(get_subcategory('shop=>art'::hstore, 'AT'), 'art', 'get_subcategory sh
 SELECT is(get_category('shop=>art'::hstore, 'CH'), 'shop', 'get_category shop=>art for CH should be shop');
 
 SELECT is(get_subcategory('shop=>art'::hstore, 'CH'), 'art', 'get_subcategory shop=>art for CH should be art');
+
+SELECT is(get_category('shop=>bag'::hstore, 'DE'), 'shop', 'get_category shop=>bag for DE should be shop');
+
+SELECT is(get_subcategory('shop=>bag'::hstore, 'DE'), 'bag', 'get_subcategory shop=>bag for DE should be bag');
+
+SELECT is(get_category('shop=>bag'::hstore, 'AT'), 'shop', 'get_category shop=>bag for AT should be shop');
+
+SELECT is(get_subcategory('shop=>bag'::hstore, 'AT'), 'bag', 'get_subcategory shop=>bag for AT should be bag');
+
+SELECT is(get_category('shop=>bag'::hstore, 'CH'), 'shop', 'get_category shop=>bag for CH should be shop');
+
+SELECT is(get_subcategory('shop=>bag'::hstore, 'CH'), 'bag', 'get_subcategory shop=>bag for CH should be bag');
 
 SELECT is(get_category('shop=>bed'::hstore, 'DE'), 'shop', 'get_category shop=>bed for DE should be shop');
 

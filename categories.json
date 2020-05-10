@@ -573,6 +573,14 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
+        "bag": {
+          "name": "Bags",
+          "osm_tags": [
+            { "shop": "bag" }
+          ],
+          "areas": [ "DE", "AT", "CH" ],
+          "form_details": [ "delivery", "access" ]
+        },
         "bed": {
           "name": "Bed",
           "osm_tags": [
