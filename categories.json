@@ -650,6 +650,13 @@
           ],
           "areas": [ "DE", "AT", "CH" ]
         },
+        "hifi": {
+          "name": "Hifi",
+          "osm_tags": [
+            { "shop": "hifi" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "interior_decoration": {
           "name": "Interior decoration",
           "osm_tags": [

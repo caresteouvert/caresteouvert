@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3326);
+SELECT plan(3332);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6065,6 +6065,18 @@ SELECT is(get_subcategory('shop=>hairdresser'::hstore, 'AT'), 'hairdresser', 'ge
 SELECT is(get_category('shop=>hairdresser'::hstore, 'CH'), 'shop', 'get_category shop=>hairdresser for CH should be shop');
 
 SELECT is(get_subcategory('shop=>hairdresser'::hstore, 'CH'), 'hairdresser', 'get_subcategory shop=>hairdresser for CH should be hairdresser');
+
+SELECT is(get_category('shop=>hifi'::hstore, 'DE'), 'shop', 'get_category shop=>hifi for DE should be shop');
+
+SELECT is(get_subcategory('shop=>hifi'::hstore, 'DE'), 'hifi', 'get_subcategory shop=>hifi for DE should be hifi');
+
+SELECT is(get_category('shop=>hifi'::hstore, 'AT'), 'shop', 'get_category shop=>hifi for AT should be shop');
+
+SELECT is(get_subcategory('shop=>hifi'::hstore, 'AT'), 'hifi', 'get_subcategory shop=>hifi for AT should be hifi');
+
+SELECT is(get_category('shop=>hifi'::hstore, 'CH'), 'shop', 'get_category shop=>hifi for CH should be shop');
+
+SELECT is(get_subcategory('shop=>hifi'::hstore, 'CH'), 'hifi', 'get_subcategory shop=>hifi for CH should be hifi');
 
 SELECT is(get_category('shop=>interior_decoration'::hstore, 'DE'), 'shop', 'get_category shop=>interior_decoration for DE should be shop');
 
