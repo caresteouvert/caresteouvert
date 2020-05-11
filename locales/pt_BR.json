@@ -2,7 +2,7 @@
   "lang": "Português (BR)",
   "loading": "Carregando. Aguarde...",
   "covid19-alert": "Siga as orientações do governo local. A responsabilidade é SUA.",
-  "title": "Permanece aberto",
+  "title": "Permanece Aberto",
   "subtitle": "Lugares que permanecem abertos durante e após o isolamento",
   "search": "Buscar...",
   "coordinates": "Coordenadas",
@@ -48,7 +48,7 @@
   },
   "apps_info": {
     "close": "Fechar",
-    "text": "O aplicativo móvel \"{brand}\" está disponível!",
+    "text": "O aplicativo móvel \"{brand}\" já está disponível!",
     "googleplay": "Google Play",
     "apple": "Apple Store",
     "fdroid": "F-Droid"
@@ -132,12 +132,12 @@
     "state_short": {
       "open": "Aberto durante o isolamento",
       "open_adapted": "Aberto durante o isolamento",
-      "partial": "Potencialmente aberto",
-      "unknown": "Potencialmente aberto",
+      "partial": "Possivelmente aberto",
+      "unknown": "Possivelmente aberto",
       "closed": "Fechado durante o isolamento"
     },
     "delivery": {
-      "yes": "Disponível para entrega",
+      "yes": "Entrega em domicílio",
       "only": "Somente entregas"
     },
     "takeaway": {
@@ -167,8 +167,8 @@
     "hydroalcoholic_gel": "Álcool em gel",
     "mask": "Máscaras",
     "hygiene_status": {
-      "yes": "Em {date}: disponível",
-      "no": "Em {date}: indisponível",
+      "yes": "Disponível desde {date}",
+      "no": "Indisponível desde {date}",
       "void": "Nenhuma informação."
     },
     "hygiene_entry": {
