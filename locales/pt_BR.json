@@ -48,7 +48,7 @@
   },
   "apps_info": {
     "close": "Fechar",
-    "text": "O aplicativo móvel \"{brand}\" está disponível!",
+    "text": "O aplicativo móvel \"{brand}\" já está disponível!",
     "googleplay": "Google Play",
     "apple": "Apple Store",
     "fdroid": "F-Droid"
