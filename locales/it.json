@@ -140,7 +140,7 @@
       "closed": "Chiuso"
     },
     "state_short": {
-      "open": "Aperto durante il lockdown",
+      "open": "Aperto durante il blocco",
       "open_adapted": "Aperto durante il lockdown",
       "partial": "Aperto con buona probabilità",
       "unknown": "Aperto con buona probabilità",
