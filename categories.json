@@ -564,6 +564,13 @@
           ],
           "areas": [ "DE", "AT", "CH", "FR" ]
         },
+        "frame": {
+          "name": "Frames",
+          "osm_tags": [
+            { "shop": "frame" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "furniture": {
           "name": "Furniture",
           "osm_tags": [
@@ -746,13 +753,6 @@
             { "shop": "department_store" }
           ],
           "areas": [ "DE", "AT", "CH", "FR" ]
-        },
-        "frame": {
-          "name": "Frames",
-          "osm_tags": [
-            { "shop": "frame" }
-          ],
-          "areas": [ "DE", "AT", "CH" ]
         },
         "gift": {
           "name": "Gift shop",

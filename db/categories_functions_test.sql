@@ -5830,6 +5830,18 @@ SELECT is(get_category('shop=>bed'::hstore, 'FR'), 'home_equipment', 'get_catego
 
 SELECT is(get_subcategory('shop=>bed'::hstore, 'FR'), 'bed', 'get_subcategory shop=>bed for FR should be bed');
 
+SELECT is(get_category('shop=>frame'::hstore, 'DE'), 'home_equipment', 'get_category shop=>frame for DE should be home_equipment');
+
+SELECT is(get_subcategory('shop=>frame'::hstore, 'DE'), 'frame', 'get_subcategory shop=>frame for DE should be frame');
+
+SELECT is(get_category('shop=>frame'::hstore, 'AT'), 'home_equipment', 'get_category shop=>frame for AT should be home_equipment');
+
+SELECT is(get_subcategory('shop=>frame'::hstore, 'AT'), 'frame', 'get_subcategory shop=>frame for AT should be frame');
+
+SELECT is(get_category('shop=>frame'::hstore, 'CH'), 'home_equipment', 'get_category shop=>frame for CH should be home_equipment');
+
+SELECT is(get_subcategory('shop=>frame'::hstore, 'CH'), 'frame', 'get_subcategory shop=>frame for CH should be frame');
+
 SELECT is(get_category('shop=>bathroom_furnishing'::hstore, 'DE'), 'home_equipment', 'get_category shop=>bathroom_furnishing for DE should be home_equipment');
 
 SELECT is(get_subcategory('shop=>bathroom_furnishing'::hstore, 'DE'), 'furniture', 'get_subcategory shop=>bathroom_furnishing for DE should be furniture');
@@ -6917,18 +6929,6 @@ SELECT is(get_subcategory('shop=>department_store'::hstore, 'CH'), 'department_s
 SELECT is(get_category('shop=>department_store'::hstore, 'FR'), 'shop', 'get_category shop=>department_store for FR should be shop');
 
 SELECT is(get_subcategory('shop=>department_store'::hstore, 'FR'), 'department_store', 'get_subcategory shop=>department_store for FR should be department_store');
-
-SELECT is(get_category('shop=>frame'::hstore, 'DE'), 'shop', 'get_category shop=>frame for DE should be shop');
-
-SELECT is(get_subcategory('shop=>frame'::hstore, 'DE'), 'frame', 'get_subcategory shop=>frame for DE should be frame');
-
-SELECT is(get_category('shop=>frame'::hstore, 'AT'), 'shop', 'get_category shop=>frame for AT should be shop');
-
-SELECT is(get_subcategory('shop=>frame'::hstore, 'AT'), 'frame', 'get_subcategory shop=>frame for AT should be frame');
-
-SELECT is(get_category('shop=>frame'::hstore, 'CH'), 'shop', 'get_category shop=>frame for CH should be shop');
-
-SELECT is(get_subcategory('shop=>frame'::hstore, 'CH'), 'frame', 'get_subcategory shop=>frame for CH should be frame');
 
 SELECT is(get_category('opening_hours:covid19=>*, shop=>gift'::hstore, 'DE'), 'shop', 'get_category opening_hours:covid19=>*, shop=>gift for DE should be shop');
 
