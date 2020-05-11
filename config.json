@@ -53,6 +53,11 @@
       "domain": "lyon.caresteouvert.fr",
       "defaultLocale": "fr",
       "disclaimer": "https://blog.caresteouvert.fr/mentions-legales-lyon"
+    },
+    "restiamoaperti": {
+      "brand_text": "Restiamo aperti",
+      "domain": "restiamoaperti.it",
+      "defaultLocale": "it"
     }
   },
   "countries": {
