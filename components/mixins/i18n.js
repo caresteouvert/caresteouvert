@@ -7,14 +7,17 @@ import segueaberto from '../../assets/segueaberto.png';
 import esobert from '../../assets/esobert.png';
 import ollaanauki from '../../assets/ollaanauki.svg';
 import ezosala from '../../assets/ezosala.svg';
+import restiamoaperti from '../../assets/restiamoaperti.svg';
 import caresteouvertMobile from '../../assets/logo_header.png';
 import bleibtoffenMobile from '../../assets/bleibtoffen-mobile.svg';
 import sigueabiertoMobile from '../../assets/sigueabierto-mobile.png';
 import esobertMobile from '../../assets/esobert-mobile.png';
 import segueabertoMobile from '../../assets/segueaberto-mobile.png';
 import ollaanaukiMobile from '../../assets/ollaanauki-mobile.svg';
+import restiamoapertiMobile from '../../assets/restiamoaperti-mobile.svg';
 import caresteouvertOg from '../../assets/caresteouvert-og.jpg';
 import bleibtoffenOg from '../../assets/bleibtoffen-og.jpg';
+import restiamoapertiOg from '../../assets/restiamoaperti-og.jpg';
 import ezosalaMobile from '../../assets/ezosala-mobile.svg';
 
 function bestLocale(obj, locale) {
@@ -52,7 +55,8 @@ export default {
         segueaberto,
         esobert,
         ollaanauki,
-        ezosala
+        ezosala,
+        restiamoaperti
       }[this.brandId] || caresteouvert;
     },
 
@@ -63,13 +67,15 @@ export default {
         segueaberto: segueabertoMobile,
         esobert: esobertMobile,
         ollaanauki: ollaanaukiMobile,
-        ezosala: ezosalaMobile
+        ezosala: ezosalaMobile,
+        restiamoaperti: restiamoapertiMobile
       }[this.brandId] || caresteouvertMobile;
     },
 
     logoOg() {
       return {
         bleibtoffen: bleibtoffenOg,
+        restiamoaperti: restiamoapertiOg,
         sigueabierto,
         segueaberto,
         esobert,
