@@ -3,14 +3,14 @@
   "loading": "Caricamento, attendere...",
   "covid19-alert": "Segui le restrizioni governative. La responsabilità è TUA.",
   "title": "Restiamo aperti",
-  "subtitle": "I posti che restano aperti durante e dopo il lockdown",
+  "subtitle": "I posti che restano aperti durante e dopo il blocco",
   "search": "Digita la tua ricerca",
   "coordinates": "Coordinate",
   "menu": "Menu",
   "missing_shop": "Segnala un negozio mancante",
   "backtolist": "Torna alla lista",
   "missing_shop_dialog": {
-    "description": "{brand} dovrebbe mostrare solo i posti aperti durante il lockdown. Ecco alcuni motivi per cui alcuni potrebbero mancare:",
+    "description": "{brand} dovrebbe mostrare solo i posti aperti durante il blocco. Ecco alcuni motivi per cui alcuni potrebbero mancare:",
     "add_osm": "Il posto non si trova su OpenStreetMap, aggiungilo:",
     "add_osm_cta": "Segui la guida",
     "add_category": "Manca una categoria di posti:",
@@ -66,7 +66,8 @@
   "contribute_form": {
     "title": "Contribuisci",
     "step1": {
-      "title": "Questo luogo è aperto durante il blocco?",
+      "title": "Questo posto è aperto durante il blocco?",
+      "title_normal": "Questo posto è aperto",
       "open": {
         "yes": "sì",
         "no": "no"
@@ -74,6 +75,7 @@
     },
     "step2": {
       "title": "Orari di apertura durante il blocco",
+      "title_normal": "Orari di apertura",
       "same_hours": "Negli stessi orari",
       "same_hours_without_lockdown": "Si tratta dello stesso orario al di fuori del blocco",
       "dont_know": "Non lo so",
@@ -88,9 +90,10 @@
       },
       "delivery": "Questo locale offre la consegna a domicilio",
       "takeaway": "Questa attività commerciale permette l'acquisto d'asporto",
-      "access": "Le persone possono entrare o rimanere all'interno di questo luogo",
+      "access": "Le persone possono entrare o rimanere all'interno di questo posto",
       "drive_through": "Questo posto ha un servizio di drive-through",
       "details": "Aggiungi dettagli necessari durante il blocco",
+      "details_normal": "Aggiungi dettagli (opzionale)",
       "details_error": "Dovrebbe essere sia vuoto o con almeno 10 caratteri",
       "definite_closing": "Chiuso definitivamente",
       "details_definite_closing": "Questo posto è chiuso definitivamente. Cosa c'è al suo posto? Dacci quanti più dettagli possibili, ad esempio: nuovo edificio in costruzione, nuova attività..."
@@ -123,18 +126,32 @@
       "tomorrow": "domani"
     },
     "state": {
-      "open": "Luogo aperto durante il blocco",
+      "open": "Aperto durante il blocco",
       "open_adapted": "Posiziona l'attività commerciale aperta durante il blocco con l'adeguato orario di apertura",
-      "partial": "Questo posto fa parte di un brand che ha deciso di restare aperto durante il blocco. Il luogo è aperto o chiuso? Faccelo sapere.",
+      "partial": "Questo posto fa parte di un brand che ha deciso di restare aperto durante il blocco. Il posto è aperto o chiuso? Faccelo sapere.",
       "unknown": "Questo posto dovrebbe essere aperto durante il blocco. È aperto o chiuso? Faccelo sapere.",
       "closed": "Questo posto è chiuso durante il blocco"
     },
+    "state_normal": {
+      "open": "Aperto",
+      "open_adapted": "Aperto con orario variato",
+      "partial": "Questo posto fa parte di un brand che ha deciso di restare parzialmente aperto. Il posto è aperto o chiuso? Faccelo sapere.",
+      "unknown": "Questo posto potrebbe essere aperto. È aperto o chiuso? Faccelo sapere.",
+      "closed": "Chiuso"
+    },
     "state_short": {
-      "open": "Aperto durante il lockdown",
-      "open_adapted": "Aperto durante il lockdown",
+      "open": "Aperto durante il blocco",
+      "open_adapted": "Aperto durante il blocco",
       "partial": "Aperto con buona probabilità",
       "unknown": "Aperto con buona probabilità",
-      "closed": "Chiuso durante il lockdown"
+      "closed": "Chiuso durante il blocco"
+    },
+    "state_short_normal": {
+      "open": "Aperto",
+      "open_adapted": "Aperto",
+      "partial": "Aperto con buona probabilità",
+      "unknown": "Aperto con buona probabilità",
+      "closed": "Chiuso"
     },
     "delivery": {
       "yes": "Servizio di consegna a domicilio disponibile",
@@ -177,7 +194,7 @@
     },
     "update_dialog": {
       "complete1": "Questo posto è tuo o fa parte del tuo gruppo?",
-      "complete2": "Ottieni visibilità dopo il lockdown",
+      "complete2": "Ottieni visibilità dopo il blocco",
       "title": "Gestore di negozi",
       "promo": "Gestisci o dirigi un franchise.\nOttieni visibilità aggiungendo tutti i tuoi negozi su \"Restiamo aperti\".\nOltre ad entrare a far parte del nostro servizio, apparirai anche altri siti e applicazioni grazie a OpenStreetMap.",
       "contact": "Contattaci"
@@ -234,6 +251,7 @@
     "seafood": "Pescheria",
     "greengrocer": "Fruttivendolo",
     "grocery": "Drogheria",
+    "health_food": "Cibo sano",
     "chocolate": "Cioccolato",
     "tea": "Tè",
     "coffee": "Caffè",
@@ -264,6 +282,7 @@
     "computer": "Computer",
     "printer_ink": "Cartucce per stampanti",
     "electronics": "Elettronica",
+    "dry_cleaning": "Lavaggio a secco",
     "laundry": "Lavanderia",
     "stationery": "Cartoleria",
     "newsagent": "Giornalaio",
@@ -274,14 +293,39 @@
     "sewing": "Sartoria",
     "shoes": "Scarpe",
     "books": "Libreria",
+    "art": "Arte",
+    "bag": "Borse",
+    "bed": "Letto",
     "beauty": "Negozio di estetica",
-    "clothes": "Abbigliamento",
+    "charity": "Negozio di beneficenza",
     "child_clothes": "Abbigliamento per bambini",
+    "clothes": "Abbigliamento",
+    "cosmetics": "Cosmetici",
+    "department_store": "Grande magazzino",
     "furniture": "Mobili",
+    "houseware": "Casalinghi",
     "gift": "Negozio di souvenir",
     "hairdresser": "Parrucchiere",
+    "hifi": "Hifi",
+    "interior_decoration": "Decorazioni per interni",
     "jewelry": "Gioielleria",
+    "massage": "Massaggi",
+    "music": "Musica",
+    "musical_instrument": "Strumenti musicali",
+    "photo": "Foto",
+    "pottery": "Ceramiche",
+    "second_hand": "Usato",
+    "tailor": "Sartoria",
+    "ticket": "Biglietteria",
     "toys": "Negozio di giocattoli",
+    "trade": "Commerciante",
+    "travel_agency": "Agenzia viaggi",
+    "variety_store": "Negozio di accessori",
+    "video": "Video",
+    "video_games": "Videogiochi",
+    "watches": "Orologi",
+    "weapons": "Armi",
+    "wholesale": "Commercio all' ingrosso",
     "sports": "Sport",
     "perfumery": "Profumeria",
     "copyshop": "Copisteria",
@@ -293,12 +337,14 @@
     "car": "Garage",
     "car_dealer": "Vendita di auto",
     "car_wash": "Autolavaggio",
+    "motorcycle": "Motocicli",
     "bicycle_tube": "Distributore automatico camere d'aria",
-    "public_transport_tickets": "Biglietteria automatica trasporto pubblico"
+    "public_transport_tickets": "Biglietteria automatica trasporto pubblico",
+    "tyres": "Pneumatici"
   },
   "external": {
     "mobile": {
-      "places_around": "Scopri i posti aperti durante il lockdown",
+      "places_around": "Scopri i posti aperti durante il blocco",
       "contribute": "Migliora la mappa con le tue informazioni",
       "organize": "Migliore mobilità per limitare il rischio di contagio"
     }
