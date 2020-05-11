@@ -163,7 +163,8 @@
       "townhalls": "/it/soluzione-di-comunicazione-per-i-comuni/"
     },
     "pt-BR": {
-      "shopMissing": "/pt-BR/nao-encontrei-um-estabelecimento/"
+      "shopMissing": "/pt-BR/nao-encontrei-um-estabelecimento/",
+      "townhalls": "/pt-BR/solucao-de-comunicacao-para-municipios/"
     }
   }
 }

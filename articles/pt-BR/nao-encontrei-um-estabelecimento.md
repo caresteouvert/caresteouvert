@@ -3,7 +3,7 @@ title: "Não encontrei uma loja no mapa. O que faço?"
 date: "2020-04-27"
 ---
 
-> Não conseguiu encontrar a sua padaria ou farmácia prediletas no **Ça reste ouvert** (Português: "Permanece aberto")? Não se preocupe, siga este passo a passo para melhorar o nosso mapa colaborativo de lugares acessíveis durante o isolamento.
+> Não conseguiu encontrar a sua padaria ou farmácia prediletas no **Ça reste ouvert** (português: "Permanece Aberto")? Não se preocupe, siga este passo a passo para melhorar o nosso mapa colaborativo de lugares acessíveis durante o isolamento.
 
 **Ça reste ouvert** é um serviço que utiliza os dados do OpenStreetMap (OSM), que é como uma "Wikipédia da cartografia": um mapa-mundi que você pode aprimorar com o seu conhecimento local.
 
@@ -19,7 +19,7 @@ Este passo é essencial para juntar-se à comunidade, editar o mapa e interagir 
 
 ### Segundo passo: editando o mapa
 
-Em seguida, você pode navegar no mapa do mesmo jeito que **Ça reste ouvert** e outros serviços, ou pode explorar outras áreas de seu bairro.
+Em seguida, você pode navegar no mapa do mesmo jeito que o faz no **Ça reste ouvert** e em outros serviços, ou pode explorar outras áreas de seu bairro.
 
 Aproxime-se de onde você gostaria de adicionar uma loja, e clique no botão **Editar** no canto superior esquerdo.
 
