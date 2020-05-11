@@ -168,7 +168,7 @@
     "mask": "Máscaras",
     "hygiene_status": {
       "yes": "Disponível desde {date}",
-      "no": "Em {date}: indisponível",
+      "no": "Indisponível desde {date}",
       "void": "Nenhuma informação."
     },
     "hygiene_entry": {
