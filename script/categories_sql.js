@@ -154,7 +154,7 @@ const subcatfct = `CREATE OR REPLACE FUNCTION get_subcategory(tags HSTORE, area 
 BEGIN
 	${tagsPerCategoryToSql(tagsPerSubcategory)}
 	ELSE
-		RETURN 'unknown';
+		RETURN 'other';
 	END IF;
 END;
 $$ LANGUAGE plpgsql IMMUTABLE;

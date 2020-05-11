@@ -97,6 +97,14 @@
           "name": "Library",
           "osm_tags": [ { "amenity": "library" } ],
           "areas": [ "AT", "CH", "DE", "FI" ]
+        },
+        "copyshop": {
+          "name": "Copy shop",
+          "osm_tags": [
+            { "shop": "copyshop" }
+          ],
+          "areas": [ "AT", "CH", "DE", "IT", "FR" ],
+          "form_details": [ "delivery", "drive", "access" ]
         }
       }
     },
@@ -443,8 +451,103 @@
       },
       "mapfilter": [ "CD" ]
     },
-    "shop": {
-      "name": "Shops",
+    "clothing_beauty": {
+      "name": "Clothing & Beauty",
+      "subcategories": {
+        "shoes": {
+          "name": "Shoes",
+          "osm_tags": [ { "shop": "shoes" } ],
+          "areas": "all",
+          "form_details": [ "delivery", "drive", "access" ]
+        },
+        "bag": {
+          "name": "Bags",
+          "osm_tags": [
+            { "shop": "bag" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "access" ]
+        },
+        "beauty": {
+          "name": "Beauty store",
+          "osm_tags": [
+            { "shop": "beauty" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "access" ]
+        },
+        "child_clothes": {
+          "name": "Child clothes",
+          "osm_tags": [
+            { "shop": "clothes", "clothes": "babies|children" }
+          ],
+          "areas": "all",
+          "form_details": [ "delivery", "access" ]
+        },
+        "clothes": {
+          "name": "Clothes",
+          "osm_tags": [
+            { "shop": "boutique|clothes|fashion" }
+          ],
+          "areas": "all",
+          "form_details": [ "delivery", "access", "mask" ]
+        },
+        "cosmetics": {
+          "name": "Cosmetics",
+          "osm_tags": [
+            { "shop": "cosmetics" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+        },
+        "hairdresser": {
+          "name": "Hairdresser",
+          "osm_tags": [
+            { "shop": "hairdresser" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+        },
+        "jewelry": {
+          "name": "Jewelry",
+          "osm_tags": [
+            { "shop": "jewelry" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+        },
+        "massage": {
+          "name": "Massage",
+          "osm_tags": [
+            { "shop": "massage" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+        },
+        "tailor": {
+          "name": "Tailor",
+          "osm_tags": [
+            { "shop": "tailor" }
+          ],
+          "areas": "all",
+          "form_details": [ "delivery", "access" ]
+        },
+        "perfumery": {
+          "name": "Perfumery",
+          "osm_tags": [
+            { "shop": "perfumery" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "access" ]
+        },
+        "chemist": {
+          "name": "Chemist",
+          "osm_tags": [
+            { "shop": "chemist" }
+          ],
+          "areas": "all",
+          "form_details": [ "delivery", "drive", "access", "hydroalcoholic_gel", "mask" ]
+        }
+      }
+    },
+    "home_equipment": {
+      "name": "Home equipment",
       "subcategories": {
         "hardware": {
           "name": "Hardware",
@@ -454,6 +557,78 @@
           "areas": "all",
           "form_details": [ "delivery", "drive", "access" ]
         },
+        "bed": {
+          "name": "Bed",
+          "osm_tags": [
+            { "shop": "bed" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FR" ]
+        },
+        "furniture": {
+          "name": "Furniture",
+          "osm_tags": [
+            { "shop": "bathroom_furnishing|carpet|curtain|furniture|kitchen" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FR" ]
+        },
+        "houseware": {
+          "name": "Houseware",
+          "osm_tags": [
+            { "shop": "houseware" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FR" ]
+        },
+        "interior_decoration": {
+          "name": "Interior decoration",
+          "osm_tags": [
+            { "shop": "interior_decoration" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FR" ],
+          "form_details": [ "delivery", "access" ]
+        },
+        "pottery": {
+          "name": "Pottery",
+          "osm_tags": [
+            { "shop": "pottery" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
+        "watches": {
+          "name": "Watches",
+          "osm_tags": [
+            { "shop": "watches" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FR" ]
+        },
+        "lighting": {
+          "name": "Lighting",
+          "osm_tags": [
+            { "shop": "lighting" }
+          ],
+          "areas": [ "AT", "CH", "DE", "IT", "FR" ]
+        },
+        "hifi": {
+          "name": "Hifi",
+          "osm_tags": [
+            { "shop": "hifi" }
+          ],
+          "areas": [ "DE", "AT", "CH", "FR" ]
+        },
+        "electronics": {
+          "name": "Electronics",
+          "osm_tags": [
+            { "shop": "electronics" },
+            { "craft": "electronics_repair" },
+            { "shop": "appliance"}
+          ],
+          "areas": "all",
+          "form_details": [ "delivery", "drive", "access" ]
+        }
+      }
+    },
+    "shop": {
+      "name": "Shops",
+      "subcategories": {
         "mobile_phone": {
           "name": "Mobile phone",
           "osm_tags": [
@@ -472,16 +647,6 @@
           "name": "Printer ink",
           "osm_tags": [ { "shop": "printer_ink" } ],
           "areas": [ "IT" ],
-          "form_details": [ "delivery", "drive", "access" ]
-        },
-        "electronics": {
-          "name": "Electronics",
-          "osm_tags": [
-            { "shop": "electronics" },
-            { "craft": "electronics_repair" },
-            { "shop": "appliance"}
-          ],
-          "areas": "all",
           "form_details": [ "delivery", "drive", "access" ]
         },
         "dry_cleaning": {
@@ -537,25 +702,11 @@
           "areas": "all",
           "form_details": [ "delivery", "drive", "access" ]
         },
-        "chemist": {
-          "name": "Chemist",
-          "osm_tags": [
-            { "shop": "chemist" }
-          ],
-          "areas": "all",
-          "form_details": [ "delivery", "drive", "access", "hydroalcoholic_gel", "mask" ]
-        },
         "sewing": {
           "name": "Sewing",
           "osm_tags": [ { "shop": "fabric|sewing|haberdashery|wool" }, { "craft": "sewing" } ],
           "areas": "all",
           "form_details": [ "delivery", "drive", "access", "mask" ]
-        },
-        "shoes": {
-          "name": "Shoes",
-          "osm_tags": [ { "shop": "shoes" } ],
-          "areas": [ "DE", "AT", "CH" ],
-          "form_details": [ "delivery", "drive", "access" ]
         },
         "books": {
           "name": "Book store",
@@ -564,7 +715,7 @@
             { "amenity": "vending_machine", "vending": "books" },
             { "amenity": "public_bookcase" }
           ],
-          "areas": [ "DE", "AT", "CH", "IT" ],
+          "areas": [ "DE", "AT", "CH", "IT", "FR" ],
           "form_details": [ "delivery", "access" ]
         },
         "art": {
@@ -572,82 +723,22 @@
           "osm_tags": [
             { "shop": "art" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
-        },
-        "bag": {
-          "name": "Bags",
-          "osm_tags": [
-            { "shop": "bag" }
-          ],
-          "areas": [ "DE", "AT", "CH" ],
-          "form_details": [ "delivery", "access" ]
-        },
-        "bed": {
-          "name": "Bed",
-          "osm_tags": [
-            { "shop": "bed" }
-          ],
-          "areas": [ "DE", "AT", "CH" ]
-        },
-        "beauty": {
-          "name": "Beauty store",
-          "osm_tags": [
-            { "shop": "beauty" }
-          ],
-          "areas": [ "DE", "AT", "CH" ],
-          "form_details": [ "delivery", "access" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "charity": {
           "name": "Charity shop",
           "osm_tags": [
             { "shop": "charity" }
           ],
-          "areas": [ "DE", "AT", "CH" ],
+          "areas": [ "DE", "AT", "CH", "FR" ],
           "form_details": [ "delivery", "access" ]
-        },
-        "child_clothes": {
-          "name": "Child clothes",
-          "osm_tags": [
-            { "shop": "clothes", "clothes": "babies|children" }
-          ],
-          "areas": [ "AT", "CH", "DE", "IT" ],
-          "form_details": [ "delivery", "access" ]
-        },
-        "clothes": {
-          "name": "Clothes",
-          "osm_tags": [
-            { "shop": "boutique|clothes|fashion" }
-          ],
-          "areas": [ "DE", "AT", "CH" ],
-          "form_details": [ "delivery", "access", "mask" ]
-        },
-        "cosmetics": {
-          "name": "Cosmetics",
-          "osm_tags": [
-            { "shop": "cosmetics" }
-          ],
-          "areas": [ "DE", "AT", "CH" ]
         },
         "department_store": {
           "name": "Department store",
           "osm_tags": [
             { "shop": "department_store" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
-        },
-        "furniture": {
-          "name": "Furniture",
-          "osm_tags": [
-            { "shop": "bathroom_furnishing|carpet|curtain|furniture|kitchen" }
-          ],
-          "areas": [ "DE", "AT", "CH" ]
-        },
-        "houseware": {
-          "name": "Houseware",
-          "osm_tags": [
-            { "shop": "houseware" }
-          ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "gift": {
           "name": "Gift shop",
@@ -657,87 +748,36 @@
           "osm_filter_tags": [
             { "opening_hours:covid19": "*" }
           ],
-          "areas": [ "DE", "AT", "CH" ],
+          "areas": [ "DE", "AT", "CH", "FR" ],
           "-mapfilter": "all"
-        },
-        "hairdresser": {
-          "name": "Hairdresser",
-          "osm_tags": [
-            { "shop": "hairdresser" }
-          ],
-          "areas": [ "DE", "AT", "CH" ]
-        },
-        "hifi": {
-          "name": "Hifi",
-          "osm_tags": [
-            { "shop": "hifi" }
-          ],
-          "areas": [ "DE", "AT", "CH" ]
-        },
-        "interior_decoration": {
-          "name": "Interior decoration",
-          "osm_tags": [
-            { "shop": "interior_decoration" }
-          ],
-          "areas": [ "DE", "AT", "CH" ],
-          "form_details": [ "delivery", "access" ]
-        },
-        "jewelry": {
-          "name": "Jewelry",
-          "osm_tags": [
-            { "shop": "jewelry" }
-          ],
-          "areas": [ "DE", "AT", "CH" ]
-        },
-        "massage": {
-          "name": "Massage",
-          "osm_tags": [
-            { "shop": "massage" }
-          ],
-          "areas": [ "DE", "AT", "CH" ]
         },
         "music": {
           "name": "Music",
           "osm_tags": [
             { "shop": "music" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "musical_instrument": {
           "name": "Musical instrument",
           "osm_tags": [
             { "shop": "musical_instrument" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "photo": {
           "name": "Photo",
           "osm_tags": [
             { "shop": "photo" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
-        },
-        "pottery": {
-          "name": "Pottery",
-          "osm_tags": [
-            { "shop": "pottery" }
-          ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "second_hand": {
           "name": "Second hand",
           "osm_tags": [
             { "shop": "second_hand" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
-        },
-        "tailor": {
-          "name": "Tailor",
-          "osm_tags": [
-            { "shop": "tailor" }
-          ],
-          "areas": [ "DE", "AT", "CH" ],
-          "form_details": [ "delivery", "access" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "ticket": {
           "name": "Tickets",
@@ -751,7 +791,7 @@
           "osm_tags": [
             { "shop": "toys" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "trade": {
           "name": "Trade",
@@ -772,7 +812,7 @@
           "osm_tags": [
             { "shop": "variety_store" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "video": {
           "name": "Videos",
@@ -786,14 +826,7 @@
           "osm_tags": [
             { "shop": "video_games" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
-        },
-        "watches": {
-          "name": "Watches",
-          "osm_tags": [
-            { "shop": "watches" }
-          ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "weapons": {
           "name": "Weapons",
@@ -814,31 +847,8 @@
           "osm_tags": [
             { "shop": "fishing|hunting|sports|outdoor" }
           ],
-          "areas": [ "DE", "AT", "CH", "FI" ],
+          "areas": [ "DE", "AT", "CH", "FI", "FR" ],
           "form_details": [ "mask", "hydroalcoholic_gel" ]
-        },
-        "perfumery": {
-          "name": "Perfumery",
-          "osm_tags": [
-            { "shop": "perfumery" }
-          ],
-          "areas": [ "AT", "CH", "DE", "IT" ],
-          "form_details": [ "delivery", "access" ]
-        },
-        "copyshop": {
-          "name": "Copy shop",
-          "osm_tags": [
-            { "shop": "copyshop" }
-          ],
-          "areas": [ "AT", "CH", "DE", "IT" ],
-          "form_details": [ "delivery", "drive", "access" ]
-        },
-        "lighting": {
-          "name": "Lighting",
-          "osm_tags": [
-            { "shop": "lighting" }
-          ],
-          "areas": [ "AT", "CH", "DE", "IT" ]
         }
       }
     },
@@ -879,21 +889,21 @@
           "osm_tags": [
             { "shop": "car" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "car_wash": {
           "name": "Car wash",
           "osm_tags": [
             { "amenity": "car_wash" }
           ],
-          "areas": [ "AT", "CH", "DE", "IT" ]
+          "areas": [ "AT", "CH", "DE", "IT", "FR" ]
         },
         "motorcycle": {
           "name": "Motorcycles",
           "osm_tags": [
             { "shop": "motorcycle" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "bicycle_tube": {
           "name": "Bicycle tube vending machine",
@@ -911,7 +921,7 @@
           "osm_tags": [
             { "shop": "tyres" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         }
       }
     }
