@@ -32,7 +32,7 @@ O mapa em si e os dados presentes nele estão todos sob a [licença Open Databas
 
 O OpenStreetMap respeita as regras para aplicativos da Lei Geral de Proteção de Dados. É um projeto estruturado e organizado que protege a [privacidade do usuário](https://wiki.osmfoundation.org/wiki/Privacy_Policy). Particularmente, o objetivo do projeto é coletar **apenas dados públicos**.
 
-![](/assets/pt-BR/dados_wals.png)
+![](~/assets/pt-BR/dados_wals.png)
 
 Exemplo de dados relacionados ao restaurante Wäls Gastropub: número de telefone, endereço e site. Estes dados são públicos, portanto não se enquadram nas regras sobre dados pessoais.
 
