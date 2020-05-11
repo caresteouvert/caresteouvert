@@ -133,7 +133,7 @@
       "open": "Aberto durante o isolamento",
       "open_adapted": "Aberto durante o isolamento",
       "partial": "Possivelmente aberto",
-      "unknown": "Potencialmente aberto",
+      "unknown": "Possivelmente aberto",
       "closed": "Fechado durante o isolamento"
     },
     "delivery": {
