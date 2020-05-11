@@ -93,7 +93,7 @@
       "access": "Kann dieser Ort betreten werden?",
       "drive_through": "Drive-in vorhanden und geöffnet?",
       "details": "Wichtige Anmerkungen (optional, erzeugt einen OSM-Hinweis und erfordert eine manuelle Bearbeitung durch die OpenStreetMap-Community)",
-      "details_normal": "Zusätzliche Angaben (optional)",
+      "details_normal": "Wichtige Anmerkungen (optional, erzeugt einen OSM-Hinweis und erfordert eine manuelle Bearbeitung durch die OpenStreetMap-Community)",
       "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein",
       "definite_closing": "Dauerhaft geschlossen",
       "details_definite_closing": "Dieser Ort ist dauerhaft geschlossen. Was ist dort nun? Je mehr Details, desto besser, zum Beispiel: Gebäude abgerissen, neues Geschäft…"
