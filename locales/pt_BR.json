@@ -137,7 +137,7 @@
       "closed": "Fechado durante o isolamento"
     },
     "delivery": {
-      "yes": "Disponível para entrega",
+      "yes": "Entrega em domicílio",
       "only": "Somente entregas"
     },
     "takeaway": {
