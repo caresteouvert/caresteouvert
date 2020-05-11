@@ -725,6 +725,13 @@
           ],
           "areas": [ "DE", "AT", "CH", "FR" ]
         },
+        "bookmaker": {
+          "name": "Bookmaker",
+          "osm_tags": [
+            { "shop": "bookmaker" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
         "charity": {
           "name": "Charity shop",
           "osm_tags": [
@@ -762,6 +769,20 @@
           "name": "Locksmith",
           "osm_tags": [
             { "shop": "locksmith" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
+        "lottery": {
+          "name": "Lottery",
+          "osm_tags": [
+            { "shop": "lottery" }
+          ],
+          "areas": [ "DE", "AT", "CH" ]
+        },
+        "mall": {
+          "name": "Mall",
+          "osm_tags": [
+            { "shop": "mall" }
           ],
           "areas": [ "DE", "AT", "CH" ]
         },

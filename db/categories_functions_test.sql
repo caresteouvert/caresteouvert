@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3812);
+SELECT plan(3830);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6874,6 +6874,18 @@ SELECT is(get_category('shop=>art'::hstore, 'FR'), 'shop', 'get_category shop=>a
 
 SELECT is(get_subcategory('shop=>art'::hstore, 'FR'), 'art', 'get_subcategory shop=>art for FR should be art');
 
+SELECT is(get_category('shop=>bookmaker'::hstore, 'DE'), 'shop', 'get_category shop=>bookmaker for DE should be shop');
+
+SELECT is(get_subcategory('shop=>bookmaker'::hstore, 'DE'), 'bookmaker', 'get_subcategory shop=>bookmaker for DE should be bookmaker');
+
+SELECT is(get_category('shop=>bookmaker'::hstore, 'AT'), 'shop', 'get_category shop=>bookmaker for AT should be shop');
+
+SELECT is(get_subcategory('shop=>bookmaker'::hstore, 'AT'), 'bookmaker', 'get_subcategory shop=>bookmaker for AT should be bookmaker');
+
+SELECT is(get_category('shop=>bookmaker'::hstore, 'CH'), 'shop', 'get_category shop=>bookmaker for CH should be shop');
+
+SELECT is(get_subcategory('shop=>bookmaker'::hstore, 'CH'), 'bookmaker', 'get_subcategory shop=>bookmaker for CH should be bookmaker');
+
 SELECT is(get_category('shop=>charity'::hstore, 'DE'), 'shop', 'get_category shop=>charity for DE should be shop');
 
 SELECT is(get_subcategory('shop=>charity'::hstore, 'DE'), 'charity', 'get_subcategory shop=>charity for DE should be charity');
@@ -6945,6 +6957,30 @@ SELECT is(get_subcategory('shop=>locksmith'::hstore, 'AT'), 'locksmith', 'get_su
 SELECT is(get_category('shop=>locksmith'::hstore, 'CH'), 'shop', 'get_category shop=>locksmith for CH should be shop');
 
 SELECT is(get_subcategory('shop=>locksmith'::hstore, 'CH'), 'locksmith', 'get_subcategory shop=>locksmith for CH should be locksmith');
+
+SELECT is(get_category('shop=>lottery'::hstore, 'DE'), 'shop', 'get_category shop=>lottery for DE should be shop');
+
+SELECT is(get_subcategory('shop=>lottery'::hstore, 'DE'), 'lottery', 'get_subcategory shop=>lottery for DE should be lottery');
+
+SELECT is(get_category('shop=>lottery'::hstore, 'AT'), 'shop', 'get_category shop=>lottery for AT should be shop');
+
+SELECT is(get_subcategory('shop=>lottery'::hstore, 'AT'), 'lottery', 'get_subcategory shop=>lottery for AT should be lottery');
+
+SELECT is(get_category('shop=>lottery'::hstore, 'CH'), 'shop', 'get_category shop=>lottery for CH should be shop');
+
+SELECT is(get_subcategory('shop=>lottery'::hstore, 'CH'), 'lottery', 'get_subcategory shop=>lottery for CH should be lottery');
+
+SELECT is(get_category('shop=>mall'::hstore, 'DE'), 'shop', 'get_category shop=>mall for DE should be shop');
+
+SELECT is(get_subcategory('shop=>mall'::hstore, 'DE'), 'mall', 'get_subcategory shop=>mall for DE should be mall');
+
+SELECT is(get_category('shop=>mall'::hstore, 'AT'), 'shop', 'get_category shop=>mall for AT should be shop');
+
+SELECT is(get_subcategory('shop=>mall'::hstore, 'AT'), 'mall', 'get_subcategory shop=>mall for AT should be mall');
+
+SELECT is(get_category('shop=>mall'::hstore, 'CH'), 'shop', 'get_category shop=>mall for CH should be shop');
+
+SELECT is(get_subcategory('shop=>mall'::hstore, 'CH'), 'mall', 'get_subcategory shop=>mall for CH should be mall');
 
 SELECT is(get_category('shop=>music'::hstore, 'DE'), 'shop', 'get_category shop=>music for DE should be shop');
 
