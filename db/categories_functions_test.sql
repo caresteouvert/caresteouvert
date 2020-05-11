@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3800);
+SELECT plan(3812);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6906,6 +6906,18 @@ SELECT is(get_category('shop=>department_store'::hstore, 'FR'), 'shop', 'get_cat
 
 SELECT is(get_subcategory('shop=>department_store'::hstore, 'FR'), 'department_store', 'get_subcategory shop=>department_store for FR should be department_store');
 
+SELECT is(get_category('shop=>frame'::hstore, 'DE'), 'shop', 'get_category shop=>frame for DE should be shop');
+
+SELECT is(get_subcategory('shop=>frame'::hstore, 'DE'), 'frame', 'get_subcategory shop=>frame for DE should be frame');
+
+SELECT is(get_category('shop=>frame'::hstore, 'AT'), 'shop', 'get_category shop=>frame for AT should be shop');
+
+SELECT is(get_subcategory('shop=>frame'::hstore, 'AT'), 'frame', 'get_subcategory shop=>frame for AT should be frame');
+
+SELECT is(get_category('shop=>frame'::hstore, 'CH'), 'shop', 'get_category shop=>frame for CH should be shop');
+
+SELECT is(get_subcategory('shop=>frame'::hstore, 'CH'), 'frame', 'get_subcategory shop=>frame for CH should be frame');
+
 SELECT is(get_category('opening_hours:covid19=>*, shop=>gift'::hstore, 'DE'), 'shop', 'get_category opening_hours:covid19=>*, shop=>gift for DE should be shop');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, shop=>gift'::hstore, 'DE'), 'gift', 'get_subcategory opening_hours:covid19=>*, shop=>gift for DE should be gift');
@@ -6921,6 +6933,18 @@ SELECT is(get_subcategory('opening_hours:covid19=>*, shop=>gift'::hstore, 'CH'),
 SELECT is(get_category('opening_hours:covid19=>*, shop=>gift'::hstore, 'FR'), 'shop', 'get_category opening_hours:covid19=>*, shop=>gift for FR should be shop');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, shop=>gift'::hstore, 'FR'), 'gift', 'get_subcategory opening_hours:covid19=>*, shop=>gift for FR should be gift');
+
+SELECT is(get_category('shop=>locksmith'::hstore, 'DE'), 'shop', 'get_category shop=>locksmith for DE should be shop');
+
+SELECT is(get_subcategory('shop=>locksmith'::hstore, 'DE'), 'locksmith', 'get_subcategory shop=>locksmith for DE should be locksmith');
+
+SELECT is(get_category('shop=>locksmith'::hstore, 'AT'), 'shop', 'get_category shop=>locksmith for AT should be shop');
+
+SELECT is(get_subcategory('shop=>locksmith'::hstore, 'AT'), 'locksmith', 'get_subcategory shop=>locksmith for AT should be locksmith');
+
+SELECT is(get_category('shop=>locksmith'::hstore, 'CH'), 'shop', 'get_category shop=>locksmith for CH should be shop');
+
+SELECT is(get_subcategory('shop=>locksmith'::hstore, 'CH'), 'locksmith', 'get_subcategory shop=>locksmith for CH should be locksmith');
 
 SELECT is(get_category('shop=>music'::hstore, 'DE'), 'shop', 'get_category shop=>music for DE should be shop');
 
