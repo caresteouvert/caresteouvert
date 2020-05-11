@@ -128,7 +128,7 @@
     "state": {
       "open": "Geöffnet",
       "open_adapted": "Geöffnet mit abweichenden Öffnungszeiten",
-      "partial": "Dieser Ort gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
+      "partial": "Gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
       "unknown": "Dieser Ort ist möglicherweise geöffnet.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
       "closed": "Vorübergehend geschlossen"
     },
