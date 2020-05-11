@@ -5,6 +5,7 @@ import categoriesForArea from '../lib/categories';
 export const state = () => ({
   country: '',
   area: '',
+  legalState: 'closed',
   brandId: 'DEFAULT',
   categories: [],
   place: null,
@@ -13,9 +14,10 @@ export const state = () => ({
 });
 
 export const mutations = {
-  setArea (state, area) {
+  setArea (state, { area, legalState }) {
     state.area = area;
     state.country = area.split('-')[0];
+    state.legalState = legalState;
   },
 
   setPlace (state, place) {

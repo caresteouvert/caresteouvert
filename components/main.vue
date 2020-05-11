@@ -298,10 +298,11 @@ export default {
 
     getCurrentCountry() {
       const { lat, lng } = this.mapCenter;
-      fetch(`${config.apiUrl}/country?lat=${lat}&lon=${lng}`)
-        .then(res => res.text())
-        .then(area => {
-          this.$store.commit('setArea', area);
+      fetch(`${config.apiUrl}/country2?lat=${lat}&lon=${lng}`)
+        .then(res => res.json())
+        .then(({ area, legal_state }) => {
+          this.$store.commit('setArea', { area, legalState: legal_state });
+
           const [category, subcategory] = this.filter.split('/');
           if (!this.categories.includes(category)) {
             this.filter = '';
