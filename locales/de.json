@@ -67,6 +67,7 @@
     "title": "Mitmachen",
     "step1": {
       "title": "Hat dieser Ort noch geöffnet?",
+      "title_normal": "Hat dieser Ort geöffnet?",
       "open": {
         "yes": "Geöffnet",
         "no": "Geschlossen"
@@ -74,6 +75,7 @@
     },
     "step2": {
       "title": "Wann hat dieser Ort geöffnet?",
+      "title_normal": "Wann hat dieser Ort geöffnet?",
       "same_hours": "Zu den üblichen Zeiten",
       "same_hours_without_lockdown": "Das sind auch die regulären Öffnungszeiten.",
       "dont_know": "Weiß ich nicht",
@@ -91,6 +93,7 @@
       "access": "Kann dieser Ort betreten werden?",
       "drive_through": "Drive-in vorhanden und geöffnet?",
       "details": "Wichtige Anmerkungen (optional, erzeugt einen OSM-Hinweis und erfordert eine manuelle Bearbeitung durch die OpenStreetMap-Community)",
+      "details_normal": "Wichtige Anmerkungen (optional, erzeugt einen OSM-Hinweis und erfordert eine manuelle Bearbeitung durch die OpenStreetMap-Community)",
       "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein",
       "definite_closing": "Dauerhaft geschlossen",
       "details_definite_closing": "Dieser Ort ist dauerhaft geschlossen. Was ist dort nun? Je mehr Details, desto besser, zum Beispiel: Gebäude abgerissen, neues Geschäft…"
@@ -123,11 +126,18 @@
       "tomorrow": "morgen"
     },
     "state": {
-      "open": "Ort geöffnet",
-      "open_adapted": "Ort geöffnet mit abweichenden Öffnungszeiten",
-      "partial": "Dieser Ort gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
-      "unknown": "Dieser Ort ist möglicherweise geöffnet.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
-      "closed": "Ort vorübergehend geschlossen"
+      "open": "Geöffnet",
+      "open_adapted": "Geöffnet mit abweichenden Öffnungszeiten",
+      "partial": "Gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
+      "unknown": "Möglicherweise geöffnet.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
+      "closed": "Vorübergehend geschlossen"
+    },
+    "state_normal": {
+      "open": "Geöffnet",
+      "open_adapted": "Geöffnet mit abweichenden Öffnungszeiten",
+      "partial": "Gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen? Lass es uns wissen.\n",
+      "unknown": "Möglicherweise geöffnet.\n\nGeöffnet oder geschlossen? Lass es uns wissen.\n",
+      "closed": "Geschlossen"
     },
     "state_short": {
       "open": "weiterhin geöffnet",
@@ -135,6 +145,13 @@
       "partial": "möglicherweise geöffnet",
       "unknown": "möglicherweise geöffnet",
       "closed": "vorübergehend geschlossen"
+    },
+    "state_short_normal": {
+      "open": "Geöffnet",
+      "open_adapted": "Geöffnet",
+      "partial": "möglicherweise geöffnet",
+      "unknown": "möglicherweise geöffnet",
+      "closed": "Geschlossen"
     },
     "delivery": {
       "yes": "Lieferung möglich",
@@ -234,6 +251,7 @@
     "seafood": "Fisch",
     "greengrocer": "Gemüse",
     "grocery": "Lebensmittel",
+    "health_food": "Naturkost",
     "chocolate": "Schokolade",
     "tea": "Tee",
     "coffee": "Kaffee",
@@ -264,6 +282,7 @@
     "computer": "Computer",
     "printer_ink": "Druckerpatronen",
     "electronics": "Elektronik",
+    "dry_cleaning": "Reinigung",
     "laundry": "Waschsalon",
     "stationery": "Schreibwaren",
     "newsagent": "Kiosk",
@@ -274,14 +293,39 @@
     "sewing": "Nähgeschäft",
     "shoes": "Schuhe",
     "books": "Bücher",
+    "art": "Kunst",
+    "bag": "Taschen",
+    "bed": "Betten",
     "beauty": "Schönheit",
-    "clothes": "Bekleidung",
+    "charity": "Sozialkaufhaus",
     "child_clothes": "Kinderkleidung",
+    "clothes": "Bekleidung",
+    "cosmetics": "Kosmetik",
+    "department_store": "Kaufhaus",
     "furniture": "Möbel",
+    "houseware": "Haushaltswaren",
     "gift": "Souvenirs",
     "hairdresser": "Friseur",
+    "hifi": "Hifi-Geräte",
+    "interior_decoration": "Inneneinrichtung",
     "jewelry": "Juwelier",
+    "massage": "Massage",
+    "music": "Musik",
+    "musical_instrument": "Musikinstrumente",
+    "photo": "Foto- und Videozubehör",
+    "pottery": "Keramik",
+    "second_hand": "Gebrauchtwaren",
+    "tailor": "Schneiderei",
+    "ticket": "Tickets",
     "toys": "Spielwaren",
+    "trade": "Baustoffe",
+    "travel_agency": "Reiseagentur",
+    "variety_store": "Billigladen",
+    "video": "Videos & DVDs",
+    "video_games": "Videospiele",
+    "watches": "Uhren",
+    "weapons": "Waffen",
+    "wholesale": "Großhandel",
     "sports": "Sport",
     "perfumery": "Parfümerie",
     "copyshop": "Copy-Shop",
@@ -293,8 +337,10 @@
     "car": "Autowerkstatt",
     "car_dealer": "Autohaus",
     "car_wash": "Autowäsche",
+    "motorcycle": "Motorräder",
     "bicycle_tube": "Fahrradschlauch-Automat",
-    "public_transport_tickets": "Fahrkartenautomat"
+    "public_transport_tickets": "Fahrkartenautomat",
+    "tyres": "Reifen"
   },
   "external": {
     "mobile": {
