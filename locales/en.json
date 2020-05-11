@@ -67,6 +67,7 @@
     "title": "Contribute",
     "step1": {
       "title": "Is this place open during lockdown?",
+      "title_normal": "Is this place open",
       "open": {
         "yes": "yes",
         "no": "no"
@@ -74,6 +75,7 @@
     },
     "step2": {
       "title": "Opening hours during lockdown",
+      "title_normal": "Opening hours",
       "same_hours": "This is the same hours",
       "same_hours_without_lockdown": "This is the same hours outside lockdown",
       "dont_know": "I don't know",
@@ -91,6 +93,7 @@
       "access": "This place offers physical reception on site",
       "drive_through": "This place has a drive-through service",
       "details": "Optional : add details required during the lockdown",
+      "details_normal": "Optional : add details",
       "details_error": "Should be either empty or at least 10 characters long",
       "definite_closing": "Definite closing",
       "details_definite_closing": "This place has definitely closed. What's there now instead ? Give as many details as possible, for example: under construction building, new business..."

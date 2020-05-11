@@ -1,19 +1,24 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
+import Vuex from 'vuex';
 import ContributeForm from '../components/contribute_form';
 
 describe('ContributeForm', () => {
   let localVue;
+  let store;
   const stubs = ['v-stepper', 'v-stepper-step', 'v-stepper-content', 'v-btn', 'v-select', 'v-textarea', 'v-checkbox'];
 
   beforeEach(() => {
     localVue = createLocalVue();
     localVue.prototype.$t = () => {};
+    localVue.use(Vuex);
+    store = new Vuex.Store({});
   });
 
   function createWrapper(props) {
     return shallowMount(ContributeForm, {
       localVue,
       stubs,
+      store,
       propsData: props
     });
   }
