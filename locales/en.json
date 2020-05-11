@@ -129,12 +129,26 @@
       "unknown": "Place may be allowed to open during lockdown. Is it open or closed? Let us know.",
       "closed": "Place closed during lockdown"
     },
+    "state_normal": {
+      "open": "Place open",
+      "open_adapted": "Place open with adapted hours",
+      "partial": "Place belongs to a brand whose places are partially open. Is it open or closed? Let us know.",
+      "unknown": "Place may be allowed to open. Is it open or closed? Let us know.",
+      "closed": "Place closed"
+    },
     "state_short": {
       "open": "Open during the lockdown",
       "open_adapted": "Open during the lockdown",
       "partial": "Potentially open",
       "unknown": "Potentially open",
       "closed": "Closed during lockdown"
+    },
+    "state_short_normal": {
+      "open": "Open",
+      "open_adapted": "Open",
+      "partial": "Potentially open",
+      "unknown": "Potentially open",
+      "closed": "Closed"
     },
     "delivery": {
       "yes": "Delivery service available",

@@ -29,7 +29,7 @@
         v-if="place.properties.opening_hours && place.properties.opening_hours !== 'open'"
         :value="place.properties.opening_hours"
       />
-      <v-list-item-subtitle v-else>{{ $t(`details.state_short.${place.properties.status}`) }}</v-list-item-subtitle>
+      <v-list-item-subtitle v-else>{{ $t(`details.state_short${legalState === 'open' ? '_normal': ''}.${place.properties.status}`) }}</v-list-item-subtitle>
     </v-list-item-content>
     <v-list-item-action
       v-if="$vuetify.breakpoint.smAndDown && (contact('phone') || contact('mobile'))"
@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import placeMixin from '../mixins/place';
 import { rawColorForStatus } from '../../lib/place';
 import { SUB_FILTERS } from '../../lib/categories';
@@ -83,6 +84,8 @@ export default {
   },
 
   computed: {
+    ...mapState(['legalState']),
+
     color() {
       return rawColorForStatus(this.place.properties.status, this.$vuetify.theme.themes.light);
     },

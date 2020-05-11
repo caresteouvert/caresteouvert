@@ -129,12 +129,26 @@
       "unknown": "Lieu potentiellement ouvert durant le confinement pour proposer ses services habituels ou de nouveaux. Ouvert ou fermé ? À vous de le dire.",
       "closed": "Lieu fermé durant le confinement"
     },
+    "state_normal": {
+      "open": "Lieu indiqué comme ouvert",
+      "open_adapted": "Lieu indiqué comme ouvert avec des horaires adaptés",
+      "partial": "Lieu appartenant à une enseigne dont les établissements sont partiellement ouverts. Ouvert ou fermé ? À vous de le dire.",
+      "unknown": "Lieu potentiellement ouvert pour proposer ses services habituels ou de nouveaux. Ouvert ou fermé ? À vous de le dire.",
+      "closed": "Lieu fermé"
+    },
     "state_short": {
       "open": "Ouvert durant le confinement",
       "open_adapted": "Ouvert durant le confinement",
       "partial": "Potentiellement ouvert",
       "unknown": "Potentiellement ouvert",
       "closed": "Fermé durant le confinement"
+    },
+    "state_short_normal": {
+      "open": "Ouvert",
+      "open_adapted": "Indiqué comme ouvert",
+      "partial": "Potentiellement ouvert",
+      "unknown": "Potentiellement ouvert",
+      "closed": "Fermé"
     },
     "delivery": {
       "yes": "Service de livraison proposé",
