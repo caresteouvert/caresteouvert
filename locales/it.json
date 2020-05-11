@@ -10,7 +10,7 @@
   "missing_shop": "Segnala un negozio mancante",
   "backtolist": "Torna alla lista",
   "missing_shop_dialog": {
-    "description": "{brand} dovrebbe mostrare solo i posti aperti durante il lockdown. Ecco alcuni motivi per cui alcuni potrebbero mancare:",
+    "description": "{brand} dovrebbe mostrare solo i posti aperti durante il blocco. Ecco alcuni motivi per cui alcuni potrebbero mancare:",
     "add_osm": "Il posto non si trova su OpenStreetMap, aggiungilo:",
     "add_osm_cta": "Segui la guida",
     "add_category": "Manca una categoria di posti:",
