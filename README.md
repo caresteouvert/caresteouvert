@@ -2,7 +2,7 @@
 
 ![Ça reste ouvert](assets/logo.png)
 
-[Ça reste ouvert](https://caresteouvert.fr), la carte collaborative des lieux ouverts durant le confinement / the collaborative map of the places open during the lockdown #Covid19.
+[Ça reste ouvert](https://caresteouvert.fr), la carte collaborative des lieux ouverts durant la crise sanitaire / the collaborative map of the places open during the health crisis #Covid19.
 
 Toutes les informations sur le projet sont ici / All informations about the project here : https://blog.caresteouvert.fr/about
 
