@@ -67,6 +67,7 @@
     "title": "Contribuer",
     "step1": {
       "title": "Ce lieu reste-il ouvert pendant le confinement ?",
+      "title_normal": "Ce lieu reste-il ouvert ?",
       "open": {
         "yes": "oui",
         "no": "non"
@@ -74,6 +75,7 @@
     },
     "step2": {
       "title": "Horaires d'ouverture pendant le confinement",
+      "title_normal": "Horaires d'ouverture",
       "same_hours": "Ce sont les mêmes horaires",
       "same_hours_without_lockdown": "Ce sont les mêmes horaires hors confinement",
       "dont_know": "Je ne sais pas",
@@ -86,11 +88,12 @@
         "yes": "Oui",
         "no": "Non"
       },
-      "delivery": "Ce lieu propose la livraison pendant le confinement",
+      "delivery": "Ce lieu propose la livraison",
       "takeaway": "Ce lieu propose la vente à emporter",
       "access": "Ce lieu propose un accueil physique sur place",
       "drive_through": "Ce lieu dispose d'un service drive",
       "details": "Optionnel : ajouter d'autres détails liés au confinement",
+      "details_normal": "Optionnel : ajouter d'autres détails",
       "details_error": "Doit être vide ou compris entre 10 et 200 caractères",
       "definite_closing": "Fermeture définitive",
       "details_definite_closing": "Ce lieu a définitivement fermé ses portes. Qu'y a-t-il à ce jour à la place ? Donnez autant de détails que possible, par exemple : bâtiment vide ou en travaux, nouveau commerce..."
@@ -129,12 +132,26 @@
       "unknown": "Lieu potentiellement ouvert durant le confinement pour proposer ses services habituels ou de nouveaux. Ouvert ou fermé ? À vous de le dire.",
       "closed": "Lieu fermé durant le confinement"
     },
+    "state_normal": {
+      "open": "Lieu indiqué comme ouvert",
+      "open_adapted": "Lieu indiqué comme ouvert avec des horaires adaptés",
+      "partial": "Lieu appartenant à une enseigne dont les établissements sont partiellement ouverts. Ouvert ou fermé ? À vous de le dire.",
+      "unknown": "Lieu potentiellement ouvert pour proposer ses services habituels ou de nouveaux. Ouvert ou fermé ? À vous de le dire.",
+      "closed": "Lieu fermé"
+    },
     "state_short": {
       "open": "Ouvert durant le confinement",
       "open_adapted": "Ouvert durant le confinement",
       "partial": "Potentiellement ouvert",
       "unknown": "Potentiellement ouvert",
       "closed": "Fermé durant le confinement"
+    },
+    "state_short_normal": {
+      "open": "Ouvert",
+      "open_adapted": "Indiqué comme ouvert",
+      "partial": "Potentiellement ouvert",
+      "unknown": "Potentiellement ouvert",
+      "closed": "Fermé"
     },
     "delivery": {
       "yes": "Service de livraison proposé",

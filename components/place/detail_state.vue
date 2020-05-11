@@ -6,7 +6,7 @@
       tile
       class="mb-0"
     >
-      <p class="text-pre mb-0">{{ $t(`details.state.${status}`) }}</p>
+      <p class="text-pre mb-0">{{ $t(`details.state${legalState === 'open' ? '_normal': ''}.${status}`) }}</p>
       <p
         v-if="lastUpdate"
         class="body-2 font-weight-light mb-0"
@@ -42,6 +42,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import ContributeForm from '../contribute_form';
 import { colorForStatus } from '../../lib/place';
 
@@ -73,6 +74,8 @@ export default {
   },
 
   computed: {
+    ...mapState(['legalState']),
+
     type() {
       return colorForStatus(this.status);
     },
