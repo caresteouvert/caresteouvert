@@ -12,6 +12,7 @@ Ci rivolgiamo quindi ai sindaci e agli assessori comunali : informate i vostri c
 Per condividere il sito basta inviare un link al nostro sito [http://restiamoaperti.it](http://restiamoaperti.it), specificando che qui è possibile trovare informazioni riguardanti le aperture e che è possibile inserirle ove assenti. Inoltre, è anche possibile implementare il nostro servizio in siti esterni utilizzando un iframe.
 
 *Esempio di integrazione:*
+
 ```
 <iframe style="width: 100%;" src="https://restiamoaperti.it/@41.895761,12.492180,14.86/place/n1349274827" height="400" frameborder="0" scrolling="no"></iframe>
 ```
