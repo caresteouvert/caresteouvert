@@ -132,7 +132,7 @@
     "state_short": {
       "open": "Aberto durante o isolamento",
       "open_adapted": "Aberto durante o isolamento",
-      "partial": "Potencialmente aberto",
+      "partial": "Possivelmente aberto",
       "unknown": "Potencialmente aberto",
       "closed": "Fechado durante o isolamento"
     },
