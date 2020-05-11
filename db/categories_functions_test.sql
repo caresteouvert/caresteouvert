@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3218);
+SELECT plan(3598);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -654,6 +654,50 @@ SELECT is(get_category('office=>insurance'::hstore, 'IT'), 'amenity', 'get_categ
 
 SELECT is(get_subcategory('office=>insurance'::hstore, 'IT'), 'insurance', 'get_subcategory office=>insurance for IT should be insurance');
 
+SELECT is(get_category('shop=>insurance'::hstore, 'DE'), 'amenity', 'get_category shop=>insurance for DE should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'DE'), 'insurance', 'get_subcategory shop=>insurance for DE should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'FR'), 'amenity', 'get_category shop=>insurance for FR should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'FR'), 'insurance', 'get_subcategory shop=>insurance for FR should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'ES'), 'amenity', 'get_category shop=>insurance for ES should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'ES'), 'insurance', 'get_subcategory shop=>insurance for ES should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'AD'), 'amenity', 'get_category shop=>insurance for AD should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'AD'), 'insurance', 'get_subcategory shop=>insurance for AD should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'CH'), 'amenity', 'get_category shop=>insurance for CH should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'CH'), 'insurance', 'get_subcategory shop=>insurance for CH should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'AT'), 'amenity', 'get_category shop=>insurance for AT should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'AT'), 'insurance', 'get_subcategory shop=>insurance for AT should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'PH'), 'amenity', 'get_category shop=>insurance for PH should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'PH'), 'insurance', 'get_subcategory shop=>insurance for PH should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'FI'), 'amenity', 'get_category shop=>insurance for FI should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'FI'), 'insurance', 'get_subcategory shop=>insurance for FI should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'MC'), 'amenity', 'get_category shop=>insurance for MC should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'MC'), 'insurance', 'get_subcategory shop=>insurance for MC should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'CD'), 'amenity', 'get_category shop=>insurance for CD should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'CD'), 'insurance', 'get_subcategory shop=>insurance for CD should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'IT'), 'amenity', 'get_category shop=>insurance for IT should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'IT'), 'insurance', 'get_subcategory shop=>insurance for IT should be insurance');
+
 SELECT is(get_category('opening_hours:covid19=>*, tourism=>information, information=>office'::hstore, 'DE'), 'amenity', 'get_category opening_hours:covid19=>*, tourism=>information, information=>office for DE should be amenity');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, tourism=>information, information=>office'::hstore, 'DE'), 'tourism_info', 'get_subcategory opening_hours:covid19=>*, tourism=>information, information=>office for DE should be tourism_info');
@@ -746,6 +790,18 @@ SELECT is(get_category('tourism=>hostel'::hstore, 'CH'), 'amenity', 'get_categor
 
 SELECT is(get_subcategory('tourism=>hostel'::hstore, 'CH'), 'hotel', 'get_subcategory tourism=>hostel for CH should be hotel');
 
+SELECT is(get_category('amenity=>recycling, recycling_type=>centre'::hstore, 'AT'), 'amenity', 'get_category amenity=>recycling, recycling_type=>centre for AT should be amenity');
+
+SELECT is(get_subcategory('amenity=>recycling, recycling_type=>centre'::hstore, 'AT'), 'recycling_centre', 'get_subcategory amenity=>recycling, recycling_type=>centre for AT should be recycling_centre');
+
+SELECT is(get_category('amenity=>recycling, recycling_type=>centre'::hstore, 'CH'), 'amenity', 'get_category amenity=>recycling, recycling_type=>centre for CH should be amenity');
+
+SELECT is(get_subcategory('amenity=>recycling, recycling_type=>centre'::hstore, 'CH'), 'recycling_centre', 'get_subcategory amenity=>recycling, recycling_type=>centre for CH should be recycling_centre');
+
+SELECT is(get_category('amenity=>recycling, recycling_type=>centre'::hstore, 'DE'), 'amenity', 'get_category amenity=>recycling, recycling_type=>centre for DE should be amenity');
+
+SELECT is(get_subcategory('amenity=>recycling, recycling_type=>centre'::hstore, 'DE'), 'recycling_centre', 'get_subcategory amenity=>recycling, recycling_type=>centre for DE should be recycling_centre');
+
 SELECT is(get_category('amenity=>recycling, recycling_type=>centre'::hstore, 'FR'), 'amenity', 'get_category amenity=>recycling, recycling_type=>centre for FR should be amenity');
 
 SELECT is(get_subcategory('amenity=>recycling, recycling_type=>centre'::hstore, 'FR'), 'recycling_centre', 'get_subcategory amenity=>recycling, recycling_type=>centre for FR should be recycling_centre');
@@ -753,6 +809,18 @@ SELECT is(get_subcategory('amenity=>recycling, recycling_type=>centre'::hstore, 
 SELECT is(get_category('amenity=>recycling, recycling_type=>centre'::hstore, 'IT'), 'amenity', 'get_category amenity=>recycling, recycling_type=>centre for IT should be amenity');
 
 SELECT is(get_subcategory('amenity=>recycling, recycling_type=>centre'::hstore, 'IT'), 'recycling_centre', 'get_subcategory amenity=>recycling, recycling_type=>centre for IT should be recycling_centre');
+
+SELECT is(get_category('amenity=>library'::hstore, 'AT'), 'amenity', 'get_category amenity=>library for AT should be amenity');
+
+SELECT is(get_subcategory('amenity=>library'::hstore, 'AT'), 'library', 'get_subcategory amenity=>library for AT should be library');
+
+SELECT is(get_category('amenity=>library'::hstore, 'CH'), 'amenity', 'get_category amenity=>library for CH should be amenity');
+
+SELECT is(get_subcategory('amenity=>library'::hstore, 'CH'), 'library', 'get_subcategory amenity=>library for CH should be library');
+
+SELECT is(get_category('amenity=>library'::hstore, 'DE'), 'amenity', 'get_category amenity=>library for DE should be amenity');
+
+SELECT is(get_subcategory('amenity=>library'::hstore, 'DE'), 'library', 'get_subcategory amenity=>library for DE should be library');
 
 SELECT is(get_category('amenity=>library'::hstore, 'FI'), 'amenity', 'get_category amenity=>library for FI should be amenity');
 
@@ -1646,6 +1714,50 @@ SELECT is(get_category('shop=>convenience'::hstore, 'IT'), 'food', 'get_category
 
 SELECT is(get_subcategory('shop=>convenience'::hstore, 'IT'), 'convenience', 'get_subcategory shop=>convenience for IT should be convenience');
 
+SELECT is(get_category('shop=>general'::hstore, 'DE'), 'food', 'get_category shop=>general for DE should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'DE'), 'convenience', 'get_subcategory shop=>general for DE should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'FR'), 'food', 'get_category shop=>general for FR should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'FR'), 'convenience', 'get_subcategory shop=>general for FR should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'ES'), 'food', 'get_category shop=>general for ES should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'ES'), 'convenience', 'get_subcategory shop=>general for ES should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'AD'), 'food', 'get_category shop=>general for AD should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'AD'), 'convenience', 'get_subcategory shop=>general for AD should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'CH'), 'food', 'get_category shop=>general for CH should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'CH'), 'convenience', 'get_subcategory shop=>general for CH should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'AT'), 'food', 'get_category shop=>general for AT should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'AT'), 'convenience', 'get_subcategory shop=>general for AT should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'PH'), 'food', 'get_category shop=>general for PH should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'PH'), 'convenience', 'get_subcategory shop=>general for PH should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'FI'), 'food', 'get_category shop=>general for FI should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'FI'), 'convenience', 'get_subcategory shop=>general for FI should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'MC'), 'food', 'get_category shop=>general for MC should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'MC'), 'convenience', 'get_subcategory shop=>general for MC should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'CD'), 'food', 'get_category shop=>general for CD should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'CD'), 'convenience', 'get_subcategory shop=>general for CD should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'IT'), 'food', 'get_category shop=>general for IT should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'IT'), 'convenience', 'get_subcategory shop=>general for IT should be convenience');
+
 SELECT is(get_category('shop=>seafood'::hstore, 'DE'), 'food', 'get_category shop=>seafood for DE should be food');
 
 SELECT is(get_subcategory('shop=>seafood'::hstore, 'DE'), 'seafood', 'get_subcategory shop=>seafood for DE should be seafood');
@@ -1866,50 +1978,6 @@ SELECT is(get_category('shop=>honey'::hstore, 'IT'), 'food', 'get_category shop=
 
 SELECT is(get_subcategory('shop=>honey'::hstore, 'IT'), 'grocery', 'get_subcategory shop=>honey for IT should be grocery');
 
-SELECT is(get_category('shop=>health_food'::hstore, 'DE'), 'food', 'get_category shop=>health_food for DE should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'DE'), 'grocery', 'get_subcategory shop=>health_food for DE should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'FR'), 'food', 'get_category shop=>health_food for FR should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'FR'), 'grocery', 'get_subcategory shop=>health_food for FR should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'ES'), 'food', 'get_category shop=>health_food for ES should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'ES'), 'grocery', 'get_subcategory shop=>health_food for ES should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'AD'), 'food', 'get_category shop=>health_food for AD should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'AD'), 'grocery', 'get_subcategory shop=>health_food for AD should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'CH'), 'food', 'get_category shop=>health_food for CH should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'CH'), 'grocery', 'get_subcategory shop=>health_food for CH should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'AT'), 'food', 'get_category shop=>health_food for AT should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'AT'), 'grocery', 'get_subcategory shop=>health_food for AT should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'PH'), 'food', 'get_category shop=>health_food for PH should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'PH'), 'grocery', 'get_subcategory shop=>health_food for PH should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'FI'), 'food', 'get_category shop=>health_food for FI should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'FI'), 'grocery', 'get_subcategory shop=>health_food for FI should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'MC'), 'food', 'get_category shop=>health_food for MC should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'MC'), 'grocery', 'get_subcategory shop=>health_food for MC should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'CD'), 'food', 'get_category shop=>health_food for CD should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'CD'), 'grocery', 'get_subcategory shop=>health_food for CD should be grocery');
-
-SELECT is(get_category('shop=>health_food'::hstore, 'IT'), 'food', 'get_category shop=>health_food for IT should be food');
-
-SELECT is(get_subcategory('shop=>health_food'::hstore, 'IT'), 'grocery', 'get_subcategory shop=>health_food for IT should be grocery');
-
 SELECT is(get_category('shop=>pasta'::hstore, 'DE'), 'food', 'get_category shop=>pasta for DE should be food');
 
 SELECT is(get_subcategory('shop=>pasta'::hstore, 'DE'), 'grocery', 'get_subcategory shop=>pasta for DE should be grocery');
@@ -1997,6 +2065,50 @@ SELECT is(get_subcategory('shop=>cannery'::hstore, 'CD'), 'grocery', 'get_subcat
 SELECT is(get_category('shop=>cannery'::hstore, 'IT'), 'food', 'get_category shop=>cannery for IT should be food');
 
 SELECT is(get_subcategory('shop=>cannery'::hstore, 'IT'), 'grocery', 'get_subcategory shop=>cannery for IT should be grocery');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'DE'), 'food', 'get_category shop=>health_food for DE should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'DE'), 'health_food', 'get_subcategory shop=>health_food for DE should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'FR'), 'food', 'get_category shop=>health_food for FR should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'FR'), 'health_food', 'get_subcategory shop=>health_food for FR should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'ES'), 'food', 'get_category shop=>health_food for ES should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'ES'), 'health_food', 'get_subcategory shop=>health_food for ES should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'AD'), 'food', 'get_category shop=>health_food for AD should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'AD'), 'health_food', 'get_subcategory shop=>health_food for AD should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'CH'), 'food', 'get_category shop=>health_food for CH should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'CH'), 'health_food', 'get_subcategory shop=>health_food for CH should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'AT'), 'food', 'get_category shop=>health_food for AT should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'AT'), 'health_food', 'get_subcategory shop=>health_food for AT should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'PH'), 'food', 'get_category shop=>health_food for PH should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'PH'), 'health_food', 'get_subcategory shop=>health_food for PH should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'FI'), 'food', 'get_category shop=>health_food for FI should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'FI'), 'health_food', 'get_subcategory shop=>health_food for FI should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'MC'), 'food', 'get_category shop=>health_food for MC should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'MC'), 'health_food', 'get_subcategory shop=>health_food for MC should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'CD'), 'food', 'get_category shop=>health_food for CD should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'CD'), 'health_food', 'get_subcategory shop=>health_food for CD should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'IT'), 'food', 'get_category shop=>health_food for IT should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'IT'), 'health_food', 'get_subcategory shop=>health_food for IT should be health_food');
 
 SELECT is(get_category('shop=>chocolate'::hstore, 'DE'), 'food', 'get_category shop=>chocolate for DE should be food');
 
@@ -2493,6 +2605,10 @@ SELECT is(get_subcategory('shop=>beverages'::hstore, 'CD'), 'alcohol', 'get_subc
 SELECT is(get_category('shop=>wine'::hstore, 'CD'), 'food', 'get_category shop=>wine for CD should be food');
 
 SELECT is(get_subcategory('shop=>wine'::hstore, 'CD'), 'alcohol', 'get_subcategory shop=>wine for CD should be alcohol');
+
+SELECT is(get_category('shop=>winery'::hstore, 'CD'), 'food', 'get_category shop=>winery for CD should be food');
+
+SELECT is(get_subcategory('shop=>winery'::hstore, 'CD'), 'alcohol', 'get_subcategory shop=>winery for CD should be alcohol');
 
 SELECT is(get_category('amenity=>vending_machine, vending=>pizza'::hstore, 'DE'), 'eat', 'get_category amenity=>vending_machine, vending=>pizza for DE should be eat');
 
@@ -4922,6 +5038,138 @@ SELECT is(get_category('shop=>doityourself'::hstore, 'IT'), 'shop', 'get_categor
 
 SELECT is(get_subcategory('shop=>doityourself'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>doityourself for IT should be hardware');
 
+SELECT is(get_category('shop=>electrical'::hstore, 'DE'), 'shop', 'get_category shop=>electrical for DE should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>electrical for DE should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'FR'), 'shop', 'get_category shop=>electrical for FR should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'FR'), 'hardware', 'get_subcategory shop=>electrical for FR should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'ES'), 'shop', 'get_category shop=>electrical for ES should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'ES'), 'hardware', 'get_subcategory shop=>electrical for ES should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'AD'), 'shop', 'get_category shop=>electrical for AD should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'AD'), 'hardware', 'get_subcategory shop=>electrical for AD should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'CH'), 'shop', 'get_category shop=>electrical for CH should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'CH'), 'hardware', 'get_subcategory shop=>electrical for CH should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'AT'), 'shop', 'get_category shop=>electrical for AT should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'AT'), 'hardware', 'get_subcategory shop=>electrical for AT should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'PH'), 'shop', 'get_category shop=>electrical for PH should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'PH'), 'hardware', 'get_subcategory shop=>electrical for PH should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'FI'), 'shop', 'get_category shop=>electrical for FI should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'FI'), 'hardware', 'get_subcategory shop=>electrical for FI should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'MC'), 'shop', 'get_category shop=>electrical for MC should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'MC'), 'hardware', 'get_subcategory shop=>electrical for MC should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'CD'), 'shop', 'get_category shop=>electrical for CD should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'CD'), 'hardware', 'get_subcategory shop=>electrical for CD should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'IT'), 'shop', 'get_category shop=>electrical for IT should be shop');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>electrical for IT should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'DE'), 'shop', 'get_category shop=>fireplace for DE should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>fireplace for DE should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'FR'), 'shop', 'get_category shop=>fireplace for FR should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'FR'), 'hardware', 'get_subcategory shop=>fireplace for FR should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'ES'), 'shop', 'get_category shop=>fireplace for ES should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'ES'), 'hardware', 'get_subcategory shop=>fireplace for ES should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'AD'), 'shop', 'get_category shop=>fireplace for AD should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'AD'), 'hardware', 'get_subcategory shop=>fireplace for AD should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'CH'), 'shop', 'get_category shop=>fireplace for CH should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'CH'), 'hardware', 'get_subcategory shop=>fireplace for CH should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'AT'), 'shop', 'get_category shop=>fireplace for AT should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'AT'), 'hardware', 'get_subcategory shop=>fireplace for AT should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'PH'), 'shop', 'get_category shop=>fireplace for PH should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'PH'), 'hardware', 'get_subcategory shop=>fireplace for PH should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'FI'), 'shop', 'get_category shop=>fireplace for FI should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'FI'), 'hardware', 'get_subcategory shop=>fireplace for FI should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'MC'), 'shop', 'get_category shop=>fireplace for MC should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'MC'), 'hardware', 'get_subcategory shop=>fireplace for MC should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'CD'), 'shop', 'get_category shop=>fireplace for CD should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'CD'), 'hardware', 'get_subcategory shop=>fireplace for CD should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'IT'), 'shop', 'get_category shop=>fireplace for IT should be shop');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>fireplace for IT should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'DE'), 'shop', 'get_category shop=>glaziery for DE should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>glaziery for DE should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'FR'), 'shop', 'get_category shop=>glaziery for FR should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'FR'), 'hardware', 'get_subcategory shop=>glaziery for FR should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'ES'), 'shop', 'get_category shop=>glaziery for ES should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'ES'), 'hardware', 'get_subcategory shop=>glaziery for ES should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'AD'), 'shop', 'get_category shop=>glaziery for AD should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'AD'), 'hardware', 'get_subcategory shop=>glaziery for AD should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'CH'), 'shop', 'get_category shop=>glaziery for CH should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'CH'), 'hardware', 'get_subcategory shop=>glaziery for CH should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'AT'), 'shop', 'get_category shop=>glaziery for AT should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'AT'), 'hardware', 'get_subcategory shop=>glaziery for AT should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'PH'), 'shop', 'get_category shop=>glaziery for PH should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'PH'), 'hardware', 'get_subcategory shop=>glaziery for PH should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'FI'), 'shop', 'get_category shop=>glaziery for FI should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'FI'), 'hardware', 'get_subcategory shop=>glaziery for FI should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'MC'), 'shop', 'get_category shop=>glaziery for MC should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'MC'), 'hardware', 'get_subcategory shop=>glaziery for MC should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'CD'), 'shop', 'get_category shop=>glaziery for CD should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'CD'), 'hardware', 'get_subcategory shop=>glaziery for CD should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'IT'), 'shop', 'get_category shop=>glaziery for IT should be shop');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>glaziery for IT should be hardware');
+
 SELECT is(get_category('shop=>hardware'::hstore, 'DE'), 'shop', 'get_category shop=>hardware for DE should be shop');
 
 SELECT is(get_subcategory('shop=>hardware'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>hardware for DE should be hardware');
@@ -5010,93 +5258,49 @@ SELECT is(get_category('shop=>paint'::hstore, 'IT'), 'shop', 'get_category shop=
 
 SELECT is(get_subcategory('shop=>paint'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>paint for IT should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'DE'), 'shop', 'get_category shop=>glaziery for DE should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'DE'), 'shop', 'get_category shop=>tiles for DE should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>glaziery for DE should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>tiles for DE should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'FR'), 'shop', 'get_category shop=>glaziery for FR should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'FR'), 'shop', 'get_category shop=>tiles for FR should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'FR'), 'hardware', 'get_subcategory shop=>glaziery for FR should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'FR'), 'hardware', 'get_subcategory shop=>tiles for FR should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'ES'), 'shop', 'get_category shop=>glaziery for ES should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'ES'), 'shop', 'get_category shop=>tiles for ES should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'ES'), 'hardware', 'get_subcategory shop=>glaziery for ES should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'ES'), 'hardware', 'get_subcategory shop=>tiles for ES should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'AD'), 'shop', 'get_category shop=>glaziery for AD should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'AD'), 'shop', 'get_category shop=>tiles for AD should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'AD'), 'hardware', 'get_subcategory shop=>glaziery for AD should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'AD'), 'hardware', 'get_subcategory shop=>tiles for AD should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'CH'), 'shop', 'get_category shop=>glaziery for CH should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'CH'), 'shop', 'get_category shop=>tiles for CH should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'CH'), 'hardware', 'get_subcategory shop=>glaziery for CH should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'CH'), 'hardware', 'get_subcategory shop=>tiles for CH should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'AT'), 'shop', 'get_category shop=>glaziery for AT should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'AT'), 'shop', 'get_category shop=>tiles for AT should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'AT'), 'hardware', 'get_subcategory shop=>glaziery for AT should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'AT'), 'hardware', 'get_subcategory shop=>tiles for AT should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'PH'), 'shop', 'get_category shop=>glaziery for PH should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'PH'), 'shop', 'get_category shop=>tiles for PH should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'PH'), 'hardware', 'get_subcategory shop=>glaziery for PH should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'PH'), 'hardware', 'get_subcategory shop=>tiles for PH should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'FI'), 'shop', 'get_category shop=>glaziery for FI should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'FI'), 'shop', 'get_category shop=>tiles for FI should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'FI'), 'hardware', 'get_subcategory shop=>glaziery for FI should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'FI'), 'hardware', 'get_subcategory shop=>tiles for FI should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'MC'), 'shop', 'get_category shop=>glaziery for MC should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'MC'), 'shop', 'get_category shop=>tiles for MC should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'MC'), 'hardware', 'get_subcategory shop=>glaziery for MC should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'MC'), 'hardware', 'get_subcategory shop=>tiles for MC should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'CD'), 'shop', 'get_category shop=>glaziery for CD should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'CD'), 'shop', 'get_category shop=>tiles for CD should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'CD'), 'hardware', 'get_subcategory shop=>glaziery for CD should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'CD'), 'hardware', 'get_subcategory shop=>tiles for CD should be hardware');
 
-SELECT is(get_category('shop=>glaziery'::hstore, 'IT'), 'shop', 'get_category shop=>glaziery for IT should be shop');
+SELECT is(get_category('shop=>tiles'::hstore, 'IT'), 'shop', 'get_category shop=>tiles for IT should be shop');
 
-SELECT is(get_subcategory('shop=>glaziery'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>glaziery for IT should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'DE'), 'shop', 'get_category shop=>electrical for DE should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>electrical for DE should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'FR'), 'shop', 'get_category shop=>electrical for FR should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'FR'), 'hardware', 'get_subcategory shop=>electrical for FR should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'ES'), 'shop', 'get_category shop=>electrical for ES should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'ES'), 'hardware', 'get_subcategory shop=>electrical for ES should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'AD'), 'shop', 'get_category shop=>electrical for AD should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'AD'), 'hardware', 'get_subcategory shop=>electrical for AD should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'CH'), 'shop', 'get_category shop=>electrical for CH should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'CH'), 'hardware', 'get_subcategory shop=>electrical for CH should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'AT'), 'shop', 'get_category shop=>electrical for AT should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'AT'), 'hardware', 'get_subcategory shop=>electrical for AT should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'PH'), 'shop', 'get_category shop=>electrical for PH should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'PH'), 'hardware', 'get_subcategory shop=>electrical for PH should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'FI'), 'shop', 'get_category shop=>electrical for FI should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'FI'), 'hardware', 'get_subcategory shop=>electrical for FI should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'MC'), 'shop', 'get_category shop=>electrical for MC should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'MC'), 'hardware', 'get_subcategory shop=>electrical for MC should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'CD'), 'shop', 'get_category shop=>electrical for CD should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'CD'), 'hardware', 'get_subcategory shop=>electrical for CD should be hardware');
-
-SELECT is(get_category('shop=>electrical'::hstore, 'IT'), 'shop', 'get_category shop=>electrical for IT should be shop');
-
-SELECT is(get_subcategory('shop=>electrical'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>electrical for IT should be hardware');
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>tiles for IT should be hardware');
 
 SELECT is(get_category('shop=>mobile_phone'::hstore, 'DE'), 'shop', 'get_category shop=>mobile_phone for DE should be shop');
 
@@ -5324,47 +5528,47 @@ SELECT is(get_subcategory('shop=>appliance'::hstore, 'IT'), 'electronics', 'get_
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'DE'), 'shop', 'get_category shop=>dry_cleaning for DE should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'DE'), 'laundry', 'get_subcategory shop=>dry_cleaning for DE should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'DE'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for DE should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'FR'), 'shop', 'get_category shop=>dry_cleaning for FR should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'FR'), 'laundry', 'get_subcategory shop=>dry_cleaning for FR should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'FR'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for FR should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'ES'), 'shop', 'get_category shop=>dry_cleaning for ES should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'ES'), 'laundry', 'get_subcategory shop=>dry_cleaning for ES should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'ES'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for ES should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'AD'), 'shop', 'get_category shop=>dry_cleaning for AD should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'AD'), 'laundry', 'get_subcategory shop=>dry_cleaning for AD should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'AD'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for AD should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'CH'), 'shop', 'get_category shop=>dry_cleaning for CH should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'CH'), 'laundry', 'get_subcategory shop=>dry_cleaning for CH should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'CH'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for CH should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'AT'), 'shop', 'get_category shop=>dry_cleaning for AT should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'AT'), 'laundry', 'get_subcategory shop=>dry_cleaning for AT should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'AT'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for AT should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'PH'), 'shop', 'get_category shop=>dry_cleaning for PH should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'PH'), 'laundry', 'get_subcategory shop=>dry_cleaning for PH should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'PH'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for PH should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'FI'), 'shop', 'get_category shop=>dry_cleaning for FI should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'FI'), 'laundry', 'get_subcategory shop=>dry_cleaning for FI should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'FI'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for FI should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'MC'), 'shop', 'get_category shop=>dry_cleaning for MC should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'MC'), 'laundry', 'get_subcategory shop=>dry_cleaning for MC should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'MC'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for MC should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'CD'), 'shop', 'get_category shop=>dry_cleaning for CD should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'CD'), 'laundry', 'get_subcategory shop=>dry_cleaning for CD should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'CD'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for CD should be dry_cleaning');
 
 SELECT is(get_category('shop=>dry_cleaning'::hstore, 'IT'), 'shop', 'get_category shop=>dry_cleaning for IT should be shop');
 
-SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'IT'), 'laundry', 'get_subcategory shop=>dry_cleaning for IT should be laundry');
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'IT'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for IT should be dry_cleaning');
 
 SELECT is(get_category('shop=>laundry'::hstore, 'DE'), 'shop', 'get_category shop=>laundry for DE should be shop');
 
@@ -5409,6 +5613,18 @@ SELECT is(get_subcategory('shop=>laundry'::hstore, 'CD'), 'laundry', 'get_subcat
 SELECT is(get_category('shop=>laundry'::hstore, 'IT'), 'shop', 'get_category shop=>laundry for IT should be shop');
 
 SELECT is(get_subcategory('shop=>laundry'::hstore, 'IT'), 'laundry', 'get_subcategory shop=>laundry for IT should be laundry');
+
+SELECT is(get_category('shop=>stationery'::hstore, 'AT'), 'shop', 'get_category shop=>stationery for AT should be shop');
+
+SELECT is(get_subcategory('shop=>stationery'::hstore, 'AT'), 'stationery', 'get_subcategory shop=>stationery for AT should be stationery');
+
+SELECT is(get_category('shop=>stationery'::hstore, 'CH'), 'shop', 'get_category shop=>stationery for CH should be shop');
+
+SELECT is(get_subcategory('shop=>stationery'::hstore, 'CH'), 'stationery', 'get_subcategory shop=>stationery for CH should be stationery');
+
+SELECT is(get_category('shop=>stationery'::hstore, 'DE'), 'shop', 'get_category shop=>stationery for DE should be shop');
+
+SELECT is(get_subcategory('shop=>stationery'::hstore, 'DE'), 'stationery', 'get_subcategory shop=>stationery for DE should be stationery');
 
 SELECT is(get_category('shop=>stationery'::hstore, 'FR'), 'shop', 'get_category shop=>stationery for FR should be shop');
 
@@ -5549,6 +5765,18 @@ SELECT is(get_subcategory('shop=>pet'::hstore, 'CD'), 'pet', 'get_subcategory sh
 SELECT is(get_category('shop=>pet'::hstore, 'IT'), 'shop', 'get_category shop=>pet for IT should be shop');
 
 SELECT is(get_subcategory('shop=>pet'::hstore, 'IT'), 'pet', 'get_subcategory shop=>pet for IT should be pet');
+
+SELECT is(get_category('shop=>agrarian'::hstore, 'AT'), 'shop', 'get_category shop=>agrarian for AT should be shop');
+
+SELECT is(get_subcategory('shop=>agrarian'::hstore, 'AT'), 'agrarian', 'get_subcategory shop=>agrarian for AT should be agrarian');
+
+SELECT is(get_category('shop=>agrarian'::hstore, 'CH'), 'shop', 'get_category shop=>agrarian for CH should be shop');
+
+SELECT is(get_subcategory('shop=>agrarian'::hstore, 'CH'), 'agrarian', 'get_subcategory shop=>agrarian for CH should be agrarian');
+
+SELECT is(get_category('shop=>agrarian'::hstore, 'DE'), 'shop', 'get_category shop=>agrarian for DE should be shop');
+
+SELECT is(get_subcategory('shop=>agrarian'::hstore, 'DE'), 'agrarian', 'get_subcategory shop=>agrarian for DE should be agrarian');
 
 SELECT is(get_category('shop=>agrarian'::hstore, 'FR'), 'shop', 'get_category shop=>agrarian for FR should be shop');
 
@@ -5822,6 +6050,50 @@ SELECT is(get_category('shop=>haberdashery'::hstore, 'IT'), 'shop', 'get_categor
 
 SELECT is(get_subcategory('shop=>haberdashery'::hstore, 'IT'), 'sewing', 'get_subcategory shop=>haberdashery for IT should be sewing');
 
+SELECT is(get_category('shop=>wool'::hstore, 'DE'), 'shop', 'get_category shop=>wool for DE should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'DE'), 'sewing', 'get_subcategory shop=>wool for DE should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'FR'), 'shop', 'get_category shop=>wool for FR should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'FR'), 'sewing', 'get_subcategory shop=>wool for FR should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'ES'), 'shop', 'get_category shop=>wool for ES should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'ES'), 'sewing', 'get_subcategory shop=>wool for ES should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'AD'), 'shop', 'get_category shop=>wool for AD should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'AD'), 'sewing', 'get_subcategory shop=>wool for AD should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'CH'), 'shop', 'get_category shop=>wool for CH should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'CH'), 'sewing', 'get_subcategory shop=>wool for CH should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'AT'), 'shop', 'get_category shop=>wool for AT should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'AT'), 'sewing', 'get_subcategory shop=>wool for AT should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'PH'), 'shop', 'get_category shop=>wool for PH should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'PH'), 'sewing', 'get_subcategory shop=>wool for PH should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'FI'), 'shop', 'get_category shop=>wool for FI should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'FI'), 'sewing', 'get_subcategory shop=>wool for FI should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'MC'), 'shop', 'get_category shop=>wool for MC should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'MC'), 'sewing', 'get_subcategory shop=>wool for MC should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'CD'), 'shop', 'get_category shop=>wool for CD should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'CD'), 'sewing', 'get_subcategory shop=>wool for CD should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'IT'), 'shop', 'get_category shop=>wool for IT should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'IT'), 'sewing', 'get_subcategory shop=>wool for IT should be sewing');
+
 SELECT is(get_category('craft=>sewing'::hstore, 'DE'), 'shop', 'get_category craft=>sewing for DE should be shop');
 
 SELECT is(get_subcategory('craft=>sewing'::hstore, 'DE'), 'sewing', 'get_subcategory craft=>sewing for DE should be sewing');
@@ -5926,6 +6198,42 @@ SELECT is(get_category('amenity=>public_bookcase'::hstore, 'IT'), 'shop', 'get_c
 
 SELECT is(get_subcategory('amenity=>public_bookcase'::hstore, 'IT'), 'books', 'get_subcategory amenity=>public_bookcase for IT should be books');
 
+SELECT is(get_category('shop=>art'::hstore, 'DE'), 'shop', 'get_category shop=>art for DE should be shop');
+
+SELECT is(get_subcategory('shop=>art'::hstore, 'DE'), 'art', 'get_subcategory shop=>art for DE should be art');
+
+SELECT is(get_category('shop=>art'::hstore, 'AT'), 'shop', 'get_category shop=>art for AT should be shop');
+
+SELECT is(get_subcategory('shop=>art'::hstore, 'AT'), 'art', 'get_subcategory shop=>art for AT should be art');
+
+SELECT is(get_category('shop=>art'::hstore, 'CH'), 'shop', 'get_category shop=>art for CH should be shop');
+
+SELECT is(get_subcategory('shop=>art'::hstore, 'CH'), 'art', 'get_subcategory shop=>art for CH should be art');
+
+SELECT is(get_category('shop=>bag'::hstore, 'DE'), 'shop', 'get_category shop=>bag for DE should be shop');
+
+SELECT is(get_subcategory('shop=>bag'::hstore, 'DE'), 'bag', 'get_subcategory shop=>bag for DE should be bag');
+
+SELECT is(get_category('shop=>bag'::hstore, 'AT'), 'shop', 'get_category shop=>bag for AT should be shop');
+
+SELECT is(get_subcategory('shop=>bag'::hstore, 'AT'), 'bag', 'get_subcategory shop=>bag for AT should be bag');
+
+SELECT is(get_category('shop=>bag'::hstore, 'CH'), 'shop', 'get_category shop=>bag for CH should be shop');
+
+SELECT is(get_subcategory('shop=>bag'::hstore, 'CH'), 'bag', 'get_subcategory shop=>bag for CH should be bag');
+
+SELECT is(get_category('shop=>bed'::hstore, 'DE'), 'shop', 'get_category shop=>bed for DE should be shop');
+
+SELECT is(get_subcategory('shop=>bed'::hstore, 'DE'), 'bed', 'get_subcategory shop=>bed for DE should be bed');
+
+SELECT is(get_category('shop=>bed'::hstore, 'AT'), 'shop', 'get_category shop=>bed for AT should be shop');
+
+SELECT is(get_subcategory('shop=>bed'::hstore, 'AT'), 'bed', 'get_subcategory shop=>bed for AT should be bed');
+
+SELECT is(get_category('shop=>bed'::hstore, 'CH'), 'shop', 'get_category shop=>bed for CH should be shop');
+
+SELECT is(get_subcategory('shop=>bed'::hstore, 'CH'), 'bed', 'get_subcategory shop=>bed for CH should be bed');
+
 SELECT is(get_category('shop=>beauty'::hstore, 'DE'), 'shop', 'get_category shop=>beauty for DE should be shop');
 
 SELECT is(get_subcategory('shop=>beauty'::hstore, 'DE'), 'beauty', 'get_subcategory shop=>beauty for DE should be beauty');
@@ -5937,6 +6245,62 @@ SELECT is(get_subcategory('shop=>beauty'::hstore, 'AT'), 'beauty', 'get_subcateg
 SELECT is(get_category('shop=>beauty'::hstore, 'CH'), 'shop', 'get_category shop=>beauty for CH should be shop');
 
 SELECT is(get_subcategory('shop=>beauty'::hstore, 'CH'), 'beauty', 'get_subcategory shop=>beauty for CH should be beauty');
+
+SELECT is(get_category('shop=>charity'::hstore, 'DE'), 'shop', 'get_category shop=>charity for DE should be shop');
+
+SELECT is(get_subcategory('shop=>charity'::hstore, 'DE'), 'charity', 'get_subcategory shop=>charity for DE should be charity');
+
+SELECT is(get_category('shop=>charity'::hstore, 'AT'), 'shop', 'get_category shop=>charity for AT should be shop');
+
+SELECT is(get_subcategory('shop=>charity'::hstore, 'AT'), 'charity', 'get_subcategory shop=>charity for AT should be charity');
+
+SELECT is(get_category('shop=>charity'::hstore, 'CH'), 'shop', 'get_category shop=>charity for CH should be shop');
+
+SELECT is(get_subcategory('shop=>charity'::hstore, 'CH'), 'charity', 'get_subcategory shop=>charity for CH should be charity');
+
+SELECT is(get_category('shop=>clothes, clothes=>babies'::hstore, 'AT'), 'shop', 'get_category shop=>clothes, clothes=>babies for AT should be shop');
+
+SELECT is(get_subcategory('shop=>clothes, clothes=>babies'::hstore, 'AT'), 'child_clothes', 'get_subcategory shop=>clothes, clothes=>babies for AT should be child_clothes');
+
+SELECT is(get_category('shop=>clothes, clothes=>babies'::hstore, 'CH'), 'shop', 'get_category shop=>clothes, clothes=>babies for CH should be shop');
+
+SELECT is(get_subcategory('shop=>clothes, clothes=>babies'::hstore, 'CH'), 'child_clothes', 'get_subcategory shop=>clothes, clothes=>babies for CH should be child_clothes');
+
+SELECT is(get_category('shop=>clothes, clothes=>babies'::hstore, 'DE'), 'shop', 'get_category shop=>clothes, clothes=>babies for DE should be shop');
+
+SELECT is(get_subcategory('shop=>clothes, clothes=>babies'::hstore, 'DE'), 'child_clothes', 'get_subcategory shop=>clothes, clothes=>babies for DE should be child_clothes');
+
+SELECT is(get_category('shop=>clothes, clothes=>babies'::hstore, 'IT'), 'shop', 'get_category shop=>clothes, clothes=>babies for IT should be shop');
+
+SELECT is(get_subcategory('shop=>clothes, clothes=>babies'::hstore, 'IT'), 'child_clothes', 'get_subcategory shop=>clothes, clothes=>babies for IT should be child_clothes');
+
+SELECT is(get_category('shop=>clothes, clothes=>children'::hstore, 'AT'), 'shop', 'get_category shop=>clothes, clothes=>children for AT should be shop');
+
+SELECT is(get_subcategory('shop=>clothes, clothes=>children'::hstore, 'AT'), 'child_clothes', 'get_subcategory shop=>clothes, clothes=>children for AT should be child_clothes');
+
+SELECT is(get_category('shop=>clothes, clothes=>children'::hstore, 'CH'), 'shop', 'get_category shop=>clothes, clothes=>children for CH should be shop');
+
+SELECT is(get_subcategory('shop=>clothes, clothes=>children'::hstore, 'CH'), 'child_clothes', 'get_subcategory shop=>clothes, clothes=>children for CH should be child_clothes');
+
+SELECT is(get_category('shop=>clothes, clothes=>children'::hstore, 'DE'), 'shop', 'get_category shop=>clothes, clothes=>children for DE should be shop');
+
+SELECT is(get_subcategory('shop=>clothes, clothes=>children'::hstore, 'DE'), 'child_clothes', 'get_subcategory shop=>clothes, clothes=>children for DE should be child_clothes');
+
+SELECT is(get_category('shop=>clothes, clothes=>children'::hstore, 'IT'), 'shop', 'get_category shop=>clothes, clothes=>children for IT should be shop');
+
+SELECT is(get_subcategory('shop=>clothes, clothes=>children'::hstore, 'IT'), 'child_clothes', 'get_subcategory shop=>clothes, clothes=>children for IT should be child_clothes');
+
+SELECT is(get_category('shop=>boutique'::hstore, 'DE'), 'shop', 'get_category shop=>boutique for DE should be shop');
+
+SELECT is(get_subcategory('shop=>boutique'::hstore, 'DE'), 'clothes', 'get_subcategory shop=>boutique for DE should be clothes');
+
+SELECT is(get_category('shop=>boutique'::hstore, 'AT'), 'shop', 'get_category shop=>boutique for AT should be shop');
+
+SELECT is(get_subcategory('shop=>boutique'::hstore, 'AT'), 'clothes', 'get_subcategory shop=>boutique for AT should be clothes');
+
+SELECT is(get_category('shop=>boutique'::hstore, 'CH'), 'shop', 'get_category shop=>boutique for CH should be shop');
+
+SELECT is(get_subcategory('shop=>boutique'::hstore, 'CH'), 'clothes', 'get_subcategory shop=>boutique for CH should be clothes');
 
 SELECT is(get_category('shop=>clothes'::hstore, 'DE'), 'shop', 'get_category shop=>clothes for DE should be shop');
 
@@ -5950,25 +6314,77 @@ SELECT is(get_category('shop=>clothes'::hstore, 'CH'), 'shop', 'get_category sho
 
 SELECT is(get_subcategory('shop=>clothes'::hstore, 'CH'), 'clothes', 'get_subcategory shop=>clothes for CH should be clothes');
 
-SELECT is(get_category('shop=>tailor'::hstore, 'DE'), 'shop', 'get_category shop=>tailor for DE should be shop');
+SELECT is(get_category('shop=>fashion'::hstore, 'DE'), 'shop', 'get_category shop=>fashion for DE should be shop');
 
-SELECT is(get_subcategory('shop=>tailor'::hstore, 'DE'), 'clothes', 'get_subcategory shop=>tailor for DE should be clothes');
+SELECT is(get_subcategory('shop=>fashion'::hstore, 'DE'), 'clothes', 'get_subcategory shop=>fashion for DE should be clothes');
 
-SELECT is(get_category('shop=>tailor'::hstore, 'AT'), 'shop', 'get_category shop=>tailor for AT should be shop');
+SELECT is(get_category('shop=>fashion'::hstore, 'AT'), 'shop', 'get_category shop=>fashion for AT should be shop');
 
-SELECT is(get_subcategory('shop=>tailor'::hstore, 'AT'), 'clothes', 'get_subcategory shop=>tailor for AT should be clothes');
+SELECT is(get_subcategory('shop=>fashion'::hstore, 'AT'), 'clothes', 'get_subcategory shop=>fashion for AT should be clothes');
 
-SELECT is(get_category('shop=>tailor'::hstore, 'CH'), 'shop', 'get_category shop=>tailor for CH should be shop');
+SELECT is(get_category('shop=>fashion'::hstore, 'CH'), 'shop', 'get_category shop=>fashion for CH should be shop');
 
-SELECT is(get_subcategory('shop=>tailor'::hstore, 'CH'), 'clothes', 'get_subcategory shop=>tailor for CH should be clothes');
+SELECT is(get_subcategory('shop=>fashion'::hstore, 'CH'), 'clothes', 'get_subcategory shop=>fashion for CH should be clothes');
 
-SELECT is(get_category('shop=>clothes, clothes=>babies'::hstore, 'IT'), 'shop', 'get_category shop=>clothes, clothes=>babies for IT should be shop');
+SELECT is(get_category('shop=>cosmetics'::hstore, 'DE'), 'shop', 'get_category shop=>cosmetics for DE should be shop');
 
-SELECT is(get_subcategory('shop=>clothes, clothes=>babies'::hstore, 'IT'), 'child_clothes', 'get_subcategory shop=>clothes, clothes=>babies for IT should be child_clothes');
+SELECT is(get_subcategory('shop=>cosmetics'::hstore, 'DE'), 'cosmetics', 'get_subcategory shop=>cosmetics for DE should be cosmetics');
 
-SELECT is(get_category('shop=>clothes, clothes=>children'::hstore, 'IT'), 'shop', 'get_category shop=>clothes, clothes=>children for IT should be shop');
+SELECT is(get_category('shop=>cosmetics'::hstore, 'AT'), 'shop', 'get_category shop=>cosmetics for AT should be shop');
 
-SELECT is(get_subcategory('shop=>clothes, clothes=>children'::hstore, 'IT'), 'child_clothes', 'get_subcategory shop=>clothes, clothes=>children for IT should be child_clothes');
+SELECT is(get_subcategory('shop=>cosmetics'::hstore, 'AT'), 'cosmetics', 'get_subcategory shop=>cosmetics for AT should be cosmetics');
+
+SELECT is(get_category('shop=>cosmetics'::hstore, 'CH'), 'shop', 'get_category shop=>cosmetics for CH should be shop');
+
+SELECT is(get_subcategory('shop=>cosmetics'::hstore, 'CH'), 'cosmetics', 'get_subcategory shop=>cosmetics for CH should be cosmetics');
+
+SELECT is(get_category('shop=>department_store'::hstore, 'DE'), 'shop', 'get_category shop=>department_store for DE should be shop');
+
+SELECT is(get_subcategory('shop=>department_store'::hstore, 'DE'), 'department_store', 'get_subcategory shop=>department_store for DE should be department_store');
+
+SELECT is(get_category('shop=>department_store'::hstore, 'AT'), 'shop', 'get_category shop=>department_store for AT should be shop');
+
+SELECT is(get_subcategory('shop=>department_store'::hstore, 'AT'), 'department_store', 'get_subcategory shop=>department_store for AT should be department_store');
+
+SELECT is(get_category('shop=>department_store'::hstore, 'CH'), 'shop', 'get_category shop=>department_store for CH should be shop');
+
+SELECT is(get_subcategory('shop=>department_store'::hstore, 'CH'), 'department_store', 'get_subcategory shop=>department_store for CH should be department_store');
+
+SELECT is(get_category('shop=>bathroom_furnishing'::hstore, 'DE'), 'shop', 'get_category shop=>bathroom_furnishing for DE should be shop');
+
+SELECT is(get_subcategory('shop=>bathroom_furnishing'::hstore, 'DE'), 'furniture', 'get_subcategory shop=>bathroom_furnishing for DE should be furniture');
+
+SELECT is(get_category('shop=>bathroom_furnishing'::hstore, 'AT'), 'shop', 'get_category shop=>bathroom_furnishing for AT should be shop');
+
+SELECT is(get_subcategory('shop=>bathroom_furnishing'::hstore, 'AT'), 'furniture', 'get_subcategory shop=>bathroom_furnishing for AT should be furniture');
+
+SELECT is(get_category('shop=>bathroom_furnishing'::hstore, 'CH'), 'shop', 'get_category shop=>bathroom_furnishing for CH should be shop');
+
+SELECT is(get_subcategory('shop=>bathroom_furnishing'::hstore, 'CH'), 'furniture', 'get_subcategory shop=>bathroom_furnishing for CH should be furniture');
+
+SELECT is(get_category('shop=>carpet'::hstore, 'DE'), 'shop', 'get_category shop=>carpet for DE should be shop');
+
+SELECT is(get_subcategory('shop=>carpet'::hstore, 'DE'), 'furniture', 'get_subcategory shop=>carpet for DE should be furniture');
+
+SELECT is(get_category('shop=>carpet'::hstore, 'AT'), 'shop', 'get_category shop=>carpet for AT should be shop');
+
+SELECT is(get_subcategory('shop=>carpet'::hstore, 'AT'), 'furniture', 'get_subcategory shop=>carpet for AT should be furniture');
+
+SELECT is(get_category('shop=>carpet'::hstore, 'CH'), 'shop', 'get_category shop=>carpet for CH should be shop');
+
+SELECT is(get_subcategory('shop=>carpet'::hstore, 'CH'), 'furniture', 'get_subcategory shop=>carpet for CH should be furniture');
+
+SELECT is(get_category('shop=>curtain'::hstore, 'DE'), 'shop', 'get_category shop=>curtain for DE should be shop');
+
+SELECT is(get_subcategory('shop=>curtain'::hstore, 'DE'), 'furniture', 'get_subcategory shop=>curtain for DE should be furniture');
+
+SELECT is(get_category('shop=>curtain'::hstore, 'AT'), 'shop', 'get_category shop=>curtain for AT should be shop');
+
+SELECT is(get_subcategory('shop=>curtain'::hstore, 'AT'), 'furniture', 'get_subcategory shop=>curtain for AT should be furniture');
+
+SELECT is(get_category('shop=>curtain'::hstore, 'CH'), 'shop', 'get_category shop=>curtain for CH should be shop');
+
+SELECT is(get_subcategory('shop=>curtain'::hstore, 'CH'), 'furniture', 'get_subcategory shop=>curtain for CH should be furniture');
 
 SELECT is(get_category('shop=>furniture'::hstore, 'DE'), 'shop', 'get_category shop=>furniture for DE should be shop');
 
@@ -5981,6 +6397,30 @@ SELECT is(get_subcategory('shop=>furniture'::hstore, 'AT'), 'furniture', 'get_su
 SELECT is(get_category('shop=>furniture'::hstore, 'CH'), 'shop', 'get_category shop=>furniture for CH should be shop');
 
 SELECT is(get_subcategory('shop=>furniture'::hstore, 'CH'), 'furniture', 'get_subcategory shop=>furniture for CH should be furniture');
+
+SELECT is(get_category('shop=>kitchen'::hstore, 'DE'), 'shop', 'get_category shop=>kitchen for DE should be shop');
+
+SELECT is(get_subcategory('shop=>kitchen'::hstore, 'DE'), 'furniture', 'get_subcategory shop=>kitchen for DE should be furniture');
+
+SELECT is(get_category('shop=>kitchen'::hstore, 'AT'), 'shop', 'get_category shop=>kitchen for AT should be shop');
+
+SELECT is(get_subcategory('shop=>kitchen'::hstore, 'AT'), 'furniture', 'get_subcategory shop=>kitchen for AT should be furniture');
+
+SELECT is(get_category('shop=>kitchen'::hstore, 'CH'), 'shop', 'get_category shop=>kitchen for CH should be shop');
+
+SELECT is(get_subcategory('shop=>kitchen'::hstore, 'CH'), 'furniture', 'get_subcategory shop=>kitchen for CH should be furniture');
+
+SELECT is(get_category('shop=>houseware'::hstore, 'DE'), 'shop', 'get_category shop=>houseware for DE should be shop');
+
+SELECT is(get_subcategory('shop=>houseware'::hstore, 'DE'), 'houseware', 'get_subcategory shop=>houseware for DE should be houseware');
+
+SELECT is(get_category('shop=>houseware'::hstore, 'AT'), 'shop', 'get_category shop=>houseware for AT should be shop');
+
+SELECT is(get_subcategory('shop=>houseware'::hstore, 'AT'), 'houseware', 'get_subcategory shop=>houseware for AT should be houseware');
+
+SELECT is(get_category('shop=>houseware'::hstore, 'CH'), 'shop', 'get_category shop=>houseware for CH should be shop');
+
+SELECT is(get_subcategory('shop=>houseware'::hstore, 'CH'), 'houseware', 'get_subcategory shop=>houseware for CH should be houseware');
 
 SELECT is(get_category('opening_hours:covid19=>*, shop=>gift'::hstore, 'DE'), 'shop', 'get_category opening_hours:covid19=>*, shop=>gift for DE should be shop');
 
@@ -6006,6 +6446,30 @@ SELECT is(get_category('shop=>hairdresser'::hstore, 'CH'), 'shop', 'get_category
 
 SELECT is(get_subcategory('shop=>hairdresser'::hstore, 'CH'), 'hairdresser', 'get_subcategory shop=>hairdresser for CH should be hairdresser');
 
+SELECT is(get_category('shop=>hifi'::hstore, 'DE'), 'shop', 'get_category shop=>hifi for DE should be shop');
+
+SELECT is(get_subcategory('shop=>hifi'::hstore, 'DE'), 'hifi', 'get_subcategory shop=>hifi for DE should be hifi');
+
+SELECT is(get_category('shop=>hifi'::hstore, 'AT'), 'shop', 'get_category shop=>hifi for AT should be shop');
+
+SELECT is(get_subcategory('shop=>hifi'::hstore, 'AT'), 'hifi', 'get_subcategory shop=>hifi for AT should be hifi');
+
+SELECT is(get_category('shop=>hifi'::hstore, 'CH'), 'shop', 'get_category shop=>hifi for CH should be shop');
+
+SELECT is(get_subcategory('shop=>hifi'::hstore, 'CH'), 'hifi', 'get_subcategory shop=>hifi for CH should be hifi');
+
+SELECT is(get_category('shop=>interior_decoration'::hstore, 'DE'), 'shop', 'get_category shop=>interior_decoration for DE should be shop');
+
+SELECT is(get_subcategory('shop=>interior_decoration'::hstore, 'DE'), 'interior_decoration', 'get_subcategory shop=>interior_decoration for DE should be interior_decoration');
+
+SELECT is(get_category('shop=>interior_decoration'::hstore, 'AT'), 'shop', 'get_category shop=>interior_decoration for AT should be shop');
+
+SELECT is(get_subcategory('shop=>interior_decoration'::hstore, 'AT'), 'interior_decoration', 'get_subcategory shop=>interior_decoration for AT should be interior_decoration');
+
+SELECT is(get_category('shop=>interior_decoration'::hstore, 'CH'), 'shop', 'get_category shop=>interior_decoration for CH should be shop');
+
+SELECT is(get_subcategory('shop=>interior_decoration'::hstore, 'CH'), 'interior_decoration', 'get_subcategory shop=>interior_decoration for CH should be interior_decoration');
+
 SELECT is(get_category('shop=>jewelry'::hstore, 'DE'), 'shop', 'get_category shop=>jewelry for DE should be shop');
 
 SELECT is(get_subcategory('shop=>jewelry'::hstore, 'DE'), 'jewelry', 'get_subcategory shop=>jewelry for DE should be jewelry');
@@ -6018,6 +6482,102 @@ SELECT is(get_category('shop=>jewelry'::hstore, 'CH'), 'shop', 'get_category sho
 
 SELECT is(get_subcategory('shop=>jewelry'::hstore, 'CH'), 'jewelry', 'get_subcategory shop=>jewelry for CH should be jewelry');
 
+SELECT is(get_category('shop=>massage'::hstore, 'DE'), 'shop', 'get_category shop=>massage for DE should be shop');
+
+SELECT is(get_subcategory('shop=>massage'::hstore, 'DE'), 'massage', 'get_subcategory shop=>massage for DE should be massage');
+
+SELECT is(get_category('shop=>massage'::hstore, 'AT'), 'shop', 'get_category shop=>massage for AT should be shop');
+
+SELECT is(get_subcategory('shop=>massage'::hstore, 'AT'), 'massage', 'get_subcategory shop=>massage for AT should be massage');
+
+SELECT is(get_category('shop=>massage'::hstore, 'CH'), 'shop', 'get_category shop=>massage for CH should be shop');
+
+SELECT is(get_subcategory('shop=>massage'::hstore, 'CH'), 'massage', 'get_subcategory shop=>massage for CH should be massage');
+
+SELECT is(get_category('shop=>music'::hstore, 'DE'), 'shop', 'get_category shop=>music for DE should be shop');
+
+SELECT is(get_subcategory('shop=>music'::hstore, 'DE'), 'music', 'get_subcategory shop=>music for DE should be music');
+
+SELECT is(get_category('shop=>music'::hstore, 'AT'), 'shop', 'get_category shop=>music for AT should be shop');
+
+SELECT is(get_subcategory('shop=>music'::hstore, 'AT'), 'music', 'get_subcategory shop=>music for AT should be music');
+
+SELECT is(get_category('shop=>music'::hstore, 'CH'), 'shop', 'get_category shop=>music for CH should be shop');
+
+SELECT is(get_subcategory('shop=>music'::hstore, 'CH'), 'music', 'get_subcategory shop=>music for CH should be music');
+
+SELECT is(get_category('shop=>musical_instrument'::hstore, 'DE'), 'shop', 'get_category shop=>musical_instrument for DE should be shop');
+
+SELECT is(get_subcategory('shop=>musical_instrument'::hstore, 'DE'), 'musical_instrument', 'get_subcategory shop=>musical_instrument for DE should be musical_instrument');
+
+SELECT is(get_category('shop=>musical_instrument'::hstore, 'AT'), 'shop', 'get_category shop=>musical_instrument for AT should be shop');
+
+SELECT is(get_subcategory('shop=>musical_instrument'::hstore, 'AT'), 'musical_instrument', 'get_subcategory shop=>musical_instrument for AT should be musical_instrument');
+
+SELECT is(get_category('shop=>musical_instrument'::hstore, 'CH'), 'shop', 'get_category shop=>musical_instrument for CH should be shop');
+
+SELECT is(get_subcategory('shop=>musical_instrument'::hstore, 'CH'), 'musical_instrument', 'get_subcategory shop=>musical_instrument for CH should be musical_instrument');
+
+SELECT is(get_category('shop=>photo'::hstore, 'DE'), 'shop', 'get_category shop=>photo for DE should be shop');
+
+SELECT is(get_subcategory('shop=>photo'::hstore, 'DE'), 'photo', 'get_subcategory shop=>photo for DE should be photo');
+
+SELECT is(get_category('shop=>photo'::hstore, 'AT'), 'shop', 'get_category shop=>photo for AT should be shop');
+
+SELECT is(get_subcategory('shop=>photo'::hstore, 'AT'), 'photo', 'get_subcategory shop=>photo for AT should be photo');
+
+SELECT is(get_category('shop=>photo'::hstore, 'CH'), 'shop', 'get_category shop=>photo for CH should be shop');
+
+SELECT is(get_subcategory('shop=>photo'::hstore, 'CH'), 'photo', 'get_subcategory shop=>photo for CH should be photo');
+
+SELECT is(get_category('shop=>pottery'::hstore, 'DE'), 'shop', 'get_category shop=>pottery for DE should be shop');
+
+SELECT is(get_subcategory('shop=>pottery'::hstore, 'DE'), 'pottery', 'get_subcategory shop=>pottery for DE should be pottery');
+
+SELECT is(get_category('shop=>pottery'::hstore, 'AT'), 'shop', 'get_category shop=>pottery for AT should be shop');
+
+SELECT is(get_subcategory('shop=>pottery'::hstore, 'AT'), 'pottery', 'get_subcategory shop=>pottery for AT should be pottery');
+
+SELECT is(get_category('shop=>pottery'::hstore, 'CH'), 'shop', 'get_category shop=>pottery for CH should be shop');
+
+SELECT is(get_subcategory('shop=>pottery'::hstore, 'CH'), 'pottery', 'get_subcategory shop=>pottery for CH should be pottery');
+
+SELECT is(get_category('shop=>second_hand'::hstore, 'DE'), 'shop', 'get_category shop=>second_hand for DE should be shop');
+
+SELECT is(get_subcategory('shop=>second_hand'::hstore, 'DE'), 'second_hand', 'get_subcategory shop=>second_hand for DE should be second_hand');
+
+SELECT is(get_category('shop=>second_hand'::hstore, 'AT'), 'shop', 'get_category shop=>second_hand for AT should be shop');
+
+SELECT is(get_subcategory('shop=>second_hand'::hstore, 'AT'), 'second_hand', 'get_subcategory shop=>second_hand for AT should be second_hand');
+
+SELECT is(get_category('shop=>second_hand'::hstore, 'CH'), 'shop', 'get_category shop=>second_hand for CH should be shop');
+
+SELECT is(get_subcategory('shop=>second_hand'::hstore, 'CH'), 'second_hand', 'get_subcategory shop=>second_hand for CH should be second_hand');
+
+SELECT is(get_category('shop=>tailor'::hstore, 'DE'), 'shop', 'get_category shop=>tailor for DE should be shop');
+
+SELECT is(get_subcategory('shop=>tailor'::hstore, 'DE'), 'tailor', 'get_subcategory shop=>tailor for DE should be tailor');
+
+SELECT is(get_category('shop=>tailor'::hstore, 'AT'), 'shop', 'get_category shop=>tailor for AT should be shop');
+
+SELECT is(get_subcategory('shop=>tailor'::hstore, 'AT'), 'tailor', 'get_subcategory shop=>tailor for AT should be tailor');
+
+SELECT is(get_category('shop=>tailor'::hstore, 'CH'), 'shop', 'get_category shop=>tailor for CH should be shop');
+
+SELECT is(get_subcategory('shop=>tailor'::hstore, 'CH'), 'tailor', 'get_subcategory shop=>tailor for CH should be tailor');
+
+SELECT is(get_category('shop=>ticket'::hstore, 'DE'), 'shop', 'get_category shop=>ticket for DE should be shop');
+
+SELECT is(get_subcategory('shop=>ticket'::hstore, 'DE'), 'ticket', 'get_subcategory shop=>ticket for DE should be ticket');
+
+SELECT is(get_category('shop=>ticket'::hstore, 'AT'), 'shop', 'get_category shop=>ticket for AT should be shop');
+
+SELECT is(get_subcategory('shop=>ticket'::hstore, 'AT'), 'ticket', 'get_subcategory shop=>ticket for AT should be ticket');
+
+SELECT is(get_category('shop=>ticket'::hstore, 'CH'), 'shop', 'get_category shop=>ticket for CH should be shop');
+
+SELECT is(get_subcategory('shop=>ticket'::hstore, 'CH'), 'ticket', 'get_subcategory shop=>ticket for CH should be ticket');
+
 SELECT is(get_category('shop=>toys'::hstore, 'DE'), 'shop', 'get_category shop=>toys for DE should be shop');
 
 SELECT is(get_subcategory('shop=>toys'::hstore, 'DE'), 'toys', 'get_subcategory shop=>toys for DE should be toys');
@@ -6029,6 +6589,134 @@ SELECT is(get_subcategory('shop=>toys'::hstore, 'AT'), 'toys', 'get_subcategory 
 SELECT is(get_category('shop=>toys'::hstore, 'CH'), 'shop', 'get_category shop=>toys for CH should be shop');
 
 SELECT is(get_subcategory('shop=>toys'::hstore, 'CH'), 'toys', 'get_subcategory shop=>toys for CH should be toys');
+
+SELECT is(get_category('shop=>trade'::hstore, 'DE'), 'shop', 'get_category shop=>trade for DE should be shop');
+
+SELECT is(get_subcategory('shop=>trade'::hstore, 'DE'), 'trade', 'get_subcategory shop=>trade for DE should be trade');
+
+SELECT is(get_category('shop=>trade'::hstore, 'AT'), 'shop', 'get_category shop=>trade for AT should be shop');
+
+SELECT is(get_subcategory('shop=>trade'::hstore, 'AT'), 'trade', 'get_subcategory shop=>trade for AT should be trade');
+
+SELECT is(get_category('shop=>trade'::hstore, 'CH'), 'shop', 'get_category shop=>trade for CH should be shop');
+
+SELECT is(get_subcategory('shop=>trade'::hstore, 'CH'), 'trade', 'get_subcategory shop=>trade for CH should be trade');
+
+SELECT is(get_category('shop=>travel_agency'::hstore, 'DE'), 'shop', 'get_category shop=>travel_agency for DE should be shop');
+
+SELECT is(get_subcategory('shop=>travel_agency'::hstore, 'DE'), 'travel_agency', 'get_subcategory shop=>travel_agency for DE should be travel_agency');
+
+SELECT is(get_category('shop=>travel_agency'::hstore, 'AT'), 'shop', 'get_category shop=>travel_agency for AT should be shop');
+
+SELECT is(get_subcategory('shop=>travel_agency'::hstore, 'AT'), 'travel_agency', 'get_subcategory shop=>travel_agency for AT should be travel_agency');
+
+SELECT is(get_category('shop=>travel_agency'::hstore, 'CH'), 'shop', 'get_category shop=>travel_agency for CH should be shop');
+
+SELECT is(get_subcategory('shop=>travel_agency'::hstore, 'CH'), 'travel_agency', 'get_subcategory shop=>travel_agency for CH should be travel_agency');
+
+SELECT is(get_category('shop=>variety_store'::hstore, 'DE'), 'shop', 'get_category shop=>variety_store for DE should be shop');
+
+SELECT is(get_subcategory('shop=>variety_store'::hstore, 'DE'), 'variety_store', 'get_subcategory shop=>variety_store for DE should be variety_store');
+
+SELECT is(get_category('shop=>variety_store'::hstore, 'AT'), 'shop', 'get_category shop=>variety_store for AT should be shop');
+
+SELECT is(get_subcategory('shop=>variety_store'::hstore, 'AT'), 'variety_store', 'get_subcategory shop=>variety_store for AT should be variety_store');
+
+SELECT is(get_category('shop=>variety_store'::hstore, 'CH'), 'shop', 'get_category shop=>variety_store for CH should be shop');
+
+SELECT is(get_subcategory('shop=>variety_store'::hstore, 'CH'), 'variety_store', 'get_subcategory shop=>variety_store for CH should be variety_store');
+
+SELECT is(get_category('shop=>video'::hstore, 'DE'), 'shop', 'get_category shop=>video for DE should be shop');
+
+SELECT is(get_subcategory('shop=>video'::hstore, 'DE'), 'video', 'get_subcategory shop=>video for DE should be video');
+
+SELECT is(get_category('shop=>video'::hstore, 'AT'), 'shop', 'get_category shop=>video for AT should be shop');
+
+SELECT is(get_subcategory('shop=>video'::hstore, 'AT'), 'video', 'get_subcategory shop=>video for AT should be video');
+
+SELECT is(get_category('shop=>video'::hstore, 'CH'), 'shop', 'get_category shop=>video for CH should be shop');
+
+SELECT is(get_subcategory('shop=>video'::hstore, 'CH'), 'video', 'get_subcategory shop=>video for CH should be video');
+
+SELECT is(get_category('shop=>video_games'::hstore, 'DE'), 'shop', 'get_category shop=>video_games for DE should be shop');
+
+SELECT is(get_subcategory('shop=>video_games'::hstore, 'DE'), 'video_games', 'get_subcategory shop=>video_games for DE should be video_games');
+
+SELECT is(get_category('shop=>video_games'::hstore, 'AT'), 'shop', 'get_category shop=>video_games for AT should be shop');
+
+SELECT is(get_subcategory('shop=>video_games'::hstore, 'AT'), 'video_games', 'get_subcategory shop=>video_games for AT should be video_games');
+
+SELECT is(get_category('shop=>video_games'::hstore, 'CH'), 'shop', 'get_category shop=>video_games for CH should be shop');
+
+SELECT is(get_subcategory('shop=>video_games'::hstore, 'CH'), 'video_games', 'get_subcategory shop=>video_games for CH should be video_games');
+
+SELECT is(get_category('shop=>watches'::hstore, 'DE'), 'shop', 'get_category shop=>watches for DE should be shop');
+
+SELECT is(get_subcategory('shop=>watches'::hstore, 'DE'), 'watches', 'get_subcategory shop=>watches for DE should be watches');
+
+SELECT is(get_category('shop=>watches'::hstore, 'AT'), 'shop', 'get_category shop=>watches for AT should be shop');
+
+SELECT is(get_subcategory('shop=>watches'::hstore, 'AT'), 'watches', 'get_subcategory shop=>watches for AT should be watches');
+
+SELECT is(get_category('shop=>watches'::hstore, 'CH'), 'shop', 'get_category shop=>watches for CH should be shop');
+
+SELECT is(get_subcategory('shop=>watches'::hstore, 'CH'), 'watches', 'get_subcategory shop=>watches for CH should be watches');
+
+SELECT is(get_category('shop=>weapons'::hstore, 'DE'), 'shop', 'get_category shop=>weapons for DE should be shop');
+
+SELECT is(get_subcategory('shop=>weapons'::hstore, 'DE'), 'weapons', 'get_subcategory shop=>weapons for DE should be weapons');
+
+SELECT is(get_category('shop=>weapons'::hstore, 'AT'), 'shop', 'get_category shop=>weapons for AT should be shop');
+
+SELECT is(get_subcategory('shop=>weapons'::hstore, 'AT'), 'weapons', 'get_subcategory shop=>weapons for AT should be weapons');
+
+SELECT is(get_category('shop=>weapons'::hstore, 'CH'), 'shop', 'get_category shop=>weapons for CH should be shop');
+
+SELECT is(get_subcategory('shop=>weapons'::hstore, 'CH'), 'weapons', 'get_subcategory shop=>weapons for CH should be weapons');
+
+SELECT is(get_category('shop=>wholesale'::hstore, 'DE'), 'shop', 'get_category shop=>wholesale for DE should be shop');
+
+SELECT is(get_subcategory('shop=>wholesale'::hstore, 'DE'), 'wholesale', 'get_subcategory shop=>wholesale for DE should be wholesale');
+
+SELECT is(get_category('shop=>wholesale'::hstore, 'AT'), 'shop', 'get_category shop=>wholesale for AT should be shop');
+
+SELECT is(get_subcategory('shop=>wholesale'::hstore, 'AT'), 'wholesale', 'get_subcategory shop=>wholesale for AT should be wholesale');
+
+SELECT is(get_category('shop=>wholesale'::hstore, 'CH'), 'shop', 'get_category shop=>wholesale for CH should be shop');
+
+SELECT is(get_subcategory('shop=>wholesale'::hstore, 'CH'), 'wholesale', 'get_subcategory shop=>wholesale for CH should be wholesale');
+
+SELECT is(get_category('shop=>fishing'::hstore, 'DE'), 'shop', 'get_category shop=>fishing for DE should be shop');
+
+SELECT is(get_subcategory('shop=>fishing'::hstore, 'DE'), 'sports', 'get_subcategory shop=>fishing for DE should be sports');
+
+SELECT is(get_category('shop=>fishing'::hstore, 'AT'), 'shop', 'get_category shop=>fishing for AT should be shop');
+
+SELECT is(get_subcategory('shop=>fishing'::hstore, 'AT'), 'sports', 'get_subcategory shop=>fishing for AT should be sports');
+
+SELECT is(get_category('shop=>fishing'::hstore, 'CH'), 'shop', 'get_category shop=>fishing for CH should be shop');
+
+SELECT is(get_subcategory('shop=>fishing'::hstore, 'CH'), 'sports', 'get_subcategory shop=>fishing for CH should be sports');
+
+SELECT is(get_category('shop=>fishing'::hstore, 'FI'), 'shop', 'get_category shop=>fishing for FI should be shop');
+
+SELECT is(get_subcategory('shop=>fishing'::hstore, 'FI'), 'sports', 'get_subcategory shop=>fishing for FI should be sports');
+
+SELECT is(get_category('shop=>hunting'::hstore, 'DE'), 'shop', 'get_category shop=>hunting for DE should be shop');
+
+SELECT is(get_subcategory('shop=>hunting'::hstore, 'DE'), 'sports', 'get_subcategory shop=>hunting for DE should be sports');
+
+SELECT is(get_category('shop=>hunting'::hstore, 'AT'), 'shop', 'get_category shop=>hunting for AT should be shop');
+
+SELECT is(get_subcategory('shop=>hunting'::hstore, 'AT'), 'sports', 'get_subcategory shop=>hunting for AT should be sports');
+
+SELECT is(get_category('shop=>hunting'::hstore, 'CH'), 'shop', 'get_category shop=>hunting for CH should be shop');
+
+SELECT is(get_subcategory('shop=>hunting'::hstore, 'CH'), 'sports', 'get_subcategory shop=>hunting for CH should be sports');
+
+SELECT is(get_category('shop=>hunting'::hstore, 'FI'), 'shop', 'get_category shop=>hunting for FI should be shop');
+
+SELECT is(get_subcategory('shop=>hunting'::hstore, 'FI'), 'sports', 'get_subcategory shop=>hunting for FI should be sports');
 
 SELECT is(get_category('shop=>sports'::hstore, 'DE'), 'shop', 'get_category shop=>sports for DE should be shop');
 
@@ -6062,13 +6750,49 @@ SELECT is(get_category('shop=>outdoor'::hstore, 'FI'), 'shop', 'get_category sho
 
 SELECT is(get_subcategory('shop=>outdoor'::hstore, 'FI'), 'sports', 'get_subcategory shop=>outdoor for FI should be sports');
 
+SELECT is(get_category('shop=>perfumery'::hstore, 'AT'), 'shop', 'get_category shop=>perfumery for AT should be shop');
+
+SELECT is(get_subcategory('shop=>perfumery'::hstore, 'AT'), 'perfumery', 'get_subcategory shop=>perfumery for AT should be perfumery');
+
+SELECT is(get_category('shop=>perfumery'::hstore, 'CH'), 'shop', 'get_category shop=>perfumery for CH should be shop');
+
+SELECT is(get_subcategory('shop=>perfumery'::hstore, 'CH'), 'perfumery', 'get_subcategory shop=>perfumery for CH should be perfumery');
+
+SELECT is(get_category('shop=>perfumery'::hstore, 'DE'), 'shop', 'get_category shop=>perfumery for DE should be shop');
+
+SELECT is(get_subcategory('shop=>perfumery'::hstore, 'DE'), 'perfumery', 'get_subcategory shop=>perfumery for DE should be perfumery');
+
 SELECT is(get_category('shop=>perfumery'::hstore, 'IT'), 'shop', 'get_category shop=>perfumery for IT should be shop');
 
 SELECT is(get_subcategory('shop=>perfumery'::hstore, 'IT'), 'perfumery', 'get_subcategory shop=>perfumery for IT should be perfumery');
 
+SELECT is(get_category('shop=>copyshop'::hstore, 'AT'), 'shop', 'get_category shop=>copyshop for AT should be shop');
+
+SELECT is(get_subcategory('shop=>copyshop'::hstore, 'AT'), 'copyshop', 'get_subcategory shop=>copyshop for AT should be copyshop');
+
+SELECT is(get_category('shop=>copyshop'::hstore, 'CH'), 'shop', 'get_category shop=>copyshop for CH should be shop');
+
+SELECT is(get_subcategory('shop=>copyshop'::hstore, 'CH'), 'copyshop', 'get_subcategory shop=>copyshop for CH should be copyshop');
+
+SELECT is(get_category('shop=>copyshop'::hstore, 'DE'), 'shop', 'get_category shop=>copyshop for DE should be shop');
+
+SELECT is(get_subcategory('shop=>copyshop'::hstore, 'DE'), 'copyshop', 'get_subcategory shop=>copyshop for DE should be copyshop');
+
 SELECT is(get_category('shop=>copyshop'::hstore, 'IT'), 'shop', 'get_category shop=>copyshop for IT should be shop');
 
 SELECT is(get_subcategory('shop=>copyshop'::hstore, 'IT'), 'copyshop', 'get_subcategory shop=>copyshop for IT should be copyshop');
+
+SELECT is(get_category('shop=>lighting'::hstore, 'AT'), 'shop', 'get_category shop=>lighting for AT should be shop');
+
+SELECT is(get_subcategory('shop=>lighting'::hstore, 'AT'), 'lighting', 'get_subcategory shop=>lighting for AT should be lighting');
+
+SELECT is(get_category('shop=>lighting'::hstore, 'CH'), 'shop', 'get_category shop=>lighting for CH should be shop');
+
+SELECT is(get_subcategory('shop=>lighting'::hstore, 'CH'), 'lighting', 'get_subcategory shop=>lighting for CH should be lighting');
+
+SELECT is(get_category('shop=>lighting'::hstore, 'DE'), 'shop', 'get_category shop=>lighting for DE should be shop');
+
+SELECT is(get_subcategory('shop=>lighting'::hstore, 'DE'), 'lighting', 'get_subcategory shop=>lighting for DE should be lighting');
 
 SELECT is(get_category('shop=>lighting'::hstore, 'IT'), 'shop', 'get_category shop=>lighting for IT should be shop');
 
@@ -6350,9 +7074,33 @@ SELECT is(get_category('shop=>car'::hstore, 'CH'), 'mobility', 'get_category sho
 
 SELECT is(get_subcategory('shop=>car'::hstore, 'CH'), 'car_dealer', 'get_subcategory shop=>car for CH should be car_dealer');
 
+SELECT is(get_category('amenity=>car_wash'::hstore, 'AT'), 'mobility', 'get_category amenity=>car_wash for AT should be mobility');
+
+SELECT is(get_subcategory('amenity=>car_wash'::hstore, 'AT'), 'car_wash', 'get_subcategory amenity=>car_wash for AT should be car_wash');
+
+SELECT is(get_category('amenity=>car_wash'::hstore, 'CH'), 'mobility', 'get_category amenity=>car_wash for CH should be mobility');
+
+SELECT is(get_subcategory('amenity=>car_wash'::hstore, 'CH'), 'car_wash', 'get_subcategory amenity=>car_wash for CH should be car_wash');
+
+SELECT is(get_category('amenity=>car_wash'::hstore, 'DE'), 'mobility', 'get_category amenity=>car_wash for DE should be mobility');
+
+SELECT is(get_subcategory('amenity=>car_wash'::hstore, 'DE'), 'car_wash', 'get_subcategory amenity=>car_wash for DE should be car_wash');
+
 SELECT is(get_category('amenity=>car_wash'::hstore, 'IT'), 'mobility', 'get_category amenity=>car_wash for IT should be mobility');
 
 SELECT is(get_subcategory('amenity=>car_wash'::hstore, 'IT'), 'car_wash', 'get_subcategory amenity=>car_wash for IT should be car_wash');
+
+SELECT is(get_category('shop=>motorcycle'::hstore, 'DE'), 'mobility', 'get_category shop=>motorcycle for DE should be mobility');
+
+SELECT is(get_subcategory('shop=>motorcycle'::hstore, 'DE'), 'motorcycle', 'get_subcategory shop=>motorcycle for DE should be motorcycle');
+
+SELECT is(get_category('shop=>motorcycle'::hstore, 'AT'), 'mobility', 'get_category shop=>motorcycle for AT should be mobility');
+
+SELECT is(get_subcategory('shop=>motorcycle'::hstore, 'AT'), 'motorcycle', 'get_subcategory shop=>motorcycle for AT should be motorcycle');
+
+SELECT is(get_category('shop=>motorcycle'::hstore, 'CH'), 'mobility', 'get_category shop=>motorcycle for CH should be mobility');
+
+SELECT is(get_subcategory('shop=>motorcycle'::hstore, 'CH'), 'motorcycle', 'get_subcategory shop=>motorcycle for CH should be motorcycle');
 
 SELECT is(get_category('amenity=>vending_machine, vending=>bicycle_tube'::hstore, 'DE'), 'mobility', 'get_category amenity=>vending_machine, vending=>bicycle_tube for DE should be mobility');
 
@@ -6441,6 +7189,18 @@ SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_t
 SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'IT'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for IT should be mobility');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'IT'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for IT should be public_transport_tickets');
+
+SELECT is(get_category('shop=>tyres'::hstore, 'DE'), 'mobility', 'get_category shop=>tyres for DE should be mobility');
+
+SELECT is(get_subcategory('shop=>tyres'::hstore, 'DE'), 'tyres', 'get_subcategory shop=>tyres for DE should be tyres');
+
+SELECT is(get_category('shop=>tyres'::hstore, 'AT'), 'mobility', 'get_category shop=>tyres for AT should be mobility');
+
+SELECT is(get_subcategory('shop=>tyres'::hstore, 'AT'), 'tyres', 'get_subcategory shop=>tyres for AT should be tyres');
+
+SELECT is(get_category('shop=>tyres'::hstore, 'CH'), 'mobility', 'get_category shop=>tyres for CH should be mobility');
+
+SELECT is(get_subcategory('shop=>tyres'::hstore, 'CH'), 'tyres', 'get_subcategory shop=>tyres for CH should be tyres');
 
 SELECT * FROM finish();
 ROLLBACK;
