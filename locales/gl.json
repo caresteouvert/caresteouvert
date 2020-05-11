@@ -186,7 +186,7 @@
     "hygiene_status": {
       "yes": "O {date}: dispoñíbel",
       "no": "O {date}: non dispoñíbel",
-      "void": "Non hai información, infórmanos"
+      "void": "Non hai información, achéganola"
     },
     "hygiene_entry": {
       "has": "ten",
