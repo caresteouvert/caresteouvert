@@ -128,7 +128,7 @@
     "state": {
       "open": "Aperto durante il blocco",
       "open_adapted": "Posiziona l'attività commerciale aperta durante il blocco con l'adeguato orario di apertura",
-      "partial": "Questo posto fa parte di un brand che ha deciso di restare aperto durante il blocco. Il luogo è aperto o chiuso? Faccelo sapere.",
+      "partial": "Questo posto fa parte di un brand che ha deciso di restare aperto durante il blocco. Il posto è aperto o chiuso? Faccelo sapere.",
       "unknown": "Questo posto dovrebbe essere aperto durante il blocco. È aperto o chiuso? Faccelo sapere.",
       "closed": "Questo posto è chiuso durante il blocco"
     },
