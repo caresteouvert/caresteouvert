@@ -1,13 +1,13 @@
 ---
-title: "Come posso aggiungere un posto mancante su RestiamoAperti.it?"
+title: "Come posso aggiungere un posto mancante su \"Restiamo aperti\"?"
 date: "2020-05-09"
 coverImage: "image-2.png"
 ---
 
 ![](~/assets/it/image-1.png)
 
-> Non riesci a trovare la tua panetteria o farmacia di fiducia su RestiamoAperti.it? Non preoccuparti, con questa guida puoi scoprire come migliorare la nostra mappa collaborativa dei posti aperti durante il lockdown.
-> RestiamoAperti.it si basa sui dati di OpenStreetMap (o OSM), spesso definita come la "Wikipedia delle mappe". OpenStreetMap, infatti, è una mappa del mondo a cui puoi collaborare anche tu, grazie alla tua conoscenza dei luoghi che visiti più spesso.
+> Non riesci a trovare la tua panetteria o farmacia di fiducia su Restiamo aperti? Non preoccuparti, con questa guida puoi scoprire come migliorare la nostra mappa collaborativa dei posti aperti durante il lockdown.
+> Restiamo aperti si basa sui dati di OpenStreetMap (o OSM), spesso definita come la "Wikipedia delle mappe". OpenStreetMap, infatti, è una mappa del mondo a cui puoi collaborare anche tu, grazie alla tua conoscenza dei luoghi che visiti più spesso.
 
 ![](~/assets/it/image-2.png)
 
