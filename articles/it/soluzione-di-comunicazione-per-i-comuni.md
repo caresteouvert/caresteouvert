@@ -1,13 +1,13 @@
 ---
-title: "\"Restiamo Aperti\" : una soluzione di comunicazione per i comuni"
+title: "\"Restiamo aperti\" : una soluzione di comunicazione per i comuni"
 date: "2020-05-11"
 ---
 
-Sempre più spesso i comuni utilizzano le versioni internazioni di "Restiamo Aperti" come soluzione per affrontare la crisi sanitaria causata da Covid19, un esempio è la città di Lione, in Francia, : [“caresteouvert.fr : une carte collaborative des lieux ouverts dans son quartier”](https://www.lyon.fr/actualite/solidarite/caresteouvertfr-une-carte-collaborative-des-lieux-ouverts-dans-son-quartier). Abbiamo quindi deciso di raggruppare tutte le iniziative di cui siamo venuti a conoscenza dulla [pagina dedicata alla stampa](https://blog.caresteouvert.fr/presse/).
+Sempre più spesso i comuni utilizzano le versioni internazioni di "Restiamo aperti" come soluzione per affrontare la crisi sanitaria causata da Covid19, un esempio è la città di Lione, in Francia, : [“caresteouvert.fr : une carte collaborative des lieux ouverts dans son quartier”](https://www.lyon.fr/actualite/solidarite/caresteouvertfr-une-carte-collaborative-des-lieux-ouverts-dans-son-quartier). Abbiamo quindi deciso di raggruppare tutte le iniziative di cui siamo venuti a conoscenza dulla [pagina dedicata alla stampa](https://blog.caresteouvert.fr/presse/).
 
 Ci rivolgiamo quindi ai sindaci e agli assessori comunali : informate i vostri cittadini dell' utilità del nostro servizio durante il blocco.
 
-## Condividere il sito "Restiamo Aperti"
+## Condividere il sito "Restiamo aperti"
 
 Per condividere il sito basta inviare un link al nostro sito [http://restiamoaperti.it](http://restiamoaperti.it), specificando che qui è possibile trovare informazioni riguardanti le aperture e che è possibile inserirle ove assenti. Inoltre, è anche possibile implementare il nostro servizio in siti esterni utilizzando un iframe.
 
