@@ -34,4 +34,4 @@ Anche la mappa e i dati utilizzati sono forniti sotto licenza [licence OdbL](htt
 OpenStreetMap rispetta le condizioni della GDPR. OpenStreetMap è un progetto strutturato, organizzato che [protegge la privacy](https://wiki.osmfoundation.org/wiki/Privacy_Policy). Inoltre, lo scopo principale del progetto è proprio quello di raccogliere dati liberi e utilizzabili da tutti.
 
 
-La comunità di OpenStreetMap è composta non solo da migliaia di cittadini volenterosi, ma anche da aziende e enti pubblici che investono tempo e passione nel costruire un progetto libero per tutti nel rispetto della privacy.
+La comunità di OpenStreetMap è composta non solo da migliaia di cittadini volenterosi, ma anche da aziende ed enti pubblici che investono tempo e passione nel costruire un progetto libero per tutti nel rispetto della privacy.
