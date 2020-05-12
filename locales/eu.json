@@ -67,6 +67,7 @@
     "title": "Lagundu",
     "step1": {
       "title": "Leku hau irekita al dago itxialdi garaian?",
+      "title_normal": "Leku hau irekita al dago?",
       "open": {
         "yes": "bai",
         "no": "ez"
@@ -74,6 +75,7 @@
     },
     "step2": {
       "title": "Itxialdi garaiko irekitze ordutegia",
+      "title_normal": "Irekiera orduak",
       "same_hours": "Ordutegi berdina da",
       "same_hours_without_lockdown": "Ordutegi berdina du itxialditik kanpo",
       "dont_know": "Ez dakit",
@@ -91,7 +93,10 @@
       "access": "Leku honek rezepzioa du bertan",
       "drive_through": "Leku honek autotik jasotzeko zerbitzua du",
       "details": "Aukerazkoa: Itxialdiran beharrezkoak diren xehetasunak gehitu",
-      "details_error": "Hutsa edo 10 eta 200 karaktere artean"
+      "details_normal": "Aukerazkoa: xehetasunak gehitu",
+      "details_error": "Hutsa edo 10 eta 200 karaktere artean",
+      "definite_closing": "Behin betiko itxiera",
+      "details_definite_closing": "Leku honek behin betiko itxi ditu ateak. Zer dago orain horren ordez? Eman ahalik eta xehetasun gehien, adibidez: eraikin huts bat ala obretan, negozio berriak..."
     },
     "submit": "Argitaratu",
     "cancel": "Kantzelatu"
@@ -127,12 +132,26 @@
       "unknown": "Leku honek itxialdi garaian ohiko ala zerbitzu berriak eskaintzeko potentzialki irekita dago. Irekita al itxita al dago? Esaiguzu.",
       "closed": "Itxialdi garaian itxita dagoen lekua"
     },
+    "state_normal": {
+      "open": "Irekita dagoela dioen lekua",
+      "open_adapted": "Ordutegi egokitua duen irekitako lekua",
+      "partial": "Leku hau itxialdi garaian partzialki irekita dagoen marka bati dagokio. Irekita edo itxita al dago? Esaiguzu.",
+      "unknown": "Leku hau itxialdi garaian ohiko ala zerbitzu berriak eskaintzeko potentzialki irekita dago. Irekita al itxita al dago? Esaiguzu.",
+      "closed": "Itxita dagoen lekua"
+    },
     "state_short": {
       "open": "Itxialdi garaian irekita",
       "open_adapted": "Itxialdi garaian irekita",
       "partial": "Potentzialki irekita",
       "unknown": "Potentzialki irekita",
       "closed": "Itxialdi garaian itxita"
+    },
+    "state_short_normal": {
+      "open": "Irekita",
+      "open_adapted": "Irekita",
+      "partial": "Potentzialki irekita",
+      "unknown": "Potentzialki irekita",
+      "closed": "Itxita"
     },
     "delivery": {
       "yes": "Banaketa zerbitzua eskuragarri",
@@ -174,10 +193,11 @@
       "hasnot": "Ez dauka"
     },
     "update_dialog": {
-      "complete": "Zure establezimendua da? Osatu zure informazioarekin",
-      "title": "Zure establezimenduaren informazioa osatu",
-      "contact": "Laguntza behar duzu? Kontaktaiguzu",
-      "use_osm": "Informazioa gehitu dezakezu <a href=\"https://blog.caresteouvert.fr/completer-les-infos-dun-lieu/\" target=\"_blank\">establezimendua OpenStreetMapen zu zeuk editatzen</a>."
+      "complete1": "Zure establezimendua da, edo zure taldekoa?",
+      "complete2": "Itxialdiaren ondoren ikusgarritasuna lortu",
+      "title": "Salmenta puntu kudeatzailea",
+      "promo": "Frankizia baten kudeatzailea edo frankizia sare baten arduraduna zara.\nLortu ikusgaitasuna zure salmenta puntu guztiak \"{brand}\"en aipatuta.\nGure zerbitzuan modu pertsonalizatuan nabarmentzeaz gainera, OpenStreetMap-i esker, gune eta aplikazio mugikor askotan ere agertuko zara.",
+      "contact": "Jar zaitez gurekin harremanetan"
     }
   },
   "opening_hours_editor": {
@@ -214,6 +234,7 @@
     "hotel": "Ostatua",
     "recycling_centre": "Birziklapen zentroa",
     "library": "Liburutegia",
+    "copyshop": "Fotokopiak",
     "health": "Osasuna",
     "pharmacy": "Farmazia",
     "covid19_centre": "Covid-19 buruzko kontsulta zentrua",
@@ -222,6 +243,7 @@
     "condoms": "Kondoi salmenta makina",
     "medical_supply": "Mediku hornidurak",
     "health_center": "Osasun zentroa",
+    "herbalist": "Belardenda",
     "food": "Janaria",
     "supermarket": "Supermerkatua",
     "butcher": "Harakina",
@@ -230,6 +252,7 @@
     "seafood": "Itsaski denda",
     "greengrocer": "Barazki denda",
     "grocery": "Janari denda",
+    "health_food": "Osasun elikagaiak",
     "chocolate": "Txokolatea",
     "tea": "Tea",
     "coffee": "Kafea",
@@ -254,28 +277,60 @@
     "atm": "Kutxazaina",
     "money_transfer": "Diru transferentziak",
     "mobile_money_agent": "Diru aldaketa agente mugikorra",
-    "shop": "Dendak",
+    "clothing_beauty": "Arropa eta edertasuna",
+    "shoes": "Zapatak",
+    "bag": "Poltsak",
+    "beauty": "Edertasun denda",
+    "child_clothes": "Haurren arropa",
+    "clothes": "Arropak",
+    "cosmetics": "Kosmetikoak",
+    "hairdresser": "Ileapaindegia",
+    "jewelry": "Bitxiak",
+    "massage": "Masajea",
+    "tailor": "Jostuna",
+    "perfumery": "Lurrin denda",
+    "chemist": "Kimikaria",
+    "home_equipment": "Etxerako ekipamendua",
     "hardware": "Burdindegia",
+    "bed": "Oheak",
+    "furniture": "Altzariak",
+    "houseware": "Etxerako artikuluak",
+    "interior_decoration": "Barruko dekorazioa",
+    "pottery": "Buztingintza",
+    "watches": "Ordulariak",
+    "lighting": "Argi denda",
+    "hifi": "Hifi",
+    "electronics": "Elektronika denda",
+    "shop": "Dendak",
     "mobile_phone": "Mugikor denda",
     "computer": "Ordenagailu denda",
-    "electronics": "Elektronika denda",
+    "printer_ink": "Inprimagailu tinta",
+    "dry_cleaning": "Garbiketa lehorra",
     "laundry": "Garbitegia",
     "stationery": "Bulegoko materiala",
     "newsagent": "Egunkari saltzailea",
     "pet": "Maskota denda",
     "agrarian": "Nekazaritzako produktuak",
     "flower": "Lorategi / loreak",
-    "chemist": "Kimikaria",
     "sewing": "Mertzeria",
-    "shoes": "Zapatak",
     "books": "Liburudenda",
-    "beauty": "Edertasun denda",
-    "clothes": "Arropak",
-    "furniture": "Altzariak",
+    "art": "Artea",
+    "charity": "Karitate denda",
+    "department_store": "Saltoki handiak",
     "gift": "Opari denda",
-    "hairdresser": "Ileapaindegia",
-    "jewelry": "Bitxiak",
+    "music": "Musika",
+    "musical_instrument": "Musika tresnak",
+    "photo": "Argazkilaritza",
+    "second_hand": "Bigarren eskukoak",
+    "ticket": "Tiketak",
     "toys": "Jostailu denda",
+    "trade": "Merkataritza",
+    "travel_agency": "Bidai agentzia",
+    "variety_store": "Barietate denda",
+    "video": "Bideoak",
+    "video_games": "Bideojokoak",
+    "weapons": "Armak",
+    "wholesale": "Handizkako salmentak",
     "sports": "Kiroldegia",
     "mobility": "Mugikortasuna",
     "fuel": "Gasolindegia",
@@ -283,8 +338,11 @@
     "bicycle": "Bizikleta denda",
     "car": "Garagea",
     "car_dealer": "Auto saltzailea",
+    "car_wash": "Auto garbiketa",
+    "motorcycle": "Motozikletak",
     "bicycle_tube": "Bizikleta kamerak saltzeko makina",
-    "public_transport_tickets": "Garraio publiko txartel makina"
+    "public_transport_tickets": "Garraio publiko txartel makina",
+    "tyres": "Gurpilak"
   },
   "external": {
     "mobile": {
@@ -303,11 +361,7 @@
     "communes": {
       "title": "Udalerri lista"
     },
-    "categories": {
-      "title": "Kategoria lista"
-    },
     "pois": {
-      "title": "Lekuen lista",
       "link": {
         "previous": "Aurreko lekuak",
         "next": "Hurrengo lekuak"
