@@ -67,6 +67,7 @@
     "title": "貢献する",
     "step1": {
       "title": "この場所は封鎖中に開店していますか？",
+      "title_normal": "この場所は開店していますか",
       "open": {
         "yes": "はい",
         "no": "いいえ"
@@ -74,6 +75,7 @@
     },
     "step2": {
       "title": "封鎖中の臨時営業時間",
+      "title_normal": "営業時間",
       "same_hours": "これは同じ時間帯です",
       "same_hours_without_lockdown": "これは封鎖の外側と同じ時間帯です",
       "dont_know": "不明",
@@ -91,7 +93,10 @@
       "access": "この施設は現地に物理的な受付場所があります",
       "drive_through": "この場所にはドライブスルーのサービスがあります",
       "details": "オプション : 封鎖の間に必要な詳細を追加します",
-      "details_error": "空にするか、最低10文字以上入力します"
+      "details_normal": "オプション : 詳細情報を追加",
+      "details_error": "空にするか、最低10文字以上入力します",
+      "definite_closing": "廃業",
+      "details_definite_closing": "この場所は確実に閉店しています。代わりに何かできましたか？できるだけ詳細に教えて下さい。例：建設中の建物、新しいビジネス等..."
     },
     "submit": "公開",
     "cancel": "キャンセル"
@@ -127,12 +132,26 @@
       "unknown": "この場所は封鎖期間中に営業を許可されているかもしれません。開店しているか、閉店しているかを教えて下さい。",
       "closed": "封鎖中に閉店している場所"
     },
+    "state_normal": {
+      "open": "開店中の場所",
+      "open_adapted": "営業時間を変更して開店中の場所",
+      "partial": "施設・店舗が一部開店しているブランドの場所です。開店中か閉店中か教えて下さい。",
+      "unknown": "開店が許可されている可能性があります。開店中か閉店中か教えて下さい。",
+      "closed": "閉店中の場所"
+    },
     "state_short": {
       "open": "封鎖中に開店",
       "open_adapted": "封鎖中に開店",
       "partial": "開店の可能性あり",
       "unknown": "開店の可能性あり",
       "closed": "封鎖中に閉店"
+    },
+    "state_short_normal": {
+      "open": "開店",
+      "open_adapted": "開店",
+      "partial": "開店の可能性あり",
+      "unknown": "開店の可能性あり",
+      "closed": "閉店"
     },
     "delivery": {
       "yes": "配達サービスが利用可",
@@ -174,10 +193,11 @@
       "hasnot": "なし"
     },
     "update_dialog": {
-      "complete": "これはあなたの施設ですか？ぜひ情報を入力してください",
-      "title": "あなたの施設の情報を入力してください",
-      "contact": "手助けが必要なら連絡してください",
-      "use_osm": " <a href=\"https://blog.caresteouvert.fr/completer-les-infos-dun-lieu/\" target=\"_blank\"> OpenStreetMapにある自分の施設を直接編集して</a>情報を追加できます。"
+      "complete1": "これはあなたの施設やグループの一部ですか？",
+      "complete2": "封鎖語の状況を可視化しましょう",
+      "title": "セールスマネージャのポイント",
+      "promo": "あなたはフランチャイズのマネージャまたはフランチャイズネットワークの統括者です。\n営業中の全店舗をリストして\"Ça reste ouvert\"で可視化しましょう。\nこのサービス内で個人設定に合わせて強調表示されるだけでなく、OpenStreetMapによって多数のサイトやモバイルアプリでも表示されるはずです。",
+      "contact": "連絡先"
     }
   },
   "opening_hours_editor": {
@@ -214,6 +234,7 @@
     "hotel": "宿泊",
     "recycling_centre": "リサイクルセンター",
     "library": "図書館",
+    "copyshop": "コピー店",
     "health": "健康",
     "pharmacy": "薬局",
     "covid19_centre": "Covid-19 相談センター",
@@ -222,6 +243,7 @@
     "condoms": "コンドーム自販機",
     "medical_supply": "医療用品店",
     "health_center": "健康センター",
+    "herbalist": "ハーブ店",
     "food": "飲食",
     "supermarket": "スーパーマーケット",
     "butcher": "肉屋",
@@ -230,6 +252,7 @@
     "seafood": "魚屋",
     "greengrocer": "八百屋",
     "grocery": "食料品店",
+    "health_food": "健康食品",
     "chocolate": "チョコレート",
     "tea": "紅茶",
     "coffee": "コーヒー",
@@ -254,28 +277,60 @@
     "atm": "ATM",
     "money_transfer": "海外送金所",
     "mobile_money_agent": "モバイル決済エージェント",
-    "shop": "店舗",
+    "clothing_beauty": "衣類 & 美容",
+    "shoes": "靴",
+    "bag": "バッグ",
+    "beauty": "美容サービス",
+    "child_clothes": "子供服",
+    "clothes": "衣料品店",
+    "cosmetics": "化粧品",
+    "hairdresser": "理美容院",
+    "jewelry": "宝石店",
+    "massage": "マッサージ",
+    "tailor": "仕立て屋",
+    "perfumery": "香水店",
+    "chemist": "化粧品店",
+    "home_equipment": "住宅設備",
     "hardware": "金物",
+    "bed": "寝具",
+    "furniture": "家具",
+    "houseware": "家庭用品",
+    "interior_decoration": "インテリア",
+    "pottery": "陶磁器店",
+    "watches": "腕時計店",
+    "lighting": "照明器具",
+    "hifi": "音響機器",
+    "electronics": "電子機器",
+    "shop": "店舗",
     "mobile_phone": "携帯電話",
     "computer": "コンピュータ",
-    "electronics": "電子機器",
+    "printer_ink": "プリンター・インク",
+    "dry_cleaning": "ドライ・クリーニング",
     "laundry": "洗濯屋",
     "stationery": "文具店",
     "newsagent": "新聞販売店",
     "pet": "ペット店",
     "agrarian": "農業用品店",
     "flower": "園芸用品店",
-    "chemist": "化粧品店",
     "sewing": "裁縫",
-    "shoes": "靴",
     "books": "書店",
-    "beauty": "美容サービス",
-    "clothes": "衣料品店",
-    "furniture": "家具",
+    "art": "美術品",
+    "charity": "チャリティ店",
+    "department_store": "百貨店",
     "gift": "ギフト店",
-    "hairdresser": "理美容院",
-    "jewelry": "宝石店",
+    "music": "音楽",
+    "musical_instrument": "楽器",
+    "photo": "写真",
+    "second_hand": "中古品",
+    "ticket": "チケット店",
     "toys": "おもちゃ屋",
+    "trade": "資材店",
+    "travel_agency": "旅行代理店",
+    "variety_store": "バラエティ・ショップ",
+    "video": "ビデオ",
+    "video_games": "ビデオゲーム",
+    "weapons": "武器",
+    "wholesale": "卸店",
     "sports": "スポーツ",
     "mobility": "モビリティ",
     "fuel": "ガソリンスタンド",
@@ -283,8 +338,11 @@
     "bicycle": "自転車店",
     "car": "ガレージ",
     "car_dealer": "自動車販売店",
+    "car_wash": "洗車",
+    "motorcycle": "オートバイ",
     "bicycle_tube": "自転車チューブ自販機",
-    "public_transport_tickets": "公共交通券売機"
+    "public_transport_tickets": "公共交通券売機",
+    "tyres": "タイヤ"
   },
   "external": {
     "mobile": {
@@ -303,11 +361,7 @@
     "communes": {
       "title": "州リスト"
     },
-    "categories": {
-      "title": "カテゴリーリスト"
-    },
     "pois": {
-      "title": "施設・店舗リスト",
       "link": {
         "previous": "以前の施設・店舗",
         "next": "次の施設・店舗"
