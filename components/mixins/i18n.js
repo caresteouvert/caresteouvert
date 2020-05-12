@@ -1,21 +1,24 @@
 import { mapState } from 'vuex';
 import config from '../../config.json';
-import caresteouvert from '../../assets/caresteouvert.svg';
-import bleibtoffen from '../../assets/bleibtoffen.svg';
-import sigueabierto from '../../assets/sigueabierto.png';
-import segueaberto from '../../assets/segueaberto.png';
-import esobert from '../../assets/esobert.png';
-import ollaanauki from '../../assets/ollaanauki.svg';
-import ezosala from '../../assets/ezosala.svg';
-import caresteouvertMobile from '../../assets/logo_header.png';
-import bleibtoffenMobile from '../../assets/bleibtoffen-mobile.svg';
-import sigueabiertoMobile from '../../assets/sigueabierto-mobile.png';
-import esobertMobile from '../../assets/esobert-mobile.png';
-import segueabertoMobile from '../../assets/segueaberto-mobile.png';
-import ollaanaukiMobile from '../../assets/ollaanauki-mobile.svg';
+import caresteouvert from '../../assets/logo-FR-laptop.svg';
+import bleibtoffen from '../../assets/logo-DE-laptop.svg';
+import sigueabierto from '../../assets/logo-ES-laptop.svg';
+import segueaberto from '../../assets/logo-GA-laptop.svg';
+import esobert from '../../assets/logo-CA-laptop.svg';
+import ollaanauki from '../../assets/logo-FI-laptop.svg';
+import ezosala from '../../assets/logo-CD-laptop.svg';
+import restiamoaperti from '../../assets/logo-IT-laptop.svg';
+import caresteouvertMobile from '../../assets/logo-FR-mobile.svg';
+import bleibtoffenMobile from '../../assets/logo-DE-mobile.svg';
+import sigueabiertoMobile from '../../assets/logo-ES-mobile.svg';
+import esobertMobile from '../../assets/logo-CA-mobile.svg';
+import segueabertoMobile from '../../assets/logo-GA-mobile.svg';
+import ollaanaukiMobile from '../../assets/logo-FI-mobile.svg';
+import ezosalaMobile from '../../assets/logo-CD-mobile.svg';
+import restiamoapertiMobile from '../../assets/logo-IT-mobile.svg';
 import caresteouvertOg from '../../assets/caresteouvert-og.jpg';
 import bleibtoffenOg from '../../assets/bleibtoffen-og.jpg';
-import ezosalaMobile from '../../assets/ezosala-mobile.svg';
+import restiamoapertiOg from '../../assets/restiamoaperti-og.jpg';
 
 function bestLocale(obj, locale) {
   Object.entries(obj).forEach(e => {
@@ -52,7 +55,8 @@ export default {
         segueaberto,
         esobert,
         ollaanauki,
-        ezosala
+        ezosala,
+        restiamoaperti
       }[this.brandId] || caresteouvert;
     },
 
@@ -63,7 +67,8 @@ export default {
         segueaberto: segueabertoMobile,
         esobert: esobertMobile,
         ollaanauki: ollaanaukiMobile,
-        ezosala: ezosalaMobile
+        ezosala: ezosalaMobile,
+        restiamoaperti: restiamoapertiMobile
       }[this.brandId] || caresteouvertMobile;
     },
 
@@ -74,7 +79,8 @@ export default {
         segueaberto,
         esobert,
         ollaanauki,
-        ezosala
+        ezosala,
+        restiamoaperti: restiamoapertiOg
       }[this.brandId] || caresteouvertOg;
     },
 
