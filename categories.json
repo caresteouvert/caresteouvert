@@ -457,7 +457,7 @@
         "shoes": {
           "name": "Shoes",
           "osm_tags": [ { "shop": "shoes" } ],
-          "areas": "all",
+          "-areas": [ "IT" ],
           "form_details": [ "delivery", "drive", "access" ]
         },
         "bag": {
@@ -465,7 +465,7 @@
           "osm_tags": [
             { "shop": "bag" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "areas": [ "DE", "AT", "CH", "FR" ],
           "form_details": [ "delivery", "access" ]
         },
         "beauty": {
@@ -473,7 +473,7 @@
           "osm_tags": [
             { "shop": "beauty" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "areas": [ "DE", "AT", "CH", "FR" ],
           "form_details": [ "delivery", "access" ]
         },
         "child_clothes": {
@@ -481,7 +481,7 @@
           "osm_tags": [
             { "shop": "clothes", "clothes": "babies|children" }
           ],
-          "areas": "all",
+          "areas": [ "IT" ],
           "form_details": [ "delivery", "access" ]
         },
         "clothes": {
@@ -489,7 +489,7 @@
           "osm_tags": [
             { "shop": "boutique|clothes|fashion" }
           ],
-          "areas": "all",
+          "-areas": [ "IT" ],
           "form_details": [ "delivery", "access", "mask" ]
         },
         "cosmetics": {
@@ -497,35 +497,35 @@
           "osm_tags": [
             { "shop": "cosmetics" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "hairdresser": {
           "name": "Hairdresser",
           "osm_tags": [
             { "shop": "hairdresser" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "jewelry": {
           "name": "Jewelry",
           "osm_tags": [
             { "shop": "jewelry" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "massage": {
           "name": "Massage",
           "osm_tags": [
             { "shop": "massage" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR" ]
         },
         "tailor": {
           "name": "Tailor",
           "osm_tags": [
             { "shop": "tailor" }
           ],
-          "areas": "all",
+          "-areas": [ "IT" ],
           "form_details": [ "delivery", "access" ]
         },
         "perfumery": {

@@ -19,7 +19,7 @@ BEGIN
 		RETURN 'drugs';
 	ELSIF (tags->'amenity' = 'bank' AND area LIKE 'CD%') OR (tags->'amenity' = 'atm' AND area LIKE 'CD%') OR (tags->'amenity' = 'money_transfer' AND area LIKE 'CD%') OR (tags->'amenity' = 'mobile_money_agent' AND area LIKE 'CD%') THEN
 		RETURN 'money';
-	ELSIF (tags->'shop' = 'bag' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%') OR (tags->'shop' = 'beauty' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%') OR (tags->'shop' = 'clothes' AND tags->'clothes' IN ('babies', 'children')) OR (tags->'shop' = 'cosmetics' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%') OR (tags->'shop' = 'hairdresser' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%') OR (tags->'shop' = 'jewelry' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%') OR (tags->'shop' = 'massage' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%') OR (tags->'shop' = 'perfumery' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%') OR (tags->'shop' IN ('shoes', 'boutique', 'clothes', 'fashion', 'tailor', 'chemist')) THEN
+	ELSIF (tags->'shop' = 'shoes' AND area NOT LIKE 'IT%') OR (tags->'shop' = 'bag' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'beauty' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'clothes' AND tags->'clothes' IN ('babies', 'children') AND area LIKE 'IT%') OR (tags->'shop' IN ('boutique', 'clothes', 'fashion') AND area NOT LIKE 'IT%') OR (tags->'shop' = 'cosmetics' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'hairdresser' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'jewelry' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'massage' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'tailor' AND area NOT LIKE 'IT%') OR (tags->'shop' = 'perfumery' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%') OR (tags->'shop' = 'chemist') THEN
 		RETURN 'clothing_beauty';
 	ELSIF (tags->'shop' = 'bed' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' IN ('bathroom_furnishing', 'carpet', 'curtain', 'furniture', 'kitchen') AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'houseware' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'interior_decoration' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'pottery' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'watches' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'lighting' AND area SIMILAR TO '(AT|CH|DE|IT|FR)%') OR (tags->'shop' = 'hifi' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' IN ('doityourself', 'electrical', 'fireplace', 'glaziery', 'hardware', 'paint', 'tiles', 'electronics', 'appliance')) OR (tags->'craft' = 'electronics_repair') THEN
 		RETURN 'home_equipment';
@@ -139,25 +139,25 @@ BEGIN
 		RETURN 'money_transfer';
 	ELSIF tags->'amenity' = 'mobile_money_agent' AND area LIKE 'CD%' THEN
 		RETURN 'mobile_money_agent';
-	ELSIF tags->'shop' = 'shoes' THEN
+	ELSIF tags->'shop' = 'shoes' AND area SIMILAR TO '(DE|FR|ES|AD|CH|AT|PH|FI|MC|CD)%' THEN
 		RETURN 'shoes';
-	ELSIF tags->'shop' = 'bag' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%' THEN
+	ELSIF tags->'shop' = 'bag' AND area SIMILAR TO '(DE|AT|CH|FR)%' THEN
 		RETURN 'bag';
-	ELSIF tags->'shop' = 'beauty' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%' THEN
+	ELSIF tags->'shop' = 'beauty' AND area SIMILAR TO '(DE|AT|CH|FR)%' THEN
 		RETURN 'beauty';
-	ELSIF tags->'shop' = 'clothes' AND tags->'clothes' IN ('babies', 'children') THEN
+	ELSIF tags->'shop' = 'clothes' AND tags->'clothes' IN ('babies', 'children') AND area LIKE 'IT%' THEN
 		RETURN 'child_clothes';
-	ELSIF tags->'shop' IN ('boutique', 'clothes', 'fashion') THEN
+	ELSIF tags->'shop' IN ('boutique', 'clothes', 'fashion') AND area SIMILAR TO '(DE|FR|ES|AD|CH|AT|PH|FI|MC|CD)%' THEN
 		RETURN 'clothes';
-	ELSIF tags->'shop' = 'cosmetics' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%' THEN
+	ELSIF tags->'shop' = 'cosmetics' AND area SIMILAR TO '(DE|AT|CH|FR)%' THEN
 		RETURN 'cosmetics';
-	ELSIF tags->'shop' = 'hairdresser' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%' THEN
+	ELSIF tags->'shop' = 'hairdresser' AND area SIMILAR TO '(DE|AT|CH|FR)%' THEN
 		RETURN 'hairdresser';
-	ELSIF tags->'shop' = 'jewelry' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%' THEN
+	ELSIF tags->'shop' = 'jewelry' AND area SIMILAR TO '(DE|AT|CH|FR)%' THEN
 		RETURN 'jewelry';
-	ELSIF tags->'shop' = 'massage' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%' THEN
+	ELSIF tags->'shop' = 'massage' AND area SIMILAR TO '(DE|AT|CH|FR)%' THEN
 		RETURN 'massage';
-	ELSIF tags->'shop' = 'tailor' THEN
+	ELSIF tags->'shop' = 'tailor' AND area SIMILAR TO '(DE|FR|ES|AD|CH|AT|PH|FI|MC|CD)%' THEN
 		RETURN 'tailor';
 	ELSIF tags->'shop' = 'perfumery' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%' THEN
 		RETURN 'perfumery';
