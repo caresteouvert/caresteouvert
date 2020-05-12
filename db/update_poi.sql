@@ -47,6 +47,18 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+-- Is a POI having any contact information
+CREATE OR REPLACE FUNCTION has_contact_tag(tags HSTORE) RETURNS BOOLEAN AS $$
+BEGIN
+	RETURN tags ?| ARRAY[
+		'phone', 'contact:phone', 'email', 'contact:email',
+		'facebook', 'contact:facebook', 'website', 'contact:website', 'brand:website',
+		'mobile', 'contact:mobile',
+		'fax', 'contact:fax'
+	];
+END;
+$$ LANGUAGE plpgsql;
+
 -- Clean-up sub_country values
 CREATE OR REPLACE FUNCTION clean_sub_country(val VARCHAR) RETURNS VARCHAR AS $$
 BEGIN
@@ -80,6 +92,7 @@ CREATE TABLE IF NOT EXISTS poi_osm_next(
 	takeaway VARCHAR DEFAULT 'unknown',
 	hydroalcoholic_gel VARCHAR DEFAULT NULL,
 	mask VARCHAR DEFAULT NULL,
+	has_contact BOOLEAN DEFAULT NULL,
 	country VARCHAR,
 	sub_country VARCHAR,
 	source_status VARCHAR DEFAULT 'osm',
@@ -119,6 +132,7 @@ AS
 		WHEN tags->'takeaway' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'takeaway'
 		ELSE 'unknown'
 	END,
+	has_contact_tag(tags),
 	country_iso2,
 	clean_sub_country(sub_country),
 	hstore_to_jsonb(tags) AS tags
@@ -154,6 +168,7 @@ SELECT
 		WHEN tags->'takeaway' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'takeaway'
 		ELSE 'unknown'
 	END,
+	has_contact_tag(tags),
 	country_iso2,
 	clean_sub_country(sub_country),
 	hstore_to_jsonb(tags)
@@ -163,7 +178,7 @@ WHERE
 	-- Do not edit directly, run "yarn run categories" instead
 	country_iso2 IN ('DE', 'FR', 'ES', 'AD', 'CH', 'AT', 'PH', 'FI', 'MC', 'CD', 'IT') AND ("opening_hours:covid19" != '' OR "amenity" IN ('atm', 'bank', 'bar', 'cafe', 'car_rental', 'car_wash', 'childcare', 'clinic', 'doctors', 'fast_food', 'fuel', 'hospital', 'ice_cream', 'kindergarten', 'library', 'marketplace', 'mobile_money_agent', 'money_transfer', 'pharmacy', 'police', 'post_office', 'pub', 'public_bookcase', 'recycling', 'restaurant', 'townhall', 'vending_machine') OR "office" IN ('employment_agency', 'insurance') OR "shop" IN ('agrarian', 'alcohol', 'appliance', 'art', 'bag', 'bakery', 'bathroom_furnishing', 'beauty', 'bed', 'beverages', 'bicycle', 'books', 'boutique', 'butcher', 'cannery', 'car', 'car_parts', 'car_repair', 'carpet', 'charity', 'cheese', 'chemist', 'chocolate', 'clothes', 'coffee', 'computer', 'confectionery', 'convenience', 'copyshop', 'cosmetics', 'curtain', 'dairy', 'deli', 'department_store', 'doityourself', 'dry_cleaning', 'e-cigarette', 'electrical', 'electronics', 'fabric', 'farm', 'fashion', 'fireplace', 'fishing', 'florist', 'frozen_food', 'funeral_directors', 'furniture', 'garden_centre', 'gas', 'general', 'gift', 'glaziery', 'greengrocer', 'haberdashery', 'hairdresser', 'hardware', 'health_food', 'hearing_aids', 'herbalist', 'hifi', 'honey', 'houseware', 'hunting', 'ice_cream', 'insurance', 'interior_decoration', 'jewelry', 'kiosk', 'kitchen', 'laundry', 'lighting', 'massage', 'medical_supply', 'mobile_phone', 'money_lender', 'motorcycle', 'music', 'musical_instrument', 'newsagent', 'newsagent;tobacco', 'optician', 'outdoor', 'paint', 'pasta', 'pastry', 'perfumery', 'pet', 'photo', 'pottery', 'printer_ink', 'seafood', 'second_hand', 'sewing', 'shoes', 'spices', 'sports', 'stationery', 'supermarket', 'tailor', 'tea', 'ticket', 'tiles', 'tobacco', 'tobacco;newsagent', 'toys', 'trade', 'travel_agency', 'tyres', 'variety_store', 'video', 'video_games', 'watches', 'weapons', 'wholesale', 'wine', 'winery', 'wool') OR "tourism" IN ('hostel', 'hotel', 'information', 'motel') OR "healthcare" IN ('centre', 'clinic', 'doctor', 'hospital', 'laboratory', 'rehabilitation') OR "craft" IN ('electronics_repair', 'optician', 'sewing') OR "tobacco" IN ('only', 'yes')) --CATEGORIES
 )
-INSERT INTO poi_osm_next(fid, geom, name, cat, normalized_cat, brand, brand_wikidata, brand_infos, status, status_order, opening_hours, delivery, takeaway, country, sub_country, tags)
+INSERT INTO poi_osm_next(fid, geom, name, cat, normalized_cat, brand, brand_wikidata, brand_infos, status, status_order, opening_hours, delivery, takeaway, has_contact, country, sub_country, tags)
 SELECT *
 FROM selection
 -- Remove edge cases needing advanced filtering like vending machines
@@ -296,6 +311,8 @@ WHERE pc.osm_id IS NULL;
 REINDEX TABLE poi_osm_next;
 CREATE INDEX poi_osm_next_geom_idx ON poi_osm_next USING GIST(geom);
 CREATE INDEX poi_osm_next_status_idx ON poi_osm_next(status);
+CREATE INDEX poi_osm_next_opening_hours_idx ON poi_osm_next(opening_hours);
+CREATE INDEX poi_osm_next_has_contact_idx ON poi_osm_next(has_contact);
 
 CREATE SCHEMA IF NOT EXISTS previous;
 DROP TABLE IF EXISTS previous.poi_osm CASCADE;
@@ -306,9 +323,17 @@ ALTER TABLE poi_osm_next RENAME TO poi_osm;
 ALTER INDEX poi_osm_next_pkey RENAME TO poi_osm_pkey;
 ALTER INDEX poi_osm_next_geom_idx RENAME TO poi_osm_geom_idx;
 ALTER INDEX poi_osm_next_status_idx RENAME TO poi_osm_status_idx;
+ALTER INDEX poi_osm_next_opening_hours_idx RENAME TO poi_osm_opening_hours_idx;
+ALTER INDEX poi_osm_next_has_contact_idx RENAME TO poi_osm_has_contact_idx;
 
 CREATE OR REPLACE VIEW poi_osm_light AS
 SELECT fid, fid AS id, geom, name, cat, normalized_cat, status, delivery, takeaway, hydroalcoholic_gel, mask
+FROM poi_osm;
+
+
+-- Quality insurance views
+CREATE OR REPLACE VIEW poi_osm_qa AS
+SELECT fid, geom, name, normalized_cat, opening_hours, has_contact
 FROM poi_osm;
 
 
