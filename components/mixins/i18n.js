@@ -3,19 +3,23 @@ import config from '../../config.json';
 import caresteouvert from '../../assets/logo-FR-laptop.svg';
 import bleibtoffen from '../../assets/logo-DE-laptop.svg';
 import sigueabierto from '../../assets/logo-ES-laptop.svg';
-import segueaberto from '../../assets/logo-GA-laptop.svg';
+import segueaberto from '../../assets/logo-GL-laptop.svg';
 import esobert from '../../assets/logo-CA-laptop.svg';
 import ollaanauki from '../../assets/logo-FI-laptop.svg';
 import ezosala from '../../assets/logo-CD-laptop.svg';
 import restiamoaperti from '../../assets/logo-IT-laptop.svg';
+import stayingopen from '../../assets/logo-IE-laptop.svg';
+import taimidoscailte from '../../assets/logo-GA-laptop.svg';
 import caresteouvertMobile from '../../assets/logo-FR-mobile.svg';
 import bleibtoffenMobile from '../../assets/logo-DE-mobile.svg';
 import sigueabiertoMobile from '../../assets/logo-ES-mobile.svg';
 import esobertMobile from '../../assets/logo-CA-mobile.svg';
-import segueabertoMobile from '../../assets/logo-GA-mobile.svg';
+import segueabertoMobile from '../../assets/logo-GL-mobile.svg';
 import ollaanaukiMobile from '../../assets/logo-FI-mobile.svg';
 import ezosalaMobile from '../../assets/logo-CD-mobile.svg';
 import restiamoapertiMobile from '../../assets/logo-IT-mobile.svg';
+import stayingopenMobile from '../../assets/logo-IE-mobile.svg';
+import taimidoscailteMobile from '../../assets/logo-GA-mobile.svg';
 import caresteouvertOg from '../../assets/caresteouvert-og.jpg';
 import bleibtoffenOg from '../../assets/bleibtoffen-og.jpg';
 import restiamoapertiOg from '../../assets/restiamoaperti-og.jpg';
@@ -56,7 +60,9 @@ export default {
         esobert,
         ollaanauki,
         ezosala,
-        restiamoaperti
+        restiamoaperti,
+        stayingopen,
+        taimidoscailte
       }[this.brandId] || caresteouvert;
     },
 
@@ -68,7 +74,9 @@ export default {
         esobert: esobertMobile,
         ollaanauki: ollaanaukiMobile,
         ezosala: ezosalaMobile,
-        restiamoaperti: restiamoapertiMobile
+        restiamoaperti: restiamoapertiMobile,
+        stayingopen: stayingopenMobile,
+        taimidoscailte: taimidoscailteMobile
       }[this.brandId] || caresteouvertMobile;
     },
 
@@ -80,7 +88,9 @@ export default {
         esobert,
         ollaanauki,
         ezosala,
-        restiamoaperti: restiamoapertiOg
+        restiamoaperti: restiamoapertiOg,
+        stayingopen,
+        taimidoscailte
       }[this.brandId] || caresteouvertOg;
     },
 

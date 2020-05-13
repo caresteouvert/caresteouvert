@@ -58,6 +58,16 @@
       "brand_text": "Restiamo aperti",
       "domain": "restiamoaperti.it",
       "defaultLocale": "it"
+    },
+    "stayingopen": {
+      "brand_text": "Staying open",
+      "domain": "stayingopen.ie",
+      "defaultLocale": "en"
+    },
+    "taimidoscailte": {
+      "brand_text": "Taimid Oscailte",
+      "domain": "taimidoscailte.ie",
+      "defaultLocale": "ga"
     }
   },
   "countries": {
