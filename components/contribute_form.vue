@@ -19,7 +19,7 @@
         edit-icon="osm-check"
         step="1"
       >
-        {{ $t(`contribute_form.step1.title${legalStateTitle}`) }}
+        {{ $t('contribute_form.step1.title') }}
       </v-stepper-step>
 
       <v-stepper-content step="1">
@@ -40,7 +40,7 @@
         edit-icon="osm-check"
         step="2"
       >
-        {{ $t(`contribute_form.step2.title${legalStateTitle}`) }}
+        {{ $t('contribute_form.step2.title') }}
       </v-stepper-step>
 
       <v-stepper-content
@@ -108,7 +108,7 @@
         </label>
 
         <label class="d-block pt-4">
-          {{ $t(this.definite_closing ? 'contribute_form.step3.details_definite_closing' : `contribute_form.step3.details${legalStateTitle}`) }}
+          {{ $t(this.definite_closing ? 'contribute_form.step3.details_definite_closing' : 'contribute_form.step3.details') }}
           <v-textarea
             v-model="details"
             class="mt-2"
@@ -131,7 +131,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
 import { apiUrl } from '../config.json';
 import OpeningHoursParser from '../lib/opening_hours_parser';
 import parseId from '../lib/parse_id';
@@ -209,12 +208,6 @@ export default {
   },
 
   computed: {
-    ...mapState(['legalState']),
-
-    legalStateTitle() {
-      return this.legalState === 'open' ? '_normal': '';
-    },
-
     properties() {
       return this.place.properties;
     },
