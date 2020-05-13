@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3738);
+SELECT plan(3740);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6845,6 +6845,10 @@ SELECT is(get_subcategory('shop=>photo'::hstore, 'CH'), 'photo', 'get_subcategor
 SELECT is(get_category('shop=>photo'::hstore, 'FR'), 'shop', 'get_category shop=>photo for FR should be shop');
 
 SELECT is(get_subcategory('shop=>photo'::hstore, 'FR'), 'photo', 'get_subcategory shop=>photo for FR should be photo');
+
+SELECT is(get_category('shop=>photo'::hstore, 'IT'), 'shop', 'get_category shop=>photo for IT should be shop');
+
+SELECT is(get_subcategory('shop=>photo'::hstore, 'IT'), 'photo', 'get_subcategory shop=>photo for IT should be photo');
 
 SELECT is(get_category('shop=>second_hand'::hstore, 'DE'), 'shop', 'get_category shop=>second_hand for DE should be shop');
 

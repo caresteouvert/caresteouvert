@@ -770,7 +770,7 @@
           "osm_tags": [
             { "shop": "photo" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "second_hand": {
           "name": "Second hand",
