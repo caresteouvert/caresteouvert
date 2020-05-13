@@ -67,7 +67,6 @@
     "title": "Contribuir",
     "step1": {
       "title": "Este lugar está aberto durante o isolamento?",
-      "title_normal": "Este lugar está aberto?",
       "open": {
         "yes": "sim",
         "no": "não"
@@ -75,7 +74,6 @@
     },
     "step2": {
       "title": "Horário de funcionamento durante o isolamento",
-      "title_normal": "Horário de funcionamento",
       "same_hours": "Mesmo horário",
       "same_hours_without_lockdown": "É o mesmo horário fora do isolamento",
       "dont_know": "Não sei",
@@ -93,7 +91,6 @@
       "access": "Este lugar possui atendimento presencial",
       "drive_through": "Este lugar possui um serviço de drive-thru",
       "details": "Adicionar os detalhes necessários durante o isolamento",
-      "details_normal": "Adicione mais informações (opcional)",
       "details_error": "Deve estar vazio ou possuir ao menos 10 caracteres",
       "definite_closing": "Fechado definitivamente",
       "details_definite_closing": "Este estabelecimento foi fechado definitivamente. Você pode informar outros detalhes, por exemplo: se está em construção, se outra loja abrirá no lugar da antiga..."
@@ -132,26 +129,12 @@
       "unknown": "Este estabelecimento pode ser autorizado a funcionar durante o isolamento. Avise-nos se estiver aberto ou fechado.",
       "closed": "Lugar fechado durante o isolamento"
     },
-    "state_normal": {
-      "open": "Lugar aberto",
-      "open_adapted": "Lugar aberto com horários adaptados",
-      "partial": "A loja pertence a uma marca na qual as suas lojas estão parcialmente abertas. Avise-nos se esta loja estiver aberta ou fechada.",
-      "unknown": "O lugar pode possuir permissão para funcionar. Avise-nos se estiver aberto ou fechado.",
-      "closed": "Lugar fechado"
-    },
     "state_short": {
       "open": "Aberto durante o isolamento",
       "open_adapted": "Aberto durante o isolamento",
       "partial": "Possivelmente aberto",
       "unknown": "Possivelmente aberto",
       "closed": "Fechado durante o isolamento"
-    },
-    "state_short_normal": {
-      "open": "Aberto",
-      "open_adapted": "Aberto",
-      "partial": "Possivelmente aberto",
-      "unknown": "Possivelmente aberto",
-      "closed": "Fechado"
     },
     "delivery": {
       "yes": "Entrega em domicílio",
