@@ -67,7 +67,6 @@
     "title": "Lagundu",
     "step1": {
       "title": "Leku hau irekita al dago itxialdi garaian?",
-      "title_normal": "Leku hau irekita al dago?",
       "open": {
         "yes": "bai",
         "no": "ez"
@@ -75,7 +74,6 @@
     },
     "step2": {
       "title": "Itxialdi garaiko irekitze ordutegia",
-      "title_normal": "Irekiera orduak",
       "same_hours": "Ordutegi berdina da",
       "same_hours_without_lockdown": "Ordutegi berdina du itxialditik kanpo",
       "dont_know": "Ez dakit",
@@ -93,7 +91,6 @@
       "access": "Leku honek rezepzioa du bertan",
       "drive_through": "Leku honek autotik jasotzeko zerbitzua du",
       "details": "Aukerazkoa: Itxialdiran beharrezkoak diren xehetasunak gehitu",
-      "details_normal": "Aukerazkoa: xehetasunak gehitu",
       "details_error": "Hutsa edo 10 eta 200 karaktere artean",
       "definite_closing": "Behin betiko itxiera",
       "details_definite_closing": "Leku honek behin betiko itxi ditu ateak. Zer dago orain horren ordez? Eman ahalik eta xehetasun gehien, adibidez: eraikin huts bat ala obretan, negozio berriak..."
@@ -132,26 +129,12 @@
       "unknown": "Leku honek itxialdi garaian ohiko ala zerbitzu berriak eskaintzeko potentzialki irekita dago. Irekita al itxita al dago? Esaiguzu.",
       "closed": "Itxialdi garaian itxita dagoen lekua"
     },
-    "state_normal": {
-      "open": "Irekita dagoela dioen lekua",
-      "open_adapted": "Ordutegi egokitua duen irekitako lekua",
-      "partial": "Leku hau itxialdi garaian partzialki irekita dagoen marka bati dagokio. Irekita edo itxita al dago? Esaiguzu.",
-      "unknown": "Leku hau itxialdi garaian ohiko ala zerbitzu berriak eskaintzeko potentzialki irekita dago. Irekita al itxita al dago? Esaiguzu.",
-      "closed": "Itxita dagoen lekua"
-    },
     "state_short": {
       "open": "Itxialdi garaian irekita",
       "open_adapted": "Itxialdi garaian irekita",
       "partial": "Potentzialki irekita",
       "unknown": "Potentzialki irekita",
       "closed": "Itxialdi garaian itxita"
-    },
-    "state_short_normal": {
-      "open": "Irekita",
-      "open_adapted": "Irekita",
-      "partial": "Potentzialki irekita",
-      "unknown": "Potentzialki irekita",
-      "closed": "Itxita"
     },
     "delivery": {
       "yes": "Banaketa zerbitzua eskuragarri",
