@@ -67,7 +67,6 @@
     "title": "Mitmachen",
     "step1": {
       "title": "Hat dieser Ort noch geöffnet?",
-      "title_normal": "Hat dieser Ort geöffnet?",
       "open": {
         "yes": "Geöffnet",
         "no": "Geschlossen"
@@ -75,7 +74,6 @@
     },
     "step2": {
       "title": "Wann hat dieser Ort geöffnet?",
-      "title_normal": "Wann hat dieser Ort geöffnet?",
       "same_hours": "Zu den üblichen Zeiten",
       "same_hours_without_lockdown": "Das sind auch die regulären Öffnungszeiten.",
       "dont_know": "Weiß ich nicht",
@@ -93,7 +91,6 @@
       "access": "Kann dieser Ort betreten werden?",
       "drive_through": "Drive-in vorhanden und geöffnet?",
       "details": "Wichtige Anmerkungen (optional, erzeugt einen OSM-Hinweis und erfordert eine manuelle Bearbeitung durch die OpenStreetMap-Community)",
-      "details_normal": "Wichtige Anmerkungen (optional, erzeugt einen OSM-Hinweis und erfordert eine manuelle Bearbeitung durch die OpenStreetMap-Community)",
       "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein",
       "definite_closing": "Dauerhaft geschlossen",
       "details_definite_closing": "Dieser Ort ist dauerhaft geschlossen. Was ist dort nun? Je mehr Details, desto besser, zum Beispiel: Gebäude abgerissen, neues Geschäft…"
@@ -132,26 +129,12 @@
       "unknown": "Möglicherweise geöffnet.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
       "closed": "Vorübergehend geschlossen"
     },
-    "state_normal": {
-      "open": "Geöffnet",
-      "open_adapted": "Geöffnet mit abweichenden Öffnungszeiten",
-      "partial": "Gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen? Lass es uns wissen.\n",
-      "unknown": "Möglicherweise geöffnet.\n\nGeöffnet oder geschlossen? Lass es uns wissen.\n",
-      "closed": "Geschlossen"
-    },
     "state_short": {
       "open": "weiterhin geöffnet",
       "open_adapted": "weiterhin geöffnet",
       "partial": "möglicherweise geöffnet",
       "unknown": "möglicherweise geöffnet",
       "closed": "vorübergehend geschlossen"
-    },
-    "state_short_normal": {
-      "open": "Geöffnet",
-      "open_adapted": "Geöffnet",
-      "partial": "möglicherweise geöffnet",
-      "unknown": "möglicherweise geöffnet",
-      "closed": "Geschlossen"
     },
     "delivery": {
       "yes": "Lieferung möglich",
