@@ -88,7 +88,7 @@ export default {
       if (this.lastUpdateTooRecent) {
         return this.$t('details.last_update.recent');
       }
-      const format = { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', year: 'numeric' };
+      const format = { weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', year: 'numeric' };
       const date = this.lastUpdate.toLocaleString(this.$i18n.locale, format);
       return this.$t('details.last_update.date', { date });
     }
