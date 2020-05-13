@@ -67,7 +67,6 @@
     "title": "Contribuír",
     "step1": {
       "title": "Este lugar está aberto durante o confinamento?",
-      "title_normal": "Este lugar está aberto",
       "open": {
         "yes": "si",
         "no": "non"
@@ -75,7 +74,6 @@
     },
     "step2": {
       "title": "Horario de apertura durante o confinamento",
-      "title_normal": "Horario de apertura",
       "same_hours": "Son os mesmos horarios",
       "same_hours_without_lockdown": "Son os mesmos horarios que fóra do confinamento",
       "dont_know": "Non o sei",
@@ -93,7 +91,6 @@
       "access": "Este lugar ofrece recepción física no lugar",
       "drive_through": "Este lugar dispón de recollida con coche",
       "details": "Engadir os detalles necesarios durante o confinamento",
-      "details_normal": "Opcional: engadir detalles",
       "details_error": "Ten que estar baleiro ou ter polo menos 10 caracteres de lonxitude",
       "definite_closing": "Pechado de xeito definitivo",
       "details_definite_closing": "Este lugar pechou de xeito definitivo. Que hai agora no seu lugar? Fornece tantos detalles como sexa posíbel, por exemplo: en construción, novos negocios..."
@@ -132,26 +129,12 @@
       "unknown": "Permitida a apertura do lugar durante o confinamento. Aberto ou pechado? Infórmanos",
       "closed": "Lugar pechado durante o confinamento"
     },
-    "state_normal": {
-      "open": "Lugar aberto",
-      "open_adapted": "Lugar aberto con horario adaptado",
-      "partial": "O lugar pertence a unha marca cuxos lugares están abertos de xeito parcial. Está aberto ou pechado? Infórmanos.",
-      "unknown": "Pódese permitir que o lugar sexa aberto. Está aberto ou pechado? Infórmanos.",
-      "closed": "Lugar pechado"
-    },
     "state_short": {
       "open": "Aberto durante o confinamento",
       "open_adapted": "Aberto durante o confinamento",
       "partial": "Potencialmente aberto",
       "unknown": "Potencialmente aberto",
       "closed": "Pechado durante o confinamento"
-    },
-    "state_short_normal": {
-      "open": "Aberto",
-      "open_adapted": "Aberto",
-      "partial": "Potencialmente aberto",
-      "unknown": "Potencialmente aberto",
-      "closed": "Pechado"
     },
     "delivery": {
       "yes": "Venda a domicilio dispoñíbel",
