@@ -3,14 +3,14 @@
   "loading": "Chargement en cours...",
   "covid19-alert": "Respectez les restrictions gouvernementales. Il en va de VOTRE responsabilité.",
   "title": "Ça reste ouvert",
-  "subtitle": "Les lieux ouverts durant et après le confinement",
+  "subtitle": "Les lieux ouverts durant la crise sanitaire",
   "search": "Rechercher",
   "coordinates": "Coordonnées",
   "menu": "Menu",
   "missing_shop": "Commerce manquant ?",
   "backtolist": "Retour à la liste",
   "missing_shop_dialog": {
-    "description": "« {brand} » a pour but de n'afficher que les lieux qui sont autorisés à ouvrir pendant le confinement.\nPlusieurs raisons sont possibles en cas de manque :",
+    "description": "« {brand} » a pour but de n'afficher que les lieux qui sont autorisés à ouvrir pendant la crise sanitaire.\nPlusieurs raisons sont possibles en cas de manque :",
     "add_osm": "Il n'est pas dans OpenStreetMap, ajoutez le :",
     "add_osm_cta": "Suivez le guide",
     "add_category": "Une catégorie de commerces est manquante :",
@@ -33,7 +33,7 @@
     "about": "À propos",
     "contribute": "Contribuer",
     "missing_shop": "Un lieu est manquant ? Rajoutez le !",
-    "description": "« {brand} » est l’outil indispensable pour éviter les déplacements infructueux autour de chez vous durant le confinement et limiter ainsi le risque de contagion.\nCette carte collaborative vous permet de partager simplement les lieux ouverts ou fermés dans votre quartier. C’est la manière la plus efficace et la plus solidaire pour informer au mieux vos voisins et les habitants de votre ville.",
+    "description": "« {brand} » est l’outil indispensable pour éviter les déplacements infructueux autour de chez vous durant la crise sanitaire et limiter ainsi le risque de contagion.\nCette carte collaborative vous permet de partager simplement les lieux ouverts ou fermés dans votre quartier. C’est la manière la plus efficace et la plus solidaire pour informer au mieux vos voisins et les habitants de votre ville.",
     "title": "En savoir plus",
     "press": "Presse",
     "disclaimer": "Mentions légales",
@@ -66,14 +66,14 @@
   "contribute_form": {
     "title": "Contribuer",
     "step1": {
-      "title": "Ce lieu reste-il ouvert pendant le confinement ?",
+      "title": "Ce lieu reste-il ouvert pendant la crise sanitaire ?",
       "open": {
         "yes": "oui",
         "no": "non"
       }
     },
     "step2": {
-      "title": "Horaires d'ouverture pendant le confinement",
+      "title": "Horaires d'ouverture pendant la crise sanitaire",
       "same_hours": "Ce sont les mêmes horaires",
       "same_hours_without_lockdown": "Ce sont les horaires habituels",
       "dont_know": "Je ne sais pas",
@@ -86,11 +86,11 @@
         "yes": "Oui",
         "no": "Non"
       },
-      "delivery": "Ce lieu propose la livraison pendant le confinement",
+      "delivery": "Ce lieu propose la livraison pendant la crise sanitaire",
       "takeaway": "Ce lieu propose la vente à emporter",
       "access": "Ce lieu propose un accueil physique sur place",
       "drive_through": "Ce lieu dispose d'un service drive",
-      "details": "Optionnel : ajouter d'autres détails liés au confinement",
+      "details": "Optionnel : ajouter d'autres détails liés a la crise sanitaire",
       "details_error": "Doit être vide ou compris entre 10 et 200 caractères",
       "definite_closing": "Fermeture définitive",
       "details_definite_closing": "Ce lieu a définitivement fermé ses portes. Qu'y a-t-il à ce jour à la place ? Donnez autant de détails que possible, par exemple : bâtiment vide ou en travaux, nouveau commerce..."
@@ -123,18 +123,18 @@
       "tomorrow": "demain"
     },
     "state": {
-      "open": "Lieu ouvert durant le confinement",
-      "open_adapted": "Lieu ouvert durant le confinement avec des horaires adaptés",
+      "open": "Lieu ouvert durant la crise sanitaire",
+      "open_adapted": "Lieu ouvert durant la crise sanitaire avec des horaires adaptés",
       "partial": "Lieu appartenant à une enseigne dont les établissements sont partiellement ouverts. Ouvert ou fermé ? À vous de le dire.",
-      "unknown": "Lieu potentiellement ouvert durant le confinement pour proposer ses services habituels ou de nouveaux. Ouvert ou fermé ? À vous de le dire.",
-      "closed": "Lieu fermé durant le confinement"
+      "unknown": "Lieu potentiellement ouvert durant la crise sanitaire pour proposer ses services habituels ou de nouveaux. Ouvert ou fermé ? À vous de le dire.",
+      "closed": "Lieu fermé durant la crise sanitaire"
     },
     "state_short": {
-      "open": "Ouvert durant le confinement",
-      "open_adapted": "Ouvert durant le confinement",
+      "open": "Ouvert durant la crise sanitaire",
+      "open_adapted": "Ouvert durant la crise sanitaire",
       "partial": "Potentiellement ouvert",
       "unknown": "Potentiellement ouvert",
-      "closed": "Fermé durant le confinement"
+      "closed": "Fermé durant la crise sanitaire"
     },
     "delivery": {
       "yes": "Service de livraison proposé",
@@ -329,7 +329,7 @@
   },
   "external": {
     "mobile": {
-      "places_around": "Trouvez les lieux ouverts durant le confinement",
+      "places_around": "Trouvez les lieux ouverts durant la crise sanitaire",
       "contribute": "Enrichissez la carte avec vos propres informations",
       "organize": "Mieux se déplacer pour limiter le risque de contagion"
     }
