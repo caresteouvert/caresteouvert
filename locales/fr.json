@@ -42,7 +42,7 @@
     "osm_contributors": "Documentation pour contributeur OpenStreetMap"
   },
   "rgpd": {
-    "consent": "En ces temps de confinement, vous prendriez bien un cookie sur votre ordinateur pour nos statistiques ?",
+    "consent": "En ces temps de crise sanitaire, vous prendriez bien un cookie sur votre ordinateur pour nos statistiques ?",
     "yes": "Oui",
     "no": "Non"
   },
@@ -77,7 +77,7 @@
       "title": "Horaires d'ouverture pendant le confinement",
       "title_normal": "Horaires d'ouverture",
       "same_hours": "Ce sont les mêmes horaires",
-      "same_hours_without_lockdown": "Ce sont les mêmes horaires hors confinement",
+      "same_hours_without_lockdown": "Ce sont les horaires habituels",
       "dont_know": "Je ne sais pas",
       "continue": "Continuer"
     },
