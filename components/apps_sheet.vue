@@ -70,15 +70,15 @@ export default {
 
   data() {
     return {
-      closed: false
+      closed: false,
+      fromApp: this.$route.query.fromapp && this.$route.query.fromapp.startsWith("t")
     };
   },
 
   computed: {
     show() {
       const seen = localStorage.getItem(APPS_INFO_LOCAL_STORAGE);
-      const isApp = this.$route.query.fromapp && this.$route.query.fromapp.startsWith("t");
-      return !this.closed && !isApp && this.appsInfo && !this.isInIframe() && seen === null;
+      return !this.closed && !this.fromApp && this.appsInfo && !this.isInIframe() && seen === null;
     }
   },
 
