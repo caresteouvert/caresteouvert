@@ -67,7 +67,6 @@
     "title": "Cur",
     "step1": {
       "title": "An bhfuil an áit seo oscailte le linn glasála?",
-      "title_normal": "An bhfuil an áit seo oscailte?",
       "open": {
         "yes": "Sea",
         "no": "Níl"
@@ -75,7 +74,6 @@
     },
     "step2": {
       "title": "Uaireanta oscailte le linn glasála",
-      "title_normal": "Uaireanta oscailte",
       "same_hours": "Seo na huaireanta céanna",
       "same_hours_without_lockdown": "Seo na huaireanta céanna lasmuigh de ghlasáil",
       "dont_know": "Níl a fhios agam",
@@ -93,7 +91,6 @@
       "access": "Cuireann an áis seo fáiltiú fisiceach ar an láithreán",
       "drive_through": "Tugann an áis seo tiomáint tríd",
       "details": "Roghnach: cuir na sonraí a theastaíonn le linn an ghlasála",
-      "details_normal": "Roghnach: cuir sonraí leis",
       "details_error": "Ba chóir go mbeadh sé folamh nó 10 gcarachtar ar a laghad",
       "definite_closing": "ag dúnadh cinnte",
       "details_definite_closing": "Tá an áit druidte go buan. Cad atá ann anois? Tabhair an oiread sonraí agus is féidir leat..."
@@ -132,26 +129,12 @@
       "unknown": "Féadfar cead a thabhairt áis a oscailt le linn glasála. An bhfuil sé oscailte nó dúnta? Cuir scéala chugainn.",
       "closed": "Áit dúnta le linn glasála"
     },
-    "state_normal": {
-      "open": "Áit oscailte",
-      "open_adapted": "Áit oscailte le huaireanta oiriúnaithe",
-      "partial": "Baineann áit le branda a bhfuil a áiteanna oscailte go páirteach. An bhfuil sé oscailte nó dúnta? Cuir scéala chugainn.",
-      "unknown": "B’fhéidir go gceadófar áit a oscailt. An bhfuil sé oscailte nó dúnta? Cuir scéala chugainn.",
-      "closed": "Tá an áit druidte."
-    },
     "state_short": {
       "open": "Oscailte le linn an ghlasála",
       "open_adapted": "Oscailte le linn an ghlasála",
       "partial": "b'fhéidir oscail",
       "unknown": "b'fhéidir oscail",
       "closed": "Dunta le linn an ghlasála"
-    },
-    "state_short_normal": {
-      "open": "Oscailte",
-      "open_adapted": "Oscailte",
-      "partial": "b'fhéidir oscail",
-      "unknown": "b'fhéidir oscail",
-      "closed": "Dúnta"
     },
     "delivery": {
       "yes": "Seirbhís seachadta ar fáil",
