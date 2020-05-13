@@ -67,7 +67,6 @@
     "title": "Contribuisci",
     "step1": {
       "title": "Questo posto è aperto durante il blocco?",
-      "title_normal": "Questo posto è aperto",
       "open": {
         "yes": "sì",
         "no": "no"
@@ -75,7 +74,6 @@
     },
     "step2": {
       "title": "Orari di apertura durante il blocco",
-      "title_normal": "Orari di apertura",
       "same_hours": "Negli stessi orari",
       "same_hours_without_lockdown": "Si tratta dello stesso orario al di fuori del blocco",
       "dont_know": "Non lo so",
@@ -93,7 +91,6 @@
       "access": "Le persone possono entrare o rimanere all'interno di questo posto",
       "drive_through": "Questo posto ha un servizio di drive-through",
       "details": "Aggiungi dettagli necessari durante il blocco",
-      "details_normal": "Aggiungi dettagli (opzionale)",
       "details_error": "Dovrebbe essere sia vuoto o con almeno 10 caratteri",
       "definite_closing": "Chiuso definitivamente",
       "details_definite_closing": "Questo posto è chiuso definitivamente. Cosa c'è al suo posto? Dacci quanti più dettagli possibili, ad esempio: nuovo edificio in costruzione, nuova attività..."
@@ -132,26 +129,12 @@
       "unknown": "Questo posto dovrebbe essere aperto durante il blocco. È aperto o chiuso? Faccelo sapere.",
       "closed": "Questo posto è chiuso durante il blocco"
     },
-    "state_normal": {
-      "open": "Aperto",
-      "open_adapted": "Aperto con orario variato",
-      "partial": "Questo posto fa parte di un brand che ha deciso di restare parzialmente aperto. Il posto è aperto o chiuso? Faccelo sapere.",
-      "unknown": "Questo posto potrebbe essere aperto. È aperto o chiuso? Faccelo sapere.",
-      "closed": "Chiuso"
-    },
     "state_short": {
       "open": "Aperto durante il blocco",
       "open_adapted": "Aperto durante il blocco",
       "partial": "Aperto con buona probabilità",
       "unknown": "Aperto con buona probabilità",
       "closed": "Chiuso durante il blocco"
-    },
-    "state_short_normal": {
-      "open": "Aperto",
-      "open_adapted": "Aperto",
-      "partial": "Aperto con buona probabilità",
-      "unknown": "Aperto con buona probabilità",
-      "closed": "Chiuso"
     },
     "delivery": {
       "yes": "Servizio di consegna a domicilio disponibile",
