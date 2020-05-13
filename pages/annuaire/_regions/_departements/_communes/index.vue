@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h1 class="text-center">Les lieux ouverts à {{ commune }} durant le confinement</h1>
+    <h1 class="text-center">Les lieux ouverts à {{ commune }} durant la crise sanitaire</h1>
     <v-list>
       <v-list-item
         v-for="category in categories"

@@ -1,26 +1,21 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import DetailState from '../../components/place/detail_state';
 import ContributeForm from '../../components/contribute_form';
 
 describe('DetailState', () => {
   let localVue;
-  let store;
   const stubs = ['v-alert', 'v-divider', 'v-btn'];
 
   beforeEach(() => {
     localVue = createLocalVue();
     localVue.prototype.$t = () => {};
-    localVue.use(Vuex);
-    store = new Vuex.Store({});
   });
 
   function createWrapper(props) {
     return shallowMount(DetailState, {
       localVue,
       stubs,
-      store,
       propsData: props
     });
   }
