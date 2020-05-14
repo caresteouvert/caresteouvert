@@ -1,10 +1,9 @@
 <template>
-  <div class="d-flex align-center justify-center root blue accent-3">
+  <div class="d-flex align-center justify-center root accent-3">
     <div>
-      <span
-        v-text="$t('loading')"
-        class="white--text title"
-      ></span>
+      <span class="white--text title">
+        <img src="../assets/logo_splash.gif" :alt="$t('loading')">
+      </span>
     </div>
   </div>
 </template>
@@ -17,5 +16,9 @@
   height: 100vh;
   width: 100vw;
   z-index: 30;
+  background-color: #0060B1;
+}
+.title img {
+  max-width: 100%;
 }
 </style>
