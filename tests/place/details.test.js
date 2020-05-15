@@ -104,18 +104,18 @@ describe('Detail', () => {
 
     it('add the facebook url if not present', () => {
       detail.vm.place = { properties: { status: 'open', cat: '', tags: { facebook: 'test' } } };
-      expect(detail.vm.contact('facebook')).toEqual([{ text: 'https://facebook.com/test', href: 'https://facebook.com/test' }]);
+      expect(detail.vm.contact('facebook')).toEqual([{ text: 'test', href: 'https://facebook.com/test' }]);
 
       detail.vm.place.properties.tags.facebook = 'https://facebook.com/test2';
-      expect(detail.vm.contact('facebook')).toEqual([{ text: 'https://facebook.com/test2', href: 'https://facebook.com/test2' }]);
+      expect(detail.vm.contact('facebook')).toEqual([{ text: 'test2', href: 'https://facebook.com/test2' }]);
     });
 
     it('returns website', () => {
       detail.vm.place = { properties: { status: 'open', cat: '', tags: { website: 'example.com' } } };
-      expect(detail.vm.contact('website')).toEqual([{ text: 'http://example.com', href: 'http://example.com' }]);
+      expect(detail.vm.contact('website')).toEqual([{ text: 'example.com', href: 'http://example.com' }]);
 
       detail.vm.place.properties.tags.website = 'http://example.com';
-      expect(detail.vm.contact('website')).toEqual([{ text: 'http://example.com', href: 'http://example.com' }]);
+      expect(detail.vm.contact('website')).toEqual([{ text: 'example.com', href: 'http://example.com' }]);
     });
 
     it('returns email', () => {
