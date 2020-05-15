@@ -50,7 +50,7 @@ export default {
           return { text: phoneText(f), href: `fax:${f}` };
         }
       };
-      const tags = this.place.properties.tags;
+      const tags = Object.assign({ website: this.place.properties.brand_hours || undefined }, this.place.properties.tags);
       return (name) => {
         const value = tags[name] || tags[`contact:${name}`];
         if (!value) return;
