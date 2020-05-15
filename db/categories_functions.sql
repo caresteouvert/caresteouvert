@@ -25,7 +25,7 @@ BEGIN
 		RETURN 'home_equipment';
 	ELSIF (tags->'shop' = 'printer_ink' AND area LIKE 'IT%') OR (tags->'shop' = 'stationery' AND area SIMILAR TO '(AT|CH|DE|FR|IT)%') OR (tags->'shop' = 'agrarian' AND area SIMILAR TO '(AT|CH|DE|FR|IT)%') OR (tags->'shop' = 'books' AND area SIMILAR TO '(DE|AT|CH|IT|FR)%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'books' AND area SIMILAR TO '(DE|AT|CH|IT|FR)%') OR (tags->'amenity' = 'public_bookcase' AND area SIMILAR TO '(DE|AT|CH|IT|FR)%') OR (tags->'shop' = 'art' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'charity' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'department_store' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'gift' AND tags->'opening_hours:covid19' != '' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'music' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'musical_instrument' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'photo' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%') OR (tags->'shop' = 'second_hand' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'ticket' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'toys' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'trade' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'travel_agency' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'variety_store' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'video' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'video_games' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'shop' = 'weapons' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' = 'wholesale' AND area SIMILAR TO '(DE|AT|CH)%') OR (tags->'shop' IN ('fishing', 'hunting', 'sports', 'outdoor') AND area SIMILAR TO '(DE|AT|CH|FI|FR)%') OR (tags->'shop' IN ('mobile_phone', 'computer', 'dry_cleaning', 'laundry', 'kiosk', 'newsagent', 'pet', 'garden_centre', 'florist', 'fabric', 'sewing', 'haberdashery', 'wool')) OR (tags->'craft' = 'sewing') THEN
 		RETURN 'shop';
-	ELSIF (tags->'shop' = 'car' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'amenity' = 'car_wash' AND area SIMILAR TO '(AT|CH|DE|IT|FR)%') OR (tags->'shop' = 'motorcycle' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bicycle_tube') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'public_transport_tickets') OR (tags->'shop' = 'tyres' AND area SIMILAR TO '(DE|AT|CH|FR)%') OR (tags->'amenity' IN ('fuel', 'car_rental')) OR (tags->'shop' IN ('gas', 'bicycle', 'car_parts', 'car_repair')) THEN
+	ELSIF (tags->'shop' = 'car' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%') OR (tags->'amenity' = 'car_wash' AND area SIMILAR TO '(AT|CH|DE|IT|FR)%') OR (tags->'shop' = 'motorcycle' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bicycle_tube') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'public_transport_tickets') OR (tags->'shop' = 'tyres' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%') OR (tags->'amenity' IN ('fuel', 'car_rental')) OR (tags->'shop' IN ('gas', 'bicycle', 'car_parts', 'car_repair')) THEN
 		RETURN 'mobility';
 	ELSIF tags->'opening_hours:covid19' != '' THEN
 		RETURN 'other';
@@ -251,17 +251,17 @@ BEGIN
 		RETURN 'bicycle';
 	ELSIF tags->'shop' IN ('car_parts', 'car_repair') THEN
 		RETURN 'car';
-	ELSIF tags->'shop' = 'car' AND area SIMILAR TO '(DE|AT|CH|FR)%' THEN
+	ELSIF tags->'shop' = 'car' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%' THEN
 		RETURN 'car_dealer';
 	ELSIF tags->'amenity' = 'car_wash' AND area SIMILAR TO '(AT|CH|DE|IT|FR)%' THEN
 		RETURN 'car_wash';
-	ELSIF tags->'shop' = 'motorcycle' AND area SIMILAR TO '(DE|AT|CH|FR)%' THEN
+	ELSIF tags->'shop' = 'motorcycle' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%' THEN
 		RETURN 'motorcycle';
 	ELSIF tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bicycle_tube' THEN
 		RETURN 'bicycle_tube';
 	ELSIF tags->'amenity' = 'vending_machine' AND tags->'vending' = 'public_transport_tickets' THEN
 		RETURN 'public_transport_tickets';
-	ELSIF tags->'shop' = 'tyres' AND area SIMILAR TO '(DE|AT|CH|FR)%' THEN
+	ELSIF tags->'shop' = 'tyres' AND area SIMILAR TO '(DE|AT|CH|FR|IT)%' THEN
 		RETURN 'tyres';
 	ELSE
 		RETURN 'other';
