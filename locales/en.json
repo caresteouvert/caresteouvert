@@ -175,6 +175,9 @@
       "has": "has",
       "hasnot": "has no"
     },
+    "safety": {
+      "mask": "Mask must be worn"
+    },
     "update_dialog": {
       "complete1": "Is this your establishment or part of your group ?",
       "complete2": "Gain visibility after lockdown",
