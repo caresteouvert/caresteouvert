@@ -33,9 +33,18 @@ import {
 } from 'vue-mapbox/dist/vue-mapbox.umd';
 import { Popup } from 'mapbox-gl';
 import * as config from '../config.json';
+import { categories } from '../categories.json';
 import parseId from '../lib/parse_id';
 
 const SOURCE_LAYER = "public.poi_osm_qa";
+
+// List ignored subcategories for QA
+const ignoredSubcategories = [];
+Object.values(categories).forEach(cat => {
+  Object.entries(cat.subcategories)
+  .filter(e => e[1].show_qa === false)
+  .forEach(e => ignoredSubcategories.push(e[0]));
+});
 
 // Load classes from Osmose API
 const osmoseClasses = {};
@@ -100,6 +109,11 @@ export default {
             11, 2,
             14, 5,
             19, 13
+          ],
+          "circle-opacity": [
+            "case",
+            ["in", ["get", "cat"], ["literal", ignoredSubcategories]], 0,
+            1
           ]
         }
       },
@@ -145,12 +159,31 @@ export default {
 
       const p = features[0].properties;
       const osmid = parseId(p.fid);
+      const needsCity = p.name && (!p.has_contact || !p.opening_hours);
 
-      const description = `
+      // Lookup for city name
+      if(needsCity) {
+        fetch(`https://api.jawg.io/places/v1/reverse?access-token=${config.jawgApiKey}&point.lon=${e.mapboxEvent.lngLat.lng}&point.lat=${e.mapboxEvent.lngLat.lat}&layers=locality`)
+        .then(res => res.json())
+        .then(res => {
+          if(res && res.features && res.features.length > 0) {
+            const link = document.getElementById("lnk-search-poi");
+            link.href += `+${encodeURIComponent(res.features[0].properties.label)}`;
+          }
+        });
+      }
+
+      // Display popup
+      let description = `
 <a href="${config.osmUrl}/${osmid.type}/${osmid.id}" target="_blank">${p.name || osmid.type+'/'+osmid.id}</a>
-<br />Catégorie : ${p.normalized_cat}
+<br />Catégorie : ${p.normalized_cat}/${p.cat}
 <br />Infos de contact : ${p.has_contact ? "renseignées" : "non renseignées"}
-<br />Horaires : ${p.opening_hours ? "renseignées" : "non renseignées"}`;
+<br />Horaires : ${p.opening_hours ? "renseignées" : "non renseignées"}
+<br /><a href="http://127.0.0.1:8111/load_object?objects=${p.fid}" target="_blank">Éditer dans JOSM</a>`;
+
+      if(needsCity) {
+        description += ` - <a id="lnk-search-poi" href="https://duckduckgo.com/?q=!+${encodeURIComponent(p.name)}" target="_blank" rel="noopener">Trouver le site web</a>`;
+      }
 
       this.showPopup(e, features[0], description);
     },
@@ -162,7 +195,7 @@ export default {
 
       const p = features[0].properties;
       const description = `
-<a href="${config.osmoseUrl}/error/${p.uuid}" target="_blank">Commerce manquant</a>
+<a href="${config.osmoseUrl}/fr/error/${p.uuid}" target="_blank">Commerce manquant</a>
 <br />${osmoseClasses[p.class] || ""}`;
 
       this.showPopup(e, features[0], description);
