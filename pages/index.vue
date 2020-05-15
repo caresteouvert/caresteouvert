@@ -6,6 +6,7 @@
 import OsmMain from '../components/main';
 import i18nMixin from '../components/mixins/i18n';
 import config from '../config.json';
+import logoSplash from '../assets/logo_splash.gif';
 
 export default {
   mixins: [i18nMixin],
@@ -26,6 +27,9 @@ export default {
         { hid: 'ogdescription', property: 'og:description', content: description },
         { hid: 'ogimage', property: 'og:image', content: `${this.$rootUrl}${this.logoOg.substring(1)}` },
         { hid: 'canonical', rel: 'canonical', href: `${this.$rootUrl}` }
+      ],
+      link: [
+        { rel: 'preload', href: logoSplash, as: 'image' }
       ]
     }
   }

@@ -304,11 +304,21 @@ export default {
     },
 
     infos() {
-      const infos = [];
+      let infos = [];
 
       // Custom POI description
       if (this.place.properties.tags['description:cro']) {
         infos.push(this.place.properties.tags['description:cro']);
+      }
+
+      // Mandatory mask
+      if (this.place.properties.tags['safety:covid19']) {
+        infos = infos.concat(
+          this.place.properties.tags['safety:covid19']
+          .split(';')
+          .filter(v => !this.$t(`details.safety.${v}`).startsWith("details."))
+          .map(v => this.$t(`details.safety.${v}`))
+        );
       }
 
       // Access

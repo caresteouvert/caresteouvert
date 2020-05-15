@@ -175,6 +175,9 @@
       "has": "Il en reste",
       "hasnot": "Il n'y en a plus"
     },
+    "safety": {
+      "mask": "Port du masque obligatoire"
+    },
     "update_dialog": {
       "complete1": "C'est votre établissement ou celui de votre groupe ?",
       "complete2": "Gagnez en visibilité après le confinement",

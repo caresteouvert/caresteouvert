@@ -333,7 +333,7 @@ FROM poi_osm;
 
 -- Quality insurance views
 CREATE OR REPLACE VIEW poi_osm_qa AS
-SELECT fid, geom, name, normalized_cat, opening_hours, has_contact
+SELECT fid, geom, name, normalized_cat, cat, opening_hours, has_contact
 FROM poi_osm;
 
 

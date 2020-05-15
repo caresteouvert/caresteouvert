@@ -1,6 +1,6 @@
 <template>
   <div class="full-width">
-    <div class="d-flex align-center pa-2">
+    <div class="d-flex align-center pa-2 mb-2 elevation-4">
       <v-btn
         icon
         @click="clearSelection"

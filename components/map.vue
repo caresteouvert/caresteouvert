@@ -243,7 +243,7 @@ export default {
       return {
         minzoom: config.minZoomPoi,
         maxzoom: config.maxZoomPoi,
-        tiles: [config.tilesUrl]
+        tiles: [ `${config.tilesUrl}/${source}/{z}/{x}/{y}.pbf` ]
       };
     },
 
