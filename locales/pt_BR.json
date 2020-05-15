@@ -175,6 +175,9 @@
       "has": "possui",
       "hasnot": "não possui"
     },
+    "safety": {
+      "mask": "Uso de máscara obrigatório"
+    },
     "update_dialog": {
       "complete1": "Esta loja é sua ou faz parte de sua franquia?",
       "complete2": "Ganhe visibilidade após o isolamento",
@@ -326,6 +329,9 @@
     "bicycle_tube": "Câmara de ar para bicicleta",
     "public_transport_tickets": "Bilhetes de transporte público",
     "tyres": "Borracharia"
+  },
+  "qa": {
+    "title": "Garantia de qualidade"
   },
   "external": {
     "mobile": {
