@@ -1,3 +1,5 @@
+import PhoneNumber from 'awesome-phonenumber';
+
 export default {
   computed: {
     title() {
@@ -14,7 +16,6 @@ export default {
     },
 
     contact() {
-      var PhoneNumber = require('awesome-phonenumber');
       const phoneText = (p) => {
         return new PhoneNumber(p).getNumber('national');
       };
