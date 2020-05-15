@@ -14,11 +14,9 @@ export default {
     },
 
     contact() {
+      var PhoneNumber = require('awesome-phonenumber');
       const phoneText = (p) => {
-        if(p.startsWith("+33")) {
-          p = p.replace("+33", "0").replace(/ /g, "").split("").reduce((acc, cur, i) => (i % 2 === 0 & i > 0 ? acc + " " + cur : acc + cur));
-        }
-        return p;
+        return new PhoneNumber(p).getNumber('national');
       };
       const phone = (p) => { return { text: phoneText(p), href: `tel:${p}` }; };
       const urlText = (u) => {
