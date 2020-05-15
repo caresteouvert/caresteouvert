@@ -101,7 +101,7 @@ export default {
 <style>
 .xs .autocomplete-big input,
 .sm .autocomplete-big input {
-  font-size: 30px;
+  font-size: 1.5rem;
   line-height: 35px;
   max-height: 35px;
 }
