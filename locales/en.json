@@ -330,6 +330,9 @@
     "public_transport_tickets": "Public transport ticket machine",
     "tyres": "Tyres"
   },
+  "qa": {
+    "title": "Quality assurance"
+  },
   "external": {
     "mobile": {
       "places_around": "Find open places during lockdown",
