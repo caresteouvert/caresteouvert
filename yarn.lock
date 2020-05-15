@@ -2037,6 +2037,11 @@ autoprefixer@^9.6.1:
     postcss "^7.0.27"
     postcss-value-parser "^4.0.3"
 
+awesome-phonenumber@^2.32.0:
+  version "2.32.0"
+  resolved "https://registry.yarnpkg.com/awesome-phonenumber/-/awesome-phonenumber-2.32.0.tgz#8b6018b4ef08023e8c4d3f23af9ef96089b23ef8"
+  integrity sha512-zvOZhZt+cNgGSVOAii5cjz0p9giEAVp3NLJ2tTlClWJYiw32gFIrHTvE+8FUb9cpnOVY+/r1uu+Xiw7oSr89VQ==
+
 aws-sign2@~0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/aws-sign2/-/aws-sign2-0.7.0.tgz#b46e890934a9591f2d2f6f86d7e6a9f1b3fe76a8"
