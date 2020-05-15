@@ -130,18 +130,18 @@ describe('Detail', () => {
     });
 
     it('returns phone', () => {
-      detail.vm.place = { properties: { status: 'open', cat: '', tags: { phone: 'test' } } };
-      expect(detail.vm.contact('phone')).toEqual([{ text: 'test', href: 'tel:test' }]);
+      detail.vm.place = { properties: { status: 'open', cat: '', tags: { phone: '+33123456789' } } };
+      expect(detail.vm.contact('phone')).toEqual([{ text: '01 23 45 67 89', href: 'tel:+33123456789' }]);
     });
 
     it('returns mobile', () => {
-      detail.vm.place = { properties: { status: 'open', cat: '', tags: { mobile: 'test' } } };
-      expect(detail.vm.contact('mobile')).toEqual([{ text: 'test', href: 'tel:test' }]);
+      detail.vm.place = { properties: { status: 'open', cat: '', tags: { mobile: '+33123456789' } } };
+      expect(detail.vm.contact('mobile')).toEqual([{ text: '01 23 45 67 89', href: 'tel:+33123456789' }]);
     });
 
     it('returns fax', () => {
-      detail.vm.place = { properties: { status: 'open', cat: '', tags: { fax: 'test' } } };
-      expect(detail.vm.contact('fax')).toEqual([{ text: 'test', href: 'fax:test' }]);
+      detail.vm.place = { properties: { status: 'open', cat: '', tags: { fax: '+33123456789' } } };
+      expect(detail.vm.contact('fax')).toEqual([{ text: '01 23 45 67 89', href: 'fax:+33123456789' }]);
     });
 
     it('returns nothing', () => {
