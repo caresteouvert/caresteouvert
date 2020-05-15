@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3740);
+SELECT plan(3746);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -7346,6 +7346,10 @@ SELECT is(get_category('shop=>car'::hstore, 'FR'), 'mobility', 'get_category sho
 
 SELECT is(get_subcategory('shop=>car'::hstore, 'FR'), 'car_dealer', 'get_subcategory shop=>car for FR should be car_dealer');
 
+SELECT is(get_category('shop=>car'::hstore, 'IT'), 'mobility', 'get_category shop=>car for IT should be mobility');
+
+SELECT is(get_subcategory('shop=>car'::hstore, 'IT'), 'car_dealer', 'get_subcategory shop=>car for IT should be car_dealer');
+
 SELECT is(get_category('amenity=>car_wash'::hstore, 'AT'), 'mobility', 'get_category amenity=>car_wash for AT should be mobility');
 
 SELECT is(get_subcategory('amenity=>car_wash'::hstore, 'AT'), 'car_wash', 'get_subcategory amenity=>car_wash for AT should be car_wash');
@@ -7381,6 +7385,10 @@ SELECT is(get_subcategory('shop=>motorcycle'::hstore, 'CH'), 'motorcycle', 'get_
 SELECT is(get_category('shop=>motorcycle'::hstore, 'FR'), 'mobility', 'get_category shop=>motorcycle for FR should be mobility');
 
 SELECT is(get_subcategory('shop=>motorcycle'::hstore, 'FR'), 'motorcycle', 'get_subcategory shop=>motorcycle for FR should be motorcycle');
+
+SELECT is(get_category('shop=>motorcycle'::hstore, 'IT'), 'mobility', 'get_category shop=>motorcycle for IT should be mobility');
+
+SELECT is(get_subcategory('shop=>motorcycle'::hstore, 'IT'), 'motorcycle', 'get_subcategory shop=>motorcycle for IT should be motorcycle');
 
 SELECT is(get_category('amenity=>vending_machine, vending=>bicycle_tube'::hstore, 'DE'), 'mobility', 'get_category amenity=>vending_machine, vending=>bicycle_tube for DE should be mobility');
 
@@ -7485,6 +7493,10 @@ SELECT is(get_subcategory('shop=>tyres'::hstore, 'CH'), 'tyres', 'get_subcategor
 SELECT is(get_category('shop=>tyres'::hstore, 'FR'), 'mobility', 'get_category shop=>tyres for FR should be mobility');
 
 SELECT is(get_subcategory('shop=>tyres'::hstore, 'FR'), 'tyres', 'get_subcategory shop=>tyres for FR should be tyres');
+
+SELECT is(get_category('shop=>tyres'::hstore, 'IT'), 'mobility', 'get_category shop=>tyres for IT should be mobility');
+
+SELECT is(get_subcategory('shop=>tyres'::hstore, 'IT'), 'tyres', 'get_subcategory shop=>tyres for IT should be tyres');
 
 SELECT * FROM finish();
 ROLLBACK;

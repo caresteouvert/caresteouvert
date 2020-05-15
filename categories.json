@@ -902,7 +902,7 @@
           "osm_tags": [
             { "shop": "car" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "car_wash": {
           "name": "Car wash",
@@ -917,7 +917,7 @@
           "osm_tags": [
             { "shop": "motorcycle" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "bicycle_tube": {
           "name": "Bicycle tube vending machine",
@@ -937,7 +937,7 @@
           "osm_tags": [
             { "shop": "tyres" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         }
       }
     }
