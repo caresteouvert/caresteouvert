@@ -175,6 +175,9 @@
       "has": "あり",
       "hasnot": "なし"
     },
+    "safety": {
+      "mask": "マスク着用義務あり"
+    },
     "update_dialog": {
       "complete1": "これはあなたの施設やグループの一部ですか？",
       "complete2": "封鎖語の状況を可視化しましょう",
@@ -326,6 +329,9 @@
     "bicycle_tube": "自転車チューブ自販機",
     "public_transport_tickets": "公共交通券売機",
     "tyres": "タイヤ"
+  },
+  "qa": {
+    "title": "品質改善"
   },
   "external": {
     "mobile": {
