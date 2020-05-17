@@ -90,7 +90,7 @@
         "hotel": {
           "name": "Hosting",
           "osm_tags": [ { "tourism": "hotel|motel|hostel" } ],
-          "areas": [ "FR", "AT", "DE", "CH" ]
+          "areas": [ "FR", "AT", "DE", "CH", "IT" ]
         },
         "recycling_centre": {
           "name": "Recycling centre",
@@ -101,7 +101,7 @@
         "library": {
           "name": "Library",
           "osm_tags": [ { "amenity": "library" } ],
-          "areas": [ "AT", "CH", "DE", "FI" ],
+          "areas": [ "AT", "CH", "DE", "FI", "IT" ],
           "show_qa": false
         },
         "copyshop": {
@@ -375,8 +375,7 @@
             { "delivery:covid19": "yes|only" },
             { "takeaway:covid19": "yes|only" }
           ],
-          "areas": "all"
-          ,
+          "areas": "all",
           "form_details": [ "delivery", "takeaway", "access" ]
         },
         "bar": {
@@ -469,7 +468,7 @@
         "shoes": {
           "name": "Shoes",
           "osm_tags": [ { "shop": "shoes" } ],
-          "-areas": [ "IT" ],
+          "areas": "all",
           "form_details": [ "delivery", "drive", "access" ]
         },
         "bag": {
@@ -477,7 +476,7 @@
           "osm_tags": [
             { "shop": "bag" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ],
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
           "form_details": [ "delivery", "access" ]
         },
         "beauty": {
@@ -485,15 +484,7 @@
           "osm_tags": [
             { "shop": "beauty" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ],
-          "form_details": [ "delivery", "access" ]
-        },
-        "child_clothes": {
-          "name": "Child clothes",
-          "osm_tags": [
-            { "shop": "clothes", "clothes": "babies|children" }
-          ],
-          "areas": [ "IT" ],
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
           "form_details": [ "delivery", "access" ]
         },
         "clothes": {
@@ -501,7 +492,7 @@
           "osm_tags": [
             { "shop": "boutique|clothes|fashion" }
           ],
-          "-areas": [ "IT" ],
+          "areas": "all",
           "form_details": [ "delivery", "access", "mask" ]
         },
         "cosmetics": {
@@ -509,35 +500,35 @@
           "osm_tags": [
             { "shop": "cosmetics" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "hairdresser": {
           "name": "Hairdresser",
           "osm_tags": [
             { "shop": "hairdresser" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "jewelry": {
           "name": "Jewelry",
           "osm_tags": [
             { "shop": "jewelry" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "massage": {
           "name": "Massage",
           "osm_tags": [
             { "shop": "massage" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "tailor": {
           "name": "Tailor",
           "osm_tags": [
             { "shop": "tailor" }
           ],
-          "-areas": [ "IT" ],
+          "areas": "all",
           "form_details": [ "delivery", "access" ]
         },
         "perfumery": {
@@ -574,28 +565,28 @@
           "osm_tags": [
             { "shop": "bed" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "furniture": {
           "name": "Furniture",
           "osm_tags": [
             { "shop": "bathroom_furnishing|carpet|curtain|furniture|kitchen" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "houseware": {
           "name": "Houseware",
           "osm_tags": [
             { "shop": "houseware" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "interior_decoration": {
           "name": "Interior decoration",
           "osm_tags": [
             { "shop": "interior_decoration" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ],
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
           "form_details": [ "delivery", "access" ]
         },
         "pottery": {
@@ -603,14 +594,14 @@
           "osm_tags": [
             { "shop": "pottery" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "IT" ]
         },
         "watches": {
           "name": "Watches",
           "osm_tags": [
             { "shop": "watches" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "lighting": {
           "name": "Lighting",
@@ -624,7 +615,7 @@
           "osm_tags": [
             { "shop": "hifi" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "electronics": {
           "name": "Electronics",
@@ -735,14 +726,14 @@
           "osm_tags": [
             { "shop": "art" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "charity": {
           "name": "Charity shop",
           "osm_tags": [
             { "shop": "charity" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ],
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
           "form_details": [ "delivery", "access" ]
         },
         "department_store": {
@@ -750,7 +741,7 @@
           "osm_tags": [
             { "shop": "department_store" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "gift": {
           "name": "Gift shop",
@@ -760,7 +751,7 @@
           "osm_filter_tags": [
             { "opening_hours:covid19": "*" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ],
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
           "-mapfilter": "all"
         },
         "music": {
@@ -768,14 +759,14 @@
           "osm_tags": [
             { "shop": "music" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "musical_instrument": {
           "name": "Musical instrument",
           "osm_tags": [
             { "shop": "musical_instrument" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "photo": {
           "name": "Photo",
@@ -789,56 +780,56 @@
           "osm_tags": [
             { "shop": "second_hand" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "ticket": {
           "name": "Tickets",
           "osm_tags": [
             { "shop": "ticket" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "IT" ]
         },
         "toys": {
           "name": "Toy store",
           "osm_tags": [
             { "shop": "toys" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "trade": {
           "name": "Trade",
           "osm_tags": [
             { "shop": "trade" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "IT" ]
         },
         "travel_agency": {
           "name": "Travel agency",
           "osm_tags": [
             { "shop": "travel_agency" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "IT" ]
         },
         "variety_store": {
           "name": "Variety store",
           "osm_tags": [
             { "shop": "variety_store" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "video": {
           "name": "Videos",
           "osm_tags": [
             { "shop": "video" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "IT" ]
         },
         "video_games": {
           "name": "Video games",
           "osm_tags": [
             { "shop": "video_games" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
         "weapons": {
           "name": "Weapons",
@@ -852,14 +843,14 @@
           "osm_tags": [
             { "shop": "wholesale" }
           ],
-          "areas": [ "DE", "AT", "CH" ]
+          "areas": [ "DE", "AT", "CH", "IT" ]
         },
         "sports": {
           "name": "Sports",
           "osm_tags": [
             { "shop": "fishing|hunting|sports|outdoor" }
           ],
-          "areas": [ "DE", "AT", "CH", "FI", "FR" ],
+          "areas": [ "DE", "AT", "CH", "FI", "FR", "IT" ],
           "form_details": [ "mask", "hydroalcoholic_gel" ]
         }
       }
