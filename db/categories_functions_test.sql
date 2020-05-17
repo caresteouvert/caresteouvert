@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3832);
+SELECT plan(3846);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -861,6 +861,34 @@ SELECT is(get_subcategory('shop=>copyshop'::hstore, 'IT'), 'copyshop', 'get_subc
 SELECT is(get_category('shop=>copyshop'::hstore, 'FR'), 'amenity', 'get_category shop=>copyshop for FR should be amenity');
 
 SELECT is(get_subcategory('shop=>copyshop'::hstore, 'FR'), 'copyshop', 'get_subcategory shop=>copyshop for FR should be copyshop');
+
+SELECT is(get_category('tourism=>museum'::hstore, 'IT'), 'amenity', 'get_category tourism=>museum for IT should be amenity');
+
+SELECT is(get_subcategory('tourism=>museum'::hstore, 'IT'), 'museum', 'get_subcategory tourism=>museum for IT should be museum');
+
+SELECT is(get_category('tourism=>museum'::hstore, 'FR'), 'amenity', 'get_category tourism=>museum for FR should be amenity');
+
+SELECT is(get_subcategory('tourism=>museum'::hstore, 'FR'), 'museum', 'get_subcategory tourism=>museum for FR should be museum');
+
+SELECT is(get_category('historic=>archaeological_site'::hstore, 'IT'), 'amenity', 'get_category historic=>archaeological_site for IT should be amenity');
+
+SELECT is(get_subcategory('historic=>archaeological_site'::hstore, 'IT'), 'museum', 'get_subcategory historic=>archaeological_site for IT should be museum');
+
+SELECT is(get_category('historic=>archaeological_site'::hstore, 'FR'), 'amenity', 'get_category historic=>archaeological_site for FR should be amenity');
+
+SELECT is(get_subcategory('historic=>archaeological_site'::hstore, 'FR'), 'museum', 'get_subcategory historic=>archaeological_site for FR should be museum');
+
+SELECT is(get_category('amenity=>place_of_worship'::hstore, 'IT'), 'amenity', 'get_category amenity=>place_of_worship for IT should be amenity');
+
+SELECT is(get_subcategory('amenity=>place_of_worship'::hstore, 'IT'), 'place_of_worship', 'get_subcategory amenity=>place_of_worship for IT should be place_of_worship');
+
+SELECT is(get_category('leisure=>sports_centre'::hstore, 'IT'), 'amenity', 'get_category leisure=>sports_centre for IT should be amenity');
+
+SELECT is(get_subcategory('leisure=>sports_centre'::hstore, 'IT'), 'sports_centre', 'get_subcategory leisure=>sports_centre for IT should be sports_centre');
+
+SELECT is(get_category('leisure=>beach_resort'::hstore, 'IT'), 'amenity', 'get_category leisure=>beach_resort for IT should be amenity');
+
+SELECT is(get_subcategory('leisure=>beach_resort'::hstore, 'IT'), 'beach_resort', 'get_subcategory leisure=>beach_resort for IT should be beach_resort');
 
 SELECT is(get_category('amenity=>pharmacy'::hstore, 'DE'), 'health', 'get_category amenity=>pharmacy for DE should be health');
 

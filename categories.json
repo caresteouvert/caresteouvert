@@ -111,6 +111,35 @@
           ],
           "areas": [ "AT", "CH", "DE", "IT", "FR" ],
           "form_details": [ "delivery", "drive", "access" ]
+        },
+        "museum": {
+          "name": "Museum",
+          "osm_tags": [
+            { "tourism": "museum" },
+            { "historic": "archaeological_site" }
+          ],
+          "areas": [ "IT", "FR" ]
+        },
+        "place_of_worship": {
+          "name": "Place of worship",
+          "osm_tags": [
+            { "amenity": "place_of_worship" }
+          ],
+          "areas": [ "IT" ]
+        },
+        "sports_centre": {
+          "name": "Sports centre",
+          "osm_tags": [
+            { "leisure": "sports_centre" }
+          ],
+          "areas": [ "IT" ]
+        },
+        "beach_resort": {
+          "name": "Beach resort",
+          "osm_tags": [
+            { "leisure": "beach_resort" }
+          ],
+          "areas": [ "IT" ]
         }
       }
     },
