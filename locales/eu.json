@@ -175,6 +175,9 @@
       "has": "Dauka",
       "hasnot": "Ez dauka"
     },
+    "safety": {
+      "mask": "Maskara derrigor jarri behar da"
+    },
     "update_dialog": {
       "complete1": "Zure establezimendua da, edo zure taldekoa?",
       "complete2": "Itxialdiaren ondoren ikusgarritasuna lortu",
@@ -264,7 +267,6 @@
     "shoes": "Zapatak",
     "bag": "Poltsak",
     "beauty": "Edertasun denda",
-    "child_clothes": "Haurren arropa",
     "clothes": "Arropak",
     "cosmetics": "Kosmetikoak",
     "hairdresser": "Ileapaindegia",
@@ -326,6 +328,9 @@
     "bicycle_tube": "Bizikleta kamerak saltzeko makina",
     "public_transport_tickets": "Garraio publiko txartel makina",
     "tyres": "Gurpilak"
+  },
+  "qa": {
+    "title": "Kalitatea ziurtatzea"
   },
   "external": {
     "mobile": {
