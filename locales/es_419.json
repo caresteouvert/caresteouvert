@@ -118,7 +118,7 @@
       "state_until_date": "{state} hasta {date}",
       "state": {
         "open": "Abierto",
-        "closed": "cerrado"
+        "closed": "Cerrado"
       },
       "tomorrow": "mañana"
     },
