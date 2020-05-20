@@ -10,7 +10,7 @@
   "missing_shop": "Déan tuairisc ar siopa atá ar iarraidh",
   "backtolist": "Ar ais ag an liosta",
   "missing_shop_dialog": {
-    "description": "Níl sé i gceist ag « {brand} »  ach áiteanna a bhfuil cead acu oscailt le linn an ghlasála a thaispeáint. Tá roinnt cúiseanna féideartha ann má tá cuid acu ar iarraidh:",
+    "description": "Níl sé i gceist ag « {brand} »  ach áiteanna a bhfuil cead oscailte acu le linn an ghlasála a thaispeáint. Tá roinnt cúiseanna féideartha ann má tá cuid acu ar iarraidh:",
     "add_osm": "Níl an áit seo ar OpenStreetMap. Cuir leis é:",
     "add_osm_cta": "Lean an treoir",
     "add_category": "Tá catagóir áiteanna ar iarraidh",
