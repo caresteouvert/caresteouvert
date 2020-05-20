@@ -1,9 +1,10 @@
 import { findBrand } from '../lib/url';
 import categories from '../categories.json';
-import categoriesForCountry from '../lib/categories';
+import categoriesForArea from '../lib/categories';
 
 export const state = () => ({
   country: '',
+  area: '',
   brandId: 'DEFAULT',
   categories: [],
   place: null,
@@ -12,8 +13,9 @@ export const state = () => ({
 });
 
 export const mutations = {
-  setCountry (state, country) {
-    state.country = country;
+  setArea (state, area) {
+    state.area = area;
+    state.country = area.split('-')[0];
   },
 
   setPlace (state, place) {
@@ -35,11 +37,11 @@ export const mutations = {
 
 export const getters = {
   categories(state) {
-    return Object.keys(categoriesForCountry(categories, state.country)).concat(['other']);
+    return Object.keys(categoriesForArea(categories, state.area)).concat(['other']);
   },
 
   allCategories(state) {
-    return categoriesForCountry(categories, state.country);
+    return categoriesForArea(categories, state.area);
   },
 };
 

@@ -2,18 +2,18 @@
   "lang": "Português (BR)",
   "loading": "Carregando. Aguarde...",
   "covid19-alert": "Siga as orientações do governo local. A responsabilidade é SUA.",
-  "title": "Permanece aberto",
-  "subtitle": "Lugares que permanecem abertos durante o isolamento",
-  "subtitle-dense": "Lugares abertos durante o isolamento",
+  "title": "Permanece Aberto",
+  "subtitle": "Lugares que permanecem abertos durante e após o isolamento",
   "search": "Buscar...",
   "coordinates": "Coordenadas",
   "menu": "Menu",
   "missing_shop": "Não encontrou uma loja?",
+  "backtolist": "Voltar",
   "missing_shop_dialog": {
-    "description": "\"{brand}\" apenas mostra lugares que possuem permissão para funcionar durante o isolamento. Caso não tenha encontrado uma loja:",
-    "add_osm": "A loja não está no OpenStreetMap. Adicione-a",
+    "description": "\"{brand}\" mostra lugares que possuem permissão para funcionar durante o isolamento. Caso não tenha encontrado uma loja:",
+    "add_osm": "A loja não está no OpenStreetMap. Adicione-a:",
     "add_osm_cta": "Ler o guia",
-    "add_category": "Falta uma categoria de lojas",
+    "add_category": "Falta uma categoria de lojas:",
     "add_category_cta": "Solicitar adição"
   },
   "change_lang": "Alterar idioma",
@@ -25,13 +25,15 @@
   },
   "services": {
     "delivery": "Entrega",
+    "hydroalcoholic_gel": "Álcool em gel",
+    "mask": "Máscaras",
     "takeaway": "Retirada"
   },
   "learnmore": {
     "about": "Sobre",
     "contribute": "Contribua",
     "missing_shop": "Não encontrou uma loja?",
-    "description": "\"{brand}\" é uma ferramenta essencial para evitar movimentações desnecessárias perto de sua casa durante o isolamento, reduzindo assim o risco de contágio.\nEste mapa colaborativo permite, de maneira simples, que você compartilhe lugares abertos e fechados no seu bairro. É uma maneira eficaz e solidária de informar os vizinhos e habitantes da sua cidade.",
+    "description": "\"{brand}\" é uma ferramenta essencial para evitar movimentações desnecessárias perto de sua casa durante o isolamento, reduzindo assim o risco de contágio.\nEste mapa colaborativo permite, de maneira simples, que você compartilhe lugares abertos e fechados em seu bairro. É uma maneira eficaz e solidária de informar os vizinhos e habitantes da sua cidade.",
     "title": "Saiba mais",
     "press": "Imprensa",
     "disclaimer": "Avisos legais",
@@ -46,7 +48,7 @@
   },
   "apps_info": {
     "close": "Fechar",
-    "text": "O aplicativo móvel \"{brand}\" está disponível!",
+    "text": "O aplicativo móvel \"{brand}\" já está disponível!",
     "googleplay": "Google Play",
     "apple": "Apple Store",
     "fdroid": "F-Droid"
@@ -88,8 +90,10 @@
       "takeaway": "Este lugar permite retiradas",
       "access": "Este lugar possui atendimento presencial",
       "drive_through": "Este lugar possui um serviço de drive-thru",
-      "details": "Adicionar os detalhes necessários durante o isolamento",
-      "details_error": "Deve estar vazio ou possuir ao menos 10 caracteres"
+      "details": "Detalhes (opcional)",
+      "details_error": "Deve estar vazio ou possuir ao menos 10 caracteres",
+      "definite_closing": "Fechado definitivamente",
+      "details_definite_closing": "Este estabelecimento foi fechado definitivamente. Você pode informar outros detalhes, por exemplo: se está em construção, se outra loja abrirá no lugar da antiga..."
     },
     "submit": "Publicar",
     "cancel": "Cancelar"
@@ -128,12 +132,12 @@
     "state_short": {
       "open": "Aberto durante o isolamento",
       "open_adapted": "Aberto durante o isolamento",
-      "partial": "Potencialmente aberto",
-      "unknown": "Potencialmente aberto",
+      "partial": "Possivelmente aberto",
+      "unknown": "Possivelmente aberto",
       "closed": "Fechado durante o isolamento"
     },
     "delivery": {
-      "yes": "Disponível para entrega",
+      "yes": "Entrega em domicílio",
       "only": "Somente entregas"
     },
     "takeaway": {
@@ -143,6 +147,10 @@
     "drive_through": {
       "yes": "Drive-thru disponível",
       "only": "Somente drive-thru"
+    },
+    "wheelchair": {
+      "yes": "Acessível para cadeirantes",
+      "limited": "Acesso parcial para cadeirantes"
     },
     "vending": {
       "pizza": "Pizza",
@@ -157,15 +165,25 @@
     },
     "hygiene": "Higiene",
     "hydroalcoholic_gel": "Álcool em gel",
-    "mask": "Máscara",
+    "mask": "Máscaras",
     "hygiene_status": {
-      "yes": "Em {date}: disponível",
-      "no": "Em {date}: indisponível",
+      "yes": "Disponível desde {date}",
+      "no": "Indisponível desde {date}",
       "void": "Nenhuma informação."
     },
     "hygiene_entry": {
       "has": "possui",
       "hasnot": "não possui"
+    },
+    "safety": {
+      "mask": "Uso de máscara obrigatório"
+    },
+    "update_dialog": {
+      "complete1": "Esta loja é sua ou faz parte de sua franquia?",
+      "complete2": "Ganhe visibilidade após o isolamento",
+      "title": "Gerente de filial",
+      "promo": "Você é o gerente de uma filial ou o diretor de uma rede de franquias?\nGanhe visibilidade ao listar todas as suas filiais no \"Ça reste ouvert\"!\nAlém ser destacada de forma personalizado em nosso serviço, a sua loja também aparecerá em vários sites e aplicativos móveis que utilizam o OpenStreetMap.",
+      "contact": "Contate-nos"
     }
   },
   "opening_hours_editor": {
@@ -196,12 +214,13 @@
     "childcare": "Creche",
     "employment_agency": "Agência de empregos",
     "funeral_directors": "Serviços funerários",
-    "bank": "Banco",
-    "moneylender": "Empréstimos",
+    "money": "Dinheiro",
     "insurance": "Seguradora",
     "tourism_info": "Informações turísticas",
     "hotel": "Hospedagem",
     "recycling_centre": "Reciclagem",
+    "library": "Biblioteca e livraria",
+    "copyshop": "Cópias e impressões",
     "health": "Saúde",
     "pharmacy": "Farmácia",
     "covid19_centre": "Centro de consultas sobre Covid-19",
@@ -210,6 +229,7 @@
     "condoms": "Máquinas de preservativos",
     "medical_supply": "Suprimentos médicos",
     "health_center": "Centro de saúde",
+    "herbalist": "Loja de ervas",
     "food": "Alimentação",
     "supermarket": "Supermercado",
     "butcher": "Açougue",
@@ -218,6 +238,7 @@
     "seafood": "Frutos do mar",
     "greengrocer": "Quitanda",
     "grocery": "Mercearia",
+    "health_food": "Produtos naturais",
     "chocolate": "Chocolateria",
     "tea": "Chá",
     "coffee": "Cafeteria",
@@ -226,9 +247,11 @@
     "farm": "Loja rural",
     "marketplace": "Mercado",
     "bakery": "Padaria",
+    "alcohol": "Loja de bebidas",
     "eat": "Restaurante e retirada",
     "vending_machine": "Máquinas de venda automática",
     "restaurant": "Restaurante",
+    "awarded_chef": "Top chef",
     "fast_food": "Fast-food",
     "ice_cream": "Sorveteria",
     "cafe": "Cafeteria",
@@ -236,42 +259,101 @@
     "drugs": "Cigarro e álcool",
     "tobacco": "Tabacaria",
     "e_cigarette": "Cigarros eletrônicos",
-    "alcohol": "Loja de bebidas",
-    "shop": "Lojas",
+    "bank": "Banco",
+    "atm": "Caixa eletrônico",
+    "money_transfer": "Transferência bancária",
+    "mobile_money_agent": "Dinheiro móvel",
+    "clothing_beauty": "Beleza e moda",
+    "shoes": "Sapataria",
+    "bag": "Malas e bolsas",
+    "beauty": "Produtos de beleza",
+    "clothes": "Loja de roupas",
+    "cosmetics": "Cosméticos",
+    "hairdresser": "Cabeleireiro",
+    "jewelry": "Joalheria",
+    "massage": "Massagens",
+    "tailor": "Alfaiate",
+    "perfumery": "Perfumaria",
+    "chemist": "Cosméticos e beleza",
+    "home_equipment": "Artigos para casa",
     "hardware": "Ferramentas",
+    "bed": "Colchões e artigos de cama",
+    "furniture": "Loja de móveis",
+    "houseware": "Utensílios domésticos",
+    "interior_decoration": "Decoração de interiores",
+    "pottery": "Artigos em cerâmica",
+    "watches": "Relojoaria",
+    "lighting": "Loja de iluminação",
+    "hifi": "Aparelhos de som",
+    "electronics": "Eletrônicos",
+    "shop": "Lojas",
     "mobile_phone": "Telefonia",
     "computer": "Computadores",
-    "electronics": "Eletrônicos",
+    "printer_ink": "Cartucho de impressora",
+    "dry_cleaning": "Lavagem a seco",
     "laundry": "Lavanderia",
     "stationery": "Papelaria",
     "newsagent": "Banca",
     "pet": "Pet shop",
     "agrarian": "Produtos agrícolas",
     "flower": "Jardinagem e floricultura",
-    "chemist": "Cosméticos e beleza",
     "sewing": "Costureira",
-    "shoes": "Sapataria",
     "books": "Livraria",
-    "beauty": "Produtos de beleza",
-    "clothes": "Loja de roupas",
+    "art": "Produtos artísticos",
+    "charity": "Loja de caridade",
+    "department_store": "Loja de departamento",
     "gift": "Loja de presentes",
-    "hairdresser": "Cabeleireiro",
-    "jewelry": "Joalheria",
+    "music": "Loja de CDs",
+    "musical_instrument": "Instrumentos musicais",
+    "photo": "Fotografia",
+    "second_hand": "Produtos usados",
+    "ticket": "Bilheteria",
     "toys": "Loja de brinquedos",
+    "trade": "Fornecedor de materiais",
+    "travel_agency": "Agência de turismo",
+    "variety_store": "Loja de R$ 1,99",
+    "video": "Locadora de filmes",
+    "video_games": "Jogos eletrônicos",
+    "weapons": "Loja de armas",
+    "wholesale": "Atacado",
+    "sports": "Artigos esportivos",
     "mobility": "Mobilidade",
     "fuel": "Postos de gasolina",
     "car_rental": "Locadoras",
     "bicycle": "Loja de bicicletas",
     "car": "Garagem",
     "car_dealer": "Concessionária",
+    "car_wash": "Lava-jato",
+    "motorcycle": "Motocicletas",
     "bicycle_tube": "Câmara de ar para bicicleta",
-    "public_transport_tickets": "Bilhetes de transporte público"
+    "public_transport_tickets": "Bilhetes de transporte público",
+    "tyres": "Borracharia"
+  },
+  "qa": {
+    "title": "Garantia de qualidade"
   },
   "external": {
     "mobile": {
       "places_around": "Encontre lugares abertos durante o isolamento",
       "contribute": "Melhore o mapa com as suas informações",
       "organize": "Melhor mobilidade para limitar o risco de contágio"
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "Regiões"
+    },
+    "departements": {
+      "title": "Departamentos"
+    },
+    "communes": {
+      "title": "Condados"
+    },
+    "pois": {
+      "link": {
+        "previous": "Lugares anteriores",
+        "next": "Próximos lugares"
+      }
     }
   }
 }

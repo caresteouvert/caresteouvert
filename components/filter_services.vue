@@ -1,6 +1,8 @@
 <template>
   <v-chip-group
     :value="value"
+    :show-arrows="false"
+    :mobile-break-point="10000"
     class="px-2"
     multiple
     @change="(v) => $emit('input', v)"
@@ -9,6 +11,7 @@
       v-for="service in services"
       :key="service"
       :value="service"
+      label
       active-class="primary--text"
     >
       <v-icon small>{{ `osm-${service}` }}</v-icon>

@@ -6,14 +6,7 @@ function getUrlFromReq(req) {
    const protocol = isHttps(req) ? 'https' : 'http';
    return `${protocol}://${req.headers.host}/`;
   } else {
-    function createWebUrl(url) {
-      const a = document.createElement("a")
-      a.href = url
-      // Fix populating Location properties in IE. Otherwise, protocol will be blank.
-      a.href = a.href
-      return a.href
-    }
-    return createWebUrl('/');
+    return `${window.location.origin}/`;
   }
 }
 

@@ -3,12 +3,19 @@
   "loading": "Estase a cargar, por favor, agarda...",
   "covid19-alert": "Sigue as recomendacións do goberno. A responsabilidade é TÚA.",
   "title": "Segue aberto",
-  "subtitle": "Lugares que se manteñen abertos durante o confinamento",
-  "subtitle-dense": "Lugares abertos durante o confinamento",
+  "subtitle": "Lugares que se manteñen abertos durante e após o confinamento",
   "search": "Escribe a túa procura",
   "coordinates": "Coordenadas",
   "menu": "Menú",
   "missing_shop": "Informar dunha tenda que falla",
+  "backtolist": "Voltar á listaxe",
+  "missing_shop_dialog": {
+    "description": "«{brand}» pretende amosar só lugares que teñen permitido abrir durante o confinamento.\nHai moitas razóns se algún falla:",
+    "add_osm": "O lugar non está no OpenStreetMap, engádeo:",
+    "add_osm_cta": "Sigue a guía",
+    "add_category": "Falla unha categoría de lugares:",
+    "add_category_cta": "Solicitar engadido"
+  },
   "change_lang": "Mudar lingua",
   "zoomtosee": " Achegar para amosar os lugares abertos",
   "filter_noresults": "Non se atoparon resultados. Tenta afastarte.",
@@ -18,6 +25,8 @@
   },
   "services": {
     "delivery": "Entrega",
+    "hydroalcoholic_gel": "Xel hidroalcólico",
+    "mask": "Máscaras",
     "takeaway": "Para levar"
   },
   "learnmore": {
@@ -82,7 +91,9 @@
       "access": "Este lugar ofrece recepción física no lugar",
       "drive_through": "Este lugar dispón de recollida con coche",
       "details": "Engadir os detalles necesarios durante o confinamento",
-      "details_error": "Ten que estar baleiro ou ter polo menos 10 caracteres de lonxitude"
+      "details_error": "Ten que estar baleiro ou ter polo menos 10 caracteres de lonxitude",
+      "definite_closing": "Pechado de xeito definitivo",
+      "details_definite_closing": "Este lugar pechou de xeito definitivo. Que hai agora no seu lugar? Fornece tantos detalles como sexa posíbel, por exemplo: en construción, novos negocios..."
     },
     "submit": "Publicar",
     "cancel": "Desbotar"
@@ -91,11 +102,14 @@
     "signal_warning": "Estabas a escribir un informe. Non se gardará. Desexas continuar?",
     "signal": "Informar dun cambio",
     "signal_done": "O teu informe foi rexistrado. Grazas! Ten cachaza, pode levar un tempo procesalo.",
-    "containment_opening_hours": "Horario de apertura fóra do período de confinamento",
-    "containment_brand_hours": "Horario de apertura na páxina web da marca",
+    "lockdown_opening_hours": "Horario de apertura",
+    "normal_opening_hours": "Horario de apertura fóra do período de confinamento",
+    "lockdown_brand_hours": "Horario de apertura na páxina web da marca",
     "facebook": "Páxina do Facebook",
     "not_accessible": "Non hai recepción física no lugar",
     "capacity": "Capacidade máxima: 0 persoas | Capacidade máxima: 1 persoa | Capacidade máxima: {count} persoas",
+    "services": "Servizos",
+    "contact": "Contacto",
     "last_update": {
       "date": "Última actualización: {date}",
       "recent": "Actualizado hai uns minutos, a información podería mudar"
@@ -134,6 +148,10 @@
       "yes": "Recollida con coche dispoñíbel",
       "only": "Só recollida con coche"
     },
+    "wheelchair": {
+      "yes": "Acceso en cadeira de rodas",
+      "limited": "Acceso parcial en cadeira de rodas"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Selos",
@@ -144,6 +162,25 @@
       "drinks": "Bebidas",
       "water": "Auga",
       "sweets": "Doces"
+    },
+    "hygiene": "Hixiene",
+    "hydroalcoholic_gel": "Xel hidroalcólico",
+    "mask": "Máscaras",
+    "hygiene_status": {
+      "yes": "O {date}: dispoñíbel",
+      "no": "O {date}: non dispoñíbel",
+      "void": "Non hai información, achéganola"
+    },
+    "hygiene_entry": {
+      "has": "ten",
+      "hasnot": "non ten"
+    },
+    "update_dialog": {
+      "complete1": "É este o teu estabelecemento ou parte do teu grupo?",
+      "complete2": "Obtén visibilidade após o confinamento",
+      "title": "Xerente de punto de venta",
+      "promo": "Es o xerente dunha franquía ou director dunha rede de franquías.\nObtén visibilidade enumerando todos os teus puntos de venda no \"Ça reste ouvert\".\nAdemais de destacarse de xeito personalizado no noso servizo, tamén aparecerá en moitas páxinas e aplicacións móbiles grazas ó OpenStreetMap.",
+      "contact": "Contacta connosco"
     }
   },
   "opening_hours_editor": {
@@ -174,12 +211,13 @@
     "childcare": "Gardaría",
     "employment_agency": "Axencia de traballo",
     "funeral_directors": "Tanatorios ou funerarias",
-    "bank": "Banco",
-    "moneylender": "Prestamista",
+    "money": "Diñeiro",
     "insurance": "Aseguradora",
     "tourism_info": "Información turística",
     "hotel": "Aloxamento",
     "recycling_centre": "Centro de reciclaxe",
+    "library": "Biblioteca",
+    "copyshop": "Copistaría",
     "health": "Saúde",
     "pharmacy": "Farmacias",
     "covid19_centre": "Centro de consulta sobre o Covid-19",
@@ -188,6 +226,7 @@
     "condoms": "Máquinas expendedoras de condóns",
     "medical_supply": "Subministracións médicas",
     "health_center": "Centro de saúde",
+    "herbalist": "Herbolario",
     "food": "Alimentación",
     "supermarket": "Supermercado",
     "butcher": "Carnizaría",
@@ -196,6 +235,7 @@
     "seafood": "Peixaría",
     "greengrocer": "Froitaría",
     "grocery": "Ultramarinos",
+    "health_food": "Comida sa",
     "chocolate": "Chocolates",
     "tea": "Té",
     "coffee": "Tenda de café",
@@ -204,9 +244,11 @@
     "farm": "Tenda de produtos agrícolas",
     "marketplace": "Mercado",
     "bakery": "Panadarías",
+    "alcohol": "Licoraría",
     "eat": "Restaurantes e para levar",
     "vending_machine": "Máquina expendedora",
     "restaurant": "Restaurante",
+    "awarded_chef": "Cociñeiro de prestixio",
     "fast_food": "Comida rápida",
     "ice_cream": "Xeadaría",
     "cafe": "Tenda de café",
@@ -214,34 +256,99 @@
     "drugs": "Tabaco e alcol",
     "tobacco": "Estancos",
     "e_cigarette": "Cigarros electrónicos",
-    "alcohol": "Licoraría",
-    "shop": "Tendas",
+    "bank": "Banco",
+    "atm": "Caixeiro automático",
+    "money_transfer": "Locutorio ou transferencia de cartos",
+    "mobile_money_agent": "Saldo de móbil",
+    "clothing_beauty": "Roupa e beleza",
+    "shoes": "Zapataría",
+    "bag": "Tenga de mochilas",
+    "beauty": "Salón de beleza",
+    "child_clothes": "Roupa de rapaz",
+    "clothes": "Roupa",
+    "cosmetics": "Cosméticos",
+    "hairdresser": "Perrucaría",
+    "jewelry": "Xoiaría",
+    "massage": "Masaxes",
+    "tailor": "Xastre",
+    "perfumery": "Perfumaría",
+    "chemist": "Drogaría",
+    "home_equipment": "Fogar",
     "hardware": "Ferraxaría",
+    "bed": "Camas",
+    "furniture": "Moblaría",
+    "houseware": "Artigos para o fogar",
+    "interior_decoration": "Decoración de interiores",
+    "pottery": "Cerámicas",
+    "watches": "Reloxos",
+    "lighting": "Iluminación",
+    "hifi": "Hifi",
+    "electronics": "Electrónica",
+    "shop": "Tendas",
     "mobile_phone": "Telefonía móbil",
     "computer": "Tenda de informática",
-    "electronics": "Electrónica",
+    "printer_ink": "Tintura de impresora",
+    "dry_cleaning": "Tintoraría",
     "laundry": "Lavandaría",
     "stationery": "Papelaría",
     "newsagent": "Quiosco",
     "pet": "Tenda de animais",
     "agrarian": "Produtos agrícolas",
     "flower": "Xardinaría",
-    "chemist": "Drogaría",
-    "fabric": "Tendas téxtil",
+    "sewing": "Mercería",
     "books": "Libraría",
+    "art": "Arte",
+    "charity": "Tenda de caridade",
+    "department_store": "Grandes almacéns",
+    "gift": "Tenda de agasallos",
+    "music": "Música",
+    "musical_instrument": "Instrumentos musicais",
+    "photo": "Fotografía",
+    "second_hand": "Segunda man",
+    "ticket": "Billetes",
+    "toys": "Xoguetaría",
+    "trade": "Troco",
+    "travel_agency": "Axencia de viaxes",
+    "variety_store": "Bazar",
+    "video": "Vídeos",
+    "video_games": "Videoxogos",
+    "weapons": "Armas",
+    "wholesale": "Venda ó por maior",
+    "sports": "Deportes",
     "mobility": "Mobilidade",
     "fuel": "Gasolineira",
     "car_rental": "Alugueiro de coches",
     "bicycle": "Tenda de bicicletas",
     "car": "Garaxe",
+    "car_dealer": "Concesionario de automóbiles",
+    "car_wash": "Lavado de automóbiles",
+    "motorcycle": "Motos",
     "bicycle_tube": "Máquina expendedora de tubos para bicicletas",
-    "public_transport_tickets": "Máquina expendedora de billetes do transporte público"
+    "public_transport_tickets": "Máquina expendedora de billetes do transporte público",
+    "tyres": "Rodas"
   },
   "external": {
     "mobile": {
       "places_around": "Atopa lugares abertos durante o confinamento",
       "contribute": "Mellora o mapa coa túa propia información",
       "organize": "Mobilidade mellorada para limitar o risco de contaxio"
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "Listaxe de rexións"
+    },
+    "departements": {
+      "title": "Listaxe de departamentos"
+    },
+    "communes": {
+      "title": "Listaxe de comarcas"
+    },
+    "pois": {
+      "link": {
+        "previous": "Lugares anteriores",
+        "next": "Lugares seguintes"
+      }
     }
   }
 }

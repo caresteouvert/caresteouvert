@@ -87,6 +87,12 @@
       </v-stepper-step>
 
       <v-stepper-content step="3">
+        <v-checkbox
+          v-if="!open"
+          v-model="definite_closing"
+          :label="$t('contribute_form.step3.definite_closing')"
+        ></v-checkbox>
+
         <label
           v-for="field in filteredFields"
           :key="field.id"
@@ -102,7 +108,7 @@
         </label>
 
         <label class="d-block pt-4">
-          {{ $t('contribute_form.step3.details') }}
+          {{ $t(this.definite_closing ? 'contribute_form.step3.details_definite_closing' : 'contribute_form.step3.details') }}
           <v-textarea
             v-model="details"
             class="mt-2"
@@ -151,6 +157,7 @@ export default {
     return {
       step: 1,
       details: '',
+      definite_closing: null,
       fields: {
         "access": {
           items: threeStateFieldItems,
@@ -227,7 +234,8 @@ export default {
     payload() {
       const [ lon, lat ] = this.place.geometry.coordinates;
       const tags = {
-        opening_hours: this.openingHoursWithoutLockDown ? 'same': undefined
+        opening_hours: this.openingHoursWithoutLockDown ? 'same': undefined,
+        fixme: this.definite_closing === true ? 'This place is definitely closed' : undefined
       };
 
       Object.entries(this.fields).forEach(e => {
@@ -254,12 +262,14 @@ export default {
     clickOpen() {
       this.open = true;
       this.step = 2;
+      this.definite_closing = null;
     },
 
     clickClose() {
       this.open = false;
       this.openingHours = [];
       this.step = 3;
+      this.definite_closing = false;
     },
 
     sameOpeningHours() {

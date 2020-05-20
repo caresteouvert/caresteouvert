@@ -1,45 +1,42 @@
 <template>
   <v-dialog
     v-model="dialog"
-    :width="500"
+    :width="600"
   >
     <template v-slot:activator="{ on }">
-      <v-list dense>
+      <v-list dense two-line>
         <v-list-item v-on="on">
           <v-list-item-icon class="mr-1">
             <v-icon>osm-alert</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>C'est votre établissement ? Complétez vos informations</v-list-item-title>
+            <v-list-item-title>{{ $t('details.update_dialog.complete1') }}</v-list-item-title>
+            <v-list-item-subtitle>{{ $t('details.update_dialog.complete2') }}</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </template>
 
     <v-card>
-      <v-card-title>
-        <span class="body-1">Compléter les informations de votre établissement</span>
+      <v-card-title class="flex-nowrap">
+        <span class="body-1">{{ $t('details.update_dialog.title') }}</span>
         <v-spacer></v-spacer>
         <v-btn
           icon
-          @click="dialog = false"
+          @click="dialog=false"
         >
           <v-icon>osm-close</v-icon>
         </v-btn>
       </v-card-title>
       <v-card-text>
-        <p>
-          Pour rajouter des informations vous pouvez
-          <a href="https://blog.caresteouvert.fr/completer-les-infos-dun-lieu/"
-            target="_blank">éditer vous-même votre établissement sur OpenStreetMap</a>.
-        </p>
+        <p class="mb-0" v-html="$t('details.update_dialog.promo').replace(/\n/g, '<br />')"></p>
         <br />
         <p class="text-center">
           <v-btn
-            :href="`https://airtable.com/shr9dsYsPX0VvUoUY?prefill_osm_id=${osm}&prefill_osm_name=${place.properties.name}`"
+            :href="`https://airtable.com/shrfssuOhvXzVxtui?prefill_osm_id=${osm}&prefill_osm_name=${place.properties.name}`"
             target="_blank"
             color="primary"
-          >Besoin d'aide ? Contactez nous</v-btn>
+          >{{ $t('details.update_dialog.contact') }}</v-btn>
         </p>
       </v-card-text>
     </v-card>

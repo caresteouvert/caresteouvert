@@ -144,6 +144,10 @@
       "yes": "Drive-in service tillgänglig",
       "only": "Endast drive-in service"
     },
+    "wheelchair": {
+      "yes": "Tillgänglig med rullstol",
+      "limited": "Ej tillgänglig med rullstol"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Frimärken",

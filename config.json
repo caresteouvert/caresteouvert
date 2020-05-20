@@ -4,13 +4,15 @@
   "mapStyle": "https://api.maptiler.com/maps/basic/style.json?key=",
   "mapZoom": 6,
   "mapCenter": [2.3508, 46.4],
-  "tilesUrl": "https://tiles.caresteouvert.fr/public.poi_osm_light/{z}/{x}/{y}.pbf",
+  "tilesUrl": "https://tiles.caresteouvert.fr/",
   "poiFeature": "https://features.caresteouvert.fr/collections/public.poi_osm/items",
   "apiUrl": "https://api.caresteouvert.fr",
   "geoIpUrl": "https://geo.caresteouvert.fr/me",
   "osmUrl": "https://www.openstreetmap.org",
+  "osmoseUrl": "https://osmose.openstreetmap.fr",
   "minZoomPoi": 12,
   "maxZoomPoi": 13,
+  "directoryUrl": "https://covid19-fr-directory.osc-fr1.scalingo.io/directory",
   "brands": {
     "DEFAULT": {
       "brand_text": "Ça reste ouvert",
@@ -46,6 +48,27 @@
       "brand_text": "Ollaan Auki",
       "domain": "kartta.ollaanauki.fi",
       "defaultLocale": "fi"
+    },
+    "lyon": {
+      "brand_text": "Ça reste ouvert",
+      "domain": "lyon.caresteouvert.fr",
+      "defaultLocale": "fr",
+      "disclaimer": "https://blog.caresteouvert.fr/mentions-legales-lyon"
+    },
+    "restiamoaperti": {
+      "brand_text": "Restiamo aperti",
+      "domain": "restiamoaperti.it",
+      "defaultLocale": "it"
+    },
+    "stayingopen": {
+      "brand_text": "Staying open",
+      "domain": "stayingopen.ie",
+      "defaultLocale": "en"
+    },
+    "taimidoscailte": {
+      "brand_text": "Taimid Oscailte",
+      "domain": "taimidoscailte.ie",
+      "defaultLocale": "ga"
     }
   },
   "countries": {
@@ -79,6 +102,9 @@
         "DEFAULT": "https://valtioneuvosto.fi/tietoa-koronaviruksesta/",
         "sv": "https://valtioneuvosto.fi/sv/information-om-coronaviruset"
       }
+    },
+    "IT": {
+      "government": "http://www.salute.gov.it/nuovocoronavirus"
     }
   },
   "locales": {
@@ -141,6 +167,15 @@
       "about": "https://blog.ollaanauki.fi/sv/om-oss/",
       "press": "https://blog.ollaanauki.fi/sv/till-media/",
       "disclaimer": "https://blog.ollaanauki.fi/sv/ansvarsfrihetsvillkor/"
+    },
+    "it": {
+      "blog": "/blog/it/",
+      "shopMissing": "/it/come-posso-aggiungere-un-posto-mancante/",
+      "townhalls": "/it/soluzione-di-comunicazione-per-i-comuni/"
+    },
+    "pt-BR": {
+      "shopMissing": "/pt-BR/nao-encontrei-um-estabelecimento/",
+      "townhalls": "/pt-BR/solucao-de-comunicacao-para-municipios/"
     }
   }
 }

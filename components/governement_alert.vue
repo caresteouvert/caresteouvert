@@ -16,7 +16,7 @@
       :href="countryConfig.government"
       target="_blank"
     >
-      <v-icon>{{ `osm-info` }}</v-icon>
+      <v-icon>osm-info</v-icon>
     </v-btn>
   </v-alert>
 </template>
@@ -25,18 +25,20 @@
 import { getCookie, setCookie } from '../lib/cookie';
 import i18nMixin from './mixins/i18n';
 
+const SHOW_ALERT_COOKIE = 'showAlert';
+
 export default {
   mixins: [i18nMixin],
 
   data() {
     return {
-      alert: getCookie('showAlert') === 'false' ? false : true
+      alert: getCookie(SHOW_ALERT_COOKIE) === 'false' ? false : true
     };
   },
 
   watch: {
     alert() {
-      setCookie('showAlert', false);
+      setCookie(SHOW_ALERT_COOKIE, false);
     }
   }
 };

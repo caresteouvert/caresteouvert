@@ -3,12 +3,12 @@
   "loading": "Karte wird geladen, bitte warten…",
   "covid19-alert": "Bitte folge den Anweisungen der zuständigen Behörden.",
   "title": "Bleibt offen",
-  "subtitle": "Alle Geschäfte, die weiterhin geöffnet sind.",
-  "subtitle-dense": "Apotheke, Bäcker & Co.",
+  "subtitle": "Alle Geschäfte, die geöffnet sind.",
   "search": "Suchbegriff eingeben",
   "coordinates": "Koordinaten",
   "menu": "Menü",
   "missing_shop": "Fehlendes Geschäft melden",
+  "backtolist": "Zurück zur Liste",
   "missing_shop_dialog": {
     "description": "„{brand}“ zeigt vor allem Orte an, die trotz Ausgangsbeschränkungen weiterhin geöffnet sein können. Wenn ein Ort fehlt, kann dies mehrere Gründe haben:",
     "add_osm": "Der Ort fehlt auf „OpenStreetMap“:",
@@ -25,6 +25,8 @@
   },
   "services": {
     "delivery": "Lieferung",
+    "hydroalcoholic_gel": "Desinfektionsmittel",
+    "mask": "Masken",
     "takeaway": "Abholung"
   },
   "learnmore": {
@@ -89,7 +91,9 @@
       "access": "Kann dieser Ort betreten werden?",
       "drive_through": "Drive-in vorhanden und geöffnet?",
       "details": "Wichtige Anmerkungen (optional, erzeugt einen OSM-Hinweis und erfordert eine manuelle Bearbeitung durch die OpenStreetMap-Community)",
-      "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein"
+      "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein",
+      "definite_closing": "Dauerhaft geschlossen",
+      "details_definite_closing": "Dieser Ort ist dauerhaft geschlossen. Was ist dort nun? Je mehr Details, desto besser, zum Beispiel: Gebäude abgerissen, neues Geschäft…"
     },
     "submit": "Meldung abschicken",
     "cancel": "Abbrechen"
@@ -98,7 +102,6 @@
     "signal_warning": "Du warst gerade dabei, eine Änderung zu melden. Möchtest du deine Eingaben verwerfen?",
     "signal": "Änderung melden",
     "signal_done": "Vielen Dank, deine Änderungsmeldung wurde erfasst!\n\nBitte beachte, dass Meldungen mit Kommentar manuell von der OpenStreetMap-Community bearbeitet werden müssen. Kommentarlose Änderungen erscheinen automatisch nach etwa einer Stunde auf der Karte.",
-    "signal_done_gofurther": "Ich möchte weitere Angaben zu diesem Ort machen",
     "lockdown_opening_hours": "Öffnungszeiten",
     "normal_opening_hours": "Reguläre Öffnungszeiten",
     "lockdown_brand_hours": "Öffnungszeiten anzeigen",
@@ -120,11 +123,11 @@
       "tomorrow": "morgen"
     },
     "state": {
-      "open": "Ort weiterhin geöffnet",
-      "open_adapted": "Ort weiterhin geöffnet mit abweichenden Öffnungszeiten",
-      "partial": "Dieser Ort gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
-      "unknown": "Dieser Ort ist möglicherweise geöffnet.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
-      "closed": "Ort vorübergehend geschlossen"
+      "open": "Geöffnet",
+      "open_adapted": "Geöffnet mit abweichenden Öffnungszeiten",
+      "partial": "Gehört zu einem Unternehmen, dessen Orte teilweise geöffnet sind.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
+      "unknown": "Möglicherweise geöffnet.\n\nGeöffnet oder geschlossen?\nLass es uns wissen.",
+      "closed": "Vorübergehend geschlossen"
     },
     "state_short": {
       "open": "weiterhin geöffnet",
@@ -144,6 +147,10 @@
     "drive_through": {
       "yes": "Drive-in geöffnet",
       "only": "Nur Drive-in"
+    },
+    "wheelchair": {
+      "yes": "Voll rollstuhlgerecht",
+      "limited": "Teilweise rollstuhlgerecht"
     },
     "vending": {
       "pizza": "Pizza",
@@ -167,6 +174,13 @@
     "hygiene_entry": {
       "has": "vorrätig",
       "hasnot": "ausverkauft"
+    },
+    "update_dialog": {
+      "complete1": "Gehört Ihr Geschäft zu dieser Gruppe?",
+      "complete2": "Sichtbarkeit nach Lockdown-Ende erhöhen",
+      "title": "Verkaufsleitung",
+      "promo": "Sie sind Managerin oder Geschäftsführerin eines Franchise-Unternehmens. \nErhöhen Sie Ihre Sichtbarkeit, indem Sie alle Ihre Verkaufsstellen in „Bleibt offen“ auflisten.\nNeben der persönlichen Hervorhebung in unserem Dienst werden Sie dank OpenStreetMap auch auf vielen Websites und mobilen Anwendungen erscheinen.",
+      "contact": "Kontaktiere uns"
     }
   },
   "opening_hours_editor": {
@@ -193,16 +207,17 @@
     "amenity": "Post, Bank & Co. ",
     "police": "Polizei",
     "townhall": "Rathaus",
-    "post_office": "Postdienstleistungen",
+    "post_office": "Post",
     "childcare": "Kinderbetreuung",
     "employment_agency": "Arbeitsagentur",
     "funeral_directors": "Bestatter",
-    "bank": "Bank",
-    "moneylender": "Geldverleiher",
+    "money": "Geld",
     "insurance": "Versicherung",
     "tourism_info": "Tourist-Info",
     "hotel": "Unterkunft",
     "recycling_centre": "Recyclinghof",
+    "library": "Bibliothek",
+    "copyshop": "Copy-Shop",
     "health": "Apotheke & Gesundheit",
     "pharmacy": "Apotheke",
     "covid19_centre": "Covid-19-Beratungsstelle",
@@ -211,14 +226,16 @@
     "condoms": "Kondomautomat",
     "medical_supply": "Sanitätshaus",
     "health_center": "Medizinische Einrichtung",
+    "herbalist": "Kräuter",
     "food": "Lebensmittel",
     "supermarket": "Supermarkt",
     "butcher": "Metzgerei",
     "cheese": "Käse",
-    "convenience": "Lebensmittelgeschäft",
+    "convenience": "Nachbarschaftsladen",
     "seafood": "Fisch",
     "greengrocer": "Gemüse",
     "grocery": "Lebensmittel",
+    "health_food": "Naturkost",
     "chocolate": "Schokolade",
     "tea": "Tee",
     "coffee": "Kaffee",
@@ -227,45 +244,111 @@
     "farm": "Hofladen",
     "marketplace": "Wochenmarkt",
     "bakery": "Bäckerei",
+    "alcohol": "Alkohol",
     "eat": "Restaurant & Abholung",
     "vending_machine": "Verkaufsautomat",
     "restaurant": "Restaurant",
+    "awarded_chef": "Ausgezeichnete Küche",
     "fast_food": "Schnellimbiss",
     "ice_cream": "Eis",
     "cafe": "Café",
     "bar": "Kneipe",
     "drugs": "Tabak & Alkohol",
-    "tobacco": "Tabakwaren",
+    "tobacco": "Tabak",
     "e_cigarette": "E-Zigaretten",
-    "alcohol": "Alkoholgeschäft",
-    "shop": "Geschäfte",
+    "bank": "Bank",
+    "atm": "Geldautomat",
+    "money_transfer": "Geldtransfer",
+    "mobile_money_agent": "Mobiler Geldvermittler",
+    "clothing_beauty": "Kleidung & Pflege",
+    "shoes": "Schuhe",
+    "bag": "Taschen",
+    "beauty": "Schönheit",
+    "child_clothes": "Kinderkleidung",
+    "clothes": "Bekleidung",
+    "cosmetics": "Kosmetik",
+    "hairdresser": "Friseur",
+    "jewelry": "Juwelier",
+    "massage": "Massage",
+    "tailor": "Schneiderei",
+    "perfumery": "Parfümerie",
+    "chemist": "Drogerie",
+    "home_equipment": "Heimausstattung",
     "hardware": "Baubedarf",
+    "bed": "Betten",
+    "furniture": "Möbel",
+    "houseware": "Haushaltswaren",
+    "interior_decoration": "Inneneinrichtung",
+    "pottery": "Keramik",
+    "watches": "Uhren",
+    "lighting": "Beleuchtung",
+    "hifi": "Hifi-Geräte",
+    "electronics": "Elektronik",
+    "shop": "Geschäfte",
     "mobile_phone": "Mobiltelefon",
     "computer": "Computer",
-    "electronics": "Elektronik",
+    "printer_ink": "Druckerpatronen",
+    "dry_cleaning": "Reinigung",
     "laundry": "Waschsalon",
     "stationery": "Schreibwaren",
     "newsagent": "Kiosk",
     "pet": "Tierbedarf",
     "agrarian": "Landhandel",
     "flower": "Garten & Blumen",
-    "chemist": "Drogeriemarkt",
     "sewing": "Nähgeschäft",
-    "shoes": "Schuhgeschäft",
-    "books": "Buchhandlung",
+    "books": "Bücher",
+    "art": "Kunst",
+    "charity": "Sozialkaufhaus",
+    "department_store": "Kaufhaus",
+    "gift": "Souvenirs",
+    "music": "Musik",
+    "musical_instrument": "Musikinstrumente",
+    "photo": "Foto- und Videozubehör",
+    "second_hand": "Gebrauchtwaren",
+    "ticket": "Tickets",
+    "toys": "Spielwaren",
+    "trade": "Baustoffe",
+    "travel_agency": "Reiseagentur",
+    "variety_store": "Billigladen",
+    "video": "Videos & DVDs",
+    "video_games": "Videospiele",
+    "weapons": "Waffen",
+    "wholesale": "Großhandel",
+    "sports": "Sport",
     "mobility": "Mobilität",
     "fuel": "Tankstelle",
     "car_rental": "Autovermietung",
     "bicycle": "Fahrradladen",
     "car": "Autowerkstatt",
+    "car_dealer": "Autohaus",
+    "car_wash": "Autowäsche",
+    "motorcycle": "Motorräder",
     "bicycle_tube": "Fahrradschlauch-Automat",
-    "public_transport_tickets": "Fahrkartenautomat"
+    "public_transport_tickets": "Fahrkartenautomat",
+    "tyres": "Reifen"
   },
   "external": {
     "mobile": {
       "places_around": "Finde Geschäfte, die weiterhin geöffnet sind.",
       "contribute": "Verbessere die Karte mit deinem Wissen",
       "organize": "Erfolglose Wege verhindern, Ansteckungsgefahr verringern"
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "Regionen"
+    },
+    "departements": {
+      "title": "Bundesländer"
+    },
+    "communes": {
+      "title": "Kreise"
+    },
+    "pois": {
+      "link": {
+        "previous": "Vorherige Orte",
+        "next": "Nächste Orte"
+      }
     }
   }
 }

@@ -3,21 +3,22 @@
     :class="{
        sm: isMobile,
       'place-opened': $route.name === 'place' && !isMobile,
-      'sidebar-opened': sidebar && !isMobile
+      'sidebar-opened': sidebar && !isMobile,
+      'sidebar-big-opened': sidebar && hasFilter && !isMobile
     }"
   >
     <div>
       <v-navigation-drawer
         v-if="!isMobile"
         v-model="sidebar"
+        :width="hasFilter ? 400 : 300"
         temporary
         stateless
         hide-overlay
-        width="300"
         fixed
       >
         <filter-results
-          v-if="filter !== ''"
+          v-if="hasFilter"
           v-model="filter"
           :services.sync="filterServices"
           :featuresAndLocation="featuresAndLocation"
@@ -69,7 +70,7 @@
           :filter="filter"
         >
           <filter-results
-            v-if="filter != ''"
+            v-if="hasFilter"
             v-model="filter"
             :services.sync="filterServices"
             :featuresAndLocation="featuresAndLocation"
@@ -84,7 +85,19 @@
         </bottom-menu>
       </v-content>
     </div>
-    <nuxt-child/>
+    <router-view>
+      <div v-if="hasFilter">
+        <v-btn
+          tile
+          text
+          class="full-width justify-start"
+          @click="closePlace"
+        >
+          <v-icon>osm-arrow-left</v-icon>
+          {{ $t('backtolist') }}
+        </v-btn>
+      </div>
+    </router-view>
     <splash-screen v-if="!mapLoaded" />
   </div>
 </template>
@@ -104,6 +117,8 @@ import TopToolbar from './top_toolbar';
 import BottomMenu from './bottom_menu';
 import RgpdBanner from './rgpd_banner';
 import SplashScreen from './splash_screen';
+
+const MAP_VIEW_COOKIE = 'mapView';
 
 export default {
   components: {
@@ -144,7 +159,6 @@ export default {
   },
 
   mounted() {
-    this.$store.commit('setBrandId', findBrand(process.client ? window.location.host : (req.headers['x-forwarded-host'] || req.headers.host)).brand);
     this.sidebar = !this.isMobile;
 
     const { filter: filterPart, location } = decode(this.featuresAndLocation);
@@ -161,7 +175,13 @@ export default {
     });
   },
 
-  computed: mapGetters(['categories', 'allCategories']),
+  computed: {
+    ...mapGetters(['categories', 'allCategories']),
+
+    hasFilter() {
+      return this.filter !== '';
+    }
+  },
 
   watch: {
     mapCenter() {
@@ -186,17 +206,10 @@ export default {
 
   methods: {
     loadAndOverrideMapStyle() {
-      function createWebUrl(url) {
-        const a = document.createElement("a")
-        a.href = url
-        // Fix populating Location properties in IE. Otherwise, protocol will be blank.
-        a.href = a.href
-        return a.href
-      }
       return fetch(`${config.mapStyle}${config.maptilerApiKey}`)
         .then(res => res.json())
         .then((data) => {
-          data.sprite = createWebUrl('/sprite/caresteouvert');
+          data.sprite = `${window.location.origin}/sprite/caresteouvert`;
           this.mapStyle = data;
         });
     },
@@ -232,6 +245,10 @@ export default {
         });
     },
 
+    closePlace() {
+      this.$router.push({ name: 'index', params: { featuresAndLocation: this.featuresAndLocation } })
+    },
+
     updateRoute() {
       if (!this.lastFeaturesAndLocation) {
         this.lastFeaturesAndLocation = this.featuresAndLocation;
@@ -258,11 +275,11 @@ export default {
     },
 
     savedMapView() {
-      return getCookie('mapView');
+      return getCookie(MAP_VIEW_COOKIE);
     },
 
     saveCurrentView() {
-      setCookie('mapView', JSON.stringify({ center: this.mapCenter, zoom: this.mapZoom }));
+      setCookie(MAP_VIEW_COOKIE, JSON.stringify({ center: this.mapCenter, zoom: this.mapZoom }));
     },
 
     refreshCurrentCountry: debounce(function() {
@@ -283,9 +300,8 @@ export default {
       const { lat, lng } = this.mapCenter;
       fetch(`${config.apiUrl}/country?lat=${lat}&lon=${lng}`)
         .then(res => res.text())
-        .then((res) => {
-          const country = res.split('-')[0];
-          this.$store.commit('setCountry', country);
+        .then(area => {
+          this.$store.commit('setArea', area);
           const [category, subcategory] = this.filter.split('/');
           if (!this.categories.includes(category)) {
             this.filter = '';
@@ -336,11 +352,11 @@ export default {
 .sm .mapboxgl-ctrl-bottom-right {
   bottom: 20px;
 }
-.place-opened .mapboxgl-ctrl-top-right, .place-opened .mapboxgl-ctrl-bottom-right {
-  transform: translateX(-400px);
-}
 .sidebar-opened .search {
   transform: translateX(300px);
+}
+.sidebar-big-opened .search, .place-opened .search {
+  transform: translateX(400px);
 }
 .text-pre {
   white-space: pre-line;

@@ -133,6 +133,6 @@ describe('OpeningHours', () => {
         value: 'Mardi au jeudi'
       }
     });
-    expect(detail.isEmpty()).toBe(true);
+    expect(detail.vm.openingHours).toBe(undefined);
   });
 });

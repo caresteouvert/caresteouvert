@@ -3,12 +3,12 @@
   "loading": "読込中。しばらくお待ち下さい...",
   "covid19-alert": "政府の制限に従ってください。責任は「あなた」にあります。",
   "title": "開店中",
-  "subtitle": "封鎖(COVID-19対応)中の営業店舗・施設",
-  "subtitle-dense": "封鎖(COVID-19対応)中の営業店舗・施設",
+  "subtitle": "封鎖期間中からその後にかけて営業中の店舗・施設",
   "search": "検索文字列を入力",
   "coordinates": "座標",
   "menu": "メニュー",
   "missing_shop": "不明な店舗をレポート",
+  "backtolist": "リストに戻る",
   "missing_shop_dialog": {
     "description": "« {brand} » は封鎖期間中の営業が許可されている施設だけを表示することを意図しています。漏れがある場合、いくつかの理由が考えられます:",
     "add_osm": "この施設はOpenStreetMapに無いので追加します:",
@@ -25,6 +25,8 @@
   },
   "services": {
     "delivery": "配達",
+    "hydroalcoholic_gel": "アルコール除菌ジェル",
+    "mask": "マスク",
     "takeaway": "持ち帰り"
   },
   "learnmore": {
@@ -89,7 +91,9 @@
       "access": "この施設は現地に物理的な受付場所があります",
       "drive_through": "この場所にはドライブスルーのサービスがあります",
       "details": "オプション : 封鎖の間に必要な詳細を追加します",
-      "details_error": "空にするか、最低10文字以上入力します"
+      "details_error": "空にするか、最低10文字以上入力します",
+      "definite_closing": "廃業",
+      "details_definite_closing": "この場所は確実に閉店しています。代わりに何かできましたか？できるだけ詳細に教えて下さい。例：建設中の建物、新しいビジネス等..."
     },
     "submit": "公開",
     "cancel": "キャンセル"
@@ -170,6 +174,16 @@
     "hygiene_entry": {
       "has": "あり",
       "hasnot": "なし"
+    },
+    "safety": {
+      "mask": "マスク着用義務あり"
+    },
+    "update_dialog": {
+      "complete1": "これはあなたの施設やグループの一部ですか？",
+      "complete2": "封鎖語の状況を可視化しましょう",
+      "title": "セールスマネージャのポイント",
+      "promo": "あなたはフランチャイズのマネージャまたはフランチャイズネットワークの統括者です。\n営業中の全店舗をリストして\"Ça reste ouvert\"で可視化しましょう。\nこのサービス内で個人設定に合わせて強調表示されるだけでなく、OpenStreetMapによって多数のサイトやモバイルアプリでも表示されるはずです。",
+      "contact": "連絡先"
     }
   },
   "opening_hours_editor": {
@@ -200,12 +214,13 @@
     "childcare": "育児",
     "employment_agency": "職業安定所",
     "funeral_directors": "葬儀社",
-    "bank": "銀行",
-    "moneylender": "サラ金",
+    "money": "お金",
     "insurance": "保険",
     "tourism_info": "観光案内所",
     "hotel": "宿泊",
     "recycling_centre": "リサイクルセンター",
+    "library": "図書館",
+    "copyshop": "コピー店",
     "health": "健康",
     "pharmacy": "薬局",
     "covid19_centre": "Covid-19 相談センター",
@@ -214,6 +229,7 @@
     "condoms": "コンドーム自販機",
     "medical_supply": "医療用品店",
     "health_center": "健康センター",
+    "herbalist": "ハーブ店",
     "food": "飲食",
     "supermarket": "スーパーマーケット",
     "butcher": "肉屋",
@@ -222,6 +238,7 @@
     "seafood": "魚屋",
     "greengrocer": "八百屋",
     "grocery": "食料品店",
+    "health_food": "健康食品",
     "chocolate": "チョコレート",
     "tea": "紅茶",
     "coffee": "コーヒー",
@@ -230,9 +247,11 @@
     "farm": "農産物販売所",
     "marketplace": "市場",
     "bakery": "パン屋",
+    "alcohol": "酒店",
     "eat": "レストラン&持ち帰り",
     "vending_machine": "自販機",
     "restaurant": "レストラン",
+    "awarded_chef": "トップシェフ",
     "fast_food": "ファストフード",
     "ice_cream": "アイスクリーム",
     "cafe": "喫茶店",
@@ -240,42 +259,101 @@
     "drugs": "嗜好品",
     "tobacco": "タバコ",
     "e_cigarette": "電子タバコ",
-    "alcohol": "酒店",
-    "shop": "店舗",
+    "bank": "銀行",
+    "atm": "ATM",
+    "money_transfer": "海外送金所",
+    "mobile_money_agent": "モバイル決済エージェント",
+    "clothing_beauty": "衣類 & 美容",
+    "shoes": "靴",
+    "bag": "バッグ",
+    "beauty": "美容サービス",
+    "clothes": "衣料品店",
+    "cosmetics": "化粧品",
+    "hairdresser": "理美容院",
+    "jewelry": "宝石店",
+    "massage": "マッサージ",
+    "tailor": "仕立て屋",
+    "perfumery": "香水店",
+    "chemist": "化粧品店",
+    "home_equipment": "住宅設備",
     "hardware": "金物",
+    "bed": "寝具",
+    "furniture": "家具",
+    "houseware": "家庭用品",
+    "interior_decoration": "インテリア",
+    "pottery": "陶磁器店",
+    "watches": "腕時計店",
+    "lighting": "照明器具",
+    "hifi": "音響機器",
+    "electronics": "電子機器",
+    "shop": "店舗",
     "mobile_phone": "携帯電話",
     "computer": "コンピュータ",
-    "electronics": "電子機器",
+    "printer_ink": "プリンター・インク",
+    "dry_cleaning": "ドライ・クリーニング",
     "laundry": "洗濯屋",
     "stationery": "文具店",
     "newsagent": "新聞販売店",
     "pet": "ペット店",
     "agrarian": "農業用品店",
     "flower": "園芸用品店",
-    "chemist": "化粧品店",
     "sewing": "裁縫",
-    "shoes": "靴",
     "books": "書店",
-    "beauty": "美容サービス",
-    "clothes": "衣料品店",
+    "art": "美術品",
+    "charity": "チャリティ店",
+    "department_store": "百貨店",
     "gift": "ギフト店",
-    "hairdresser": "理美容院",
-    "jewelry": "宝石店",
+    "music": "音楽",
+    "musical_instrument": "楽器",
+    "photo": "写真",
+    "second_hand": "中古品",
+    "ticket": "チケット店",
     "toys": "おもちゃ屋",
+    "trade": "資材店",
+    "travel_agency": "旅行代理店",
+    "variety_store": "バラエティ・ショップ",
+    "video": "ビデオ",
+    "video_games": "ビデオゲーム",
+    "weapons": "武器",
+    "wholesale": "卸店",
+    "sports": "スポーツ",
     "mobility": "モビリティ",
     "fuel": "ガソリンスタンド",
     "car_rental": "レンタカー",
     "bicycle": "自転車店",
     "car": "ガレージ",
     "car_dealer": "自動車販売店",
+    "car_wash": "洗車",
+    "motorcycle": "オートバイ",
     "bicycle_tube": "自転車チューブ自販機",
-    "public_transport_tickets": "公共交通券売機"
+    "public_transport_tickets": "公共交通券売機",
+    "tyres": "タイヤ"
+  },
+  "qa": {
+    "title": "品質改善"
   },
   "external": {
     "mobile": {
       "places_around": "封鎖中に開店している場所を探す",
       "contribute": "自分の情報でマップを改善する",
       "organize": "感染リスクを抑えるためのより良いモビリティ"
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "地方リスト"
+    },
+    "departements": {
+      "title": "百貨店リスト"
+    },
+    "communes": {
+      "title": "州リスト"
+    },
+    "pois": {
+      "link": {
+        "previous": "以前の施設・店舗",
+        "next": "次の施設・店舗"
+      }
     }
   }
 }

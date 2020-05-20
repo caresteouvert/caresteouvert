@@ -17,10 +17,10 @@ describe('OpeningHoursEditorInterval', () => {
       localVue,
       stubs
     });
-    expect(editor.findAll(TimePicker).length).toBe(1);
+    expect(editor.findAllComponents(TimePicker).length).toBe(1);
     editor.vm.intervalStart = '08:00';
     editor.vm.next();
-    expect(editor.findAll(TimePicker).length).toBe(1);
+    expect(editor.findAllComponents(TimePicker).length).toBe(1);
     editor.vm.intervalEnd = '16:00';
     editor.vm.next();
     expect(editor.emitted('input').length).toEqual(1);

@@ -1,0 +1,354 @@
+{
+  "lang": "Bearla",
+  "loading": "luchtú, fan le do thoil....",
+  "covid19-alert": "Lean treoracha an Rialtais. Tá TÚ freagrach.",
+  "title": "Tá sé fós oscailte",
+  "subtitle": "Áiseanna a fhanann ar oscailt le linn an ghlasála agus dá éis",
+  "search": "Clóscríobh do chuardach",
+  "coordinates": "Comhordanáidí",
+  "menu": "Roghchlár",
+  "missing_shop": "Tuairisc ar shiopa atá ar iarraidh",
+  "backtolist": "Filleadh ar an liosta",
+  "missing_shop_dialog": {
+    "description": "Tá sé i gceist ag « {brand} »  ach áiteanna a thaispeáint a cheadaítear a oscailt le linn an ghlasála. Tá roinnt cúiseanna féideartha ann má tá cuid acu ar iarraidh:",
+    "add_osm": "Níl an áit seo ar OpenStreetMap. Cuir leis é",
+    "add_osm_cta": "Lean an treoir",
+    "add_category": "Tá catagóir áiteanna ar iarraidh",
+    "add_category_cta": "Larr breisiú"
+  },
+  "change_lang": "Athraigh teanga",
+  "zoomtosee": "Zúmáil isteach chun áiseanna oscailte a thaispeáint",
+  "filter_noresults": "Ní bhfuarthas torthaí. Bain triail as súmáil amach.",
+  "toggle_color": {
+    "blind": "Modh dall dath a ghníomhachtú",
+    "normal": "Mód dall dath a dhíchumasú"
+  },
+  "services": {
+    "delivery": "Seachadadh",
+    "hydroalcoholic_gel": "Glóthach hidreaclórach",
+    "mask": "Masc",
+    "takeaway": "Bialann Beir leat"
+  },
+  "learnmore": {
+    "about": "faoi",
+    "contribute": "Cur",
+    "missing_shop": "tuairisc ar shiopa atá ar iarraidh",
+    "description": "Is é « {brand} » an uirlis riachtanach chun gluaiseacht nár éirigh leat timpeall do theach a sheachaint le linn glasála agus ar an gcaoi sin an riosca gabhála a theorannú.\nLigeann an léarscáil chomhoibritheach seo duit áiteanna i do chomharsanacht a roinnt nó a dhúnadh go héasca. Is é an bealach is éifeachtaí agus aontaithe é chun eolas níos fearr a thabhairt do do chomharsana agus d’áitritheoirí do chathair.",
+    "title": "Foghlaim níos mó",
+    "press": "Brúigh",
+    "disclaimer": "Séanadh",
+    "blog": "Blag",
+    "townhalls": "Cumarsáid ghéarchéime don Údarás Áitiúil",
+    "osm_contributors": "Doiciméadú do rannpháirtithe OpenStreetMap"
+  },
+  "rgpd": {
+    "consent": "Le linn an ghlasála an dtógfá fianán ar do ríomhaire le haghaidh ár staitisticí?",
+    "yes": "Sea",
+    "no": "Níl"
+  },
+  "apps_info": {
+    "close": "Dhúnadh",
+    "text": "Tá an aip soghluaiste «{brand}» ar fáil anois!",
+    "googleplay": "Google Play",
+    "apple": "aipmhargadh",
+    "fdroid": "f-Droid"
+  },
+  "days": {
+    "monday": "Dé Luain",
+    "tuesday": "Dé Mairt",
+    "wednesday": "Dé Céadaoin",
+    "thursday": "Déardaoin",
+    "friday": "Dé Aoine",
+    "saturday": "Dé Sathairn",
+    "sunday": "Dé Domhnaigh",
+    "ph": "Saoire poiblí"
+  },
+  "contribute_form": {
+    "title": "Cur",
+    "step1": {
+      "title": "An bhfuil an áit seo oscailte le linn glasála?",
+      "open": {
+        "yes": "Sea",
+        "no": "Níl"
+      }
+    },
+    "step2": {
+      "title": "Uaireanta oscailte le linn glasála",
+      "same_hours": "Seo na huaireanta céanna",
+      "same_hours_without_lockdown": "Seo na huaireanta céanna lasmuigh de ghlasáil",
+      "dont_know": "Níl a fhios agam",
+      "continue": "Leanúint ar aghaidh"
+    },
+    "step3": {
+      "title": "Cuir sonraí leis",
+      "3state": {
+        "unknown": "Níl a fhios agam",
+        "yes": "Sea",
+        "no": "Níl"
+      },
+      "delivery": "Seachadadh ar fáil",
+      "takeaway": "Ligeann an tsaoráid seo don cheannach beir leat",
+      "access": "Cuireann an áis seo fáiltiú fisiceach ar an láithreán",
+      "drive_through": "Tugann an áis seo tiomáint tríd",
+      "details": "Roghnach: cuir na sonraí a theastaíonn le linn an ghlasála",
+      "details_error": "Ba chóir go mbeadh sé folamh nó 10 gcarachtar ar a laghad",
+      "definite_closing": "ag dúnadh cinnte",
+      "details_definite_closing": "Tá an áit druidte go buan. Cad atá ann anois? Tabhair an oiread sonraí agus is féidir leat..."
+    },
+    "submit": "Fhoilsiú",
+    "cancel": "Cealaigh"
+  },
+  "details": {
+    "signal_warning": "Bhí tú ag scríobh tuairisc. Ní shábhálfar é. Ar mhaith leat leanúint ar aghaidh?",
+    "signal": "Tuairiscigh athrú",
+    "signal_done": "Cláraíodh do thuairisc, go raibh maith agat! Beidh sé le feiceáil i gceann tamaill.",
+    "lockdown_opening_hours": "Uaireanta oscailte",
+    "normal_opening_hours": "Uaireanta oscailte lasmuigh den tréimhse frithdhúnadh",
+    "lockdown_brand_hours": "Feach ar na uaireanta oscailte",
+    "facebook": "Leathanach Facebook",
+    "not_accessible": "Gan fáiltiú fisiceach ar an láithreán",
+    "capacity": "Toilleadh uasta : 0 duine | Toilleadh uasta : 1 duine | Toilleadh uasta : {count} persons",
+    "services": "Seirbhisí",
+    "contact": "Teagmháil",
+    "last_update": {
+      "date": "Nuashonrú deireanach: {dáta}",
+      "recent": "Nuashonraithe cúpla nóiméad ó shin, b’fhéidir gur athraigh an fhaisnéis thíos"
+    },
+    "opening_hours": {
+      "state_until_date": "{state} go dtí {date}",
+      "state": {
+        "open": "oscailte",
+        "closed": "dúnta"
+      },
+      "tomorrow": "amárach"
+    },
+    "state": {
+      "open": "Áis oscailte le linn dianghlasáil",
+      "open_adapted": "Áis oscailte le linn dianghlasáil, le huaireanta athraithe",
+      "partial": "Baineann áis le branda a bhfuil a áiteanna oscailte go páirteach le linn glasála. An bhfuil sé oscailte nó dúnta? Cuir scéala chugainn.",
+      "unknown": "Féadfar cead a thabhairt áis a oscailt le linn glasála. An bhfuil sé oscailte nó dúnta? Cuir scéala chugainn.",
+      "closed": "Áit dúnta le linn glasála"
+    },
+    "state_short": {
+      "open": "Oscailte le linn an ghlasála",
+      "open_adapted": "Oscailte le linn an ghlasála",
+      "partial": "b'fhéidir oscail",
+      "unknown": "b'fhéidir oscail",
+      "closed": "Dunta le linn an ghlasála"
+    },
+    "delivery": {
+      "yes": "Seirbhís seachadta ar fáil",
+      "only": "Ach amháin trí sheachadadh"
+    },
+    "takeaway": {
+      "yes": "Díol beir leat ar fáil",
+      "only": "Díol beir leat"
+    },
+    "drive_through": {
+      "yes": "Seirbhís tiomána tríd ar fáil",
+      "only": "Gan ach tiomáint-tríd"
+    },
+    "wheelchair": {
+      "yes": "Inrochtana do chathaoireacha rothaí",
+      "limited": "Rochtain pháirteach ar chathaoireacha rothaí"
+    },
+    "vending": {
+      "pizza": "Píotsa",
+      "stamps": "Stampaí",
+      "parcel_mail_in": "bosca titim dáileachta",
+      "parcel_pickup": "Bailiú beartán",
+      "parcel_pickup;parcel_mail_in": "Bosca titim agus bailiú",
+      "milk": "Bainne",
+      "drinks": "Deochanna",
+      "water": "Uisce",
+      "sweets": "Milseáin"
+    },
+    "hygiene": "Sláinteachas",
+    "hydroalcoholic_gel": "Glóthach hidreaclórach",
+    "mask": "Masc",
+    "hygiene_status": {
+      "yes": "Ar {date} : ar fáil",
+      "no": "Ar {date} : Ní ar fáil",
+      "void": "Gan aon fhaisnéis, cuir in iúl dúinn"
+    },
+    "hygiene_entry": {
+      "has": "Ar fail",
+      "hasnot": "Níl sé ar fail"
+    },
+    "update_dialog": {
+      "complete1": "An é seo do bhunaíocht nó cuid de do ghrúpa?",
+      "complete2": "Faigh infheictheacht tar éis glasáil",
+      "title": "Bainisteoir díolphointe",
+      "promo": "Is bainisteoir saincheadúnais nó stiúrthóir líonra saincheadúnais tú.\nFaigh infheictheacht trí do chuid pointí díola go léir a liostáil i \"Ça reste ouvert\".\nChomh maith le bheith aibhsithe ar bhealach pearsantaithe inár seirbhís, beidh tú le feiceáil i go leor suíomhanna agus feidhmchlár soghluaiste a bhuíochas sin do OpenStreetMap.",
+      "contact": "Teagmháil"
+    }
+  },
+  "opening_hours_editor": {
+    "day_shortcuts": {
+      "weekdays": "Luan go Satharn"
+    },
+    "select_days": "Roghnaigh laethanta a roinneann na huaireanta oscailte céanna",
+    "next": "Ar Aghaidh",
+    "cancel": "Cealaigh",
+    "select_time": {
+      "start": "Oscailte ar",
+      "end": "Dunta ar"
+    },
+    "add_interval": "Cuir uaireanta leis",
+    "add_new_days": "Cuir laethanta oscailte leis"
+  },
+  "osm_link": {
+    "title": "Úsáideann «{brand}» sonraí OpenStreetMap.",
+    "view": "amharc",
+    "edit": "Cuir in Eagar"
+  },
+  "categories": {
+    "other": "Áiseanna eile",
+    "amenity": "Taitneamhacht",
+    "police": "Gardaí",
+    "townhall": "Halla an Bhaile",
+    "post_office": "Seirbhisí post",
+    "childcare": "Cúram leanaí",
+    "employment_agency": "Gníomhaireacht fostaíochta",
+    "funeral_directors": "Adhlacóirí",
+    "money": "Airgead",
+    "insurance": "Árachas",
+    "tourism_info": "Oifig thurasóireachta",
+    "hotel": "Óstáil",
+    "recycling_centre": "Ionad athchúrsála",
+    "library": "Leabharlann",
+    "copyshop": "Siopa cóipeála",
+    "health": "Sláinte",
+    "pharmacy": "Cógaslann",
+    "covid19_centre": "Ionad comhairliúcháin do COVID-19",
+    "optician": "Radharceolaí",
+    "hearing_aids": "Áis éisteachta",
+    "condoms": "Meaisín díola coiscín",
+    "medical_supply": "Soláthar leighis",
+    "health_center": "Ionad sláinte",
+    "herbalist": "Siopa luibheolaí",
+    "food": "Bia",
+    "supermarket": "Ollmhargadh",
+    "butcher": "Búistéir",
+    "cheese": "Cáis",
+    "convenience": "Siopa áise",
+    "seafood": "Bia mara",
+    "greengrocer": "Siopa grósaeir glasraí",
+    "grocery": "Siopa grósaera",
+    "health_food": "Siopa bianna sláinte",
+    "chocolate": "Seacláid",
+    "tea": "Tae",
+    "coffee": "Caife",
+    "dairy": "Déiríocht",
+    "confectionery": "Milseogra",
+    "farm": "Siopa feirm",
+    "marketplace": "Margadh",
+    "bakery": "Bácús",
+    "alcohol": "Eischeadúnas",
+    "eat": "Bialann & Bialann ghasta",
+    "vending_machine": "Meaisín díola",
+    "restaurant": "Bialann",
+    "awarded_chef": "Príomh-chócaire",
+    "fast_food": "Mearbhia",
+    "ice_cream": "Uachtar reoite",
+    "cafe": "Siopa caife",
+    "bar": "Beár",
+    "drugs": "Drugaí",
+    "tobacco": "Tobac",
+    "e_cigarette": "Toitín leictreonach",
+    "bank": "Banc",
+    "atm": "Uathmheaisín bainc",
+    "money_transfer": "Aistriú airgid",
+    "mobile_money_agent": "Gníomhaire airgid soghluaiste",
+    "clothing_beauty": "Éadaí & Scéimh",
+    "shoes": "Bróga",
+    "bag": "Málaí",
+    "beauty": "Sciamhlann",
+    "child_clothes": "Éadaí leanaí",
+    "clothes": "Éadaí",
+    "cosmetics": "Cosmaidí",
+    "hairdresser": "Gruagaire",
+    "jewelry": "Siopa seodra",
+    "massage": "Suathaireacht",
+    "tailor": "Siopa an táilliúra",
+    "perfumery": "Teach cumhradóireachta",
+    "chemist": "Siopa cógaisíochta",
+    "home_equipment": "Trealamh bhaile",
+    "hardware": "Crua-earraí",
+    "bed": "Leaba",
+    "furniture": "Troscán",
+    "houseware": "Earraí tí",
+    "interior_decoration": "Maisiú istigh",
+    "pottery": "Potaireacht",
+    "watches": "Uaireadóirí",
+    "lighting": "Soilsiú",
+    "hifi": "Hifi",
+    "electronics": "Fearas leictreonach",
+    "shop": "Siopaí",
+    "mobile_phone": "Fón póca",
+    "computer": "Ríomhaire",
+    "printer_ink": "Dúch priontála",
+    "dry_cleaning": "Tirimghlanadh",
+    "laundry": "Neachtlann",
+    "stationery": "Stáiseanóireacht",
+    "newsagent": "Nuachtánaí",
+    "pet": "Siopa peataí",
+    "agrarian": "Siopa talmhaíochta",
+    "flower": "Bláth Gairdín",
+    "sewing": "Fuála",
+    "books": "Siopa leabhar",
+    "art": "Ealaín",
+    "charity": "Siopa carthanais",
+    "department_store": "Siopa ilrannach",
+    "gift": "Siopa bronntanas",
+    "music": "Ceoil",
+    "musical_instrument": "Uirlis cheoil",
+    "photo": "Fótagraf",
+    "second_hand": "Ar athlámh",
+    "ticket": "Ticéid",
+    "toys": "Siopa bréagán",
+    "trade": "Trádáil",
+    "travel_agency": "Gníomhaireacht taistil",
+    "variety_store": "Siopa earraí ilghnéitheacha",
+    "video": "Físeáin",
+    "video_games": "Físchluichí",
+    "weapons": "Airm",
+    "wholesale": "Mórdhíoltóir",
+    "sports": "Spóirt",
+    "mobility": "Soghluaisteacht",
+    "fuel": "Stáisiún peitril",
+    "car_rental": "gnólacht carranna ar cíos",
+    "bicycle": "Siopa rothar",
+    "car": "Garáiste",
+    "car_dealer": "Díoltóir carranna ",
+    "car_wash": "Niteoir carranna",
+    "motorcycle": "Gluaisrothair",
+    "bicycle_tube": "Meaisín díola tiúb rothair",
+    "public_transport_tickets": "Meaisín ticéad don iompar poiblí",
+    "tyres": "Boinn"
+  },
+  "external": {
+    "mobile": {
+      "places_around": "Aimsigh (open places) i rith an ordú dianghlasála ",
+      "contribute": "Feabhas a chur an léarscáil le do chuid faisnéise.",
+      "organize": "Soghluaisteacht níos fearr chun an riosca ionfhabhtaithe a theorannú"
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "Liosta na réigiún"
+    },
+    "departements": {
+      "title": "Liosta na ranna"
+    },
+    "communes": {
+      "title": "Liosta na contaetha"
+    },
+    "pois": {
+      "link": {
+        "previous": "Áiteanna roimhe sin",
+        "next": "Áiteanna seo a leanas"
+      }
+    }
+  }
+}

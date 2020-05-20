@@ -65,12 +65,13 @@ const tagsPerCategory = {};
 Object.entries(catg.categories).forEach(e => {
 	const [ catId, cat ] = e;
 	const singleTags = {};
-	tagsPerCategory[catId] = Object.values(cat.subcategories).map(subcat => {
+	tagsPerCategory[catId] = Object.values(cat.subcategories)
+	.filter(subcat => subcat.osm_tags)
+	.map(subcat => {
 		let result;
 		if(subcat.osm_filter_tags) {
 			result = [];
 			subcat.osm_tags.forEach(tags => {
-				result.push(Object.assign({}, tags, { "opening_hours:covid19": "*" }));
 				subcat.osm_filter_tags.forEach(ftags => {
 					result.push(Object.assign({}, tags, ftags));
 				});
@@ -125,10 +126,27 @@ $$ LANGUAGE plpgsql IMMUTABLE;
 
 // Find all tags for subcategories
 const tagsPerSubcategory = {};
-Object.values(catg.categories).forEach(cat => {
-	Object.entries(cat.subcategories).forEach(e => {
-		const [ subcatId, subcat ] = e;
-		tagsPerSubcategory[subcatId] = subcat.osm_tags;
+Object.values(catg.categories).forEach((cat, index) => {
+	Object.entries(cat.subcategories).forEach(([ subcatId, subcat ], index2) => {
+		if (subcat.osm_tags) {
+			if (!tagsPerSubcategory[subcatId]) {
+				tagsPerSubcategory[subcatId] = subcat.osm_tags;
+			}
+
+			if ((subcat.areas && subcat.areas !== "all") || subcat['-areas']) {
+				const minusArea = subcat['-areas'] || [];
+				const areas = (subcat.areas || catg.countries).filter(a => !minusArea.includes(a));
+
+				tagsPerSubcategory[subcatId] = tagsPerSubcategory[subcatId].map(tags => {
+					if (tags.areas) {
+						tags.areas.push(...areas);
+						return tags;
+					} else {
+						return { ...tags, areas };
+					}
+				});
+			}
+		}
 	});
 });
 
@@ -136,7 +154,7 @@ const subcatfct = `CREATE OR REPLACE FUNCTION get_subcategory(tags HSTORE, area 
 BEGIN
 	${tagsPerCategoryToSql(tagsPerSubcategory)}
 	ELSE
-		RETURN 'unknown';
+		RETURN 'other';
 	END IF;
 END;
 $$ LANGUAGE plpgsql IMMUTABLE;
@@ -164,7 +182,15 @@ fs.writeFile(CATEGORIES_SQL, wholeSql, (err) => {
 // Edit categories filter in update_poi.sql
 const tagsForCondition = {};
 
-Object.values(catg.categories).map(cat => Object.values(cat.subcategories).map(subcat => subcat.osm_tags).flat()).flat().forEach(e => {
+Object.values(catg.categories)
+.map(cat => (
+	Object.values(cat.subcategories)
+	.filter(subcat => subcat.osm_tags)
+	.map(subcat => subcat.osm_tags)
+	.flat()
+))
+.flat()
+.forEach(e => {
 	Object.entries(e).forEach(kv => {
 		const [ k, v ] = kv;
 		if(catg.sql_columns.includes(k)) {

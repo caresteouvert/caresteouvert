@@ -20,9 +20,6 @@
         <v-list-item-title v-text="item.text"></v-list-item-title>
         <v-list-item-subtitle v-text="item.region"></v-list-item-subtitle>
       </v-list-item-content>
-      <v-list-item-action>
-        <v-icon>mdi-coin</v-icon>
-      </v-list-item-action>
     </template>
   </v-autocomplete>
 </template>
@@ -93,7 +90,9 @@ export default {
         });
     }, 350, { maxWait: 500 }),
     selected(val) {
-      this.$emit('select', val);
+      if (Array.isArray(val)) {
+        this.$emit('select', val);
+      }
     }
   }
 }
@@ -102,7 +101,7 @@ export default {
 <style>
 .xs .autocomplete-big input,
 .sm .autocomplete-big input {
-  font-size: 30px;
+  font-size: 1.5rem;
   line-height: 35px;
   max-height: 35px;
 }

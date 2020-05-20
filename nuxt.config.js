@@ -4,7 +4,7 @@ import FMMode from 'frontmatter-markdown-loader/mode';
 
 const messages = {};
 glob.sync('./locales/*.json' ).forEach((file) => {
-  const locale = basename(file, '.json');
+  const locale = basename(file, '.json').replace('_', '-');
   messages[locale] = require(resolve(file));
 });
 
@@ -38,6 +38,7 @@ export default {
   */
   plugins: [
     { src: '~/plugins/map', mode: 'client' },
+    { src: '~/plugins/qa_map', mode: 'client' },
     { src: '~/plugins/matomo', mode: 'client' },
     { src: '~/plugins/linkified' },
     { src: '~/plugins/url' }
@@ -52,8 +53,14 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    ['~/modules/i18n', { messages }]
+    ['~/modules/i18n', { messages }],
+    ['@nuxtjs/redirect-module']
   ],
+
+  redirect: [
+    { from: '^/about', to: 'https://blog.caresteouvert.fr/about' }
+  ],
+
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module

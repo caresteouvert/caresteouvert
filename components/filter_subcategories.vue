@@ -7,6 +7,7 @@
       :show-arrows="false"
       :value="value"
       :column="expand"
+      :mobile-break-point="10000"
       @change="(v) => $emit('input', v || category)"
     >
       <v-chip

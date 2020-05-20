@@ -3,12 +3,12 @@
   "loading": "Loading, please wait...",
   "covid19-alert": "Follow government restrictions. The responsibility is YOURS.",
   "title": "It remains open",
-  "subtitle": "Places that remain open during lockdown",
-  "subtitle-dense": "Places open during lockdown",
+  "subtitle": "Places that remain open during and after the lockdown",
   "search": "Type your search",
   "coordinates": "Coordinates",
   "menu": "Menu",
   "missing_shop": "Report a missing shop",
+  "backtolist": "Back to the list",
   "missing_shop_dialog": {
     "description": "« {brand} » is intended to display only places that are allowed to open during the lockdown. There are several possible reasons if some are missing:",
     "add_osm": "The place is not in OpenStreetMap, add it:",
@@ -25,6 +25,8 @@
   },
   "services": {
     "delivery": "Delivery",
+    "hydroalcoholic_gel": "Hydroalcoholic gel",
+    "mask": "Mask",
     "takeaway": "Takeaway"
   },
   "learnmore": {
@@ -89,7 +91,9 @@
       "access": "This place offers physical reception on site",
       "drive_through": "This place has a drive-through service",
       "details": "Optional : add details required during the lockdown",
-      "details_error": "Should be either empty or at least 10 characters long"
+      "details_error": "Should be either empty or at least 10 characters long",
+      "definite_closing": "Definite closing",
+      "details_definite_closing": "This place has definitely closed. What's there now instead ? Give as many details as possible, for example: under construction building, new business..."
     },
     "submit": "Publish",
     "cancel": "Cancel"
@@ -160,7 +164,7 @@
       "sweets": "Sweets"
     },
     "hygiene": "Hygiene",
-    "hydroalcoholic_gel": "Hydroalcoolique gel",
+    "hydroalcoholic_gel": "Hydroalcoholic gel",
     "mask": "Mask",
     "hygiene_status": {
       "yes": "On {date} : available",
@@ -170,6 +174,16 @@
     "hygiene_entry": {
       "has": "has",
       "hasnot": "has no"
+    },
+    "safety": {
+      "mask": "Mask must be worn"
+    },
+    "update_dialog": {
+      "complete1": "Is this your establishment or part of your group ?",
+      "complete2": "Gain visibility after lockdown",
+      "title": "Point of sale manager",
+      "promo": "You are the manager of a franchise or director of a franchised network.\nGain visibility by listing all your points of sale in \"Ça reste ouvert\".\nIn addition to being highlighted in a personalized way in our service, you will also appear in many sites and mobile applications thanks to OpenStreetMap.",
+      "contact": "Contact us"
     }
   },
   "opening_hours_editor": {
@@ -200,12 +214,13 @@
     "childcare": "Childcare",
     "employment_agency": "Employment agency",
     "funeral_directors": "Funeral directors",
-    "bank": "Bank",
-    "moneylender": "Moneylender",
+    "money": "Money",
     "insurance": "Insurance",
     "tourism_info": "Tourism information",
     "hotel": "Hosting",
     "recycling_centre": "Recycling centre",
+    "library": "Library",
+    "copyshop": "Copy shop",
     "health": "Health",
     "pharmacy": "Pharmacy",
     "covid19_centre": "Covid-19 consultation centre",
@@ -214,6 +229,7 @@
     "condoms": "Condoms vending machine",
     "medical_supply": "Medical supplies",
     "health_center": "Health center",
+    "herbalist": "Herbalist",
     "food": "Food",
     "supermarket": "Supermarket",
     "butcher": "Butcher",
@@ -222,6 +238,7 @@
     "seafood": "Seafood",
     "greengrocer": "Greengrocer",
     "grocery": "Grocery",
+    "health_food": "Health food",
     "chocolate": "Chocolate",
     "tea": "Tea",
     "coffee": "Coffee",
@@ -230,9 +247,11 @@
     "farm": "Farm shop",
     "marketplace": "Marketplace",
     "bakery": "Bakery",
+    "alcohol": "Alcohol store",
     "eat": "Restaurant & take-away",
     "vending_machine": "Vending machine",
     "restaurant": "Restaurant",
+    "awarded_chef": "Top chef",
     "fast_food": "Fast food",
     "ice_cream": "Ice cream",
     "cafe": "Coffee shop",
@@ -240,42 +259,101 @@
     "drugs": "Drugs",
     "tobacco": "Tobacco",
     "e_cigarette": "E-cigarette",
-    "alcohol": "Alcohol store",
-    "shop": "Shops",
+    "bank": "Bank",
+    "atm": "ATM",
+    "money_transfer": "Money transfer",
+    "mobile_money_agent": "Mobile money agent",
+    "clothing_beauty": "Clothing & Beauty",
+    "shoes": "Shoes",
+    "bag": "Bags",
+    "beauty": "Beauty store",
+    "clothes": "Clothes",
+    "cosmetics": "Cosmetics",
+    "hairdresser": "Hairdresser",
+    "jewelry": "Jewelry",
+    "massage": "Massage",
+    "tailor": "Tailor",
+    "perfumery": "Perfumery",
+    "chemist": "Chemist",
+    "home_equipment": "Home equipment",
     "hardware": "Hardware",
+    "bed": "Bed",
+    "furniture": "Furniture",
+    "houseware": "Houseware",
+    "interior_decoration": "Interior decoration",
+    "pottery": "Pottery",
+    "watches": "Watches",
+    "lighting": "Lighting",
+    "hifi": "Hifi",
+    "electronics": "Electronics",
+    "shop": "Shops",
     "mobile_phone": "Mobile phone",
     "computer": "Computer",
-    "electronics": "Electronics",
+    "printer_ink": "Printer ink",
+    "dry_cleaning": "Dry cleaning",
     "laundry": "Laundry",
     "stationery": "Stationery",
     "newsagent": "Newsagent",
     "pet": "Pet store",
     "agrarian": "Agricultural products",
     "flower": "Garden / flower",
-    "chemist": "Chemist",
     "sewing": "Sewing",
-    "shoes": "Shoes",
     "books": "Book store",
-    "beauty": "Beauty store",
-    "clothes": "Clothes",
+    "art": "Art",
+    "charity": "Charity shop",
+    "department_store": "Department store",
     "gift": "Gift shop",
-    "hairdresser": "Hairdresser",
-    "jewelry": "Jewelry",
+    "music": "Music",
+    "musical_instrument": "Musical instrument",
+    "photo": "Photo",
+    "second_hand": "Second hand",
+    "ticket": "Tickets",
     "toys": "Toy store",
+    "trade": "Trade",
+    "travel_agency": "Travel agency",
+    "variety_store": "Variety store",
+    "video": "Videos",
+    "video_games": "Video games",
+    "weapons": "Weapons",
+    "wholesale": "Wholesale",
+    "sports": "Sports",
     "mobility": "Mobility",
     "fuel": "Fuel station",
     "car_rental": "Car rental",
     "bicycle": "Bicycle shop",
     "car": "Garage",
     "car_dealer": "Car dealer",
+    "car_wash": "Car wash",
+    "motorcycle": "Motorcycles",
     "bicycle_tube": "Bicycle tube vending machine",
-    "public_transport_tickets": "Public transport ticket machine"
+    "public_transport_tickets": "Public transport ticket machine",
+    "tyres": "Tyres"
+  },
+  "qa": {
+    "title": "Quality assurance"
   },
   "external": {
     "mobile": {
       "places_around": "Find open places during lockdown",
       "contribute": "Improve map with your own information",
       "organize": "Better mobility to limit the risk of contagion"
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "Regions list"
+    },
+    "departements": {
+      "title": "Departments list"
+    },
+    "communes": {
+      "title": "Counties list"
+    },
+    "pois": {
+      "link": {
+        "previous": "Previous places",
+        "next": "Next places"
+      }
     }
   }
 }

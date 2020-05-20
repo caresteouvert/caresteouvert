@@ -1,3 +1,5 @@
+import PhoneNumber from 'awesome-phonenumber';
+
 export default {
   computed: {
     title() {
@@ -14,7 +16,20 @@ export default {
     },
 
     contact() {
-      const phone = (p) => { return { text: p, href: `tel:${p}` }; };
+      const phoneText = (p) => {
+        return new PhoneNumber(p).getNumber('national');
+      };
+      const phone = (p) => { return { text: phoneText(p), href: `tel:${p}` }; };
+      const urlText = (u) => {
+        return u.replace(/^https?\:\/\//, "").replace(/\/$/, "");
+      };
+      const fbText = (u) => {
+        if(!u.startsWith("http")) { return u; }
+        return u.replace(/^^https?\:\/\/.*facebook\.com\//, "")
+          .replace(/\/$/, "")
+          .replace(/-\d+$/, "")
+          .replace(/-/g, " ");
+      };
       const transform = {
         phone,
         mobile: phone,
@@ -24,17 +39,17 @@ export default {
         },
         facebook(url) {
           const href = url.startsWith('http') ? url : `https://facebook.com/${url}`;
-          return { text: href, href };
+          return { text: fbText(href), href };
         },
         website(url) {
           const href = url.startsWith('http') ? url : `http://${url}`;
-          return { text: href, href };
+          return { text: urlText(href), href };
         },
         fax(f) {
-          return { text: f, href: `fax:${f}` };
+          return { text: phoneText(f), href: `fax:${f}` };
         }
       };
-      const tags = this.place.properties.tags;
+      const tags = Object.assign({ website: this.place.properties.brand_hours || undefined }, this.place.properties.tags);
       return (name) => {
         const value = tags[name] || tags[`contact:${name}`];
         if (!value) return;

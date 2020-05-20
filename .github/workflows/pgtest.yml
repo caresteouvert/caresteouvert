@@ -1,0 +1,60 @@
+name: Pg tests
+
+on: push
+
+jobs:
+  pgtap:
+
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: mdillon/postgis:11
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: install pg_prove
+        run: sudo cpan TAP::Parser::SourceHandler::pgTAP
+        env:
+          SHELL: /bin/bash
+
+      - name: install postgres dev
+        run: sudo apt-get install -y --no-install-recommends postgresql-server-dev-all
+
+      - name: Checkout pgtap
+        uses: actions/checkout@v2
+        with:
+          repository: theory/pgtap
+          path: pgtap
+          tag: v1.1.0
+
+      - name: install pgtap
+        working-directory: pgtap
+        run: make && psql --host localhost --username postgres --dbname postgres --file sql/pgtap.sql
+        env:
+          PGPASSWORD: postgres
+
+      - name: load sql
+        run: >-
+          psql --host localhost --username postgres --dbname postgres \
+               --file db/update_poi_test_data.sql \
+               --file db/categories_functions.sql \
+               --file db/status_order.sql \
+               --file db/update_poi.sql
+        env:
+          PGPASSWORD: postgres
+
+      - name: run tests
+        run: pg_prove -h localhost -d postgres -U postgres db/*_test.sql
+        env:
+          PGPASSWORD: postgres

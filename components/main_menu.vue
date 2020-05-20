@@ -6,14 +6,14 @@
       tile
       flat
     >
-      <v-card-title class="pl-1 pt-5 pb-5 justify-center">
+      <v-card-title class="pa-0 ma-0 mb-3 justify-center">
         <img
           :alt="brand"
           :src="logo"
-          class="px-3 logo"
+          class="pb-2 pt-1 px-3 logo"
         />
       </v-card-title>
-      <v-card-subtitle class="pl-2 text-center">
+      <v-card-subtitle class="pb-2 text-center">
         {{ $t('subtitle') }}
       </v-card-subtitle>
     </v-card>
@@ -39,6 +39,7 @@
       <v-divider vertical></v-divider>
       <toggle-color />
     </div>
+    <div v-show="false"><a href="/annuaire/">Annuaire</a></div>
   </div>
 </template>
 
@@ -77,5 +78,6 @@ export default {
 }
 .logo {
   max-width: 100%;
+  max-height: 175px;
 }
 </style>
