@@ -1,5 +1,6 @@
 ---
 title: "Colaboradores de OpenStreetMap, ayudanos a completar el mapa de tiendas franquiciadas"
+date: "2020-03-30"
 ---
 
 ![](~assets/es/3_Brand_con_ID.png)
@@ -10,7 +11,8 @@ Por ejemplo, todos los supermercados Éxito están abiertos pero con nuevos hora
 Para aplicar estas reglas en **Sigue abierto** (Ça reste ouvert), tenemos que identificar con certeza todas estas marcas en OpenStreetMap.
 Para esto, podemos usar la etiqueta [brand](https://wiki.openstreetmap.org/wiki/ES:Key:brand) así como la etiqueta [brand:wikidata](https://wiki.openstreetmap.org/wiki/Key:brand:wikidata) (que permite crear un enlace a proyectos colaborativos de Wikimedia, como Wikipedia o incluso Wikimedia Commons para imágenes).
 
-Pero estas etiquetas son poco usadas. Ayúdanos a agregarlas a negocios existentes en OpenStreetMap usando estos desafíos de MapRoulette:
+Pero estas etiquetas son poco usadas.
+Ayúdanos a agregarlas a negocios existentes en OpenStreetMap usando estos desafíos de MapRoulette:
 
 ### TODO
 
@@ -21,7 +23,7 @@ Pero estas etiquetas son poco usadas. Ayúdanos a agregarlas a negocios existent
 
 Comienza iniciando sesión con tu cuenta de OpenStreetMap para participar.
 
-Si no estás familiarizado con la herramienta MapRoulette, la cual permite compartir fácilmente las tareas entre los contribuyentes, comienza con el desafío sobre los bancos y amplia a tu vecindario o un área que conoces para seleccionar un marcador.
+Si no estás familiarizado con la herramienta MapRoulette, la cual permite compartir fácilmente las tareas entre los contribuyentes, comienza con el desafío sobre los bancos y amplia a tu vecindario o sobre un área que conozcas para seleccionar un marcador.
 De lo contrario, simplemente haz clic en "Start" para comenzar con un objeto aleatorio.
 
 ### TODO
@@ -51,6 +53,8 @@ Si usas el editor iD, a veces puede adivinar qué etiquetas agregar para las mar
 ![ID puede adivinar las etiquetas correctas para agregar](~/assets/es/3_Brand_con_ID.png)
 
 El editor sugiere que agreguemos automáticamente las etiquetas brand y brand:wikidata a este supermercado Carrefour.
+
+### TODO
 
 Si estás utilizando el editor JOSM, puedes habilitar ajustes preestablecidos de marca en Preferencias > Ajustes del mapa > Etiquetas de predefinidos > Índice de sugerencia de nombres. Luego, cuando desees modificar una empresa, usa el menú Predefinidos > Buscar predefinido...
 
