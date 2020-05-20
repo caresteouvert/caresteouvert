@@ -93,7 +93,7 @@
       "details": "Opcional: adiciona otros detalles necesarios durante la cuarentena:",
       "details_error": "Debe estar vacío o tener entre 10 y 200 caracteres de longitud",
       "definite_closing": "Cierre definitivo.",
-      "details_definite_closing": "Este lugar ha cerrado de forma definitiva. En cambio, ¿qué hay ahora ahí? Danos tantos detalles como sea posible. Por ejemplo, construcción de edificio en curso, nuevo negocio..."
+      "details_definite_closing": "Este lugar ha cerrado de forma definitiva. En cambio, ¿qué hay ahora ahí? Danos tantos detalles como sea posible. Por ejemplo, edificio en construcción, nuevo negocio..."
     },
     "submit": "Publicar",
     "cancel": "Cancelar"
