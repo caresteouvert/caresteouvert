@@ -101,7 +101,7 @@
   "details": {
     "signal_warning": "Estabas escribiendo un informe, si partes no se guardará. ¿Quieres realmente continuar?",
     "signal": "Reportar un cambio",
-    "signal_done": "Tu informe ha sido registrado. ¡Gracias! Este aparecerá en un momento sobre el mapa.",
+    "signal_done": "Tu informe ha sido registrado. ¡Gracias! Aparecerá en un momento sobre el mapa.",
     "lockdown_opening_hours": "Horario de apertura:",
     "normal_opening_hours": "Horario de apertura en periodo fuera de cuarentena:",
     "lockdown_brand_hours": "Consulta los horarios de apertura",
