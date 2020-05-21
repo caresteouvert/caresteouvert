@@ -152,6 +152,12 @@
       "yes": "Inrochtana ag cathaoireacha rothaí",
       "limited": "Rochtain pháirteach ag cathaoireacha rothaí"
     },
+    "newsagent": {
+      "yes": "Nuachtánaí"
+    },
+    "tobacco": {
+      "yes": "Tobac"
+    },
     "vending": {
       "pizza": "Píotsa",
       "stamps": "Stampaí",
