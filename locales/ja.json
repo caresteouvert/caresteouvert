@@ -152,6 +152,12 @@
       "yes": "車椅子利用可",
       "limited": "車椅子利用一部可"
     },
+    "newsagent": {
+      "yes": "新聞販売店"
+    },
+    "tobacco": {
+      "yes": "タバコ"
+    },
     "vending": {
       "pizza": "ピザ",
       "stamps": "切手",
