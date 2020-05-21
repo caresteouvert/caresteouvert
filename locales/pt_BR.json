@@ -152,6 +152,12 @@
       "yes": "Acessível para cadeirantes",
       "limited": "Acesso parcial para cadeirantes"
     },
+    "newsagent": {
+      "yes": "Banca"
+    },
+    "tobacco": {
+      "yes": "Tabacaria"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Selos",
