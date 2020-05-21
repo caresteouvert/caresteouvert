@@ -24,11 +24,14 @@ export default {
         return u.replace(/^https?\:\/\//, "").replace(/\/$/, "");
       };
       const fbText = (u) => {
-        if(!u.startsWith("http")) { return u; }
-        return u.replace(/^^https?\:\/\/.*facebook\.com\//, "")
-          .replace(/\/$/, "")
-          .replace(/-\d+$/, "")
-          .replace(/-/g, " ");
+        if (!u.startsWith("http")) {
+          return u;
+        }
+        const pageName = u.replace(/^https?\:\/\/.*facebook\.com\//, "")
+              .replace(/\/$/, "")
+              .replace(/-\d+$/, "")
+              .replace(/-/g, " ");
+        return decodeURIComponent(pageName);
       };
       const transform = {
         phone,

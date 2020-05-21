@@ -110,6 +110,11 @@ describe('Detail', () => {
       expect(detail.vm.contact('facebook')).toEqual([{ text: 'test2', href: 'https://facebook.com/test2' }]);
     });
 
+    it('format the facebook text', () => {
+      detail.vm.place = { properties: { status: 'open', cat: '', tags: { facebook: 'https://www.facebook.com/Nature-de-Ch%C3%AAne-2359679770917186/' } } };
+      expect(detail.vm.contact('facebook')[0].text).toEqual('Nature de Chêne');
+    });
+
     it('returns website', () => {
       detail.vm.place = { properties: { status: 'open', cat: '', tags: { website: 'example.com' } } };
       expect(detail.vm.contact('website')).toEqual([{ text: 'example.com', href: 'http://example.com' }]);
