@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3832);
+SELECT plan(3834);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -841,6 +841,10 @@ SELECT is(get_subcategory('amenity=>library'::hstore, 'FI'), 'library', 'get_sub
 SELECT is(get_category('amenity=>library'::hstore, 'IT'), 'amenity', 'get_category amenity=>library for IT should be amenity');
 
 SELECT is(get_subcategory('amenity=>library'::hstore, 'IT'), 'library', 'get_subcategory amenity=>library for IT should be library');
+
+SELECT is(get_category('amenity=>library'::hstore, 'FR'), 'amenity', 'get_category amenity=>library for FR should be amenity');
+
+SELECT is(get_subcategory('amenity=>library'::hstore, 'FR'), 'library', 'get_subcategory amenity=>library for FR should be library');
 
 SELECT is(get_category('shop=>copyshop'::hstore, 'AT'), 'amenity', 'get_category shop=>copyshop for AT should be amenity');
 

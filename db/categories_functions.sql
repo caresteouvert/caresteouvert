@@ -7,7 +7,7 @@
 -- Function for getting normalized category from OSM tags
 CREATE OR REPLACE FUNCTION get_category(tags HSTORE, area VARCHAR) RETURNS VARCHAR AS $$
 BEGIN
-	IF (tags->'amenity' = 'vending_machine' AND tags->'vending' IN ('stamps', 'parcel_mail_in', 'parcel_pickup', 'parcel_pickup;parcel_mail_in')) OR (tags->'amenity' = 'childcare' AND area LIKE 'FR%') OR (tags->'amenity' = 'kindergarten' AND tags->'kindergarten:FR' != '' AND area LIKE 'FR%') OR (tags->'amenity' IN ('bank', 'atm', 'money_transfer', 'mobile_money_agent') AND area NOT LIKE 'CD%') OR (tags->'shop' = 'money_lender' AND area NOT LIKE 'CD%') OR (tags->'tourism' = 'information' AND tags->'information' = 'office' AND tags->'opening_hours:covid19' != '') OR (tags->'tourism' IN ('hotel', 'motel', 'hostel') AND area SIMILAR TO '(FR|AT|DE|CH|IT)%') OR (tags->'amenity' = 'recycling' AND tags->'recycling_type' = 'centre' AND area SIMILAR TO '(AT|CH|DE|FR|IT)%') OR (tags->'amenity' = 'library' AND area SIMILAR TO '(AT|CH|DE|FI|IT)%') OR (tags->'shop' = 'copyshop' AND area SIMILAR TO '(AT|CH|DE|IT|FR)%') OR (tags->'amenity' IN ('police', 'townhall', 'post_office')) OR (tags->'office' IN ('employment_agency', 'insurance')) OR (tags->'shop' IN ('funeral_directors', 'insurance')) THEN
+	IF (tags->'amenity' = 'vending_machine' AND tags->'vending' IN ('stamps', 'parcel_mail_in', 'parcel_pickup', 'parcel_pickup;parcel_mail_in')) OR (tags->'amenity' = 'childcare' AND area LIKE 'FR%') OR (tags->'amenity' = 'kindergarten' AND tags->'kindergarten:FR' != '' AND area LIKE 'FR%') OR (tags->'amenity' IN ('bank', 'atm', 'money_transfer', 'mobile_money_agent') AND area NOT LIKE 'CD%') OR (tags->'shop' = 'money_lender' AND area NOT LIKE 'CD%') OR (tags->'tourism' = 'information' AND tags->'information' = 'office' AND tags->'opening_hours:covid19' != '') OR (tags->'tourism' IN ('hotel', 'motel', 'hostel') AND area SIMILAR TO '(FR|AT|DE|CH|IT)%') OR (tags->'amenity' = 'recycling' AND tags->'recycling_type' = 'centre' AND area SIMILAR TO '(AT|CH|DE|FR|IT)%') OR (tags->'amenity' = 'library' AND area SIMILAR TO '(AT|CH|DE|FI|IT|FR)%') OR (tags->'shop' = 'copyshop' AND area SIMILAR TO '(AT|CH|DE|IT|FR)%') OR (tags->'amenity' IN ('police', 'townhall', 'post_office')) OR (tags->'office' IN ('employment_agency', 'insurance')) OR (tags->'shop' IN ('funeral_directors', 'insurance')) THEN
 		RETURN 'amenity';
 	ELSIF (tags->'healthcare' = 'centre' AND tags->'healthcare:speciality' = 'covid19' AND area LIKE 'FR%') OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'condoms') OR (tags->'healthcare' IN ('centre', 'clinic', 'doctor', 'hospital', 'rehabilitation', 'laboratory') AND tags->'opening_hours:covid19' != '') OR (tags->'amenity' IN ('hospital', 'clinic', 'doctors') AND tags->'opening_hours:covid19' != '') OR (tags->'shop' = 'herbalist' AND area LIKE 'IT%') OR (tags->'amenity' = 'pharmacy') OR (tags->'shop' IN ('optician', 'hearing_aids', 'medical_supply')) OR (tags->'craft' = 'optician') THEN
 		RETURN 'health';
@@ -61,7 +61,7 @@ BEGIN
 		RETURN 'hotel';
 	ELSIF tags->'amenity' = 'recycling' AND tags->'recycling_type' = 'centre' AND area SIMILAR TO '(AT|CH|DE|FR|IT)%' THEN
 		RETURN 'recycling_centre';
-	ELSIF tags->'amenity' = 'library' AND area SIMILAR TO '(AT|CH|DE|FI|IT)%' THEN
+	ELSIF tags->'amenity' = 'library' AND area SIMILAR TO '(AT|CH|DE|FI|IT|FR)%' THEN
 		RETURN 'library';
 	ELSIF tags->'shop' = 'copyshop' AND area SIMILAR TO '(AT|CH|DE|IT|FR)%' THEN
 		RETURN 'copyshop';

@@ -101,7 +101,7 @@
         "library": {
           "name": "Library",
           "osm_tags": [ { "amenity": "library" } ],
-          "areas": [ "AT", "CH", "DE", "FI", "IT" ],
+          "areas": [ "AT", "CH", "DE", "FI", "IT", "FR" ],
           "show_qa": false
         },
         "copyshop": {
