@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3834);
+SELECT plan(3856);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -6401,6 +6401,50 @@ SELECT is(get_subcategory('shop=>newsagent'::hstore, 'CD'), 'newsagent', 'get_su
 SELECT is(get_category('shop=>newsagent'::hstore, 'IT'), 'shop', 'get_category shop=>newsagent for IT should be shop');
 
 SELECT is(get_subcategory('shop=>newsagent'::hstore, 'IT'), 'newsagent', 'get_subcategory shop=>newsagent for IT should be newsagent');
+
+SELECT is(get_category('newsagent=>yes'::hstore, 'DE'), 'shop', 'get_category newsagent=>yes for DE should be shop');
+
+SELECT is(get_subcategory('newsagent=>yes'::hstore, 'DE'), 'newsagent', 'get_subcategory newsagent=>yes for DE should be newsagent');
+
+SELECT is(get_category('newsagent=>yes'::hstore, 'FR'), 'shop', 'get_category newsagent=>yes for FR should be shop');
+
+SELECT is(get_subcategory('newsagent=>yes'::hstore, 'FR'), 'newsagent', 'get_subcategory newsagent=>yes for FR should be newsagent');
+
+SELECT is(get_category('newsagent=>yes'::hstore, 'ES'), 'shop', 'get_category newsagent=>yes for ES should be shop');
+
+SELECT is(get_subcategory('newsagent=>yes'::hstore, 'ES'), 'newsagent', 'get_subcategory newsagent=>yes for ES should be newsagent');
+
+SELECT is(get_category('newsagent=>yes'::hstore, 'AD'), 'shop', 'get_category newsagent=>yes for AD should be shop');
+
+SELECT is(get_subcategory('newsagent=>yes'::hstore, 'AD'), 'newsagent', 'get_subcategory newsagent=>yes for AD should be newsagent');
+
+SELECT is(get_category('newsagent=>yes'::hstore, 'CH'), 'shop', 'get_category newsagent=>yes for CH should be shop');
+
+SELECT is(get_subcategory('newsagent=>yes'::hstore, 'CH'), 'newsagent', 'get_subcategory newsagent=>yes for CH should be newsagent');
+
+SELECT is(get_category('newsagent=>yes'::hstore, 'AT'), 'shop', 'get_category newsagent=>yes for AT should be shop');
+
+SELECT is(get_subcategory('newsagent=>yes'::hstore, 'AT'), 'newsagent', 'get_subcategory newsagent=>yes for AT should be newsagent');
+
+SELECT is(get_category('newsagent=>yes'::hstore, 'PH'), 'shop', 'get_category newsagent=>yes for PH should be shop');
+
+SELECT is(get_subcategory('newsagent=>yes'::hstore, 'PH'), 'newsagent', 'get_subcategory newsagent=>yes for PH should be newsagent');
+
+SELECT is(get_category('newsagent=>yes'::hstore, 'FI'), 'shop', 'get_category newsagent=>yes for FI should be shop');
+
+SELECT is(get_subcategory('newsagent=>yes'::hstore, 'FI'), 'newsagent', 'get_subcategory newsagent=>yes for FI should be newsagent');
+
+SELECT is(get_category('newsagent=>yes'::hstore, 'MC'), 'shop', 'get_category newsagent=>yes for MC should be shop');
+
+SELECT is(get_subcategory('newsagent=>yes'::hstore, 'MC'), 'newsagent', 'get_subcategory newsagent=>yes for MC should be newsagent');
+
+SELECT is(get_category('newsagent=>yes'::hstore, 'CD'), 'shop', 'get_category newsagent=>yes for CD should be shop');
+
+SELECT is(get_subcategory('newsagent=>yes'::hstore, 'CD'), 'newsagent', 'get_subcategory newsagent=>yes for CD should be newsagent');
+
+SELECT is(get_category('newsagent=>yes'::hstore, 'IT'), 'shop', 'get_category newsagent=>yes for IT should be shop');
+
+SELECT is(get_subcategory('newsagent=>yes'::hstore, 'IT'), 'newsagent', 'get_subcategory newsagent=>yes for IT should be newsagent');
 
 SELECT is(get_category('shop=>pet'::hstore, 'DE'), 'shop', 'get_category shop=>pet for DE should be shop');
 

@@ -677,7 +677,8 @@
         "newsagent": {
           "name": "Newsagent",
           "osm_tags": [
-            { "shop": "kiosk|newsagent" }
+            { "shop": "kiosk|newsagent" },
+            { "newsagent": "yes" }
           ],
           "areas": "all"
         },
