@@ -152,6 +152,12 @@
       "yes": "Gurpil-aulkirako sarbidea",
       "limited": "Gurpil-aulkirako sarbide partziala"
     },
+    "newsagent": {
+      "yes": "Egunkari saltzailea"
+    },
+    "tobacco": {
+      "yes": "Tabakoa"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Zigiluak",
