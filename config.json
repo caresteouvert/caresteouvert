@@ -174,8 +174,15 @@
       "townhalls": "/it/soluzione-di-comunicazione-per-i-comuni/"
     },
     "pt-BR": {
+      "blog": "/blog/pt-BR/",
       "shopMissing": "/pt-BR/nao-encontrei-um-estabelecimento/",
       "townhalls": "/pt-BR/solucao-de-comunicacao-para-municipios/"
+    },
+    "es-419": {
+      "blog": "/blog/es-419/",
+      "shopMissing": "/es-419/que-hacer-si-falta-un-sitio-en-sigue-abierto/",
+      "about": "/es-419/acerca-de/",
+      "townhalls": "/es-419/una-herramienta-de-comunicacion-para-las-alcaldias/"
     }
   }
 }
