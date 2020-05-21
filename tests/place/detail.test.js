@@ -81,12 +81,12 @@ describe('Detail', () => {
     });
 
     it('true with phone', () => {
-      detail.vm.place = { properties: { status: 'open', cat: '', tags: { 'phone': '01' } } };
+      detail.vm.place = { properties: { status: 'open', cat: '', tags: { 'phone': '+33111111111' } } };
       expect(detail.vm.hasContactInfos).toBe(true);
     });
 
     it('true with mobile phone', () => {
-      detail.vm.place = { properties: { status: 'open', cat: '', tags: { 'mobile': '01' } } };
+      detail.vm.place = { properties: { status: 'open', cat: '', tags: { 'mobile': '+33111111111' } } };
       expect(detail.vm.hasContactInfos).toBe(true);
     });
 
