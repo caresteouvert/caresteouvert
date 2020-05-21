@@ -152,6 +152,12 @@
       "yes": "Accessible in wheelchair",
       "limited": "Partial access in wheelchair"
     },
+    "newsagent": {
+      "yes": "Newsagent"
+    },
+    "tobacco": {
+      "yes": "Tobacco"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Stamps",

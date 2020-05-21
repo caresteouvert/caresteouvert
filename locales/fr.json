@@ -152,6 +152,12 @@
       "yes": "Accessible en fauteuil",
       "limited": "Accès partiel en fauteuil"
     },
+    "newsagent": {
+      "yes": "Vente de journaux"
+    },
+    "tobacco": {
+      "yes": "Vente de tabac"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Timbres",

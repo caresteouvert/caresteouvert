@@ -171,5 +171,14 @@ describe('Detail', () => {
 
     detail.vm.place = { properties: { status: 'partial', cat: '', tags: { takeaway: 'yes' } } };
     expect(detail.vm.services).toEqual([]);
+
+    detail.vm.place = { properties: { status: 'open', cat: '', tags: { 'tobacco': 'yes' } } };
+    expect(detail.vm.services).toEqual([{ service: 'tobacco', value: 'details.tobacco.yes' }]);
+
+    detail.vm.place = { properties: { status: 'open', cat: '', tags: { 'newsagent': 'yes' } } };
+    expect(detail.vm.services).toEqual([{ service: 'newsagent', value: 'details.newsagent.yes' }]);
+
+    detail.vm.place = { properties: { status: 'open', cat: '', tags: { 'tobacco': 'no' } } };
+    expect(detail.vm.services).toEqual([]);
   });
 });

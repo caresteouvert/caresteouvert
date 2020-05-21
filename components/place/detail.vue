@@ -295,6 +295,15 @@ export default {
         }
       };
 
+      const addInfosIfValueYes = (tagName) => {
+        const tag = this.place.properties.tags[tagName];
+        if (tag && tag === 'yes') {
+          services.push({ service: tagName, value: this.$t(`details.${tagName}.${tag}`) });
+        }
+      };
+
+      addInfosIfValueYes('tobacco');
+      addInfosIfValueYes('newsagent');
       addInfosDependingOfTagAndStatus('takeaway');
       addInfosDependingOfTagAndStatus('delivery');
       addInfosDependingOfTagAndStatus('drive_through');
