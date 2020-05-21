@@ -152,6 +152,12 @@
       "yes": "Accesible en silla de ruedas",
       "limited": "Acceso parcial en silla de ruedas"
     },
+    "newsagent": {
+      "yes": "Vendedores de periódico"
+    },
+    "tobacco": {
+      "yes": "Cigarrerías"
+    },
     "vending": {
       "pizza": "Pizzerías",
       "stamps": "Estampillas",
