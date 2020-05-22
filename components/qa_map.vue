@@ -174,15 +174,41 @@ export default {
       }
 
       // Display popup
-      let description = `
-<a href="${config.osmUrl}/${osmid.type}/${osmid.id}" target="_blank">${p.name || osmid.type+'/'+osmid.id}</a>
-<br />Catégorie : ${p.normalized_cat}/${p.cat}
-<br />Infos de contact : ${p.has_contact ? "renseignées" : "non renseignées"}
-<br />Horaires : ${p.opening_hours ? "renseignées" : "non renseignées"}
-<br /><a href="http://127.0.0.1:8111/load_object?objects=${p.fid}" target="_blank">Éditer dans JOSM</a>`;
+      const description = document.createElement("div");
+
+      const title = document.createElement("a");
+      title.href = `${config.osmUrl}/${osmid.type}/${osmid.id}`;
+      title.target = "_blank";
+      title.innerHTML = `${p.name || osmid.type+'/'+osmid.id}`;
+      description.appendChild(title);
+
+      const list = document.createElement("ul");
+      const entries = [
+        `Catégorie : ${p.normalized_cat}/${p.cat}`,
+        `Infos de contact : ${p.has_contact ? "renseignées" : "non renseignées"}`,
+        `Horaires : ${p.opening_hours ? "renseignées" : "non renseignées"}`
+      ];
+      entries.forEach(e => {
+        const cat = document.createElement("li");
+        cat.innerHTML = e;
+        list.appendChild(cat);
+      });
+      description.appendChild(list);
+
+      const josm = document.createElement("a");
+      josm.innerHTML = 'Éditer dans JOSM';
+      josm.addEventListener("click", () => fetch(`http://127.0.0.1:8111/load_object?objects=${p.fid}`));
+      description.appendChild(josm);
 
       if(needsCity) {
-        description += ` - <a id="lnk-search-poi" href="https://duckduckgo.com/?q=!+${encodeURIComponent(p.name)}" target="_blank" rel="noopener">Trouver le site web</a>`;
+        const website = document.createElement("a");
+        website.id = "lnk-search-poi";
+        website.href = `https://duckduckgo.com/?q=!+${encodeURIComponent(p.name)}`;
+        website.target = "_blank";
+        website.rel = "noopener";
+        website.innerHTML = "Trouver le site web";
+        description.appendChild(document.createTextNode(" - "));
+        description.appendChild(website);
       }
 
       this.showPopup(e, features[0], description);
@@ -208,10 +234,16 @@ export default {
         coordinates[0] += e.mapboxEvent.lngLat.lng > coordinates[0] ? 360 : -360;
       }
 
-      new Popup()
-        .setLngLat(coordinates)
-        .setHTML(description)
-        .addTo(e.map);
+      const popup = new Popup().setLngLat(coordinates);
+
+      if(typeof description === "string") {
+        popup.setHTML(description);
+      }
+      else {
+        popup.setDOMContent(description);
+      }
+
+      popup.addTo(e.map);
     }
   }
 }
