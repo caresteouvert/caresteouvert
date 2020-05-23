@@ -13,7 +13,9 @@
     "test-pre-commit": "jest",
     "start": "nuxt start"
   },
-  "pre-commit": [ "test-pre-commit" ],
+  "pre-commit": [
+    "test-pre-commit"
+  ],
   "jest": {
     "moduleFileExtensions": [
       "js",
@@ -50,9 +52,9 @@
     "@vue/test-utils": "^1.0.0-beta.32",
     "icon-font-generator": "^2.1.10",
     "jest-cli": "^25.1.0",
+    "pre-commit": "^1.2.2",
     "vue-jest": "^4.0.0-0",
     "vue-template-compiler": "^2.6.11",
-    "pre-commit": "^1.2.2",
     "webpack": "^4.42.1"
   },
   "dependencies": {
