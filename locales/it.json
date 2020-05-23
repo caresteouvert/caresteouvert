@@ -152,6 +152,12 @@
       "yes": "Accessibile in sedie a rotelle",
       "limited": "Parzialmente accessibile in sedie a rotelle"
     },
+    "newsagent": {
+      "yes": "Giornalaio"
+    },
+    "tobacco": {
+      "yes": "Tabacchi"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Francobolli",
@@ -174,6 +180,9 @@
     "hygiene_entry": {
       "has": "si",
       "hasnot": "no"
+    },
+    "safety": {
+      "mask": "Bisogna indossare la mascherina"
     },
     "update_dialog": {
       "complete1": "Questo posto è tuo o fa parte del tuo gruppo?",
@@ -234,7 +243,7 @@
     "convenience": "Minimarket",
     "seafood": "Pescheria",
     "greengrocer": "Fruttivendolo",
-    "grocery": "Drogheria",
+    "grocery": "Alimentari",
     "health_food": "Cibo sano",
     "chocolate": "Cioccolato",
     "tea": "Tè",
@@ -264,7 +273,6 @@
     "shoes": "Scarpe",
     "bag": "Borse",
     "beauty": "Negozio di estetica",
-    "child_clothes": "Abbigliamento per bambini",
     "clothes": "Abbigliamento",
     "cosmetics": "Cosmetici",
     "hairdresser": "Parrucchiere",
@@ -326,6 +334,9 @@
     "bicycle_tube": "Distributore automatico camere d'aria",
     "public_transport_tickets": "Biglietteria automatica trasporto pubblico",
     "tyres": "Pneumatici"
+  },
+  "qa": {
+    "title": "Controllo qualità"
   },
   "external": {
     "mobile": {
