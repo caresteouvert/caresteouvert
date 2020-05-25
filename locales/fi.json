@@ -3,12 +3,12 @@
   "loading": "Palvelu avautuu. Ole hyvä ja odota...",
   "covid19-alert": "Seuraa viranomaisten määräyksiä. Vastuu on yksinomaan sinun!",
   "title": "Ollaan auki",
-  "subtitle": "Poikkeusaikana auki olevat paikat",
-  "subtitle-dense": "Poikkeusaikana auki olevan paikat",
+  "subtitle": "Paikat jotka ovat auki poikkeusaikana ja sen jälkeen",
   "search": "Kirjoita hakusana",
   "coordinates": "Koordinaatit",
   "menu": "Valikko",
   "missing_shop": "Ilmoita puuttuva palvelu",
+  "backtolist": "Takaisin listaan",
   "missing_shop_dialog": {
     "description": "« {brand} » näyttää vain ne paikat joilla on lupa olla auki poikkeusaikana. On olemassa useita mahdollisia syitä sille miksi jotkut paikat eivät näy:",
     "add_osm": "Paikkaa ei löydy OpenStreetMapista, lisää se:",
@@ -25,6 +25,8 @@
   },
   "services": {
     "delivery": "Kotiinkuljetus",
+    "hydroalcoholic_gel": "Käsidesiä",
+    "mask": "Hengityssuojain",
     "takeaway": "Noutomyyntiä"
   },
   "learnmore": {
@@ -89,7 +91,9 @@
       "access": "Asiakkailla pääsy liiketiloihin",
       "drive_through": "Tarjolla autokaista-palvelu",
       "details": "Voit lisätä tarkempia tietoja",
-      "details_error": "Pitää olla joko tyhjä tai vähintään 10 merkkiä pitkä"
+      "details_error": "Pitää olla joko tyhjä tai vähintään 10 merkkiä pitkä",
+      "definite_closing": "Varmasti suljettu",
+      "details_definite_closing": "Tämä palvelu on varmasti suljettu. Anna meille lisätietoja: remontissa, muuttanut, uusi liike,,,"
     },
     "submit": "Julkaise",
     "cancel": "Peruuta"
@@ -148,6 +152,12 @@
       "yes": "Pääsy pyörätuolilla",
       "limited": "Osittainen pääsy pyörätuolilla"
     },
+    "newsagent": {
+      "yes": "Lehtimyynti"
+    },
+    "tobacco": {
+      "yes": "Tupakka"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Postimerkkejä",
@@ -160,16 +170,26 @@
       "sweets": "Karkkia"
     },
     "hygiene": "Hygienia",
-    "hydroalcoholic_gel": "Desinfiontiainetta",
-    "mask": "Naamari",
+    "hydroalcoholic_gel": "Käsidesi",
+    "mask": "Hengityssuojaimia",
     "hygiene_status": {
       "yes": "Käytettävissä {date}",
       "no": "Ei käytettävissä {date}",
       "void": "Tieto puuttuu, kerro meille"
     },
     "hygiene_entry": {
-      "has": "on",
-      "hasnot": "ei ole"
+      "has": "saatavilla",
+      "hasnot": "ei ole saatavilla"
+    },
+    "safety": {
+      "mask": "Hengityssuojain pakollinen"
+    },
+    "update_dialog": {
+      "complete1": "Onko tämä sinun palvelusi tai osa sinun palveluverkkoasi?",
+      "complete2": "Hanki näkyvyyttä myös poikkeusolojen jälkeen.",
+      "title": "Myyntijohtaja",
+      "promo": "Jos toimit ketjuravintolan johtajana tai ketjujohtajana.\nHanki lisää näkyyvyttä ilmoittamalla kaikki myyntipisteesi \"Ollaann auki\"-palveluun.\nPalvelumme lisäksi myyntipisteiden tiedot välittyvät kaikkiin sovelluksiin, jotka hyödyntävät OpenStreetMap-aineistoa.",
+      "contact": "Ole yhteydessä"
     }
   },
   "opening_hours_editor": {
@@ -200,12 +220,13 @@
     "childcare": "Lastenhoito",
     "employment_agency": "Työvoimatoimisto",
     "funeral_directors": "Hautaustoimisto",
-    "bank": "Pankki",
-    "moneylender": "Rahanlainaamo",
+    "money": "Rahaa",
     "insurance": "Vakuutus",
     "tourism_info": "Matkailuneuvonta",
     "hotel": "Majoitus",
     "recycling_centre": "Kierrätyskeskus",
+    "library": "Kirjasto",
+    "copyshop": "Kopiointipalvelu",
     "health": "Terveydenhoito",
     "pharmacy": "Apteekki",
     "covid19_centre": "Koronavirusneuvonta",
@@ -214,6 +235,7 @@
     "condoms": "Kondomiautomaatti",
     "medical_supply": "Terveydenhoitotarvikkeita",
     "health_center": "Terveyskeskus",
+    "herbalist": "Luontaistuotteita",
     "food": "Ruokaa",
     "supermarket": "Supermarket",
     "butcher": "Lihakauppa",
@@ -222,6 +244,7 @@
     "seafood": "Kalakauppa",
     "greengrocer": "Vihanneskauppa",
     "grocery": "Elintarvikekauppa",
+    "health_food": "Terveysruokaa",
     "chocolate": "Suklaata",
     "tea": "Teetä",
     "coffee": "Kahvia",
@@ -230,9 +253,11 @@
     "farm": "Maatilapuoti",
     "marketplace": "Tori",
     "bakery": "Leipomo",
+    "alcohol": "Alko",
     "eat": "Ravintolat & noutomyynti",
     "vending_machine": "Automaatti",
     "restaurant": "Ravintola",
+    "awarded_chef": "Huippukokki",
     "fast_food": "Pikaruoka",
     "ice_cream": "Jäätelö",
     "cafe": "Kahvila",
@@ -240,42 +265,101 @@
     "drugs": "Alkoholi ja tupakka",
     "tobacco": "Tupakka",
     "e_cigarette": "Sähkötupakka",
-    "alcohol": "Alko",
-    "shop": "Kaupat",
+    "bank": "Pankki",
+    "atm": "Pankkiautomaatti",
+    "money_transfer": "Rahansiirto",
+    "mobile_money_agent": "Mobiilirahapalvelu",
+    "clothing_beauty": "Vaatteet ja kauneudenhoito",
+    "shoes": "Kenkiä",
+    "bag": "Laukut",
+    "beauty": "Kauneus",
+    "clothes": "Vaatekauppa",
+    "cosmetics": "Kosmetiikka",
+    "hairdresser": "Kampaamo",
+    "jewelry": "Koruliike",
+    "massage": "Hieronta",
+    "tailor": "Räätäli",
+    "perfumery": "Hajuvesiliike",
+    "chemist": "Kemikaalio",
+    "home_equipment": "Kodintarvikkeet",
     "hardware": "Rautakauppa",
+    "bed": "Sängyt",
+    "furniture": "Huonekaluliike",
+    "houseware": "Kotitaloustarvikkeita",
+    "interior_decoration": "Sisustusliike",
+    "pottery": "Keramiikka",
+    "watches": "Kellosepänliike",
+    "lighting": "Valaistus",
+    "hifi": "Hifi",
+    "electronics": "Elektroniikka",
+    "shop": "Kaupat",
     "mobile_phone": "Matkapuhelin",
     "computer": "Tietokone",
-    "electronics": "Elektroniikka",
+    "printer_ink": "Tulostinvärejä",
+    "dry_cleaning": "Kuivapesu",
     "laundry": "Pesula",
     "stationery": "Paperi",
     "newsagent": "Lehtimyynti",
     "pet": "Lemmikkieläinliike",
     "agrarian": "Maataloustuotteita",
     "flower": "Puutarha / kukat",
-    "chemist": "Kemikaalio",
     "sewing": "Ompelu",
-    "shoes": "Kenkiä",
     "books": "Kirjakauppa",
-    "beauty": "Kauneus",
-    "clothes": "Vaatekauppa",
+    "art": "Taide",
+    "charity": "Hyväntekeväisyysliike",
+    "department_store": "Tavaratalo",
     "gift": "Lahjatavarat",
-    "hairdresser": "Kampaamo",
-    "jewelry": "Koruliike",
+    "music": "Musiikki",
+    "musical_instrument": "Soittimia",
+    "photo": "Valokuvausliike",
+    "second_hand": "Käytettyjä tavaroita",
+    "ticket": "Pääsylippuja",
     "toys": "Lelukauppa",
+    "trade": "Kauppa",
+    "travel_agency": "Matkatoimisto",
+    "variety_store": "Tarvikkeita",
+    "video": "Videovuokraamo",
+    "video_games": "Videopelejä",
+    "weapons": "Aseita",
+    "wholesale": "Tukkuliike",
+    "sports": "Urheilu",
     "mobility": "Liikkuminen",
     "fuel": "Polttoaineasema",
     "car_rental": "Autovuokraamo",
     "bicycle": "Polkupyöräkauppa",
     "car": "Autohuolto",
     "car_dealer": "Autokauppa",
+    "car_wash": "Autopesula",
+    "motorcycle": "Moottoripyöriä",
     "bicycle_tube": "Polkupyörän kumien myyntiautomaatti",
-    "public_transport_tickets": "Joukkoliikenteen lipunmyynti"
+    "public_transport_tickets": "Joukkoliikenteen lipunmyynti",
+    "tyres": "Renkaita"
+  },
+  "qa": {
+    "title": "Laadunvarmistus"
   },
   "external": {
     "mobile": {
       "places_around": "Etsi poikkeusaikana auki olevat paikat",
       "contribute": "Paranna karttaa omilla tiedoillasi",
       "organize": "Viisaampi liikkuminen vähentää tartuntariskiä"
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "Alueet"
+    },
+    "departements": {
+      "title": "Osastot"
+    },
+    "communes": {
+      "title": "Maakunnat"
+    },
+    "pois": {
+      "link": {
+        "previous": "Edelliset paikat",
+        "next": "Seuraavat paikat"
+      }
     }
   }
 }
