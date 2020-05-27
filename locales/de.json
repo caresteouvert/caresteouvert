@@ -152,6 +152,12 @@
       "yes": "Voll rollstuhlgerecht",
       "limited": "Teilweise rollstuhlgerecht"
     },
+    "newsagent": {
+      "yes": "Kiosk"
+    },
+    "tobacco": {
+      "yes": "Tabak"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Briefmarken",
@@ -174,6 +180,9 @@
     "hygiene_entry": {
       "has": "vorrätig",
       "hasnot": "ausverkauft"
+    },
+    "safety": {
+      "mask": "Maskenpflicht"
     },
     "update_dialog": {
       "complete1": "Gehört Ihr Geschäft zu dieser Gruppe?",
@@ -218,6 +227,10 @@
     "recycling_centre": "Recyclinghof",
     "library": "Bibliothek",
     "copyshop": "Copy-Shop",
+    "museum": "Museum",
+    "place_of_worship": "Kultstätte",
+    "sports_centre": "Sportzentrum",
+    "beach_resort": "Strandbad",
     "health": "Apotheke & Gesundheit",
     "pharmacy": "Apotheke",
     "covid19_centre": "Covid-19-Beratungsstelle",
@@ -264,7 +277,6 @@
     "shoes": "Schuhe",
     "bag": "Taschen",
     "beauty": "Schönheit",
-    "child_clothes": "Kinderkleidung",
     "clothes": "Bekleidung",
     "cosmetics": "Kosmetik",
     "hairdresser": "Friseur",
@@ -326,6 +338,9 @@
     "bicycle_tube": "Fahrradschlauch-Automat",
     "public_transport_tickets": "Fahrkartenautomat",
     "tyres": "Reifen"
+  },
+  "qa": {
+    "title": "Qualitätssicherung"
   },
   "external": {
     "mobile": {
