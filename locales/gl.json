@@ -152,6 +152,12 @@
       "yes": "Acceso en cadeira de rodas",
       "limited": "Acceso parcial en cadeira de rodas"
     },
+    "newsagent": {
+      "yes": "Quiosco"
+    },
+    "tobacco": {
+      "yes": "Estancos"
+    },
     "vending": {
       "pizza": "Pizza",
       "stamps": "Selos",
@@ -174,6 +180,9 @@
     "hygiene_entry": {
       "has": "ten",
       "hasnot": "non ten"
+    },
+    "safety": {
+      "mask": "A máscara ten que ser empregada"
     },
     "update_dialog": {
       "complete1": "É este o teu estabelecemento ou parte do teu grupo?",
@@ -218,6 +227,10 @@
     "recycling_centre": "Centro de reciclaxe",
     "library": "Biblioteca",
     "copyshop": "Copistaría",
+    "museum": "Museo",
+    "place_of_worship": "Lugar de culto",
+    "sports_centre": "Polideportivo",
+    "beach_resort": "Resort de praia",
     "health": "Saúde",
     "pharmacy": "Farmacias",
     "covid19_centre": "Centro de consulta sobre o Covid-19",
@@ -264,7 +277,6 @@
     "shoes": "Zapataría",
     "bag": "Tenga de mochilas",
     "beauty": "Salón de beleza",
-    "child_clothes": "Roupa de rapaz",
     "clothes": "Roupa",
     "cosmetics": "Cosméticos",
     "hairdresser": "Perrucaría",
@@ -326,6 +338,9 @@
     "bicycle_tube": "Máquina expendedora de tubos para bicicletas",
     "public_transport_tickets": "Máquina expendedora de billetes do transporte público",
     "tyres": "Rodas"
+  },
+  "qa": {
+    "title": "Aseguramento de calidade"
   },
   "external": {
     "mobile": {
