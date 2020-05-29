@@ -1,5 +1,5 @@
 {
-  "countries": [ "DE", "FR", "ES", "AD", "CH", "AT", "PH", "FI", "MC", "CD", "IT" ],
+  "countries": [ "DE", "FR", "ES", "AD", "CH", "AT", "PH", "FI", "MC", "CD", "IT", "GB", "IE" ],
   "sql_columns": [
     "aeroway", "amenity", "craft", "emergency", "healthcare", "highway", "historic",
     "leisure", "office", "public_transport", "railway", "shop", "tobacco", "tourism",

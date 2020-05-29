@@ -51,7 +51,7 @@ BEGIN
 		RETURN 'employment_agency';
 	ELSIF tags->'shop' = 'funeral_directors' THEN
 		RETURN 'funeral_directors';
-	ELSIF (tags->'amenity' IN ('bank', 'atm', 'money_transfer', 'mobile_money_agent') AND area SIMILAR TO '(DE|FR|ES|AD|CH|AT|PH|FI|MC|IT)%') OR (tags->'shop' = 'money_lender' AND area SIMILAR TO '(DE|FR|ES|AD|CH|AT|PH|FI|MC|IT)%') THEN
+	ELSIF (tags->'amenity' IN ('bank', 'atm', 'money_transfer', 'mobile_money_agent') AND area SIMILAR TO '(DE|FR|ES|AD|CH|AT|PH|FI|MC|IT|GB|IE)%') OR (tags->'shop' = 'money_lender' AND area SIMILAR TO '(DE|FR|ES|AD|CH|AT|PH|FI|MC|IT|GB|IE)%') THEN
 		RETURN 'money';
 	ELSIF (tags->'office' = 'insurance') OR (tags->'shop' = 'insurance') THEN
 		RETURN 'insurance';
@@ -121,7 +121,7 @@ BEGIN
 		RETURN 'marketplace';
 	ELSIF (tags->'shop' IN ('bakery', 'pastry')) OR (tags->'amenity' = 'vending_machine' AND tags->'vending' = 'bread') THEN
 		RETURN 'bakery';
-	ELSIF tags->'shop' IN ('alcohol', 'beverages', 'wine', 'winery') AND area SIMILAR TO '(CD|DE|FR|ES|AD|CH|AT|PH|FI|MC|IT)%' THEN
+	ELSIF tags->'shop' IN ('alcohol', 'beverages', 'wine', 'winery') AND area SIMILAR TO '(CD|DE|FR|ES|AD|CH|AT|PH|FI|MC|IT|GB|IE)%' THEN
 		RETURN 'alcohol';
 	ELSIF tags->'amenity' = 'vending_machine' AND tags->'vending' IN ('pizza', 'drinks', 'water', 'sweets') THEN
 		RETURN 'vending_machine';

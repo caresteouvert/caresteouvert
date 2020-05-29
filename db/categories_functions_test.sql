@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(3870);
+SELECT plan(4466);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -50,6 +50,14 @@ SELECT is(get_category('amenity=>police'::hstore, 'IT'), 'amenity', 'get_categor
 
 SELECT is(get_subcategory('amenity=>police'::hstore, 'IT'), 'police', 'get_subcategory amenity=>police for IT should be police');
 
+SELECT is(get_category('amenity=>police'::hstore, 'GB'), 'amenity', 'get_category amenity=>police for GB should be amenity');
+
+SELECT is(get_subcategory('amenity=>police'::hstore, 'GB'), 'police', 'get_subcategory amenity=>police for GB should be police');
+
+SELECT is(get_category('amenity=>police'::hstore, 'IE'), 'amenity', 'get_category amenity=>police for IE should be amenity');
+
+SELECT is(get_subcategory('amenity=>police'::hstore, 'IE'), 'police', 'get_subcategory amenity=>police for IE should be police');
+
 SELECT is(get_category('amenity=>townhall'::hstore, 'DE'), 'amenity', 'get_category amenity=>townhall for DE should be amenity');
 
 SELECT is(get_subcategory('amenity=>townhall'::hstore, 'DE'), 'townhall', 'get_subcategory amenity=>townhall for DE should be townhall');
@@ -93,6 +101,14 @@ SELECT is(get_subcategory('amenity=>townhall'::hstore, 'CD'), 'townhall', 'get_s
 SELECT is(get_category('amenity=>townhall'::hstore, 'IT'), 'amenity', 'get_category amenity=>townhall for IT should be amenity');
 
 SELECT is(get_subcategory('amenity=>townhall'::hstore, 'IT'), 'townhall', 'get_subcategory amenity=>townhall for IT should be townhall');
+
+SELECT is(get_category('amenity=>townhall'::hstore, 'GB'), 'amenity', 'get_category amenity=>townhall for GB should be amenity');
+
+SELECT is(get_subcategory('amenity=>townhall'::hstore, 'GB'), 'townhall', 'get_subcategory amenity=>townhall for GB should be townhall');
+
+SELECT is(get_category('amenity=>townhall'::hstore, 'IE'), 'amenity', 'get_category amenity=>townhall for IE should be amenity');
+
+SELECT is(get_subcategory('amenity=>townhall'::hstore, 'IE'), 'townhall', 'get_subcategory amenity=>townhall for IE should be townhall');
 
 SELECT is(get_category('amenity=>post_office'::hstore, 'DE'), 'amenity', 'get_category amenity=>post_office for DE should be amenity');
 
@@ -138,6 +154,14 @@ SELECT is(get_category('amenity=>post_office'::hstore, 'IT'), 'amenity', 'get_ca
 
 SELECT is(get_subcategory('amenity=>post_office'::hstore, 'IT'), 'post_office', 'get_subcategory amenity=>post_office for IT should be post_office');
 
+SELECT is(get_category('amenity=>post_office'::hstore, 'GB'), 'amenity', 'get_category amenity=>post_office for GB should be amenity');
+
+SELECT is(get_subcategory('amenity=>post_office'::hstore, 'GB'), 'post_office', 'get_subcategory amenity=>post_office for GB should be post_office');
+
+SELECT is(get_category('amenity=>post_office'::hstore, 'IE'), 'amenity', 'get_category amenity=>post_office for IE should be amenity');
+
+SELECT is(get_subcategory('amenity=>post_office'::hstore, 'IE'), 'post_office', 'get_subcategory amenity=>post_office for IE should be post_office');
+
 SELECT is(get_category('amenity=>vending_machine, vending=>stamps'::hstore, 'DE'), 'amenity', 'get_category amenity=>vending_machine, vending=>stamps for DE should be amenity');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>stamps'::hstore, 'DE'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>stamps for DE should be post_office');
@@ -181,6 +205,14 @@ SELECT is(get_subcategory('amenity=>vending_machine, vending=>stamps'::hstore, '
 SELECT is(get_category('amenity=>vending_machine, vending=>stamps'::hstore, 'IT'), 'amenity', 'get_category amenity=>vending_machine, vending=>stamps for IT should be amenity');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>stamps'::hstore, 'IT'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>stamps for IT should be post_office');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>stamps'::hstore, 'GB'), 'amenity', 'get_category amenity=>vending_machine, vending=>stamps for GB should be amenity');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>stamps'::hstore, 'GB'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>stamps for GB should be post_office');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>stamps'::hstore, 'IE'), 'amenity', 'get_category amenity=>vending_machine, vending=>stamps for IE should be amenity');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>stamps'::hstore, 'IE'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>stamps for IE should be post_office');
 
 SELECT is(get_category('amenity=>vending_machine, vending=>parcel_mail_in'::hstore, 'DE'), 'amenity', 'get_category amenity=>vending_machine, vending=>parcel_mail_in for DE should be amenity');
 
@@ -226,6 +258,14 @@ SELECT is(get_category('amenity=>vending_machine, vending=>parcel_mail_in'::hsto
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>parcel_mail_in'::hstore, 'IT'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>parcel_mail_in for IT should be post_office');
 
+SELECT is(get_category('amenity=>vending_machine, vending=>parcel_mail_in'::hstore, 'GB'), 'amenity', 'get_category amenity=>vending_machine, vending=>parcel_mail_in for GB should be amenity');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>parcel_mail_in'::hstore, 'GB'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>parcel_mail_in for GB should be post_office');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>parcel_mail_in'::hstore, 'IE'), 'amenity', 'get_category amenity=>vending_machine, vending=>parcel_mail_in for IE should be amenity');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>parcel_mail_in'::hstore, 'IE'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>parcel_mail_in for IE should be post_office');
+
 SELECT is(get_category('amenity=>vending_machine, vending=>parcel_pickup'::hstore, 'DE'), 'amenity', 'get_category amenity=>vending_machine, vending=>parcel_pickup for DE should be amenity');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>parcel_pickup'::hstore, 'DE'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>parcel_pickup for DE should be post_office');
@@ -270,6 +310,14 @@ SELECT is(get_category('amenity=>vending_machine, vending=>parcel_pickup'::hstor
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>parcel_pickup'::hstore, 'IT'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>parcel_pickup for IT should be post_office');
 
+SELECT is(get_category('amenity=>vending_machine, vending=>parcel_pickup'::hstore, 'GB'), 'amenity', 'get_category amenity=>vending_machine, vending=>parcel_pickup for GB should be amenity');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>parcel_pickup'::hstore, 'GB'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>parcel_pickup for GB should be post_office');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>parcel_pickup'::hstore, 'IE'), 'amenity', 'get_category amenity=>vending_machine, vending=>parcel_pickup for IE should be amenity');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>parcel_pickup'::hstore, 'IE'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>parcel_pickup for IE should be post_office');
+
 SELECT is(get_category('amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in'::hstore, 'DE'), 'amenity', 'get_category amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in for DE should be amenity');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in'::hstore, 'DE'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in for DE should be post_office');
@@ -313,6 +361,14 @@ SELECT is(get_subcategory('amenity=>vending_machine, vending=>parcel_pickup;parc
 SELECT is(get_category('amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in'::hstore, 'IT'), 'amenity', 'get_category amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in for IT should be amenity');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in'::hstore, 'IT'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in for IT should be post_office');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in'::hstore, 'GB'), 'amenity', 'get_category amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in for GB should be amenity');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in'::hstore, 'GB'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in for GB should be post_office');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in'::hstore, 'IE'), 'amenity', 'get_category amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in for IE should be amenity');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in'::hstore, 'IE'), 'post_office', 'get_subcategory amenity=>vending_machine, vending=>parcel_pickup;parcel_mail_in for IE should be post_office');
 
 SELECT is(get_category('amenity=>childcare'::hstore, 'FR'), 'amenity', 'get_category amenity=>childcare for FR should be amenity');
 
@@ -366,6 +422,14 @@ SELECT is(get_category('office=>employment_agency'::hstore, 'IT'), 'amenity', 'g
 
 SELECT is(get_subcategory('office=>employment_agency'::hstore, 'IT'), 'employment_agency', 'get_subcategory office=>employment_agency for IT should be employment_agency');
 
+SELECT is(get_category('office=>employment_agency'::hstore, 'GB'), 'amenity', 'get_category office=>employment_agency for GB should be amenity');
+
+SELECT is(get_subcategory('office=>employment_agency'::hstore, 'GB'), 'employment_agency', 'get_subcategory office=>employment_agency for GB should be employment_agency');
+
+SELECT is(get_category('office=>employment_agency'::hstore, 'IE'), 'amenity', 'get_category office=>employment_agency for IE should be amenity');
+
+SELECT is(get_subcategory('office=>employment_agency'::hstore, 'IE'), 'employment_agency', 'get_subcategory office=>employment_agency for IE should be employment_agency');
+
 SELECT is(get_category('shop=>funeral_directors'::hstore, 'DE'), 'amenity', 'get_category shop=>funeral_directors for DE should be amenity');
 
 SELECT is(get_subcategory('shop=>funeral_directors'::hstore, 'DE'), 'funeral_directors', 'get_subcategory shop=>funeral_directors for DE should be funeral_directors');
@@ -410,6 +474,14 @@ SELECT is(get_category('shop=>funeral_directors'::hstore, 'IT'), 'amenity', 'get
 
 SELECT is(get_subcategory('shop=>funeral_directors'::hstore, 'IT'), 'funeral_directors', 'get_subcategory shop=>funeral_directors for IT should be funeral_directors');
 
+SELECT is(get_category('shop=>funeral_directors'::hstore, 'GB'), 'amenity', 'get_category shop=>funeral_directors for GB should be amenity');
+
+SELECT is(get_subcategory('shop=>funeral_directors'::hstore, 'GB'), 'funeral_directors', 'get_subcategory shop=>funeral_directors for GB should be funeral_directors');
+
+SELECT is(get_category('shop=>funeral_directors'::hstore, 'IE'), 'amenity', 'get_category shop=>funeral_directors for IE should be amenity');
+
+SELECT is(get_subcategory('shop=>funeral_directors'::hstore, 'IE'), 'funeral_directors', 'get_subcategory shop=>funeral_directors for IE should be funeral_directors');
+
 SELECT is(get_category('amenity=>bank'::hstore, 'DE'), 'amenity', 'get_category amenity=>bank for DE should be amenity');
 
 SELECT is(get_subcategory('amenity=>bank'::hstore, 'DE'), 'money', 'get_subcategory amenity=>bank for DE should be money');
@@ -449,6 +521,14 @@ SELECT is(get_subcategory('amenity=>bank'::hstore, 'MC'), 'money', 'get_subcateg
 SELECT is(get_category('amenity=>bank'::hstore, 'IT'), 'amenity', 'get_category amenity=>bank for IT should be amenity');
 
 SELECT is(get_subcategory('amenity=>bank'::hstore, 'IT'), 'money', 'get_subcategory amenity=>bank for IT should be money');
+
+SELECT is(get_category('amenity=>bank'::hstore, 'GB'), 'amenity', 'get_category amenity=>bank for GB should be amenity');
+
+SELECT is(get_subcategory('amenity=>bank'::hstore, 'GB'), 'money', 'get_subcategory amenity=>bank for GB should be money');
+
+SELECT is(get_category('amenity=>bank'::hstore, 'IE'), 'amenity', 'get_category amenity=>bank for IE should be amenity');
+
+SELECT is(get_subcategory('amenity=>bank'::hstore, 'IE'), 'money', 'get_subcategory amenity=>bank for IE should be money');
 
 SELECT is(get_category('amenity=>atm'::hstore, 'DE'), 'amenity', 'get_category amenity=>atm for DE should be amenity');
 
@@ -490,6 +570,14 @@ SELECT is(get_category('amenity=>atm'::hstore, 'IT'), 'amenity', 'get_category a
 
 SELECT is(get_subcategory('amenity=>atm'::hstore, 'IT'), 'money', 'get_subcategory amenity=>atm for IT should be money');
 
+SELECT is(get_category('amenity=>atm'::hstore, 'GB'), 'amenity', 'get_category amenity=>atm for GB should be amenity');
+
+SELECT is(get_subcategory('amenity=>atm'::hstore, 'GB'), 'money', 'get_subcategory amenity=>atm for GB should be money');
+
+SELECT is(get_category('amenity=>atm'::hstore, 'IE'), 'amenity', 'get_category amenity=>atm for IE should be amenity');
+
+SELECT is(get_subcategory('amenity=>atm'::hstore, 'IE'), 'money', 'get_subcategory amenity=>atm for IE should be money');
+
 SELECT is(get_category('amenity=>money_transfer'::hstore, 'DE'), 'amenity', 'get_category amenity=>money_transfer for DE should be amenity');
 
 SELECT is(get_subcategory('amenity=>money_transfer'::hstore, 'DE'), 'money', 'get_subcategory amenity=>money_transfer for DE should be money');
@@ -529,6 +617,14 @@ SELECT is(get_subcategory('amenity=>money_transfer'::hstore, 'MC'), 'money', 'ge
 SELECT is(get_category('amenity=>money_transfer'::hstore, 'IT'), 'amenity', 'get_category amenity=>money_transfer for IT should be amenity');
 
 SELECT is(get_subcategory('amenity=>money_transfer'::hstore, 'IT'), 'money', 'get_subcategory amenity=>money_transfer for IT should be money');
+
+SELECT is(get_category('amenity=>money_transfer'::hstore, 'GB'), 'amenity', 'get_category amenity=>money_transfer for GB should be amenity');
+
+SELECT is(get_subcategory('amenity=>money_transfer'::hstore, 'GB'), 'money', 'get_subcategory amenity=>money_transfer for GB should be money');
+
+SELECT is(get_category('amenity=>money_transfer'::hstore, 'IE'), 'amenity', 'get_category amenity=>money_transfer for IE should be amenity');
+
+SELECT is(get_subcategory('amenity=>money_transfer'::hstore, 'IE'), 'money', 'get_subcategory amenity=>money_transfer for IE should be money');
 
 SELECT is(get_category('amenity=>mobile_money_agent'::hstore, 'DE'), 'amenity', 'get_category amenity=>mobile_money_agent for DE should be amenity');
 
@@ -570,6 +666,14 @@ SELECT is(get_category('amenity=>mobile_money_agent'::hstore, 'IT'), 'amenity', 
 
 SELECT is(get_subcategory('amenity=>mobile_money_agent'::hstore, 'IT'), 'money', 'get_subcategory amenity=>mobile_money_agent for IT should be money');
 
+SELECT is(get_category('amenity=>mobile_money_agent'::hstore, 'GB'), 'amenity', 'get_category amenity=>mobile_money_agent for GB should be amenity');
+
+SELECT is(get_subcategory('amenity=>mobile_money_agent'::hstore, 'GB'), 'money', 'get_subcategory amenity=>mobile_money_agent for GB should be money');
+
+SELECT is(get_category('amenity=>mobile_money_agent'::hstore, 'IE'), 'amenity', 'get_category amenity=>mobile_money_agent for IE should be amenity');
+
+SELECT is(get_subcategory('amenity=>mobile_money_agent'::hstore, 'IE'), 'money', 'get_subcategory amenity=>mobile_money_agent for IE should be money');
+
 SELECT is(get_category('shop=>money_lender'::hstore, 'DE'), 'amenity', 'get_category shop=>money_lender for DE should be amenity');
 
 SELECT is(get_subcategory('shop=>money_lender'::hstore, 'DE'), 'money', 'get_subcategory shop=>money_lender for DE should be money');
@@ -609,6 +713,14 @@ SELECT is(get_subcategory('shop=>money_lender'::hstore, 'MC'), 'money', 'get_sub
 SELECT is(get_category('shop=>money_lender'::hstore, 'IT'), 'amenity', 'get_category shop=>money_lender for IT should be amenity');
 
 SELECT is(get_subcategory('shop=>money_lender'::hstore, 'IT'), 'money', 'get_subcategory shop=>money_lender for IT should be money');
+
+SELECT is(get_category('shop=>money_lender'::hstore, 'GB'), 'amenity', 'get_category shop=>money_lender for GB should be amenity');
+
+SELECT is(get_subcategory('shop=>money_lender'::hstore, 'GB'), 'money', 'get_subcategory shop=>money_lender for GB should be money');
+
+SELECT is(get_category('shop=>money_lender'::hstore, 'IE'), 'amenity', 'get_category shop=>money_lender for IE should be amenity');
+
+SELECT is(get_subcategory('shop=>money_lender'::hstore, 'IE'), 'money', 'get_subcategory shop=>money_lender for IE should be money');
 
 SELECT is(get_category('office=>insurance'::hstore, 'DE'), 'amenity', 'get_category office=>insurance for DE should be amenity');
 
@@ -654,6 +766,14 @@ SELECT is(get_category('office=>insurance'::hstore, 'IT'), 'amenity', 'get_categ
 
 SELECT is(get_subcategory('office=>insurance'::hstore, 'IT'), 'insurance', 'get_subcategory office=>insurance for IT should be insurance');
 
+SELECT is(get_category('office=>insurance'::hstore, 'GB'), 'amenity', 'get_category office=>insurance for GB should be amenity');
+
+SELECT is(get_subcategory('office=>insurance'::hstore, 'GB'), 'insurance', 'get_subcategory office=>insurance for GB should be insurance');
+
+SELECT is(get_category('office=>insurance'::hstore, 'IE'), 'amenity', 'get_category office=>insurance for IE should be amenity');
+
+SELECT is(get_subcategory('office=>insurance'::hstore, 'IE'), 'insurance', 'get_subcategory office=>insurance for IE should be insurance');
+
 SELECT is(get_category('shop=>insurance'::hstore, 'DE'), 'amenity', 'get_category shop=>insurance for DE should be amenity');
 
 SELECT is(get_subcategory('shop=>insurance'::hstore, 'DE'), 'insurance', 'get_subcategory shop=>insurance for DE should be insurance');
@@ -698,6 +818,14 @@ SELECT is(get_category('shop=>insurance'::hstore, 'IT'), 'amenity', 'get_categor
 
 SELECT is(get_subcategory('shop=>insurance'::hstore, 'IT'), 'insurance', 'get_subcategory shop=>insurance for IT should be insurance');
 
+SELECT is(get_category('shop=>insurance'::hstore, 'GB'), 'amenity', 'get_category shop=>insurance for GB should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'GB'), 'insurance', 'get_subcategory shop=>insurance for GB should be insurance');
+
+SELECT is(get_category('shop=>insurance'::hstore, 'IE'), 'amenity', 'get_category shop=>insurance for IE should be amenity');
+
+SELECT is(get_subcategory('shop=>insurance'::hstore, 'IE'), 'insurance', 'get_subcategory shop=>insurance for IE should be insurance');
+
 SELECT is(get_category('opening_hours:covid19=>*, tourism=>information, information=>office'::hstore, 'DE'), 'amenity', 'get_category opening_hours:covid19=>*, tourism=>information, information=>office for DE should be amenity');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, tourism=>information, information=>office'::hstore, 'DE'), 'tourism_info', 'get_subcategory opening_hours:covid19=>*, tourism=>information, information=>office for DE should be tourism_info');
@@ -741,6 +869,14 @@ SELECT is(get_subcategory('opening_hours:covid19=>*, tourism=>information, infor
 SELECT is(get_category('opening_hours:covid19=>*, tourism=>information, information=>office'::hstore, 'IT'), 'amenity', 'get_category opening_hours:covid19=>*, tourism=>information, information=>office for IT should be amenity');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, tourism=>information, information=>office'::hstore, 'IT'), 'tourism_info', 'get_subcategory opening_hours:covid19=>*, tourism=>information, information=>office for IT should be tourism_info');
+
+SELECT is(get_category('opening_hours:covid19=>*, tourism=>information, information=>office'::hstore, 'GB'), 'amenity', 'get_category opening_hours:covid19=>*, tourism=>information, information=>office for GB should be amenity');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, tourism=>information, information=>office'::hstore, 'GB'), 'tourism_info', 'get_subcategory opening_hours:covid19=>*, tourism=>information, information=>office for GB should be tourism_info');
+
+SELECT is(get_category('opening_hours:covid19=>*, tourism=>information, information=>office'::hstore, 'IE'), 'amenity', 'get_category opening_hours:covid19=>*, tourism=>information, information=>office for IE should be amenity');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, tourism=>information, information=>office'::hstore, 'IE'), 'tourism_info', 'get_subcategory opening_hours:covid19=>*, tourism=>information, information=>office for IE should be tourism_info');
 
 SELECT is(get_category('tourism=>hotel'::hstore, 'FR'), 'amenity', 'get_category tourism=>hotel for FR should be amenity');
 
@@ -938,6 +1074,14 @@ SELECT is(get_category('amenity=>pharmacy'::hstore, 'IT'), 'health', 'get_catego
 
 SELECT is(get_subcategory('amenity=>pharmacy'::hstore, 'IT'), 'pharmacy', 'get_subcategory amenity=>pharmacy for IT should be pharmacy');
 
+SELECT is(get_category('amenity=>pharmacy'::hstore, 'GB'), 'health', 'get_category amenity=>pharmacy for GB should be health');
+
+SELECT is(get_subcategory('amenity=>pharmacy'::hstore, 'GB'), 'pharmacy', 'get_subcategory amenity=>pharmacy for GB should be pharmacy');
+
+SELECT is(get_category('amenity=>pharmacy'::hstore, 'IE'), 'health', 'get_category amenity=>pharmacy for IE should be health');
+
+SELECT is(get_subcategory('amenity=>pharmacy'::hstore, 'IE'), 'pharmacy', 'get_subcategory amenity=>pharmacy for IE should be pharmacy');
+
 SELECT is(get_category('healthcare=>centre, healthcare:speciality=>covid19'::hstore, 'FR'), 'health', 'get_category healthcare=>centre, healthcare:speciality=>covid19 for FR should be health');
 
 SELECT is(get_subcategory('healthcare=>centre, healthcare:speciality=>covid19'::hstore, 'FR'), 'covid19_centre', 'get_subcategory healthcare=>centre, healthcare:speciality=>covid19 for FR should be covid19_centre');
@@ -986,6 +1130,14 @@ SELECT is(get_category('shop=>optician'::hstore, 'IT'), 'health', 'get_category 
 
 SELECT is(get_subcategory('shop=>optician'::hstore, 'IT'), 'optician', 'get_subcategory shop=>optician for IT should be optician');
 
+SELECT is(get_category('shop=>optician'::hstore, 'GB'), 'health', 'get_category shop=>optician for GB should be health');
+
+SELECT is(get_subcategory('shop=>optician'::hstore, 'GB'), 'optician', 'get_subcategory shop=>optician for GB should be optician');
+
+SELECT is(get_category('shop=>optician'::hstore, 'IE'), 'health', 'get_category shop=>optician for IE should be health');
+
+SELECT is(get_subcategory('shop=>optician'::hstore, 'IE'), 'optician', 'get_subcategory shop=>optician for IE should be optician');
+
 SELECT is(get_category('craft=>optician'::hstore, 'DE'), 'health', 'get_category craft=>optician for DE should be health');
 
 SELECT is(get_subcategory('craft=>optician'::hstore, 'DE'), 'optician', 'get_subcategory craft=>optician for DE should be optician');
@@ -1029,6 +1181,14 @@ SELECT is(get_subcategory('craft=>optician'::hstore, 'CD'), 'optician', 'get_sub
 SELECT is(get_category('craft=>optician'::hstore, 'IT'), 'health', 'get_category craft=>optician for IT should be health');
 
 SELECT is(get_subcategory('craft=>optician'::hstore, 'IT'), 'optician', 'get_subcategory craft=>optician for IT should be optician');
+
+SELECT is(get_category('craft=>optician'::hstore, 'GB'), 'health', 'get_category craft=>optician for GB should be health');
+
+SELECT is(get_subcategory('craft=>optician'::hstore, 'GB'), 'optician', 'get_subcategory craft=>optician for GB should be optician');
+
+SELECT is(get_category('craft=>optician'::hstore, 'IE'), 'health', 'get_category craft=>optician for IE should be health');
+
+SELECT is(get_subcategory('craft=>optician'::hstore, 'IE'), 'optician', 'get_subcategory craft=>optician for IE should be optician');
 
 SELECT is(get_category('shop=>hearing_aids'::hstore, 'DE'), 'health', 'get_category shop=>hearing_aids for DE should be health');
 
@@ -1074,6 +1234,14 @@ SELECT is(get_category('shop=>hearing_aids'::hstore, 'IT'), 'health', 'get_categ
 
 SELECT is(get_subcategory('shop=>hearing_aids'::hstore, 'IT'), 'hearing_aids', 'get_subcategory shop=>hearing_aids for IT should be hearing_aids');
 
+SELECT is(get_category('shop=>hearing_aids'::hstore, 'GB'), 'health', 'get_category shop=>hearing_aids for GB should be health');
+
+SELECT is(get_subcategory('shop=>hearing_aids'::hstore, 'GB'), 'hearing_aids', 'get_subcategory shop=>hearing_aids for GB should be hearing_aids');
+
+SELECT is(get_category('shop=>hearing_aids'::hstore, 'IE'), 'health', 'get_category shop=>hearing_aids for IE should be health');
+
+SELECT is(get_subcategory('shop=>hearing_aids'::hstore, 'IE'), 'hearing_aids', 'get_subcategory shop=>hearing_aids for IE should be hearing_aids');
+
 SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'DE'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for DE should be health');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'DE'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for DE should be condoms');
@@ -1117,6 +1285,14 @@ SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 
 SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'IT'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for IT should be health');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'IT'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for IT should be condoms');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'GB'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for GB should be health');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'GB'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for GB should be condoms');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'IE'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for IE should be health');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'IE'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for IE should be condoms');
 
 SELECT is(get_category('shop=>medical_supply'::hstore, 'DE'), 'health', 'get_category shop=>medical_supply for DE should be health');
 
@@ -1162,6 +1338,14 @@ SELECT is(get_category('shop=>medical_supply'::hstore, 'IT'), 'health', 'get_cat
 
 SELECT is(get_subcategory('shop=>medical_supply'::hstore, 'IT'), 'medical_supply', 'get_subcategory shop=>medical_supply for IT should be medical_supply');
 
+SELECT is(get_category('shop=>medical_supply'::hstore, 'GB'), 'health', 'get_category shop=>medical_supply for GB should be health');
+
+SELECT is(get_subcategory('shop=>medical_supply'::hstore, 'GB'), 'medical_supply', 'get_subcategory shop=>medical_supply for GB should be medical_supply');
+
+SELECT is(get_category('shop=>medical_supply'::hstore, 'IE'), 'health', 'get_category shop=>medical_supply for IE should be health');
+
+SELECT is(get_subcategory('shop=>medical_supply'::hstore, 'IE'), 'medical_supply', 'get_subcategory shop=>medical_supply for IE should be medical_supply');
+
 SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for DE should be health');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for DE should be health_center');
@@ -1205,6 +1389,14 @@ SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore
 SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for IT should be health');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for IT should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for GB should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for GB should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for IE should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for IE should be health_center');
 
 SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for DE should be health');
 
@@ -1250,6 +1442,14 @@ SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, '
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for IT should be health_center');
 
+SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for GB should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for GB should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for IE should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for IE should be health_center');
+
 SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for DE should be health');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for DE should be health_center');
@@ -1293,6 +1493,14 @@ SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore
 SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for IT should be health');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for IT should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for GB should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for GB should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for IE should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for IE should be health_center');
 
 SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for DE should be health');
 
@@ -1338,6 +1546,14 @@ SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore,
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for IT should be health_center');
 
+SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for GB should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for GB should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for IE should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for IE should be health_center');
+
 SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for DE should be health');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for DE should be health_center');
@@ -1381,6 +1597,14 @@ SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'
 SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for IT should be health');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for IT should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for GB should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for GB should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for IE should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for IE should be health_center');
 
 SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for DE should be health');
 
@@ -1426,6 +1650,14 @@ SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstor
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for IT should be health_center');
 
+SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for GB should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for GB should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for IE should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for IE should be health_center');
+
 SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for DE should be health');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for DE should be health_center');
@@ -1469,6 +1701,14 @@ SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore,
 SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for IT should be health');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for IT should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for GB should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for GB should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for IE should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for IE should be health_center');
 
 SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for DE should be health');
 
@@ -1514,6 +1754,14 @@ SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'IT'
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for IT should be health_center');
 
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for GB should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for GB should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for IE should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for IE should be health_center');
+
 SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for DE should be health');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for DE should be health_center');
@@ -1557,6 +1805,14 @@ SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 
 SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for IT should be health');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for IT should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for GB should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for GB should be health_center');
+
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for IE should be health');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for IE should be health_center');
 
 SELECT is(get_category('shop=>herbalist'::hstore, 'IT'), 'health', 'get_category shop=>herbalist for IT should be health');
 
@@ -1606,6 +1862,14 @@ SELECT is(get_category('shop=>frozen_food'::hstore, 'IT'), 'food', 'get_category
 
 SELECT is(get_subcategory('shop=>frozen_food'::hstore, 'IT'), 'supermarket', 'get_subcategory shop=>frozen_food for IT should be supermarket');
 
+SELECT is(get_category('shop=>frozen_food'::hstore, 'GB'), 'food', 'get_category shop=>frozen_food for GB should be food');
+
+SELECT is(get_subcategory('shop=>frozen_food'::hstore, 'GB'), 'supermarket', 'get_subcategory shop=>frozen_food for GB should be supermarket');
+
+SELECT is(get_category('shop=>frozen_food'::hstore, 'IE'), 'food', 'get_category shop=>frozen_food for IE should be food');
+
+SELECT is(get_subcategory('shop=>frozen_food'::hstore, 'IE'), 'supermarket', 'get_subcategory shop=>frozen_food for IE should be supermarket');
+
 SELECT is(get_category('shop=>supermarket'::hstore, 'DE'), 'food', 'get_category shop=>supermarket for DE should be food');
 
 SELECT is(get_subcategory('shop=>supermarket'::hstore, 'DE'), 'supermarket', 'get_subcategory shop=>supermarket for DE should be supermarket');
@@ -1649,6 +1913,14 @@ SELECT is(get_subcategory('shop=>supermarket'::hstore, 'CD'), 'supermarket', 'ge
 SELECT is(get_category('shop=>supermarket'::hstore, 'IT'), 'food', 'get_category shop=>supermarket for IT should be food');
 
 SELECT is(get_subcategory('shop=>supermarket'::hstore, 'IT'), 'supermarket', 'get_subcategory shop=>supermarket for IT should be supermarket');
+
+SELECT is(get_category('shop=>supermarket'::hstore, 'GB'), 'food', 'get_category shop=>supermarket for GB should be food');
+
+SELECT is(get_subcategory('shop=>supermarket'::hstore, 'GB'), 'supermarket', 'get_subcategory shop=>supermarket for GB should be supermarket');
+
+SELECT is(get_category('shop=>supermarket'::hstore, 'IE'), 'food', 'get_category shop=>supermarket for IE should be food');
+
+SELECT is(get_subcategory('shop=>supermarket'::hstore, 'IE'), 'supermarket', 'get_subcategory shop=>supermarket for IE should be supermarket');
 
 SELECT is(get_category('shop=>butcher'::hstore, 'DE'), 'food', 'get_category shop=>butcher for DE should be food');
 
@@ -1694,6 +1966,14 @@ SELECT is(get_category('shop=>butcher'::hstore, 'IT'), 'food', 'get_category sho
 
 SELECT is(get_subcategory('shop=>butcher'::hstore, 'IT'), 'butcher', 'get_subcategory shop=>butcher for IT should be butcher');
 
+SELECT is(get_category('shop=>butcher'::hstore, 'GB'), 'food', 'get_category shop=>butcher for GB should be food');
+
+SELECT is(get_subcategory('shop=>butcher'::hstore, 'GB'), 'butcher', 'get_subcategory shop=>butcher for GB should be butcher');
+
+SELECT is(get_category('shop=>butcher'::hstore, 'IE'), 'food', 'get_category shop=>butcher for IE should be food');
+
+SELECT is(get_subcategory('shop=>butcher'::hstore, 'IE'), 'butcher', 'get_subcategory shop=>butcher for IE should be butcher');
+
 SELECT is(get_category('shop=>cheese'::hstore, 'DE'), 'food', 'get_category shop=>cheese for DE should be food');
 
 SELECT is(get_subcategory('shop=>cheese'::hstore, 'DE'), 'cheese', 'get_subcategory shop=>cheese for DE should be cheese');
@@ -1737,6 +2017,14 @@ SELECT is(get_subcategory('shop=>cheese'::hstore, 'CD'), 'cheese', 'get_subcateg
 SELECT is(get_category('shop=>cheese'::hstore, 'IT'), 'food', 'get_category shop=>cheese for IT should be food');
 
 SELECT is(get_subcategory('shop=>cheese'::hstore, 'IT'), 'cheese', 'get_subcategory shop=>cheese for IT should be cheese');
+
+SELECT is(get_category('shop=>cheese'::hstore, 'GB'), 'food', 'get_category shop=>cheese for GB should be food');
+
+SELECT is(get_subcategory('shop=>cheese'::hstore, 'GB'), 'cheese', 'get_subcategory shop=>cheese for GB should be cheese');
+
+SELECT is(get_category('shop=>cheese'::hstore, 'IE'), 'food', 'get_category shop=>cheese for IE should be food');
+
+SELECT is(get_subcategory('shop=>cheese'::hstore, 'IE'), 'cheese', 'get_subcategory shop=>cheese for IE should be cheese');
 
 SELECT is(get_category('shop=>convenience'::hstore, 'DE'), 'food', 'get_category shop=>convenience for DE should be food');
 
@@ -1782,6 +2070,14 @@ SELECT is(get_category('shop=>convenience'::hstore, 'IT'), 'food', 'get_category
 
 SELECT is(get_subcategory('shop=>convenience'::hstore, 'IT'), 'convenience', 'get_subcategory shop=>convenience for IT should be convenience');
 
+SELECT is(get_category('shop=>convenience'::hstore, 'GB'), 'food', 'get_category shop=>convenience for GB should be food');
+
+SELECT is(get_subcategory('shop=>convenience'::hstore, 'GB'), 'convenience', 'get_subcategory shop=>convenience for GB should be convenience');
+
+SELECT is(get_category('shop=>convenience'::hstore, 'IE'), 'food', 'get_category shop=>convenience for IE should be food');
+
+SELECT is(get_subcategory('shop=>convenience'::hstore, 'IE'), 'convenience', 'get_subcategory shop=>convenience for IE should be convenience');
+
 SELECT is(get_category('shop=>general'::hstore, 'DE'), 'food', 'get_category shop=>general for DE should be food');
 
 SELECT is(get_subcategory('shop=>general'::hstore, 'DE'), 'convenience', 'get_subcategory shop=>general for DE should be convenience');
@@ -1825,6 +2121,14 @@ SELECT is(get_subcategory('shop=>general'::hstore, 'CD'), 'convenience', 'get_su
 SELECT is(get_category('shop=>general'::hstore, 'IT'), 'food', 'get_category shop=>general for IT should be food');
 
 SELECT is(get_subcategory('shop=>general'::hstore, 'IT'), 'convenience', 'get_subcategory shop=>general for IT should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'GB'), 'food', 'get_category shop=>general for GB should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'GB'), 'convenience', 'get_subcategory shop=>general for GB should be convenience');
+
+SELECT is(get_category('shop=>general'::hstore, 'IE'), 'food', 'get_category shop=>general for IE should be food');
+
+SELECT is(get_subcategory('shop=>general'::hstore, 'IE'), 'convenience', 'get_subcategory shop=>general for IE should be convenience');
 
 SELECT is(get_category('shop=>seafood'::hstore, 'DE'), 'food', 'get_category shop=>seafood for DE should be food');
 
@@ -1870,6 +2174,14 @@ SELECT is(get_category('shop=>seafood'::hstore, 'IT'), 'food', 'get_category sho
 
 SELECT is(get_subcategory('shop=>seafood'::hstore, 'IT'), 'seafood', 'get_subcategory shop=>seafood for IT should be seafood');
 
+SELECT is(get_category('shop=>seafood'::hstore, 'GB'), 'food', 'get_category shop=>seafood for GB should be food');
+
+SELECT is(get_subcategory('shop=>seafood'::hstore, 'GB'), 'seafood', 'get_subcategory shop=>seafood for GB should be seafood');
+
+SELECT is(get_category('shop=>seafood'::hstore, 'IE'), 'food', 'get_category shop=>seafood for IE should be food');
+
+SELECT is(get_subcategory('shop=>seafood'::hstore, 'IE'), 'seafood', 'get_subcategory shop=>seafood for IE should be seafood');
+
 SELECT is(get_category('shop=>greengrocer'::hstore, 'DE'), 'food', 'get_category shop=>greengrocer for DE should be food');
 
 SELECT is(get_subcategory('shop=>greengrocer'::hstore, 'DE'), 'greengrocer', 'get_subcategory shop=>greengrocer for DE should be greengrocer');
@@ -1913,6 +2225,14 @@ SELECT is(get_subcategory('shop=>greengrocer'::hstore, 'CD'), 'greengrocer', 'ge
 SELECT is(get_category('shop=>greengrocer'::hstore, 'IT'), 'food', 'get_category shop=>greengrocer for IT should be food');
 
 SELECT is(get_subcategory('shop=>greengrocer'::hstore, 'IT'), 'greengrocer', 'get_subcategory shop=>greengrocer for IT should be greengrocer');
+
+SELECT is(get_category('shop=>greengrocer'::hstore, 'GB'), 'food', 'get_category shop=>greengrocer for GB should be food');
+
+SELECT is(get_subcategory('shop=>greengrocer'::hstore, 'GB'), 'greengrocer', 'get_subcategory shop=>greengrocer for GB should be greengrocer');
+
+SELECT is(get_category('shop=>greengrocer'::hstore, 'IE'), 'food', 'get_category shop=>greengrocer for IE should be food');
+
+SELECT is(get_subcategory('shop=>greengrocer'::hstore, 'IE'), 'greengrocer', 'get_subcategory shop=>greengrocer for IE should be greengrocer');
 
 SELECT is(get_category('shop=>deli'::hstore, 'DE'), 'food', 'get_category shop=>deli for DE should be food');
 
@@ -1958,6 +2278,14 @@ SELECT is(get_category('shop=>deli'::hstore, 'IT'), 'food', 'get_category shop=>
 
 SELECT is(get_subcategory('shop=>deli'::hstore, 'IT'), 'grocery', 'get_subcategory shop=>deli for IT should be grocery');
 
+SELECT is(get_category('shop=>deli'::hstore, 'GB'), 'food', 'get_category shop=>deli for GB should be food');
+
+SELECT is(get_subcategory('shop=>deli'::hstore, 'GB'), 'grocery', 'get_subcategory shop=>deli for GB should be grocery');
+
+SELECT is(get_category('shop=>deli'::hstore, 'IE'), 'food', 'get_category shop=>deli for IE should be food');
+
+SELECT is(get_subcategory('shop=>deli'::hstore, 'IE'), 'grocery', 'get_subcategory shop=>deli for IE should be grocery');
+
 SELECT is(get_category('shop=>spices'::hstore, 'DE'), 'food', 'get_category shop=>spices for DE should be food');
 
 SELECT is(get_subcategory('shop=>spices'::hstore, 'DE'), 'grocery', 'get_subcategory shop=>spices for DE should be grocery');
@@ -2001,6 +2329,14 @@ SELECT is(get_subcategory('shop=>spices'::hstore, 'CD'), 'grocery', 'get_subcate
 SELECT is(get_category('shop=>spices'::hstore, 'IT'), 'food', 'get_category shop=>spices for IT should be food');
 
 SELECT is(get_subcategory('shop=>spices'::hstore, 'IT'), 'grocery', 'get_subcategory shop=>spices for IT should be grocery');
+
+SELECT is(get_category('shop=>spices'::hstore, 'GB'), 'food', 'get_category shop=>spices for GB should be food');
+
+SELECT is(get_subcategory('shop=>spices'::hstore, 'GB'), 'grocery', 'get_subcategory shop=>spices for GB should be grocery');
+
+SELECT is(get_category('shop=>spices'::hstore, 'IE'), 'food', 'get_category shop=>spices for IE should be food');
+
+SELECT is(get_subcategory('shop=>spices'::hstore, 'IE'), 'grocery', 'get_subcategory shop=>spices for IE should be grocery');
 
 SELECT is(get_category('shop=>honey'::hstore, 'DE'), 'food', 'get_category shop=>honey for DE should be food');
 
@@ -2046,6 +2382,14 @@ SELECT is(get_category('shop=>honey'::hstore, 'IT'), 'food', 'get_category shop=
 
 SELECT is(get_subcategory('shop=>honey'::hstore, 'IT'), 'grocery', 'get_subcategory shop=>honey for IT should be grocery');
 
+SELECT is(get_category('shop=>honey'::hstore, 'GB'), 'food', 'get_category shop=>honey for GB should be food');
+
+SELECT is(get_subcategory('shop=>honey'::hstore, 'GB'), 'grocery', 'get_subcategory shop=>honey for GB should be grocery');
+
+SELECT is(get_category('shop=>honey'::hstore, 'IE'), 'food', 'get_category shop=>honey for IE should be food');
+
+SELECT is(get_subcategory('shop=>honey'::hstore, 'IE'), 'grocery', 'get_subcategory shop=>honey for IE should be grocery');
+
 SELECT is(get_category('shop=>pasta'::hstore, 'DE'), 'food', 'get_category shop=>pasta for DE should be food');
 
 SELECT is(get_subcategory('shop=>pasta'::hstore, 'DE'), 'grocery', 'get_subcategory shop=>pasta for DE should be grocery');
@@ -2089,6 +2433,14 @@ SELECT is(get_subcategory('shop=>pasta'::hstore, 'CD'), 'grocery', 'get_subcateg
 SELECT is(get_category('shop=>pasta'::hstore, 'IT'), 'food', 'get_category shop=>pasta for IT should be food');
 
 SELECT is(get_subcategory('shop=>pasta'::hstore, 'IT'), 'grocery', 'get_subcategory shop=>pasta for IT should be grocery');
+
+SELECT is(get_category('shop=>pasta'::hstore, 'GB'), 'food', 'get_category shop=>pasta for GB should be food');
+
+SELECT is(get_subcategory('shop=>pasta'::hstore, 'GB'), 'grocery', 'get_subcategory shop=>pasta for GB should be grocery');
+
+SELECT is(get_category('shop=>pasta'::hstore, 'IE'), 'food', 'get_category shop=>pasta for IE should be food');
+
+SELECT is(get_subcategory('shop=>pasta'::hstore, 'IE'), 'grocery', 'get_subcategory shop=>pasta for IE should be grocery');
 
 SELECT is(get_category('shop=>cannery'::hstore, 'DE'), 'food', 'get_category shop=>cannery for DE should be food');
 
@@ -2134,6 +2486,14 @@ SELECT is(get_category('shop=>cannery'::hstore, 'IT'), 'food', 'get_category sho
 
 SELECT is(get_subcategory('shop=>cannery'::hstore, 'IT'), 'grocery', 'get_subcategory shop=>cannery for IT should be grocery');
 
+SELECT is(get_category('shop=>cannery'::hstore, 'GB'), 'food', 'get_category shop=>cannery for GB should be food');
+
+SELECT is(get_subcategory('shop=>cannery'::hstore, 'GB'), 'grocery', 'get_subcategory shop=>cannery for GB should be grocery');
+
+SELECT is(get_category('shop=>cannery'::hstore, 'IE'), 'food', 'get_category shop=>cannery for IE should be food');
+
+SELECT is(get_subcategory('shop=>cannery'::hstore, 'IE'), 'grocery', 'get_subcategory shop=>cannery for IE should be grocery');
+
 SELECT is(get_category('shop=>health_food'::hstore, 'DE'), 'food', 'get_category shop=>health_food for DE should be food');
 
 SELECT is(get_subcategory('shop=>health_food'::hstore, 'DE'), 'health_food', 'get_subcategory shop=>health_food for DE should be health_food');
@@ -2177,6 +2537,14 @@ SELECT is(get_subcategory('shop=>health_food'::hstore, 'CD'), 'health_food', 'ge
 SELECT is(get_category('shop=>health_food'::hstore, 'IT'), 'food', 'get_category shop=>health_food for IT should be food');
 
 SELECT is(get_subcategory('shop=>health_food'::hstore, 'IT'), 'health_food', 'get_subcategory shop=>health_food for IT should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'GB'), 'food', 'get_category shop=>health_food for GB should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'GB'), 'health_food', 'get_subcategory shop=>health_food for GB should be health_food');
+
+SELECT is(get_category('shop=>health_food'::hstore, 'IE'), 'food', 'get_category shop=>health_food for IE should be food');
+
+SELECT is(get_subcategory('shop=>health_food'::hstore, 'IE'), 'health_food', 'get_subcategory shop=>health_food for IE should be health_food');
 
 SELECT is(get_category('shop=>chocolate'::hstore, 'DE'), 'food', 'get_category shop=>chocolate for DE should be food');
 
@@ -2222,6 +2590,14 @@ SELECT is(get_category('shop=>chocolate'::hstore, 'IT'), 'food', 'get_category s
 
 SELECT is(get_subcategory('shop=>chocolate'::hstore, 'IT'), 'chocolate', 'get_subcategory shop=>chocolate for IT should be chocolate');
 
+SELECT is(get_category('shop=>chocolate'::hstore, 'GB'), 'food', 'get_category shop=>chocolate for GB should be food');
+
+SELECT is(get_subcategory('shop=>chocolate'::hstore, 'GB'), 'chocolate', 'get_subcategory shop=>chocolate for GB should be chocolate');
+
+SELECT is(get_category('shop=>chocolate'::hstore, 'IE'), 'food', 'get_category shop=>chocolate for IE should be food');
+
+SELECT is(get_subcategory('shop=>chocolate'::hstore, 'IE'), 'chocolate', 'get_subcategory shop=>chocolate for IE should be chocolate');
+
 SELECT is(get_category('shop=>tea'::hstore, 'DE'), 'food', 'get_category shop=>tea for DE should be food');
 
 SELECT is(get_subcategory('shop=>tea'::hstore, 'DE'), 'tea', 'get_subcategory shop=>tea for DE should be tea');
@@ -2265,6 +2641,14 @@ SELECT is(get_subcategory('shop=>tea'::hstore, 'CD'), 'tea', 'get_subcategory sh
 SELECT is(get_category('shop=>tea'::hstore, 'IT'), 'food', 'get_category shop=>tea for IT should be food');
 
 SELECT is(get_subcategory('shop=>tea'::hstore, 'IT'), 'tea', 'get_subcategory shop=>tea for IT should be tea');
+
+SELECT is(get_category('shop=>tea'::hstore, 'GB'), 'food', 'get_category shop=>tea for GB should be food');
+
+SELECT is(get_subcategory('shop=>tea'::hstore, 'GB'), 'tea', 'get_subcategory shop=>tea for GB should be tea');
+
+SELECT is(get_category('shop=>tea'::hstore, 'IE'), 'food', 'get_category shop=>tea for IE should be food');
+
+SELECT is(get_subcategory('shop=>tea'::hstore, 'IE'), 'tea', 'get_subcategory shop=>tea for IE should be tea');
 
 SELECT is(get_category('shop=>coffee'::hstore, 'DE'), 'food', 'get_category shop=>coffee for DE should be food');
 
@@ -2310,6 +2694,14 @@ SELECT is(get_category('shop=>coffee'::hstore, 'IT'), 'food', 'get_category shop
 
 SELECT is(get_subcategory('shop=>coffee'::hstore, 'IT'), 'coffee', 'get_subcategory shop=>coffee for IT should be coffee');
 
+SELECT is(get_category('shop=>coffee'::hstore, 'GB'), 'food', 'get_category shop=>coffee for GB should be food');
+
+SELECT is(get_subcategory('shop=>coffee'::hstore, 'GB'), 'coffee', 'get_subcategory shop=>coffee for GB should be coffee');
+
+SELECT is(get_category('shop=>coffee'::hstore, 'IE'), 'food', 'get_category shop=>coffee for IE should be food');
+
+SELECT is(get_subcategory('shop=>coffee'::hstore, 'IE'), 'coffee', 'get_subcategory shop=>coffee for IE should be coffee');
+
 SELECT is(get_category('shop=>dairy'::hstore, 'DE'), 'food', 'get_category shop=>dairy for DE should be food');
 
 SELECT is(get_subcategory('shop=>dairy'::hstore, 'DE'), 'dairy', 'get_subcategory shop=>dairy for DE should be dairy');
@@ -2353,6 +2745,14 @@ SELECT is(get_subcategory('shop=>dairy'::hstore, 'CD'), 'dairy', 'get_subcategor
 SELECT is(get_category('shop=>dairy'::hstore, 'IT'), 'food', 'get_category shop=>dairy for IT should be food');
 
 SELECT is(get_subcategory('shop=>dairy'::hstore, 'IT'), 'dairy', 'get_subcategory shop=>dairy for IT should be dairy');
+
+SELECT is(get_category('shop=>dairy'::hstore, 'GB'), 'food', 'get_category shop=>dairy for GB should be food');
+
+SELECT is(get_subcategory('shop=>dairy'::hstore, 'GB'), 'dairy', 'get_subcategory shop=>dairy for GB should be dairy');
+
+SELECT is(get_category('shop=>dairy'::hstore, 'IE'), 'food', 'get_category shop=>dairy for IE should be food');
+
+SELECT is(get_subcategory('shop=>dairy'::hstore, 'IE'), 'dairy', 'get_subcategory shop=>dairy for IE should be dairy');
 
 SELECT is(get_category('amenity=>vending_machine, vending=>milk'::hstore, 'DE'), 'food', 'get_category amenity=>vending_machine, vending=>milk for DE should be food');
 
@@ -2398,6 +2798,14 @@ SELECT is(get_category('amenity=>vending_machine, vending=>milk'::hstore, 'IT'),
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>milk'::hstore, 'IT'), 'dairy', 'get_subcategory amenity=>vending_machine, vending=>milk for IT should be dairy');
 
+SELECT is(get_category('amenity=>vending_machine, vending=>milk'::hstore, 'GB'), 'food', 'get_category amenity=>vending_machine, vending=>milk for GB should be food');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>milk'::hstore, 'GB'), 'dairy', 'get_subcategory amenity=>vending_machine, vending=>milk for GB should be dairy');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>milk'::hstore, 'IE'), 'food', 'get_category amenity=>vending_machine, vending=>milk for IE should be food');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>milk'::hstore, 'IE'), 'dairy', 'get_subcategory amenity=>vending_machine, vending=>milk for IE should be dairy');
+
 SELECT is(get_category('shop=>confectionery'::hstore, 'DE'), 'food', 'get_category shop=>confectionery for DE should be food');
 
 SELECT is(get_subcategory('shop=>confectionery'::hstore, 'DE'), 'confectionery', 'get_subcategory shop=>confectionery for DE should be confectionery');
@@ -2441,6 +2849,14 @@ SELECT is(get_subcategory('shop=>confectionery'::hstore, 'CD'), 'confectionery',
 SELECT is(get_category('shop=>confectionery'::hstore, 'IT'), 'food', 'get_category shop=>confectionery for IT should be food');
 
 SELECT is(get_subcategory('shop=>confectionery'::hstore, 'IT'), 'confectionery', 'get_subcategory shop=>confectionery for IT should be confectionery');
+
+SELECT is(get_category('shop=>confectionery'::hstore, 'GB'), 'food', 'get_category shop=>confectionery for GB should be food');
+
+SELECT is(get_subcategory('shop=>confectionery'::hstore, 'GB'), 'confectionery', 'get_subcategory shop=>confectionery for GB should be confectionery');
+
+SELECT is(get_category('shop=>confectionery'::hstore, 'IE'), 'food', 'get_category shop=>confectionery for IE should be food');
+
+SELECT is(get_subcategory('shop=>confectionery'::hstore, 'IE'), 'confectionery', 'get_subcategory shop=>confectionery for IE should be confectionery');
 
 SELECT is(get_category('shop=>farm'::hstore, 'DE'), 'food', 'get_category shop=>farm for DE should be food');
 
@@ -2486,6 +2902,14 @@ SELECT is(get_category('shop=>farm'::hstore, 'IT'), 'food', 'get_category shop=>
 
 SELECT is(get_subcategory('shop=>farm'::hstore, 'IT'), 'farm', 'get_subcategory shop=>farm for IT should be farm');
 
+SELECT is(get_category('shop=>farm'::hstore, 'GB'), 'food', 'get_category shop=>farm for GB should be food');
+
+SELECT is(get_subcategory('shop=>farm'::hstore, 'GB'), 'farm', 'get_subcategory shop=>farm for GB should be farm');
+
+SELECT is(get_category('shop=>farm'::hstore, 'IE'), 'food', 'get_category shop=>farm for IE should be food');
+
+SELECT is(get_subcategory('shop=>farm'::hstore, 'IE'), 'farm', 'get_subcategory shop=>farm for IE should be farm');
+
 SELECT is(get_category('amenity=>marketplace'::hstore, 'DE'), 'food', 'get_category amenity=>marketplace for DE should be food');
 
 SELECT is(get_subcategory('amenity=>marketplace'::hstore, 'DE'), 'marketplace', 'get_subcategory amenity=>marketplace for DE should be marketplace');
@@ -2529,6 +2953,14 @@ SELECT is(get_subcategory('amenity=>marketplace'::hstore, 'CD'), 'marketplace', 
 SELECT is(get_category('amenity=>marketplace'::hstore, 'IT'), 'food', 'get_category amenity=>marketplace for IT should be food');
 
 SELECT is(get_subcategory('amenity=>marketplace'::hstore, 'IT'), 'marketplace', 'get_subcategory amenity=>marketplace for IT should be marketplace');
+
+SELECT is(get_category('amenity=>marketplace'::hstore, 'GB'), 'food', 'get_category amenity=>marketplace for GB should be food');
+
+SELECT is(get_subcategory('amenity=>marketplace'::hstore, 'GB'), 'marketplace', 'get_subcategory amenity=>marketplace for GB should be marketplace');
+
+SELECT is(get_category('amenity=>marketplace'::hstore, 'IE'), 'food', 'get_category amenity=>marketplace for IE should be food');
+
+SELECT is(get_subcategory('amenity=>marketplace'::hstore, 'IE'), 'marketplace', 'get_subcategory amenity=>marketplace for IE should be marketplace');
 
 SELECT is(get_category('shop=>bakery'::hstore, 'DE'), 'food', 'get_category shop=>bakery for DE should be food');
 
@@ -2574,6 +3006,14 @@ SELECT is(get_category('shop=>bakery'::hstore, 'IT'), 'food', 'get_category shop
 
 SELECT is(get_subcategory('shop=>bakery'::hstore, 'IT'), 'bakery', 'get_subcategory shop=>bakery for IT should be bakery');
 
+SELECT is(get_category('shop=>bakery'::hstore, 'GB'), 'food', 'get_category shop=>bakery for GB should be food');
+
+SELECT is(get_subcategory('shop=>bakery'::hstore, 'GB'), 'bakery', 'get_subcategory shop=>bakery for GB should be bakery');
+
+SELECT is(get_category('shop=>bakery'::hstore, 'IE'), 'food', 'get_category shop=>bakery for IE should be food');
+
+SELECT is(get_subcategory('shop=>bakery'::hstore, 'IE'), 'bakery', 'get_subcategory shop=>bakery for IE should be bakery');
+
 SELECT is(get_category('shop=>pastry'::hstore, 'DE'), 'food', 'get_category shop=>pastry for DE should be food');
 
 SELECT is(get_subcategory('shop=>pastry'::hstore, 'DE'), 'bakery', 'get_subcategory shop=>pastry for DE should be bakery');
@@ -2618,6 +3058,14 @@ SELECT is(get_category('shop=>pastry'::hstore, 'IT'), 'food', 'get_category shop
 
 SELECT is(get_subcategory('shop=>pastry'::hstore, 'IT'), 'bakery', 'get_subcategory shop=>pastry for IT should be bakery');
 
+SELECT is(get_category('shop=>pastry'::hstore, 'GB'), 'food', 'get_category shop=>pastry for GB should be food');
+
+SELECT is(get_subcategory('shop=>pastry'::hstore, 'GB'), 'bakery', 'get_subcategory shop=>pastry for GB should be bakery');
+
+SELECT is(get_category('shop=>pastry'::hstore, 'IE'), 'food', 'get_category shop=>pastry for IE should be food');
+
+SELECT is(get_subcategory('shop=>pastry'::hstore, 'IE'), 'bakery', 'get_subcategory shop=>pastry for IE should be bakery');
+
 SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'DE'), 'food', 'get_category amenity=>vending_machine, vending=>bread for DE should be food');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'DE'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for DE should be bakery');
@@ -2661,6 +3109,14 @@ SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'C
 SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'IT'), 'food', 'get_category amenity=>vending_machine, vending=>bread for IT should be food');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'IT'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for IT should be bakery');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'GB'), 'food', 'get_category amenity=>vending_machine, vending=>bread for GB should be food');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'GB'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for GB should be bakery');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'IE'), 'food', 'get_category amenity=>vending_machine, vending=>bread for IE should be food');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'IE'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for IE should be bakery');
 
 SELECT is(get_category('shop=>alcohol'::hstore, 'CD'), 'food', 'get_category shop=>alcohol for CD should be food');
 
@@ -2722,6 +3178,14 @@ SELECT is(get_category('amenity=>vending_machine, vending=>pizza'::hstore, 'IT')
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>pizza'::hstore, 'IT'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>pizza for IT should be vending_machine');
 
+SELECT is(get_category('amenity=>vending_machine, vending=>pizza'::hstore, 'GB'), 'eat', 'get_category amenity=>vending_machine, vending=>pizza for GB should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>pizza'::hstore, 'GB'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>pizza for GB should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>pizza'::hstore, 'IE'), 'eat', 'get_category amenity=>vending_machine, vending=>pizza for IE should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>pizza'::hstore, 'IE'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>pizza for IE should be vending_machine');
+
 SELECT is(get_category('amenity=>vending_machine, vending=>drinks'::hstore, 'DE'), 'eat', 'get_category amenity=>vending_machine, vending=>drinks for DE should be eat');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>drinks'::hstore, 'DE'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>drinks for DE should be vending_machine');
@@ -2765,6 +3229,14 @@ SELECT is(get_subcategory('amenity=>vending_machine, vending=>drinks'::hstore, '
 SELECT is(get_category('amenity=>vending_machine, vending=>drinks'::hstore, 'IT'), 'eat', 'get_category amenity=>vending_machine, vending=>drinks for IT should be eat');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>drinks'::hstore, 'IT'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>drinks for IT should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>drinks'::hstore, 'GB'), 'eat', 'get_category amenity=>vending_machine, vending=>drinks for GB should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>drinks'::hstore, 'GB'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>drinks for GB should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>drinks'::hstore, 'IE'), 'eat', 'get_category amenity=>vending_machine, vending=>drinks for IE should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>drinks'::hstore, 'IE'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>drinks for IE should be vending_machine');
 
 SELECT is(get_category('amenity=>vending_machine, vending=>water'::hstore, 'DE'), 'eat', 'get_category amenity=>vending_machine, vending=>water for DE should be eat');
 
@@ -2810,6 +3282,14 @@ SELECT is(get_category('amenity=>vending_machine, vending=>water'::hstore, 'IT')
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>water'::hstore, 'IT'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>water for IT should be vending_machine');
 
+SELECT is(get_category('amenity=>vending_machine, vending=>water'::hstore, 'GB'), 'eat', 'get_category amenity=>vending_machine, vending=>water for GB should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>water'::hstore, 'GB'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>water for GB should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>water'::hstore, 'IE'), 'eat', 'get_category amenity=>vending_machine, vending=>water for IE should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>water'::hstore, 'IE'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>water for IE should be vending_machine');
+
 SELECT is(get_category('amenity=>vending_machine, vending=>sweets'::hstore, 'DE'), 'eat', 'get_category amenity=>vending_machine, vending=>sweets for DE should be eat');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>sweets'::hstore, 'DE'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>sweets for DE should be vending_machine');
@@ -2853,6 +3333,14 @@ SELECT is(get_subcategory('amenity=>vending_machine, vending=>sweets'::hstore, '
 SELECT is(get_category('amenity=>vending_machine, vending=>sweets'::hstore, 'IT'), 'eat', 'get_category amenity=>vending_machine, vending=>sweets for IT should be eat');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>sweets'::hstore, 'IT'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>sweets for IT should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>sweets'::hstore, 'GB'), 'eat', 'get_category amenity=>vending_machine, vending=>sweets for GB should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>sweets'::hstore, 'GB'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>sweets for GB should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>sweets'::hstore, 'IE'), 'eat', 'get_category amenity=>vending_machine, vending=>sweets for IE should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>sweets'::hstore, 'IE'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>sweets for IE should be vending_machine');
 
 SELECT is(get_category('amenity=>restaurant'::hstore, 'DE'), 'eat', 'get_category amenity=>restaurant for DE should be eat');
 
@@ -2898,6 +3386,14 @@ SELECT is(get_category('amenity=>restaurant'::hstore, 'IT'), 'eat', 'get_categor
 
 SELECT is(get_subcategory('amenity=>restaurant'::hstore, 'IT'), 'restaurant', 'get_subcategory amenity=>restaurant for IT should be restaurant');
 
+SELECT is(get_category('amenity=>restaurant'::hstore, 'GB'), 'eat', 'get_category amenity=>restaurant for GB should be eat');
+
+SELECT is(get_subcategory('amenity=>restaurant'::hstore, 'GB'), 'restaurant', 'get_subcategory amenity=>restaurant for GB should be restaurant');
+
+SELECT is(get_category('amenity=>restaurant'::hstore, 'IE'), 'eat', 'get_category amenity=>restaurant for IE should be eat');
+
+SELECT is(get_subcategory('amenity=>restaurant'::hstore, 'IE'), 'restaurant', 'get_subcategory amenity=>restaurant for IE should be restaurant');
+
 SELECT is(get_category('amenity=>fast_food'::hstore, 'DE'), 'eat', 'get_category amenity=>fast_food for DE should be eat');
 
 SELECT is(get_subcategory('amenity=>fast_food'::hstore, 'DE'), 'fast_food', 'get_subcategory amenity=>fast_food for DE should be fast_food');
@@ -2941,6 +3437,14 @@ SELECT is(get_subcategory('amenity=>fast_food'::hstore, 'CD'), 'fast_food', 'get
 SELECT is(get_category('amenity=>fast_food'::hstore, 'IT'), 'eat', 'get_category amenity=>fast_food for IT should be eat');
 
 SELECT is(get_subcategory('amenity=>fast_food'::hstore, 'IT'), 'fast_food', 'get_subcategory amenity=>fast_food for IT should be fast_food');
+
+SELECT is(get_category('amenity=>fast_food'::hstore, 'GB'), 'eat', 'get_category amenity=>fast_food for GB should be eat');
+
+SELECT is(get_subcategory('amenity=>fast_food'::hstore, 'GB'), 'fast_food', 'get_subcategory amenity=>fast_food for GB should be fast_food');
+
+SELECT is(get_category('amenity=>fast_food'::hstore, 'IE'), 'eat', 'get_category amenity=>fast_food for IE should be eat');
+
+SELECT is(get_subcategory('amenity=>fast_food'::hstore, 'IE'), 'fast_food', 'get_subcategory amenity=>fast_food for IE should be fast_food');
 
 SELECT is(get_category('amenity=>ice_cream'::hstore, 'DE'), 'eat', 'get_category amenity=>ice_cream for DE should be eat');
 
@@ -3034,6 +3538,14 @@ SELECT is(get_category('opening_hours:covid19=>*, amenity=>cafe'::hstore, 'IT'),
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>cafe'::hstore, 'IT'), 'cafe', 'get_subcategory opening_hours:covid19=>*, amenity=>cafe for IT should be cafe');
 
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>cafe'::hstore, 'GB'), 'eat', 'get_category opening_hours:covid19=>*, amenity=>cafe for GB should be eat');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>cafe'::hstore, 'GB'), 'cafe', 'get_subcategory opening_hours:covid19=>*, amenity=>cafe for GB should be cafe');
+
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>cafe'::hstore, 'IE'), 'eat', 'get_category opening_hours:covid19=>*, amenity=>cafe for IE should be eat');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>cafe'::hstore, 'IE'), 'cafe', 'get_subcategory opening_hours:covid19=>*, amenity=>cafe for IE should be cafe');
+
 SELECT is(get_category('opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'eat', 'get_category opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee for DE should be eat');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'cafe', 'get_subcategory opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee for DE should be cafe');
@@ -3077,6 +3589,14 @@ SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>vending_machine, v
 SELECT is(get_category('opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'eat', 'get_category opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee for IT should be eat');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'cafe', 'get_subcategory opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee for IT should be cafe');
+
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'eat', 'get_category opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee for GB should be eat');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'cafe', 'get_subcategory opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee for GB should be cafe');
+
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'eat', 'get_category opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee for IE should be eat');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'cafe', 'get_subcategory opening_hours:covid19=>*, amenity=>vending_machine, vending=>coffee for IE should be cafe');
 
 SELECT is(get_category('delivery=>yes, amenity=>cafe'::hstore, 'DE'), 'eat', 'get_category delivery=>yes, amenity=>cafe for DE should be eat');
 
@@ -3122,6 +3642,14 @@ SELECT is(get_category('delivery=>yes, amenity=>cafe'::hstore, 'IT'), 'eat', 'ge
 
 SELECT is(get_subcategory('delivery=>yes, amenity=>cafe'::hstore, 'IT'), 'cafe', 'get_subcategory delivery=>yes, amenity=>cafe for IT should be cafe');
 
+SELECT is(get_category('delivery=>yes, amenity=>cafe'::hstore, 'GB'), 'eat', 'get_category delivery=>yes, amenity=>cafe for GB should be eat');
+
+SELECT is(get_subcategory('delivery=>yes, amenity=>cafe'::hstore, 'GB'), 'cafe', 'get_subcategory delivery=>yes, amenity=>cafe for GB should be cafe');
+
+SELECT is(get_category('delivery=>yes, amenity=>cafe'::hstore, 'IE'), 'eat', 'get_category delivery=>yes, amenity=>cafe for IE should be eat');
+
+SELECT is(get_subcategory('delivery=>yes, amenity=>cafe'::hstore, 'IE'), 'cafe', 'get_subcategory delivery=>yes, amenity=>cafe for IE should be cafe');
+
 SELECT is(get_category('delivery=>only, amenity=>cafe'::hstore, 'DE'), 'eat', 'get_category delivery=>only, amenity=>cafe for DE should be eat');
 
 SELECT is(get_subcategory('delivery=>only, amenity=>cafe'::hstore, 'DE'), 'cafe', 'get_subcategory delivery=>only, amenity=>cafe for DE should be cafe');
@@ -3165,6 +3693,14 @@ SELECT is(get_subcategory('delivery=>only, amenity=>cafe'::hstore, 'CD'), 'cafe'
 SELECT is(get_category('delivery=>only, amenity=>cafe'::hstore, 'IT'), 'eat', 'get_category delivery=>only, amenity=>cafe for IT should be eat');
 
 SELECT is(get_subcategory('delivery=>only, amenity=>cafe'::hstore, 'IT'), 'cafe', 'get_subcategory delivery=>only, amenity=>cafe for IT should be cafe');
+
+SELECT is(get_category('delivery=>only, amenity=>cafe'::hstore, 'GB'), 'eat', 'get_category delivery=>only, amenity=>cafe for GB should be eat');
+
+SELECT is(get_subcategory('delivery=>only, amenity=>cafe'::hstore, 'GB'), 'cafe', 'get_subcategory delivery=>only, amenity=>cafe for GB should be cafe');
+
+SELECT is(get_category('delivery=>only, amenity=>cafe'::hstore, 'IE'), 'eat', 'get_category delivery=>only, amenity=>cafe for IE should be eat');
+
+SELECT is(get_subcategory('delivery=>only, amenity=>cafe'::hstore, 'IE'), 'cafe', 'get_subcategory delivery=>only, amenity=>cafe for IE should be cafe');
 
 SELECT is(get_category('delivery=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'eat', 'get_category delivery=>yes, amenity=>vending_machine, vending=>coffee for DE should be eat');
 
@@ -3210,6 +3746,14 @@ SELECT is(get_category('delivery=>yes, amenity=>vending_machine, vending=>coffee
 
 SELECT is(get_subcategory('delivery=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'cafe', 'get_subcategory delivery=>yes, amenity=>vending_machine, vending=>coffee for IT should be cafe');
 
+SELECT is(get_category('delivery=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'eat', 'get_category delivery=>yes, amenity=>vending_machine, vending=>coffee for GB should be eat');
+
+SELECT is(get_subcategory('delivery=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'cafe', 'get_subcategory delivery=>yes, amenity=>vending_machine, vending=>coffee for GB should be cafe');
+
+SELECT is(get_category('delivery=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'eat', 'get_category delivery=>yes, amenity=>vending_machine, vending=>coffee for IE should be eat');
+
+SELECT is(get_subcategory('delivery=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'cafe', 'get_subcategory delivery=>yes, amenity=>vending_machine, vending=>coffee for IE should be cafe');
+
 SELECT is(get_category('delivery=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'eat', 'get_category delivery=>only, amenity=>vending_machine, vending=>coffee for DE should be eat');
 
 SELECT is(get_subcategory('delivery=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'cafe', 'get_subcategory delivery=>only, amenity=>vending_machine, vending=>coffee for DE should be cafe');
@@ -3253,6 +3797,14 @@ SELECT is(get_subcategory('delivery=>only, amenity=>vending_machine, vending=>co
 SELECT is(get_category('delivery=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'eat', 'get_category delivery=>only, amenity=>vending_machine, vending=>coffee for IT should be eat');
 
 SELECT is(get_subcategory('delivery=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'cafe', 'get_subcategory delivery=>only, amenity=>vending_machine, vending=>coffee for IT should be cafe');
+
+SELECT is(get_category('delivery=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'eat', 'get_category delivery=>only, amenity=>vending_machine, vending=>coffee for GB should be eat');
+
+SELECT is(get_subcategory('delivery=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'cafe', 'get_subcategory delivery=>only, amenity=>vending_machine, vending=>coffee for GB should be cafe');
+
+SELECT is(get_category('delivery=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'eat', 'get_category delivery=>only, amenity=>vending_machine, vending=>coffee for IE should be eat');
+
+SELECT is(get_subcategory('delivery=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'cafe', 'get_subcategory delivery=>only, amenity=>vending_machine, vending=>coffee for IE should be cafe');
 
 SELECT is(get_category('takeaway=>yes, amenity=>cafe'::hstore, 'DE'), 'eat', 'get_category takeaway=>yes, amenity=>cafe for DE should be eat');
 
@@ -3298,6 +3850,14 @@ SELECT is(get_category('takeaway=>yes, amenity=>cafe'::hstore, 'IT'), 'eat', 'ge
 
 SELECT is(get_subcategory('takeaway=>yes, amenity=>cafe'::hstore, 'IT'), 'cafe', 'get_subcategory takeaway=>yes, amenity=>cafe for IT should be cafe');
 
+SELECT is(get_category('takeaway=>yes, amenity=>cafe'::hstore, 'GB'), 'eat', 'get_category takeaway=>yes, amenity=>cafe for GB should be eat');
+
+SELECT is(get_subcategory('takeaway=>yes, amenity=>cafe'::hstore, 'GB'), 'cafe', 'get_subcategory takeaway=>yes, amenity=>cafe for GB should be cafe');
+
+SELECT is(get_category('takeaway=>yes, amenity=>cafe'::hstore, 'IE'), 'eat', 'get_category takeaway=>yes, amenity=>cafe for IE should be eat');
+
+SELECT is(get_subcategory('takeaway=>yes, amenity=>cafe'::hstore, 'IE'), 'cafe', 'get_subcategory takeaway=>yes, amenity=>cafe for IE should be cafe');
+
 SELECT is(get_category('takeaway=>only, amenity=>cafe'::hstore, 'DE'), 'eat', 'get_category takeaway=>only, amenity=>cafe for DE should be eat');
 
 SELECT is(get_subcategory('takeaway=>only, amenity=>cafe'::hstore, 'DE'), 'cafe', 'get_subcategory takeaway=>only, amenity=>cafe for DE should be cafe');
@@ -3341,6 +3901,14 @@ SELECT is(get_subcategory('takeaway=>only, amenity=>cafe'::hstore, 'CD'), 'cafe'
 SELECT is(get_category('takeaway=>only, amenity=>cafe'::hstore, 'IT'), 'eat', 'get_category takeaway=>only, amenity=>cafe for IT should be eat');
 
 SELECT is(get_subcategory('takeaway=>only, amenity=>cafe'::hstore, 'IT'), 'cafe', 'get_subcategory takeaway=>only, amenity=>cafe for IT should be cafe');
+
+SELECT is(get_category('takeaway=>only, amenity=>cafe'::hstore, 'GB'), 'eat', 'get_category takeaway=>only, amenity=>cafe for GB should be eat');
+
+SELECT is(get_subcategory('takeaway=>only, amenity=>cafe'::hstore, 'GB'), 'cafe', 'get_subcategory takeaway=>only, amenity=>cafe for GB should be cafe');
+
+SELECT is(get_category('takeaway=>only, amenity=>cafe'::hstore, 'IE'), 'eat', 'get_category takeaway=>only, amenity=>cafe for IE should be eat');
+
+SELECT is(get_subcategory('takeaway=>only, amenity=>cafe'::hstore, 'IE'), 'cafe', 'get_subcategory takeaway=>only, amenity=>cafe for IE should be cafe');
 
 SELECT is(get_category('takeaway=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'eat', 'get_category takeaway=>yes, amenity=>vending_machine, vending=>coffee for DE should be eat');
 
@@ -3386,6 +3954,14 @@ SELECT is(get_category('takeaway=>yes, amenity=>vending_machine, vending=>coffee
 
 SELECT is(get_subcategory('takeaway=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'cafe', 'get_subcategory takeaway=>yes, amenity=>vending_machine, vending=>coffee for IT should be cafe');
 
+SELECT is(get_category('takeaway=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'eat', 'get_category takeaway=>yes, amenity=>vending_machine, vending=>coffee for GB should be eat');
+
+SELECT is(get_subcategory('takeaway=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'cafe', 'get_subcategory takeaway=>yes, amenity=>vending_machine, vending=>coffee for GB should be cafe');
+
+SELECT is(get_category('takeaway=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'eat', 'get_category takeaway=>yes, amenity=>vending_machine, vending=>coffee for IE should be eat');
+
+SELECT is(get_subcategory('takeaway=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'cafe', 'get_subcategory takeaway=>yes, amenity=>vending_machine, vending=>coffee for IE should be cafe');
+
 SELECT is(get_category('takeaway=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'eat', 'get_category takeaway=>only, amenity=>vending_machine, vending=>coffee for DE should be eat');
 
 SELECT is(get_subcategory('takeaway=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'cafe', 'get_subcategory takeaway=>only, amenity=>vending_machine, vending=>coffee for DE should be cafe');
@@ -3429,6 +4005,14 @@ SELECT is(get_subcategory('takeaway=>only, amenity=>vending_machine, vending=>co
 SELECT is(get_category('takeaway=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'eat', 'get_category takeaway=>only, amenity=>vending_machine, vending=>coffee for IT should be eat');
 
 SELECT is(get_subcategory('takeaway=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'cafe', 'get_subcategory takeaway=>only, amenity=>vending_machine, vending=>coffee for IT should be cafe');
+
+SELECT is(get_category('takeaway=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'eat', 'get_category takeaway=>only, amenity=>vending_machine, vending=>coffee for GB should be eat');
+
+SELECT is(get_subcategory('takeaway=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'cafe', 'get_subcategory takeaway=>only, amenity=>vending_machine, vending=>coffee for GB should be cafe');
+
+SELECT is(get_category('takeaway=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'eat', 'get_category takeaway=>only, amenity=>vending_machine, vending=>coffee for IE should be eat');
+
+SELECT is(get_subcategory('takeaway=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'cafe', 'get_subcategory takeaway=>only, amenity=>vending_machine, vending=>coffee for IE should be cafe');
 
 SELECT is(get_category('delivery:covid19=>yes, amenity=>cafe'::hstore, 'DE'), 'eat', 'get_category delivery:covid19=>yes, amenity=>cafe for DE should be eat');
 
@@ -3474,6 +4058,14 @@ SELECT is(get_category('delivery:covid19=>yes, amenity=>cafe'::hstore, 'IT'), 'e
 
 SELECT is(get_subcategory('delivery:covid19=>yes, amenity=>cafe'::hstore, 'IT'), 'cafe', 'get_subcategory delivery:covid19=>yes, amenity=>cafe for IT should be cafe');
 
+SELECT is(get_category('delivery:covid19=>yes, amenity=>cafe'::hstore, 'GB'), 'eat', 'get_category delivery:covid19=>yes, amenity=>cafe for GB should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>yes, amenity=>cafe'::hstore, 'GB'), 'cafe', 'get_subcategory delivery:covid19=>yes, amenity=>cafe for GB should be cafe');
+
+SELECT is(get_category('delivery:covid19=>yes, amenity=>cafe'::hstore, 'IE'), 'eat', 'get_category delivery:covid19=>yes, amenity=>cafe for IE should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>yes, amenity=>cafe'::hstore, 'IE'), 'cafe', 'get_subcategory delivery:covid19=>yes, amenity=>cafe for IE should be cafe');
+
 SELECT is(get_category('delivery:covid19=>only, amenity=>cafe'::hstore, 'DE'), 'eat', 'get_category delivery:covid19=>only, amenity=>cafe for DE should be eat');
 
 SELECT is(get_subcategory('delivery:covid19=>only, amenity=>cafe'::hstore, 'DE'), 'cafe', 'get_subcategory delivery:covid19=>only, amenity=>cafe for DE should be cafe');
@@ -3517,6 +4109,14 @@ SELECT is(get_subcategory('delivery:covid19=>only, amenity=>cafe'::hstore, 'CD')
 SELECT is(get_category('delivery:covid19=>only, amenity=>cafe'::hstore, 'IT'), 'eat', 'get_category delivery:covid19=>only, amenity=>cafe for IT should be eat');
 
 SELECT is(get_subcategory('delivery:covid19=>only, amenity=>cafe'::hstore, 'IT'), 'cafe', 'get_subcategory delivery:covid19=>only, amenity=>cafe for IT should be cafe');
+
+SELECT is(get_category('delivery:covid19=>only, amenity=>cafe'::hstore, 'GB'), 'eat', 'get_category delivery:covid19=>only, amenity=>cafe for GB should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>only, amenity=>cafe'::hstore, 'GB'), 'cafe', 'get_subcategory delivery:covid19=>only, amenity=>cafe for GB should be cafe');
+
+SELECT is(get_category('delivery:covid19=>only, amenity=>cafe'::hstore, 'IE'), 'eat', 'get_category delivery:covid19=>only, amenity=>cafe for IE should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>only, amenity=>cafe'::hstore, 'IE'), 'cafe', 'get_subcategory delivery:covid19=>only, amenity=>cafe for IE should be cafe');
 
 SELECT is(get_category('delivery:covid19=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'eat', 'get_category delivery:covid19=>yes, amenity=>vending_machine, vending=>coffee for DE should be eat');
 
@@ -3562,6 +4162,14 @@ SELECT is(get_category('delivery:covid19=>yes, amenity=>vending_machine, vending
 
 SELECT is(get_subcategory('delivery:covid19=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'cafe', 'get_subcategory delivery:covid19=>yes, amenity=>vending_machine, vending=>coffee for IT should be cafe');
 
+SELECT is(get_category('delivery:covid19=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'eat', 'get_category delivery:covid19=>yes, amenity=>vending_machine, vending=>coffee for GB should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'cafe', 'get_subcategory delivery:covid19=>yes, amenity=>vending_machine, vending=>coffee for GB should be cafe');
+
+SELECT is(get_category('delivery:covid19=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'eat', 'get_category delivery:covid19=>yes, amenity=>vending_machine, vending=>coffee for IE should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'cafe', 'get_subcategory delivery:covid19=>yes, amenity=>vending_machine, vending=>coffee for IE should be cafe');
+
 SELECT is(get_category('delivery:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'eat', 'get_category delivery:covid19=>only, amenity=>vending_machine, vending=>coffee for DE should be eat');
 
 SELECT is(get_subcategory('delivery:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'cafe', 'get_subcategory delivery:covid19=>only, amenity=>vending_machine, vending=>coffee for DE should be cafe');
@@ -3605,6 +4213,14 @@ SELECT is(get_subcategory('delivery:covid19=>only, amenity=>vending_machine, ven
 SELECT is(get_category('delivery:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'eat', 'get_category delivery:covid19=>only, amenity=>vending_machine, vending=>coffee for IT should be eat');
 
 SELECT is(get_subcategory('delivery:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'cafe', 'get_subcategory delivery:covid19=>only, amenity=>vending_machine, vending=>coffee for IT should be cafe');
+
+SELECT is(get_category('delivery:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'eat', 'get_category delivery:covid19=>only, amenity=>vending_machine, vending=>coffee for GB should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'cafe', 'get_subcategory delivery:covid19=>only, amenity=>vending_machine, vending=>coffee for GB should be cafe');
+
+SELECT is(get_category('delivery:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'eat', 'get_category delivery:covid19=>only, amenity=>vending_machine, vending=>coffee for IE should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'cafe', 'get_subcategory delivery:covid19=>only, amenity=>vending_machine, vending=>coffee for IE should be cafe');
 
 SELECT is(get_category('takeaway:covid19=>yes, amenity=>cafe'::hstore, 'DE'), 'eat', 'get_category takeaway:covid19=>yes, amenity=>cafe for DE should be eat');
 
@@ -3650,6 +4266,14 @@ SELECT is(get_category('takeaway:covid19=>yes, amenity=>cafe'::hstore, 'IT'), 'e
 
 SELECT is(get_subcategory('takeaway:covid19=>yes, amenity=>cafe'::hstore, 'IT'), 'cafe', 'get_subcategory takeaway:covid19=>yes, amenity=>cafe for IT should be cafe');
 
+SELECT is(get_category('takeaway:covid19=>yes, amenity=>cafe'::hstore, 'GB'), 'eat', 'get_category takeaway:covid19=>yes, amenity=>cafe for GB should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>yes, amenity=>cafe'::hstore, 'GB'), 'cafe', 'get_subcategory takeaway:covid19=>yes, amenity=>cafe for GB should be cafe');
+
+SELECT is(get_category('takeaway:covid19=>yes, amenity=>cafe'::hstore, 'IE'), 'eat', 'get_category takeaway:covid19=>yes, amenity=>cafe for IE should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>yes, amenity=>cafe'::hstore, 'IE'), 'cafe', 'get_subcategory takeaway:covid19=>yes, amenity=>cafe for IE should be cafe');
+
 SELECT is(get_category('takeaway:covid19=>only, amenity=>cafe'::hstore, 'DE'), 'eat', 'get_category takeaway:covid19=>only, amenity=>cafe for DE should be eat');
 
 SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>cafe'::hstore, 'DE'), 'cafe', 'get_subcategory takeaway:covid19=>only, amenity=>cafe for DE should be cafe');
@@ -3693,6 +4317,14 @@ SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>cafe'::hstore, 'CD')
 SELECT is(get_category('takeaway:covid19=>only, amenity=>cafe'::hstore, 'IT'), 'eat', 'get_category takeaway:covid19=>only, amenity=>cafe for IT should be eat');
 
 SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>cafe'::hstore, 'IT'), 'cafe', 'get_subcategory takeaway:covid19=>only, amenity=>cafe for IT should be cafe');
+
+SELECT is(get_category('takeaway:covid19=>only, amenity=>cafe'::hstore, 'GB'), 'eat', 'get_category takeaway:covid19=>only, amenity=>cafe for GB should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>cafe'::hstore, 'GB'), 'cafe', 'get_subcategory takeaway:covid19=>only, amenity=>cafe for GB should be cafe');
+
+SELECT is(get_category('takeaway:covid19=>only, amenity=>cafe'::hstore, 'IE'), 'eat', 'get_category takeaway:covid19=>only, amenity=>cafe for IE should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>cafe'::hstore, 'IE'), 'cafe', 'get_subcategory takeaway:covid19=>only, amenity=>cafe for IE should be cafe');
 
 SELECT is(get_category('takeaway:covid19=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'eat', 'get_category takeaway:covid19=>yes, amenity=>vending_machine, vending=>coffee for DE should be eat');
 
@@ -3738,6 +4370,14 @@ SELECT is(get_category('takeaway:covid19=>yes, amenity=>vending_machine, vending
 
 SELECT is(get_subcategory('takeaway:covid19=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'cafe', 'get_subcategory takeaway:covid19=>yes, amenity=>vending_machine, vending=>coffee for IT should be cafe');
 
+SELECT is(get_category('takeaway:covid19=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'eat', 'get_category takeaway:covid19=>yes, amenity=>vending_machine, vending=>coffee for GB should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'cafe', 'get_subcategory takeaway:covid19=>yes, amenity=>vending_machine, vending=>coffee for GB should be cafe');
+
+SELECT is(get_category('takeaway:covid19=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'eat', 'get_category takeaway:covid19=>yes, amenity=>vending_machine, vending=>coffee for IE should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>yes, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'cafe', 'get_subcategory takeaway:covid19=>yes, amenity=>vending_machine, vending=>coffee for IE should be cafe');
+
 SELECT is(get_category('takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'eat', 'get_category takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee for DE should be eat');
 
 SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'DE'), 'cafe', 'get_subcategory takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee for DE should be cafe');
@@ -3781,6 +4421,14 @@ SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>vending_machine, ven
 SELECT is(get_category('takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'eat', 'get_category takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee for IT should be eat');
 
 SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IT'), 'cafe', 'get_subcategory takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee for IT should be cafe');
+
+SELECT is(get_category('takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'eat', 'get_category takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee for GB should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'GB'), 'cafe', 'get_subcategory takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee for GB should be cafe');
+
+SELECT is(get_category('takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'eat', 'get_category takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee for IE should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee'::hstore, 'IE'), 'cafe', 'get_subcategory takeaway:covid19=>only, amenity=>vending_machine, vending=>coffee for IE should be cafe');
 
 SELECT is(get_category('opening_hours:covid19=>*, amenity=>bar'::hstore, 'DE'), 'eat', 'get_category opening_hours:covid19=>*, amenity=>bar for DE should be eat');
 
@@ -3826,6 +4474,14 @@ SELECT is(get_category('opening_hours:covid19=>*, amenity=>bar'::hstore, 'IT'), 
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>bar'::hstore, 'IT'), 'bar', 'get_subcategory opening_hours:covid19=>*, amenity=>bar for IT should be bar');
 
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>bar'::hstore, 'GB'), 'eat', 'get_category opening_hours:covid19=>*, amenity=>bar for GB should be eat');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>bar'::hstore, 'GB'), 'bar', 'get_subcategory opening_hours:covid19=>*, amenity=>bar for GB should be bar');
+
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>bar'::hstore, 'IE'), 'eat', 'get_category opening_hours:covid19=>*, amenity=>bar for IE should be eat');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>bar'::hstore, 'IE'), 'bar', 'get_subcategory opening_hours:covid19=>*, amenity=>bar for IE should be bar');
+
 SELECT is(get_category('opening_hours:covid19=>*, amenity=>pub'::hstore, 'DE'), 'eat', 'get_category opening_hours:covid19=>*, amenity=>pub for DE should be eat');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>pub'::hstore, 'DE'), 'bar', 'get_subcategory opening_hours:covid19=>*, amenity=>pub for DE should be bar');
@@ -3869,6 +4525,14 @@ SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>pub'::hstore, 'CD'
 SELECT is(get_category('opening_hours:covid19=>*, amenity=>pub'::hstore, 'IT'), 'eat', 'get_category opening_hours:covid19=>*, amenity=>pub for IT should be eat');
 
 SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>pub'::hstore, 'IT'), 'bar', 'get_subcategory opening_hours:covid19=>*, amenity=>pub for IT should be bar');
+
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>pub'::hstore, 'GB'), 'eat', 'get_category opening_hours:covid19=>*, amenity=>pub for GB should be eat');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>pub'::hstore, 'GB'), 'bar', 'get_subcategory opening_hours:covid19=>*, amenity=>pub for GB should be bar');
+
+SELECT is(get_category('opening_hours:covid19=>*, amenity=>pub'::hstore, 'IE'), 'eat', 'get_category opening_hours:covid19=>*, amenity=>pub for IE should be eat');
+
+SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>pub'::hstore, 'IE'), 'bar', 'get_subcategory opening_hours:covid19=>*, amenity=>pub for IE should be bar');
 
 SELECT is(get_category('delivery=>yes, amenity=>bar'::hstore, 'DE'), 'eat', 'get_category delivery=>yes, amenity=>bar for DE should be eat');
 
@@ -3914,6 +4578,14 @@ SELECT is(get_category('delivery=>yes, amenity=>bar'::hstore, 'IT'), 'eat', 'get
 
 SELECT is(get_subcategory('delivery=>yes, amenity=>bar'::hstore, 'IT'), 'bar', 'get_subcategory delivery=>yes, amenity=>bar for IT should be bar');
 
+SELECT is(get_category('delivery=>yes, amenity=>bar'::hstore, 'GB'), 'eat', 'get_category delivery=>yes, amenity=>bar for GB should be eat');
+
+SELECT is(get_subcategory('delivery=>yes, amenity=>bar'::hstore, 'GB'), 'bar', 'get_subcategory delivery=>yes, amenity=>bar for GB should be bar');
+
+SELECT is(get_category('delivery=>yes, amenity=>bar'::hstore, 'IE'), 'eat', 'get_category delivery=>yes, amenity=>bar for IE should be eat');
+
+SELECT is(get_subcategory('delivery=>yes, amenity=>bar'::hstore, 'IE'), 'bar', 'get_subcategory delivery=>yes, amenity=>bar for IE should be bar');
+
 SELECT is(get_category('delivery=>only, amenity=>bar'::hstore, 'DE'), 'eat', 'get_category delivery=>only, amenity=>bar for DE should be eat');
 
 SELECT is(get_subcategory('delivery=>only, amenity=>bar'::hstore, 'DE'), 'bar', 'get_subcategory delivery=>only, amenity=>bar for DE should be bar');
@@ -3957,6 +4629,14 @@ SELECT is(get_subcategory('delivery=>only, amenity=>bar'::hstore, 'CD'), 'bar', 
 SELECT is(get_category('delivery=>only, amenity=>bar'::hstore, 'IT'), 'eat', 'get_category delivery=>only, amenity=>bar for IT should be eat');
 
 SELECT is(get_subcategory('delivery=>only, amenity=>bar'::hstore, 'IT'), 'bar', 'get_subcategory delivery=>only, amenity=>bar for IT should be bar');
+
+SELECT is(get_category('delivery=>only, amenity=>bar'::hstore, 'GB'), 'eat', 'get_category delivery=>only, amenity=>bar for GB should be eat');
+
+SELECT is(get_subcategory('delivery=>only, amenity=>bar'::hstore, 'GB'), 'bar', 'get_subcategory delivery=>only, amenity=>bar for GB should be bar');
+
+SELECT is(get_category('delivery=>only, amenity=>bar'::hstore, 'IE'), 'eat', 'get_category delivery=>only, amenity=>bar for IE should be eat');
+
+SELECT is(get_subcategory('delivery=>only, amenity=>bar'::hstore, 'IE'), 'bar', 'get_subcategory delivery=>only, amenity=>bar for IE should be bar');
 
 SELECT is(get_category('delivery=>yes, amenity=>pub'::hstore, 'DE'), 'eat', 'get_category delivery=>yes, amenity=>pub for DE should be eat');
 
@@ -4002,6 +4682,14 @@ SELECT is(get_category('delivery=>yes, amenity=>pub'::hstore, 'IT'), 'eat', 'get
 
 SELECT is(get_subcategory('delivery=>yes, amenity=>pub'::hstore, 'IT'), 'bar', 'get_subcategory delivery=>yes, amenity=>pub for IT should be bar');
 
+SELECT is(get_category('delivery=>yes, amenity=>pub'::hstore, 'GB'), 'eat', 'get_category delivery=>yes, amenity=>pub for GB should be eat');
+
+SELECT is(get_subcategory('delivery=>yes, amenity=>pub'::hstore, 'GB'), 'bar', 'get_subcategory delivery=>yes, amenity=>pub for GB should be bar');
+
+SELECT is(get_category('delivery=>yes, amenity=>pub'::hstore, 'IE'), 'eat', 'get_category delivery=>yes, amenity=>pub for IE should be eat');
+
+SELECT is(get_subcategory('delivery=>yes, amenity=>pub'::hstore, 'IE'), 'bar', 'get_subcategory delivery=>yes, amenity=>pub for IE should be bar');
+
 SELECT is(get_category('delivery=>only, amenity=>pub'::hstore, 'DE'), 'eat', 'get_category delivery=>only, amenity=>pub for DE should be eat');
 
 SELECT is(get_subcategory('delivery=>only, amenity=>pub'::hstore, 'DE'), 'bar', 'get_subcategory delivery=>only, amenity=>pub for DE should be bar');
@@ -4045,6 +4733,14 @@ SELECT is(get_subcategory('delivery=>only, amenity=>pub'::hstore, 'CD'), 'bar', 
 SELECT is(get_category('delivery=>only, amenity=>pub'::hstore, 'IT'), 'eat', 'get_category delivery=>only, amenity=>pub for IT should be eat');
 
 SELECT is(get_subcategory('delivery=>only, amenity=>pub'::hstore, 'IT'), 'bar', 'get_subcategory delivery=>only, amenity=>pub for IT should be bar');
+
+SELECT is(get_category('delivery=>only, amenity=>pub'::hstore, 'GB'), 'eat', 'get_category delivery=>only, amenity=>pub for GB should be eat');
+
+SELECT is(get_subcategory('delivery=>only, amenity=>pub'::hstore, 'GB'), 'bar', 'get_subcategory delivery=>only, amenity=>pub for GB should be bar');
+
+SELECT is(get_category('delivery=>only, amenity=>pub'::hstore, 'IE'), 'eat', 'get_category delivery=>only, amenity=>pub for IE should be eat');
+
+SELECT is(get_subcategory('delivery=>only, amenity=>pub'::hstore, 'IE'), 'bar', 'get_subcategory delivery=>only, amenity=>pub for IE should be bar');
 
 SELECT is(get_category('takeaway=>yes, amenity=>bar'::hstore, 'DE'), 'eat', 'get_category takeaway=>yes, amenity=>bar for DE should be eat');
 
@@ -4090,6 +4786,14 @@ SELECT is(get_category('takeaway=>yes, amenity=>bar'::hstore, 'IT'), 'eat', 'get
 
 SELECT is(get_subcategory('takeaway=>yes, amenity=>bar'::hstore, 'IT'), 'bar', 'get_subcategory takeaway=>yes, amenity=>bar for IT should be bar');
 
+SELECT is(get_category('takeaway=>yes, amenity=>bar'::hstore, 'GB'), 'eat', 'get_category takeaway=>yes, amenity=>bar for GB should be eat');
+
+SELECT is(get_subcategory('takeaway=>yes, amenity=>bar'::hstore, 'GB'), 'bar', 'get_subcategory takeaway=>yes, amenity=>bar for GB should be bar');
+
+SELECT is(get_category('takeaway=>yes, amenity=>bar'::hstore, 'IE'), 'eat', 'get_category takeaway=>yes, amenity=>bar for IE should be eat');
+
+SELECT is(get_subcategory('takeaway=>yes, amenity=>bar'::hstore, 'IE'), 'bar', 'get_subcategory takeaway=>yes, amenity=>bar for IE should be bar');
+
 SELECT is(get_category('takeaway=>only, amenity=>bar'::hstore, 'DE'), 'eat', 'get_category takeaway=>only, amenity=>bar for DE should be eat');
 
 SELECT is(get_subcategory('takeaway=>only, amenity=>bar'::hstore, 'DE'), 'bar', 'get_subcategory takeaway=>only, amenity=>bar for DE should be bar');
@@ -4133,6 +4837,14 @@ SELECT is(get_subcategory('takeaway=>only, amenity=>bar'::hstore, 'CD'), 'bar', 
 SELECT is(get_category('takeaway=>only, amenity=>bar'::hstore, 'IT'), 'eat', 'get_category takeaway=>only, amenity=>bar for IT should be eat');
 
 SELECT is(get_subcategory('takeaway=>only, amenity=>bar'::hstore, 'IT'), 'bar', 'get_subcategory takeaway=>only, amenity=>bar for IT should be bar');
+
+SELECT is(get_category('takeaway=>only, amenity=>bar'::hstore, 'GB'), 'eat', 'get_category takeaway=>only, amenity=>bar for GB should be eat');
+
+SELECT is(get_subcategory('takeaway=>only, amenity=>bar'::hstore, 'GB'), 'bar', 'get_subcategory takeaway=>only, amenity=>bar for GB should be bar');
+
+SELECT is(get_category('takeaway=>only, amenity=>bar'::hstore, 'IE'), 'eat', 'get_category takeaway=>only, amenity=>bar for IE should be eat');
+
+SELECT is(get_subcategory('takeaway=>only, amenity=>bar'::hstore, 'IE'), 'bar', 'get_subcategory takeaway=>only, amenity=>bar for IE should be bar');
 
 SELECT is(get_category('takeaway=>yes, amenity=>pub'::hstore, 'DE'), 'eat', 'get_category takeaway=>yes, amenity=>pub for DE should be eat');
 
@@ -4178,6 +4890,14 @@ SELECT is(get_category('takeaway=>yes, amenity=>pub'::hstore, 'IT'), 'eat', 'get
 
 SELECT is(get_subcategory('takeaway=>yes, amenity=>pub'::hstore, 'IT'), 'bar', 'get_subcategory takeaway=>yes, amenity=>pub for IT should be bar');
 
+SELECT is(get_category('takeaway=>yes, amenity=>pub'::hstore, 'GB'), 'eat', 'get_category takeaway=>yes, amenity=>pub for GB should be eat');
+
+SELECT is(get_subcategory('takeaway=>yes, amenity=>pub'::hstore, 'GB'), 'bar', 'get_subcategory takeaway=>yes, amenity=>pub for GB should be bar');
+
+SELECT is(get_category('takeaway=>yes, amenity=>pub'::hstore, 'IE'), 'eat', 'get_category takeaway=>yes, amenity=>pub for IE should be eat');
+
+SELECT is(get_subcategory('takeaway=>yes, amenity=>pub'::hstore, 'IE'), 'bar', 'get_subcategory takeaway=>yes, amenity=>pub for IE should be bar');
+
 SELECT is(get_category('takeaway=>only, amenity=>pub'::hstore, 'DE'), 'eat', 'get_category takeaway=>only, amenity=>pub for DE should be eat');
 
 SELECT is(get_subcategory('takeaway=>only, amenity=>pub'::hstore, 'DE'), 'bar', 'get_subcategory takeaway=>only, amenity=>pub for DE should be bar');
@@ -4221,6 +4941,14 @@ SELECT is(get_subcategory('takeaway=>only, amenity=>pub'::hstore, 'CD'), 'bar', 
 SELECT is(get_category('takeaway=>only, amenity=>pub'::hstore, 'IT'), 'eat', 'get_category takeaway=>only, amenity=>pub for IT should be eat');
 
 SELECT is(get_subcategory('takeaway=>only, amenity=>pub'::hstore, 'IT'), 'bar', 'get_subcategory takeaway=>only, amenity=>pub for IT should be bar');
+
+SELECT is(get_category('takeaway=>only, amenity=>pub'::hstore, 'GB'), 'eat', 'get_category takeaway=>only, amenity=>pub for GB should be eat');
+
+SELECT is(get_subcategory('takeaway=>only, amenity=>pub'::hstore, 'GB'), 'bar', 'get_subcategory takeaway=>only, amenity=>pub for GB should be bar');
+
+SELECT is(get_category('takeaway=>only, amenity=>pub'::hstore, 'IE'), 'eat', 'get_category takeaway=>only, amenity=>pub for IE should be eat');
+
+SELECT is(get_subcategory('takeaway=>only, amenity=>pub'::hstore, 'IE'), 'bar', 'get_subcategory takeaway=>only, amenity=>pub for IE should be bar');
 
 SELECT is(get_category('delivery:covid19=>yes, amenity=>bar'::hstore, 'DE'), 'eat', 'get_category delivery:covid19=>yes, amenity=>bar for DE should be eat');
 
@@ -4266,6 +4994,14 @@ SELECT is(get_category('delivery:covid19=>yes, amenity=>bar'::hstore, 'IT'), 'ea
 
 SELECT is(get_subcategory('delivery:covid19=>yes, amenity=>bar'::hstore, 'IT'), 'bar', 'get_subcategory delivery:covid19=>yes, amenity=>bar for IT should be bar');
 
+SELECT is(get_category('delivery:covid19=>yes, amenity=>bar'::hstore, 'GB'), 'eat', 'get_category delivery:covid19=>yes, amenity=>bar for GB should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>yes, amenity=>bar'::hstore, 'GB'), 'bar', 'get_subcategory delivery:covid19=>yes, amenity=>bar for GB should be bar');
+
+SELECT is(get_category('delivery:covid19=>yes, amenity=>bar'::hstore, 'IE'), 'eat', 'get_category delivery:covid19=>yes, amenity=>bar for IE should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>yes, amenity=>bar'::hstore, 'IE'), 'bar', 'get_subcategory delivery:covid19=>yes, amenity=>bar for IE should be bar');
+
 SELECT is(get_category('delivery:covid19=>only, amenity=>bar'::hstore, 'DE'), 'eat', 'get_category delivery:covid19=>only, amenity=>bar for DE should be eat');
 
 SELECT is(get_subcategory('delivery:covid19=>only, amenity=>bar'::hstore, 'DE'), 'bar', 'get_subcategory delivery:covid19=>only, amenity=>bar for DE should be bar');
@@ -4309,6 +5045,14 @@ SELECT is(get_subcategory('delivery:covid19=>only, amenity=>bar'::hstore, 'CD'),
 SELECT is(get_category('delivery:covid19=>only, amenity=>bar'::hstore, 'IT'), 'eat', 'get_category delivery:covid19=>only, amenity=>bar for IT should be eat');
 
 SELECT is(get_subcategory('delivery:covid19=>only, amenity=>bar'::hstore, 'IT'), 'bar', 'get_subcategory delivery:covid19=>only, amenity=>bar for IT should be bar');
+
+SELECT is(get_category('delivery:covid19=>only, amenity=>bar'::hstore, 'GB'), 'eat', 'get_category delivery:covid19=>only, amenity=>bar for GB should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>only, amenity=>bar'::hstore, 'GB'), 'bar', 'get_subcategory delivery:covid19=>only, amenity=>bar for GB should be bar');
+
+SELECT is(get_category('delivery:covid19=>only, amenity=>bar'::hstore, 'IE'), 'eat', 'get_category delivery:covid19=>only, amenity=>bar for IE should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>only, amenity=>bar'::hstore, 'IE'), 'bar', 'get_subcategory delivery:covid19=>only, amenity=>bar for IE should be bar');
 
 SELECT is(get_category('delivery:covid19=>yes, amenity=>pub'::hstore, 'DE'), 'eat', 'get_category delivery:covid19=>yes, amenity=>pub for DE should be eat');
 
@@ -4354,6 +5098,14 @@ SELECT is(get_category('delivery:covid19=>yes, amenity=>pub'::hstore, 'IT'), 'ea
 
 SELECT is(get_subcategory('delivery:covid19=>yes, amenity=>pub'::hstore, 'IT'), 'bar', 'get_subcategory delivery:covid19=>yes, amenity=>pub for IT should be bar');
 
+SELECT is(get_category('delivery:covid19=>yes, amenity=>pub'::hstore, 'GB'), 'eat', 'get_category delivery:covid19=>yes, amenity=>pub for GB should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>yes, amenity=>pub'::hstore, 'GB'), 'bar', 'get_subcategory delivery:covid19=>yes, amenity=>pub for GB should be bar');
+
+SELECT is(get_category('delivery:covid19=>yes, amenity=>pub'::hstore, 'IE'), 'eat', 'get_category delivery:covid19=>yes, amenity=>pub for IE should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>yes, amenity=>pub'::hstore, 'IE'), 'bar', 'get_subcategory delivery:covid19=>yes, amenity=>pub for IE should be bar');
+
 SELECT is(get_category('delivery:covid19=>only, amenity=>pub'::hstore, 'DE'), 'eat', 'get_category delivery:covid19=>only, amenity=>pub for DE should be eat');
 
 SELECT is(get_subcategory('delivery:covid19=>only, amenity=>pub'::hstore, 'DE'), 'bar', 'get_subcategory delivery:covid19=>only, amenity=>pub for DE should be bar');
@@ -4397,6 +5149,14 @@ SELECT is(get_subcategory('delivery:covid19=>only, amenity=>pub'::hstore, 'CD'),
 SELECT is(get_category('delivery:covid19=>only, amenity=>pub'::hstore, 'IT'), 'eat', 'get_category delivery:covid19=>only, amenity=>pub for IT should be eat');
 
 SELECT is(get_subcategory('delivery:covid19=>only, amenity=>pub'::hstore, 'IT'), 'bar', 'get_subcategory delivery:covid19=>only, amenity=>pub for IT should be bar');
+
+SELECT is(get_category('delivery:covid19=>only, amenity=>pub'::hstore, 'GB'), 'eat', 'get_category delivery:covid19=>only, amenity=>pub for GB should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>only, amenity=>pub'::hstore, 'GB'), 'bar', 'get_subcategory delivery:covid19=>only, amenity=>pub for GB should be bar');
+
+SELECT is(get_category('delivery:covid19=>only, amenity=>pub'::hstore, 'IE'), 'eat', 'get_category delivery:covid19=>only, amenity=>pub for IE should be eat');
+
+SELECT is(get_subcategory('delivery:covid19=>only, amenity=>pub'::hstore, 'IE'), 'bar', 'get_subcategory delivery:covid19=>only, amenity=>pub for IE should be bar');
 
 SELECT is(get_category('takeaway:covid19=>yes, amenity=>bar'::hstore, 'DE'), 'eat', 'get_category takeaway:covid19=>yes, amenity=>bar for DE should be eat');
 
@@ -4442,6 +5202,14 @@ SELECT is(get_category('takeaway:covid19=>yes, amenity=>bar'::hstore, 'IT'), 'ea
 
 SELECT is(get_subcategory('takeaway:covid19=>yes, amenity=>bar'::hstore, 'IT'), 'bar', 'get_subcategory takeaway:covid19=>yes, amenity=>bar for IT should be bar');
 
+SELECT is(get_category('takeaway:covid19=>yes, amenity=>bar'::hstore, 'GB'), 'eat', 'get_category takeaway:covid19=>yes, amenity=>bar for GB should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>yes, amenity=>bar'::hstore, 'GB'), 'bar', 'get_subcategory takeaway:covid19=>yes, amenity=>bar for GB should be bar');
+
+SELECT is(get_category('takeaway:covid19=>yes, amenity=>bar'::hstore, 'IE'), 'eat', 'get_category takeaway:covid19=>yes, amenity=>bar for IE should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>yes, amenity=>bar'::hstore, 'IE'), 'bar', 'get_subcategory takeaway:covid19=>yes, amenity=>bar for IE should be bar');
+
 SELECT is(get_category('takeaway:covid19=>only, amenity=>bar'::hstore, 'DE'), 'eat', 'get_category takeaway:covid19=>only, amenity=>bar for DE should be eat');
 
 SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>bar'::hstore, 'DE'), 'bar', 'get_subcategory takeaway:covid19=>only, amenity=>bar for DE should be bar');
@@ -4485,6 +5253,14 @@ SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>bar'::hstore, 'CD'),
 SELECT is(get_category('takeaway:covid19=>only, amenity=>bar'::hstore, 'IT'), 'eat', 'get_category takeaway:covid19=>only, amenity=>bar for IT should be eat');
 
 SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>bar'::hstore, 'IT'), 'bar', 'get_subcategory takeaway:covid19=>only, amenity=>bar for IT should be bar');
+
+SELECT is(get_category('takeaway:covid19=>only, amenity=>bar'::hstore, 'GB'), 'eat', 'get_category takeaway:covid19=>only, amenity=>bar for GB should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>bar'::hstore, 'GB'), 'bar', 'get_subcategory takeaway:covid19=>only, amenity=>bar for GB should be bar');
+
+SELECT is(get_category('takeaway:covid19=>only, amenity=>bar'::hstore, 'IE'), 'eat', 'get_category takeaway:covid19=>only, amenity=>bar for IE should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>bar'::hstore, 'IE'), 'bar', 'get_subcategory takeaway:covid19=>only, amenity=>bar for IE should be bar');
 
 SELECT is(get_category('takeaway:covid19=>yes, amenity=>pub'::hstore, 'DE'), 'eat', 'get_category takeaway:covid19=>yes, amenity=>pub for DE should be eat');
 
@@ -4530,6 +5306,14 @@ SELECT is(get_category('takeaway:covid19=>yes, amenity=>pub'::hstore, 'IT'), 'ea
 
 SELECT is(get_subcategory('takeaway:covid19=>yes, amenity=>pub'::hstore, 'IT'), 'bar', 'get_subcategory takeaway:covid19=>yes, amenity=>pub for IT should be bar');
 
+SELECT is(get_category('takeaway:covid19=>yes, amenity=>pub'::hstore, 'GB'), 'eat', 'get_category takeaway:covid19=>yes, amenity=>pub for GB should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>yes, amenity=>pub'::hstore, 'GB'), 'bar', 'get_subcategory takeaway:covid19=>yes, amenity=>pub for GB should be bar');
+
+SELECT is(get_category('takeaway:covid19=>yes, amenity=>pub'::hstore, 'IE'), 'eat', 'get_category takeaway:covid19=>yes, amenity=>pub for IE should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>yes, amenity=>pub'::hstore, 'IE'), 'bar', 'get_subcategory takeaway:covid19=>yes, amenity=>pub for IE should be bar');
+
 SELECT is(get_category('takeaway:covid19=>only, amenity=>pub'::hstore, 'DE'), 'eat', 'get_category takeaway:covid19=>only, amenity=>pub for DE should be eat');
 
 SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>pub'::hstore, 'DE'), 'bar', 'get_subcategory takeaway:covid19=>only, amenity=>pub for DE should be bar');
@@ -4573,6 +5357,14 @@ SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>pub'::hstore, 'CD'),
 SELECT is(get_category('takeaway:covid19=>only, amenity=>pub'::hstore, 'IT'), 'eat', 'get_category takeaway:covid19=>only, amenity=>pub for IT should be eat');
 
 SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>pub'::hstore, 'IT'), 'bar', 'get_subcategory takeaway:covid19=>only, amenity=>pub for IT should be bar');
+
+SELECT is(get_category('takeaway:covid19=>only, amenity=>pub'::hstore, 'GB'), 'eat', 'get_category takeaway:covid19=>only, amenity=>pub for GB should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>pub'::hstore, 'GB'), 'bar', 'get_subcategory takeaway:covid19=>only, amenity=>pub for GB should be bar');
+
+SELECT is(get_category('takeaway:covid19=>only, amenity=>pub'::hstore, 'IE'), 'eat', 'get_category takeaway:covid19=>only, amenity=>pub for IE should be eat');
+
+SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>pub'::hstore, 'IE'), 'bar', 'get_subcategory takeaway:covid19=>only, amenity=>pub for IE should be bar');
 
 SELECT is(get_category('shop=>tobacco'::hstore, 'DE'), 'drugs', 'get_category shop=>tobacco for DE should be drugs');
 
@@ -4618,6 +5410,14 @@ SELECT is(get_category('shop=>tobacco'::hstore, 'IT'), 'drugs', 'get_category sh
 
 SELECT is(get_subcategory('shop=>tobacco'::hstore, 'IT'), 'tobacco', 'get_subcategory shop=>tobacco for IT should be tobacco');
 
+SELECT is(get_category('shop=>tobacco'::hstore, 'GB'), 'drugs', 'get_category shop=>tobacco for GB should be drugs');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'GB'), 'tobacco', 'get_subcategory shop=>tobacco for GB should be tobacco');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'IE'), 'drugs', 'get_category shop=>tobacco for IE should be drugs');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'IE'), 'tobacco', 'get_subcategory shop=>tobacco for IE should be tobacco');
+
 SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'DE'), 'drugs', 'get_category shop=>newsagent;tobacco for DE should be drugs');
 
 SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'DE'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for DE should be tobacco');
@@ -4661,6 +5461,14 @@ SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'CD'), 'tobacco', '
 SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'IT'), 'drugs', 'get_category shop=>newsagent;tobacco for IT should be drugs');
 
 SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'IT'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for IT should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'GB'), 'drugs', 'get_category shop=>newsagent;tobacco for GB should be drugs');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'GB'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for GB should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'IE'), 'drugs', 'get_category shop=>newsagent;tobacco for IE should be drugs');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'IE'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for IE should be tobacco');
 
 SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'DE'), 'drugs', 'get_category shop=>tobacco;newsagent for DE should be drugs');
 
@@ -4706,6 +5514,14 @@ SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'IT'), 'drugs', 'get_c
 
 SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'IT'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for IT should be tobacco');
 
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'GB'), 'drugs', 'get_category shop=>tobacco;newsagent for GB should be drugs');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'GB'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for GB should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'IE'), 'drugs', 'get_category shop=>tobacco;newsagent for IE should be drugs');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'IE'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for IE should be tobacco');
+
 SELECT is(get_category('tobacco=>yes'::hstore, 'DE'), 'drugs', 'get_category tobacco=>yes for DE should be drugs');
 
 SELECT is(get_subcategory('tobacco=>yes'::hstore, 'DE'), 'tobacco', 'get_subcategory tobacco=>yes for DE should be tobacco');
@@ -4749,6 +5565,14 @@ SELECT is(get_subcategory('tobacco=>yes'::hstore, 'CD'), 'tobacco', 'get_subcate
 SELECT is(get_category('tobacco=>yes'::hstore, 'IT'), 'drugs', 'get_category tobacco=>yes for IT should be drugs');
 
 SELECT is(get_subcategory('tobacco=>yes'::hstore, 'IT'), 'tobacco', 'get_subcategory tobacco=>yes for IT should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'GB'), 'drugs', 'get_category tobacco=>yes for GB should be drugs');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'GB'), 'tobacco', 'get_subcategory tobacco=>yes for GB should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'IE'), 'drugs', 'get_category tobacco=>yes for IE should be drugs');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'IE'), 'tobacco', 'get_subcategory tobacco=>yes for IE should be tobacco');
 
 SELECT is(get_category('tobacco=>only'::hstore, 'DE'), 'drugs', 'get_category tobacco=>only for DE should be drugs');
 
@@ -4794,6 +5618,14 @@ SELECT is(get_category('tobacco=>only'::hstore, 'IT'), 'drugs', 'get_category to
 
 SELECT is(get_subcategory('tobacco=>only'::hstore, 'IT'), 'tobacco', 'get_subcategory tobacco=>only for IT should be tobacco');
 
+SELECT is(get_category('tobacco=>only'::hstore, 'GB'), 'drugs', 'get_category tobacco=>only for GB should be drugs');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'GB'), 'tobacco', 'get_subcategory tobacco=>only for GB should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'IE'), 'drugs', 'get_category tobacco=>only for IE should be drugs');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'IE'), 'tobacco', 'get_subcategory tobacco=>only for IE should be tobacco');
+
 SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'DE'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for DE should be drugs');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'DE'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for DE should be tobacco');
@@ -4837,6 +5669,14 @@ SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstor
 SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'IT'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for IT should be drugs');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'IT'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for IT should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'GB'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for GB should be drugs');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'GB'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for GB should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'IE'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for IE should be drugs');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'IE'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for IE should be tobacco');
 
 SELECT is(get_category('shop=>e-cigarette'::hstore, 'DE'), 'drugs', 'get_category shop=>e-cigarette for DE should be drugs');
 
@@ -4882,6 +5722,14 @@ SELECT is(get_category('shop=>e-cigarette'::hstore, 'IT'), 'drugs', 'get_categor
 
 SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'IT'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for IT should be e_cigarette');
 
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'GB'), 'drugs', 'get_category shop=>e-cigarette for GB should be drugs');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'GB'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for GB should be e_cigarette');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'IE'), 'drugs', 'get_category shop=>e-cigarette for IE should be drugs');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'IE'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for IE should be e_cigarette');
+
 SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'DE'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for DE should be drugs');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'DE'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for DE should be e_cigarette');
@@ -4926,6 +5774,14 @@ SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'IT'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for IT should be e_cigarette');
 
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'GB'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for GB should be drugs');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'GB'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for GB should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'IE'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for IE should be drugs');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'IE'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for IE should be e_cigarette');
+
 SELECT is(get_category('shop=>alcohol'::hstore, 'DE'), 'drugs', 'get_category shop=>alcohol for DE should be drugs');
 
 SELECT is(get_subcategory('shop=>alcohol'::hstore, 'DE'), 'alcohol', 'get_subcategory shop=>alcohol for DE should be alcohol');
@@ -4965,6 +5821,14 @@ SELECT is(get_subcategory('shop=>alcohol'::hstore, 'MC'), 'alcohol', 'get_subcat
 SELECT is(get_category('shop=>alcohol'::hstore, 'IT'), 'drugs', 'get_category shop=>alcohol for IT should be drugs');
 
 SELECT is(get_subcategory('shop=>alcohol'::hstore, 'IT'), 'alcohol', 'get_subcategory shop=>alcohol for IT should be alcohol');
+
+SELECT is(get_category('shop=>alcohol'::hstore, 'GB'), 'drugs', 'get_category shop=>alcohol for GB should be drugs');
+
+SELECT is(get_subcategory('shop=>alcohol'::hstore, 'GB'), 'alcohol', 'get_subcategory shop=>alcohol for GB should be alcohol');
+
+SELECT is(get_category('shop=>alcohol'::hstore, 'IE'), 'drugs', 'get_category shop=>alcohol for IE should be drugs');
+
+SELECT is(get_subcategory('shop=>alcohol'::hstore, 'IE'), 'alcohol', 'get_subcategory shop=>alcohol for IE should be alcohol');
 
 SELECT is(get_category('shop=>beverages'::hstore, 'DE'), 'drugs', 'get_category shop=>beverages for DE should be drugs');
 
@@ -5006,6 +5870,14 @@ SELECT is(get_category('shop=>beverages'::hstore, 'IT'), 'drugs', 'get_category 
 
 SELECT is(get_subcategory('shop=>beverages'::hstore, 'IT'), 'alcohol', 'get_subcategory shop=>beverages for IT should be alcohol');
 
+SELECT is(get_category('shop=>beverages'::hstore, 'GB'), 'drugs', 'get_category shop=>beverages for GB should be drugs');
+
+SELECT is(get_subcategory('shop=>beverages'::hstore, 'GB'), 'alcohol', 'get_subcategory shop=>beverages for GB should be alcohol');
+
+SELECT is(get_category('shop=>beverages'::hstore, 'IE'), 'drugs', 'get_category shop=>beverages for IE should be drugs');
+
+SELECT is(get_subcategory('shop=>beverages'::hstore, 'IE'), 'alcohol', 'get_subcategory shop=>beverages for IE should be alcohol');
+
 SELECT is(get_category('shop=>wine'::hstore, 'DE'), 'drugs', 'get_category shop=>wine for DE should be drugs');
 
 SELECT is(get_subcategory('shop=>wine'::hstore, 'DE'), 'alcohol', 'get_subcategory shop=>wine for DE should be alcohol');
@@ -5045,6 +5917,14 @@ SELECT is(get_subcategory('shop=>wine'::hstore, 'MC'), 'alcohol', 'get_subcatego
 SELECT is(get_category('shop=>wine'::hstore, 'IT'), 'drugs', 'get_category shop=>wine for IT should be drugs');
 
 SELECT is(get_subcategory('shop=>wine'::hstore, 'IT'), 'alcohol', 'get_subcategory shop=>wine for IT should be alcohol');
+
+SELECT is(get_category('shop=>wine'::hstore, 'GB'), 'drugs', 'get_category shop=>wine for GB should be drugs');
+
+SELECT is(get_subcategory('shop=>wine'::hstore, 'GB'), 'alcohol', 'get_subcategory shop=>wine for GB should be alcohol');
+
+SELECT is(get_category('shop=>wine'::hstore, 'IE'), 'drugs', 'get_category shop=>wine for IE should be drugs');
+
+SELECT is(get_subcategory('shop=>wine'::hstore, 'IE'), 'alcohol', 'get_subcategory shop=>wine for IE should be alcohol');
 
 SELECT is(get_category('amenity=>bank'::hstore, 'CD'), 'money', 'get_category amenity=>bank for CD should be money');
 
@@ -5105,6 +5985,14 @@ SELECT is(get_subcategory('shop=>shoes'::hstore, 'CD'), 'shoes', 'get_subcategor
 SELECT is(get_category('shop=>shoes'::hstore, 'IT'), 'clothing_beauty', 'get_category shop=>shoes for IT should be clothing_beauty');
 
 SELECT is(get_subcategory('shop=>shoes'::hstore, 'IT'), 'shoes', 'get_subcategory shop=>shoes for IT should be shoes');
+
+SELECT is(get_category('shop=>shoes'::hstore, 'GB'), 'clothing_beauty', 'get_category shop=>shoes for GB should be clothing_beauty');
+
+SELECT is(get_subcategory('shop=>shoes'::hstore, 'GB'), 'shoes', 'get_subcategory shop=>shoes for GB should be shoes');
+
+SELECT is(get_category('shop=>shoes'::hstore, 'IE'), 'clothing_beauty', 'get_category shop=>shoes for IE should be clothing_beauty');
+
+SELECT is(get_subcategory('shop=>shoes'::hstore, 'IE'), 'shoes', 'get_subcategory shop=>shoes for IE should be shoes');
 
 SELECT is(get_category('shop=>bag'::hstore, 'DE'), 'clothing_beauty', 'get_category shop=>bag for DE should be clothing_beauty');
 
@@ -5190,6 +6078,14 @@ SELECT is(get_category('shop=>boutique'::hstore, 'IT'), 'clothing_beauty', 'get_
 
 SELECT is(get_subcategory('shop=>boutique'::hstore, 'IT'), 'clothes', 'get_subcategory shop=>boutique for IT should be clothes');
 
+SELECT is(get_category('shop=>boutique'::hstore, 'GB'), 'clothing_beauty', 'get_category shop=>boutique for GB should be clothing_beauty');
+
+SELECT is(get_subcategory('shop=>boutique'::hstore, 'GB'), 'clothes', 'get_subcategory shop=>boutique for GB should be clothes');
+
+SELECT is(get_category('shop=>boutique'::hstore, 'IE'), 'clothing_beauty', 'get_category shop=>boutique for IE should be clothing_beauty');
+
+SELECT is(get_subcategory('shop=>boutique'::hstore, 'IE'), 'clothes', 'get_subcategory shop=>boutique for IE should be clothes');
+
 SELECT is(get_category('shop=>clothes'::hstore, 'DE'), 'clothing_beauty', 'get_category shop=>clothes for DE should be clothing_beauty');
 
 SELECT is(get_subcategory('shop=>clothes'::hstore, 'DE'), 'clothes', 'get_subcategory shop=>clothes for DE should be clothes');
@@ -5234,6 +6130,14 @@ SELECT is(get_category('shop=>clothes'::hstore, 'IT'), 'clothing_beauty', 'get_c
 
 SELECT is(get_subcategory('shop=>clothes'::hstore, 'IT'), 'clothes', 'get_subcategory shop=>clothes for IT should be clothes');
 
+SELECT is(get_category('shop=>clothes'::hstore, 'GB'), 'clothing_beauty', 'get_category shop=>clothes for GB should be clothing_beauty');
+
+SELECT is(get_subcategory('shop=>clothes'::hstore, 'GB'), 'clothes', 'get_subcategory shop=>clothes for GB should be clothes');
+
+SELECT is(get_category('shop=>clothes'::hstore, 'IE'), 'clothing_beauty', 'get_category shop=>clothes for IE should be clothing_beauty');
+
+SELECT is(get_subcategory('shop=>clothes'::hstore, 'IE'), 'clothes', 'get_subcategory shop=>clothes for IE should be clothes');
+
 SELECT is(get_category('shop=>fashion'::hstore, 'DE'), 'clothing_beauty', 'get_category shop=>fashion for DE should be clothing_beauty');
 
 SELECT is(get_subcategory('shop=>fashion'::hstore, 'DE'), 'clothes', 'get_subcategory shop=>fashion for DE should be clothes');
@@ -5277,6 +6181,14 @@ SELECT is(get_subcategory('shop=>fashion'::hstore, 'CD'), 'clothes', 'get_subcat
 SELECT is(get_category('shop=>fashion'::hstore, 'IT'), 'clothing_beauty', 'get_category shop=>fashion for IT should be clothing_beauty');
 
 SELECT is(get_subcategory('shop=>fashion'::hstore, 'IT'), 'clothes', 'get_subcategory shop=>fashion for IT should be clothes');
+
+SELECT is(get_category('shop=>fashion'::hstore, 'GB'), 'clothing_beauty', 'get_category shop=>fashion for GB should be clothing_beauty');
+
+SELECT is(get_subcategory('shop=>fashion'::hstore, 'GB'), 'clothes', 'get_subcategory shop=>fashion for GB should be clothes');
+
+SELECT is(get_category('shop=>fashion'::hstore, 'IE'), 'clothing_beauty', 'get_category shop=>fashion for IE should be clothing_beauty');
+
+SELECT is(get_subcategory('shop=>fashion'::hstore, 'IE'), 'clothes', 'get_subcategory shop=>fashion for IE should be clothes');
 
 SELECT is(get_category('shop=>cosmetics'::hstore, 'DE'), 'clothing_beauty', 'get_category shop=>cosmetics for DE should be clothing_beauty');
 
@@ -5402,6 +6314,14 @@ SELECT is(get_category('shop=>tailor'::hstore, 'IT'), 'clothing_beauty', 'get_ca
 
 SELECT is(get_subcategory('shop=>tailor'::hstore, 'IT'), 'tailor', 'get_subcategory shop=>tailor for IT should be tailor');
 
+SELECT is(get_category('shop=>tailor'::hstore, 'GB'), 'clothing_beauty', 'get_category shop=>tailor for GB should be clothing_beauty');
+
+SELECT is(get_subcategory('shop=>tailor'::hstore, 'GB'), 'tailor', 'get_subcategory shop=>tailor for GB should be tailor');
+
+SELECT is(get_category('shop=>tailor'::hstore, 'IE'), 'clothing_beauty', 'get_category shop=>tailor for IE should be clothing_beauty');
+
+SELECT is(get_subcategory('shop=>tailor'::hstore, 'IE'), 'tailor', 'get_subcategory shop=>tailor for IE should be tailor');
+
 SELECT is(get_category('shop=>perfumery'::hstore, 'DE'), 'clothing_beauty', 'get_category shop=>perfumery for DE should be clothing_beauty');
 
 SELECT is(get_subcategory('shop=>perfumery'::hstore, 'DE'), 'perfumery', 'get_subcategory shop=>perfumery for DE should be perfumery');
@@ -5466,6 +6386,14 @@ SELECT is(get_category('shop=>chemist'::hstore, 'IT'), 'clothing_beauty', 'get_c
 
 SELECT is(get_subcategory('shop=>chemist'::hstore, 'IT'), 'chemist', 'get_subcategory shop=>chemist for IT should be chemist');
 
+SELECT is(get_category('shop=>chemist'::hstore, 'GB'), 'clothing_beauty', 'get_category shop=>chemist for GB should be clothing_beauty');
+
+SELECT is(get_subcategory('shop=>chemist'::hstore, 'GB'), 'chemist', 'get_subcategory shop=>chemist for GB should be chemist');
+
+SELECT is(get_category('shop=>chemist'::hstore, 'IE'), 'clothing_beauty', 'get_category shop=>chemist for IE should be clothing_beauty');
+
+SELECT is(get_subcategory('shop=>chemist'::hstore, 'IE'), 'chemist', 'get_subcategory shop=>chemist for IE should be chemist');
+
 SELECT is(get_category('shop=>doityourself'::hstore, 'DE'), 'home_equipment', 'get_category shop=>doityourself for DE should be home_equipment');
 
 SELECT is(get_subcategory('shop=>doityourself'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>doityourself for DE should be hardware');
@@ -5509,6 +6437,14 @@ SELECT is(get_subcategory('shop=>doityourself'::hstore, 'CD'), 'hardware', 'get_
 SELECT is(get_category('shop=>doityourself'::hstore, 'IT'), 'home_equipment', 'get_category shop=>doityourself for IT should be home_equipment');
 
 SELECT is(get_subcategory('shop=>doityourself'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>doityourself for IT should be hardware');
+
+SELECT is(get_category('shop=>doityourself'::hstore, 'GB'), 'home_equipment', 'get_category shop=>doityourself for GB should be home_equipment');
+
+SELECT is(get_subcategory('shop=>doityourself'::hstore, 'GB'), 'hardware', 'get_subcategory shop=>doityourself for GB should be hardware');
+
+SELECT is(get_category('shop=>doityourself'::hstore, 'IE'), 'home_equipment', 'get_category shop=>doityourself for IE should be home_equipment');
+
+SELECT is(get_subcategory('shop=>doityourself'::hstore, 'IE'), 'hardware', 'get_subcategory shop=>doityourself for IE should be hardware');
 
 SELECT is(get_category('shop=>electrical'::hstore, 'DE'), 'home_equipment', 'get_category shop=>electrical for DE should be home_equipment');
 
@@ -5554,6 +6490,14 @@ SELECT is(get_category('shop=>electrical'::hstore, 'IT'), 'home_equipment', 'get
 
 SELECT is(get_subcategory('shop=>electrical'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>electrical for IT should be hardware');
 
+SELECT is(get_category('shop=>electrical'::hstore, 'GB'), 'home_equipment', 'get_category shop=>electrical for GB should be home_equipment');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'GB'), 'hardware', 'get_subcategory shop=>electrical for GB should be hardware');
+
+SELECT is(get_category('shop=>electrical'::hstore, 'IE'), 'home_equipment', 'get_category shop=>electrical for IE should be home_equipment');
+
+SELECT is(get_subcategory('shop=>electrical'::hstore, 'IE'), 'hardware', 'get_subcategory shop=>electrical for IE should be hardware');
+
 SELECT is(get_category('shop=>fireplace'::hstore, 'DE'), 'home_equipment', 'get_category shop=>fireplace for DE should be home_equipment');
 
 SELECT is(get_subcategory('shop=>fireplace'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>fireplace for DE should be hardware');
@@ -5597,6 +6541,14 @@ SELECT is(get_subcategory('shop=>fireplace'::hstore, 'CD'), 'hardware', 'get_sub
 SELECT is(get_category('shop=>fireplace'::hstore, 'IT'), 'home_equipment', 'get_category shop=>fireplace for IT should be home_equipment');
 
 SELECT is(get_subcategory('shop=>fireplace'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>fireplace for IT should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'GB'), 'home_equipment', 'get_category shop=>fireplace for GB should be home_equipment');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'GB'), 'hardware', 'get_subcategory shop=>fireplace for GB should be hardware');
+
+SELECT is(get_category('shop=>fireplace'::hstore, 'IE'), 'home_equipment', 'get_category shop=>fireplace for IE should be home_equipment');
+
+SELECT is(get_subcategory('shop=>fireplace'::hstore, 'IE'), 'hardware', 'get_subcategory shop=>fireplace for IE should be hardware');
 
 SELECT is(get_category('shop=>glaziery'::hstore, 'DE'), 'home_equipment', 'get_category shop=>glaziery for DE should be home_equipment');
 
@@ -5642,6 +6594,14 @@ SELECT is(get_category('shop=>glaziery'::hstore, 'IT'), 'home_equipment', 'get_c
 
 SELECT is(get_subcategory('shop=>glaziery'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>glaziery for IT should be hardware');
 
+SELECT is(get_category('shop=>glaziery'::hstore, 'GB'), 'home_equipment', 'get_category shop=>glaziery for GB should be home_equipment');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'GB'), 'hardware', 'get_subcategory shop=>glaziery for GB should be hardware');
+
+SELECT is(get_category('shop=>glaziery'::hstore, 'IE'), 'home_equipment', 'get_category shop=>glaziery for IE should be home_equipment');
+
+SELECT is(get_subcategory('shop=>glaziery'::hstore, 'IE'), 'hardware', 'get_subcategory shop=>glaziery for IE should be hardware');
+
 SELECT is(get_category('shop=>hardware'::hstore, 'DE'), 'home_equipment', 'get_category shop=>hardware for DE should be home_equipment');
 
 SELECT is(get_subcategory('shop=>hardware'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>hardware for DE should be hardware');
@@ -5685,6 +6645,14 @@ SELECT is(get_subcategory('shop=>hardware'::hstore, 'CD'), 'hardware', 'get_subc
 SELECT is(get_category('shop=>hardware'::hstore, 'IT'), 'home_equipment', 'get_category shop=>hardware for IT should be home_equipment');
 
 SELECT is(get_subcategory('shop=>hardware'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>hardware for IT should be hardware');
+
+SELECT is(get_category('shop=>hardware'::hstore, 'GB'), 'home_equipment', 'get_category shop=>hardware for GB should be home_equipment');
+
+SELECT is(get_subcategory('shop=>hardware'::hstore, 'GB'), 'hardware', 'get_subcategory shop=>hardware for GB should be hardware');
+
+SELECT is(get_category('shop=>hardware'::hstore, 'IE'), 'home_equipment', 'get_category shop=>hardware for IE should be home_equipment');
+
+SELECT is(get_subcategory('shop=>hardware'::hstore, 'IE'), 'hardware', 'get_subcategory shop=>hardware for IE should be hardware');
 
 SELECT is(get_category('shop=>paint'::hstore, 'DE'), 'home_equipment', 'get_category shop=>paint for DE should be home_equipment');
 
@@ -5730,6 +6698,14 @@ SELECT is(get_category('shop=>paint'::hstore, 'IT'), 'home_equipment', 'get_cate
 
 SELECT is(get_subcategory('shop=>paint'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>paint for IT should be hardware');
 
+SELECT is(get_category('shop=>paint'::hstore, 'GB'), 'home_equipment', 'get_category shop=>paint for GB should be home_equipment');
+
+SELECT is(get_subcategory('shop=>paint'::hstore, 'GB'), 'hardware', 'get_subcategory shop=>paint for GB should be hardware');
+
+SELECT is(get_category('shop=>paint'::hstore, 'IE'), 'home_equipment', 'get_category shop=>paint for IE should be home_equipment');
+
+SELECT is(get_subcategory('shop=>paint'::hstore, 'IE'), 'hardware', 'get_subcategory shop=>paint for IE should be hardware');
+
 SELECT is(get_category('shop=>tiles'::hstore, 'DE'), 'home_equipment', 'get_category shop=>tiles for DE should be home_equipment');
 
 SELECT is(get_subcategory('shop=>tiles'::hstore, 'DE'), 'hardware', 'get_subcategory shop=>tiles for DE should be hardware');
@@ -5773,6 +6749,14 @@ SELECT is(get_subcategory('shop=>tiles'::hstore, 'CD'), 'hardware', 'get_subcate
 SELECT is(get_category('shop=>tiles'::hstore, 'IT'), 'home_equipment', 'get_category shop=>tiles for IT should be home_equipment');
 
 SELECT is(get_subcategory('shop=>tiles'::hstore, 'IT'), 'hardware', 'get_subcategory shop=>tiles for IT should be hardware');
+
+SELECT is(get_category('shop=>tiles'::hstore, 'GB'), 'home_equipment', 'get_category shop=>tiles for GB should be home_equipment');
+
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'GB'), 'hardware', 'get_subcategory shop=>tiles for GB should be hardware');
+
+SELECT is(get_category('shop=>tiles'::hstore, 'IE'), 'home_equipment', 'get_category shop=>tiles for IE should be home_equipment');
+
+SELECT is(get_subcategory('shop=>tiles'::hstore, 'IE'), 'hardware', 'get_subcategory shop=>tiles for IE should be hardware');
 
 SELECT is(get_category('shop=>bed'::hstore, 'DE'), 'home_equipment', 'get_category shop=>bed for DE should be home_equipment');
 
@@ -6054,6 +7038,14 @@ SELECT is(get_category('shop=>electronics'::hstore, 'IT'), 'home_equipment', 'ge
 
 SELECT is(get_subcategory('shop=>electronics'::hstore, 'IT'), 'electronics', 'get_subcategory shop=>electronics for IT should be electronics');
 
+SELECT is(get_category('shop=>electronics'::hstore, 'GB'), 'home_equipment', 'get_category shop=>electronics for GB should be home_equipment');
+
+SELECT is(get_subcategory('shop=>electronics'::hstore, 'GB'), 'electronics', 'get_subcategory shop=>electronics for GB should be electronics');
+
+SELECT is(get_category('shop=>electronics'::hstore, 'IE'), 'home_equipment', 'get_category shop=>electronics for IE should be home_equipment');
+
+SELECT is(get_subcategory('shop=>electronics'::hstore, 'IE'), 'electronics', 'get_subcategory shop=>electronics for IE should be electronics');
+
 SELECT is(get_category('craft=>electronics_repair'::hstore, 'DE'), 'home_equipment', 'get_category craft=>electronics_repair for DE should be home_equipment');
 
 SELECT is(get_subcategory('craft=>electronics_repair'::hstore, 'DE'), 'electronics', 'get_subcategory craft=>electronics_repair for DE should be electronics');
@@ -6097,6 +7089,14 @@ SELECT is(get_subcategory('craft=>electronics_repair'::hstore, 'CD'), 'electroni
 SELECT is(get_category('craft=>electronics_repair'::hstore, 'IT'), 'home_equipment', 'get_category craft=>electronics_repair for IT should be home_equipment');
 
 SELECT is(get_subcategory('craft=>electronics_repair'::hstore, 'IT'), 'electronics', 'get_subcategory craft=>electronics_repair for IT should be electronics');
+
+SELECT is(get_category('craft=>electronics_repair'::hstore, 'GB'), 'home_equipment', 'get_category craft=>electronics_repair for GB should be home_equipment');
+
+SELECT is(get_subcategory('craft=>electronics_repair'::hstore, 'GB'), 'electronics', 'get_subcategory craft=>electronics_repair for GB should be electronics');
+
+SELECT is(get_category('craft=>electronics_repair'::hstore, 'IE'), 'home_equipment', 'get_category craft=>electronics_repair for IE should be home_equipment');
+
+SELECT is(get_subcategory('craft=>electronics_repair'::hstore, 'IE'), 'electronics', 'get_subcategory craft=>electronics_repair for IE should be electronics');
 
 SELECT is(get_category('shop=>appliance'::hstore, 'DE'), 'home_equipment', 'get_category shop=>appliance for DE should be home_equipment');
 
@@ -6142,6 +7142,14 @@ SELECT is(get_category('shop=>appliance'::hstore, 'IT'), 'home_equipment', 'get_
 
 SELECT is(get_subcategory('shop=>appliance'::hstore, 'IT'), 'electronics', 'get_subcategory shop=>appliance for IT should be electronics');
 
+SELECT is(get_category('shop=>appliance'::hstore, 'GB'), 'home_equipment', 'get_category shop=>appliance for GB should be home_equipment');
+
+SELECT is(get_subcategory('shop=>appliance'::hstore, 'GB'), 'electronics', 'get_subcategory shop=>appliance for GB should be electronics');
+
+SELECT is(get_category('shop=>appliance'::hstore, 'IE'), 'home_equipment', 'get_category shop=>appliance for IE should be home_equipment');
+
+SELECT is(get_subcategory('shop=>appliance'::hstore, 'IE'), 'electronics', 'get_subcategory shop=>appliance for IE should be electronics');
+
 SELECT is(get_category('shop=>mobile_phone'::hstore, 'DE'), 'shop', 'get_category shop=>mobile_phone for DE should be shop');
 
 SELECT is(get_subcategory('shop=>mobile_phone'::hstore, 'DE'), 'mobile_phone', 'get_subcategory shop=>mobile_phone for DE should be mobile_phone');
@@ -6186,6 +7194,14 @@ SELECT is(get_category('shop=>mobile_phone'::hstore, 'IT'), 'shop', 'get_categor
 
 SELECT is(get_subcategory('shop=>mobile_phone'::hstore, 'IT'), 'mobile_phone', 'get_subcategory shop=>mobile_phone for IT should be mobile_phone');
 
+SELECT is(get_category('shop=>mobile_phone'::hstore, 'GB'), 'shop', 'get_category shop=>mobile_phone for GB should be shop');
+
+SELECT is(get_subcategory('shop=>mobile_phone'::hstore, 'GB'), 'mobile_phone', 'get_subcategory shop=>mobile_phone for GB should be mobile_phone');
+
+SELECT is(get_category('shop=>mobile_phone'::hstore, 'IE'), 'shop', 'get_category shop=>mobile_phone for IE should be shop');
+
+SELECT is(get_subcategory('shop=>mobile_phone'::hstore, 'IE'), 'mobile_phone', 'get_subcategory shop=>mobile_phone for IE should be mobile_phone');
+
 SELECT is(get_category('shop=>computer'::hstore, 'DE'), 'shop', 'get_category shop=>computer for DE should be shop');
 
 SELECT is(get_subcategory('shop=>computer'::hstore, 'DE'), 'computer', 'get_subcategory shop=>computer for DE should be computer');
@@ -6229,6 +7245,14 @@ SELECT is(get_subcategory('shop=>computer'::hstore, 'CD'), 'computer', 'get_subc
 SELECT is(get_category('shop=>computer'::hstore, 'IT'), 'shop', 'get_category shop=>computer for IT should be shop');
 
 SELECT is(get_subcategory('shop=>computer'::hstore, 'IT'), 'computer', 'get_subcategory shop=>computer for IT should be computer');
+
+SELECT is(get_category('shop=>computer'::hstore, 'GB'), 'shop', 'get_category shop=>computer for GB should be shop');
+
+SELECT is(get_subcategory('shop=>computer'::hstore, 'GB'), 'computer', 'get_subcategory shop=>computer for GB should be computer');
+
+SELECT is(get_category('shop=>computer'::hstore, 'IE'), 'shop', 'get_category shop=>computer for IE should be shop');
+
+SELECT is(get_subcategory('shop=>computer'::hstore, 'IE'), 'computer', 'get_subcategory shop=>computer for IE should be computer');
 
 SELECT is(get_category('shop=>printer_ink'::hstore, 'IT'), 'shop', 'get_category shop=>printer_ink for IT should be shop');
 
@@ -6278,6 +7302,14 @@ SELECT is(get_category('shop=>dry_cleaning'::hstore, 'IT'), 'shop', 'get_categor
 
 SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'IT'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for IT should be dry_cleaning');
 
+SELECT is(get_category('shop=>dry_cleaning'::hstore, 'GB'), 'shop', 'get_category shop=>dry_cleaning for GB should be shop');
+
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'GB'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for GB should be dry_cleaning');
+
+SELECT is(get_category('shop=>dry_cleaning'::hstore, 'IE'), 'shop', 'get_category shop=>dry_cleaning for IE should be shop');
+
+SELECT is(get_subcategory('shop=>dry_cleaning'::hstore, 'IE'), 'dry_cleaning', 'get_subcategory shop=>dry_cleaning for IE should be dry_cleaning');
+
 SELECT is(get_category('shop=>laundry'::hstore, 'DE'), 'shop', 'get_category shop=>laundry for DE should be shop');
 
 SELECT is(get_subcategory('shop=>laundry'::hstore, 'DE'), 'laundry', 'get_subcategory shop=>laundry for DE should be laundry');
@@ -6321,6 +7353,14 @@ SELECT is(get_subcategory('shop=>laundry'::hstore, 'CD'), 'laundry', 'get_subcat
 SELECT is(get_category('shop=>laundry'::hstore, 'IT'), 'shop', 'get_category shop=>laundry for IT should be shop');
 
 SELECT is(get_subcategory('shop=>laundry'::hstore, 'IT'), 'laundry', 'get_subcategory shop=>laundry for IT should be laundry');
+
+SELECT is(get_category('shop=>laundry'::hstore, 'GB'), 'shop', 'get_category shop=>laundry for GB should be shop');
+
+SELECT is(get_subcategory('shop=>laundry'::hstore, 'GB'), 'laundry', 'get_subcategory shop=>laundry for GB should be laundry');
+
+SELECT is(get_category('shop=>laundry'::hstore, 'IE'), 'shop', 'get_category shop=>laundry for IE should be shop');
+
+SELECT is(get_subcategory('shop=>laundry'::hstore, 'IE'), 'laundry', 'get_subcategory shop=>laundry for IE should be laundry');
 
 SELECT is(get_category('shop=>stationery'::hstore, 'AT'), 'shop', 'get_category shop=>stationery for AT should be shop');
 
@@ -6386,6 +7426,14 @@ SELECT is(get_category('shop=>kiosk'::hstore, 'IT'), 'shop', 'get_category shop=
 
 SELECT is(get_subcategory('shop=>kiosk'::hstore, 'IT'), 'newsagent', 'get_subcategory shop=>kiosk for IT should be newsagent');
 
+SELECT is(get_category('shop=>kiosk'::hstore, 'GB'), 'shop', 'get_category shop=>kiosk for GB should be shop');
+
+SELECT is(get_subcategory('shop=>kiosk'::hstore, 'GB'), 'newsagent', 'get_subcategory shop=>kiosk for GB should be newsagent');
+
+SELECT is(get_category('shop=>kiosk'::hstore, 'IE'), 'shop', 'get_category shop=>kiosk for IE should be shop');
+
+SELECT is(get_subcategory('shop=>kiosk'::hstore, 'IE'), 'newsagent', 'get_subcategory shop=>kiosk for IE should be newsagent');
+
 SELECT is(get_category('shop=>newsagent'::hstore, 'DE'), 'shop', 'get_category shop=>newsagent for DE should be shop');
 
 SELECT is(get_subcategory('shop=>newsagent'::hstore, 'DE'), 'newsagent', 'get_subcategory shop=>newsagent for DE should be newsagent');
@@ -6429,6 +7477,14 @@ SELECT is(get_subcategory('shop=>newsagent'::hstore, 'CD'), 'newsagent', 'get_su
 SELECT is(get_category('shop=>newsagent'::hstore, 'IT'), 'shop', 'get_category shop=>newsagent for IT should be shop');
 
 SELECT is(get_subcategory('shop=>newsagent'::hstore, 'IT'), 'newsagent', 'get_subcategory shop=>newsagent for IT should be newsagent');
+
+SELECT is(get_category('shop=>newsagent'::hstore, 'GB'), 'shop', 'get_category shop=>newsagent for GB should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent'::hstore, 'GB'), 'newsagent', 'get_subcategory shop=>newsagent for GB should be newsagent');
+
+SELECT is(get_category('shop=>newsagent'::hstore, 'IE'), 'shop', 'get_category shop=>newsagent for IE should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent'::hstore, 'IE'), 'newsagent', 'get_subcategory shop=>newsagent for IE should be newsagent');
 
 SELECT is(get_category('newsagent=>yes'::hstore, 'DE'), 'shop', 'get_category newsagent=>yes for DE should be shop');
 
@@ -6474,6 +7530,14 @@ SELECT is(get_category('newsagent=>yes'::hstore, 'IT'), 'shop', 'get_category ne
 
 SELECT is(get_subcategory('newsagent=>yes'::hstore, 'IT'), 'newsagent', 'get_subcategory newsagent=>yes for IT should be newsagent');
 
+SELECT is(get_category('newsagent=>yes'::hstore, 'GB'), 'shop', 'get_category newsagent=>yes for GB should be shop');
+
+SELECT is(get_subcategory('newsagent=>yes'::hstore, 'GB'), 'newsagent', 'get_subcategory newsagent=>yes for GB should be newsagent');
+
+SELECT is(get_category('newsagent=>yes'::hstore, 'IE'), 'shop', 'get_category newsagent=>yes for IE should be shop');
+
+SELECT is(get_subcategory('newsagent=>yes'::hstore, 'IE'), 'newsagent', 'get_subcategory newsagent=>yes for IE should be newsagent');
+
 SELECT is(get_category('shop=>pet'::hstore, 'DE'), 'shop', 'get_category shop=>pet for DE should be shop');
 
 SELECT is(get_subcategory('shop=>pet'::hstore, 'DE'), 'pet', 'get_subcategory shop=>pet for DE should be pet');
@@ -6517,6 +7581,14 @@ SELECT is(get_subcategory('shop=>pet'::hstore, 'CD'), 'pet', 'get_subcategory sh
 SELECT is(get_category('shop=>pet'::hstore, 'IT'), 'shop', 'get_category shop=>pet for IT should be shop');
 
 SELECT is(get_subcategory('shop=>pet'::hstore, 'IT'), 'pet', 'get_subcategory shop=>pet for IT should be pet');
+
+SELECT is(get_category('shop=>pet'::hstore, 'GB'), 'shop', 'get_category shop=>pet for GB should be shop');
+
+SELECT is(get_subcategory('shop=>pet'::hstore, 'GB'), 'pet', 'get_subcategory shop=>pet for GB should be pet');
+
+SELECT is(get_category('shop=>pet'::hstore, 'IE'), 'shop', 'get_category shop=>pet for IE should be shop');
+
+SELECT is(get_subcategory('shop=>pet'::hstore, 'IE'), 'pet', 'get_subcategory shop=>pet for IE should be pet');
 
 SELECT is(get_category('shop=>agrarian'::hstore, 'AT'), 'shop', 'get_category shop=>agrarian for AT should be shop');
 
@@ -6582,6 +7654,14 @@ SELECT is(get_category('shop=>garden_centre'::hstore, 'IT'), 'shop', 'get_catego
 
 SELECT is(get_subcategory('shop=>garden_centre'::hstore, 'IT'), 'flower', 'get_subcategory shop=>garden_centre for IT should be flower');
 
+SELECT is(get_category('shop=>garden_centre'::hstore, 'GB'), 'shop', 'get_category shop=>garden_centre for GB should be shop');
+
+SELECT is(get_subcategory('shop=>garden_centre'::hstore, 'GB'), 'flower', 'get_subcategory shop=>garden_centre for GB should be flower');
+
+SELECT is(get_category('shop=>garden_centre'::hstore, 'IE'), 'shop', 'get_category shop=>garden_centre for IE should be shop');
+
+SELECT is(get_subcategory('shop=>garden_centre'::hstore, 'IE'), 'flower', 'get_subcategory shop=>garden_centre for IE should be flower');
+
 SELECT is(get_category('shop=>florist'::hstore, 'DE'), 'shop', 'get_category shop=>florist for DE should be shop');
 
 SELECT is(get_subcategory('shop=>florist'::hstore, 'DE'), 'flower', 'get_subcategory shop=>florist for DE should be flower');
@@ -6625,6 +7705,14 @@ SELECT is(get_subcategory('shop=>florist'::hstore, 'CD'), 'flower', 'get_subcate
 SELECT is(get_category('shop=>florist'::hstore, 'IT'), 'shop', 'get_category shop=>florist for IT should be shop');
 
 SELECT is(get_subcategory('shop=>florist'::hstore, 'IT'), 'flower', 'get_subcategory shop=>florist for IT should be flower');
+
+SELECT is(get_category('shop=>florist'::hstore, 'GB'), 'shop', 'get_category shop=>florist for GB should be shop');
+
+SELECT is(get_subcategory('shop=>florist'::hstore, 'GB'), 'flower', 'get_subcategory shop=>florist for GB should be flower');
+
+SELECT is(get_category('shop=>florist'::hstore, 'IE'), 'shop', 'get_category shop=>florist for IE should be shop');
+
+SELECT is(get_subcategory('shop=>florist'::hstore, 'IE'), 'flower', 'get_subcategory shop=>florist for IE should be flower');
 
 SELECT is(get_category('shop=>fabric'::hstore, 'DE'), 'shop', 'get_category shop=>fabric for DE should be shop');
 
@@ -6670,6 +7758,14 @@ SELECT is(get_category('shop=>fabric'::hstore, 'IT'), 'shop', 'get_category shop
 
 SELECT is(get_subcategory('shop=>fabric'::hstore, 'IT'), 'sewing', 'get_subcategory shop=>fabric for IT should be sewing');
 
+SELECT is(get_category('shop=>fabric'::hstore, 'GB'), 'shop', 'get_category shop=>fabric for GB should be shop');
+
+SELECT is(get_subcategory('shop=>fabric'::hstore, 'GB'), 'sewing', 'get_subcategory shop=>fabric for GB should be sewing');
+
+SELECT is(get_category('shop=>fabric'::hstore, 'IE'), 'shop', 'get_category shop=>fabric for IE should be shop');
+
+SELECT is(get_subcategory('shop=>fabric'::hstore, 'IE'), 'sewing', 'get_subcategory shop=>fabric for IE should be sewing');
+
 SELECT is(get_category('shop=>sewing'::hstore, 'DE'), 'shop', 'get_category shop=>sewing for DE should be shop');
 
 SELECT is(get_subcategory('shop=>sewing'::hstore, 'DE'), 'sewing', 'get_subcategory shop=>sewing for DE should be sewing');
@@ -6713,6 +7809,14 @@ SELECT is(get_subcategory('shop=>sewing'::hstore, 'CD'), 'sewing', 'get_subcateg
 SELECT is(get_category('shop=>sewing'::hstore, 'IT'), 'shop', 'get_category shop=>sewing for IT should be shop');
 
 SELECT is(get_subcategory('shop=>sewing'::hstore, 'IT'), 'sewing', 'get_subcategory shop=>sewing for IT should be sewing');
+
+SELECT is(get_category('shop=>sewing'::hstore, 'GB'), 'shop', 'get_category shop=>sewing for GB should be shop');
+
+SELECT is(get_subcategory('shop=>sewing'::hstore, 'GB'), 'sewing', 'get_subcategory shop=>sewing for GB should be sewing');
+
+SELECT is(get_category('shop=>sewing'::hstore, 'IE'), 'shop', 'get_category shop=>sewing for IE should be shop');
+
+SELECT is(get_subcategory('shop=>sewing'::hstore, 'IE'), 'sewing', 'get_subcategory shop=>sewing for IE should be sewing');
 
 SELECT is(get_category('shop=>haberdashery'::hstore, 'DE'), 'shop', 'get_category shop=>haberdashery for DE should be shop');
 
@@ -6758,6 +7862,14 @@ SELECT is(get_category('shop=>haberdashery'::hstore, 'IT'), 'shop', 'get_categor
 
 SELECT is(get_subcategory('shop=>haberdashery'::hstore, 'IT'), 'sewing', 'get_subcategory shop=>haberdashery for IT should be sewing');
 
+SELECT is(get_category('shop=>haberdashery'::hstore, 'GB'), 'shop', 'get_category shop=>haberdashery for GB should be shop');
+
+SELECT is(get_subcategory('shop=>haberdashery'::hstore, 'GB'), 'sewing', 'get_subcategory shop=>haberdashery for GB should be sewing');
+
+SELECT is(get_category('shop=>haberdashery'::hstore, 'IE'), 'shop', 'get_category shop=>haberdashery for IE should be shop');
+
+SELECT is(get_subcategory('shop=>haberdashery'::hstore, 'IE'), 'sewing', 'get_subcategory shop=>haberdashery for IE should be sewing');
+
 SELECT is(get_category('shop=>wool'::hstore, 'DE'), 'shop', 'get_category shop=>wool for DE should be shop');
 
 SELECT is(get_subcategory('shop=>wool'::hstore, 'DE'), 'sewing', 'get_subcategory shop=>wool for DE should be sewing');
@@ -6802,6 +7914,14 @@ SELECT is(get_category('shop=>wool'::hstore, 'IT'), 'shop', 'get_category shop=>
 
 SELECT is(get_subcategory('shop=>wool'::hstore, 'IT'), 'sewing', 'get_subcategory shop=>wool for IT should be sewing');
 
+SELECT is(get_category('shop=>wool'::hstore, 'GB'), 'shop', 'get_category shop=>wool for GB should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'GB'), 'sewing', 'get_subcategory shop=>wool for GB should be sewing');
+
+SELECT is(get_category('shop=>wool'::hstore, 'IE'), 'shop', 'get_category shop=>wool for IE should be shop');
+
+SELECT is(get_subcategory('shop=>wool'::hstore, 'IE'), 'sewing', 'get_subcategory shop=>wool for IE should be sewing');
+
 SELECT is(get_category('craft=>sewing'::hstore, 'DE'), 'shop', 'get_category craft=>sewing for DE should be shop');
 
 SELECT is(get_subcategory('craft=>sewing'::hstore, 'DE'), 'sewing', 'get_subcategory craft=>sewing for DE should be sewing');
@@ -6845,6 +7965,14 @@ SELECT is(get_subcategory('craft=>sewing'::hstore, 'CD'), 'sewing', 'get_subcate
 SELECT is(get_category('craft=>sewing'::hstore, 'IT'), 'shop', 'get_category craft=>sewing for IT should be shop');
 
 SELECT is(get_subcategory('craft=>sewing'::hstore, 'IT'), 'sewing', 'get_subcategory craft=>sewing for IT should be sewing');
+
+SELECT is(get_category('craft=>sewing'::hstore, 'GB'), 'shop', 'get_category craft=>sewing for GB should be shop');
+
+SELECT is(get_subcategory('craft=>sewing'::hstore, 'GB'), 'sewing', 'get_subcategory craft=>sewing for GB should be sewing');
+
+SELECT is(get_category('craft=>sewing'::hstore, 'IE'), 'shop', 'get_category craft=>sewing for IE should be shop');
+
+SELECT is(get_subcategory('craft=>sewing'::hstore, 'IE'), 'sewing', 'get_subcategory craft=>sewing for IE should be sewing');
 
 SELECT is(get_category('shop=>books'::hstore, 'DE'), 'shop', 'get_category shop=>books for DE should be shop');
 
@@ -7358,6 +8486,14 @@ SELECT is(get_category('amenity=>fuel'::hstore, 'IT'), 'mobility', 'get_category
 
 SELECT is(get_subcategory('amenity=>fuel'::hstore, 'IT'), 'fuel', 'get_subcategory amenity=>fuel for IT should be fuel');
 
+SELECT is(get_category('amenity=>fuel'::hstore, 'GB'), 'mobility', 'get_category amenity=>fuel for GB should be mobility');
+
+SELECT is(get_subcategory('amenity=>fuel'::hstore, 'GB'), 'fuel', 'get_subcategory amenity=>fuel for GB should be fuel');
+
+SELECT is(get_category('amenity=>fuel'::hstore, 'IE'), 'mobility', 'get_category amenity=>fuel for IE should be mobility');
+
+SELECT is(get_subcategory('amenity=>fuel'::hstore, 'IE'), 'fuel', 'get_subcategory amenity=>fuel for IE should be fuel');
+
 SELECT is(get_category('shop=>gas'::hstore, 'DE'), 'mobility', 'get_category shop=>gas for DE should be mobility');
 
 SELECT is(get_subcategory('shop=>gas'::hstore, 'DE'), 'fuel', 'get_subcategory shop=>gas for DE should be fuel');
@@ -7401,6 +8537,14 @@ SELECT is(get_subcategory('shop=>gas'::hstore, 'CD'), 'fuel', 'get_subcategory s
 SELECT is(get_category('shop=>gas'::hstore, 'IT'), 'mobility', 'get_category shop=>gas for IT should be mobility');
 
 SELECT is(get_subcategory('shop=>gas'::hstore, 'IT'), 'fuel', 'get_subcategory shop=>gas for IT should be fuel');
+
+SELECT is(get_category('shop=>gas'::hstore, 'GB'), 'mobility', 'get_category shop=>gas for GB should be mobility');
+
+SELECT is(get_subcategory('shop=>gas'::hstore, 'GB'), 'fuel', 'get_subcategory shop=>gas for GB should be fuel');
+
+SELECT is(get_category('shop=>gas'::hstore, 'IE'), 'mobility', 'get_category shop=>gas for IE should be mobility');
+
+SELECT is(get_subcategory('shop=>gas'::hstore, 'IE'), 'fuel', 'get_subcategory shop=>gas for IE should be fuel');
 
 SELECT is(get_category('amenity=>car_rental'::hstore, 'DE'), 'mobility', 'get_category amenity=>car_rental for DE should be mobility');
 
@@ -7446,6 +8590,14 @@ SELECT is(get_category('amenity=>car_rental'::hstore, 'IT'), 'mobility', 'get_ca
 
 SELECT is(get_subcategory('amenity=>car_rental'::hstore, 'IT'), 'car_rental', 'get_subcategory amenity=>car_rental for IT should be car_rental');
 
+SELECT is(get_category('amenity=>car_rental'::hstore, 'GB'), 'mobility', 'get_category amenity=>car_rental for GB should be mobility');
+
+SELECT is(get_subcategory('amenity=>car_rental'::hstore, 'GB'), 'car_rental', 'get_subcategory amenity=>car_rental for GB should be car_rental');
+
+SELECT is(get_category('amenity=>car_rental'::hstore, 'IE'), 'mobility', 'get_category amenity=>car_rental for IE should be mobility');
+
+SELECT is(get_subcategory('amenity=>car_rental'::hstore, 'IE'), 'car_rental', 'get_subcategory amenity=>car_rental for IE should be car_rental');
+
 SELECT is(get_category('shop=>bicycle'::hstore, 'DE'), 'mobility', 'get_category shop=>bicycle for DE should be mobility');
 
 SELECT is(get_subcategory('shop=>bicycle'::hstore, 'DE'), 'bicycle', 'get_subcategory shop=>bicycle for DE should be bicycle');
@@ -7489,6 +8641,14 @@ SELECT is(get_subcategory('shop=>bicycle'::hstore, 'CD'), 'bicycle', 'get_subcat
 SELECT is(get_category('shop=>bicycle'::hstore, 'IT'), 'mobility', 'get_category shop=>bicycle for IT should be mobility');
 
 SELECT is(get_subcategory('shop=>bicycle'::hstore, 'IT'), 'bicycle', 'get_subcategory shop=>bicycle for IT should be bicycle');
+
+SELECT is(get_category('shop=>bicycle'::hstore, 'GB'), 'mobility', 'get_category shop=>bicycle for GB should be mobility');
+
+SELECT is(get_subcategory('shop=>bicycle'::hstore, 'GB'), 'bicycle', 'get_subcategory shop=>bicycle for GB should be bicycle');
+
+SELECT is(get_category('shop=>bicycle'::hstore, 'IE'), 'mobility', 'get_category shop=>bicycle for IE should be mobility');
+
+SELECT is(get_subcategory('shop=>bicycle'::hstore, 'IE'), 'bicycle', 'get_subcategory shop=>bicycle for IE should be bicycle');
 
 SELECT is(get_category('shop=>car_parts'::hstore, 'DE'), 'mobility', 'get_category shop=>car_parts for DE should be mobility');
 
@@ -7534,6 +8694,14 @@ SELECT is(get_category('shop=>car_parts'::hstore, 'IT'), 'mobility', 'get_catego
 
 SELECT is(get_subcategory('shop=>car_parts'::hstore, 'IT'), 'car', 'get_subcategory shop=>car_parts for IT should be car');
 
+SELECT is(get_category('shop=>car_parts'::hstore, 'GB'), 'mobility', 'get_category shop=>car_parts for GB should be mobility');
+
+SELECT is(get_subcategory('shop=>car_parts'::hstore, 'GB'), 'car', 'get_subcategory shop=>car_parts for GB should be car');
+
+SELECT is(get_category('shop=>car_parts'::hstore, 'IE'), 'mobility', 'get_category shop=>car_parts for IE should be mobility');
+
+SELECT is(get_subcategory('shop=>car_parts'::hstore, 'IE'), 'car', 'get_subcategory shop=>car_parts for IE should be car');
+
 SELECT is(get_category('shop=>car_repair'::hstore, 'DE'), 'mobility', 'get_category shop=>car_repair for DE should be mobility');
 
 SELECT is(get_subcategory('shop=>car_repair'::hstore, 'DE'), 'car', 'get_subcategory shop=>car_repair for DE should be car');
@@ -7577,6 +8745,14 @@ SELECT is(get_subcategory('shop=>car_repair'::hstore, 'CD'), 'car', 'get_subcate
 SELECT is(get_category('shop=>car_repair'::hstore, 'IT'), 'mobility', 'get_category shop=>car_repair for IT should be mobility');
 
 SELECT is(get_subcategory('shop=>car_repair'::hstore, 'IT'), 'car', 'get_subcategory shop=>car_repair for IT should be car');
+
+SELECT is(get_category('shop=>car_repair'::hstore, 'GB'), 'mobility', 'get_category shop=>car_repair for GB should be mobility');
+
+SELECT is(get_subcategory('shop=>car_repair'::hstore, 'GB'), 'car', 'get_subcategory shop=>car_repair for GB should be car');
+
+SELECT is(get_category('shop=>car_repair'::hstore, 'IE'), 'mobility', 'get_category shop=>car_repair for IE should be mobility');
+
+SELECT is(get_subcategory('shop=>car_repair'::hstore, 'IE'), 'car', 'get_subcategory shop=>car_repair for IE should be car');
 
 SELECT is(get_category('shop=>car'::hstore, 'DE'), 'mobility', 'get_category shop=>car for DE should be mobility');
 
@@ -7682,6 +8858,14 @@ SELECT is(get_category('amenity=>vending_machine, vending=>bicycle_tube'::hstore
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>bicycle_tube'::hstore, 'IT'), 'bicycle_tube', 'get_subcategory amenity=>vending_machine, vending=>bicycle_tube for IT should be bicycle_tube');
 
+SELECT is(get_category('amenity=>vending_machine, vending=>bicycle_tube'::hstore, 'GB'), 'mobility', 'get_category amenity=>vending_machine, vending=>bicycle_tube for GB should be mobility');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bicycle_tube'::hstore, 'GB'), 'bicycle_tube', 'get_subcategory amenity=>vending_machine, vending=>bicycle_tube for GB should be bicycle_tube');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bicycle_tube'::hstore, 'IE'), 'mobility', 'get_category amenity=>vending_machine, vending=>bicycle_tube for IE should be mobility');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bicycle_tube'::hstore, 'IE'), 'bicycle_tube', 'get_subcategory amenity=>vending_machine, vending=>bicycle_tube for IE should be bicycle_tube');
+
 SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'DE'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for DE should be mobility');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'DE'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for DE should be public_transport_tickets');
@@ -7725,6 +8909,14 @@ SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_t
 SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'IT'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for IT should be mobility');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'IT'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for IT should be public_transport_tickets');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'GB'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for GB should be mobility');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'GB'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for GB should be public_transport_tickets');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'IE'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for IE should be mobility');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'IE'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for IE should be public_transport_tickets');
 
 SELECT is(get_category('shop=>tyres'::hstore, 'DE'), 'mobility', 'get_category shop=>tyres for DE should be mobility');
 
