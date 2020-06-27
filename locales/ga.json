@@ -1,5 +1,5 @@
 {
-  "lang": "Béarla",
+  "lang": "Gaeilge",
   "loading": "Ag lódáil, fan le do thoil....",
   "covid19-alert": "Lean treoracha an Rialtais. Tá TUSA freagrach.",
   "title": "Tá sé fós ar oscailt",
@@ -227,6 +227,10 @@
     "recycling_centre": "Ionad athchúrsála",
     "library": "Leabharlann",
     "copyshop": "Siopa cóipeála",
+    "museum": "Músaem",
+    "place_of_worship": "Ionad adhartha",
+    "sports_centre": "Ionad spóirt",
+    "beach_resort": "Ionad saoire cois trá",
     "health": "Sláinte",
     "pharmacy": "Cógaslann",
     "covid19_centre": "Ionad comhairliúcháin do COVID-19",
