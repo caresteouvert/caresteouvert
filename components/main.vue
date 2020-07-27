@@ -31,7 +31,7 @@
           <filter-list v-model="filter" />
         </main-menu>
       </v-navigation-drawer>
-      <v-content>
+      <v-main>
         <top-toolbar
           v-model="filter"
           @toggleSidebar="sidebar = !sidebar"
@@ -83,7 +83,7 @@
             <filter-list v-model="filter" />
           </main-menu>
         </bottom-menu>
-      </v-content>
+      </v-main>
     </div>
     <router-view>
       <div v-if="hasFilter">

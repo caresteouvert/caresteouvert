@@ -49,7 +49,7 @@
   "devDependencies": {
     "@mapbox/spritezero-cli": "https://github.com/francois2metz/spritezero-cli",
     "@nuxtjs/vuetify": "^1.11.0",
-    "@vue/test-utils": "^1.0.0-beta.32",
+    "@vue/test-utils": "^1.0.0",
     "babel-jest": "^26.1.0",
     "icon-font-generator": "^2.1.10",
     "jest-cli": "^25.1.0",
