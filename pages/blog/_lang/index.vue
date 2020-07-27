@@ -14,22 +14,13 @@
       v-for="post in posts"
       class="mb-4"
     >
-      <h2><a :href="`/${lang}/${post.slug}`">{{ post.title }}</a></h2>
+      <h2><a :href="post.path">{{ post.title }}</a></h2>
     </article>
   </v-container>
 </template>
 
 <script>
 import i18nMixin from '../../../components/mixins/i18n';
-const context = require.context('../../../articles/', true, /\.md$/);
-const blogs = {};
-context.keys().forEach((file) => {
-  const [_, locale, slug ] = file.match('./(.+)/(.+)\.md$');
-  if (!blogs[locale]) {
-    blogs[locale] = [];
-  }
-  blogs[locale].push(slug);
-});
 
 export default {
   mixins: [i18nMixin],
@@ -45,13 +36,7 @@ export default {
   },
 
   async fetch() {
-    blogs[this.lang].forEach(async (slug) => {
-      const res = await import(`~/articles/${this.lang}/${slug}.md`);
-      this.posts.push({
-        slug,
-        title: res.attributes.title
-      });
-    });
+    this.posts = await this.$content(this.lang).fetch();
   }
 }
 </script>

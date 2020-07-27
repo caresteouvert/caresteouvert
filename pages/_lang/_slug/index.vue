@@ -11,11 +11,10 @@
           class="logo"
         />
       </nuxt-link>
-      <h1>{{ title }}</h1>
+      <h1>{{ page.title }}</h1>
     </header>
-    <component
-      v-if="component"
-      :is="component"
+    <nuxt-content
+      :document="page"
       class="mt-5"
     />
   </v-container>
@@ -29,29 +28,27 @@ export default {
 
   head () {
     return {
-      title: `${this.title} - ${this.$t('title')}`,
+      title: `${this.page.title} - ${this.$t('title')}`,
       meta: [
         { hid: 'twittercard', name: 'twitter:card', content: 'summary_large_image' },
         { hid: 'twittersite', name: 'twitter:site', content: '@caresteouvert' },
         { hid: 'ogtype', property: 'og:type',  content: 'website' },
         { hid: 'ogurl', property: 'og:url',  content: `${this.$rootUrl}${this.$route.fullPath.substring(1)}` },
-        { hid: 'ogtitle', property: 'og:title', content: this.title },
+        { hid: 'ogtitle', property: 'og:title', content: this.page.title },
         { hid: 'ogimage', property: 'og:image', content: `${this.$rootUrl}${this.logoOg.substring(1)}` },
       ]
     };
   },
 
   data() {
-    return { title: '', component: null };
+    return { page: null };
   },
 
-  async created() {
+  async fetch() {
     const lang = this.$route.params.lang;
     const slug = this.$route.params.slug;
-    const res = await import(`~/articles/${lang}/${slug}.md`);
-
-    this.title = res.attributes.title;
-    this.component = res.vue.component;
+    const content = await this.$content(lang, slug).fetch();
+    this.page = content;
   }
 }
 </script>

@@ -1,6 +1,5 @@
 import glob from 'glob';
 import { resolve, basename } from 'path';
-import FMMode from 'frontmatter-markdown-loader/mode';
 
 const messages = {};
 glob.sync('./locales/*.json' ).forEach((file) => {
@@ -54,7 +53,8 @@ export default {
   */
   modules: [
     ['~/modules/i18n', { messages }],
-    ['@nuxtjs/redirect-module']
+    ['@nuxtjs/redirect-module'],
+    ['@nuxt/content'],
   ],
 
   redirect: [
@@ -78,23 +78,7 @@ export default {
   /*
   ** Build configuration
   */
-  build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, _ctx) {
-      config.module.rules.push(
-        {
-          test: /\.md$/,
-          loader: 'frontmatter-markdown-loader',
-          include: resolve(__dirname, 'articles'),
-          options: {
-            mode: [FMMode.VUE_COMPONENT]
-          }
-        }
-      )
-    }
-  },
+  build: {},
   router: {
     extendRoutes(routes, resolve) {
       const index = routes.findIndex(route => route.path === '/');
