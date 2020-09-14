@@ -143,15 +143,16 @@ describe('ContributeForm', () => {
     expect(form.vm.showOpeningHoursWithoutLockDown).toBe(false);
   });
 
-  it('reformat the id', () => {
-    const form = createWrapper({ place: { id: "n12345", properties: { tags: { } } } });
-    expect(form.vm.id).toEqual('node/12345');
-
-    form.setProps({ place: { id: "w12345" , properties: { tags: { } } } });
-    expect(form.vm.id).toEqual('way/12345');
-
-    form.setProps({ place: { id: "r12345", properties: { tags: { } } } });
-    expect(form.vm.id).toEqual('relation/12345');
+  describe('reformat the id', () => {
+    const createTest = (place, result) => {
+      it(`format the id with the result ${result}`, () => {
+        const form = createWrapper({ place });
+        expect(form.vm.id).toEqual(result);
+      });
+    };
+    createTest({ id: "n12345", properties: { tags: { } } }, 'node/12345');
+    createTest({ id: "w12345", properties: { tags: { } } }, 'way/12345');
+    createTest({ id: "r12345", properties: { tags: { } } }, 'relation/12345');
   });
 
   describe('format the payload', () => {

@@ -107,22 +107,24 @@ describe('OpeningHours', () => {
                                         "sunday": { hours: undefined }});
   });
 
-  it('format the next change', () => {
-    const detail = shallowMount(DetailOpeningHours, {
-      localVue,
-      stubs,
-      propsData: {
-        value: 'Mo-Sa 09:00-18:00'
-      }
-    });
-    localVue.prototype.$t = (name) => name;
-    expect(detail.vm.formatNextDate).toEqual('06:00 PM');
 
-    detail.setProps({ value: 'Tu-Sa 09:00-18:00' });
-    expect(detail.vm.formatNextDate).toEqual('details.opening_hours.tomorrow 09:00 AM');
-
-    detail.setProps({ value: 'We-Sa 09:00-18:00' });
-    expect(detail.vm.formatNextDate).toEqual('Wednesday 09:00 AM');
+  describe('format the next change', () => {
+    const createTest = (value, result) => {
+      it(`format ${value} with result ${result}`, () => {
+        const detail = shallowMount(DetailOpeningHours, {
+          localVue,
+          stubs,
+          propsData: {
+            value
+          }
+        });
+        localVue.prototype.$t = (name) => name;
+        expect(detail.vm.formatNextDate).toEqual(result);
+      });
+    }
+    createTest('Mo-Sa 09:00-18:00', '06:00 PM');
+    createTest('Tu-Sa 09:00-18:00', 'details.opening_hours.tomorrow 09:00 AM');
+    createTest('We-Sa 09:00-18:00', 'Wednesday 09:00 AM');
   });
 
   it('handle invalid opening hours', () => {
