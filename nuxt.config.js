@@ -9,7 +9,6 @@ glob.sync('./locales/*.json' ).forEach((file) => {
 });
 
 export default {
-  mode: 'universal',
   /*
   ** Headers of the page
   */
