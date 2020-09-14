@@ -18,6 +18,7 @@
       </v-card-subtitle>
     </v-card>
 
+    <closing-alert />
     <governement-alert />
 
     <v-divider v-if="showBrand"></v-divider>
@@ -47,6 +48,7 @@
 import MissingShopDialog from './missing_shop_dialog';
 import ChangeLanguage from './change_language';
 import LearnMore from './learn_more';
+import ClosingAlert from './closing_alert';
 import GovernementAlert from './governement_alert';
 import ToggleColor from './toggle_color';
 import i18nMixin from './mixins/i18n';
@@ -54,6 +56,7 @@ import i18nMixin from './mixins/i18n';
 export default {
   components: {
     ChangeLanguage,
+    ClosingAlert,
     GovernementAlert,
     LearnMore,
     MissingShopDialog,

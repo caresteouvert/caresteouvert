@@ -2,6 +2,10 @@
   "lang": "English",
   "loading": "Loading, please wait...",
   "covid19-alert": "Follow government restrictions. The responsibility is YOURS.",
+  "closing": {
+    "text": "« {brand} » is closing down september 30.",
+    "link": "Read more."
+  },
   "title": "It remains open",
   "subtitle": "Places that remain open during and after the lockdown",
   "search": "Type your search",
