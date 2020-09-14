@@ -6753,12 +6753,12 @@ mapnik-vector-tile@3.0.1:
   integrity sha512-w3/mKA8RUODR4qeVUyU8MhSqeuHqCLhCPdekqb+FBo+SRPXgxYOvffQBcu8mhEu6EK1n1Syrq26FcNcLfkYLEw==
 
 mapnik@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/mapnik/-/mapnik-4.4.0.tgz#1c31702d9df36f3957831cf8c6c171c4b3ca25fb"
-  integrity sha512-ENp0c33GPAvoVBp81HdcV9b9XGtMx3oxbnAaL1sh4yIV/ncocevaXKchgGmQsM3kRMf5qgby+TRHmYG7rV/+jg==
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/mapnik/-/mapnik-4.5.2.tgz#b1ad97a0b6bce4d7ec38a781f38a3b49516989a3"
+  integrity sha512-x1kEGSWjhRDKQ2EFSbFMaD5dpXIzkqA1UvLYg/swsdTgaadNuGEhEQYyAFwCTfMrnvtPiFoPZP2srw7xCV/jvg==
   dependencies:
     mapnik-vector-tile "3.0.1"
-    nan "~2.14.0"
+    node-addon-api "~3.0.0"
     node-pre-gyp "~0.13.0"
 
 markdown-it@^11.0.0:
@@ -7108,7 +7108,7 @@ nan@^2.1.0:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
-nan@^2.12.1, nan@~2.14.0:
+nan@^2.12.1:
   version "2.14.1"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.1.tgz#d7be34dfa3105b91494c3147089315eff8874b01"
   integrity sha512-isWHgVjnFjh2x2yuJ/tj3JbwoHu3UC2dX5G/88Cm24yB6YopVgxvBObDY7n5xW6ExmFhJpSEQqFPvq9zaXc8Jw==
@@ -7148,9 +7148,9 @@ neatequal@^1.0.0:
     varstream "^0.3.2"
 
 needle@^2.2.1:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/needle/-/needle-2.5.0.tgz#e6fc4b3cc6c25caed7554bd613a5cf0bac8c31c0"
-  integrity sha512-o/qITSDR0JCyCKEQ1/1bnUXMmznxabbwi/Y4WwJElf+evwJNFNwIDMCCt5IigFVxgeGBJESLohGtIS9gEzo1fA==
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/needle/-/needle-2.5.2.tgz#cf1a8fce382b5a280108bba90a14993c00e4010a"
+  integrity sha512-LbRIwS9BfkPvNwNHlsA41Q29kL2L/6VaOJ0qisM5lLWsTV3nP15abO5ITL6L81zqFhzjRKDAYjpcBcwM0AVvLQ==
   dependencies:
     debug "^3.2.6"
     iconv-lite "^0.4.4"
@@ -7185,6 +7185,11 @@ no-case@^3.0.3:
   dependencies:
     lower-case "^2.0.1"
     tslib "^1.10.0"
+
+node-addon-api@~3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.0.0.tgz#812446a1001a54f71663bed188314bba07e09247"
+  integrity sha512-sSHCgWfJ+Lui/u+0msF3oyCgvdkhxDbkCS6Q8uiJquzOimkJBvX6hl5aSSA7DR1XbMpdM8r7phjcF63sF4rkKg==
 
 node-fetch@^2.6.0, node-fetch@^2.6.1:
   version "2.6.1"
