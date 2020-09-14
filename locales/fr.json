@@ -2,6 +2,10 @@
   "lang": "Français",
   "loading": "Chargement en cours...",
   "covid19-alert": "Respectez les restrictions gouvernementales. Il en va de VOTRE responsabilité.",
+  "closing": {
+    "text": " « {brand} » ferme le 30 septembre.",
+    "link": "En savoir plus"
+  },
   "title": "Ça reste ouvert",
   "subtitle": "Les lieux ouverts durant la crise sanitaire",
   "search": "Rechercher",
@@ -153,10 +157,10 @@
       "limited": "Accès partiel en fauteuil"
     },
     "newsagent": {
-      "yes": "Vente de journaux"
+      "yes": "Journaux"
     },
     "tobacco": {
-      "yes": "Vente de tabac"
+      "yes": "Tabac"
     },
     "vending": {
       "pizza": "Pizza",
@@ -227,6 +231,10 @@
     "recycling_centre": "Déchèterie",
     "library": "Bibliothèque",
     "copyshop": "Reprographie",
+    "museum": "Musée",
+    "place_of_worship": "Lieu de culte",
+    "sports_centre": "Centre de sport",
+    "beach_resort": "Station balnéaire",
     "health": "Santé",
     "pharmacy": "Pharmacie",
     "covid19_centre": "Centre de consultation Covid-19",
@@ -273,7 +281,6 @@
     "shoes": "Chaussures",
     "bag": "Maroquinerie",
     "beauty": "Beauté",
-    "child_clothes": "Vêtements pour enfants",
     "clothes": "Vêtements",
     "cosmetics": "Cosmétiques",
     "hairdresser": "Salon de coiffure",
@@ -335,6 +342,9 @@
     "bicycle_tube": "Distributeur de chambres à air",
     "public_transport_tickets": "Distributeur de titres de transport",
     "tyres": "Pneus"
+  },
+  "qa": {
+    "title": "Assurance qualité"
   },
   "external": {
     "mobile": {
