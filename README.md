@@ -2,6 +2,10 @@
 
 ![Ça reste ouvert](assets/logo-FR-mobile.svg)
 
+Ça reste ouvert is now closed. Feel free to fork it. Here is the list of active forks:
+
+- [Cartomobil'ité](https://github.com/PanierAvide/cartomobil-ite)
+
 [Ça reste ouvert](https://caresteouvert.fr), la carte collaborative des lieux ouverts durant la crise sanitaire / the collaborative map of the places open during the health crisis #Covid19.
 
 Toutes les informations sur le projet sont ici / All informations about the project here : https://blog.caresteouvert.fr/about
