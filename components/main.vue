@@ -13,7 +13,7 @@
         />
       </v-card-title>
       <v-card-subtitle class="pb-2 text-center">
-        {{ brand }} is now closed! Thanks to all contributors, partners and visitors. See you later.
+        {{ brand }} is now closed! Thanks to all contributors, partners and visitors. <a :href="countryConfig.government">Wear a mask, wash your hands</a> or see you soon.
       </v-card-subtitle>
     </v-card>
   </div>
