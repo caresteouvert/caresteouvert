@@ -2,6 +2,10 @@
   "lang": "Deutsch",
   "loading": "Karte wird geladen, bitte warten…",
   "covid19-alert": "Bitte folge den Anweisungen der zuständigen Behörden.",
+  "closing": {
+    "text": "« {brand} » wird am 30. September geschlossen.",
+    "link": "Mehr erfahren"
+  },
   "title": "Bleibt offen",
   "subtitle": "Alle Geschäfte, die geöffnet sind.",
   "search": "Suchbegriff eingeben",
@@ -93,7 +97,7 @@
       "details": "Wichtige Anmerkungen (optional, erzeugt einen OSM-Hinweis und erfordert eine manuelle Bearbeitung durch die OpenStreetMap-Community)",
       "details_error": "Sollte entweder leer oder mindestens 10 Zeichen lang sein",
       "definite_closing": "Dauerhaft geschlossen",
-      "details_definite_closing": "Dieser Ort ist dauerhaft geschlossen. Was ist dort nun? Je mehr Details, desto besser, zum Beispiel: Gebäude abgerissen, neues Geschäft…"
+      "details_definite_closing": "Dieser Ort ist dauerhaft geschlossen. Was ist dort nun? Je mehr Details, desto besser, zum Beispiel: Gebäude abgerissen, leerstehend, neues Geschäft…"
     },
     "submit": "Meldung abschicken",
     "cancel": "Abbrechen"
