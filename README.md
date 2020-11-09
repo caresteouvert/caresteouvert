@@ -6,6 +6,8 @@
 
 Toutes les informations sur le projet sont ici / All informations about the project here : https://blog.caresteouvert.fr/about
 
+Ça reste ouvert a été forké : [Cartomobil'ité](https://github.com/PanierAvide/cartomobil-ite)
+
 ## Architecture
 
 To deploy a complete instance of "Ça reste ouvert", you needs:
@@ -16,7 +18,6 @@ To deploy a complete instance of "Ça reste ouvert", you needs:
 - [pg_featureserv](https://access.crunchydata.com/documentation/pg_featureserv/latest/)
 - [Ça reste ouvert backend](https://github.com/caresteouvert/caresteouvert_backend) (complementary API)
 
-Ça reste ouvert a été forké : [Cartomobil'ité](https://github.com/PanierAvide/cartomobil-ite)
 
 ## Development
 
