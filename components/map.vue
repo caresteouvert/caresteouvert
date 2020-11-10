@@ -161,7 +161,8 @@ function getLayers(theme) {
           19, ['literal', [0, 1.5]]
         ],
         "text-padding": 2,
-        "text-size": 12
+        "text-size": 12,
+        "text-optional": true
       },
       paint: {
         "icon-opacity": conditionalOpacity,
