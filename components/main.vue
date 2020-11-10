@@ -109,7 +109,7 @@ import config from '../config.json';
 import { getCookie, setCookie } from '../lib/cookie';
 import { encode, decode, encodePosition, decodePosition, encodeFilter, decodeFilter, findBrand } from '../lib/url';
 import isMobile from './mixins/is_mobile';
-import AppsSheet from './apps_sheet';
+// import AppsSheet from './apps_sheet';
 import MainMenu from './main_menu';
 import FilterList from './filter_list';
 import FilterResults from './filter_results';
@@ -122,7 +122,7 @@ const MAP_VIEW_COOKIE = 'mapView';
 
 export default {
   components: {
-    AppsSheet,
+    // AppsSheet,
     BottomMenu,
     FilterList,
     FilterResults,
