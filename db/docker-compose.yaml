@@ -56,7 +56,7 @@ services:
     environment:
       <<: *common-environment
     ports:
-      - 7800:7800
+      - 127.0.0.1:7800:7800
     restart: always
 
   pg_featureserv:
@@ -66,7 +66,7 @@ services:
     environment:
       <<: *common-environment
     ports:
-      - 9000:9000
+      - 127.0.0.1:9000:9000
     restart: always
 
   geoip:
@@ -75,7 +75,7 @@ services:
     environment:
       PORT: 9090
     ports:
-      - 9090:9090
+      - 127.0.0.1:9090:9090
 
   web:
     build:
@@ -87,9 +87,9 @@ services:
       <<: *common-environment
       <<: *osm-access-environment
       NOSSL: 1
-      PORT: ${WEB_PORT:-8080}
+      PORT: 8080
     ports:
-      - "${WEB_PORT:-8080}:${WEB_PORT:-8080}"
+      - "${WEB_PORT:-8080}:8080"
     restart: always
 
   worker:
