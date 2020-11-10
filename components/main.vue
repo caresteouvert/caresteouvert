@@ -206,7 +206,7 @@ export default {
 
   methods: {
     loadAndOverrideMapStyle() {
-      return fetch(`${config.mapStyle}${config.maptilerApiKey}`)
+      return fetch(`${config.mapStyle}${config.tileApiKey}`)
         .then(res => res.json())
         .then((data) => {
           data.sprite = `${window.location.origin}/sprite/caresteouvert`;

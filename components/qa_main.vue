@@ -12,7 +12,7 @@ import * as config from '../config.json';
 export default {
   data() {
     return {
-      mapStyle: config.mapStyle + config.maptilerApiKey
+      mapStyle: config.mapStyle + config.tileApiKey
     }
   }
 }
