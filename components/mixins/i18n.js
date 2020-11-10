@@ -23,6 +23,7 @@ import taimidoscailteMobile from '../../assets/logo-GA-mobile.svg';
 import caresteouvertOg from '../../assets/caresteouvert-og.jpg';
 import bleibtoffenOg from '../../assets/bleibtoffen-og.jpg';
 import restiamoapertiOg from '../../assets/restiamoaperti-og.jpg';
+import lyon from '../../assets/logo-FR-lyon.svg';
 
 function bestLocale(obj, locale) {
   Object.entries(obj).forEach(e => {
@@ -92,6 +93,12 @@ export default {
         stayingopen,
         taimidoscailte
       }[this.brandId] || caresteouvertOg;
+    },
+
+    logoLocal() {
+      return {
+        lyon
+      }[this.brandId];
     },
 
     brand() {

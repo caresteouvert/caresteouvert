@@ -16,6 +16,13 @@
       <v-card-subtitle class="pb-2 text-center">
         {{ $t('subtitle') }}
       </v-card-subtitle>
+      <v-card-title class="pa-0 ma-0 mb-3 justify-center">
+        <img
+          :alt="brand"
+          :src="logoLocal"
+          class="pb-2 pt-1 px-3 logo"
+        />
+      </v-card-title>
     </v-card>
 
     <governement-alert />
