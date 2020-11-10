@@ -1,13 +1,22 @@
 #!/bin/bash
 
-GIT_ROOT=$(dirname $(dirname $(realpath ${0})))
-CONNEXION_STRING=${1}
+set -e
 
-psql ${CONNEXION_STRING} -c "DROP TABLE IF EXISTS tmp_countries_subcountries CASCADE"
+docker-compose exec -u postgres postgres psql -c "DROP TABLE IF EXISTS tmp_countries_subcountries CASCADE"
 
-for g in `ls geojson/*.geojson`
-do
-    echo "Layer ${g} :"
-    docker run --network=host -v ${GIT_ROOT}:/git/covid19_map -ti osgeo/gdal:alpine-small-latest ogr2ogr -f "PostgreSQL" PG:"${CONNEXION_STRING}" -s_srs EPSG:4326 -t_srs EPSG:3857 -append -progress -nln tmp_countries_subcountries -skipfailures /git/covid19_map/db/${g}
-done
-psql ${CONNEXION_STRING} -f post_load_countries.sql
+docker-compose run --rm gdal sh -c '
+    for g in /git/covid19_map/db/geojson/*.geojson; do
+        echo "Layer ${g} :"
+        ogr2ogr \
+            -f "PostgreSQL" PG:"dbname=$POSTGRES_DB host=postgres user=$POSTGRES_USER password=$POSTGRES_USER" \
+            -s_srs EPSG:4326 \
+            -t_srs EPSG:3857 \
+            -append \
+            -progress \
+            -nln tmp_countries_subcountries \
+            -skipfailures \
+            ${g}
+    done
+'
+
+docker-compose exec -u postgres postgres psql -v ON_ERROR_STOP=1 -f /git/covid19_map/db/post_load_countries.sql

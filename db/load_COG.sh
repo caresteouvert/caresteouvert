@@ -1,6 +1,8 @@
 #!/bin/bash
 
-CONNEXION=${1}
+set -e
+
+DATABASE_URL=${1:-${DATABASE_URL}}
 
 cd cog && rm *.csv
 
@@ -11,8 +13,8 @@ CSV_COMMUNE=communes2020.csv
 CSV_DEPARTEMENT=departement2020.csv
 CSV_REGION=region2020.csv
 
-psql ${CONNEXION} -f create_table_cog.sql
-cat ${CSV_COMMUNE}|       psql ${CONNEXION} -c "TRUNCATE TABLE cog_commune;       COPY cog_commune FROM stdin WITH csv header delimiter ',';"
-cat ${CSV_DEPARTEMENT}|   psql ${CONNEXION} -c "TRUNCATE TABLE cog_departement;   COPY cog_departement FROM stdin WITH csv header delimiter ',';"
-cat ${CSV_REGION}|        psql ${CONNEXION} -c "TRUNCATE TABLE cog_region;        COPY cog_region FROM stdin WITH csv header delimiter ',';"
+psql ${DATABASE_URL} -f create_table_cog.sql
+cat ${CSV_COMMUNE}|       psql ${DATABASE_URL} -c "TRUNCATE TABLE cog_commune;       COPY cog_commune FROM stdin WITH csv header delimiter ',';"
+cat ${CSV_DEPARTEMENT}|   psql ${DATABASE_URL} -c "TRUNCATE TABLE cog_departement;   COPY cog_departement FROM stdin WITH csv header delimiter ',';"
+cat ${CSV_REGION}|        psql ${DATABASE_URL} -c "TRUNCATE TABLE cog_region;        COPY cog_region FROM stdin WITH csv header delimiter ',';"
 cd -

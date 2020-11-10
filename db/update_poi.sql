@@ -309,14 +309,14 @@ WHERE pc.osm_id IS NULL;
 
 -- Index creation and table switch
 REINDEX TABLE poi_osm_next;
-CREATE INDEX poi_osm_next_geom_idx ON poi_osm_next USING GIST(geom);
-CREATE INDEX poi_osm_next_status_idx ON poi_osm_next(status);
-CREATE INDEX poi_osm_next_opening_hours_idx ON poi_osm_next(opening_hours);
-CREATE INDEX poi_osm_next_has_contact_idx ON poi_osm_next(has_contact);
+CREATE INDEX IF NOT EXISTS poi_osm_next_geom_idx ON poi_osm_next USING GIST(geom);
+CREATE INDEX IF NOT EXISTS poi_osm_next_status_idx ON poi_osm_next(status);
+CREATE INDEX IF NOT EXISTS poi_osm_next_opening_hours_idx ON poi_osm_next(opening_hours);
+CREATE INDEX IF NOT EXISTS poi_osm_next_has_contact_idx ON poi_osm_next(has_contact);
 
 CREATE SCHEMA IF NOT EXISTS previous;
 DROP TABLE IF EXISTS previous.poi_osm CASCADE;
-ALTER TABLE poi_osm SET SCHEMA previous;
+ALTER TABLE IF EXISTS poi_osm SET SCHEMA previous;
 
 --DROP TABLE IF EXISTS poi_osm CASCADE;
 ALTER TABLE poi_osm_next RENAME TO poi_osm;

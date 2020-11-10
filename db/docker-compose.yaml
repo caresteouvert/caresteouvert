@@ -1,0 +1,105 @@
+version: '3.7'
+
+volumes:
+  pgdata:
+  imposm_cache:
+
+x-common-environment: &common-environment
+    DATABASE_URL: postgresql://$POSTGRES_USER:$POSTGRES_PASSWORD@$POSTGRES_PASSWORD/$POSTGRES_DB
+    POSTGRES_DB: $POSTGRES_DB
+    POSTGRES_USER: $POSTGRES_USER
+    POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+
+x-osm-access-environment: &osm-access-environment
+    DELAY_OSM: ${DELAY_OSM:-}
+    OSM_API_URL: ${OSM_API_URL:-}
+    OSM_API_KEY: ${OSM_API_KEY:-}
+    OSM_API_SECRET: ${OSM_API_SECRET:-}
+    OSM_USER: ${OSM_USER:-}
+    OSM_PASS: ${OSM_PASS:-}
+    OSM_LANG: ${OSM_LANG:-}
+
+services:
+  postgres:
+    image: postgis/postgis:13-3.0
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../:/git/covid19_map
+    environment:
+      <<: *common-environment
+    restart: always
+
+  gdal:
+    image: osgeo/gdal:alpine-small-latest
+    depends_on:
+      - postgres
+    volumes:
+      - ../:/git/covid19_map
+    environment:
+      <<: *common-environment
+
+  osm_imposm:
+    build: .
+    depends_on:
+      - postgres
+    volumes:
+      - ../:/git/covid19_map
+      - ./data:/data
+      - imposm_cache:/cache
+    environment:
+      <<: *common-environment
+
+  pg_tileserv:
+    image: pramsey/pg_tileserv
+    depends_on:
+      - postgres
+    environment:
+      <<: *common-environment
+    ports:
+      - 7800:7800
+    restart: always
+
+  pg_featureserv:
+    image: pramsey/pg_featureserv
+    depends_on:
+      - postgres
+    environment:
+      <<: *common-environment
+    ports:
+      - 9000:9000
+    restart: always
+
+  geoip:
+    build:
+      context: geoip
+    environment:
+      PORT: 9090
+    ports:
+      - 9090:9090
+
+  web:
+    build:
+      context: caresteouvert_backend
+      dockerfile: docker/web/Dockerfile
+    depends_on:
+      - postgres
+    environment:
+      <<: *common-environment
+      <<: *osm-access-environment
+      NOSSL: 1
+      PORT: ${WEB_PORT:-8080}
+    ports:
+      - "${WEB_PORT:-8080}:${WEB_PORT:-8080}"
+    restart: always
+
+  worker:
+    build:
+      context: caresteouvert_backend
+      dockerfile: docker/worker/Dockerfile
+    depends_on:
+      - postgres
+    environment:
+      <<: *common-environment
+      <<: *osm-access-environment
+      NOSSL: 1
+    restart: always

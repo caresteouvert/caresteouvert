@@ -26,13 +26,13 @@ RUN rm -rf /tmp/imposm
 WORKDIR /tmp/osmosis
 RUN wget -N https://github.com/openstreetmap/osmosis/releases/download/0.47.4/osmosis-0.47.4.zip \
     && unzip -o osmosis-0.47.4.zip \
-    && mv bin/osmosis /usr/bin \ 
+    && mv bin/osmosis /usr/bin \
     && chmod a+x /usr/bin/osmosis \
     && mv config /usr/config \
     && mv lib/default/ /usr/lib/default
 WORKDIR /tmp
 RUN rm -rf /tmp/osmosis
-    
+
 # Osmconvert
 WORKDIR /tmp/osmconvert
 RUN wget -N http://m.m.i24.cc/osmconvert64 \

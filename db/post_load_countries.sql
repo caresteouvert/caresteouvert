@@ -14,6 +14,6 @@ FROM complex_areas_to_subdivide;
 
 CREATE SCHEMA IF NOT EXISTS previous;
 DROP TABLE IF EXISTS previous.countries_subcountries CASCADE;
-ALTER TABLE countries_subcountries SET SCHEMA previous;
+ALTER TABLE IF EXISTS countries_subcountries SET SCHEMA previous;
 ALTER TABLE tmp_countries_subcountries RENAME TO countries_subcountries;
 ALTER INDEX tmp_countries_subcountries_wkb_geometry_geom_idx RENAME TO countries_subcountries_wkb_geometry_geom_idx;
