@@ -70,17 +70,12 @@ services:
     restart: always
 
   geoip:
-    build:
-      context: geoip
     environment:
       PORT: 9090
     ports:
       - 127.0.0.1:9090:9090
 
   web:
-    build:
-      context: caresteouvert_backend
-      dockerfile: docker/web/Dockerfile
     depends_on:
       - postgres
     environment:
@@ -93,13 +88,16 @@ services:
     restart: always
 
   worker:
-    build:
-      context: caresteouvert_backend
-      dockerfile: docker/worker/Dockerfile
     depends_on:
       - postgres
     environment:
       <<: *common-environment
       <<: *osm-access-environment
       NOSSL: 1
+    restart: always
+    command: npm run start:osm
+
+  front:
+    ports:
+      - "${FRONT_PORT:-8081}:1234"
     restart: always

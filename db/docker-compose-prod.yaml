@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  geoip:
+    image: ${DOCKER_REGISTRY}/caresteouvert-geoip:latest
+  web:
+    image: ${DOCKER_REGISTRY}/caresteouvert-back:latest
+  worker:
+    image: ${DOCKER_REGISTRY}/caresteouvert-back:latest
+  front:
+    image: ${DOCKER_REGISTRY}/caresteouvert-front:latest

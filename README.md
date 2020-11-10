@@ -38,6 +38,14 @@ yarn run dev
 
 And go to http://localhost:1234/.
 
+## Production
+
+The stack can be started using already built images, on a production environment:
+```
+cd db/
+docker-compose -f docker-compose.yaml -f docker-compose-prod.yaml up -d pg_tileserv pg_featureserv geoip web worker front
+```
+
 ## Translation
 
 Translations are managed via Transifex, [go here to translate it in your language](https://www.transifex.com/openlevelup/ca-reste-ouvert/languages/).
