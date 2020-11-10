@@ -422,39 +422,6 @@
         }
       }
     },
-    "drugs": {
-      "name": "Drugs",
-      "subcategories": {
-        "tobacco": {
-          "name": "Tobacco",
-          "osm_tags": [
-            { "shop": "tobacco|newsagent;tobacco|tobacco;newsagent" },
-            { "tobacco": "yes|only" },
-            { "amenity": "vending_machine", "vending": "cigarettes" }
-          ],
-          "areas": "all",
-          "form_details": [ "delivery", "access", "mask" ]
-        },
-        "e_cigarette": {
-          "name": "E-cigarette",
-          "osm_tags": [
-            { "shop": "e-cigarette" },
-            { "amenity": "vending_machine", "vending": "e-cigarettes" }
-          ],
-          "areas": "all",
-          "form_details": [ "delivery", "access" ]
-        },
-        "alcohol": {
-          "name": "Alcohol store",
-          "osm_tags": [
-            { "shop": "alcohol|beverages|wine" }
-          ],
-          "-areas": [ "CD" ],
-          "form_details": [ "delivery", "access" ]
-        }
-      },
-      "-mapfilter": [ "CD" ]
-    },
     "money": {
       "name": "Money",
       "subcategories": {
@@ -882,6 +849,25 @@
           ],
           "areas": [ "DE", "AT", "CH", "FI", "FR", "IT" ],
           "form_details": [ "mask", "hydroalcoholic_gel" ]
+        },
+        "tobacco": {
+          "name": "Tobacco",
+          "osm_tags": [
+            { "shop": "tobacco|newsagent;tobacco|tobacco;newsagent" },
+            { "tobacco": "yes|only" },
+            { "amenity": "vending_machine", "vending": "cigarettes" }
+          ],
+          "areas": "all",
+          "form_details": [ "delivery", "access", "mask" ]
+        },
+        "e_cigarette": {
+          "name": "E-cigarette",
+          "osm_tags": [
+            { "shop": "e-cigarette" },
+            { "amenity": "vending_machine", "vending": "e-cigarettes" }
+          ],
+          "areas": "all",
+          "form_details": [ "delivery", "access" ]
         }
       }
     },

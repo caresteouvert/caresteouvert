@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(4466);
+SELECT plan(4394);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -5366,566 +5366,6 @@ SELECT is(get_category('takeaway:covid19=>only, amenity=>pub'::hstore, 'IE'), 'e
 
 SELECT is(get_subcategory('takeaway:covid19=>only, amenity=>pub'::hstore, 'IE'), 'bar', 'get_subcategory takeaway:covid19=>only, amenity=>pub for IE should be bar');
 
-SELECT is(get_category('shop=>tobacco'::hstore, 'DE'), 'drugs', 'get_category shop=>tobacco for DE should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco'::hstore, 'DE'), 'tobacco', 'get_subcategory shop=>tobacco for DE should be tobacco');
-
-SELECT is(get_category('shop=>tobacco'::hstore, 'FR'), 'drugs', 'get_category shop=>tobacco for FR should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco'::hstore, 'FR'), 'tobacco', 'get_subcategory shop=>tobacco for FR should be tobacco');
-
-SELECT is(get_category('shop=>tobacco'::hstore, 'ES'), 'drugs', 'get_category shop=>tobacco for ES should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco'::hstore, 'ES'), 'tobacco', 'get_subcategory shop=>tobacco for ES should be tobacco');
-
-SELECT is(get_category('shop=>tobacco'::hstore, 'AD'), 'drugs', 'get_category shop=>tobacco for AD should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco'::hstore, 'AD'), 'tobacco', 'get_subcategory shop=>tobacco for AD should be tobacco');
-
-SELECT is(get_category('shop=>tobacco'::hstore, 'CH'), 'drugs', 'get_category shop=>tobacco for CH should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco'::hstore, 'CH'), 'tobacco', 'get_subcategory shop=>tobacco for CH should be tobacco');
-
-SELECT is(get_category('shop=>tobacco'::hstore, 'AT'), 'drugs', 'get_category shop=>tobacco for AT should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco'::hstore, 'AT'), 'tobacco', 'get_subcategory shop=>tobacco for AT should be tobacco');
-
-SELECT is(get_category('shop=>tobacco'::hstore, 'PH'), 'drugs', 'get_category shop=>tobacco for PH should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco'::hstore, 'PH'), 'tobacco', 'get_subcategory shop=>tobacco for PH should be tobacco');
-
-SELECT is(get_category('shop=>tobacco'::hstore, 'FI'), 'drugs', 'get_category shop=>tobacco for FI should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco'::hstore, 'FI'), 'tobacco', 'get_subcategory shop=>tobacco for FI should be tobacco');
-
-SELECT is(get_category('shop=>tobacco'::hstore, 'MC'), 'drugs', 'get_category shop=>tobacco for MC should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco'::hstore, 'MC'), 'tobacco', 'get_subcategory shop=>tobacco for MC should be tobacco');
-
-SELECT is(get_category('shop=>tobacco'::hstore, 'CD'), 'drugs', 'get_category shop=>tobacco for CD should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco'::hstore, 'CD'), 'tobacco', 'get_subcategory shop=>tobacco for CD should be tobacco');
-
-SELECT is(get_category('shop=>tobacco'::hstore, 'IT'), 'drugs', 'get_category shop=>tobacco for IT should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco'::hstore, 'IT'), 'tobacco', 'get_subcategory shop=>tobacco for IT should be tobacco');
-
-SELECT is(get_category('shop=>tobacco'::hstore, 'GB'), 'drugs', 'get_category shop=>tobacco for GB should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco'::hstore, 'GB'), 'tobacco', 'get_subcategory shop=>tobacco for GB should be tobacco');
-
-SELECT is(get_category('shop=>tobacco'::hstore, 'IE'), 'drugs', 'get_category shop=>tobacco for IE should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco'::hstore, 'IE'), 'tobacco', 'get_subcategory shop=>tobacco for IE should be tobacco');
-
-SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'DE'), 'drugs', 'get_category shop=>newsagent;tobacco for DE should be drugs');
-
-SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'DE'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for DE should be tobacco');
-
-SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'FR'), 'drugs', 'get_category shop=>newsagent;tobacco for FR should be drugs');
-
-SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'FR'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for FR should be tobacco');
-
-SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'ES'), 'drugs', 'get_category shop=>newsagent;tobacco for ES should be drugs');
-
-SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'ES'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for ES should be tobacco');
-
-SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'AD'), 'drugs', 'get_category shop=>newsagent;tobacco for AD should be drugs');
-
-SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'AD'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for AD should be tobacco');
-
-SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'CH'), 'drugs', 'get_category shop=>newsagent;tobacco for CH should be drugs');
-
-SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'CH'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for CH should be tobacco');
-
-SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'AT'), 'drugs', 'get_category shop=>newsagent;tobacco for AT should be drugs');
-
-SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'AT'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for AT should be tobacco');
-
-SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'PH'), 'drugs', 'get_category shop=>newsagent;tobacco for PH should be drugs');
-
-SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'PH'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for PH should be tobacco');
-
-SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'FI'), 'drugs', 'get_category shop=>newsagent;tobacco for FI should be drugs');
-
-SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'FI'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for FI should be tobacco');
-
-SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'MC'), 'drugs', 'get_category shop=>newsagent;tobacco for MC should be drugs');
-
-SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'MC'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for MC should be tobacco');
-
-SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'CD'), 'drugs', 'get_category shop=>newsagent;tobacco for CD should be drugs');
-
-SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'CD'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for CD should be tobacco');
-
-SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'IT'), 'drugs', 'get_category shop=>newsagent;tobacco for IT should be drugs');
-
-SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'IT'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for IT should be tobacco');
-
-SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'GB'), 'drugs', 'get_category shop=>newsagent;tobacco for GB should be drugs');
-
-SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'GB'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for GB should be tobacco');
-
-SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'IE'), 'drugs', 'get_category shop=>newsagent;tobacco for IE should be drugs');
-
-SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'IE'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for IE should be tobacco');
-
-SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'DE'), 'drugs', 'get_category shop=>tobacco;newsagent for DE should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'DE'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for DE should be tobacco');
-
-SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'FR'), 'drugs', 'get_category shop=>tobacco;newsagent for FR should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'FR'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for FR should be tobacco');
-
-SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'ES'), 'drugs', 'get_category shop=>tobacco;newsagent for ES should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'ES'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for ES should be tobacco');
-
-SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'AD'), 'drugs', 'get_category shop=>tobacco;newsagent for AD should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'AD'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for AD should be tobacco');
-
-SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'CH'), 'drugs', 'get_category shop=>tobacco;newsagent for CH should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'CH'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for CH should be tobacco');
-
-SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'AT'), 'drugs', 'get_category shop=>tobacco;newsagent for AT should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'AT'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for AT should be tobacco');
-
-SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'PH'), 'drugs', 'get_category shop=>tobacco;newsagent for PH should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'PH'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for PH should be tobacco');
-
-SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'FI'), 'drugs', 'get_category shop=>tobacco;newsagent for FI should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'FI'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for FI should be tobacco');
-
-SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'MC'), 'drugs', 'get_category shop=>tobacco;newsagent for MC should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'MC'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for MC should be tobacco');
-
-SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'CD'), 'drugs', 'get_category shop=>tobacco;newsagent for CD should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'CD'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for CD should be tobacco');
-
-SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'IT'), 'drugs', 'get_category shop=>tobacco;newsagent for IT should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'IT'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for IT should be tobacco');
-
-SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'GB'), 'drugs', 'get_category shop=>tobacco;newsagent for GB should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'GB'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for GB should be tobacco');
-
-SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'IE'), 'drugs', 'get_category shop=>tobacco;newsagent for IE should be drugs');
-
-SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'IE'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for IE should be tobacco');
-
-SELECT is(get_category('tobacco=>yes'::hstore, 'DE'), 'drugs', 'get_category tobacco=>yes for DE should be drugs');
-
-SELECT is(get_subcategory('tobacco=>yes'::hstore, 'DE'), 'tobacco', 'get_subcategory tobacco=>yes for DE should be tobacco');
-
-SELECT is(get_category('tobacco=>yes'::hstore, 'FR'), 'drugs', 'get_category tobacco=>yes for FR should be drugs');
-
-SELECT is(get_subcategory('tobacco=>yes'::hstore, 'FR'), 'tobacco', 'get_subcategory tobacco=>yes for FR should be tobacco');
-
-SELECT is(get_category('tobacco=>yes'::hstore, 'ES'), 'drugs', 'get_category tobacco=>yes for ES should be drugs');
-
-SELECT is(get_subcategory('tobacco=>yes'::hstore, 'ES'), 'tobacco', 'get_subcategory tobacco=>yes for ES should be tobacco');
-
-SELECT is(get_category('tobacco=>yes'::hstore, 'AD'), 'drugs', 'get_category tobacco=>yes for AD should be drugs');
-
-SELECT is(get_subcategory('tobacco=>yes'::hstore, 'AD'), 'tobacco', 'get_subcategory tobacco=>yes for AD should be tobacco');
-
-SELECT is(get_category('tobacco=>yes'::hstore, 'CH'), 'drugs', 'get_category tobacco=>yes for CH should be drugs');
-
-SELECT is(get_subcategory('tobacco=>yes'::hstore, 'CH'), 'tobacco', 'get_subcategory tobacco=>yes for CH should be tobacco');
-
-SELECT is(get_category('tobacco=>yes'::hstore, 'AT'), 'drugs', 'get_category tobacco=>yes for AT should be drugs');
-
-SELECT is(get_subcategory('tobacco=>yes'::hstore, 'AT'), 'tobacco', 'get_subcategory tobacco=>yes for AT should be tobacco');
-
-SELECT is(get_category('tobacco=>yes'::hstore, 'PH'), 'drugs', 'get_category tobacco=>yes for PH should be drugs');
-
-SELECT is(get_subcategory('tobacco=>yes'::hstore, 'PH'), 'tobacco', 'get_subcategory tobacco=>yes for PH should be tobacco');
-
-SELECT is(get_category('tobacco=>yes'::hstore, 'FI'), 'drugs', 'get_category tobacco=>yes for FI should be drugs');
-
-SELECT is(get_subcategory('tobacco=>yes'::hstore, 'FI'), 'tobacco', 'get_subcategory tobacco=>yes for FI should be tobacco');
-
-SELECT is(get_category('tobacco=>yes'::hstore, 'MC'), 'drugs', 'get_category tobacco=>yes for MC should be drugs');
-
-SELECT is(get_subcategory('tobacco=>yes'::hstore, 'MC'), 'tobacco', 'get_subcategory tobacco=>yes for MC should be tobacco');
-
-SELECT is(get_category('tobacco=>yes'::hstore, 'CD'), 'drugs', 'get_category tobacco=>yes for CD should be drugs');
-
-SELECT is(get_subcategory('tobacco=>yes'::hstore, 'CD'), 'tobacco', 'get_subcategory tobacco=>yes for CD should be tobacco');
-
-SELECT is(get_category('tobacco=>yes'::hstore, 'IT'), 'drugs', 'get_category tobacco=>yes for IT should be drugs');
-
-SELECT is(get_subcategory('tobacco=>yes'::hstore, 'IT'), 'tobacco', 'get_subcategory tobacco=>yes for IT should be tobacco');
-
-SELECT is(get_category('tobacco=>yes'::hstore, 'GB'), 'drugs', 'get_category tobacco=>yes for GB should be drugs');
-
-SELECT is(get_subcategory('tobacco=>yes'::hstore, 'GB'), 'tobacco', 'get_subcategory tobacco=>yes for GB should be tobacco');
-
-SELECT is(get_category('tobacco=>yes'::hstore, 'IE'), 'drugs', 'get_category tobacco=>yes for IE should be drugs');
-
-SELECT is(get_subcategory('tobacco=>yes'::hstore, 'IE'), 'tobacco', 'get_subcategory tobacco=>yes for IE should be tobacco');
-
-SELECT is(get_category('tobacco=>only'::hstore, 'DE'), 'drugs', 'get_category tobacco=>only for DE should be drugs');
-
-SELECT is(get_subcategory('tobacco=>only'::hstore, 'DE'), 'tobacco', 'get_subcategory tobacco=>only for DE should be tobacco');
-
-SELECT is(get_category('tobacco=>only'::hstore, 'FR'), 'drugs', 'get_category tobacco=>only for FR should be drugs');
-
-SELECT is(get_subcategory('tobacco=>only'::hstore, 'FR'), 'tobacco', 'get_subcategory tobacco=>only for FR should be tobacco');
-
-SELECT is(get_category('tobacco=>only'::hstore, 'ES'), 'drugs', 'get_category tobacco=>only for ES should be drugs');
-
-SELECT is(get_subcategory('tobacco=>only'::hstore, 'ES'), 'tobacco', 'get_subcategory tobacco=>only for ES should be tobacco');
-
-SELECT is(get_category('tobacco=>only'::hstore, 'AD'), 'drugs', 'get_category tobacco=>only for AD should be drugs');
-
-SELECT is(get_subcategory('tobacco=>only'::hstore, 'AD'), 'tobacco', 'get_subcategory tobacco=>only for AD should be tobacco');
-
-SELECT is(get_category('tobacco=>only'::hstore, 'CH'), 'drugs', 'get_category tobacco=>only for CH should be drugs');
-
-SELECT is(get_subcategory('tobacco=>only'::hstore, 'CH'), 'tobacco', 'get_subcategory tobacco=>only for CH should be tobacco');
-
-SELECT is(get_category('tobacco=>only'::hstore, 'AT'), 'drugs', 'get_category tobacco=>only for AT should be drugs');
-
-SELECT is(get_subcategory('tobacco=>only'::hstore, 'AT'), 'tobacco', 'get_subcategory tobacco=>only for AT should be tobacco');
-
-SELECT is(get_category('tobacco=>only'::hstore, 'PH'), 'drugs', 'get_category tobacco=>only for PH should be drugs');
-
-SELECT is(get_subcategory('tobacco=>only'::hstore, 'PH'), 'tobacco', 'get_subcategory tobacco=>only for PH should be tobacco');
-
-SELECT is(get_category('tobacco=>only'::hstore, 'FI'), 'drugs', 'get_category tobacco=>only for FI should be drugs');
-
-SELECT is(get_subcategory('tobacco=>only'::hstore, 'FI'), 'tobacco', 'get_subcategory tobacco=>only for FI should be tobacco');
-
-SELECT is(get_category('tobacco=>only'::hstore, 'MC'), 'drugs', 'get_category tobacco=>only for MC should be drugs');
-
-SELECT is(get_subcategory('tobacco=>only'::hstore, 'MC'), 'tobacco', 'get_subcategory tobacco=>only for MC should be tobacco');
-
-SELECT is(get_category('tobacco=>only'::hstore, 'CD'), 'drugs', 'get_category tobacco=>only for CD should be drugs');
-
-SELECT is(get_subcategory('tobacco=>only'::hstore, 'CD'), 'tobacco', 'get_subcategory tobacco=>only for CD should be tobacco');
-
-SELECT is(get_category('tobacco=>only'::hstore, 'IT'), 'drugs', 'get_category tobacco=>only for IT should be drugs');
-
-SELECT is(get_subcategory('tobacco=>only'::hstore, 'IT'), 'tobacco', 'get_subcategory tobacco=>only for IT should be tobacco');
-
-SELECT is(get_category('tobacco=>only'::hstore, 'GB'), 'drugs', 'get_category tobacco=>only for GB should be drugs');
-
-SELECT is(get_subcategory('tobacco=>only'::hstore, 'GB'), 'tobacco', 'get_subcategory tobacco=>only for GB should be tobacco');
-
-SELECT is(get_category('tobacco=>only'::hstore, 'IE'), 'drugs', 'get_category tobacco=>only for IE should be drugs');
-
-SELECT is(get_subcategory('tobacco=>only'::hstore, 'IE'), 'tobacco', 'get_subcategory tobacco=>only for IE should be tobacco');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'DE'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for DE should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'DE'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for DE should be tobacco');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'FR'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for FR should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'FR'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for FR should be tobacco');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'ES'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for ES should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'ES'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for ES should be tobacco');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'AD'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for AD should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'AD'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for AD should be tobacco');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'CH'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for CH should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'CH'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for CH should be tobacco');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'AT'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for AT should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'AT'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for AT should be tobacco');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'PH'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for PH should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'PH'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for PH should be tobacco');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'FI'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for FI should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'FI'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for FI should be tobacco');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'MC'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for MC should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'MC'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for MC should be tobacco');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'CD'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for CD should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'CD'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for CD should be tobacco');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'IT'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for IT should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'IT'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for IT should be tobacco');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'GB'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for GB should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'GB'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for GB should be tobacco');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'IE'), 'drugs', 'get_category amenity=>vending_machine, vending=>cigarettes for IE should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'IE'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for IE should be tobacco');
-
-SELECT is(get_category('shop=>e-cigarette'::hstore, 'DE'), 'drugs', 'get_category shop=>e-cigarette for DE should be drugs');
-
-SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'DE'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for DE should be e_cigarette');
-
-SELECT is(get_category('shop=>e-cigarette'::hstore, 'FR'), 'drugs', 'get_category shop=>e-cigarette for FR should be drugs');
-
-SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'FR'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for FR should be e_cigarette');
-
-SELECT is(get_category('shop=>e-cigarette'::hstore, 'ES'), 'drugs', 'get_category shop=>e-cigarette for ES should be drugs');
-
-SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'ES'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for ES should be e_cigarette');
-
-SELECT is(get_category('shop=>e-cigarette'::hstore, 'AD'), 'drugs', 'get_category shop=>e-cigarette for AD should be drugs');
-
-SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'AD'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for AD should be e_cigarette');
-
-SELECT is(get_category('shop=>e-cigarette'::hstore, 'CH'), 'drugs', 'get_category shop=>e-cigarette for CH should be drugs');
-
-SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'CH'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for CH should be e_cigarette');
-
-SELECT is(get_category('shop=>e-cigarette'::hstore, 'AT'), 'drugs', 'get_category shop=>e-cigarette for AT should be drugs');
-
-SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'AT'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for AT should be e_cigarette');
-
-SELECT is(get_category('shop=>e-cigarette'::hstore, 'PH'), 'drugs', 'get_category shop=>e-cigarette for PH should be drugs');
-
-SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'PH'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for PH should be e_cigarette');
-
-SELECT is(get_category('shop=>e-cigarette'::hstore, 'FI'), 'drugs', 'get_category shop=>e-cigarette for FI should be drugs');
-
-SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'FI'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for FI should be e_cigarette');
-
-SELECT is(get_category('shop=>e-cigarette'::hstore, 'MC'), 'drugs', 'get_category shop=>e-cigarette for MC should be drugs');
-
-SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'MC'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for MC should be e_cigarette');
-
-SELECT is(get_category('shop=>e-cigarette'::hstore, 'CD'), 'drugs', 'get_category shop=>e-cigarette for CD should be drugs');
-
-SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'CD'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for CD should be e_cigarette');
-
-SELECT is(get_category('shop=>e-cigarette'::hstore, 'IT'), 'drugs', 'get_category shop=>e-cigarette for IT should be drugs');
-
-SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'IT'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for IT should be e_cigarette');
-
-SELECT is(get_category('shop=>e-cigarette'::hstore, 'GB'), 'drugs', 'get_category shop=>e-cigarette for GB should be drugs');
-
-SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'GB'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for GB should be e_cigarette');
-
-SELECT is(get_category('shop=>e-cigarette'::hstore, 'IE'), 'drugs', 'get_category shop=>e-cigarette for IE should be drugs');
-
-SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'IE'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for IE should be e_cigarette');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'DE'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for DE should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'DE'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for DE should be e_cigarette');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'FR'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for FR should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'FR'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for FR should be e_cigarette');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'ES'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for ES should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'ES'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for ES should be e_cigarette');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'AD'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for AD should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'AD'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for AD should be e_cigarette');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'CH'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for CH should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'CH'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for CH should be e_cigarette');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'AT'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for AT should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'AT'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for AT should be e_cigarette');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'PH'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for PH should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'PH'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for PH should be e_cigarette');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'FI'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for FI should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'FI'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for FI should be e_cigarette');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'MC'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for MC should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'MC'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for MC should be e_cigarette');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'CD'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for CD should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'CD'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for CD should be e_cigarette');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'IT'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for IT should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'IT'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for IT should be e_cigarette');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'GB'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for GB should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'GB'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for GB should be e_cigarette');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'IE'), 'drugs', 'get_category amenity=>vending_machine, vending=>e-cigarettes for IE should be drugs');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'IE'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for IE should be e_cigarette');
-
-SELECT is(get_category('shop=>alcohol'::hstore, 'DE'), 'drugs', 'get_category shop=>alcohol for DE should be drugs');
-
-SELECT is(get_subcategory('shop=>alcohol'::hstore, 'DE'), 'alcohol', 'get_subcategory shop=>alcohol for DE should be alcohol');
-
-SELECT is(get_category('shop=>alcohol'::hstore, 'FR'), 'drugs', 'get_category shop=>alcohol for FR should be drugs');
-
-SELECT is(get_subcategory('shop=>alcohol'::hstore, 'FR'), 'alcohol', 'get_subcategory shop=>alcohol for FR should be alcohol');
-
-SELECT is(get_category('shop=>alcohol'::hstore, 'ES'), 'drugs', 'get_category shop=>alcohol for ES should be drugs');
-
-SELECT is(get_subcategory('shop=>alcohol'::hstore, 'ES'), 'alcohol', 'get_subcategory shop=>alcohol for ES should be alcohol');
-
-SELECT is(get_category('shop=>alcohol'::hstore, 'AD'), 'drugs', 'get_category shop=>alcohol for AD should be drugs');
-
-SELECT is(get_subcategory('shop=>alcohol'::hstore, 'AD'), 'alcohol', 'get_subcategory shop=>alcohol for AD should be alcohol');
-
-SELECT is(get_category('shop=>alcohol'::hstore, 'CH'), 'drugs', 'get_category shop=>alcohol for CH should be drugs');
-
-SELECT is(get_subcategory('shop=>alcohol'::hstore, 'CH'), 'alcohol', 'get_subcategory shop=>alcohol for CH should be alcohol');
-
-SELECT is(get_category('shop=>alcohol'::hstore, 'AT'), 'drugs', 'get_category shop=>alcohol for AT should be drugs');
-
-SELECT is(get_subcategory('shop=>alcohol'::hstore, 'AT'), 'alcohol', 'get_subcategory shop=>alcohol for AT should be alcohol');
-
-SELECT is(get_category('shop=>alcohol'::hstore, 'PH'), 'drugs', 'get_category shop=>alcohol for PH should be drugs');
-
-SELECT is(get_subcategory('shop=>alcohol'::hstore, 'PH'), 'alcohol', 'get_subcategory shop=>alcohol for PH should be alcohol');
-
-SELECT is(get_category('shop=>alcohol'::hstore, 'FI'), 'drugs', 'get_category shop=>alcohol for FI should be drugs');
-
-SELECT is(get_subcategory('shop=>alcohol'::hstore, 'FI'), 'alcohol', 'get_subcategory shop=>alcohol for FI should be alcohol');
-
-SELECT is(get_category('shop=>alcohol'::hstore, 'MC'), 'drugs', 'get_category shop=>alcohol for MC should be drugs');
-
-SELECT is(get_subcategory('shop=>alcohol'::hstore, 'MC'), 'alcohol', 'get_subcategory shop=>alcohol for MC should be alcohol');
-
-SELECT is(get_category('shop=>alcohol'::hstore, 'IT'), 'drugs', 'get_category shop=>alcohol for IT should be drugs');
-
-SELECT is(get_subcategory('shop=>alcohol'::hstore, 'IT'), 'alcohol', 'get_subcategory shop=>alcohol for IT should be alcohol');
-
-SELECT is(get_category('shop=>alcohol'::hstore, 'GB'), 'drugs', 'get_category shop=>alcohol for GB should be drugs');
-
-SELECT is(get_subcategory('shop=>alcohol'::hstore, 'GB'), 'alcohol', 'get_subcategory shop=>alcohol for GB should be alcohol');
-
-SELECT is(get_category('shop=>alcohol'::hstore, 'IE'), 'drugs', 'get_category shop=>alcohol for IE should be drugs');
-
-SELECT is(get_subcategory('shop=>alcohol'::hstore, 'IE'), 'alcohol', 'get_subcategory shop=>alcohol for IE should be alcohol');
-
-SELECT is(get_category('shop=>beverages'::hstore, 'DE'), 'drugs', 'get_category shop=>beverages for DE should be drugs');
-
-SELECT is(get_subcategory('shop=>beverages'::hstore, 'DE'), 'alcohol', 'get_subcategory shop=>beverages for DE should be alcohol');
-
-SELECT is(get_category('shop=>beverages'::hstore, 'FR'), 'drugs', 'get_category shop=>beverages for FR should be drugs');
-
-SELECT is(get_subcategory('shop=>beverages'::hstore, 'FR'), 'alcohol', 'get_subcategory shop=>beverages for FR should be alcohol');
-
-SELECT is(get_category('shop=>beverages'::hstore, 'ES'), 'drugs', 'get_category shop=>beverages for ES should be drugs');
-
-SELECT is(get_subcategory('shop=>beverages'::hstore, 'ES'), 'alcohol', 'get_subcategory shop=>beverages for ES should be alcohol');
-
-SELECT is(get_category('shop=>beverages'::hstore, 'AD'), 'drugs', 'get_category shop=>beverages for AD should be drugs');
-
-SELECT is(get_subcategory('shop=>beverages'::hstore, 'AD'), 'alcohol', 'get_subcategory shop=>beverages for AD should be alcohol');
-
-SELECT is(get_category('shop=>beverages'::hstore, 'CH'), 'drugs', 'get_category shop=>beverages for CH should be drugs');
-
-SELECT is(get_subcategory('shop=>beverages'::hstore, 'CH'), 'alcohol', 'get_subcategory shop=>beverages for CH should be alcohol');
-
-SELECT is(get_category('shop=>beverages'::hstore, 'AT'), 'drugs', 'get_category shop=>beverages for AT should be drugs');
-
-SELECT is(get_subcategory('shop=>beverages'::hstore, 'AT'), 'alcohol', 'get_subcategory shop=>beverages for AT should be alcohol');
-
-SELECT is(get_category('shop=>beverages'::hstore, 'PH'), 'drugs', 'get_category shop=>beverages for PH should be drugs');
-
-SELECT is(get_subcategory('shop=>beverages'::hstore, 'PH'), 'alcohol', 'get_subcategory shop=>beverages for PH should be alcohol');
-
-SELECT is(get_category('shop=>beverages'::hstore, 'FI'), 'drugs', 'get_category shop=>beverages for FI should be drugs');
-
-SELECT is(get_subcategory('shop=>beverages'::hstore, 'FI'), 'alcohol', 'get_subcategory shop=>beverages for FI should be alcohol');
-
-SELECT is(get_category('shop=>beverages'::hstore, 'MC'), 'drugs', 'get_category shop=>beverages for MC should be drugs');
-
-SELECT is(get_subcategory('shop=>beverages'::hstore, 'MC'), 'alcohol', 'get_subcategory shop=>beverages for MC should be alcohol');
-
-SELECT is(get_category('shop=>beverages'::hstore, 'IT'), 'drugs', 'get_category shop=>beverages for IT should be drugs');
-
-SELECT is(get_subcategory('shop=>beverages'::hstore, 'IT'), 'alcohol', 'get_subcategory shop=>beverages for IT should be alcohol');
-
-SELECT is(get_category('shop=>beverages'::hstore, 'GB'), 'drugs', 'get_category shop=>beverages for GB should be drugs');
-
-SELECT is(get_subcategory('shop=>beverages'::hstore, 'GB'), 'alcohol', 'get_subcategory shop=>beverages for GB should be alcohol');
-
-SELECT is(get_category('shop=>beverages'::hstore, 'IE'), 'drugs', 'get_category shop=>beverages for IE should be drugs');
-
-SELECT is(get_subcategory('shop=>beverages'::hstore, 'IE'), 'alcohol', 'get_subcategory shop=>beverages for IE should be alcohol');
-
-SELECT is(get_category('shop=>wine'::hstore, 'DE'), 'drugs', 'get_category shop=>wine for DE should be drugs');
-
-SELECT is(get_subcategory('shop=>wine'::hstore, 'DE'), 'alcohol', 'get_subcategory shop=>wine for DE should be alcohol');
-
-SELECT is(get_category('shop=>wine'::hstore, 'FR'), 'drugs', 'get_category shop=>wine for FR should be drugs');
-
-SELECT is(get_subcategory('shop=>wine'::hstore, 'FR'), 'alcohol', 'get_subcategory shop=>wine for FR should be alcohol');
-
-SELECT is(get_category('shop=>wine'::hstore, 'ES'), 'drugs', 'get_category shop=>wine for ES should be drugs');
-
-SELECT is(get_subcategory('shop=>wine'::hstore, 'ES'), 'alcohol', 'get_subcategory shop=>wine for ES should be alcohol');
-
-SELECT is(get_category('shop=>wine'::hstore, 'AD'), 'drugs', 'get_category shop=>wine for AD should be drugs');
-
-SELECT is(get_subcategory('shop=>wine'::hstore, 'AD'), 'alcohol', 'get_subcategory shop=>wine for AD should be alcohol');
-
-SELECT is(get_category('shop=>wine'::hstore, 'CH'), 'drugs', 'get_category shop=>wine for CH should be drugs');
-
-SELECT is(get_subcategory('shop=>wine'::hstore, 'CH'), 'alcohol', 'get_subcategory shop=>wine for CH should be alcohol');
-
-SELECT is(get_category('shop=>wine'::hstore, 'AT'), 'drugs', 'get_category shop=>wine for AT should be drugs');
-
-SELECT is(get_subcategory('shop=>wine'::hstore, 'AT'), 'alcohol', 'get_subcategory shop=>wine for AT should be alcohol');
-
-SELECT is(get_category('shop=>wine'::hstore, 'PH'), 'drugs', 'get_category shop=>wine for PH should be drugs');
-
-SELECT is(get_subcategory('shop=>wine'::hstore, 'PH'), 'alcohol', 'get_subcategory shop=>wine for PH should be alcohol');
-
-SELECT is(get_category('shop=>wine'::hstore, 'FI'), 'drugs', 'get_category shop=>wine for FI should be drugs');
-
-SELECT is(get_subcategory('shop=>wine'::hstore, 'FI'), 'alcohol', 'get_subcategory shop=>wine for FI should be alcohol');
-
-SELECT is(get_category('shop=>wine'::hstore, 'MC'), 'drugs', 'get_category shop=>wine for MC should be drugs');
-
-SELECT is(get_subcategory('shop=>wine'::hstore, 'MC'), 'alcohol', 'get_subcategory shop=>wine for MC should be alcohol');
-
-SELECT is(get_category('shop=>wine'::hstore, 'IT'), 'drugs', 'get_category shop=>wine for IT should be drugs');
-
-SELECT is(get_subcategory('shop=>wine'::hstore, 'IT'), 'alcohol', 'get_subcategory shop=>wine for IT should be alcohol');
-
-SELECT is(get_category('shop=>wine'::hstore, 'GB'), 'drugs', 'get_category shop=>wine for GB should be drugs');
-
-SELECT is(get_subcategory('shop=>wine'::hstore, 'GB'), 'alcohol', 'get_subcategory shop=>wine for GB should be alcohol');
-
-SELECT is(get_category('shop=>wine'::hstore, 'IE'), 'drugs', 'get_category shop=>wine for IE should be drugs');
-
-SELECT is(get_subcategory('shop=>wine'::hstore, 'IE'), 'alcohol', 'get_subcategory shop=>wine for IE should be alcohol');
-
 SELECT is(get_category('amenity=>bank'::hstore, 'CD'), 'money', 'get_category amenity=>bank for CD should be money');
 
 SELECT is(get_subcategory('amenity=>bank'::hstore, 'CD'), 'bank', 'get_subcategory amenity=>bank for CD should be bank');
@@ -8441,6 +7881,422 @@ SELECT is(get_subcategory('shop=>outdoor'::hstore, 'FR'), 'sports', 'get_subcate
 SELECT is(get_category('shop=>outdoor'::hstore, 'IT'), 'shop', 'get_category shop=>outdoor for IT should be shop');
 
 SELECT is(get_subcategory('shop=>outdoor'::hstore, 'IT'), 'sports', 'get_subcategory shop=>outdoor for IT should be sports');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'DE'), 'shop', 'get_category shop=>tobacco for DE should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'DE'), 'tobacco', 'get_subcategory shop=>tobacco for DE should be tobacco');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'FR'), 'shop', 'get_category shop=>tobacco for FR should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'FR'), 'tobacco', 'get_subcategory shop=>tobacco for FR should be tobacco');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'ES'), 'shop', 'get_category shop=>tobacco for ES should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'ES'), 'tobacco', 'get_subcategory shop=>tobacco for ES should be tobacco');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'AD'), 'shop', 'get_category shop=>tobacco for AD should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'AD'), 'tobacco', 'get_subcategory shop=>tobacco for AD should be tobacco');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'CH'), 'shop', 'get_category shop=>tobacco for CH should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'CH'), 'tobacco', 'get_subcategory shop=>tobacco for CH should be tobacco');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'AT'), 'shop', 'get_category shop=>tobacco for AT should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'AT'), 'tobacco', 'get_subcategory shop=>tobacco for AT should be tobacco');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'PH'), 'shop', 'get_category shop=>tobacco for PH should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'PH'), 'tobacco', 'get_subcategory shop=>tobacco for PH should be tobacco');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'FI'), 'shop', 'get_category shop=>tobacco for FI should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'FI'), 'tobacco', 'get_subcategory shop=>tobacco for FI should be tobacco');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'MC'), 'shop', 'get_category shop=>tobacco for MC should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'MC'), 'tobacco', 'get_subcategory shop=>tobacco for MC should be tobacco');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'CD'), 'shop', 'get_category shop=>tobacco for CD should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'CD'), 'tobacco', 'get_subcategory shop=>tobacco for CD should be tobacco');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'IT'), 'shop', 'get_category shop=>tobacco for IT should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'IT'), 'tobacco', 'get_subcategory shop=>tobacco for IT should be tobacco');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'GB'), 'shop', 'get_category shop=>tobacco for GB should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'GB'), 'tobacco', 'get_subcategory shop=>tobacco for GB should be tobacco');
+
+SELECT is(get_category('shop=>tobacco'::hstore, 'IE'), 'shop', 'get_category shop=>tobacco for IE should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco'::hstore, 'IE'), 'tobacco', 'get_subcategory shop=>tobacco for IE should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'DE'), 'shop', 'get_category shop=>newsagent;tobacco for DE should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'DE'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for DE should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'FR'), 'shop', 'get_category shop=>newsagent;tobacco for FR should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'FR'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for FR should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'ES'), 'shop', 'get_category shop=>newsagent;tobacco for ES should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'ES'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for ES should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'AD'), 'shop', 'get_category shop=>newsagent;tobacco for AD should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'AD'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for AD should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'CH'), 'shop', 'get_category shop=>newsagent;tobacco for CH should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'CH'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for CH should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'AT'), 'shop', 'get_category shop=>newsagent;tobacco for AT should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'AT'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for AT should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'PH'), 'shop', 'get_category shop=>newsagent;tobacco for PH should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'PH'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for PH should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'FI'), 'shop', 'get_category shop=>newsagent;tobacco for FI should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'FI'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for FI should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'MC'), 'shop', 'get_category shop=>newsagent;tobacco for MC should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'MC'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for MC should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'CD'), 'shop', 'get_category shop=>newsagent;tobacco for CD should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'CD'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for CD should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'IT'), 'shop', 'get_category shop=>newsagent;tobacco for IT should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'IT'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for IT should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'GB'), 'shop', 'get_category shop=>newsagent;tobacco for GB should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'GB'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for GB should be tobacco');
+
+SELECT is(get_category('shop=>newsagent;tobacco'::hstore, 'IE'), 'shop', 'get_category shop=>newsagent;tobacco for IE should be shop');
+
+SELECT is(get_subcategory('shop=>newsagent;tobacco'::hstore, 'IE'), 'tobacco', 'get_subcategory shop=>newsagent;tobacco for IE should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'DE'), 'shop', 'get_category shop=>tobacco;newsagent for DE should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'DE'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for DE should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'FR'), 'shop', 'get_category shop=>tobacco;newsagent for FR should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'FR'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for FR should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'ES'), 'shop', 'get_category shop=>tobacco;newsagent for ES should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'ES'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for ES should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'AD'), 'shop', 'get_category shop=>tobacco;newsagent for AD should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'AD'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for AD should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'CH'), 'shop', 'get_category shop=>tobacco;newsagent for CH should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'CH'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for CH should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'AT'), 'shop', 'get_category shop=>tobacco;newsagent for AT should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'AT'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for AT should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'PH'), 'shop', 'get_category shop=>tobacco;newsagent for PH should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'PH'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for PH should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'FI'), 'shop', 'get_category shop=>tobacco;newsagent for FI should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'FI'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for FI should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'MC'), 'shop', 'get_category shop=>tobacco;newsagent for MC should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'MC'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for MC should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'CD'), 'shop', 'get_category shop=>tobacco;newsagent for CD should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'CD'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for CD should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'IT'), 'shop', 'get_category shop=>tobacco;newsagent for IT should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'IT'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for IT should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'GB'), 'shop', 'get_category shop=>tobacco;newsagent for GB should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'GB'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for GB should be tobacco');
+
+SELECT is(get_category('shop=>tobacco;newsagent'::hstore, 'IE'), 'shop', 'get_category shop=>tobacco;newsagent for IE should be shop');
+
+SELECT is(get_subcategory('shop=>tobacco;newsagent'::hstore, 'IE'), 'tobacco', 'get_subcategory shop=>tobacco;newsagent for IE should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'DE'), 'shop', 'get_category tobacco=>yes for DE should be shop');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'DE'), 'tobacco', 'get_subcategory tobacco=>yes for DE should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'FR'), 'shop', 'get_category tobacco=>yes for FR should be shop');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'FR'), 'tobacco', 'get_subcategory tobacco=>yes for FR should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'ES'), 'shop', 'get_category tobacco=>yes for ES should be shop');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'ES'), 'tobacco', 'get_subcategory tobacco=>yes for ES should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'AD'), 'shop', 'get_category tobacco=>yes for AD should be shop');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'AD'), 'tobacco', 'get_subcategory tobacco=>yes for AD should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'CH'), 'shop', 'get_category tobacco=>yes for CH should be shop');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'CH'), 'tobacco', 'get_subcategory tobacco=>yes for CH should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'AT'), 'shop', 'get_category tobacco=>yes for AT should be shop');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'AT'), 'tobacco', 'get_subcategory tobacco=>yes for AT should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'PH'), 'shop', 'get_category tobacco=>yes for PH should be shop');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'PH'), 'tobacco', 'get_subcategory tobacco=>yes for PH should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'FI'), 'shop', 'get_category tobacco=>yes for FI should be shop');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'FI'), 'tobacco', 'get_subcategory tobacco=>yes for FI should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'MC'), 'shop', 'get_category tobacco=>yes for MC should be shop');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'MC'), 'tobacco', 'get_subcategory tobacco=>yes for MC should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'CD'), 'shop', 'get_category tobacco=>yes for CD should be shop');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'CD'), 'tobacco', 'get_subcategory tobacco=>yes for CD should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'IT'), 'shop', 'get_category tobacco=>yes for IT should be shop');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'IT'), 'tobacco', 'get_subcategory tobacco=>yes for IT should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'GB'), 'shop', 'get_category tobacco=>yes for GB should be shop');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'GB'), 'tobacco', 'get_subcategory tobacco=>yes for GB should be tobacco');
+
+SELECT is(get_category('tobacco=>yes'::hstore, 'IE'), 'shop', 'get_category tobacco=>yes for IE should be shop');
+
+SELECT is(get_subcategory('tobacco=>yes'::hstore, 'IE'), 'tobacco', 'get_subcategory tobacco=>yes for IE should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'DE'), 'shop', 'get_category tobacco=>only for DE should be shop');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'DE'), 'tobacco', 'get_subcategory tobacco=>only for DE should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'FR'), 'shop', 'get_category tobacco=>only for FR should be shop');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'FR'), 'tobacco', 'get_subcategory tobacco=>only for FR should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'ES'), 'shop', 'get_category tobacco=>only for ES should be shop');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'ES'), 'tobacco', 'get_subcategory tobacco=>only for ES should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'AD'), 'shop', 'get_category tobacco=>only for AD should be shop');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'AD'), 'tobacco', 'get_subcategory tobacco=>only for AD should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'CH'), 'shop', 'get_category tobacco=>only for CH should be shop');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'CH'), 'tobacco', 'get_subcategory tobacco=>only for CH should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'AT'), 'shop', 'get_category tobacco=>only for AT should be shop');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'AT'), 'tobacco', 'get_subcategory tobacco=>only for AT should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'PH'), 'shop', 'get_category tobacco=>only for PH should be shop');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'PH'), 'tobacco', 'get_subcategory tobacco=>only for PH should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'FI'), 'shop', 'get_category tobacco=>only for FI should be shop');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'FI'), 'tobacco', 'get_subcategory tobacco=>only for FI should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'MC'), 'shop', 'get_category tobacco=>only for MC should be shop');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'MC'), 'tobacco', 'get_subcategory tobacco=>only for MC should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'CD'), 'shop', 'get_category tobacco=>only for CD should be shop');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'CD'), 'tobacco', 'get_subcategory tobacco=>only for CD should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'IT'), 'shop', 'get_category tobacco=>only for IT should be shop');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'IT'), 'tobacco', 'get_subcategory tobacco=>only for IT should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'GB'), 'shop', 'get_category tobacco=>only for GB should be shop');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'GB'), 'tobacco', 'get_subcategory tobacco=>only for GB should be tobacco');
+
+SELECT is(get_category('tobacco=>only'::hstore, 'IE'), 'shop', 'get_category tobacco=>only for IE should be shop');
+
+SELECT is(get_subcategory('tobacco=>only'::hstore, 'IE'), 'tobacco', 'get_subcategory tobacco=>only for IE should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'DE'), 'shop', 'get_category amenity=>vending_machine, vending=>cigarettes for DE should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'DE'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for DE should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'FR'), 'shop', 'get_category amenity=>vending_machine, vending=>cigarettes for FR should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'FR'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for FR should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'ES'), 'shop', 'get_category amenity=>vending_machine, vending=>cigarettes for ES should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'ES'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for ES should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'AD'), 'shop', 'get_category amenity=>vending_machine, vending=>cigarettes for AD should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'AD'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for AD should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'CH'), 'shop', 'get_category amenity=>vending_machine, vending=>cigarettes for CH should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'CH'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for CH should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'AT'), 'shop', 'get_category amenity=>vending_machine, vending=>cigarettes for AT should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'AT'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for AT should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'PH'), 'shop', 'get_category amenity=>vending_machine, vending=>cigarettes for PH should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'PH'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for PH should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'FI'), 'shop', 'get_category amenity=>vending_machine, vending=>cigarettes for FI should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'FI'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for FI should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'MC'), 'shop', 'get_category amenity=>vending_machine, vending=>cigarettes for MC should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'MC'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for MC should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'CD'), 'shop', 'get_category amenity=>vending_machine, vending=>cigarettes for CD should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'CD'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for CD should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'IT'), 'shop', 'get_category amenity=>vending_machine, vending=>cigarettes for IT should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'IT'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for IT should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'GB'), 'shop', 'get_category amenity=>vending_machine, vending=>cigarettes for GB should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'GB'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for GB should be tobacco');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>cigarettes'::hstore, 'IE'), 'shop', 'get_category amenity=>vending_machine, vending=>cigarettes for IE should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>cigarettes'::hstore, 'IE'), 'tobacco', 'get_subcategory amenity=>vending_machine, vending=>cigarettes for IE should be tobacco');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'DE'), 'shop', 'get_category shop=>e-cigarette for DE should be shop');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'DE'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for DE should be e_cigarette');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'FR'), 'shop', 'get_category shop=>e-cigarette for FR should be shop');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'FR'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for FR should be e_cigarette');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'ES'), 'shop', 'get_category shop=>e-cigarette for ES should be shop');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'ES'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for ES should be e_cigarette');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'AD'), 'shop', 'get_category shop=>e-cigarette for AD should be shop');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'AD'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for AD should be e_cigarette');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'CH'), 'shop', 'get_category shop=>e-cigarette for CH should be shop');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'CH'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for CH should be e_cigarette');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'AT'), 'shop', 'get_category shop=>e-cigarette for AT should be shop');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'AT'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for AT should be e_cigarette');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'PH'), 'shop', 'get_category shop=>e-cigarette for PH should be shop');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'PH'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for PH should be e_cigarette');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'FI'), 'shop', 'get_category shop=>e-cigarette for FI should be shop');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'FI'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for FI should be e_cigarette');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'MC'), 'shop', 'get_category shop=>e-cigarette for MC should be shop');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'MC'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for MC should be e_cigarette');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'CD'), 'shop', 'get_category shop=>e-cigarette for CD should be shop');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'CD'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for CD should be e_cigarette');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'IT'), 'shop', 'get_category shop=>e-cigarette for IT should be shop');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'IT'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for IT should be e_cigarette');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'GB'), 'shop', 'get_category shop=>e-cigarette for GB should be shop');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'GB'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for GB should be e_cigarette');
+
+SELECT is(get_category('shop=>e-cigarette'::hstore, 'IE'), 'shop', 'get_category shop=>e-cigarette for IE should be shop');
+
+SELECT is(get_subcategory('shop=>e-cigarette'::hstore, 'IE'), 'e_cigarette', 'get_subcategory shop=>e-cigarette for IE should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'DE'), 'shop', 'get_category amenity=>vending_machine, vending=>e-cigarettes for DE should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'DE'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for DE should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'FR'), 'shop', 'get_category amenity=>vending_machine, vending=>e-cigarettes for FR should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'FR'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for FR should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'ES'), 'shop', 'get_category amenity=>vending_machine, vending=>e-cigarettes for ES should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'ES'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for ES should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'AD'), 'shop', 'get_category amenity=>vending_machine, vending=>e-cigarettes for AD should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'AD'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for AD should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'CH'), 'shop', 'get_category amenity=>vending_machine, vending=>e-cigarettes for CH should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'CH'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for CH should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'AT'), 'shop', 'get_category amenity=>vending_machine, vending=>e-cigarettes for AT should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'AT'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for AT should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'PH'), 'shop', 'get_category amenity=>vending_machine, vending=>e-cigarettes for PH should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'PH'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for PH should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'FI'), 'shop', 'get_category amenity=>vending_machine, vending=>e-cigarettes for FI should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'FI'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for FI should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'MC'), 'shop', 'get_category amenity=>vending_machine, vending=>e-cigarettes for MC should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'MC'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for MC should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'CD'), 'shop', 'get_category amenity=>vending_machine, vending=>e-cigarettes for CD should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'CD'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for CD should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'IT'), 'shop', 'get_category amenity=>vending_machine, vending=>e-cigarettes for IT should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'IT'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for IT should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'GB'), 'shop', 'get_category amenity=>vending_machine, vending=>e-cigarettes for GB should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'GB'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for GB should be e_cigarette');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'IE'), 'shop', 'get_category amenity=>vending_machine, vending=>e-cigarettes for IE should be shop');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>e-cigarettes'::hstore, 'IE'), 'e_cigarette', 'get_subcategory amenity=>vending_machine, vending=>e-cigarettes for IE should be e_cigarette');
 
 SELECT is(get_category('amenity=>fuel'::hstore, 'DE'), 'mobility', 'get_category amenity=>fuel for DE should be mobility');
 
