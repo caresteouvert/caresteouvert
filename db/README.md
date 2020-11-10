@@ -2,6 +2,12 @@
 
 ## Build
 
+Copy `.env.example` as `.env` and adjust settings.
+
+```
+git clone https://github.com/osmontrouge/caresteouvert_backend.git
+```
+
 ```
 docker-compose build
 ```
@@ -53,10 +59,6 @@ sample for France (code FR) : ./update_imposm_with_country.sh postgres://usernam
 ## caresteouvert_backend
 
 ```
-git clone https://github.com/osmontrouge/caresteouvert_backend.git
-```
-
-```
 docker-compose exec -u postgres postgres psql -v ON_ERROR_STOP=1 -f /git/covid19_map/db/caresteouvert_backend/src/init.sql
 ```
 
@@ -64,9 +66,9 @@ docker-compose exec -u postgres postgres psql -v ON_ERROR_STOP=1 -f /git/covid19
 ## Import OSM data
 
 ```
-docker-compose run osm_imposm bash -c "
-    cd /git/covid19_map/db/
-    ./import_imposm.sh  https://download.geofabrik.de/europe/andorra-latest.osm.pbf
+docker-compose run --rm osm_imposm bash -c "
+    cd /git/covid19_map/db/ && \
+    ./import_imposm.sh https://download.geofabrik.de/europe/andorra-latest.osm.pbf && \
     ./cron_refresh_db.sh
 "
 ```
@@ -88,13 +90,14 @@ docker-compose up -d pg_featureserv
 docker-compose up -d geoip
 docker-compose up -d web
 docker-compose up -d worker
+docker-compose up -d front
 ```
 
 
 ## Update
 
-docker-compose run osm_imposm bash -c "
-    cd /git/covid19_map/db/
-    ./update_imposm.sh
+docker-compose run --rm osm_imposm bash -c "
+    cd /git/covid19_map/db/ && \
+    ./update_imposm.sh && \
     ./cron_refresh_db.sh
 "
