@@ -2,10 +2,6 @@
 
 ![Ça reste ouvert](assets/logo-FR-mobile.svg)
 
-Ça reste ouvert is now closed. Feel free to fork it. Here is the list of active forks:
-
-- [Cartomobil'ité](https://github.com/PanierAvide/cartomobil-ite)
-
 [Ça reste ouvert](https://caresteouvert.fr), la carte collaborative des lieux ouverts durant la crise sanitaire / the collaborative map of the places open during the health crisis #Covid19.
 
 Toutes les informations sur le projet sont ici / All informations about the project here : https://blog.caresteouvert.fr/about
@@ -18,8 +14,9 @@ To deploy a complete instance of "Ça reste ouvert", you needs:
 - [postgres with postgis and data loaded](db/)
 - [pg_tileserv](https://access.crunchydata.com/documentation/pg_tileserv/latest/)
 - [pg_featureserv](https://access.crunchydata.com/documentation/pg_featureserv/latest/)
-- [Ça reste ouvert backend](https://github.com/osmontrouge/caresteouvert_backend) (complementary API)
+- [Ça reste ouvert backend](https://github.com/caresteouvert/caresteouvert_backend) (complementary API)
 
+Ça reste ouvert a été forké : [Cartomobil'ité](https://github.com/PanierAvide/cartomobil-ite)
 
 ## Development
 
@@ -48,9 +45,9 @@ Translations are managed via Transifex, [go here to translate it in your languag
 
 Data used on our map comes from two sources :
 * [OpenStreetMap](https://openstreetmap.org/) : the free, worldwide geographic database. We use information about points of interest and also lockdown opening hours
-* [Covid enseignes](https://github.com/PanierAvide/Covid_enseignes) : chain stores opening rules by country. This allows to mark as open/closed a wide range of shops worldwide.
+* [Covid enseignes](https://github.com/caresteouvert/Covid_enseignes) : chain stores opening rules by country. This allows to mark as open/closed a wide range of shops worldwide.
 
-So you can either directly contribute to OpenStreetMap (using [opening_hours:covid19=*](https://wiki.openstreetmap.org/wiki/Key:opening_hours:covid19) tag on individual features), or add rules concerning chain stores in [Covid enseignes repository](https://github.com/PanierAvide/Covid_enseignes#report-information).
+So you can either directly contribute to OpenStreetMap (using [opening_hours:covid19=*](https://wiki.openstreetmap.org/wiki/Key:opening_hours:covid19) tag on individual features), or add rules concerning chain stores in [Covid enseignes repository](https://github.com/caresteouvert/Covid_enseignes#report-information).
 
 Data derivated from Ça reste ouvert can be downloaded at this URL : https://download.osmontrouge.fr/caresteouvert/
 
