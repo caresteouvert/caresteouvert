@@ -107,6 +107,14 @@ export default {
 
     appsInfo() {
       return config.brands[this.brandId].appsInfo || false;
-    }
+    },
+
+    mapZoomDefault() {
+      return config.brands[this.brandId].mapZoom || config.mapZoom;
+    },
+
+    mapCenterDefault() {
+      return config.brands[this.brandId].mapCenter || config.mapCenter;
+    },
   }
 }

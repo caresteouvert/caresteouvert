@@ -109,6 +109,7 @@ import config from '../config.json';
 import { getCookie, setCookie } from '../lib/cookie';
 import { encode, decode, encodePosition, decodePosition, encodeFilter, decodeFilter, findBrand } from '../lib/url';
 import isMobile from './mixins/is_mobile';
+import i18n from './mixins/i18n';
 // import AppsSheet from './apps_sheet';
 import MainMenu from './main_menu';
 import FilterList from './filter_list';
@@ -132,7 +133,7 @@ export default {
     TopToolbar,
   },
 
-  mixins: [isMobile],
+  mixins: [isMobile, i18n],
 
   props: {
     featuresAndLocation: {
@@ -240,8 +241,8 @@ export default {
           this.mapCenter = { lat: json.ll[0], lng: json.ll[1] };
           this.mapZoom = json.city !== '' ? 13 : 5;
         }).catch(() => {
-          this.mapCenter = { lat: config.mapCenter[1], lng: config.mapCenter[0] };
-          this.mapZoom = config.mapZoom;
+          this.mapCenter = { lat: this.mapCenterDefault[1], lng: this.mapCenterDefault[0] };
+          this.mapZoom = this.mapZoomDefault;
         });
     },
 

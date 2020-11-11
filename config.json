@@ -53,6 +53,8 @@
       "brand_text": "Ça reste ouvert",
       "domain": "lyon.caresteouvert.fr",
       "defaultLocale": "fr",
+      "mapZoom": 12,
+      "mapCenter": [4.836852, 45.758394],
       "disclaimer": "https://blog.caresteouvert.fr/mentions-legales-lyon"
     },
     "restiamoaperti": {
