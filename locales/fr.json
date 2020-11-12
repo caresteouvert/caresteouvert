@@ -130,7 +130,7 @@
       "open": "Lieu ouvert durant la crise sanitaire",
       "open_adapted": "Lieu ouvert durant la crise sanitaire avec des horaires adaptés",
       "partial": "Lieu appartenant à une enseigne dont les établissements sont partiellement ouverts. Ouvert ou fermé ? À vous de le dire.",
-      "unknown": "Lieu potentiellement ouvert durant la crise sanitaire pour proposer ses services habituels ou de nouveaux. Ouvert ou fermé ? À vous de le dire.",
+      "unknown": "Lieu potentiellement ouvert durant la crise sanitaire. Ouvert ou fermé ? À vous de le dire.",
       "closed": "Lieu fermé durant la crise sanitaire"
     },
     "state_short": {
@@ -189,8 +189,8 @@
       "mask": "Port du masque obligatoire"
     },
     "update_dialog": {
-      "complete1": "C'est votre établissement ou celui de votre groupe ?",
-      "complete2": "Gagnez en visibilité après le confinement",
+      "complete1": "Ceci est votre établissement ou celui de votre groupe ?",
+      "complete2": "Gagnez en visibilité durant la crise sanitaire",
       "title": "Gestionnaire de points de vente",
       "promo": "Vous êtes gestionnaire d'une franchise ou responsable d'un réseau franchisé.\nGagnez en visibilité en référençant tous vos points de vente dans \"Ça reste ouvert\".\nEn plus d'être mis en avant de manière personnalisée dans notre service, vous apparaîtrez également dans de très nombreux sites et applis mobiles grâce à OpenStreetMap.",
       "contact": "Contactez nous"
