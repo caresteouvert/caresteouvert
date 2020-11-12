@@ -55,8 +55,7 @@
       "domain_subtitle": "Soutenons nos commerces de proximité",
       "defaultLocale": "fr",
       "mapZoom": 12,
-      "mapCenter": [4.836852, 45.758394],
-      "disclaimer": "https://blog.caresteouvert.fr/mentions-legales-lyon"
+      "mapCenter": [4.836852, 45.758394]
     },
     "restiamoaperti": {
       "brand_text": "Restiamo aperti",
