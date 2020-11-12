@@ -5,9 +5,6 @@ set -e
 WORKDIR=$(dirname $(realpath ${0}))
 cd ${WORKDIR}
 
-# MàJ avec imposm
-#./update_imposm.sh
-
 # MàJ des enseignes
 ./import_brand_rules.sh
 
