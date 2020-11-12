@@ -52,6 +52,7 @@
     "lyon": {
       "brand_text": "Ça reste ouvert",
       "domain": "lyon.caresteouvert.fr",
+      "domain_subtitle": "Soutenons nos commerces de proximité",
       "defaultLocale": "fr",
       "mapZoom": 12,
       "mapCenter": [4.836852, 45.758394],

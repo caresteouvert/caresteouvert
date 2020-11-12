@@ -105,6 +105,10 @@ export default {
       return this.brandId ? config.brands[this.brandId].brand_text : config.brands.DEFAULT.brand_text;
     },
 
+    domainSubtitle() {
+      return config.brands[this.brandId].domain_subtitle || false;
+    },
+
     appsInfo() {
       return config.brands[this.brandId].appsInfo || false;
     },
