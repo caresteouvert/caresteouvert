@@ -235,7 +235,7 @@ export default {
       const [ lon, lat ] = this.place.geometry.coordinates;
       const tags = {
         opening_hours: this.openingHoursWithoutLockDown ? 'same': undefined,
-        fixme: this.definite_closing === true ? 'This place is definitely closed' : undefined
+        fixme: this.definite_closing === true ? 'This place is permanently closed' : undefined
       };
 
       Object.entries(this.fields).forEach(e => {
