@@ -25,8 +25,6 @@
   },
   "services": {
     "delivery": "Delivery",
-    "hydroalcoholic_gel": "Hydroalcoholic gel",
-    "mask": "Mask",
     "takeaway": "Takeaway"
   },
   "learnmore": {
