@@ -63,7 +63,7 @@
             </v-chip>
           </v-slide-y-reverse-transition>
           <rgpd-banner @consent="rgpdBannerHidden = true" />
-          <apps-sheet />
+          <!--apps-sheet /-->
         </client-only>
         <bottom-menu
           v-if="isMobile && mapLoaded"

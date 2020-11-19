@@ -71,6 +71,10 @@
           />
         </v-list>
 
+        <detail-lumignon
+          :place="place"
+        />
+
         <template v-if="services.length > 0">
           <v-subheader>{{ $t('details.services') }}</v-subheader>
            <v-list class="py-0">
@@ -164,6 +168,7 @@ import placeMixin from '../mixins/place';
 import DetailLink from './detail_link';
 import DetailOpeningHours from './detail_opening_hours';
 import DetailState from './detail_state';
+import DetailLumignon from './detail_lumignon';
 import OsmLink from '../osm_link';
 import UpdateDetailDialog from '../update_detail_dialog';
 
@@ -182,6 +187,7 @@ export default {
     DetailLink,
     DetailOpeningHours,
     DetailState,
+    DetailLumignon,
     OsmLink,
     UpdateDetailDialog
   },
