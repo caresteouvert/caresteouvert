@@ -22,7 +22,7 @@
                 color="success"
                 @click="submit('yes')"
               >
-                {{ $t('details.hygiene_entry.has') }}
+                Oui
               </v-btn>
               <v-btn
                 :disabled="loading"
@@ -31,7 +31,7 @@
                 color="error"
                 @click="submit('no')"
               >
-                {{ $t('details.hygiene_entry.hasnot') }}
+                Non
               </v-btn>
             </v-list-item-subtitle>
           </v-list-item-content>
