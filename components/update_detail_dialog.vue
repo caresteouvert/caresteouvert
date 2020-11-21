@@ -10,7 +10,10 @@
             <v-icon>osm-alert</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>{{ $t('details.update_dialog.complete1') }}</v-list-item-title>
+            <v-list-item-title
+              :style="{ 'overflow': 'inherit', 'text-overflow': 'inherit', 'white-space': 'inherit' }">
+              {{ $t('details.update_dialog.complete1') }}
+            </v-list-item-title>
             <v-list-item-subtitle>{{ $t('details.update_dialog.complete2') }}</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
@@ -33,7 +36,7 @@
         <br />
         <p class="text-center">
           <v-btn
-            :href="`https://airtable.com/shrfssuOhvXzVxtui?prefill_osm_id=${osm}&prefill_osm_name=${place.properties.name}`"
+            :href="`https://airtable.com/shrFEO8LAYHsMMXKD`"
             target="_blank"
             color="primary"
           >{{ $t('details.update_dialog.contact') }}</v-btn>

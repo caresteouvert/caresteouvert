@@ -187,10 +187,10 @@
       "mask": "Port du masque obligatoire"
     },
     "update_dialog": {
-      "complete1": "Ceci est votre établissement ou celui de votre groupe ?",
-      "complete2": "Gagnez en visibilité durant la crise sanitaire",
-      "title": "Gestionnaire de points de vente",
-      "promo": "Vous êtes gestionnaire d'une franchise ou responsable d'un réseau franchisé.\nGagnez en visibilité en référençant tous vos points de vente dans \"Ça reste ouvert\".\nEn plus d'être mis en avant de manière personnalisée dans notre service, vous apparaîtrez également dans de très nombreux sites et applis mobiles grâce à OpenStreetMap.",
+      "complete1": "Collectivités : soutenez les commerces de votre territoire",
+      "complete2": "Solution de promotion durant la crise sanitaire",
+      "title": "Collectivités",
+      "promo": "Vous êtes une collectivité locale, une CCI, un office de tourisme... et vous cherchez une solution concrète pour soutenir vos commerces de proximité ?\n\n\"Ça Reste Ouvert\" est la solution de communication de crise qu'il vous faut.\n\nLe service permet aux citoyens confinés de trouver les lieux ouverts, leurs horaires d'ouverture et conditions d'accès (dont la livraison et le click & collect) et bien plus encore.",
       "contact": "Contactez nous"
     }
   },
