@@ -19,7 +19,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/favicon.png' }
+      { rel: 'icon', type: 'image/png', href: (process.env.BASE_PATH || '') + '/favicon.png' }
     ]
   },
   /*
@@ -95,6 +95,8 @@ export default {
     }
   },
   router: {
+    base: process.env.BASE_PATH || '/',
+
     extendRoutes(routes, resolve) {
       const index = routes.findIndex(route => route.path === '/');
       routes[index] = {
