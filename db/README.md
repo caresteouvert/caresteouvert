@@ -5,7 +5,7 @@
 Copy `.env.example` as `.env` and adjust settings.
 
 ```
-git clone https://github.com/osmontrouge/caresteouvert_backend.git
+git clone https://github.com/caresteouvert/caresteouvert_backend.git
 ```
 
 ```

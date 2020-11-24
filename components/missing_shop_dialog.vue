@@ -62,7 +62,7 @@
             md="5"
           >
             <v-btn
-              href="https://github.com/osmontrouge/caresteouvert/issues/new?assignees=&labels=categories&template=missing_category.md&title=Missing+category%3A+%28name+of+category%29"
+              href="https://github.com/caresteouvert/caresteouvert/issues/new?assignees=&labels=categories&template=missing_category.md&title=Missing+category%3A+%28name+of+category%29"
               class="full-width"
               outlined
               color="primary"

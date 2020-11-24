@@ -24,7 +24,7 @@ Si ya es colaborador de OpenStreetMap puede chatear con otros colaboradores en e
 
 Si logra mapear su distrito, su ciudad, puede informar al ayuntamiento o las comunidades locales explicándoles el interés de su enfoque. También puede hablar sobre este proyecto a su alrededor.
 
-Finalmente, el software utilizado para crear el mapa es software libre, el código fuente es abierto, está documentado y las evoluciones de la web son públicas: https://github.com/osmontrouge/caresteouvert
+Finalmente, el software utilizado para crear el mapa es software libre, el código fuente es abierto, está documentado y las evoluciones de la web son públicas: https://github.com/caresteouvert/caresteouvert
 Si tiene habilidades técnicas, su ayuda es bienvenida.
 
 #### ACTORES PÚBLICOS / PRIVADOS, INTEGREN SUS DATOS EN OPENSTREETMAP

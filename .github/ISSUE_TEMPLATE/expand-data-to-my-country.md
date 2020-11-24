@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-Please read https://github.com/osmontrouge/caresteouvert/wiki/Expand-%22%C3%87a-reste-ouvert%22-to-another-country first.
+Please read https://github.com/caresteouvert/caresteouvert/wiki/Expand-%22%C3%87a-reste-ouvert%22-to-another-country first.
 
 Please check the following requirements:
 

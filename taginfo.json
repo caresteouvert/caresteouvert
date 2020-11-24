@@ -1,12 +1,12 @@
 {
   "data_format": 1,
-  "data_url": "https://raw.githubusercontent.com/osmontrouge/caresteouvert/master/taginfo.json",
+  "data_url": "https://raw.githubusercontent.com/caresteouvert/caresteouvert/master/taginfo.json",
   "project": {
     "name": "Ça reste ouvert (It stays open)",
     "description": "A collaborative map of open places during COVID-19 lockdowns. Enables everyone to report changes using a simple and standardised form.",
     "project_url": "https://www.caresteouvert.fr/",
-    "doc_url": "https://github.com/osmontrouge/caresteouvert",
-    "icon_url": "https://raw.githubusercontent.com/osmontrouge/caresteouvert/master/static/favicon.png",
+    "doc_url": "https://github.com/caresteouvert/caresteouvert",
+    "icon_url": "https://raw.githubusercontent.com/caresteouvert/caresteouvert/master/static/favicon.png",
     "contact_name": "Florian Lainez",
     "contact_email": "florian@caresteouvert.fr"
   },
