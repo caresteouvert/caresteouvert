@@ -74,12 +74,6 @@ export default {
     place: {
       type: Object,
       required: true
-    },
-
-    has: {
-      type: String,
-      required: false,
-      default: ''
     }
   },
 
@@ -101,7 +95,7 @@ export default {
         return contrib[3].lumignon;
       }
       else {
-        return this.submitted !== null ? this.submitted : this.has;
+        return this.submitted !== null ? this.submitted : this.place.properties.tags['vending:lumignon'] || "";
       }
     },
 
