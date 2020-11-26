@@ -1,0 +1,13 @@
+name: trigger deployment to production
+on: [push]
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: trigger GitLab job
+      uses: appleboy/gitlab-ci-action@master
+      with:
+        url: "http://gitlab.makina-corpus.net/"
+        token: ${{ secrets.TOKEN }}
+        project_id: ${{ secrets.PROJECT_ID }}
