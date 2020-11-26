@@ -101,3 +101,14 @@ docker-compose run --rm osm_imposm bash -c "
     ./update_imposm.sh && \
     ./cron_refresh_db.sh
 "
+
+
+## Stats & Exports
+
+```
+mkdir -p export
+docker-compose run --rm osm_imposm bash -c "
+    cd /git/covid19_map/db/ && \
+    ./update_csv_exports.sh export
+"
+```
