@@ -32,6 +32,19 @@ for country in $countries; do
 			COALESCE(sub_country, country) = '$country'
 	) TO '${OUTPUT}/poi_osm_$country.csv' CSV HEADER"
 	gzip "${OUTPUT}/poi_osm_$country.csv"
+
+	rm -f "${OUTPUT}/tag_osm_$country.json"
+	rm -f "${OUTPUT}/tag_osm_$country.json.gz"
+	psql ${DATABASE_URL} -t -A -c "
+		SELECT
+			array_to_json(array_agg(jsonb_build_object(
+				'osm_id', fid
+			) ||
+			tags::jsonb)) AS json
+		FROM poi_osm
+		WHERE COALESCE(sub_country, country) = '$country'
+	" > "${OUTPUT}/tag_osm_$country.json"
+	gzip "${OUTPUT}/tag_osm_$country.json"
 done
 
 echo "General export"
