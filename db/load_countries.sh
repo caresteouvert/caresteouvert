@@ -8,7 +8,7 @@ docker-compose run --rm gdal sh -c '
     for g in /git/covid19_map/db/geojson/*.geojson; do
         echo "Layer ${g} :"
         ogr2ogr \
-            -f "PostgreSQL" PG:"dbname=$POSTGRES_DB host=postgres user=$POSTGRES_USER password=$POSTGRES_USER" \
+            -f "PostgreSQL" PG:"dbname=$POSTGRES_DB host=$POSTGRES_HOST user=$POSTGRES_USER password=$POSTGRES_USER" \
             -s_srs EPSG:4326 \
             -t_srs EPSG:3857 \
             -append \
