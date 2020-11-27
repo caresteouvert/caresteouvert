@@ -8,6 +8,6 @@ jobs:
     - name: trigger GitLab job
       uses: appleboy/gitlab-ci-action@master
       with:
-        url: "http://gitlab.makina-corpus.net/"
+        host: "http://gitlab.makina-corpus.net/"
         token: ${{ secrets.TOKEN }}
         project_id: ${{ secrets.PROJECT_ID }}
