@@ -40,7 +40,6 @@ services:
       <<: *common-environment
 
   osm_imposm:
-    build: .
     depends_on:
       - postgres
     volumes:

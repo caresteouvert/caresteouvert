@@ -15,3 +15,5 @@ services:
   front:
     build:
       context: ../
+  osm_imposm:
+    build: .

@@ -9,3 +9,5 @@ services:
     image: ${DOCKER_REGISTRY}/caresteouvert-back:latest
   front:
     image: ${DOCKER_REGISTRY}/caresteouvert-front:latest
+  osm_imposm:
+    image: ${DOCKER_REGISTRY}/caresteouvert-imposm:latest
