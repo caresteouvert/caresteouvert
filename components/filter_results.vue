@@ -75,7 +75,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 import _debounce from 'lodash.debounce';
 import { poiFeature } from '../config.json';
 import { availableSubFilters } from '../lib/categories';
@@ -132,6 +132,7 @@ export default {
 
   computed: {
     ...mapGetters(['allCategories']),
+    ...mapState(['brandId']),
 
     category() {
       return this.value.split('/')[0];
@@ -150,7 +151,7 @@ export default {
     },
 
     availableServices() {
-      return availableSubFilters(this.allCategories, this.value);
+      return availableSubFilters(this.allCategories, this.value, this.brandId);
     },
 
     canGoPrev() {

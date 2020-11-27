@@ -92,6 +92,7 @@ CREATE TABLE IF NOT EXISTS poi_osm_next(
 	takeaway VARCHAR DEFAULT 'unknown',
 	hydroalcoholic_gel VARCHAR DEFAULT NULL,
 	mask VARCHAR DEFAULT NULL,
+	lumignon VARCHAR DEFAULT NULL,
 	has_contact BOOLEAN DEFAULT NULL,
 	country VARCHAR,
 	sub_country VARCHAR,
@@ -264,7 +265,8 @@ UPDATE poi_osm_next
 SET
 	tags = poi_osm_next.tags || c.tags || CONCAT('{ "cro:date": "',EXTRACT(EPOCH FROM c.lastupdate)::int,'" }')::jsonb,
 	hydroalcoholic_gel = c.tags->>'vending:hydroalcoholic_gel',
-	mask = c.tags->>'vending:mask'
+	mask = c.tags->>'vending:mask',
+	lumignon = c.tags->>'vending:lumignon'
 FROM poi_cro c
 WHERE poi_osm_next.fid = c.osmid;
 
@@ -327,7 +329,7 @@ ALTER INDEX poi_osm_next_opening_hours_idx RENAME TO poi_osm_opening_hours_idx;
 ALTER INDEX poi_osm_next_has_contact_idx RENAME TO poi_osm_has_contact_idx;
 
 CREATE OR REPLACE VIEW poi_osm_light AS
-SELECT fid, fid AS id, geom, name, cat, normalized_cat, status, delivery, takeaway, hydroalcoholic_gel, mask
+SELECT fid, fid AS id, geom, name, cat, normalized_cat, status, delivery, takeaway, hydroalcoholic_gel, mask, lumignon
 FROM poi_osm;
 
 

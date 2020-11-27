@@ -29,7 +29,8 @@
   },
   "services": {
     "delivery": "Livraison",
-    "takeaway": "Vente à emporter"
+    "takeaway": "Vente à emporter",
+    "lumignon": "Lumignons"
   },
   "learnmore": {
     "about": "À propos",

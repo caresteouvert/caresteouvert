@@ -25,7 +25,8 @@
   },
   "services": {
     "delivery": "Delivery",
-    "takeaway": "Takeaway"
+    "takeaway": "Takeaway",
+    "lumignon": "Lumignons"
   },
   "learnmore": {
     "about": "About",
