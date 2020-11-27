@@ -4,3 +4,7 @@
 /static/sprite
 /.cache
 /dist
+/db/caresteouvert_backend
+/db/data/
+/db/export/
+/db/.env
