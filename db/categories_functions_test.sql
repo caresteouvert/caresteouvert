@@ -4,7 +4,7 @@
 -- THEN RUN "yarn run categories" TO UPDATE
 
 BEGIN;
-SELECT plan(4394);
+SELECT plan(4350);
 
 SELECT is(get_category('amenity=>police'::hstore, 'DE'), 'amenity', 'get_category amenity=>police for DE should be amenity');
 
@@ -530,54 +530,6 @@ SELECT is(get_category('amenity=>bank'::hstore, 'IE'), 'amenity', 'get_category 
 
 SELECT is(get_subcategory('amenity=>bank'::hstore, 'IE'), 'money', 'get_subcategory amenity=>bank for IE should be money');
 
-SELECT is(get_category('amenity=>atm'::hstore, 'DE'), 'amenity', 'get_category amenity=>atm for DE should be amenity');
-
-SELECT is(get_subcategory('amenity=>atm'::hstore, 'DE'), 'money', 'get_subcategory amenity=>atm for DE should be money');
-
-SELECT is(get_category('amenity=>atm'::hstore, 'FR'), 'amenity', 'get_category amenity=>atm for FR should be amenity');
-
-SELECT is(get_subcategory('amenity=>atm'::hstore, 'FR'), 'money', 'get_subcategory amenity=>atm for FR should be money');
-
-SELECT is(get_category('amenity=>atm'::hstore, 'ES'), 'amenity', 'get_category amenity=>atm for ES should be amenity');
-
-SELECT is(get_subcategory('amenity=>atm'::hstore, 'ES'), 'money', 'get_subcategory amenity=>atm for ES should be money');
-
-SELECT is(get_category('amenity=>atm'::hstore, 'AD'), 'amenity', 'get_category amenity=>atm for AD should be amenity');
-
-SELECT is(get_subcategory('amenity=>atm'::hstore, 'AD'), 'money', 'get_subcategory amenity=>atm for AD should be money');
-
-SELECT is(get_category('amenity=>atm'::hstore, 'CH'), 'amenity', 'get_category amenity=>atm for CH should be amenity');
-
-SELECT is(get_subcategory('amenity=>atm'::hstore, 'CH'), 'money', 'get_subcategory amenity=>atm for CH should be money');
-
-SELECT is(get_category('amenity=>atm'::hstore, 'AT'), 'amenity', 'get_category amenity=>atm for AT should be amenity');
-
-SELECT is(get_subcategory('amenity=>atm'::hstore, 'AT'), 'money', 'get_subcategory amenity=>atm for AT should be money');
-
-SELECT is(get_category('amenity=>atm'::hstore, 'PH'), 'amenity', 'get_category amenity=>atm for PH should be amenity');
-
-SELECT is(get_subcategory('amenity=>atm'::hstore, 'PH'), 'money', 'get_subcategory amenity=>atm for PH should be money');
-
-SELECT is(get_category('amenity=>atm'::hstore, 'FI'), 'amenity', 'get_category amenity=>atm for FI should be amenity');
-
-SELECT is(get_subcategory('amenity=>atm'::hstore, 'FI'), 'money', 'get_subcategory amenity=>atm for FI should be money');
-
-SELECT is(get_category('amenity=>atm'::hstore, 'MC'), 'amenity', 'get_category amenity=>atm for MC should be amenity');
-
-SELECT is(get_subcategory('amenity=>atm'::hstore, 'MC'), 'money', 'get_subcategory amenity=>atm for MC should be money');
-
-SELECT is(get_category('amenity=>atm'::hstore, 'IT'), 'amenity', 'get_category amenity=>atm for IT should be amenity');
-
-SELECT is(get_subcategory('amenity=>atm'::hstore, 'IT'), 'money', 'get_subcategory amenity=>atm for IT should be money');
-
-SELECT is(get_category('amenity=>atm'::hstore, 'GB'), 'amenity', 'get_category amenity=>atm for GB should be amenity');
-
-SELECT is(get_subcategory('amenity=>atm'::hstore, 'GB'), 'money', 'get_subcategory amenity=>atm for GB should be money');
-
-SELECT is(get_category('amenity=>atm'::hstore, 'IE'), 'amenity', 'get_category amenity=>atm for IE should be amenity');
-
-SELECT is(get_subcategory('amenity=>atm'::hstore, 'IE'), 'money', 'get_subcategory amenity=>atm for IE should be money');
-
 SELECT is(get_category('amenity=>money_transfer'::hstore, 'DE'), 'amenity', 'get_category amenity=>money_transfer for DE should be amenity');
 
 SELECT is(get_subcategory('amenity=>money_transfer'::hstore, 'DE'), 'money', 'get_subcategory amenity=>money_transfer for DE should be money');
@@ -1002,6 +954,10 @@ SELECT is(get_category('shop=>copyshop'::hstore, 'FR'), 'amenity', 'get_category
 
 SELECT is(get_subcategory('shop=>copyshop'::hstore, 'FR'), 'copyshop', 'get_subcategory shop=>copyshop for FR should be copyshop');
 
+SELECT is(get_category('craft=>key_cutter'::hstore, 'FR'), 'amenity', 'get_category craft=>key_cutter for FR should be amenity');
+
+SELECT is(get_subcategory('craft=>key_cutter'::hstore, 'FR'), 'key_cutter', 'get_subcategory craft=>key_cutter for FR should be key_cutter');
+
 SELECT is(get_category('tourism=>museum'::hstore, 'IT'), 'amenity', 'get_category tourism=>museum for IT should be amenity');
 
 SELECT is(get_subcategory('tourism=>museum'::hstore, 'IT'), 'museum', 'get_subcategory tourism=>museum for IT should be museum');
@@ -1242,58 +1198,6 @@ SELECT is(get_category('shop=>hearing_aids'::hstore, 'IE'), 'health', 'get_categ
 
 SELECT is(get_subcategory('shop=>hearing_aids'::hstore, 'IE'), 'hearing_aids', 'get_subcategory shop=>hearing_aids for IE should be hearing_aids');
 
-SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'DE'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for DE should be health');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'DE'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for DE should be condoms');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'FR'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for FR should be health');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'FR'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for FR should be condoms');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'ES'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for ES should be health');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'ES'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for ES should be condoms');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'AD'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for AD should be health');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'AD'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for AD should be condoms');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'CH'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for CH should be health');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'CH'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for CH should be condoms');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'AT'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for AT should be health');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'AT'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for AT should be condoms');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'PH'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for PH should be health');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'PH'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for PH should be condoms');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'FI'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for FI should be health');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'FI'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for FI should be condoms');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'MC'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for MC should be health');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'MC'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for MC should be condoms');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'CD'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for CD should be health');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'CD'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for CD should be condoms');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'IT'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for IT should be health');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'IT'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for IT should be condoms');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'GB'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for GB should be health');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'GB'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for GB should be condoms');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>condoms'::hstore, 'IE'), 'health', 'get_category amenity=>vending_machine, vending=>condoms for IE should be health');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>condoms'::hstore, 'IE'), 'condoms', 'get_subcategory amenity=>vending_machine, vending=>condoms for IE should be condoms');
-
 SELECT is(get_category('shop=>medical_supply'::hstore, 'DE'), 'health', 'get_category shop=>medical_supply for DE should be health');
 
 SELECT is(get_subcategory('shop=>medical_supply'::hstore, 'DE'), 'medical_supply', 'get_subcategory shop=>medical_supply for DE should be medical_supply');
@@ -1346,473 +1250,473 @@ SELECT is(get_category('shop=>medical_supply'::hstore, 'IE'), 'health', 'get_cat
 
 SELECT is(get_subcategory('shop=>medical_supply'::hstore, 'IE'), 'medical_supply', 'get_subcategory shop=>medical_supply for IE should be medical_supply');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for DE should be health');
+SELECT is(get_category('healthcare=>centre'::hstore, 'DE'), 'health', 'get_category healthcare=>centre for DE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for DE should be health_center');
+SELECT is(get_subcategory('healthcare=>centre'::hstore, 'DE'), 'health_center', 'get_subcategory healthcare=>centre for DE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'FR'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for FR should be health');
+SELECT is(get_category('healthcare=>centre'::hstore, 'FR'), 'health', 'get_category healthcare=>centre for FR should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'FR'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for FR should be health_center');
+SELECT is(get_subcategory('healthcare=>centre'::hstore, 'FR'), 'health_center', 'get_subcategory healthcare=>centre for FR should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'ES'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for ES should be health');
+SELECT is(get_category('healthcare=>centre'::hstore, 'ES'), 'health', 'get_category healthcare=>centre for ES should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'ES'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for ES should be health_center');
+SELECT is(get_subcategory('healthcare=>centre'::hstore, 'ES'), 'health_center', 'get_subcategory healthcare=>centre for ES should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'AD'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for AD should be health');
+SELECT is(get_category('healthcare=>centre'::hstore, 'AD'), 'health', 'get_category healthcare=>centre for AD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'AD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for AD should be health_center');
+SELECT is(get_subcategory('healthcare=>centre'::hstore, 'AD'), 'health_center', 'get_subcategory healthcare=>centre for AD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'CH'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for CH should be health');
+SELECT is(get_category('healthcare=>centre'::hstore, 'CH'), 'health', 'get_category healthcare=>centre for CH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'CH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for CH should be health_center');
+SELECT is(get_subcategory('healthcare=>centre'::hstore, 'CH'), 'health_center', 'get_subcategory healthcare=>centre for CH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'AT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for AT should be health');
+SELECT is(get_category('healthcare=>centre'::hstore, 'AT'), 'health', 'get_category healthcare=>centre for AT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'AT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for AT should be health_center');
+SELECT is(get_subcategory('healthcare=>centre'::hstore, 'AT'), 'health_center', 'get_subcategory healthcare=>centre for AT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'PH'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for PH should be health');
+SELECT is(get_category('healthcare=>centre'::hstore, 'PH'), 'health', 'get_category healthcare=>centre for PH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'PH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for PH should be health_center');
+SELECT is(get_subcategory('healthcare=>centre'::hstore, 'PH'), 'health_center', 'get_subcategory healthcare=>centre for PH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'FI'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for FI should be health');
+SELECT is(get_category('healthcare=>centre'::hstore, 'FI'), 'health', 'get_category healthcare=>centre for FI should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'FI'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for FI should be health_center');
+SELECT is(get_subcategory('healthcare=>centre'::hstore, 'FI'), 'health_center', 'get_subcategory healthcare=>centre for FI should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'MC'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for MC should be health');
+SELECT is(get_category('healthcare=>centre'::hstore, 'MC'), 'health', 'get_category healthcare=>centre for MC should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'MC'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for MC should be health_center');
+SELECT is(get_subcategory('healthcare=>centre'::hstore, 'MC'), 'health_center', 'get_subcategory healthcare=>centre for MC should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'CD'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for CD should be health');
+SELECT is(get_category('healthcare=>centre'::hstore, 'CD'), 'health', 'get_category healthcare=>centre for CD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'CD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for CD should be health_center');
+SELECT is(get_subcategory('healthcare=>centre'::hstore, 'CD'), 'health_center', 'get_subcategory healthcare=>centre for CD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for IT should be health');
+SELECT is(get_category('healthcare=>centre'::hstore, 'IT'), 'health', 'get_category healthcare=>centre for IT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for IT should be health_center');
+SELECT is(get_subcategory('healthcare=>centre'::hstore, 'IT'), 'health_center', 'get_subcategory healthcare=>centre for IT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for GB should be health');
+SELECT is(get_category('healthcare=>centre'::hstore, 'GB'), 'health', 'get_category healthcare=>centre for GB should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for GB should be health_center');
+SELECT is(get_subcategory('healthcare=>centre'::hstore, 'GB'), 'health_center', 'get_subcategory healthcare=>centre for GB should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>centre for IE should be health');
+SELECT is(get_category('healthcare=>centre'::hstore, 'IE'), 'health', 'get_category healthcare=>centre for IE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>centre'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>centre for IE should be health_center');
+SELECT is(get_subcategory('healthcare=>centre'::hstore, 'IE'), 'health_center', 'get_subcategory healthcare=>centre for IE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for DE should be health');
+SELECT is(get_category('healthcare=>clinic'::hstore, 'DE'), 'health', 'get_category healthcare=>clinic for DE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for DE should be health_center');
+SELECT is(get_subcategory('healthcare=>clinic'::hstore, 'DE'), 'health_center', 'get_subcategory healthcare=>clinic for DE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'FR'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for FR should be health');
+SELECT is(get_category('healthcare=>clinic'::hstore, 'FR'), 'health', 'get_category healthcare=>clinic for FR should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'FR'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for FR should be health_center');
+SELECT is(get_subcategory('healthcare=>clinic'::hstore, 'FR'), 'health_center', 'get_subcategory healthcare=>clinic for FR should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'ES'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for ES should be health');
+SELECT is(get_category('healthcare=>clinic'::hstore, 'ES'), 'health', 'get_category healthcare=>clinic for ES should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'ES'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for ES should be health_center');
+SELECT is(get_subcategory('healthcare=>clinic'::hstore, 'ES'), 'health_center', 'get_subcategory healthcare=>clinic for ES should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'AD'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for AD should be health');
+SELECT is(get_category('healthcare=>clinic'::hstore, 'AD'), 'health', 'get_category healthcare=>clinic for AD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'AD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for AD should be health_center');
+SELECT is(get_subcategory('healthcare=>clinic'::hstore, 'AD'), 'health_center', 'get_subcategory healthcare=>clinic for AD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'CH'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for CH should be health');
+SELECT is(get_category('healthcare=>clinic'::hstore, 'CH'), 'health', 'get_category healthcare=>clinic for CH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'CH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for CH should be health_center');
+SELECT is(get_subcategory('healthcare=>clinic'::hstore, 'CH'), 'health_center', 'get_subcategory healthcare=>clinic for CH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'AT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for AT should be health');
+SELECT is(get_category('healthcare=>clinic'::hstore, 'AT'), 'health', 'get_category healthcare=>clinic for AT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'AT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for AT should be health_center');
+SELECT is(get_subcategory('healthcare=>clinic'::hstore, 'AT'), 'health_center', 'get_subcategory healthcare=>clinic for AT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'PH'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for PH should be health');
+SELECT is(get_category('healthcare=>clinic'::hstore, 'PH'), 'health', 'get_category healthcare=>clinic for PH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'PH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for PH should be health_center');
+SELECT is(get_subcategory('healthcare=>clinic'::hstore, 'PH'), 'health_center', 'get_subcategory healthcare=>clinic for PH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'FI'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for FI should be health');
+SELECT is(get_category('healthcare=>clinic'::hstore, 'FI'), 'health', 'get_category healthcare=>clinic for FI should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'FI'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for FI should be health_center');
+SELECT is(get_subcategory('healthcare=>clinic'::hstore, 'FI'), 'health_center', 'get_subcategory healthcare=>clinic for FI should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'MC'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for MC should be health');
+SELECT is(get_category('healthcare=>clinic'::hstore, 'MC'), 'health', 'get_category healthcare=>clinic for MC should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'MC'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for MC should be health_center');
+SELECT is(get_subcategory('healthcare=>clinic'::hstore, 'MC'), 'health_center', 'get_subcategory healthcare=>clinic for MC should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'CD'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for CD should be health');
+SELECT is(get_category('healthcare=>clinic'::hstore, 'CD'), 'health', 'get_category healthcare=>clinic for CD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'CD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for CD should be health_center');
+SELECT is(get_subcategory('healthcare=>clinic'::hstore, 'CD'), 'health_center', 'get_subcategory healthcare=>clinic for CD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for IT should be health');
+SELECT is(get_category('healthcare=>clinic'::hstore, 'IT'), 'health', 'get_category healthcare=>clinic for IT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for IT should be health_center');
+SELECT is(get_subcategory('healthcare=>clinic'::hstore, 'IT'), 'health_center', 'get_subcategory healthcare=>clinic for IT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for GB should be health');
+SELECT is(get_category('healthcare=>clinic'::hstore, 'GB'), 'health', 'get_category healthcare=>clinic for GB should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for GB should be health_center');
+SELECT is(get_subcategory('healthcare=>clinic'::hstore, 'GB'), 'health_center', 'get_subcategory healthcare=>clinic for GB should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>clinic for IE should be health');
+SELECT is(get_category('healthcare=>clinic'::hstore, 'IE'), 'health', 'get_category healthcare=>clinic for IE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>clinic'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>clinic for IE should be health_center');
+SELECT is(get_subcategory('healthcare=>clinic'::hstore, 'IE'), 'health_center', 'get_subcategory healthcare=>clinic for IE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for DE should be health');
+SELECT is(get_category('healthcare=>doctor'::hstore, 'DE'), 'health', 'get_category healthcare=>doctor for DE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for DE should be health_center');
+SELECT is(get_subcategory('healthcare=>doctor'::hstore, 'DE'), 'health_center', 'get_subcategory healthcare=>doctor for DE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'FR'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for FR should be health');
+SELECT is(get_category('healthcare=>doctor'::hstore, 'FR'), 'health', 'get_category healthcare=>doctor for FR should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'FR'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for FR should be health_center');
+SELECT is(get_subcategory('healthcare=>doctor'::hstore, 'FR'), 'health_center', 'get_subcategory healthcare=>doctor for FR should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'ES'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for ES should be health');
+SELECT is(get_category('healthcare=>doctor'::hstore, 'ES'), 'health', 'get_category healthcare=>doctor for ES should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'ES'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for ES should be health_center');
+SELECT is(get_subcategory('healthcare=>doctor'::hstore, 'ES'), 'health_center', 'get_subcategory healthcare=>doctor for ES should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'AD'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for AD should be health');
+SELECT is(get_category('healthcare=>doctor'::hstore, 'AD'), 'health', 'get_category healthcare=>doctor for AD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'AD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for AD should be health_center');
+SELECT is(get_subcategory('healthcare=>doctor'::hstore, 'AD'), 'health_center', 'get_subcategory healthcare=>doctor for AD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'CH'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for CH should be health');
+SELECT is(get_category('healthcare=>doctor'::hstore, 'CH'), 'health', 'get_category healthcare=>doctor for CH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'CH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for CH should be health_center');
+SELECT is(get_subcategory('healthcare=>doctor'::hstore, 'CH'), 'health_center', 'get_subcategory healthcare=>doctor for CH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'AT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for AT should be health');
+SELECT is(get_category('healthcare=>doctor'::hstore, 'AT'), 'health', 'get_category healthcare=>doctor for AT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'AT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for AT should be health_center');
+SELECT is(get_subcategory('healthcare=>doctor'::hstore, 'AT'), 'health_center', 'get_subcategory healthcare=>doctor for AT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'PH'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for PH should be health');
+SELECT is(get_category('healthcare=>doctor'::hstore, 'PH'), 'health', 'get_category healthcare=>doctor for PH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'PH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for PH should be health_center');
+SELECT is(get_subcategory('healthcare=>doctor'::hstore, 'PH'), 'health_center', 'get_subcategory healthcare=>doctor for PH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'FI'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for FI should be health');
+SELECT is(get_category('healthcare=>doctor'::hstore, 'FI'), 'health', 'get_category healthcare=>doctor for FI should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'FI'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for FI should be health_center');
+SELECT is(get_subcategory('healthcare=>doctor'::hstore, 'FI'), 'health_center', 'get_subcategory healthcare=>doctor for FI should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'MC'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for MC should be health');
+SELECT is(get_category('healthcare=>doctor'::hstore, 'MC'), 'health', 'get_category healthcare=>doctor for MC should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'MC'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for MC should be health_center');
+SELECT is(get_subcategory('healthcare=>doctor'::hstore, 'MC'), 'health_center', 'get_subcategory healthcare=>doctor for MC should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'CD'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for CD should be health');
+SELECT is(get_category('healthcare=>doctor'::hstore, 'CD'), 'health', 'get_category healthcare=>doctor for CD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'CD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for CD should be health_center');
+SELECT is(get_subcategory('healthcare=>doctor'::hstore, 'CD'), 'health_center', 'get_subcategory healthcare=>doctor for CD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for IT should be health');
+SELECT is(get_category('healthcare=>doctor'::hstore, 'IT'), 'health', 'get_category healthcare=>doctor for IT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for IT should be health_center');
+SELECT is(get_subcategory('healthcare=>doctor'::hstore, 'IT'), 'health_center', 'get_subcategory healthcare=>doctor for IT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for GB should be health');
+SELECT is(get_category('healthcare=>doctor'::hstore, 'GB'), 'health', 'get_category healthcare=>doctor for GB should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for GB should be health_center');
+SELECT is(get_subcategory('healthcare=>doctor'::hstore, 'GB'), 'health_center', 'get_subcategory healthcare=>doctor for GB should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>doctor for IE should be health');
+SELECT is(get_category('healthcare=>doctor'::hstore, 'IE'), 'health', 'get_category healthcare=>doctor for IE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>doctor'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>doctor for IE should be health_center');
+SELECT is(get_subcategory('healthcare=>doctor'::hstore, 'IE'), 'health_center', 'get_subcategory healthcare=>doctor for IE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for DE should be health');
+SELECT is(get_category('healthcare=>hospital'::hstore, 'DE'), 'health', 'get_category healthcare=>hospital for DE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for DE should be health_center');
+SELECT is(get_subcategory('healthcare=>hospital'::hstore, 'DE'), 'health_center', 'get_subcategory healthcare=>hospital for DE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'FR'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for FR should be health');
+SELECT is(get_category('healthcare=>hospital'::hstore, 'FR'), 'health', 'get_category healthcare=>hospital for FR should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'FR'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for FR should be health_center');
+SELECT is(get_subcategory('healthcare=>hospital'::hstore, 'FR'), 'health_center', 'get_subcategory healthcare=>hospital for FR should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'ES'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for ES should be health');
+SELECT is(get_category('healthcare=>hospital'::hstore, 'ES'), 'health', 'get_category healthcare=>hospital for ES should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'ES'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for ES should be health_center');
+SELECT is(get_subcategory('healthcare=>hospital'::hstore, 'ES'), 'health_center', 'get_subcategory healthcare=>hospital for ES should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'AD'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for AD should be health');
+SELECT is(get_category('healthcare=>hospital'::hstore, 'AD'), 'health', 'get_category healthcare=>hospital for AD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'AD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for AD should be health_center');
+SELECT is(get_subcategory('healthcare=>hospital'::hstore, 'AD'), 'health_center', 'get_subcategory healthcare=>hospital for AD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'CH'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for CH should be health');
+SELECT is(get_category('healthcare=>hospital'::hstore, 'CH'), 'health', 'get_category healthcare=>hospital for CH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'CH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for CH should be health_center');
+SELECT is(get_subcategory('healthcare=>hospital'::hstore, 'CH'), 'health_center', 'get_subcategory healthcare=>hospital for CH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'AT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for AT should be health');
+SELECT is(get_category('healthcare=>hospital'::hstore, 'AT'), 'health', 'get_category healthcare=>hospital for AT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'AT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for AT should be health_center');
+SELECT is(get_subcategory('healthcare=>hospital'::hstore, 'AT'), 'health_center', 'get_subcategory healthcare=>hospital for AT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'PH'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for PH should be health');
+SELECT is(get_category('healthcare=>hospital'::hstore, 'PH'), 'health', 'get_category healthcare=>hospital for PH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'PH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for PH should be health_center');
+SELECT is(get_subcategory('healthcare=>hospital'::hstore, 'PH'), 'health_center', 'get_subcategory healthcare=>hospital for PH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'FI'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for FI should be health');
+SELECT is(get_category('healthcare=>hospital'::hstore, 'FI'), 'health', 'get_category healthcare=>hospital for FI should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'FI'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for FI should be health_center');
+SELECT is(get_subcategory('healthcare=>hospital'::hstore, 'FI'), 'health_center', 'get_subcategory healthcare=>hospital for FI should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'MC'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for MC should be health');
+SELECT is(get_category('healthcare=>hospital'::hstore, 'MC'), 'health', 'get_category healthcare=>hospital for MC should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'MC'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for MC should be health_center');
+SELECT is(get_subcategory('healthcare=>hospital'::hstore, 'MC'), 'health_center', 'get_subcategory healthcare=>hospital for MC should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'CD'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for CD should be health');
+SELECT is(get_category('healthcare=>hospital'::hstore, 'CD'), 'health', 'get_category healthcare=>hospital for CD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'CD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for CD should be health_center');
+SELECT is(get_subcategory('healthcare=>hospital'::hstore, 'CD'), 'health_center', 'get_subcategory healthcare=>hospital for CD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for IT should be health');
+SELECT is(get_category('healthcare=>hospital'::hstore, 'IT'), 'health', 'get_category healthcare=>hospital for IT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for IT should be health_center');
+SELECT is(get_subcategory('healthcare=>hospital'::hstore, 'IT'), 'health_center', 'get_subcategory healthcare=>hospital for IT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for GB should be health');
+SELECT is(get_category('healthcare=>hospital'::hstore, 'GB'), 'health', 'get_category healthcare=>hospital for GB should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for GB should be health_center');
+SELECT is(get_subcategory('healthcare=>hospital'::hstore, 'GB'), 'health_center', 'get_subcategory healthcare=>hospital for GB should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>hospital for IE should be health');
+SELECT is(get_category('healthcare=>hospital'::hstore, 'IE'), 'health', 'get_category healthcare=>hospital for IE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>hospital'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>hospital for IE should be health_center');
+SELECT is(get_subcategory('healthcare=>hospital'::hstore, 'IE'), 'health_center', 'get_subcategory healthcare=>hospital for IE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for DE should be health');
+SELECT is(get_category('healthcare=>rehabilitation'::hstore, 'DE'), 'health', 'get_category healthcare=>rehabilitation for DE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for DE should be health_center');
+SELECT is(get_subcategory('healthcare=>rehabilitation'::hstore, 'DE'), 'health_center', 'get_subcategory healthcare=>rehabilitation for DE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'FR'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for FR should be health');
+SELECT is(get_category('healthcare=>rehabilitation'::hstore, 'FR'), 'health', 'get_category healthcare=>rehabilitation for FR should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'FR'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for FR should be health_center');
+SELECT is(get_subcategory('healthcare=>rehabilitation'::hstore, 'FR'), 'health_center', 'get_subcategory healthcare=>rehabilitation for FR should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'ES'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for ES should be health');
+SELECT is(get_category('healthcare=>rehabilitation'::hstore, 'ES'), 'health', 'get_category healthcare=>rehabilitation for ES should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'ES'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for ES should be health_center');
+SELECT is(get_subcategory('healthcare=>rehabilitation'::hstore, 'ES'), 'health_center', 'get_subcategory healthcare=>rehabilitation for ES should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'AD'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for AD should be health');
+SELECT is(get_category('healthcare=>rehabilitation'::hstore, 'AD'), 'health', 'get_category healthcare=>rehabilitation for AD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'AD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for AD should be health_center');
+SELECT is(get_subcategory('healthcare=>rehabilitation'::hstore, 'AD'), 'health_center', 'get_subcategory healthcare=>rehabilitation for AD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'CH'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for CH should be health');
+SELECT is(get_category('healthcare=>rehabilitation'::hstore, 'CH'), 'health', 'get_category healthcare=>rehabilitation for CH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'CH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for CH should be health_center');
+SELECT is(get_subcategory('healthcare=>rehabilitation'::hstore, 'CH'), 'health_center', 'get_subcategory healthcare=>rehabilitation for CH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'AT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for AT should be health');
+SELECT is(get_category('healthcare=>rehabilitation'::hstore, 'AT'), 'health', 'get_category healthcare=>rehabilitation for AT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'AT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for AT should be health_center');
+SELECT is(get_subcategory('healthcare=>rehabilitation'::hstore, 'AT'), 'health_center', 'get_subcategory healthcare=>rehabilitation for AT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'PH'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for PH should be health');
+SELECT is(get_category('healthcare=>rehabilitation'::hstore, 'PH'), 'health', 'get_category healthcare=>rehabilitation for PH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'PH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for PH should be health_center');
+SELECT is(get_subcategory('healthcare=>rehabilitation'::hstore, 'PH'), 'health_center', 'get_subcategory healthcare=>rehabilitation for PH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'FI'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for FI should be health');
+SELECT is(get_category('healthcare=>rehabilitation'::hstore, 'FI'), 'health', 'get_category healthcare=>rehabilitation for FI should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'FI'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for FI should be health_center');
+SELECT is(get_subcategory('healthcare=>rehabilitation'::hstore, 'FI'), 'health_center', 'get_subcategory healthcare=>rehabilitation for FI should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'MC'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for MC should be health');
+SELECT is(get_category('healthcare=>rehabilitation'::hstore, 'MC'), 'health', 'get_category healthcare=>rehabilitation for MC should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'MC'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for MC should be health_center');
+SELECT is(get_subcategory('healthcare=>rehabilitation'::hstore, 'MC'), 'health_center', 'get_subcategory healthcare=>rehabilitation for MC should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'CD'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for CD should be health');
+SELECT is(get_category('healthcare=>rehabilitation'::hstore, 'CD'), 'health', 'get_category healthcare=>rehabilitation for CD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'CD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for CD should be health_center');
+SELECT is(get_subcategory('healthcare=>rehabilitation'::hstore, 'CD'), 'health_center', 'get_subcategory healthcare=>rehabilitation for CD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for IT should be health');
+SELECT is(get_category('healthcare=>rehabilitation'::hstore, 'IT'), 'health', 'get_category healthcare=>rehabilitation for IT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for IT should be health_center');
+SELECT is(get_subcategory('healthcare=>rehabilitation'::hstore, 'IT'), 'health_center', 'get_subcategory healthcare=>rehabilitation for IT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for GB should be health');
+SELECT is(get_category('healthcare=>rehabilitation'::hstore, 'GB'), 'health', 'get_category healthcare=>rehabilitation for GB should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for GB should be health_center');
+SELECT is(get_subcategory('healthcare=>rehabilitation'::hstore, 'GB'), 'health_center', 'get_subcategory healthcare=>rehabilitation for GB should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>rehabilitation for IE should be health');
+SELECT is(get_category('healthcare=>rehabilitation'::hstore, 'IE'), 'health', 'get_category healthcare=>rehabilitation for IE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>rehabilitation'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>rehabilitation for IE should be health_center');
+SELECT is(get_subcategory('healthcare=>rehabilitation'::hstore, 'IE'), 'health_center', 'get_subcategory healthcare=>rehabilitation for IE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for DE should be health');
+SELECT is(get_category('healthcare=>laboratory'::hstore, 'DE'), 'health', 'get_category healthcare=>laboratory for DE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for DE should be health_center');
+SELECT is(get_subcategory('healthcare=>laboratory'::hstore, 'DE'), 'health_center', 'get_subcategory healthcare=>laboratory for DE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'FR'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for FR should be health');
+SELECT is(get_category('healthcare=>laboratory'::hstore, 'FR'), 'health', 'get_category healthcare=>laboratory for FR should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'FR'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for FR should be health_center');
+SELECT is(get_subcategory('healthcare=>laboratory'::hstore, 'FR'), 'health_center', 'get_subcategory healthcare=>laboratory for FR should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'ES'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for ES should be health');
+SELECT is(get_category('healthcare=>laboratory'::hstore, 'ES'), 'health', 'get_category healthcare=>laboratory for ES should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'ES'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for ES should be health_center');
+SELECT is(get_subcategory('healthcare=>laboratory'::hstore, 'ES'), 'health_center', 'get_subcategory healthcare=>laboratory for ES should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'AD'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for AD should be health');
+SELECT is(get_category('healthcare=>laboratory'::hstore, 'AD'), 'health', 'get_category healthcare=>laboratory for AD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'AD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for AD should be health_center');
+SELECT is(get_subcategory('healthcare=>laboratory'::hstore, 'AD'), 'health_center', 'get_subcategory healthcare=>laboratory for AD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'CH'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for CH should be health');
+SELECT is(get_category('healthcare=>laboratory'::hstore, 'CH'), 'health', 'get_category healthcare=>laboratory for CH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'CH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for CH should be health_center');
+SELECT is(get_subcategory('healthcare=>laboratory'::hstore, 'CH'), 'health_center', 'get_subcategory healthcare=>laboratory for CH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'AT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for AT should be health');
+SELECT is(get_category('healthcare=>laboratory'::hstore, 'AT'), 'health', 'get_category healthcare=>laboratory for AT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'AT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for AT should be health_center');
+SELECT is(get_subcategory('healthcare=>laboratory'::hstore, 'AT'), 'health_center', 'get_subcategory healthcare=>laboratory for AT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'PH'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for PH should be health');
+SELECT is(get_category('healthcare=>laboratory'::hstore, 'PH'), 'health', 'get_category healthcare=>laboratory for PH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'PH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for PH should be health_center');
+SELECT is(get_subcategory('healthcare=>laboratory'::hstore, 'PH'), 'health_center', 'get_subcategory healthcare=>laboratory for PH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'FI'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for FI should be health');
+SELECT is(get_category('healthcare=>laboratory'::hstore, 'FI'), 'health', 'get_category healthcare=>laboratory for FI should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'FI'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for FI should be health_center');
+SELECT is(get_subcategory('healthcare=>laboratory'::hstore, 'FI'), 'health_center', 'get_subcategory healthcare=>laboratory for FI should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'MC'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for MC should be health');
+SELECT is(get_category('healthcare=>laboratory'::hstore, 'MC'), 'health', 'get_category healthcare=>laboratory for MC should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'MC'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for MC should be health_center');
+SELECT is(get_subcategory('healthcare=>laboratory'::hstore, 'MC'), 'health_center', 'get_subcategory healthcare=>laboratory for MC should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'CD'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for CD should be health');
+SELECT is(get_category('healthcare=>laboratory'::hstore, 'CD'), 'health', 'get_category healthcare=>laboratory for CD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'CD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for CD should be health_center');
+SELECT is(get_subcategory('healthcare=>laboratory'::hstore, 'CD'), 'health_center', 'get_subcategory healthcare=>laboratory for CD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for IT should be health');
+SELECT is(get_category('healthcare=>laboratory'::hstore, 'IT'), 'health', 'get_category healthcare=>laboratory for IT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for IT should be health_center');
+SELECT is(get_subcategory('healthcare=>laboratory'::hstore, 'IT'), 'health_center', 'get_subcategory healthcare=>laboratory for IT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for GB should be health');
+SELECT is(get_category('healthcare=>laboratory'::hstore, 'GB'), 'health', 'get_category healthcare=>laboratory for GB should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for GB should be health_center');
+SELECT is(get_subcategory('healthcare=>laboratory'::hstore, 'GB'), 'health_center', 'get_subcategory healthcare=>laboratory for GB should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, healthcare=>laboratory for IE should be health');
+SELECT is(get_category('healthcare=>laboratory'::hstore, 'IE'), 'health', 'get_category healthcare=>laboratory for IE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, healthcare=>laboratory'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, healthcare=>laboratory for IE should be health_center');
+SELECT is(get_subcategory('healthcare=>laboratory'::hstore, 'IE'), 'health_center', 'get_subcategory healthcare=>laboratory for IE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for DE should be health');
+SELECT is(get_category('amenity=>hospital'::hstore, 'DE'), 'health', 'get_category amenity=>hospital for DE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for DE should be health_center');
+SELECT is(get_subcategory('amenity=>hospital'::hstore, 'DE'), 'health_center', 'get_subcategory amenity=>hospital for DE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'FR'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for FR should be health');
+SELECT is(get_category('amenity=>hospital'::hstore, 'FR'), 'health', 'get_category amenity=>hospital for FR should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'FR'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for FR should be health_center');
+SELECT is(get_subcategory('amenity=>hospital'::hstore, 'FR'), 'health_center', 'get_subcategory amenity=>hospital for FR should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'ES'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for ES should be health');
+SELECT is(get_category('amenity=>hospital'::hstore, 'ES'), 'health', 'get_category amenity=>hospital for ES should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'ES'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for ES should be health_center');
+SELECT is(get_subcategory('amenity=>hospital'::hstore, 'ES'), 'health_center', 'get_subcategory amenity=>hospital for ES should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'AD'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for AD should be health');
+SELECT is(get_category('amenity=>hospital'::hstore, 'AD'), 'health', 'get_category amenity=>hospital for AD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'AD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for AD should be health_center');
+SELECT is(get_subcategory('amenity=>hospital'::hstore, 'AD'), 'health_center', 'get_subcategory amenity=>hospital for AD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'CH'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for CH should be health');
+SELECT is(get_category('amenity=>hospital'::hstore, 'CH'), 'health', 'get_category amenity=>hospital for CH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'CH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for CH should be health_center');
+SELECT is(get_subcategory('amenity=>hospital'::hstore, 'CH'), 'health_center', 'get_subcategory amenity=>hospital for CH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'AT'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for AT should be health');
+SELECT is(get_category('amenity=>hospital'::hstore, 'AT'), 'health', 'get_category amenity=>hospital for AT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'AT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for AT should be health_center');
+SELECT is(get_subcategory('amenity=>hospital'::hstore, 'AT'), 'health_center', 'get_subcategory amenity=>hospital for AT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'PH'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for PH should be health');
+SELECT is(get_category('amenity=>hospital'::hstore, 'PH'), 'health', 'get_category amenity=>hospital for PH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'PH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for PH should be health_center');
+SELECT is(get_subcategory('amenity=>hospital'::hstore, 'PH'), 'health_center', 'get_subcategory amenity=>hospital for PH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'FI'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for FI should be health');
+SELECT is(get_category('amenity=>hospital'::hstore, 'FI'), 'health', 'get_category amenity=>hospital for FI should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'FI'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for FI should be health_center');
+SELECT is(get_subcategory('amenity=>hospital'::hstore, 'FI'), 'health_center', 'get_subcategory amenity=>hospital for FI should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'MC'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for MC should be health');
+SELECT is(get_category('amenity=>hospital'::hstore, 'MC'), 'health', 'get_category amenity=>hospital for MC should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'MC'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for MC should be health_center');
+SELECT is(get_subcategory('amenity=>hospital'::hstore, 'MC'), 'health_center', 'get_subcategory amenity=>hospital for MC should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'CD'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for CD should be health');
+SELECT is(get_category('amenity=>hospital'::hstore, 'CD'), 'health', 'get_category amenity=>hospital for CD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'CD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for CD should be health_center');
+SELECT is(get_subcategory('amenity=>hospital'::hstore, 'CD'), 'health_center', 'get_subcategory amenity=>hospital for CD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for IT should be health');
+SELECT is(get_category('amenity=>hospital'::hstore, 'IT'), 'health', 'get_category amenity=>hospital for IT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for IT should be health_center');
+SELECT is(get_subcategory('amenity=>hospital'::hstore, 'IT'), 'health_center', 'get_subcategory amenity=>hospital for IT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for GB should be health');
+SELECT is(get_category('amenity=>hospital'::hstore, 'GB'), 'health', 'get_category amenity=>hospital for GB should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for GB should be health_center');
+SELECT is(get_subcategory('amenity=>hospital'::hstore, 'GB'), 'health_center', 'get_subcategory amenity=>hospital for GB should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, amenity=>hospital for IE should be health');
+SELECT is(get_category('amenity=>hospital'::hstore, 'IE'), 'health', 'get_category amenity=>hospital for IE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>hospital'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>hospital for IE should be health_center');
+SELECT is(get_subcategory('amenity=>hospital'::hstore, 'IE'), 'health_center', 'get_subcategory amenity=>hospital for IE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for DE should be health');
+SELECT is(get_category('amenity=>clinic'::hstore, 'DE'), 'health', 'get_category amenity=>clinic for DE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for DE should be health_center');
+SELECT is(get_subcategory('amenity=>clinic'::hstore, 'DE'), 'health_center', 'get_subcategory amenity=>clinic for DE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'FR'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for FR should be health');
+SELECT is(get_category('amenity=>clinic'::hstore, 'FR'), 'health', 'get_category amenity=>clinic for FR should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'FR'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for FR should be health_center');
+SELECT is(get_subcategory('amenity=>clinic'::hstore, 'FR'), 'health_center', 'get_subcategory amenity=>clinic for FR should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'ES'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for ES should be health');
+SELECT is(get_category('amenity=>clinic'::hstore, 'ES'), 'health', 'get_category amenity=>clinic for ES should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'ES'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for ES should be health_center');
+SELECT is(get_subcategory('amenity=>clinic'::hstore, 'ES'), 'health_center', 'get_subcategory amenity=>clinic for ES should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'AD'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for AD should be health');
+SELECT is(get_category('amenity=>clinic'::hstore, 'AD'), 'health', 'get_category amenity=>clinic for AD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'AD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for AD should be health_center');
+SELECT is(get_subcategory('amenity=>clinic'::hstore, 'AD'), 'health_center', 'get_subcategory amenity=>clinic for AD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'CH'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for CH should be health');
+SELECT is(get_category('amenity=>clinic'::hstore, 'CH'), 'health', 'get_category amenity=>clinic for CH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'CH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for CH should be health_center');
+SELECT is(get_subcategory('amenity=>clinic'::hstore, 'CH'), 'health_center', 'get_subcategory amenity=>clinic for CH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'AT'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for AT should be health');
+SELECT is(get_category('amenity=>clinic'::hstore, 'AT'), 'health', 'get_category amenity=>clinic for AT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'AT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for AT should be health_center');
+SELECT is(get_subcategory('amenity=>clinic'::hstore, 'AT'), 'health_center', 'get_subcategory amenity=>clinic for AT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'PH'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for PH should be health');
+SELECT is(get_category('amenity=>clinic'::hstore, 'PH'), 'health', 'get_category amenity=>clinic for PH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'PH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for PH should be health_center');
+SELECT is(get_subcategory('amenity=>clinic'::hstore, 'PH'), 'health_center', 'get_subcategory amenity=>clinic for PH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'FI'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for FI should be health');
+SELECT is(get_category('amenity=>clinic'::hstore, 'FI'), 'health', 'get_category amenity=>clinic for FI should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'FI'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for FI should be health_center');
+SELECT is(get_subcategory('amenity=>clinic'::hstore, 'FI'), 'health_center', 'get_subcategory amenity=>clinic for FI should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'MC'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for MC should be health');
+SELECT is(get_category('amenity=>clinic'::hstore, 'MC'), 'health', 'get_category amenity=>clinic for MC should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'MC'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for MC should be health_center');
+SELECT is(get_subcategory('amenity=>clinic'::hstore, 'MC'), 'health_center', 'get_subcategory amenity=>clinic for MC should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'CD'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for CD should be health');
+SELECT is(get_category('amenity=>clinic'::hstore, 'CD'), 'health', 'get_category amenity=>clinic for CD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'CD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for CD should be health_center');
+SELECT is(get_subcategory('amenity=>clinic'::hstore, 'CD'), 'health_center', 'get_subcategory amenity=>clinic for CD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for IT should be health');
+SELECT is(get_category('amenity=>clinic'::hstore, 'IT'), 'health', 'get_category amenity=>clinic for IT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for IT should be health_center');
+SELECT is(get_subcategory('amenity=>clinic'::hstore, 'IT'), 'health_center', 'get_subcategory amenity=>clinic for IT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for GB should be health');
+SELECT is(get_category('amenity=>clinic'::hstore, 'GB'), 'health', 'get_category amenity=>clinic for GB should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for GB should be health_center');
+SELECT is(get_subcategory('amenity=>clinic'::hstore, 'GB'), 'health_center', 'get_subcategory amenity=>clinic for GB should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, amenity=>clinic for IE should be health');
+SELECT is(get_category('amenity=>clinic'::hstore, 'IE'), 'health', 'get_category amenity=>clinic for IE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>clinic'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>clinic for IE should be health_center');
+SELECT is(get_subcategory('amenity=>clinic'::hstore, 'IE'), 'health_center', 'get_subcategory amenity=>clinic for IE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'DE'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for DE should be health');
+SELECT is(get_category('amenity=>doctors'::hstore, 'DE'), 'health', 'get_category amenity=>doctors for DE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'DE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for DE should be health_center');
+SELECT is(get_subcategory('amenity=>doctors'::hstore, 'DE'), 'health_center', 'get_subcategory amenity=>doctors for DE should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'FR'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for FR should be health');
+SELECT is(get_category('amenity=>doctors'::hstore, 'FR'), 'health', 'get_category amenity=>doctors for FR should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'FR'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for FR should be health_center');
+SELECT is(get_subcategory('amenity=>doctors'::hstore, 'FR'), 'health_center', 'get_subcategory amenity=>doctors for FR should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'ES'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for ES should be health');
+SELECT is(get_category('amenity=>doctors'::hstore, 'ES'), 'health', 'get_category amenity=>doctors for ES should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'ES'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for ES should be health_center');
+SELECT is(get_subcategory('amenity=>doctors'::hstore, 'ES'), 'health_center', 'get_subcategory amenity=>doctors for ES should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'AD'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for AD should be health');
+SELECT is(get_category('amenity=>doctors'::hstore, 'AD'), 'health', 'get_category amenity=>doctors for AD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'AD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for AD should be health_center');
+SELECT is(get_subcategory('amenity=>doctors'::hstore, 'AD'), 'health_center', 'get_subcategory amenity=>doctors for AD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'CH'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for CH should be health');
+SELECT is(get_category('amenity=>doctors'::hstore, 'CH'), 'health', 'get_category amenity=>doctors for CH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'CH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for CH should be health_center');
+SELECT is(get_subcategory('amenity=>doctors'::hstore, 'CH'), 'health_center', 'get_subcategory amenity=>doctors for CH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'AT'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for AT should be health');
+SELECT is(get_category('amenity=>doctors'::hstore, 'AT'), 'health', 'get_category amenity=>doctors for AT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'AT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for AT should be health_center');
+SELECT is(get_subcategory('amenity=>doctors'::hstore, 'AT'), 'health_center', 'get_subcategory amenity=>doctors for AT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'PH'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for PH should be health');
+SELECT is(get_category('amenity=>doctors'::hstore, 'PH'), 'health', 'get_category amenity=>doctors for PH should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'PH'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for PH should be health_center');
+SELECT is(get_subcategory('amenity=>doctors'::hstore, 'PH'), 'health_center', 'get_subcategory amenity=>doctors for PH should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'FI'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for FI should be health');
+SELECT is(get_category('amenity=>doctors'::hstore, 'FI'), 'health', 'get_category amenity=>doctors for FI should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'FI'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for FI should be health_center');
+SELECT is(get_subcategory('amenity=>doctors'::hstore, 'FI'), 'health_center', 'get_subcategory amenity=>doctors for FI should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'MC'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for MC should be health');
+SELECT is(get_category('amenity=>doctors'::hstore, 'MC'), 'health', 'get_category amenity=>doctors for MC should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'MC'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for MC should be health_center');
+SELECT is(get_subcategory('amenity=>doctors'::hstore, 'MC'), 'health_center', 'get_subcategory amenity=>doctors for MC should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'CD'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for CD should be health');
+SELECT is(get_category('amenity=>doctors'::hstore, 'CD'), 'health', 'get_category amenity=>doctors for CD should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'CD'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for CD should be health_center');
+SELECT is(get_subcategory('amenity=>doctors'::hstore, 'CD'), 'health_center', 'get_subcategory amenity=>doctors for CD should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'IT'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for IT should be health');
+SELECT is(get_category('amenity=>doctors'::hstore, 'IT'), 'health', 'get_category amenity=>doctors for IT should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'IT'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for IT should be health_center');
+SELECT is(get_subcategory('amenity=>doctors'::hstore, 'IT'), 'health_center', 'get_subcategory amenity=>doctors for IT should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'GB'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for GB should be health');
+SELECT is(get_category('amenity=>doctors'::hstore, 'GB'), 'health', 'get_category amenity=>doctors for GB should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'GB'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for GB should be health_center');
+SELECT is(get_subcategory('amenity=>doctors'::hstore, 'GB'), 'health_center', 'get_subcategory amenity=>doctors for GB should be health_center');
 
-SELECT is(get_category('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'IE'), 'health', 'get_category opening_hours:covid19=>*, amenity=>doctors for IE should be health');
+SELECT is(get_category('amenity=>doctors'::hstore, 'IE'), 'health', 'get_category amenity=>doctors for IE should be health');
 
-SELECT is(get_subcategory('opening_hours:covid19=>*, amenity=>doctors'::hstore, 'IE'), 'health_center', 'get_subcategory opening_hours:covid19=>*, amenity=>doctors for IE should be health_center');
+SELECT is(get_subcategory('amenity=>doctors'::hstore, 'IE'), 'health_center', 'get_subcategory amenity=>doctors for IE should be health_center');
 
 SELECT is(get_category('shop=>herbalist'::hstore, 'IT'), 'health', 'get_category shop=>herbalist for IT should be health');
 
@@ -3066,73 +2970,45 @@ SELECT is(get_category('shop=>pastry'::hstore, 'IE'), 'food', 'get_category shop
 
 SELECT is(get_subcategory('shop=>pastry'::hstore, 'IE'), 'bakery', 'get_subcategory shop=>pastry for IE should be bakery');
 
-SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'DE'), 'food', 'get_category amenity=>vending_machine, vending=>bread for DE should be food');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'DE'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for DE should be bakery');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'FR'), 'food', 'get_category amenity=>vending_machine, vending=>bread for FR should be food');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'FR'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for FR should be bakery');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'ES'), 'food', 'get_category amenity=>vending_machine, vending=>bread for ES should be food');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'ES'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for ES should be bakery');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'AD'), 'food', 'get_category amenity=>vending_machine, vending=>bread for AD should be food');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'AD'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for AD should be bakery');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'CH'), 'food', 'get_category amenity=>vending_machine, vending=>bread for CH should be food');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'CH'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for CH should be bakery');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'AT'), 'food', 'get_category amenity=>vending_machine, vending=>bread for AT should be food');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'AT'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for AT should be bakery');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'PH'), 'food', 'get_category amenity=>vending_machine, vending=>bread for PH should be food');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'PH'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for PH should be bakery');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'FI'), 'food', 'get_category amenity=>vending_machine, vending=>bread for FI should be food');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'FI'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for FI should be bakery');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'MC'), 'food', 'get_category amenity=>vending_machine, vending=>bread for MC should be food');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'MC'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for MC should be bakery');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'CD'), 'food', 'get_category amenity=>vending_machine, vending=>bread for CD should be food');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'CD'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for CD should be bakery');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'IT'), 'food', 'get_category amenity=>vending_machine, vending=>bread for IT should be food');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'IT'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for IT should be bakery');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'GB'), 'food', 'get_category amenity=>vending_machine, vending=>bread for GB should be food');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'GB'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for GB should be bakery');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'IE'), 'food', 'get_category amenity=>vending_machine, vending=>bread for IE should be food');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'IE'), 'bakery', 'get_subcategory amenity=>vending_machine, vending=>bread for IE should be bakery');
-
 SELECT is(get_category('shop=>alcohol'::hstore, 'CD'), 'food', 'get_category shop=>alcohol for CD should be food');
 
 SELECT is(get_subcategory('shop=>alcohol'::hstore, 'CD'), 'alcohol', 'get_subcategory shop=>alcohol for CD should be alcohol');
+
+SELECT is(get_category('shop=>alcohol'::hstore, 'FR'), 'food', 'get_category shop=>alcohol for FR should be food');
+
+SELECT is(get_subcategory('shop=>alcohol'::hstore, 'FR'), 'alcohol', 'get_subcategory shop=>alcohol for FR should be alcohol');
 
 SELECT is(get_category('shop=>beverages'::hstore, 'CD'), 'food', 'get_category shop=>beverages for CD should be food');
 
 SELECT is(get_subcategory('shop=>beverages'::hstore, 'CD'), 'alcohol', 'get_subcategory shop=>beverages for CD should be alcohol');
 
+SELECT is(get_category('shop=>beverages'::hstore, 'FR'), 'food', 'get_category shop=>beverages for FR should be food');
+
+SELECT is(get_subcategory('shop=>beverages'::hstore, 'FR'), 'alcohol', 'get_subcategory shop=>beverages for FR should be alcohol');
+
 SELECT is(get_category('shop=>wine'::hstore, 'CD'), 'food', 'get_category shop=>wine for CD should be food');
 
 SELECT is(get_subcategory('shop=>wine'::hstore, 'CD'), 'alcohol', 'get_subcategory shop=>wine for CD should be alcohol');
 
+SELECT is(get_category('shop=>wine'::hstore, 'FR'), 'food', 'get_category shop=>wine for FR should be food');
+
+SELECT is(get_subcategory('shop=>wine'::hstore, 'FR'), 'alcohol', 'get_subcategory shop=>wine for FR should be alcohol');
+
 SELECT is(get_category('shop=>winery'::hstore, 'CD'), 'food', 'get_category shop=>winery for CD should be food');
 
 SELECT is(get_subcategory('shop=>winery'::hstore, 'CD'), 'alcohol', 'get_subcategory shop=>winery for CD should be alcohol');
+
+SELECT is(get_category('shop=>winery'::hstore, 'FR'), 'food', 'get_category shop=>winery for FR should be food');
+
+SELECT is(get_subcategory('shop=>winery'::hstore, 'FR'), 'alcohol', 'get_subcategory shop=>winery for FR should be alcohol');
+
+SELECT is(get_category('craft=>distillery'::hstore, 'CD'), 'food', 'get_category craft=>distillery for CD should be food');
+
+SELECT is(get_subcategory('craft=>distillery'::hstore, 'CD'), 'alcohol', 'get_subcategory craft=>distillery for CD should be alcohol');
+
+SELECT is(get_category('craft=>distillery'::hstore, 'FR'), 'food', 'get_category craft=>distillery for FR should be food');
+
+SELECT is(get_subcategory('craft=>distillery'::hstore, 'FR'), 'alcohol', 'get_subcategory craft=>distillery for FR should be alcohol');
 
 SELECT is(get_category('amenity=>vending_machine, vending=>pizza'::hstore, 'DE'), 'eat', 'get_category amenity=>vending_machine, vending=>pizza for DE should be eat');
 
@@ -3341,6 +3217,58 @@ SELECT is(get_subcategory('amenity=>vending_machine, vending=>sweets'::hstore, '
 SELECT is(get_category('amenity=>vending_machine, vending=>sweets'::hstore, 'IE'), 'eat', 'get_category amenity=>vending_machine, vending=>sweets for IE should be eat');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>sweets'::hstore, 'IE'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>sweets for IE should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'DE'), 'eat', 'get_category amenity=>vending_machine, vending=>bread for DE should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'DE'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>bread for DE should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'FR'), 'eat', 'get_category amenity=>vending_machine, vending=>bread for FR should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'FR'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>bread for FR should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'ES'), 'eat', 'get_category amenity=>vending_machine, vending=>bread for ES should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'ES'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>bread for ES should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'AD'), 'eat', 'get_category amenity=>vending_machine, vending=>bread for AD should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'AD'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>bread for AD should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'CH'), 'eat', 'get_category amenity=>vending_machine, vending=>bread for CH should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'CH'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>bread for CH should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'AT'), 'eat', 'get_category amenity=>vending_machine, vending=>bread for AT should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'AT'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>bread for AT should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'PH'), 'eat', 'get_category amenity=>vending_machine, vending=>bread for PH should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'PH'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>bread for PH should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'FI'), 'eat', 'get_category amenity=>vending_machine, vending=>bread for FI should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'FI'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>bread for FI should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'MC'), 'eat', 'get_category amenity=>vending_machine, vending=>bread for MC should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'MC'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>bread for MC should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'CD'), 'eat', 'get_category amenity=>vending_machine, vending=>bread for CD should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'CD'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>bread for CD should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'IT'), 'eat', 'get_category amenity=>vending_machine, vending=>bread for IT should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'IT'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>bread for IT should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'GB'), 'eat', 'get_category amenity=>vending_machine, vending=>bread for GB should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'GB'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>bread for GB should be vending_machine');
+
+SELECT is(get_category('amenity=>vending_machine, vending=>bread'::hstore, 'IE'), 'eat', 'get_category amenity=>vending_machine, vending=>bread for IE should be eat');
+
+SELECT is(get_subcategory('amenity=>vending_machine, vending=>bread'::hstore, 'IE'), 'vending_machine', 'get_subcategory amenity=>vending_machine, vending=>bread for IE should be vending_machine');
 
 SELECT is(get_category('amenity=>restaurant'::hstore, 'DE'), 'eat', 'get_category amenity=>restaurant for DE should be eat');
 
@@ -5434,6 +5362,58 @@ SELECT is(get_category('shop=>shoes'::hstore, 'IE'), 'clothing_beauty', 'get_cat
 
 SELECT is(get_subcategory('shop=>shoes'::hstore, 'IE'), 'shoes', 'get_subcategory shop=>shoes for IE should be shoes');
 
+SELECT is(get_category('craft=>shoemaker'::hstore, 'DE'), 'clothing_beauty', 'get_category craft=>shoemaker for DE should be clothing_beauty');
+
+SELECT is(get_subcategory('craft=>shoemaker'::hstore, 'DE'), 'shoes', 'get_subcategory craft=>shoemaker for DE should be shoes');
+
+SELECT is(get_category('craft=>shoemaker'::hstore, 'FR'), 'clothing_beauty', 'get_category craft=>shoemaker for FR should be clothing_beauty');
+
+SELECT is(get_subcategory('craft=>shoemaker'::hstore, 'FR'), 'shoes', 'get_subcategory craft=>shoemaker for FR should be shoes');
+
+SELECT is(get_category('craft=>shoemaker'::hstore, 'ES'), 'clothing_beauty', 'get_category craft=>shoemaker for ES should be clothing_beauty');
+
+SELECT is(get_subcategory('craft=>shoemaker'::hstore, 'ES'), 'shoes', 'get_subcategory craft=>shoemaker for ES should be shoes');
+
+SELECT is(get_category('craft=>shoemaker'::hstore, 'AD'), 'clothing_beauty', 'get_category craft=>shoemaker for AD should be clothing_beauty');
+
+SELECT is(get_subcategory('craft=>shoemaker'::hstore, 'AD'), 'shoes', 'get_subcategory craft=>shoemaker for AD should be shoes');
+
+SELECT is(get_category('craft=>shoemaker'::hstore, 'CH'), 'clothing_beauty', 'get_category craft=>shoemaker for CH should be clothing_beauty');
+
+SELECT is(get_subcategory('craft=>shoemaker'::hstore, 'CH'), 'shoes', 'get_subcategory craft=>shoemaker for CH should be shoes');
+
+SELECT is(get_category('craft=>shoemaker'::hstore, 'AT'), 'clothing_beauty', 'get_category craft=>shoemaker for AT should be clothing_beauty');
+
+SELECT is(get_subcategory('craft=>shoemaker'::hstore, 'AT'), 'shoes', 'get_subcategory craft=>shoemaker for AT should be shoes');
+
+SELECT is(get_category('craft=>shoemaker'::hstore, 'PH'), 'clothing_beauty', 'get_category craft=>shoemaker for PH should be clothing_beauty');
+
+SELECT is(get_subcategory('craft=>shoemaker'::hstore, 'PH'), 'shoes', 'get_subcategory craft=>shoemaker for PH should be shoes');
+
+SELECT is(get_category('craft=>shoemaker'::hstore, 'FI'), 'clothing_beauty', 'get_category craft=>shoemaker for FI should be clothing_beauty');
+
+SELECT is(get_subcategory('craft=>shoemaker'::hstore, 'FI'), 'shoes', 'get_subcategory craft=>shoemaker for FI should be shoes');
+
+SELECT is(get_category('craft=>shoemaker'::hstore, 'MC'), 'clothing_beauty', 'get_category craft=>shoemaker for MC should be clothing_beauty');
+
+SELECT is(get_subcategory('craft=>shoemaker'::hstore, 'MC'), 'shoes', 'get_subcategory craft=>shoemaker for MC should be shoes');
+
+SELECT is(get_category('craft=>shoemaker'::hstore, 'CD'), 'clothing_beauty', 'get_category craft=>shoemaker for CD should be clothing_beauty');
+
+SELECT is(get_subcategory('craft=>shoemaker'::hstore, 'CD'), 'shoes', 'get_subcategory craft=>shoemaker for CD should be shoes');
+
+SELECT is(get_category('craft=>shoemaker'::hstore, 'IT'), 'clothing_beauty', 'get_category craft=>shoemaker for IT should be clothing_beauty');
+
+SELECT is(get_subcategory('craft=>shoemaker'::hstore, 'IT'), 'shoes', 'get_subcategory craft=>shoemaker for IT should be shoes');
+
+SELECT is(get_category('craft=>shoemaker'::hstore, 'GB'), 'clothing_beauty', 'get_category craft=>shoemaker for GB should be clothing_beauty');
+
+SELECT is(get_subcategory('craft=>shoemaker'::hstore, 'GB'), 'shoes', 'get_subcategory craft=>shoemaker for GB should be shoes');
+
+SELECT is(get_category('craft=>shoemaker'::hstore, 'IE'), 'clothing_beauty', 'get_category craft=>shoemaker for IE should be clothing_beauty');
+
+SELECT is(get_subcategory('craft=>shoemaker'::hstore, 'IE'), 'shoes', 'get_subcategory craft=>shoemaker for IE should be shoes');
+
 SELECT is(get_category('shop=>bag'::hstore, 'DE'), 'clothing_beauty', 'get_category shop=>bag for DE should be clothing_beauty');
 
 SELECT is(get_subcategory('shop=>bag'::hstore, 'DE'), 'bag', 'get_subcategory shop=>bag for DE should be bag');
@@ -6317,6 +6297,10 @@ SELECT is(get_subcategory('shop=>kitchen'::hstore, 'FR'), 'furniture', 'get_subc
 SELECT is(get_category('shop=>kitchen'::hstore, 'IT'), 'home_equipment', 'get_category shop=>kitchen for IT should be home_equipment');
 
 SELECT is(get_subcategory('shop=>kitchen'::hstore, 'IT'), 'furniture', 'get_subcategory shop=>kitchen for IT should be furniture');
+
+SELECT is(get_category('shop=>household_linen'::hstore, 'FR'), 'home_equipment', 'get_category shop=>household_linen for FR should be home_equipment');
+
+SELECT is(get_subcategory('shop=>household_linen'::hstore, 'FR'), 'household_linen', 'get_subcategory shop=>household_linen for FR should be household_linen');
 
 SELECT is(get_category('shop=>houseware'::hstore, 'DE'), 'home_equipment', 'get_category shop=>houseware for DE should be home_equipment');
 
@@ -7453,26 +7437,6 @@ SELECT is(get_subcategory('amenity=>vending_machine, vending=>books'::hstore, 'I
 SELECT is(get_category('amenity=>vending_machine, vending=>books'::hstore, 'FR'), 'shop', 'get_category amenity=>vending_machine, vending=>books for FR should be shop');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>books'::hstore, 'FR'), 'books', 'get_subcategory amenity=>vending_machine, vending=>books for FR should be books');
-
-SELECT is(get_category('amenity=>public_bookcase'::hstore, 'DE'), 'shop', 'get_category amenity=>public_bookcase for DE should be shop');
-
-SELECT is(get_subcategory('amenity=>public_bookcase'::hstore, 'DE'), 'books', 'get_subcategory amenity=>public_bookcase for DE should be books');
-
-SELECT is(get_category('amenity=>public_bookcase'::hstore, 'AT'), 'shop', 'get_category amenity=>public_bookcase for AT should be shop');
-
-SELECT is(get_subcategory('amenity=>public_bookcase'::hstore, 'AT'), 'books', 'get_subcategory amenity=>public_bookcase for AT should be books');
-
-SELECT is(get_category('amenity=>public_bookcase'::hstore, 'CH'), 'shop', 'get_category amenity=>public_bookcase for CH should be shop');
-
-SELECT is(get_subcategory('amenity=>public_bookcase'::hstore, 'CH'), 'books', 'get_subcategory amenity=>public_bookcase for CH should be books');
-
-SELECT is(get_category('amenity=>public_bookcase'::hstore, 'IT'), 'shop', 'get_category amenity=>public_bookcase for IT should be shop');
-
-SELECT is(get_subcategory('amenity=>public_bookcase'::hstore, 'IT'), 'books', 'get_subcategory amenity=>public_bookcase for IT should be books');
-
-SELECT is(get_category('amenity=>public_bookcase'::hstore, 'FR'), 'shop', 'get_category amenity=>public_bookcase for FR should be shop');
-
-SELECT is(get_subcategory('amenity=>public_bookcase'::hstore, 'FR'), 'books', 'get_subcategory amenity=>public_bookcase for FR should be books');
 
 SELECT is(get_category('shop=>art'::hstore, 'DE'), 'shop', 'get_category shop=>art for DE should be shop');
 
@@ -8721,58 +8685,6 @@ SELECT is(get_subcategory('amenity=>vending_machine, vending=>bicycle_tube'::hst
 SELECT is(get_category('amenity=>vending_machine, vending=>bicycle_tube'::hstore, 'IE'), 'mobility', 'get_category amenity=>vending_machine, vending=>bicycle_tube for IE should be mobility');
 
 SELECT is(get_subcategory('amenity=>vending_machine, vending=>bicycle_tube'::hstore, 'IE'), 'bicycle_tube', 'get_subcategory amenity=>vending_machine, vending=>bicycle_tube for IE should be bicycle_tube');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'DE'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for DE should be mobility');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'DE'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for DE should be public_transport_tickets');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'FR'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for FR should be mobility');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'FR'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for FR should be public_transport_tickets');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'ES'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for ES should be mobility');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'ES'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for ES should be public_transport_tickets');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'AD'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for AD should be mobility');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'AD'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for AD should be public_transport_tickets');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'CH'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for CH should be mobility');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'CH'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for CH should be public_transport_tickets');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'AT'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for AT should be mobility');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'AT'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for AT should be public_transport_tickets');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'PH'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for PH should be mobility');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'PH'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for PH should be public_transport_tickets');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'FI'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for FI should be mobility');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'FI'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for FI should be public_transport_tickets');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'MC'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for MC should be mobility');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'MC'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for MC should be public_transport_tickets');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'CD'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for CD should be mobility');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'CD'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for CD should be public_transport_tickets');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'IT'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for IT should be mobility');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'IT'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for IT should be public_transport_tickets');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'GB'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for GB should be mobility');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'GB'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for GB should be public_transport_tickets');
-
-SELECT is(get_category('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'IE'), 'mobility', 'get_category amenity=>vending_machine, vending=>public_transport_tickets for IE should be mobility');
-
-SELECT is(get_subcategory('amenity=>vending_machine, vending=>public_transport_tickets'::hstore, 'IE'), 'public_transport_tickets', 'get_subcategory amenity=>vending_machine, vending=>public_transport_tickets for IE should be public_transport_tickets');
 
 SELECT is(get_category('shop=>tyres'::hstore, 'DE'), 'mobility', 'get_category shop=>tyres for DE should be mobility');
 

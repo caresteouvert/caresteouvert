@@ -60,7 +60,7 @@
         "money": {
           "name": "Money",
           "osm_tags": [
-            { "amenity": "bank|atm|money_transfer|mobile_money_agent" },
+            { "amenity": "bank|money_transfer|mobile_money_agent" },
             { "shop": "money_lender" }
           ],
           "-areas": [ "CD" ],
@@ -111,6 +111,13 @@
           ],
           "areas": [ "AT", "CH", "DE", "IT", "FR" ],
           "form_details": [ "delivery", "drive", "access" ]
+        },
+        "key_cutter": {
+          "name": "Key cutter",
+          "osm_tags": [
+            { "craft": "key_cutter" }
+          ],
+          "areas": [ "FR" ]
         },
         "museum": {
           "name": "Museum",
@@ -177,14 +184,6 @@
           "areas": "all",
           "form_details": [ "delivery", "access" ]
         },
-        "condoms": {
-          "name": "Condoms vending machine",
-          "osm_tags": [
-            { "amenity": "vending_machine", "vending": "condoms" }
-          ],
-          "areas": "all",
-          "show_qa": false
-        },
         "medical_supply": {
           "name": "Medical supplies",
           "osm_tags": [
@@ -200,10 +199,6 @@
             { "amenity": "hospital|clinic|doctors" }
           ],
           "areas": "all",
-          "-mapfilter": "all",
-          "osm_filter_tags": [
-            { "opening_hours:covid19": "*" }
-          ],
           "show_qa": false
         },
         "herbalist": {
@@ -334,8 +329,7 @@
         "bakery": {
           "name": "Bakery",
           "osm_tags": [
-            { "shop": "bakery|pastry" },
-            { "amenity": "vending_machine", "vending": "bread" }
+            { "shop": "bakery|pastry" }
           ],
           "areas": "all",
           "form_details": [ "delivery", "access" ]
@@ -343,9 +337,10 @@
         "alcohol": {
           "name": "Alcohol store",
           "osm_tags": [
-            { "shop": "alcohol|beverages|wine|winery" }
+            { "shop": "alcohol|beverages|wine|winery" },
+            { "craft": "distillery" }
           ],
-          "areas": [ "CD" ],
+          "areas": [ "CD", "FR" ],
           "form_details": [ "delivery", "access" ]
         }
       }
@@ -356,7 +351,7 @@
         "vending_machine": {
           "name": "Vending machine",
           "osm_tags": [
-            { "amenity": "vending_machine", "vending": "pizza|drinks|water|sweets" }
+            { "amenity": "vending_machine", "vending": "pizza|drinks|water|sweets|bread" }
           ],
           "areas": "all",
           "show_qa": false
@@ -463,7 +458,7 @@
       "subcategories": {
         "shoes": {
           "name": "Shoes",
-          "osm_tags": [ { "shop": "shoes" } ],
+          "osm_tags": [ { "shop": "shoes" }, { "craft": "shoemaker" } ],
           "areas": "all",
           "form_details": [ "delivery", "drive", "access" ]
         },
@@ -717,8 +712,7 @@
           "name": "Book store",
           "osm_tags": [
             { "shop": "books" },
-            { "amenity": "vending_machine", "vending": "books" },
-            { "amenity": "public_bookcase" }
+            { "amenity": "vending_machine", "vending": "books" }
           ],
           "areas": [ "DE", "AT", "CH", "IT", "FR" ],
           "form_details": [ "delivery", "access" ]
@@ -936,12 +930,6 @@
           "osm_tags": [ { "amenity": "vending_machine", "vending": "bicycle_tube" } ],
           "areas": "all",
           "-mapfilter": [ "FR" ],
-          "show_qa": false
-        },
-        "public_transport_tickets": {
-          "name": "Public transport ticket machine",
-          "osm_tags": [ { "amenity": "vending_machine", "vending": "public_transport_tickets" } ],
-          "areas": "all",
           "show_qa": false
         },
         "tyres": {
