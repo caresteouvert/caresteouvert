@@ -11,3 +11,6 @@ jobs:
         uses: appleboy/gitlab-ci-action@v0.0.2
         with:
           host: https://gitlab.makina-corpus.net
+          token: ${{ secrets.TOKEN }}
+          ref: master
+          project_id: ${{ secrets.PROJECT_ID }}
