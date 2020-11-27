@@ -570,6 +570,11 @@
           ],
           "areas": [ "DE", "AT", "CH", "FR", "IT" ]
         },
+        "household_linen": {
+          "name": "Household linen",
+          "osm_tags": [ { "shop": "household_linen" } ],
+          "areas": [ "FR" ]
+        },
         "houseware": {
           "name": "Houseware",
           "osm_tags": [
