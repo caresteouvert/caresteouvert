@@ -1,50 +1,27 @@
 <template>
-  <v-dialog
-    v-model="dialog"
-    :width="600"
-  >
-    <template v-slot:activator="{ on }">
-      <v-list dense two-line>
-        <v-list-item v-on="on">
-          <v-list-item-icon class="mr-1">
-            <v-icon>osm-alert</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title
-              :style="{ 'overflow': 'inherit', 'text-overflow': 'inherit', 'white-space': 'inherit' }">
-              {{ $t('details.update_dialog.complete1') }}
-            </v-list-item-title>
-            <v-list-item-subtitle>{{ $t('details.update_dialog.complete2') }}</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </template>
-
-    <v-card>
-      <v-card-title class="flex-nowrap">
-        <span class="body-1">{{ $t('details.update_dialog.title') }}</span>
-        <v-spacer></v-spacer>
-        <v-btn
-          icon
-          @click="dialog=false"
-        >
-          <v-icon>osm-close</v-icon>
-        </v-btn>
-      </v-card-title>
-      <v-card-text>
-        <p class="mb-0" v-html="$t('details.update_dialog.promo').replace(/\n/g, '<br />')"></p>
-        <br />
+  <v-list dense two-line>
+    <v-list-item v-on="on">
+      <v-list-item-icon class="mr-1">
+        <v-icon>osm-alert</v-icon>
+      </v-list-item-icon>
+      <v-list-item-content>
+        <v-list-item-title
+          :style="{ 'overflow': 'inherit', 'text-overflow': 'inherit', 'white-space': 'inherit' }">
+          {{ $t('details.update_dialog.complete1') }}
+        </v-list-item-title>
+        <v-list-item-subtitle>{{ $t('details.update_dialog.complete2') }}</v-list-item-subtitle>
         <p class="text-center">
           <v-btn
             :href="links.contact"
             target="_blank"
-            color="primary"
+            small
           >{{ $t('details.update_dialog.contact') }}</v-btn>
         </p>
-      </v-card-text>
-    </v-card>
-  </v-dialog>
+      </v-list-item-content>
+    </v-list-item>
+  </v-list>
 </template>
+
 
 <script>
 import i18nMixin from './mixins/i18n';
