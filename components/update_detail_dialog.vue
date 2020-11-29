@@ -36,7 +36,7 @@
         <br />
         <p class="text-center">
           <v-btn
-            :href="`https://airtable.com/shrFEO8LAYHsMMXKD`"
+            :href="links.contact"
             target="_blank"
             color="primary"
           >{{ $t('details.update_dialog.contact') }}</v-btn>
@@ -47,9 +47,12 @@
 </template>
 
 <script>
+import i18nMixin from './mixins/i18n';
 import parseId from '../lib/parse_id';
 
 export default {
+  mixins: [i18nMixin],
+
   props: {
     place: {
       type: Object,
