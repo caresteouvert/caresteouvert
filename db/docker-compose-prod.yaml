@@ -1,6 +1,8 @@
 version: '3.7'
 
 services:
+  pg_featureserv:
+    image: ${DOCKER_REGISTRY}/caresteouvert-pg_featureserv:latest
   geoip:
     image: ${DOCKER_REGISTRY}/caresteouvert-geoip:latest
   web:
