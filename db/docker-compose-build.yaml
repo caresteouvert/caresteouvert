@@ -4,6 +4,10 @@ services:
   geoip:
     build:
       context: geoip
+  pg_featureserv:
+    build:
+      context: pg_featureserv
+      dockerfile: Dockerfile.ci
   web:
     build:
       context: caresteouvert_backend

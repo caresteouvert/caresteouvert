@@ -60,7 +60,6 @@ services:
     restart: always
 
   pg_featureserv:
-    image: pramsey/pg_featureserv
     depends_on:
       - postgres
     environment:

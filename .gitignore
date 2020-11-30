@@ -5,6 +5,7 @@
 /.cache
 /dist
 /db/caresteouvert_backend
+/db/pg_featureserv
 /db/data/
 /db/export/
 /db/.env

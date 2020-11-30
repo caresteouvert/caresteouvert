@@ -7,6 +7,7 @@ Copy `.env.example` as `.env` and adjust settings.
 ```
 cd db
 git clone https://github.com/caresteouvert/caresteouvert_backend.git
+git clone https://github.com/osmontrouge/pg_featureserv.git
 ```
 
 ```
