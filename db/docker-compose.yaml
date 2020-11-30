@@ -100,4 +100,6 @@ services:
   front:
     ports:
       - "${FRONT_PORT:-8081}:1234"
+    environment:
+      BASE_PATH: ${BASE_PATH:-}
     restart: always

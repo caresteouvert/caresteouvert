@@ -15,5 +15,7 @@ services:
   front:
     build:
       context: ../
+      args:
+        - BASE_PATH=$BASE_PATH
   osm_imposm:
     build: .
