@@ -64,6 +64,7 @@ services:
       - postgres
     environment:
       <<: *common-environment
+      PORT: 9000
     ports:
       - ${FEATURESERV_PORT:-9000}:9000
     restart: always
