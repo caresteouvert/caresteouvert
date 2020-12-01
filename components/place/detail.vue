@@ -251,7 +251,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['country']),
+    ...mapState(['country', 'isContributing']),
 
     hasVending() {
       return this.$te(`details.vending.${this.place.properties.tags.vending}`);
@@ -304,6 +304,7 @@ export default {
       addInfosIfValueYes('tobacco');
       addInfosIfValueYes('newsagent');
       addInfosDependingOfTagAndStatus('takeaway');
+      addInfosDependingOfTagAndStatus('pickup');
       addInfosDependingOfTagAndStatus('delivery');
       addInfosDependingOfTagAndStatus('drive_through');
       addInfosDependingOfTagAndStatus('wheelchair');
@@ -356,6 +357,12 @@ export default {
 
     isMobile() {
       this.updateDefaultHeight();
+    },
+
+    isContributing() {
+      if(this.isContributing && this.isMobile) {
+        this.moveUp();
+      }
     }
   },
 

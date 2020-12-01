@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   height="18"
+   width="18"
+   fill="#000000"
+   data-name="Layer 1"
+   viewBox="0 0 18 18"
+   x="0px"
+   y="0px"
+   version="1.1"
+   id="svg6">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Edit</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <title
+     id="title2">Edit</title>
+  <path
+     d="M 11.192571,3.0042126 14.854396,6.6837863 5.5859306,15.996631 1.9262158,12.318463 Z M 17.632755,2.1164882 15.99977,0.4756922 a 1.6147041,1.6147795 0 0 0 -2.288991,0 l -1.56408,1.5718875 3.661472,3.6795737 1.824584,-1.8334586 a 1.2585763,1.258635 0 0 0 0,-1.7772066 z M 0.0102268,17.490468 a 0.41765045,0.41766994 0 0 0 0.50413362,0.498181 L 4.5945381,16.994397 0.93482333,13.314824 Z"
+     id="path4"
+     style="stroke-width:0.0351566" />
+</svg>

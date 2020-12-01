@@ -38,6 +38,14 @@ BEGIN
 			status := 'open_adapted';
 		END IF;
 
+	-- Has any covid19 related service
+	ELSIF tags->'delivery:covid19' IN ('yes', 'only') OR tags->'drive_through:covid19' IN ('yes', 'only') OR tags->'takeaway:covid19' IN ('yes', 'only') OR tags->'pickup:covid19' IN ('yes', 'only') THEN
+		status := 'open_adapted';
+
+	-- Has access:covid19 explicitly set to yes
+	ELSIF tags->'access:covid19' = 'yes' THEN
+		status := 'open';
+
 	-- Self-service / vending machines
 	ELSIF (tags->'amenity' = 'fuel' AND tags->'self_service' = 'yes') OR tags->'amenity' = 'vending_machine' THEN
 		status := 'open';
@@ -130,7 +138,9 @@ AS
 	END,
 	CASE
 		WHEN tags->'takeaway:covid19' IN ('yes', 'no', 'only') THEN tags->'takeaway:covid19'
+		WHEN tags->'pickup:covid19' IN ('yes', 'no', 'only') THEN tags->'pickup:covid19'
 		WHEN tags->'takeaway' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'takeaway'
+		WHEN tags->'pickup' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'pickup'
 		ELSE 'unknown'
 	END,
 	has_contact_tag(tags),
@@ -166,7 +176,9 @@ SELECT
 	END,
 	CASE
 		WHEN tags->'takeaway:covid19' IN ('yes', 'no', 'only') THEN tags->'takeaway:covid19'
+		WHEN tags->'pickup:covid19' IN ('yes', 'no', 'only') THEN tags->'pickup:covid19'
 		WHEN tags->'takeaway' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'takeaway'
+		WHEN tags->'pickup' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'pickup'
 		ELSE 'unknown'
 	END,
 	has_contact_tag(tags),
@@ -250,6 +262,43 @@ WHERE
 	AND poi_osm_next.country = b.country
 	AND b.opening_rule IS NOT NULL
 	AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.brand_name)));
+
+UPDATE poi_osm_next
+SET
+	status = 'open',
+	status_order = status_order_value('open'),
+	source_status = 'legal'
+FROM legal_rules r
+WHERE
+	r.legal_state = 'open'
+	AND poi_osm_next.status = 'unknown'
+	AND poi_osm_next.country = r.country
+	AND (r.country_subarea IS NULL OR poi_osm_next.sub_country = r.country_subarea)
+	AND (r.category = poi_osm_next.cat OR r.category = poi_osm_next.normalized_cat);
+
+-- Set default
+UPDATE poi_osm_next
+SET
+	status = 'open',
+	status_order = status_order_value(r.legal_state),
+	source_status = 'legal'
+FROM legal_rules r
+WHERE
+	poi_osm_next.status = 'unknown'
+	AND poi_osm_next.country = r.country
+	AND (r.country_subarea IS NULL OR poi_osm_next.sub_country = r.country_subarea)
+	AND r.category = 'default'
+	AND NOT EXISTS (
+		-- Exclude states not applyed
+		SELECT
+		FROM legal_rules AS rr
+		WHERE
+			rr.legal_state NOT IN ('open', 'close')
+			AND rr.country = r.country
+			AND rr.country_subarea IS NOT DISTINCT FROM r.country_subarea
+			AND rr.category != 'default'
+			AND (rr.category = poi_osm_next.cat OR rr.category = poi_osm_next.normalized_cat)
+	);
 
 UPDATE poi_osm_next
 SET status = 'open', status_order = status_order_value('open'), opening_hours = '24/7'

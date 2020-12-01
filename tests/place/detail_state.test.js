@@ -5,11 +5,12 @@ import ContributeForm from '../../components/contribute_form';
 
 describe('DetailState', () => {
   let localVue;
-  const stubs = ['v-alert', 'v-divider', 'v-btn'];
+  const stubs = ['v-alert', 'v-divider', 'v-btn', 'v-sheet'];
 
   beforeEach(() => {
     localVue = createLocalVue();
     localVue.prototype.$t = () => {};
+    localVue.prototype.$store = { commit: () => {} };
   });
 
   function createWrapper(props) {

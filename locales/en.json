@@ -25,7 +25,7 @@
   },
   "services": {
     "delivery": "Delivery",
-    "takeaway": "Takeaway",
+    "takeaway": "In-store pickup",
     "lumignon": "Lumignons"
   },
   "learnmore": {
@@ -63,36 +63,34 @@
     "ph": "Public holidays"
   },
   "contribute_form": {
-    "title": "Contribute",
-    "step1": {
-      "title": "Is this place open during lockdown?",
-      "open": {
-        "yes": "yes",
-        "no": "no"
-      }
+    "title_state": "Opening of this place",
+    "access": {
+      "title": "Getting there",
+      "subtitle": "Access to this place authorized",
+      "hours": "Opening hours"
     },
-    "step2": {
-      "title": "Opening hours during lockdown",
-      "same_hours": "This is the same hours",
-      "same_hours_without_lockdown": "This is the same hours outside lockdown",
-      "dont_know": "I don't know",
-      "continue": "Continue"
+    "click_collect": {
+      "title": "Click & collect",
+      "subtitle": "Order remotely",
+      "pickup": "Pick-up at store",
+      "delivery": "Offers delivery",
+      "drive_through": "Drive-through service",
+      "takeaway": "Take-away"
     },
-    "step3": {
-      "title": "Add details",
-      "3state": {
-        "unknown": "I don't know",
-        "yes": "Yes",
-        "no": "No"
-      },
-      "delivery": "This place offers delivery",
-      "takeaway": "This place allows to purchase to take-away",
-      "access": "This place offers physical reception on site",
-      "drive_through": "This place has a drive-through service",
-      "details": "Optional : add details required during the lockdown",
-      "details_error": "Should be either empty or at least 10 characters long",
-      "definite_closing": "Closed permanently",
-      "details_definite_closing": "This place has closed permanently. What's there now instead? Give as many details as possible, for example: under construction building, vacant, new business..."
+    "closed": {
+      "title": "Completely closed",
+      "subtitle": "During sanitary crisis",
+      "definite_closing": "This place is definitely closed"
+    },
+    "hours": {
+      "same_hours": "As usual",
+      "same_hours_without_lockdown": "Same as outside lockdown"
+    },
+    "details": {
+      "title": "Optional : add details required during the lockdown",
+      "hint": "Specific order system (SMS, by phone), delivery operator, only on appointment...",
+      "hint_closed": "Definite closing, replaced by something else, moved to another address...",
+      "error": "Should be either empty or at least 10 characters long"
     },
     "submit": "Publish",
     "cancel": "Cancel"
@@ -203,7 +201,7 @@
       "end": "Close at"
     },
     "add_interval": "Add hours",
-    "add_new_days": "Add opening days"
+    "add_new_days": "Add a day"
   },
   "osm_link": {
     "title": "« {brand} » uses OpenStreetMap data.",

@@ -88,6 +88,7 @@ export default {
           return new OpeningHours(this.value, null, { mode: this.mode, locale: this.$i18n.locale });
         }
         catch(e) {
+          return null;
         }
       }
     },
