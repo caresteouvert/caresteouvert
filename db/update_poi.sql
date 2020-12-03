@@ -252,6 +252,43 @@ WHERE
 	AND lower(trim(unaccent(name))) = lower(trim(unaccent(b.brand_name)));
 
 UPDATE poi_osm_next
+SET
+	status = 'open',
+	status_order = status_order_value('open'),
+	source_status = 'legal'
+FROM legal_rules r
+WHERE
+	r.legal_state = 'open'
+	AND poi_osm_next.status = 'unknown'
+	AND poi_osm_next.country = r.country
+	AND (r.country_subarea IS NULL OR poi_osm_next.sub_country = r.country_subarea)
+	AND (r.category = poi_osm_next.cat OR r.category = poi_osm_next.normalized_cat);
+
+-- Set default
+UPDATE poi_osm_next
+SET
+	status = 'open',
+	status_order = status_order_value(r.legal_state),
+	source_status = 'legal'
+FROM legal_rules r
+WHERE
+	poi_osm_next.status = 'unknown'
+	AND poi_osm_next.country = r.country
+	AND (r.country_subarea IS NULL OR poi_osm_next.sub_country = r.country_subarea)
+	AND r.category = 'default'
+	AND NOT EXISTS (
+		-- Exclude states not applyed
+		SELECT
+		FROM legal_rules AS rr
+		WHERE
+			rr.legal_state NOT IN ('open', 'close')
+			AND rr.country = r.country
+			AND rr.country_subarea IS NOT DISTINCT FROM r.country_subarea
+			AND rr.category != 'default'
+			AND (rr.category = poi_osm_next.cat OR rr.category = poi_osm_next.normalized_cat)
+	);
+
+UPDATE poi_osm_next
 SET status = 'open', status_order = status_order_value('open'), opening_hours = '24/7'
 WHERE status IN ('unknown', 'open_adapted') AND cat = 'fuel' AND tags->>'opening_hours' = '24/7';
 
