@@ -38,7 +38,7 @@ export default {
   plugins: [
     { src: '~/plugins/map', mode: 'client' },
     { src: '~/plugins/qa_map', mode: 'client' },
-    { src: '~/plugins/matomo', mode: 'client' },
+    { src: '~/plugins/plausible', mode: 'client' },
     { src: '~/plugins/linkified' },
     { src: '~/plugins/url' }
   ],

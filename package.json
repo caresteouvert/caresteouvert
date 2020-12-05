@@ -78,6 +78,7 @@
     "vue": "^2.6.12",
     "vue-i18n": "^8.21.1",
     "vue-linkify": "^1.0.1",
-    "vue-mapbox": "osmontrouge/vue-mapbox#update"
+    "vue-mapbox": "osmontrouge/vue-mapbox#update",
+    "vue-plausible": "^1.0.0"
   }
 }

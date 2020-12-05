@@ -57,20 +57,9 @@ export default {
     },
 
     addTracker() {
-      const _paq = window._paq || [];
-      if (this.consent !== true) {
-        _paq.push(["disableCookies"]);
+      if (this.consent) {
+        this.$plausible.enableAutoPageviews();
       }
-      _paq.push(["setDoNotTrack", true]);
-      _paq.push(['enableLinkTracking']);
-      window._paq = _paq;
-      (function() {
-        var u="//s.caresteouvert.fr/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        _paq.push(['setSiteId', '1']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-      })();
     }
   }
 };

@@ -7905,6 +7905,11 @@ pkg-up@^3.1.0:
   dependencies:
     find-up "^3.0.0"
 
+plausible-tracker@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/plausible-tracker/-/plausible-tracker-0.3.1.tgz#dd4e1f59cafc7bf1b00e30890567287b3f204efd"
+  integrity sha512-oXnVyfTF2gzkfK3iOZCRZEnf8sH4gBASaJhY+clwWW1orIybfQpfbgg4U5Bwj5dW/4iNstM4tx4jMCVUfMCUbg==
+
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
@@ -10749,6 +10754,13 @@ vue-no-ssr@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/vue-no-ssr/-/vue-no-ssr-1.1.1.tgz#875f3be6fb0ae41568a837f3ac1a80eaa137b998"
   integrity sha512-ZMjqRpWabMPqPc7gIrG0Nw6vRf1+itwf0Itft7LbMXs2g3Zs/NFmevjZGN1x7K3Q95GmIjWbQZTVerxiBxI+0g==
+
+vue-plausible@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-plausible/-/vue-plausible-1.0.0.tgz#98e614fcbdf00d628c38cb924717e5dcb8da0ad3"
+  integrity sha512-PGXXqSBJqbAcDecsCxl8LXdYa/IGOX5zfAW6jtB7kvWrCZml7kOFn2bilkgLlZx3v98hjYvvH+40a+6hyXzcvg==
+  dependencies:
+    plausible-tracker "^0.3.1"
 
 vue-router@^3.4.3:
   version "3.4.3"
