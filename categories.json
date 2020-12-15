@@ -16,14 +16,12 @@
             { "amenity": "police" }
           ],
           "areas": "all",
-          "form_details": [ "access" ],
           "show_qa": false
         },
         "townhall": {
           "name": "Townhall",
           "osm_tags": [ { "amenity": "townhall" } ],
           "areas": "all",
-          "form_details": [ "access" ],
           "show_qa": false
         },
         "post_office": {
@@ -32,8 +30,7 @@
             { "amenity": "post_office" },
             { "amenity": "vending_machine", "vending": "stamps|parcel_mail_in|parcel_pickup|parcel_pickup;parcel_mail_in" }
           ],
-          "areas": "all",
-          "form_details": [ "access" ]
+          "areas": "all"
         },
         "childcare": {
           "name": "Childcare",
@@ -47,7 +44,6 @@
             { "office": "employment_agency" }
           ],
           "areas": "all",
-          "form_details": [ "access" ],
           "show_qa": false
         },
         "funeral_directors": {
@@ -63,8 +59,7 @@
             { "amenity": "bank|money_transfer|mobile_money_agent" },
             { "shop": "money_lender" }
           ],
-          "-areas": [ "CD" ],
-          "form_details": [ "access" ]
+          "-areas": [ "CD" ]
         },
         "insurance": {
           "name": "Insurance",
@@ -72,8 +67,7 @@
             { "office": "insurance" },
             { "shop": "insurance" }
           ],
-          "areas": "all",
-          "form_details": [ "access" ]
+          "areas": "all"
         },
         "tourism_info": {
           "name": "Tourism information",
@@ -84,8 +78,7 @@
             { "opening_hours:covid19": "*" }
           ],
           "areas": "all",
-          "-mapfilter": "all",
-          "form_details": [ "access" ]
+          "-mapfilter": "all"
         },
         "hotel": {
           "name": "Hosting",
@@ -110,7 +103,7 @@
             { "shop": "copyshop" }
           ],
           "areas": [ "AT", "CH", "DE", "IT", "FR" ],
-          "form_details": [ "delivery", "drive", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "key_cutter": {
           "name": "Key cutter",
@@ -159,7 +152,7 @@
             { "amenity": "pharmacy" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access", "hydroalcoholic_gel", "mask" ]
+          "form_details": [ "delivery" ]
         },
         "covid19_centre": {
           "name": "Covid-19 consultation centre",
@@ -174,7 +167,7 @@
             { "craft": "optician" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "hearing_aids": {
           "name": "Hearing aids",
@@ -182,7 +175,7 @@
             { "shop": "hearing_aids" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "medical_supply": {
           "name": "Medical supplies",
@@ -190,7 +183,7 @@
             { "shop": "medical_supply" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access", "hydroalcoholic_gel", "mask" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "health_center": {
           "name": "Health center",
@@ -207,7 +200,7 @@
             { "shop": "herbalist" }
           ],
           "areas": [ "IT" ],
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         }
       }
     },
@@ -220,7 +213,7 @@
             { "shop": "frozen_food|supermarket" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access", "drive_through", "hydroalcoholic_gel", "mask" ]
+          "form_details": [ "delivery", "pickup", "drive_through" ]
         },
         "butcher": {
           "name": "Butcher",
@@ -228,7 +221,7 @@
             { "shop": "butcher" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "cheese": {
           "name": "Cheese",
@@ -236,7 +229,7 @@
             { "shop": "cheese" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "convenience": {
           "name": "Convenience",
@@ -244,7 +237,7 @@
             { "shop": "convenience|general" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access", "hydroalcoholic_gel", "mask" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "seafood": {
           "name": "Seafood",
@@ -252,7 +245,7 @@
             { "shop": "seafood" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "greengrocer": {
           "name": "Greengrocer",
@@ -260,7 +253,7 @@
             { "shop": "greengrocer" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "grocery": {
           "name": "Grocery",
@@ -268,7 +261,7 @@
             { "shop": "deli|spices|honey|pasta|cannery" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "health_food": {
           "name": "Health food",
@@ -276,25 +269,25 @@
             { "shop": "health_food" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "chocolate": {
           "name": "Chocolate",
           "osm_tags": [ { "shop": "chocolate" } ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "tea": {
           "name": "Tea",
           "osm_tags": [ { "shop": "tea" } ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "coffee": {
           "name": "Coffee",
           "osm_tags": [ { "shop": "coffee" } ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "dairy": {
           "name": "Dairy",
@@ -304,19 +297,19 @@
           ],
           "areas": "all",
           "-mapfilter": [ "FR", "MC" ],
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "confectionery": {
           "name": "Confectionery",
           "osm_tags": [ { "shop": "confectionery" } ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "farm": {
           "name": "Farm shop",
           "osm_tags": [ { "shop": "farm" } ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "marketplace": {
           "name": "Marketplace",
@@ -332,7 +325,7 @@
             { "shop": "bakery|pastry" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "alcohol": {
           "name": "Alcohol store",
@@ -341,7 +334,7 @@
             { "craft": "distillery" }
           ],
           "areas": [ "CD", "FR" ],
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         }
       }
     },
@@ -362,7 +355,7 @@
             { "amenity": "restaurant" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "takeaway", "drive_through", "access" ]
+          "form_details": [ "delivery", "takeaway" ]
         },
         "awarded_chef": {
           "name": "Top chef",
@@ -374,7 +367,7 @@
             { "amenity": "fast_food" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "takeaway", "drive_through", "access" ]
+          "form_details": [ "delivery", "takeaway", "drive_through" ]
         },
         "ice_cream": {
           "name": "Ice cream",
@@ -384,7 +377,7 @@
             { "shop": "ice_cream" }
           ],
           "areas": [ "DE", "AT", "CH", "IT" ],
-          "form_details": [ "delivery", "takeaway", "access" ]
+          "form_details": [ "delivery", "takeaway" ]
         },
         "cafe": {
           "name": "Coffee shop",
@@ -400,7 +393,7 @@
             { "takeaway:covid19": "yes|only" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "takeaway", "access" ]
+          "form_details": [ "delivery", "takeaway" ]
         },
         "bar": {
           "name": "Bar",
@@ -413,7 +406,7 @@
             { "takeaway:covid19": "yes|only" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "takeaway", "access" ]
+          "form_details": [ "delivery", "takeaway" ]
         }
       }
     },
@@ -425,8 +418,7 @@
           "osm_tags": [
             { "amenity": "bank" }
           ],
-          "areas": [ "CD" ],
-          "form_details": [ "access" ]
+          "areas": [ "CD" ]
         },
         "atm": {
           "name": "ATM",
@@ -460,7 +452,7 @@
           "name": "Shoes",
           "osm_tags": [ { "shop": "shoes" }, { "craft": "shoemaker" } ],
           "areas": "all",
-          "form_details": [ "delivery", "drive", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "bag": {
           "name": "Bags",
@@ -468,7 +460,7 @@
             { "shop": "bag" }
           ],
           "areas": [ "DE", "AT", "CH", "FR", "IT" ],
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "beauty": {
           "name": "Beauty store",
@@ -476,7 +468,7 @@
             { "shop": "beauty" }
           ],
           "areas": [ "DE", "AT", "CH", "FR", "IT" ],
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "clothes": {
           "name": "Clothes",
@@ -484,14 +476,15 @@
             { "shop": "boutique|clothes|fashion" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access", "mask" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "cosmetics": {
           "name": "Cosmetics",
           "osm_tags": [
             { "shop": "cosmetics" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "hairdresser": {
           "name": "Hairdresser",
@@ -505,7 +498,8 @@
           "osm_tags": [
             { "shop": "jewelry" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "massage": {
           "name": "Massage",
@@ -520,7 +514,7 @@
             { "shop": "tailor" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "perfumery": {
           "name": "Perfumery",
@@ -528,7 +522,7 @@
             { "shop": "perfumery" }
           ],
           "areas": [ "DE", "AT", "CH", "FR", "IT" ],
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "chemist": {
           "name": "Chemist",
@@ -536,7 +530,7 @@
             { "shop": "chemist" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "drive", "access", "hydroalcoholic_gel", "mask" ]
+          "form_details": [ "delivery", "pickup" ]
         }
       }
     },
@@ -549,33 +543,37 @@
             { "shop": "doityourself|electrical|fireplace|glaziery|hardware|paint|tiles" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "drive", "access" ]
+          "form_details": [ "delivery", "drive_through", "pickup" ]
         },
         "bed": {
           "name": "Bed",
           "osm_tags": [
             { "shop": "bed" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "furniture": {
           "name": "Furniture",
           "osm_tags": [
             { "shop": "bathroom_furnishing|carpet|curtain|furniture|kitchen" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "household_linen": {
           "name": "Household linen",
           "osm_tags": [ { "shop": "household_linen" } ],
-          "areas": [ "FR" ]
+          "areas": [ "FR" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "houseware": {
           "name": "Houseware",
           "osm_tags": [
             { "shop": "houseware" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "interior_decoration": {
           "name": "Interior decoration",
@@ -583,35 +581,39 @@
             { "shop": "interior_decoration" }
           ],
           "areas": [ "DE", "AT", "CH", "FR", "IT" ],
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "pottery": {
           "name": "Pottery",
           "osm_tags": [
             { "shop": "pottery" }
           ],
-          "areas": [ "DE", "AT", "CH", "IT" ]
+          "areas": [ "DE", "AT", "CH", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "watches": {
           "name": "Watches",
           "osm_tags": [
             { "shop": "watches" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "lighting": {
           "name": "Lighting",
           "osm_tags": [
             { "shop": "lighting" }
           ],
-          "areas": [ "AT", "CH", "DE", "IT", "FR" ]
+          "areas": [ "AT", "CH", "DE", "IT", "FR" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "hifi": {
           "name": "Hifi",
           "osm_tags": [
             { "shop": "hifi" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "electronics": {
           "name": "Electronics",
@@ -621,7 +623,7 @@
             { "shop": "appliance"}
           ],
           "areas": "all",
-          "form_details": [ "delivery", "drive", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         }
       }
     },
@@ -634,19 +636,19 @@
             { "shop": "mobile_phone" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "drive", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "computer": {
           "name": "Computer",
           "osm_tags": [ { "shop": "computer" } ],
           "areas": "all",
-          "form_details": [ "delivery", "drive", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "printer_ink": {
           "name": "Printer ink",
           "osm_tags": [ { "shop": "printer_ink" } ],
           "areas": [ "IT" ],
-          "form_details": [ "delivery", "drive", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "dry_cleaning": {
           "name": "Dry cleaning",
@@ -668,7 +670,7 @@
             { "shop": "stationery" }
           ],
           "areas": [ "AT", "CH", "DE", "FR", "IT" ],
-          "form_details": [ "delivery", "drive", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "newsagent": {
           "name": "Newsagent",
@@ -684,7 +686,7 @@
             { "shop": "pet" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "drive", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "agrarian": {
           "name": "Agricultural products",
@@ -692,7 +694,7 @@
             { "shop": "agrarian" }
           ],
           "areas": [ "AT", "CH", "DE", "FR", "IT" ],
-          "form_details": [ "delivery", "drive", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "flower": {
           "name": "Garden / flower",
@@ -700,13 +702,13 @@
             { "shop": "garden_centre|florist" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "drive", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "sewing": {
           "name": "Sewing",
           "osm_tags": [ { "shop": "fabric|sewing|haberdashery|wool" }, { "craft": "sewing" } ],
           "areas": "all",
-          "form_details": [ "delivery", "drive", "access", "mask" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "books": {
           "name": "Book store",
@@ -715,14 +717,15 @@
             { "amenity": "vending_machine", "vending": "books" }
           ],
           "areas": [ "DE", "AT", "CH", "IT", "FR" ],
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "art": {
           "name": "Art",
           "osm_tags": [
             { "shop": "art" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "charity": {
           "name": "Charity shop",
@@ -730,14 +733,15 @@
             { "shop": "charity" }
           ],
           "areas": [ "DE", "AT", "CH", "FR", "IT" ],
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "department_store": {
           "name": "Department store",
           "osm_tags": [
             { "shop": "department_store" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "gift": {
           "name": "Gift shop",
@@ -755,28 +759,32 @@
           "osm_tags": [
             { "shop": "music" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "musical_instrument": {
           "name": "Musical instrument",
           "osm_tags": [
             { "shop": "musical_instrument" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "photo": {
           "name": "Photo",
           "osm_tags": [
             { "shop": "photo" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "second_hand": {
           "name": "Second hand",
           "osm_tags": [
             { "shop": "second_hand" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "ticket": {
           "name": "Tickets",
@@ -790,7 +798,8 @@
           "osm_tags": [
             { "shop": "toys" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "trade": {
           "name": "Trade",
@@ -811,7 +820,8 @@
           "osm_tags": [
             { "shop": "variety_store" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "video": {
           "name": "Videos",
@@ -825,7 +835,8 @@
           "osm_tags": [
             { "shop": "video_games" }
           ],
-          "areas": [ "DE", "AT", "CH", "FR", "IT" ]
+          "areas": [ "DE", "AT", "CH", "FR", "IT" ],
+          "form_details": [ "delivery", "pickup" ]
         },
         "weapons": {
           "name": "Weapons",
@@ -847,7 +858,7 @@
             { "shop": "fishing|hunting|sports|outdoor" }
           ],
           "areas": [ "DE", "AT", "CH", "FI", "FR", "IT" ],
-          "form_details": [ "mask", "hydroalcoholic_gel" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "tobacco": {
           "name": "Tobacco",
@@ -857,7 +868,7 @@
             { "amenity": "vending_machine", "vending": "cigarettes" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access", "mask" ]
+          "form_details": [ "delivery", "pickup" ]
         },
         "e_cigarette": {
           "name": "E-cigarette",
@@ -866,7 +877,7 @@
             { "amenity": "vending_machine", "vending": "e-cigarettes" }
           ],
           "areas": "all",
-          "form_details": [ "delivery", "access" ]
+          "form_details": [ "delivery", "pickup" ]
         }
       }
     },
@@ -894,7 +905,8 @@
           "osm_tags": [
             { "shop": "bicycle" }
           ],
-          "areas": "all"
+          "areas": "all",
+          "form_details": [ "delivery", "pickup" ]
         },
         "car": {
           "name": "Garage",

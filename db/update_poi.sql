@@ -38,6 +38,14 @@ BEGIN
 			status := 'open_adapted';
 		END IF;
 
+	-- Has any covid19 related service
+	ELSIF tags->'delivery:covid19' IN ('yes', 'only') OR tags->'drive_through:covid19' IN ('yes', 'only') OR tags->'takeaway:covid19' IN ('yes', 'only') OR tags->'pickup:covid19' IN ('yes', 'only') THEN
+		status := 'open_adapted';
+
+	-- Has access:covid19 explicitly set to yes
+	ELSIF tags->'access:covid19' = 'yes' THEN
+		status := 'open';
+
 	-- Self-service / vending machines
 	ELSIF (tags->'amenity' = 'fuel' AND tags->'self_service' = 'yes') OR tags->'amenity' = 'vending_machine' THEN
 		status := 'open';
@@ -130,7 +138,9 @@ AS
 	END,
 	CASE
 		WHEN tags->'takeaway:covid19' IN ('yes', 'no', 'only') THEN tags->'takeaway:covid19'
+		WHEN tags->'pickup:covid19' IN ('yes', 'no', 'only') THEN tags->'pickup:covid19'
 		WHEN tags->'takeaway' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'takeaway'
+		WHEN tags->'pickup' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'pickup'
 		ELSE 'unknown'
 	END,
 	has_contact_tag(tags),
@@ -166,7 +176,9 @@ SELECT
 	END,
 	CASE
 		WHEN tags->'takeaway:covid19' IN ('yes', 'no', 'only') THEN tags->'takeaway:covid19'
+		WHEN tags->'pickup:covid19' IN ('yes', 'no', 'only') THEN tags->'pickup:covid19'
 		WHEN tags->'takeaway' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'takeaway'
+		WHEN tags->'pickup' IN ('yes', 'no', 'only') AND opening_state(tags) = 'ouvert' THEN tags->'pickup'
 		ELSE 'unknown'
 	END,
 	has_contact_tag(tags),

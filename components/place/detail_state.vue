@@ -29,15 +29,14 @@
     >
       <span class="text-pre">{{ $t('details.signal_done') }}</span>
     </v-alert>
-    <div v-if="contribute">
+    <v-sheet v-if="contribute" elevation="4" class="ma-3">
       <contribute-form
         :place="place"
         class="pa-2"
         @success="success = true; contribute = false"
         @close="contribute = false"
       />
-      <v-divider />
-    </div>
+    </v-sheet>
   </div>
 </template>
 
@@ -72,6 +71,12 @@ export default {
     };
   },
 
+  watch: {
+    contribute() {
+      this.$store.commit('setIsContributing', this.contribute);
+    }
+  },
+
   computed: {
     type() {
       return colorForStatus(this.status);
@@ -89,6 +94,10 @@ export default {
       const date = this.lastUpdate.toLocaleString(this.$i18n.locale, format);
       return this.$t('details.last_update.date', { date });
     }
+  },
+
+  beforeDestroy() {
+    this.$store.commit('setIsContributing', false);
   }
 };
 </script>

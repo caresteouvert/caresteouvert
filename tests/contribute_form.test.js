@@ -3,7 +3,7 @@ import ContributeForm from '../components/contribute_form';
 
 describe('ContributeForm', () => {
   let localVue;
-  const stubs = ['v-stepper', 'v-stepper-step', 'v-stepper-content', 'v-btn', 'v-select', 'v-textarea', 'v-checkbox'];
+  const stubs = ['v-icon', 'v-list-item', 'v-list-item-icon', 'v-list-item-content', 'v-list-item-title', 'v-list-item-subtitle', 'v-btn', 'v-select', 'v-divider', 'v-list-item-action', 'v-switch', 'v-list', 'v-textarea', 'v-checkbox'];
 
   beforeEach(() => {
     localVue = createLocalVue();
@@ -20,85 +20,86 @@ describe('ContributeForm', () => {
 
   it('allow to set the open state', () => {
     const form = createWrapper({ place: { properties: { tags: { } } } });
-    expect(form.vm.open).toBe(null);
-    expect(form.vm.step).toEqual(1);
-    form.vm.clickOpen();
-    expect(form.vm.open).toBe(true);
-    expect(form.vm.step).toEqual(2);
+    expect(form.vm.tab_access).toBe(false);
+    expect(form.vm.tab_click_collect).toBe(false);
+    expect(form.vm.tab_closed).toBe(false);
+    form.vm.clickPlaceAccess({});
+    expect(form.vm.tab_access).toBe(true);
+    expect(form.vm.tab_click_collect).toBe(false);
+    expect(form.vm.tab_closed).toBe(false);
   });
 
   it('allow to set the close state', () => {
     const form = createWrapper({ place: { properties: { tags: { } } } });
-    expect(form.vm.open).toBe(null);
-    form.vm.clickClose();
-    expect(form.vm.open).toBe(false);
-    expect(form.vm.step).toEqual(3);
+    expect(form.vm.tab_access).toBe(false);
+    expect(form.vm.tab_click_collect).toBe(false);
+    expect(form.vm.tab_closed).toBe(false);
+    form.vm.clickPlaceClosed({});
+    expect(form.vm.tab_access).toBe(false);
+    expect(form.vm.tab_click_collect).toBe(false);
+    expect(form.vm.tab_closed).toBe(true);
   });
 
-  it('reset the opening hours when the user change is mind', () => {
+  it('reset the opening hours when the user changes his mind', () => {
     const form = createWrapper({ place: { properties: { tags: { } } } });
-    expect(form.vm.open).toBe(null);
-    form.vm.clickOpen();
+    expect(form.vm.tab_access).toBe(false);
+    form.vm.clickPlaceAccess({});
     form.vm.openingHours = [{}];
-    form.vm.clickClose();
+    form.vm.clickPlaceClosed({});
     expect(form.vm.openingHours).toEqual([]);
   });
 
   describe('delivery', () => {
     it('dont parse the delivery:covid19 tag if it dont exists', () => {
-      const form = createWrapper({ place: { properties: { tags: { } } } });
-      form.vm.clickOpen();
-      expect(form.vm.fieldValues.delivery).toBe(null);
+      const form = createWrapper({ place: { properties: { tags: { } } } }, { formDetails: ["delivery"] });
+      form.vm.clickPlaceClickCollect({});
+      expect(form.vm.opt_fields.delivery).toBe(false);
       expect(form.vm.filteredFields.find(f => f.id === 'delivery')).toBe(undefined);
     });
 
     it('parse the delivery:covid19 tag if it exists', () => {
-      const form = createWrapper({ place: { properties: { cat: 'restaurant', normalized_cat: 'eat', tags: { 'delivery:covid19': 'yes' } } } });
-      form.vm.clickOpen();
-      expect(form.vm.fieldValues.delivery).toBe('yes');
-      expect(form.vm.filteredFields.find(f => f.id === 'delivery') !== undefined).toBe(true);
+      const form = createWrapper({ place: { properties: { cat: 'restaurant', normalized_cat: 'eat', tags: { 'delivery:covid19': 'yes' } } } }, { formDetails: ["delivery"] });
+      expect(form.vm.opt_fields.delivery).toBe(true);
+      expect(form.vm.filteredFields.find(f => f === 'delivery') !== undefined).toBe(true);
     });
 
     it('if the delivery tag has an unknow value, hide the field', () => {
-      const form = createWrapper({ place: { properties: { tags: { 'delivery:covid19': 'Mo-Fr 09:00-18:00' } } } });
-      form.vm.clickOpen();
-      expect(form.vm.fieldValues.delivery).toBe(null);
-      expect(form.vm.filteredFields.find(f => f.id === 'delivery')).toBe(undefined);
+      const form = createWrapper({ place: { properties: { tags: { 'delivery:covid19': 'Mo-Fr 09:00-18:00' } } } }, { formDetails: ["delivery"] });
+      form.vm.clickPlaceClickCollect({});
+      expect(form.vm.opt_fields.delivery).toBe(false);
+      expect(form.vm.filteredFields.find(f => f === 'delivery')).toBe(undefined);
     });
 
     it('if the place if closed, dont, hide the delivery field', () => {
-      const form = createWrapper({ place: { properties: { tags: { } } } });
-      form.vm.clickClose();
-      expect(form.vm.filteredFields.find(f => f.id === 'delivery')).toBe(undefined);
+      const form = createWrapper({ place: { properties: { tags: { } } } }, { formDetails: ["delivery"] });
+      form.vm.clickPlaceClosed({});
+      expect(form.vm.filteredFields.find(f => f === 'delivery')).toBe(undefined);
     });
   });
 
   describe('takeaway', () => {
     it('dont parse the takeaway:covid19 tag if it dont exists', () => {
-      const form = createWrapper({ place: { properties: { tags: { } } } });
-      form.vm.clickOpen();
-      expect(form.vm.fieldValues.takeaway).toBe(null);
-      expect(form.vm.filteredFields.find(f => f.id === 'takeaway')).toBe(undefined);
+      const form = createWrapper({ place: { properties: { tags: { } } } }, { formDetails: ["takeaway"] });
+      expect(form.vm.opt_fields.takeaway).toBe(false);
+      expect(form.vm.filteredFields.find(f => f === 'takeaway')).toBe(undefined);
     });
 
     it('parse the takeaway:covid19 tag if it exists', () => {
-      const form = createWrapper({ place: { properties: { cat: 'restaurant', normalized_cat: 'eat', tags: { 'takeaway:covid19': 'yes' } } } });
-      form.vm.clickOpen();
-      expect(form.vm.fieldValues.takeaway).toBe('yes');
-      expect(form.vm.filteredFields.find(f => f.id === 'takeaway') !== null).toBe(true);
+      const form = createWrapper({ place: { properties: { cat: 'restaurant', normalized_cat: 'eat', tags: { 'takeaway:covid19': 'yes' } } } }, { formDetails: ["takeaway"] });
+      expect(form.vm.opt_fields.takeaway).toBe(true);
+      expect(form.vm.filteredFields.find(f => f === 'takeaway') !== null).toBe(true);
     });
 
     it('if the takeaway tag has an unknow value, hide the field', () => {
-      const form = createWrapper({ place: { properties: { tags: { 'takeaway:covid19': 'Mo-Fr 09:00-18:00' } } } });
-      form.vm.clickOpen();
-      expect(form.vm.fieldValues.takeaway).toBe(null);
-      expect(form.vm.filteredFields.find(f => f.id === 'takeaway')).toBe(undefined);
+      const form = createWrapper({ place: { properties: { tags: { 'takeaway:covid19': 'Mo-Fr 09:00-18:00' } } } }, { formDetails: ["takeaway"] });
+      expect(form.vm.opt_fields.takeaway).toBe(false);
+      expect(form.vm.filteredFields.find(f => f === 'takeaway')).toBe(undefined);
     });
 
     it('if the place if closed, dont, hide the takeaway field', () => {
-      const form = createWrapper({ place: { properties: { tags: { } } } });
-      form.vm.clickClose();
-      expect(form.vm.filteredFields.find(f => f.id === 'takeaway')).toBe(undefined);
+      const form = createWrapper({ place: { properties: { tags: { } } } }, { formDetails: ["takeaway"] });
+      form.vm.clickPlaceClosed({});
+      expect(form.vm.filteredFields.find(f => f === 'takeaway')).toBe(undefined);
     });
   });
 
@@ -155,6 +156,28 @@ describe('ContributeForm', () => {
     createTest({ id: "r12345", properties: { tags: { } } }, 'relation/12345');
   });
 
+  describe('offersService', () => {
+    it('works with basic tag', () => {
+      const form = createWrapper({ place: { properties: { tags: { delivery: 'yes' } } } });
+      expect(form.vm.offersService('delivery')).toBe(true);
+    });
+
+    it('works with covid tag', () => {
+      const form = createWrapper({ place: { properties: { tags: { 'delivery:covid19': 'yes' } } } });
+      expect(form.vm.offersService('delivery')).toBe(true);
+    });
+
+    it('prioritizes covid tag', () => {
+      const form = createWrapper({ place: { properties: { tags: { 'delivery:covid19': 'no', 'delivery': 'yes' } } } });
+      expect(form.vm.offersService('delivery')).toBe(false);
+    });
+
+    it('works with missing tag', () => {
+      const form = createWrapper({ place: { properties: { tags: { } } } });
+      expect(form.vm.offersService('delivery')).toBe(false);
+    });
+  });
+
   describe('format the payload', () => {
     let form;
 
@@ -170,7 +193,7 @@ describe('ContributeForm', () => {
     });
 
     it('open, with opening hours and same hours', () => {
-      form.vm.clickOpen();
+      form.vm.clickPlaceAccess({});
       form.vm.openingHours = [{ days: ['mo'], hours: ['08:00-18:00'] }];
       form.vm.openingHoursWithoutLockDown = true;
       expect(form.vm.payload).toEqual({
@@ -182,16 +205,19 @@ describe('ContributeForm', () => {
         lon: 1,
         lang: 'fr',
         tags: {
+          "access:covid19": "yes",
           opening_hours: 'same'
         }
       });
     });
 
     it('open, with opening hours and delivery', () => {
-      form.vm.clickOpen();
+      form.vm.clickPlaceClickCollect({});
+      form.vm.clickPlaceAccess({});
       form.vm.openingHours = [{ days: ['mo'], hours: ['08:00-18:00'] }];
       form.vm.openingHoursWithoutLockDown = false;
-      form.vm.fieldValues.delivery = 'yes';
+      form.vm.form_details = ["delivery"];
+      form.vm.opt_fields.delivery = 'yes';
       expect(form.vm.payload).toEqual({
         name: 'Test',
         state: 'open',
@@ -201,14 +227,16 @@ describe('ContributeForm', () => {
         lon: 1,
         lang: 'fr',
         tags: {
-          'delivery:covid19': 'yes'
+          "access:covid19": "yes",
+          'delivery': 'yes'
         }
       });
     });
 
     it('open, with takeaway', () => {
-      form.vm.clickOpen();
-      form.vm.fieldValues.takeaway = 'yes';
+      form.vm.clickPlaceClickCollect({});
+      form.vm.form_details = ["takeaway"];
+      form.vm.opt_fields.takeaway = true;
       expect(form.vm.payload).toEqual({
         name: 'Test',
         state: 'open',
@@ -218,13 +246,14 @@ describe('ContributeForm', () => {
         lon: 1,
         lang: 'fr',
         tags: {
-          'takeaway:covid19': 'yes'
+          'takeaway': 'yes',
+          "access:covid19": "no"
         }
       });
     });
 
     it('open, with details', () => {
-      form.vm.clickOpen();
+      form.vm.clickPlaceAccess({});
       form.vm.details = 'test';
       expect(form.vm.payload).toEqual({
         name: 'Test',
@@ -234,12 +263,14 @@ describe('ContributeForm', () => {
         lat: 2,
         lon: 1,
         lang: 'fr',
-        tags: {}
+        tags: {
+          "access:covid19": "yes"
+        }
       });
     });
 
     it('close, with details', () => {
-      form.vm.clickClose();
+      form.vm.clickPlaceClosed({});
       form.vm.details = 'test';
       expect(form.vm.payload).toEqual({
         name: 'Test',

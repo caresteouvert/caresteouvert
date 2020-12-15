@@ -1,6 +1,6 @@
 <template>
   <v-list dense two-line>
-    <v-list-item v-on="on">
+    <v-list-item>
       <v-list-item-icon class="mr-1">
         <v-icon>osm-alert</v-icon>
       </v-list-item-icon>

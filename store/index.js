@@ -9,7 +9,8 @@ export const state = () => ({
   categories: [],
   place: null,
   highlightPlace: null,
-  contribution: null
+  contribution: null,
+  isContributing: false
 });
 
 export const mutations = {
@@ -33,6 +34,10 @@ export const mutations = {
   setContribution (state, contribution) {
     state.contribution = contribution
   },
+
+  setIsContributing (state, isContributing) {
+    state.isContributing = isContributing;
+  }
 };
 
 export const getters = {

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   height="18"
+   width="18"
+   fill="#000000"
+   data-name="Layer 1"
+   viewBox="0 0 18 18"
+   x="0px"
+   y="0px"
+   version="1.1"
+   id="svg10">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>11</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs14" />
+  <title
+     id="title2">11</title>
+  <g
+     data-name="Group"
+     id="g8"
+     transform="matrix(0.18553853,0,0,0.18553853,-0.27738732,-0.27645241)">
+    <path
+       data-name="Compound Path"
+       d="m 40.79,1.49 a 16.06,16.06 0 0 0 -16,16 v 6.25 H 13.6 a 3,3 0 0 0 -3,3 v 53.7 a 9,9 0 0 0 9,9 H 50.7 A 21.28,21.28 0 1 0 71,56.14 V 26.78 a 3,3 0 0 0 -3,-3 H 56.85 V 17.53 A 16.06,16.06 0 0 0 40.79,1.49 Z m -10,16 a 10.05,10.05 0 0 1 20.1,0 v 6.25 H 30.75 Z M 83.4,77.22 A 15.29,15.29 0 1 1 68.11,61.92 15.31,15.31 0 0 1 83.4,77.22 Z M 65,29.78 v 26.4 A 21.26,21.26 0 0 0 47.75,83.44 H 19.6 a 3,3 0 0 1 -3,-3 V 29.78 h 8.15 v 9.5 a 3,3 0 0 0 6,0 v -9.5 h 20.1 v 9.5 a 3,3 0 0 0 6,0 v -9.5 z"
+       id="path4" />
+    <path
+       data-name="Path"
+       d="m 65.11,69.49 v 4.73 h -4.73 a 3,3 0 0 0 0,6 h 4.73 v 4.73 a 3,3 0 0 0 6,0 v -4.73 h 4.73 a 3,3 0 1 0 0,-6 h -4.73 v -4.73 a 3,3 0 0 0 -6,0 z"
+       id="path6" />
+  </g>
+</svg>
