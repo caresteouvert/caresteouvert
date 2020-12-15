@@ -99,7 +99,12 @@
               </label>
             </v-list-item-content>
             <v-list-item-action>
-              <v-switch :id="'switch_'+field" v-model="opt_fields[field]" dense></v-switch>
+              <v-switch
+                :id="'switch_'+field"
+                v-model="opt_fields[field]"
+                dense
+                @change="user_changed = true"
+              ></v-switch>
             </v-list-item-action>
           </v-list-item>
         </template>
