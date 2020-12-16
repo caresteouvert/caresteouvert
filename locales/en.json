@@ -120,11 +120,11 @@
       "tomorrow": "tomorrow"
     },
     "state": {
-      "open": "Place open during lockdown",
-      "open_adapted": "Place open during lockdown, with adapted hours",
-      "partial": "Place belongs to a brand whose places are partially open during lockdown. Is it open or closed? Let us know.",
+      "open": "",
+      "open_adapted": "",
+      "partial": "",
       "unknown": "Place may be allowed to open during lockdown. Is it open or closed? Let us know.",
-      "closed": "Place closed during lockdown"
+      "closed": "Place temporary closed during lockdown"
     },
     "state_short": {
       "open": "Open during the lockdown",

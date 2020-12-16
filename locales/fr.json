@@ -124,11 +124,11 @@
       "tomorrow": "demain"
     },
     "state": {
-      "open": "Lieu ouvert durant la crise sanitaire",
-      "open_adapted": "Lieu ouvert durant la crise sanitaire avec des horaires adaptés",
-      "partial": "Lieu appartenant à une enseigne dont les établissements sont partiellement ouverts. Ouvert ou fermé ? À vous de le dire.",
+      "open": "",
+      "open_adapted": "",
+      "partial": "",
       "unknown": "Lieu potentiellement ouvert durant la crise sanitaire. Ouvert ou fermé ? À vous de le dire.",
-      "closed": "Lieu fermé durant la crise sanitaire"
+      "closed": "Lieu temporairement fermé durant la crise sanitaire"
     },
     "state_short": {
       "open": "Ouvert durant la crise sanitaire",
