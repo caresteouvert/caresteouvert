@@ -16,6 +16,7 @@ docker-compose run --rm gdal sh -c '
         -s_srs EPSG:4326 \
         -t_srs EPSG:3857 \
         -append \
+        –config OGR_TRUNCATE YES \
         -progress \
         -nln communes \
         -nlt MULTIPOLYGON \
