@@ -387,6 +387,12 @@ CREATE OR REPLACE VIEW poi_osm_qa AS
 SELECT fid, geom, name, normalized_cat, cat, opening_hours, has_contact
 FROM poi_osm;
 
+-- POI list by city view
+CREATE OR REPLACE VIEW poi_osm_bycity AS
+SELECT p.fid, p.geom, p.name, p.normalized_cat, p.cat, p.brand, p.tags, c.insee AS city_code, c.nom AS city_name
+FROM poi_osm p
+JOIN communes c WHERE p.geom && c.wkb_geometry AND ST_Intersects(p.geom, c.wkb_geometry);
+
 
 -- Analysis requests
 -- SELECT country, SUM((status != 'unknown')::int)::float / COUNT(*) * 100 AS pct_info_connue FROM poi_osm GROUP BY country;
