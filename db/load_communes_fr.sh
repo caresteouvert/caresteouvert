@@ -2,8 +2,6 @@
 
 set -e
 
-DATABASE_URL=${1:-${DATABASE_URL}}
-
 COMMUNES_ZIP="communes-20200101-shp.zip"
 COMMUNES_SHP="communes-20200101.shp"
 
