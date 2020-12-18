@@ -17,7 +17,7 @@ export default {
 
     contact() {
       const phoneText = (p) => {
-        return new PhoneNumber(p).getNumber('national');
+        return new PhoneNumber(p).getNumber('national') || p;
       };
       const phone = (p) => { return { text: phoneText(p), href: `tel:${p}` }; };
       const urlText = (u) => {

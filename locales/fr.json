@@ -355,6 +355,17 @@
   "qa": {
     "title": "Assurance qualité"
   },
+  "bycity": {
+    "title": "Liste des commerces",
+    "loading": "Chargement en cours",
+    "table": {
+      "name": "Nom",
+      "cat": "Type",
+      "website": "Site web",
+      "phone": "Numéro de téléphone",
+      "link": "Voir sur la carte"
+    }
+  },
   "external": {
     "mobile": {
       "places_around": "Trouvez les lieux ouverts durant la crise sanitaire",

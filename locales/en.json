@@ -344,6 +344,17 @@
   "qa": {
     "title": "Quality assurance"
   },
+  "bycity": {
+    "title": "List of shops",
+    "loading": "Loading",
+    "table": {
+      "name": "Name",
+      "cat": "Type",
+      "website": "Website",
+      "phone": "Phone number",
+      "link": "See on the map"
+    }
+  },
   "external": {
     "mobile": {
       "places_around": "Find open places during lockdown",
