@@ -391,7 +391,7 @@ FROM poi_osm;
 CREATE OR REPLACE VIEW poi_osm_bycity AS
 SELECT p.fid, p.geom, p.name, p.normalized_cat, p.cat, p.brand, p.tags, c.insee AS city_code, c.nom AS city_name
 FROM poi_osm p
-JOIN communes c WHERE p.geom && c.wkb_geometry AND ST_Intersects(p.geom, c.wkb_geometry);
+JOIN communes c ON ST_Intersects(p.geom, c.wkb_geometry);
 
 
 -- Analysis requests
