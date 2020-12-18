@@ -47,7 +47,11 @@ Run
 
 Everytime a refresh of the countries_subcountries PG table is required :
 
-     ./load_countries.sh
+    ./load_countries.sh
+
+Load French admin
+
+    ./load_communes_fr.sh
 
 ### How to update imposm points & polyons with new country & sub-country codes
 
