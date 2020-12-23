@@ -103,15 +103,15 @@ function getLayers(theme) {
           ['linear'],
           ['zoom'],
           12, 0,
-          14, ['+', 2, stockWidth],
+          14, ['+', 3, stockWidth],
           15, ['+', [
               'case',
               ["in", ["get", "status"], ["literal", ["unknown", "partial", "closed"]]], 4,
-              6
+              5
             ],
             stockWidth
           ],
-          19, ['+', 13, stockWidth]
+          19, ['+', 14, stockWidth]
         ]
       }
     },
@@ -127,13 +127,13 @@ function getLayers(theme) {
           ['linear'],
           ['zoom'],
           12, 0,
-          14, 2,
+          14, 3,
           15, [
             'case',
             ["in", ["get", "status"], ["literal", ["unknown", "partial", "closed"]]], 4,
-            6
+            5
           ],
-          19, 13
+          19, 14
         ]
       }
     },
@@ -159,8 +159,8 @@ function getLayers(theme) {
           'interpolate',
           ['linear'],
           ['zoom'],
-          14, 0.3,
-          19, 0.9
+          15, 0.3,
+          19, 1
         ],
         "text-anchor": "top",
         "text-field": ["get", "name"],
@@ -180,12 +180,16 @@ function getLayers(theme) {
         "text-optional": true
       },
       paint: {
-        "icon-opacity": conditionalOpacity,
+        "icon-opacity": [
+          'interpolate', ['linear'],
+          ['zoom'],
+          15, 0,
+          16, 1
+        ],
         "text-opacity": [
           'interpolate', ['linear'],
           ['zoom'],
-          0, 0,
-          16, 0,
+          15, 0,
           17, 1
         ],
         "text-color": "#666",
