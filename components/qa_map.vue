@@ -48,7 +48,7 @@ Object.values(categories).forEach(cat => {
 
 // Load classes from Osmose API
 const osmoseClasses = {};
-fetch(`${config.osmoseUrl}/api/0.3beta/items`)
+fetch(`${config.osmoseUrl}/api/0.3/items`)
 .then(function(data) { return data.json(); })
 .then(function(categories) {
   categories.categories.forEach(function(cat) {
@@ -121,7 +121,7 @@ export default {
       osmoseSource: {
         id: "osmose",
         type: "vector",
-        tiles: [ `${config.osmoseUrl}/api/0.3beta/issues/{z}/{x}/{y}.mvt?item=8310` ],
+        tiles: [ `${config.osmoseUrl}/api/0.3/issues/{z}/{x}/{y}.mvt?item=8310` ],
         minzoom: 11
       },
 
