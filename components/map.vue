@@ -84,29 +84,44 @@ function getLayers(theme) {
     15, 1
   ];
 
+  const stockWidth = [
+    'case',
+    ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 4,
+    2.5
+  ];
+
   return [
+    {
+      id: "poi-background-strock",
+      type: "circle",
+      "source-layer": source,
+      paint: {
+        'circle-opacity': conditionalOpacity,
+        'circle-color': getColorStroke(theme),
+        'circle-radius': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          12, 0,
+          14, ['+', 2, stockWidth],
+          15, ['+', [
+              'case',
+              ["in", ["get", "status"], ["literal", ["unknown", "partial", "closed"]]], 4,
+              6
+            ],
+            stockWidth
+          ],
+          19, ['+', 13, stockWidth]
+        ]
+      }
+    },
     {
       id: "poi-background",
       type: "circle",
       "source-layer": source,
-      layout: {
-        'circle-sort-key': [
-          'case',
-          ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 2,
-          ["in", ["get", "status"], ["literal", ["closed"]]], 1,
-          0
-        ]
-      },
       paint: {
         'circle-color': 'white',
         'circle-opacity': conditionalOpacity,
-        'circle-stroke-opacity': conditionalOpacity,
-        'circle-stroke-width': [
-          'case',
-          ["in", ["get", "status"], ["literal", ["open", "open_adapted"]]], 4,
-          2.5
-        ],
-        'circle-stroke-color': getColorStroke(theme),
         'circle-radius': [
           'interpolate',
           ['linear'],
