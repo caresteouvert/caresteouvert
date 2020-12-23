@@ -29,6 +29,7 @@
       :layer-id="layer.id"
       :layer="layer"
       :source="poiSource"
+      :before="layer.before"
       source-id="poi"
       @mouseenter="mouseenter"
       @click="clickPoi"
@@ -80,8 +81,7 @@ function getLayers(theme) {
       'case',
       ["in", ["get", "status"], ["literal", ["unknown", "partial", "closed"]]], 0,
       1
-    ],
-    15, 1
+    ]
   ];
 
   const stockWidth = [
@@ -92,11 +92,61 @@ function getLayers(theme) {
 
   return [
     {
+      before: 'poi_label',
+      id: "poi-background-strock-under",
+      type: "circle",
+      "source-layer": source,
+      maxzoom: 15,
+      paint: {
+        'circle-opacity': [...conditionalOpacity, 15, 0],
+        'circle-color': getColorStroke(theme),
+        'circle-radius': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          12, 0,
+          14, ['+', 3, stockWidth],
+          15, ['+', [
+              'case',
+              ["in", ["get", "status"], ["literal", ["unknown", "partial", "closed"]]], 4,
+              5
+            ],
+            stockWidth
+          ],
+          19, ['+', 14, stockWidth]
+        ]
+      }
+    },
+    {
+      before: 'poi_label',
+      id: "poi-background-under",
+      type: "circle",
+      "source-layer": source,
+      maxzoom: 15,
+      paint: {
+        'circle-color': 'white',
+        'circle-opacity': [...conditionalOpacity, 15, 0],
+        'circle-radius': [
+          'interpolate',
+          ['linear'],
+          ['zoom'],
+          12, 0,
+          14, 3,
+          15, [
+            'case',
+            ["in", ["get", "status"], ["literal", ["unknown", "partial", "closed"]]], 4,
+            5
+          ]
+        ]
+      }
+    },
+    {
       id: "poi-background-strock",
       type: "circle",
       "source-layer": source,
+      minzoom: 14,
       paint: {
-        'circle-opacity': conditionalOpacity,
+        'circle-opacity': [...conditionalOpacity, 15, 1],
         'circle-color': getColorStroke(theme),
         'circle-radius': [
           'interpolate',
@@ -119,9 +169,10 @@ function getLayers(theme) {
       id: "poi-background",
       type: "circle",
       "source-layer": source,
+      minzoom: 14,
       paint: {
         'circle-color': 'white',
-        'circle-opacity': conditionalOpacity,
+        'circle-opacity': [...conditionalOpacity, 15, 1],
         'circle-radius': [
           'interpolate',
           ['linear'],
