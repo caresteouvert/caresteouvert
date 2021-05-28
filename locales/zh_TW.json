@@ -1,0 +1,393 @@
+{
+  "lang": "台灣華語",
+  "loading": "載入中 請稍候...",
+  "covid19-alert": "請務必遵從政府防疫指示。齊心抗疫，「您」也有責。",
+  "closing": {
+    "text": "« {brand} » 將於9月30日關閉。 ",
+    "link": "了解更多"
+  },
+  "title": "照常營業",
+  "subtitle": "防疫封城期間及解封後保持營業的場所/設施",
+  "search": "輸入搜尋字詞",
+  "coordinates": "座標",
+  "menu": "選單",
+  "missing_shop": "回報遺漏商店",
+  "backtolist": "回到列表",
+  "missing_shop_dialog": {
+    "description": "« {brand} » 僅用於顯示防疫封城期間指定允許營業的場所。如果地圖有缺少資訊，可能有多個原因：",
+    "add_osm": "該場所/設施未收錄在 OpenStreetMap 開放街圖，要增加",
+    "add_osm_cta": "參考指南",
+    "add_category": "地圖上欠缺某個種類：",
+    "add_category_cta": "提出需求"
+  },
+  "change_lang": "變更語言",
+  "zoomtosee": "放大地圖以顯示正在常營業的場所/設施",
+  "filter_noresults": "搜尋未返回饋任何結果。請嘗試縮小地圖再試。",
+  "toggle_color": {
+    "blind": "開啓色盲模式",
+    "normal": "關閉色盲模式"
+  },
+  "services": {
+    "delivery": "外單",
+    "takeaway": "到店自取",
+    "lumignon": "Lumignons"
+  },
+  "learnmore": {
+    "about": "關於",
+    "contribute": "貢獻",
+    "missing_shop": "回報遺漏商店",
+    "description": "« {brand} » 是避免在封城期間減少在家附近不必要或錯誤的外出的重要工具，從而降低傳染風險。\n這份協作地圖可讓您輕鬆分享附近的營業中或停業的場所/設施，並且是一個更好地通知您的好厝邊和其他市民朋友的最有效和統一的溝通方式。",
+    "title": "了解更多",
+    "press": "新聞稿",
+    "disclaimer": "免責事項",
+    "blog": "部落格",
+    "townhalls": "給公務機關在面對公衛危機時解決方案",
+    "osm_contributors": "給 OpenStreetMap 貢獻者的文件"
+  },
+  "rgpd": {
+    "consent": "在防城封城期間，您同意我們在您的電腦使用cookie以便進行統計嗎？",
+    "yes": "好的",
+    "no": "不了"
+  },
+  "apps_info": {
+    "close": "關閉",
+    "text": "« {brand} » 手機應用程式現已登場！",
+    "googleplay": "Google Play",
+    "apple": "Apple Store",
+    "fdroid": "F-Droid"
+  },
+  "days": {
+    "monday": "星期一",
+    "tuesday": "星期二",
+    "wednesday": "星期三",
+    "thursday": "星期四",
+    "friday": "星期五",
+    "saturday": "星期六",
+    "sunday": "星期日",
+    "ph": "國定假日"
+  },
+  "contribute_form": {
+    "title_state": "這項設施的營業時間",
+    "access": {
+      "title": "",
+      "subtitle": "此場所開放營業",
+      "hours": "營業時間"
+    },
+    "click_collect": {
+      "title": "線上訂購、線下取貨",
+      "subtitle": "Click & Collect",
+      "pickup": "到店自取",
+      "delivery": "外送服務",
+      "drive_through": "得來速",
+      "takeaway": "外帶"
+    },
+    "closed": {
+      "title": "暫時停業",
+      "subtitle": "防疫封城期間",
+      "definite_closing": "此處已永久歇業"
+    },
+    "hours": {
+      "same_hours": "照常營業",
+      "same_hours_without_lockdown": "封城期間以外正常營業"
+    },
+    "details": {
+      "title": "可選 : 添加封城期間相關資訊",
+      "hint": "例如註明訂單系統（簡訊、電話）、外送平台，是否僅限預訂...",
+      "hint_closed": "是永久歇業了？或是被其他行號取代、還是搬遷至新址？",
+      "error": "應為空值或至少10個字元長"
+    },
+    "submit": "發佈",
+    "cancel": "取消"
+  },
+  "details": {
+    "signal_warning": "您正在回報某項設施的資訊，若您離開將不會保存任何更動。仍要繼續嗎？",
+    "signal_state": {
+      "open": "塡寫資訊",
+      "open_adapted": "塡寫資訊",
+      "partial": "塡寫資訊",
+      "unknown": "塡寫資訊",
+      "closed": "回報更動"
+    },
+    "signal_done": "感謝您的貢獻！更新後的資訊將會一段時間後反映在地圖上。",
+    "lockdown_opening_hours": "調整時營業間",
+    "normal_opening_hours": "正常營業",
+    "lockdown_brand_hours": "Look at the opening hours",
+    "facebook": "Facebook專頁",
+    "not_accessible": "現場不開放",
+    "capacity": "客留人數管制量 : 0 人 | 客留人數管制量 : 1 人 | 客留人數管制量 : {count} 人",
+    "services": "服務",
+    "contact": "連絡",
+    "last_update": {
+      "date": "最後更新: {date}",
+      "recent": "下列資料在幾分鐘前己被更新，或有更動"
+    },
+    "opening_hours": {
+      "state_until_date": "{state}至 {date}",
+      "state": {
+        "open": "營業",
+        "closed": "關閉"
+      },
+      "tomorrow": "明日"
+    },
+    "state": {
+      "open": "",
+      "open_adapted": "",
+      "partial": "",
+      "unknown": "指定場所在封城期間可能獲允許營業。或許您可以讓我們知道它目前是營業中還是停業中？",
+      "closed": "封城期間暫時停業"
+    },
+    "state_short": {
+      "open": "照常營業",
+      "open_adapted": "調整時間營業",
+      "partial": "可能有營業",
+      "unknown": "可能有營業",
+      "closed": "暫停營業"
+    },
+    "delivery": {
+      "yes": "提供外送",
+      "only": "僅限外送"
+    },
+    "takeaway": {
+      "yes": "提供外帶",
+      "only": "僅限外帶"
+    },
+    "pickup": {
+      "yes": "提供到店取貨",
+      "only": "僅限到店取貨"
+    },
+    "drive_through": {
+      "yes": "有得來速",
+      "only": "僅限得來速"
+    },
+    "wheelchair": {
+      "yes": "輪椅可通行",
+      "limited": "輪椅有限度通行"
+    },
+    "newsagent": {
+      "yes": "報刊攤商"
+    },
+    "tobacco": {
+      "yes": "菸草店"
+    },
+    "vending": {
+      "pizza": "批薩",
+      "stamps": "郵票",
+      "parcel_mail_in": "自助寄件",
+      "parcel_pickup": "自助取件",
+      "parcel_pickup;parcel_mail_in": "自助寄件/取件",
+      "milk": "乳品",
+      "drinks": "飲料",
+      "water": "水",
+      "sweets": "甜點"
+    },
+    "hygiene": "衛生用品",
+    "hydroalcoholic_gel": "酒精清毒液",
+    "mask": "口罩",
+    "hygiene_status": {
+      "yes": "On {date} : available",
+      "no": "On {date} : unavailable",
+      "void": "尚無資訊。或許"
+    },
+    "hygiene_entry": {
+      "has": "有",
+      "hasnot": "無"
+    },
+    "safety": {
+      "mask": "必須佩帶口罩"
+    },
+    "update_dialog": {
+      "complete1": "這場所是您的機構或組織的一部分嗎？",
+      "complete2": "在解封後獲得更高曝光度",
+      "title": "Collectivités",
+      "promo": "Vous êtes une collectivité locale, une CCI, un office de tourisme... et vous cherchez une solution concrète pour soutenir vos commerces de proximité ?\n\n\"Ça Reste Ouvert\" est la solution de communication de crise qu'il vous faut.\n\nLe service permet aux citoyens confinés de trouver les lieux ouverts, leurs horaires d'ouverture et conditions d'accès (dont la livraison et le click & collect) et bien plus encore.",
+      "contact": "連絡我們"
+    }
+  },
+  "opening_hours_editor": {
+    "day_shortcuts": {
+      "weekdays": "星期一至星期六"
+    },
+    "select_days": "選擇一周內同一營業時間的日子",
+    "next": "Next",
+    "cancel": "取消",
+    "select_time": {
+      "start": "開店時間",
+      "end": "閉店時間"
+    },
+    "add_interval": "追加營業時間",
+    "add_new_days": "追加營業日"
+  },
+  "osm_link": {
+    "title": "« {brand} » 使用 OpenStreetMap 開放街圖圖資",
+    "view": "檢視",
+    "edit": "編輯"
+  },
+  "categories": {
+    "other": "其他場所",
+    "amenity": "設施",
+    "police": "警政",
+    "townhall": "公務機關",
+    "post_office": "郵政",
+    "childcare": "幼期照顧",
+    "employment_agency": "人力仲介",
+    "funeral_directors": "生命禮儀服務",
+    "money": "金融",
+    "insurance": "保險",
+    "tourism_info": "旅遊服務中心",
+    "hotel": "旅宿",
+    "recycling_centre": "資收中心",
+    "library": "圖書館",
+    "copyshop": "影印店",
+    "key_cutter": "鎖匠",
+    "museum": "博物館",
+    "place_of_worship": "宗教場所",
+    "sports_centre": "運動中心",
+    "beach_resort": "濱海度假村",
+    "health": "健康",
+    "pharmacy": "藥局",
+    "covid19_centre": "COVID-19 諮商中心",
+    "optician": "眼鏡行",
+    "hearing_aids": "助聽器",
+    "medical_supply": "醫療器材",
+    "health_center": "健康中心",
+    "herbalist": "草藥醫生",
+    "food": "餐飲",
+    "supermarket": "超市",
+    "butcher": "肉販",
+    "cheese": "乾酪",
+    "convenience": "超商",
+    "seafood": "海鮮",
+    "greengrocer": "蔬果",
+    "grocery": "雜貨店",
+    "health_food": "健康食品",
+    "chocolate": "巧克力",
+    "tea": "茶茗",
+    "coffee": "咖啡",
+    "dairy": "乳品",
+    "confectionery": "甜點",
+    "farm": "農產品販售",
+    "marketplace": "市集",
+    "bakery": "烘焙",
+    "alcohol": "酒品販售",
+    "eat": "餐廰及外帶",
+    "vending_machine": "自販機",
+    "restaurant": "餐廳",
+    "awarded_chef": "名廚料理",
+    "fast_food": "快餐",
+    "ice_cream": "冰品店主",
+    "cafe": "咖啡廳",
+    "bar": "酒吧",
+    "drugs": "菸酒",
+    "tobacco": "菸草",
+    "e_cigarette": "電子菸",
+    "bank": "銀行",
+    "atm": "ATM",
+    "money_transfer": "海外匯款",
+    "mobile_money_agent": "行動支付仲介",
+    "clothing_beauty": "服裝及美容",
+    "shoes": "鞋類",
+    "bag": "箱包",
+    "beauty": "美容服務",
+    "clothes": "衣物",
+    "cosmetics": "美妝",
+    "hairdresser": "理髪店",
+    "jewelry": "珠寶店",
+    "massage": "按摩店",
+    "tailor": "裁縫",
+    "perfumery": "香水店",
+    "chemist": "藥妝店",
+    "home_equipment": "家電",
+    "hardware": "五金百貨",
+    "bed": "寢具店",
+    "furniture": "傢俱",
+    "household_linen": "家用布製品",
+    "houseware": "廚具",
+    "interior_decoration": "室內裝飾",
+    "pottery": "陶磁器",
+    "watches": "鐘錶",
+    "lighting": "照明器具",
+    "hifi": "音響",
+    "electronics": "電子3C",
+    "shop": "商店",
+    "mobile_phone": "手機",
+    "computer": "電腦",
+    "printer_ink": "印表機墨水",
+    "dry_cleaning": "乾洗",
+    "laundry": "洗衣",
+    "stationery": "文具",
+    "newsagent": "新聞",
+    "pet": "寵物店",
+    "agrarian": "農產品",
+    "flower": "園藝",
+    "sewing": "針織",
+    "books": "書店",
+    "art": "Art",
+    "charity": "慈善商店",
+    "department_store": "百貨公司",
+    "gift": "禮品店",
+    "music": "音樂",
+    "musical_instrument": "樂器",
+    "photo": "攝影",
+    "second_hand": "二手商品",
+    "ticket": "票券",
+    "toys": "玩具店",
+    "trade": "交易所",
+    "travel_agency": "旅行社",
+    "variety_store": "生活百貨",
+    "video": "影視",
+    "video_games": "電子遊戲",
+    "weapons": "武器",
+    "wholesale": "倉儲量販",
+    "sports": "體育運動",
+    "tobacco": "菸草",
+    "e_cigarette": "電子菸",
+    "mobility": "運具",
+    "fuel": "加油站",
+    "car_rental": "汽車租賃",
+    "bicycle": "自行車行",
+    "car": "車庫",
+    "car_dealer": "汽車展銷",
+    "car_wash": "洗車",
+    "motorcycle": "機車",
+    "bicycle_tube": "自行車輪胎販賣機",
+    "tyres": "輪胎"
+  },
+  "qa": {
+    "title": "圖資品質保證(QA)"
+  },
+  "bycity": {
+    "title": "商店列表",
+    "loading": "載入中",
+    "table": {
+      "name": "名稱",
+      "cat": "種類",
+      "website": "網站",
+      "phone": "電話",
+      "link": "在地圖上查看"
+    }
+  },
+  "external": {
+    "mobile": {
+      "places_around": "尋找在封城期間仍有營業的場所/設施",
+      "contribute": "提供您的在地智識協助提升圖資品質",
+      "organize": "精準規劃外出行程降低傳染風險 "
+    }
+  },
+  "directory": {
+    "regions": {
+      "title": "縣市列表"
+    },
+    "departements": {
+      "title": "鄕鎭市區列表"
+    },
+    "communes": {
+      "title": "村里列表"
+    },
+    "pois": {
+      "link": {
+        "previous": "前一場所/設施",
+        "next": "下一場所/設施"
+      }
+    }
+  }
+}
