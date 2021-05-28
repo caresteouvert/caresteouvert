@@ -357,7 +357,7 @@
   },
   "bycity": {
     "title": "商店列表",
-    "loading": "載入中,
+    "loading": "載入中",
     "table": {
       "name": "名稱",
       "cat": "種類",
