@@ -103,7 +103,7 @@
     "signal_warning": "您正在回報某項設施的資訊，若您離開將不會保存任何更動。仍要繼續嗎？",
     "signal_state": {
       "open": "塡寫資訊",
-      "open_adapted": "塡寫資訊,
+      "open_adapted": "塡寫資訊",
       "partial": "塡寫資訊",
       "unknown": "塡寫資訊",
       "closed": "回報更動"
