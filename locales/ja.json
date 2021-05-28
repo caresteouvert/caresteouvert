@@ -351,13 +351,13 @@
   },
   "directory": {
     "regions": {
-      "title": "地方リスト"
+      "title": "都道府県リスト"
     },
     "departements": {
-      "title": "百貨店リスト"
+      "title": "市区町村リスト"
     },
     "communes": {
-      "title": "州リスト"
+      "title": "町字リスト"
     },
     "pois": {
       "link": {
