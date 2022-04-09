@@ -72,7 +72,7 @@
     "lodash.chunk": "^4.2.0",
     "lodash.debounce": "^4.0.8",
     "mapbox-gl": "^1.12.0",
-    "moment": "^2.28.0",
+    "moment": "^2.29.2",
     "nuxt": "^2.12.2",
     "opening_hours": "^3.5.0",
     "vue": "^2.6.12",
